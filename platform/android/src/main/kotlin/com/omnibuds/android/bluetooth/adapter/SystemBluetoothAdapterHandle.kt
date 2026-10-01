@@ -54,27 +54,37 @@ class SystemBluetoothAdapterHandle(
     }
 
     /**
-     * Registers without exporting the receiver.
+     * Registers so the Bluetooth stack can reach this receiver.
      *
-     * Two different version facts meet here and are kept apart deliberately. The *requirement* to say
-     * whether a receiver may hear broadcasts from other apps applies to apps targeting API 34 or above,
-     * and it does not apply at all to receivers listening only for protected system broadcasts, which
-     * `ACTION_STATE_CHANGED` is. The *overload* that carries the flag exists from API 33. So the branch
-     * keys on the device level - because calling the overload is what would throw on an older phone -
-     * and passes `RECEIVER_NOT_EXPORTED` to state the intent rather than leave the export decision to a
-     * default (research Q7, ADR-P2-011). Below 33 there is no flag to pass, so nothing is.
+     * Phase 2 chose `RECEIVER_NOT_EXPORTED` here on the reasoning that `ACTION_STATE_CHANGED` is a
+     * protected system broadcast, and lint's own advice was quoted back as licence. Both readings were
+     * half right, and ADR-P3-013 is the correction. Being *protected* - which this action is, listed in
+     * AOSP's `core/res/AndroidManifest.xml` beside the ACL, bond and profile connection-state actions -
+     * governs who may **send** it. The export flag governs who may **receive** it, and the platform's
+     * receiver guidance is explicit that a not-exported receiver "is able to receive some system
+     * broadcasts and broadcasts from your app, but not broadcasts from the highly privileged apps", with
+     * Bluetooth named as one of those apps. A receiver that cannot be reached would report an adapter
+     * that never changes, and a silent empty observation is the failure this project refuses everywhere
+     * else; it is not allowed to smuggle itself in through a registration flag.
      *
-     * Both lint complaints on this body are the guarded pattern's own shadow, and are suppressed rather
-     * than answered with an `androidx.core` dependency the phase has no reason to take: `InlinedApi`
-     * fires on a constant that is only read inside the `>= 33` branch, and
-     * `UnspecifiedRegisterReceiverFlag` fires because lint cannot tell that the filter holds a protected
-     * system broadcast. `docs/phases/phase-2/validation.md` records the two warnings as examined and
-     * answered here, not as unreviewed leftovers.
+     * Exporting costs almost nothing here, and the reason is stated rather than assumed: every action in
+     * this filter is protected, so no third-party app can forge one and a sender would need the
+     * Bluetooth stack's own privileges.
+     *
+     * The two version facts are still kept apart. The *requirement* to declare an export decision applies
+     * to apps targeting API 34 or above; the *overload* carrying the flag exists from API 33; so the
+     * branch keys on the device level, because calling the overload is what would throw on an older
+     * phone. Below 33 there is no flag to pass, so nothing is.
+     *
+     * Both lint complaints on this body are the guarded pattern's own shadow, suppressed rather than
+     * answered with an `androidx.core` dependency the phase has no reason to take: `InlinedApi` fires on
+     * a constant that is only read inside the `>= 33` branch, and `UnspecifiedRegisterReceiverFlag`
+     * fires on the flag-less branch because lint cannot inspect which actions the filter holds.
      */
     @SuppressLint("InlinedApi", "UnspecifiedRegisterReceiverFlag")
     private fun register(receiver: BroadcastReceiver, filter: IntentFilter) {
         if (apiLevel.apiLevel() >= RECEIVER_FLAG_API_LEVEL) {
-            context.registerReceiver(receiver, filter, Context.RECEIVER_NOT_EXPORTED)
+            context.registerReceiver(receiver, filter, Context.RECEIVER_EXPORTED)
         } else {
             context.registerReceiver(receiver, filter)
         }
