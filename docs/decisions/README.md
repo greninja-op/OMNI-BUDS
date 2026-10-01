@@ -24,7 +24,33 @@ Full text of every ADR lives in the phase record that authored it. This file is 
 | **ADR-P0-018** | **Research order: enumeration precedes identification** | **proposed — needs user confirmation** | `docs/phases/phase-0/decisions.md` |
 | ADR-P0-019 | `docs/product/` created to match master §56 | accepted | `docs/phases/phase-0/decisions.md` |
 | ADR-P0-020 | Two Phase 0 workstreams added beyond prompt §4 | accepted | `docs/phases/phase-0/decisions.md` |
-| ADR-P0-021 | Version control is not initialised in Phase 0 | accepted | `docs/phases/phase-0/decisions.md` |
+| ADR-P0-021 | Version control is not initialised in Phase 0 | accepted — **closed by Phase 1** | `docs/phases/phase-0/decisions.md` |
+
+Phase 1 — `docs/phases/phase-1/decisions.md`:
+
+| ADR | Title | Status |
+|---|---|---|
+| ADR-P1-001 | Two modules now, the rest when they earn their keep | accepted |
+| ADR-P1-002 | Package root is `com.omnibuds.core.<area>` (amends Phase 0 specs) | accepted |
+| ADR-P1-003 | The area layer map, and the three violations it caught | accepted |
+| ADR-P1-004 | Three outcomes, thirteen-plus causes | accepted |
+| ADR-P1-005 | Codec state as an ordinal ladder, `configurable` as an attribute (amends ADR-P0-015) | accepted |
+| ADR-P1-006 | Error categories are the union of both sources (amends ADR-P0-012) | accepted |
+| ADR-P1-007 | One narrow protocol contract, optional capability interfaces | accepted |
+| ADR-P1-008 | Feature identity is namespaced text, not a brand conditional | accepted |
+| ADR-P1-009 | Manual constructor injection, no framework, no ambient registry | accepted |
+| ADR-P1-010 | Persistence is contracts; serialization deferred deliberately | accepted |
+| ADR-P1-011 | Quality baseline is the compiler plus dependency-free architecture tests | accepted |
+| ADR-P1-012 | Epoch milliseconds, nullable, for all time | accepted |
+| ADR-P1-013 | Test doubles are test-only; "nothing is implemented" is asserted | accepted |
+| ADR-P1-014 | Toolchain pinned from what this workstation already provides | accepted |
+| ADR-P1-015 | minSdk 26 is provisional and expires at Phase 2 | accepted — revisit required |
+| ADR-P1-016 | ConnectionState plus SessionClassification supersede SessionState | accepted |
+| ADR-P1-017 | Commit scopes `build` and `deps` are added | accepted |
+| ADR-P1-018 | Endpoint-differentiated codec support is an open model gap | **open — deferred to Phase 11** |
+| ADR-P1-019 | Phase 1 leaves the diagnostic redactor unimplemented | accepted — gap recorded |
+| ADR-P1-020 | Connection state has exactly one owner | accepted — corrected after review |
+| ADR-P1-021 | `:core` ships with no production dependency | accepted | `docs/phases/phase-0/decisions.md` |
 
 ## Rules for this index
 
@@ -37,6 +63,7 @@ Full text of every ADR lives in the phase record that authored it. This file is 
 
 | Item | Question | Blocking |
 |---|---|---|
-| ADR-P0-018 | Confirm the research ladder reads *enumerate → identify* rather than the prompt's *identify → discover*. | Phases 3, 5, 20 ordering |
-| ADR-P0-021 / RISK-015 | Confirm Phase 1 should `git init` at this workspace root, and whether a remote/CI is expected. | Git workflow enforcement |
-| Repository hygiene | Whether to add a project instruction file (`AGENTS.md`/`QODER.md`) so future sessions inherit the Phase 0 contract automatically. | None — convenience, but it would reduce re-reading cost every session |
+| ADR-P0-018 | Confirm the research ladder reads *enumerate → identify* rather than the prompt's *identify → discover*. | Phases 3, 5, 20 ordering — **not** Phase 2 |
+| ADR-P1-015 | Phase 2 must re-decide `minSdk` (26 was chosen only to make the library module compile; the Bluetooth runtime-permission model changed at API 31). | Phase 2 |
+| ADR-P1-018 | Per-endpoint codec support (phone versus headset) is unmodelled; it needs a discriminator that must not read as "unknown". | Phase 11 |
+| ADR-P0-021 / RISK-015 | Closed by Phase 1: the repository is initialised on branch `main`. CI and any remote remain undecided. | None; CI still absent (RISK-015 partially open) |

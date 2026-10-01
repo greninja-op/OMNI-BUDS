@@ -4,11 +4,12 @@
 
 This file is the master source of truth for OmniBuds planning and architecture.
 
-- **Phase 0 is complete and validated.** Governance, templates, ADRs and rulebooks live in `docs/phases/phase-0/`; the documentation map is `docs/README.md`.
-- No implementation phase has started. There is no code, no Gradle configuration and no git repository — Phase 0 created documents only.
-- One open decision awaits the user: `ADR-P0-018` (research ladder ordering) is `proposed`, not accepted.
-- Where a future phase prompt conflicts with this document, this document wins; the conflict is reported and recorded as an ADR, never silently resolved (section 58).
-- Implementation begins only on an explicit "Execute Phase X" prompt, following section 49, and stops at the phase boundary per section 50.
+- **Phase 0 and Phase 1 are complete and validated.** Phase 0 fixed the governance rules; Phase 1 built the build foundation and the platform-independent domain contracts. Records live in `docs/phases/phase-0/` and `docs/phases/phase-1/`; the documentation map is `docs/README.md`.
+- **Code now exists**: `:core` (platform-independent Kotlin/JVM domain, no production dependencies) and `:platform:android` (Android library boundary containing no sources). The repository is now under git on branch `main`.
+- **No Bluetooth, no UI, no device support.** Nothing has been tested against hardware, so no capability in this project is more than `IMPLEMENTED` on the evidence ladder.
+- **Phase 2 has not started** and will not until an explicit "Execute Phase 2" prompt (ADR-P0-009).
+- Still open from Phase 0: `ADR-P0-018` (research ladder ordering) is `proposed`, awaiting confirmation; it affects Phases 3, 5 and 20, not Phase 2.
+- Where a future phase prompt conflicts with this document, this document wins; the conflict is reported and recorded as an ADR, never silently resolved (section 58). Phase 1 amended Phase 0 in four documented places: ADR-P1-002 (package root), ADR-P1-005 (codec state), ADR-P1-006 (error categories), ADR-P1-016 (session state).
 
 ## IMPORTANT — THIS IS A CONTEXT / PLANNING PROMPT ONLY
 

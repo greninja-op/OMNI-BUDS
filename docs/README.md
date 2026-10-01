@@ -26,6 +26,26 @@ A phase execution prompt that conflicts with items 1–3 must be reported, not s
 
 Topic folders are deliberately empty rather than pre-filled with stubs: their content will come from the phase that actually earns it, and a stub would imply knowledge that does not exist yet.
 
+## Phase 1 index
+
+| Document | Purpose |
+|---|---|
+| `execution-prompt.md` | The Phase 1 contract, verbatim |
+| `repository-analysis.md` | Toolchain discovery, build inventory, what was already absent |
+| `requirements.md` | REQ-P1-001 … REQ-P1-022 |
+| `design.md` | Module topology, area layer map, state/capability/audio/protocol architecture |
+| `specs.md` | Naming, state, error, coroutine, Flow, dependency and visibility rules as realised |
+| `task-list.md` | TASK-P1-001 … TASK-P1-035 with owners and verification |
+| `test-plan.md` | TEST-P1-<NNN> records over the 302 executed tests |
+| `decisions.md` | ADR-P1-001 … ADR-P1-021, including corrections made after review |
+| `risk-register.md` | Project risks added by Phase 1 |
+| `validation.md` | Phase 1 acceptance record and Phase 2 readiness |
+| `architecture-review.md` | The eight architecture questions of prompt section 54, answered |
+| `domain-model-review.md` | Domain types, invariants and the temptations that would weaken them |
+| `testing-review.md` | Test tiers reached, doubles strategy and remaining gaps |
+| `kmp-review.md` | What is genuinely portable today and what Phase 46 must still do |
+| `code-quality-review.md` | Naming, visibility, dependency hygiene and open findings |
+
 ## Phase 0 index
 
 | Document | Purpose |
