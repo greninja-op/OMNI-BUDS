@@ -61,6 +61,44 @@ Authority order: `docs/MASTER-CONTEXT.md`, then accepted Phase 0 and Phase 1 ADR
 **Decision.** `PlatformFeatureSupport` keeps `apiAvailability`, `hardwareEvidence` and `permissionState` as separate fields, with `isUsable` requiring all three, and `blockingReason` naming which one refused. Connected-device support is deliberately not a field here; it belongs to the per-device capability model. `hardwareEvidence` may legitimately stay `INFERRED` forever on many phones, because a feature flag is not a test — and `isUsable` therefore often reports false with a reason, which is the honest answer rather than a guessed one.
 **Consequences.** "Not usable because we were not permitted to look" is expressible and distinct from "unsupported by this phone", which is the distinction OmniBuds exists to preserve.
 
-<!-- ADR-P2-009 onwards (permission requirement matrix, manifest declaration policy, DI graph shape,
-     ID grammar) are withheld until bluetooth-api-research.md is verified: this project does not
-     record platform requirements from memory, and the resolver's rules must carry citations. -->
+### ADR-P2-009 — Permission requirements key off `targetSdkVersion`, not the phone's API level
+**Status.** accepted — **corrects Phase 0 `SEC-PERM-002`**
+**Context.** The verified research (`bluetooth-api-research.md` sections 3, Q1-Q3, Q7) established that Android's Bluetooth permission model is selected by the app's declared `targetSdkVersion`, while several enforcement behaviours and API members depend on the device's actual API level. Phase 0's `SEC-PERM-002` framed requirements as device-version-driven, which is what I had remembered, and remembering is not evidence (`SEC-PERM-003`).
+**Decision.** `PermissionContext` carries `targetSdk` and `deviceSdk` separately; the resolver branches on the former and emits device-level caveats from the latter. Where only the compatibility guide and not the per-method reference states a requirement (research Note A — `BLUETOOTH` for classic or BLE communication at target 30 and below), the guide is followed and that requirement's own reason string records the asymmetry, so a later reader cannot "fix" it back into a documentation gap.
+**Consequences.** Phase 0's rule text stands as authored history; this ADR is the correction, indexed in `docs/decisions/README.md`. An unknown `targetSdk` yields `Failure(INVALID_STATE)` rather than the safer-looking band: a permission asked for on a guess is one the user cannot be given a reason for.
+
+### ADR-P2-010 — A debug-only companion shell, so the bridge is verified rather than described
+**Status.** accepted — user-approved
+**Context.** The user specified a local-first device bridge that builds, deploys, captures and drives an Android app. This repository had nothing installable: Phase 1 §52 and Phase 2 §6 keep product UI out until Phase 49, and the approved Phase 1 shape was a source-free library module.
+**Decision.** Add `:tools:companion-shell`, a debug-only application whose entire content is an inspectable view tree. It depends on nothing — not `:core`, not `:platform:android` — and declares no permission. Its resource ids and accessibility labels are a stable bridge contract, and its counter is stateful so that "did the tap land" is answerable rather than assumed.
+**Consequences.** Deploy, capture, hierarchy and input become verifiable. The isolation is what keeps the honesty intact: a screenshot of this shell is evidence about the harness, and because it cannot import product code, a green harness run can never be read as evidence that OmniBuds works. No release variant is built; AGP's `beforeVariants` API does not resolve in this Kotlin DSL configuration, so the guarantee is that the bridge only ever asks for `debug`.
+
+### ADR-P2-011 — Zero manifest permissions in Phase 2, in either module
+**Status.** accepted
+**Context.** Research Q7: for an app targeting API 31 or above, obtaining the adapter, reading `isEnabled`/`getState`, registering `ACTION_STATE_CHANGED`, inspecting permission status and checking `FEATURE_BLUETOOTH*` require no permission.
+**Decision.** `platform/android`'s manifest keeps no `<uses-permission>` and no `<uses-feature>`; the harness shell declares none either. Rows for scanning, bonding, profiles and socket opens stay pre-computed for later phases, each of which re-verifies before acting (`SEC-PERM-003`).
+**Consequences.** A declaration not tied to an executed call is a fabricated capability, and a library's manifest entries merge into every consumer silently — over-declaration is therefore expensive in exactly the way a false capability claim is. Declaring `BLUETOOTH_CONNECT` now would also move the app into the Nearby devices prompt group with no feature behind it. The honest alternative, `uses-feature` for store filtering, belongs to the module that ships.
+
+### ADR-P2-012 — `DENIED_PERMANENTLY` stays in the model and is unreachable from app code
+**Status.** accepted
+**Context.** Phase 2 prompt section 5.3 lists `DENIED_PERMANENTLY` and separately forbids claiming it unless the platform supports the conclusion. Research Q4 found no app-visible signal that establishes it on current Android — the informative outcome is a system API. Research Q5 also found the callback the prompt's model implies does not exist: revocation kills the process, and silent `false`, empty-set or `STATE_DISCONNECTED` returns are indistinguishable from an adapter that is simply off.
+**Decision.** Keep the enum member; forbid the Android layer from ever producing it. A refusal maps to `DENIED`, an unavailable answer to `UNKNOWN`, and only a genuine future platform signal may produce permanent denial. Where a call returns a falsy or empty result, the platform layer reports what it observed and leaves the state unknown rather than resolving it to "off".
+**Consequences.** The model can express a real future state without the app ever asserting it on inference. This also removes the temptation to render "we were not allowed to look" as "your phone has no Bluetooth" — the same class of error as reporting an unverified codec as active.
+
+### ADR-P2-013 — Transport boundaries pin their own kind; `TransportKind` gains `BLE`
+**Status.** accepted
+**Context.** The transport workstream reported that "each boundary answers for exactly one transport" could not be expressed in types, and that `BleTransport` had no `TransportKind` member to name, because the enum conflated BLE with GATT.
+**Decision.** Add `TransportKind.BLE`: the BLE link layer and the GATT attribute protocol that may sit on it are different things (master section 8). Each sub-interface supplies a default getter for `kind` — a constant, not behaviour, so it stays legal in `:core` — and `TransportKindPinningTest` enforces it. The five interfaces remain otherwise empty by design: service discovery, characteristic and socket members added now would invent hardware behaviour that Phase 6 owns.
+**Consequences.** An empty interface with a stated reason beats a populated one with fabricated members, and the deferred list is written down in `transport-boundaries.md`. The prompt's `BleTransport`/`GattTransport` sibling shape is recorded as a disagreement rather than silently reproduced.
+
+### ADR-P2-014 — Phase authorisation is test metadata, not runtime gating
+**Status.** accepted — closes audit finding R-10
+**Context.** `BluetoothOperation.authorizedInPhase` risked becoming a runtime gate, which would need an ambient "current phase" value — the hidden global state Phase 0 forbids — and a shipped binary has no business knowing which phase built it.
+**Decision.** The field stays as data. `PhaseTwoScopeTest` asserts the authorised set is exactly the five inspection operations, that no device-facing operation is authorised, and that every authorised plan requires nothing and produces no prompt. The resolver answers for any operation it is asked about, including Phase 3 and Phase 6 rows, and pre-computing those rows is explicitly not authorisation to perform them.
+**Consequences.** Enforcement lands where it can fail a build instead of in a constant that reads as protection and is not.
+
+### ADR-P2-015 — Framework class names are banned in core string literals too
+**Status.** accepted
+**Context.** The framework-name guard rejected a diagnostic string in the resolver that named `BluetoothLeAudio`. The intent could have been served by exempting string literals from the scan.
+**Decision.** Keep the scan strict. A core string naming an Android class is the start of core code reasoning about platform specifics, and the message reads better without the identifier: "the LE Audio platform API does not exist below API 31".
+**Consequences.** The rule is one a reader can rely on — no Android type name appears anywhere in `:core` outside comments — and the wording of user-facing diagnostics is decided by the layer that owns the concept.

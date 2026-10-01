@@ -41,8 +41,8 @@ enum class BluetoothPermission(
  */
 data class ApiRange(val minSdkInclusive: Int, val maxSdkInclusive: Int) {
     init {
-        require(minSdkInclusive in MIN_SUPPORTED..MAX_SUPPORTED) {
-            "range start $minSdkInclusive is outside $MIN_SUPPORTED..$MAX_SUPPORTED"
+        require(minSdkInclusive in MIN_MATRIX_SDK..MAX_MATRIX_SDK) {
+            "range start $minSdkInclusive is outside $MIN_MATRIX_SDK..$MAX_MATRIX_SDK"
         }
         require(maxSdkInclusive >= minSdkInclusive) {
             "range $minSdkInclusive..$maxSdkInclusive is inverted"
@@ -52,13 +52,19 @@ data class ApiRange(val minSdkInclusive: Int, val maxSdkInclusive: Int) {
     fun contains(sdkInt: Int): Boolean = sdkInt in minSdkInclusive..maxSdkInclusive
 
     companion object {
-        const val MIN_SUPPORTED = 26
-        const val MAX_SUPPORTED = 35
+        /**
+         * The band the permission matrix covers. These are deliberately NOT named minSdk/targetSdk:
+         * the app's own values live in `gradle/libs.versions.toml`, and a second copy of them here
+         * would be a fact with two owners (Phase 1 known issue; audit finding R-9). Changing the app's
+         * supported band must make someone re-read this matrix, not silently re-clip these ranges.
+         */
+        const val MIN_MATRIX_SDK = 26
+        const val MAX_MATRIX_SDK = 35
 
         /** Everything the app can be installed on below the modern permission model. */
-        val LEGACY_BLUETOOTH_MODEL = ApiRange(MIN_SUPPORTED, 30)
+        val LEGACY_BLUETOOTH_MODEL = ApiRange(MIN_MATRIX_SDK, 30)
 
         /** Android 12 and above, where BLUETOOTH_SCAN and BLUETOOTH_CONNECT apply. */
-        val MODERN_BLUETOOTH_MODEL = ApiRange(31, MAX_SUPPORTED)
+        val MODERN_BLUETOOTH_MODEL = ApiRange(31, MAX_MATRIX_SDK)
     }
 }

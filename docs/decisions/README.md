@@ -26,6 +26,26 @@ Full text of every ADR lives in the phase record that authored it. This file is 
 | ADR-P0-020 | Two Phase 0 workstreams added beyond prompt §4 | accepted | `docs/phases/phase-0/decisions.md` |
 | ADR-P0-021 | Version control is not initialised in Phase 0 | accepted — **closed by Phase 1** | `docs/phases/phase-0/decisions.md` |
 
+Phase 2 — `docs/phases/phase-2/decisions.md`:
+
+| ADR | Title | Status |
+|---|---|---|
+| ADR-P2-001 | Phase 2 lives inside the Phase 1 boundary; `platform` is a registered core area | accepted |
+| ADR-P2-002 | minSdk 26 confirmed; the matrix must cover both permission models | accepted — closes ADR-P1-015 |
+| ADR-P2-003 | `kotlinx-coroutines-core` returns to `:core` on the recorded trigger | accepted |
+| ADR-P2-004 | Seven platform-failure categories added; two candidates refused (amends ADR-P1-006) | accepted |
+| ADR-P2-005 | Retry and invalidation asserted by exhaustive tables | accepted — closes Phase 1 known issue 6 |
+| ADR-P2-006 | Platform module guarded by capability scope, not by emptiness | accepted |
+| ADR-P2-007 | Adapter-state observation is single-slot with recorded teardown failure | accepted |
+| ADR-P2-008 | Platform facts kept as separate axes; hardware evidence rarely exceeds INFERRED | accepted |
+| **ADR-P2-009** | **Requirements key off `targetSdkVersion`, not device API level** | accepted — **corrects Phase 0 SEC-PERM-002** |
+| ADR-P2-010 | Debug-only companion shell so the bridge is verified, not described | accepted |
+| ADR-P2-011 | Zero manifest permissions in Phase 2, in either module | accepted |
+| ADR-P2-012 | `DENIED_PERMANENTLY` retained but unreachable from app code | accepted |
+| ADR-P2-013 | Transport boundaries pin their kind; `TransportKind` gains `BLE` | accepted |
+| ADR-P2-014 | Phase authorisation is test metadata, not runtime gating | accepted |
+| ADR-P2-015 | Framework class names banned in core string literals too | accepted |
+
 Phase 1 — `docs/phases/phase-1/decisions.md`:
 
 | ADR | Title | Status |
@@ -44,7 +64,7 @@ Phase 1 — `docs/phases/phase-1/decisions.md`:
 | ADR-P1-012 | Epoch milliseconds, nullable, for all time | accepted |
 | ADR-P1-013 | Test doubles are test-only; "nothing is implemented" is asserted | accepted |
 | ADR-P1-014 | Toolchain pinned from what this workstation already provides | accepted |
-| ADR-P1-015 | minSdk 26 is provisional and expires at Phase 2 | accepted — revisit required |
+| ADR-P1-015 | minSdk 26 is provisional and expires at Phase 2 | accepted — **closed by ADR-P2-002** |
 | ADR-P1-016 | ConnectionState plus SessionClassification supersede SessionState | accepted |
 | ADR-P1-017 | Commit scopes `build` and `deps` are added | accepted |
 | ADR-P1-018 | Endpoint-differentiated codec support is an open model gap | **open — deferred to Phase 11** |

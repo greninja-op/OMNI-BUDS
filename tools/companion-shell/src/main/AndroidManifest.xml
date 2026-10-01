@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Debug-only device-bridge harness (ADR-P2-010).
+
+  Declares no permissions. Nothing in this shell inspects Bluetooth, storage, contacts, the
+  network or the camera: the bridge drives it from outside over ADB, so that a screenshot or a
+  hierarchy dump is evidence about the harness and never mistaken for OmniBuds product behaviour.
+  The one activity is exported because `am start -n` and the launcher intent are how the bridge
+  verifies install and launchability; it is debug-only and has no release variant.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="false"
+        android:label="OmniBuds Bridge Shell"
+        android:supportsRtl="true">
+
+        <activity
+            android:name=".ShellActivity"
+            android:excludeFromRecents="false"
+            android:exported="true"
+            android:label="OmniBuds Bridge Shell">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

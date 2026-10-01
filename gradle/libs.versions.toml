@@ -27,3 +27,7 @@ junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+# ADR-P2-010: the debug-only harness target needs the application plugin. Debug variant only;
+# the module is a device-bridge inspection target, not the product (ADR-P1-001 keeps the real
+# application module out until Phase 49).
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }

@@ -8,8 +8,12 @@ package com.omnibuds.core.platform
  * resolver to know what *each* operation needs so that a permission is never requested for a
  * reason the current phase cannot justify; declaring a requirement for a future operation is
  * safe, performing that operation is not. [authorizedInPhase] makes the boundary explicit and
- * testable: [PermissionRequirementResolver] refuses to produce an executable plan for any
- * operation whose [authorizedInPhase] is ahead of the running phase.
+ * testable by a check, not by a runtime gate. The resolver answers the permission question
+ * for any operation it is asked about, because deciding "which phase are we in" at runtime would
+ * require an ambient current-phase value, which docs/phases/phase-0/architecture-governance.md
+ * forbids as hidden global state (audit finding R-10). What enforces the boundary instead is
+ * PhaseTwoScopeTest, which asserts that no operation beyond Phase 2 is reachable through anything
+ * Phase 2 builds.
  */
 enum class BluetoothOperation(
     /** Human-stable identifier used in requirement records, logs and protocol docs. */

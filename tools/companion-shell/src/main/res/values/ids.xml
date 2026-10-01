@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Stable resource ids for the harness so `uiautomator dump` yields a `resource-id` the bridge can
+  target by identifier rather than only by text or coordinates. These names are part of the harness
+  contract: renaming one breaks the verification suite, exactly as a feature id rename breaks a
+  protocol record, so they are declared here rather than generated at runtime.
+-->
+<resources>
+    <item name="bridge_title" type="id" />
+    <item name="bridge_status" type="id" />
+    <item name="bridge_probe_button" type="id" />
+    <item name="bridge_counter_value" type="id" />
+    <item name="bridge_input_field" type="id" />
+    <item name="bridge_toggle" type="id" />
+</resources>
