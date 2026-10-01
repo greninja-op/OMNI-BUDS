@@ -8,29 +8,35 @@ import kotlin.test.fail
 /**
  * Machine-checked architecture rules for the platform-independent core.
  *
- * Phase 0 wrote several hundred rules in prose; prose cannot stop a later commit from
- * importing an Android class into the domain. These checks enforce the subset that can be
- * verified mechanically: dependency direction, the absence of any Bluetooth or audio
- * framework usage, the absence of placeholder implementations, and the absence of magic
- * protocol literals (Phase 1 prompt sections 32, 37, 51, 53; master sections 51, 52).
+ * Phase 0 wrote several hundred rules in prose; prose cannot stop a later commit from importing an
+ * Android class into the domain. These checks enforce the subset that can be verified
+ * mechanically: dependency direction, the absence of Android framework coupling, the absence of
+ * placeholder implementations, the confinement of test doubles, and the absence of magic protocol
+ * literals (Phase 1 prompt sections 32, 37, 51, 53; Phase 2 prompt sections 5, 6, 7; master
+ * sections 51, 52).
  *
- * Test sources legitimately use `java.io` to read the source tree. The rules below apply to
- * main sources only, which is what `:core` ships and what must stay Kotlin-Multiplatform-safe.
+ * Test sources legitimately use `java.io` to read the source tree. The rules below apply to main
+ * sources only, which is what `:core` ships and what must stay Kotlin-Multiplatform-safe.
  *
- * Every check fails loudly when its inputs are missing: a scan that silently finds nothing
- * because the source directory moved would otherwise be a passing test that proves nothing.
+ * Every check fails loudly when its inputs are missing: a scan that silently finds nothing because
+ * the source directory moved would otherwise be a passing test that proves nothing.
  */
 class DependencyDirectionTest {
 
     private val mainSourceRoot = File("src/main/kotlin")
 
+    private val platformSourceRoot = File("../platform/android/src/main")
+
     private val importPattern = Regex("^import\\s+([A-Za-z0-9_.]+)")
 
     /** Internal areas and the layers they may depend on. Lower is more foundational. */
     private val areaLayer = mapOf(
+        // `common` and `state` are both layer 0: an enum of states is vocabulary, not a policy layer,
+        // and placing it above `common` would make every foundational area import upward.
         "common" to 0,
-        "state" to 1,
+        "state" to 0,
         "transport" to 1,
+        "platform" to 1,
         "device" to 2,
         "capability" to 2,
         "audio" to 2,
@@ -86,56 +92,73 @@ class DependencyDirectionTest {
         }
     }
 
+    private fun violationsByImport(prefixes: List<String>): List<String> =
+        mainSources().flatMap { file ->
+            importsOf(file)
+                .filter { import -> prefixes.any { prefix -> import.startsWith(prefix) } }
+                .map { import -> "${relativePath(file)} imports $import" }
+        }
+
+    private fun violationsByCodeToken(tokens: List<String>): List<String> {
+        val pattern = Regex("\\b(${tokens.joinToString("|")})\\b")
+        return mainSources().flatMap { file ->
+            codeLinesOf(file)
+                .filter { line -> pattern.containsMatchIn(line) }
+                .map { line -> "${relativePath(file)}: $line" }
+        }
+    }
+
+    private fun platformSources(): List<File> {
+        if (!platformSourceRoot.isDirectory) {
+            fail("Expected the Android boundary at '${platformSourceRoot.invariantSeparatorsPath}'.")
+        }
+        return platformSourceRoot.walk().filter { file -> file.isFile && file.extension == "kt" }.toList()
+    }
+
     // ---- Rule 1: the core may not touch platform or JVM-only frameworks --------
 
     @Test
     fun coreMainSourcesDoNotImportAndroidFrameworks() {
-        val forbidden = listOf("android.", "androidx.", "com.omnibuds.android")
-        val violations = mainSources().flatMap { file ->
-            importsOf(file)
-                .filter { import -> forbidden.any { prefix -> import.startsWith(prefix) } }
-                .map { import -> "${relativePath(file)} imports $import" }
-        }
         assertClean(
             "Android is forbidden in :core (ADR-P0-008, Phase 1 prompt section 32).",
             "The core must stay free of Android so it can later compile for desktop:",
-            violations,
+            violationsByImport(listOf("android.", "androidx.", "com.omnibuds.android")),
         )
     }
 
     @Test
     fun coreMainSourcesDoNotImportJvmOnlyLibraries() {
-        val forbidden = listOf("java.", "javax.")
-        val violations = mainSources().flatMap { file ->
-            importsOf(file)
-                .filter { import -> forbidden.any { prefix -> import.startsWith(prefix) } }
-                .map { import -> "${relativePath(file)} imports $import" }
-        }
         assertClean(
             "JVM-only libraries are forbidden in :core (Phase 1 prompt section 8).",
             "A java.* or javax.* import silently ends Kotlin Multiplatform support:",
-            violations,
+            violationsByImport(listOf("java.", "javax.")),
         )
     }
 
-    // ---- Rule 2: nothing Bluetooth or media-pipeline related exists yet -------
+    // ---- Rule 2: no Android framework type may leak into the domain ------------
+    //
+    // Named as the framework's own classes, deliberately not as "any identifier beginning with
+    // Bluetooth". Phase 2 legitimately introduces core vocabulary such as BluetoothAdapterState and
+    // BluetoothOperation; a prefix ban would either fail honest code or have to be widened until it
+    // meant nothing.
 
     @Test
-    fun coreReferencesNoBluetoothOrAudioFrameworkTypes() {
-        val pattern = Regex("\\b(Bluetooth[A-Za-z0-9_]*|AudioTrack|AudioManager|AudioRecord|MediaPlayer)\\b")
-        val violations = mainSources().flatMap { file ->
-            codeLinesOf(file)
-                .filter { line -> pattern.containsMatchIn(line) }
-                .map { line -> "${relativePath(file)}: $line" }
-        }
+    fun coreReferencesNoAndroidFrameworkTypes() {
         assertClean(
-            "No Bluetooth or media-audio implementation may exist in Phase 1 (prompt sections 2, 51).",
-            "These belong to Phases 2, 6 and 10:",
-            violations,
+            "Android framework types may not appear in :core code (Phase 2 prompt sections 5.1, 32).",
+            "They belong behind the :platform:android boundary:",
+            violationsByCodeToken(
+                listOf(
+                    "BluetoothAdapter", "BluetoothManager", "BluetoothDevice", "BluetoothProfile",
+                    "BluetoothGatt", "BluetoothGattCallback", "BluetoothSocket", "BluetoothServerSocket",
+                    "BluetoothLeScanner", "BluetoothLeAudio", "BluetoothA2dp", "BluetoothHeadset",
+                    "AudioTrack", "AudioManager", "AudioRecord", "MediaPlayer",
+                ),
+            ),
         )
     }
 
-    // ---- Rule 3: no placeholder that could be mistaken for working code ------
+    // ---- Rule 3: no placeholder that could be mistaken for working code -------
 
     @Test
     fun coreMainSourcesContainNoPlaceholderImplementations() {
@@ -177,13 +200,14 @@ class DependencyDirectionTest {
                 .map { line -> "${relativePath(file)}: $line" }
         }
         assertClean(
-            "Phase 1 ships contracts only (Phase 1 prompt sections 26, 53).",
-            "Any production implementation of a transport, protocol or repository contract would be a fabricated capability:",
+            "No production implementation of a transport, protocol or repository contract may exist yet " +
+                "(Phase 1 prompt sections 26, 53; Phase 2 prompt section 6).",
+            "Such an implementation would be a fabricated capability:",
             violations,
         )
     }
 
-    // ---- Rule 4: dependency direction inside the core ------------------------
+    // ---- Rule 4: dependency direction inside the core -------------------------
 
     @Test
     fun coreAreasDependOnlyOnMoreFoundationalAreas() {
@@ -198,7 +222,7 @@ class DependencyDirectionTest {
                 .map { target -> "$area -> $target" }
         }
         assertClean(
-            "Dependencies must point downward only (design.md section 3).",
+            "Dependencies must point downward only (Phase 1 design.md section 3, ADR-P1-003).",
             "Offending upward or sideways edges:",
             violations,
         )
@@ -217,7 +241,7 @@ class DependencyDirectionTest {
         return stripped.takeIf { it != import }?.substringBefore(".")
     }
 
-    // ---- Rule 5: no magic protocol facts in code ----------------------------
+    // ---- Rule 5: no magic protocol facts in code ------------------------------
 
     @Test
     fun coreContainsNoHardCodedProtocolLiterals() {
@@ -230,12 +254,12 @@ class DependencyDirectionTest {
         }
         assertClean(
             "Protocol bytes and service UUIDs are evidence-bearing data, not code literals (master section 52).",
-            "Magic values scattered through code are forbidden by ADR-P0-003 and section 52:",
+            "Magic values scattered through code are forbidden by ADR-P0-003 and master section 52:",
             violations,
         )
     }
 
-    // ---- Rule 6: package statements match the directory layout --------------
+    // ---- Rule 6: package statements match the directory layout ----------------
 
     @Test
     fun packageStatementsMatchSourceDirectories() {
@@ -258,15 +282,105 @@ class DependencyDirectionTest {
         )
     }
 
-    // ---- Rule 7: the Android boundary is still empty in Phase 1 --------------
+    // ---- Rule 7: the platform module holds no capability it was not given -----
+    //
+    // Phase 1 asserted this module was empty. Phase 2 opens it, so deleting the emptiness check
+    // would have removed a guard; instead it is replaced by a scope check that survives the boundary
+    // gaining code and still fails if this phase's authorisation is exceeded.
 
     @Test
-    fun platformAndroidModuleStillContainsNoSources() {
-        val androidMain = File("../platform/android/src/main")
-        if (!androidMain.isDirectory) {
-            fail("Expected the Android boundary at '${androidMain.invariantSeparatorsPath}'.")
+    fun platformModuleContainsNoUnauthorisedCapabilities() {
+        val forbidden = listOf(
+            "connectGatt", "BluetoothGatt", "writeCharacteristic", "startDiscovery",
+            "BluetoothLeScanner", "startScan", "createRfcommSocket", "listenUsingRfcomm",
+            "TileService", "AppWidgetProvider", "NotificationListenerService",
+            "androidx.appcompat", "androidx.compose", "setContentView", "ComponentActivity",
+        )
+        val pattern = Regex("\\b(${forbidden.joinToString("|")})\\b")
+        val violations = platformSources().flatMap { file ->
+            codeLinesOf(file)
+                .filter { line -> pattern.containsMatchIn(line) }
+                .map { line -> "${file.name}: $line" }
         }
-        val sources = androidMain.walk().filter { file -> file.isFile && file.extension == "kt" }.toList()
-        assertTrue(sources.isEmpty(), "Phase 1 forbids Bluetooth, permissions, notifications, Quick Settings and UI: " + sources.joinToString { it.name })
+
+        assertClean(
+            "Phase 2 authorises adapter inspection, permission status and capability reporting only " +
+                "(Phase 2 prompt sections 5, 6, 7).",
+            "GATT or RFCOMM traffic, discovery, UI, Quick Settings and widgets belong to later phases:",
+            violations,
+        )
+    }
+
+    // ---- Rule 8: the media audio path is untouched ----------------------------
+
+    @Test
+    fun neitherModuleTouchesTheMediaAudioPath() {
+        val forbidden = listOf("AudioRecord", "MediaCodec", "MediaExtractor", "MediaMuxer", "MediaSession")
+        val pattern = Regex("\\b(${forbidden.joinToString("|")})\\b")
+
+        val violations = (
+            mainSources().map { file -> relativePath(file) to file } +
+                platformSources().map { file -> "platform/${file.name}" to file }
+            )
+            .flatMap { (label, file) ->
+                codeLinesOf(file)
+                    .filter { line -> pattern.containsMatchIn(line) }
+                    .map { line -> "$label: $line" }
+            }
+
+        assertClean(
+            "OmniBuds stays outside the media audio path (ADR-P0-002, Phase 2 prompt section 7).",
+            "Capture, decode or re-encode of media audio must not appear in either module:",
+            violations,
+        )
+    }
+
+    // ---- Rule 9: no UI framework surface exists before its phase ---------------
+
+    @Test
+    fun neitherModuleReferencesUiFrameworks() {
+        val forbidden = listOf("Activity", "Fragment", "ViewModel", "Intent", "ContextThemeWrapper")
+        val pattern = Regex("\\b(${forbidden.joinToString("|")})\\b")
+
+        val violations = (
+            mainSources().map { file -> relativePath(file) to file } +
+                platformSources().map { file -> "platform/${file.name}" to file }
+            )
+            .flatMap { (label, file) ->
+                codeLinesOf(file)
+                    .filter { line -> pattern.containsMatchIn(line) }
+                    .map { line -> "$label: $line" }
+            }
+
+        assertClean(
+            "Phase 2 forbids UI screens (Phase 2 prompt section 6); the first UI is Phase 49.",
+            "UI framework references found:",
+            violations,
+        )
+    }
+
+    // ---- Rule 10: module dependency direction is one way ----------------------
+
+    @Test
+    fun theAndroidModuleDependsOnCoreAndNotTheReverse() {
+        val coreBuild = File("build.gradle.kts")
+        if (!coreBuild.isFile) fail("Expected :core's build script at '${coreBuild.invariantSeparatorsPath}'.")
+
+        val reverseDependency = coreBuild.readLines()
+            .map { it.trim() }
+            .filter { line -> line.contains("project(") && line.contains("android") }
+
+        assertClean(
+            ":core must never depend on :platform:android (Phase 2 prompt section 5.1).",
+            "Reverse dependency declared in :core's build script:",
+            reverseDependency,
+        )
+
+        val platformBuild = File("../platform/android/build.gradle.kts")
+        if (!platformBuild.isFile) fail("Expected the platform module's build script.")
+        assertTrue(
+            platformBuild.readLines().any { line -> line.contains("project(\":core\")") },
+            ":platform:android must depend on :core abstractions (Phase 2 prompt section 5.1).",
+        )
     }
 }

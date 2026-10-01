@@ -3,8 +3,8 @@ package com.omnibuds.core.common
 /**
  * The canonical failure categories for OmniBuds operations.
  *
- * This is the superset required by ADR-P0-012 plus the three categories the Phase 1
- * prompt adds. A category names what is known to be wrong; it never carries a
+ * This is the superset required by ADR-P0-012, the three categories the Phase 1 prompt
+ * adds (ADR-P1-006), and the eight platform-failure categories Phase 2 needs (ADR-P2-004). A category names what is known to be wrong; it never carries a
  * fabricated value, and an unread measurement stays unknown instead of becoming a
  * zero (ADR-P0-016).
  */
@@ -33,4 +33,16 @@ enum class OmniBudsErrorCategory(
     CODEC_UNAVAILABLE(RetryClass.NEVER_RETRY, invalidatesSession = false),
     UNKNOWN_DEVICE(RetryClass.NEVER_RETRY, invalidatesSession = false),
     INVALID_STATE(RetryClass.NEVER_RETRY, invalidatesSession = false),
+
+    // Phase 2 platform-failure categories, ADR-P2-004. Cancellation is deliberately absent:
+    // it is an OperationOutcome case, not an error (ADR-P1-004). An unreadable adapter state is
+    // not a category either - BluetoothAdapterState.UNKNOWN carries that meaning, and a category
+    // for it would let the same fact be reported two ways that can disagree.
+    ADAPTER_UNAVAILABLE(RetryClass.RETRY_AFTER_REREAD, invalidatesSession = false),
+    UNSUPPORTED_OPERATION(RetryClass.NEVER_RETRY, invalidatesSession = false),
+    PLATFORM_API_UNAVAILABLE(RetryClass.NEVER_RETRY, invalidatesSession = false),
+    CONNECTION_UNAVAILABLE(RetryClass.RETRY_AFTER_REREAD, invalidatesSession = true),
+    RESOURCE_UNAVAILABLE(RetryClass.RETRY_AFTER_REREAD, invalidatesSession = false),
+    PLATFORM_EXCEPTION(RetryClass.RETRY_AFTER_REREAD, invalidatesSession = true),
+    UNKNOWN_FAILURE(RetryClass.NEVER_RETRY, invalidatesSession = true),
 }

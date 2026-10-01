@@ -23,11 +23,11 @@ java {
 }
 
 dependencies {
-    // No production dependency. Suspending contracts are a Kotlin language feature and
-    // need no library, so adding kotlinx-coroutines here would be an unjustified
-    // dependency: the rule is docs/phases/phase-1/execution-prompt.md section 34, and
-    // ADR-P1-011 keeps the foundation lean. The coroutines library returns with the
-    // first Flow surface, which belongs to the Phase 2 state engine.
+    // ADR-P1-021 removed this while nothing used it. Phase 2 restores it on the stated
+    // trigger: adapter-state observation is a Flow surface (ADR-P2-003), so the library
+    // now has a reason. Suspending contracts alone would still need no dependency.
+    api(libs.kotlinx.coroutines.core)
+
     testImplementation(libs.kotlin.test)
     testImplementation(libs.junit.jupiter)
     testImplementation(libs.kotlinx.coroutines.test)

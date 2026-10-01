@@ -18,13 +18,19 @@ import kotlin.test.assertTrue
 class OmniBudsErrorCategoryTest {
 
     @Test
-    fun theCanonicalCategoriesAreAllPresent() {
+    fun theCategorySetIsExactlyTheDocumentedOne() {
         val expected = setOf(
+            // ADR-P0-012, the thirteen canonical categories
             "BLUETOOTH_DISABLED", "PERMISSION_DENIED", "DEVICE_DISCONNECTED",
             "TRANSPORT_UNAVAILABLE", "GATT_FAILURE", "RFCOMM_FAILURE", "PROTOCOL_MISMATCH",
-            "UNSUPPORTED_FEATURE", "READ_FAILED", "WRITE_REJECTED", "VERIFICATION_FAILED",
-            "TIMEOUT", "FIRMWARE_MISMATCH", "CODEC_UNAVAILABLE", "UNKNOWN_DEVICE",
-            "INVALID_STATE",
+            "UNSUPPORTED_FEATURE", "WRITE_REJECTED", "VERIFICATION_FAILED", "TIMEOUT",
+            "FIRMWARE_MISMATCH", "CODEC_UNAVAILABLE",
+            // ADR-P1-006, the three the Phase 1 prompt adds
+            "READ_FAILED", "UNKNOWN_DEVICE", "INVALID_STATE",
+            // ADR-P2-004, the platform-failure categories Phase 2 needs
+            "ADAPTER_UNAVAILABLE", "UNSUPPORTED_OPERATION", "PLATFORM_API_UNAVAILABLE",
+            "CONNECTION_UNAVAILABLE", "RESOURCE_UNAVAILABLE", "PLATFORM_EXCEPTION",
+            "UNKNOWN_FAILURE",
         )
 
         assertEquals(expected, OmniBudsErrorCategory.entries.map { it.name }.toSet())
@@ -34,12 +40,18 @@ class OmniBudsErrorCategoryTest {
     fun everyCategoryDeclaresItsRetryClassAndNoneIsUnspecified() {
         val expected = mapOf(
             OmniBudsErrorCategory.READ_FAILED to RetryClass.SAFE_TO_RETRY,
+
             OmniBudsErrorCategory.BLUETOOTH_DISABLED to RetryClass.RETRY_AFTER_REREAD,
             OmniBudsErrorCategory.DEVICE_DISCONNECTED to RetryClass.RETRY_AFTER_REREAD,
             OmniBudsErrorCategory.TRANSPORT_UNAVAILABLE to RetryClass.RETRY_AFTER_REREAD,
             OmniBudsErrorCategory.GATT_FAILURE to RetryClass.RETRY_AFTER_REREAD,
             OmniBudsErrorCategory.RFCOMM_FAILURE to RetryClass.RETRY_AFTER_REREAD,
             OmniBudsErrorCategory.TIMEOUT to RetryClass.RETRY_AFTER_REREAD,
+            OmniBudsErrorCategory.ADAPTER_UNAVAILABLE to RetryClass.RETRY_AFTER_REREAD,
+            OmniBudsErrorCategory.CONNECTION_UNAVAILABLE to RetryClass.RETRY_AFTER_REREAD,
+            OmniBudsErrorCategory.RESOURCE_UNAVAILABLE to RetryClass.RETRY_AFTER_REREAD,
+            OmniBudsErrorCategory.PLATFORM_EXCEPTION to RetryClass.RETRY_AFTER_REREAD,
+
             OmniBudsErrorCategory.PERMISSION_DENIED to RetryClass.NEVER_RETRY,
             OmniBudsErrorCategory.PROTOCOL_MISMATCH to RetryClass.NEVER_RETRY,
             OmniBudsErrorCategory.UNSUPPORTED_FEATURE to RetryClass.NEVER_RETRY,
@@ -49,56 +61,70 @@ class OmniBudsErrorCategoryTest {
             OmniBudsErrorCategory.CODEC_UNAVAILABLE to RetryClass.NEVER_RETRY,
             OmniBudsErrorCategory.UNKNOWN_DEVICE to RetryClass.NEVER_RETRY,
             OmniBudsErrorCategory.INVALID_STATE to RetryClass.NEVER_RETRY,
+            OmniBudsErrorCategory.UNSUPPORTED_OPERATION to RetryClass.NEVER_RETRY,
+            OmniBudsErrorCategory.PLATFORM_API_UNAVAILABLE to RetryClass.NEVER_RETRY,
+            OmniBudsErrorCategory.UNKNOWN_FAILURE to RetryClass.NEVER_RETRY,
         )
 
-        // A category missing from this table would carry an unchecked retry class, which is
-        // how a side-effecting write starts being re-sent on a timeout.
-        assertEquals(OmniBudsErrorCategory.entries.toSet(), expected.keys, "every category must be pinned")
+        assertFullCoverage(expected)
         expected.forEach { (category, retry) ->
             assertEquals(retry, category.retryClass, category.name)
         }
     }
 
     @Test
-    fun onlyIdempotentReadsMayBeRetriedWithoutCheckingStateFirst() {
+    fun aWriteOrUnknownEffectIsNeverBlindlyRetried() {
         val blindRetry = OmniBudsErrorCategory.entries.filter { it.retryClass == RetryClass.SAFE_TO_RETRY }
 
+        // Exactly one category may be repeated without first checking what the device did: a failed
+        // read. Widening this set is how a side-effecting command eventually gets re-sent.
         assertEquals(setOf(OmniBudsErrorCategory.READ_FAILED), blindRetry.toSet())
     }
 
     @Test
-    fun aTimedOutWriteIsResolvedByReReadingRatherThanByResending() {
-        assertEquals(RetryClass.RETRY_AFTER_REREAD, OmniBudsErrorCategory.TIMEOUT.retryClass)
-        assertTrue(OmniBudsErrorCategory.TIMEOUT.invalidatesSession)
+    fun everyCategoryDeclaresWhetherTheDeviceStateIsNowUncertain() {
+        val expected = mapOf(
+            // State on the device may have changed, or is no longer knowable from here.
+            OmniBudsErrorCategory.DEVICE_DISCONNECTED to true,
+            OmniBudsErrorCategory.GATT_FAILURE to true,
+            OmniBudsErrorCategory.RFCOMM_FAILURE to true,
+            OmniBudsErrorCategory.PROTOCOL_MISMATCH to true,
+            OmniBudsErrorCategory.WRITE_REJECTED to true,
+            OmniBudsErrorCategory.VERIFICATION_FAILED to true,
+            OmniBudsErrorCategory.TIMEOUT to true,
+            OmniBudsErrorCategory.CONNECTION_UNAVAILABLE to true,
+            OmniBudsErrorCategory.PLATFORM_EXCEPTION to true,
+            OmniBudsErrorCategory.UNKNOWN_FAILURE to true,
+
+            OmniBudsErrorCategory.BLUETOOTH_DISABLED to false,
+            OmniBudsErrorCategory.PERMISSION_DENIED to false,
+            OmniBudsErrorCategory.TRANSPORT_UNAVAILABLE to false,
+            OmniBudsErrorCategory.UNSUPPORTED_FEATURE to false,
+            OmniBudsErrorCategory.READ_FAILED to false,
+            OmniBudsErrorCategory.FIRMWARE_MISMATCH to false,
+            OmniBudsErrorCategory.CODEC_UNAVAILABLE to false,
+            OmniBudsErrorCategory.UNKNOWN_DEVICE to false,
+            OmniBudsErrorCategory.INVALID_STATE to false,
+            OmniBudsErrorCategory.ADAPTER_UNAVAILABLE to false,
+            OmniBudsErrorCategory.UNSUPPORTED_OPERATION to false,
+            OmniBudsErrorCategory.PLATFORM_API_UNAVAILABLE to false,
+            OmniBudsErrorCategory.RESOURCE_UNAVAILABLE to false,
+        )
+
+        assertFullCoverage(expected)
+        expected.forEach { (category, invalidates) ->
+            assertEquals(invalidates, category.invalidatesSession, category.name)
+        }
     }
 
-    @Test
-    fun categoriesThatLeaveTheDeviceStateUncertainSaySo() {
-        listOf(
-            OmniBudsErrorCategory.DEVICE_DISCONNECTED,
-            OmniBudsErrorCategory.GATT_FAILURE,
-            OmniBudsErrorCategory.RFCOMM_FAILURE,
-            OmniBudsErrorCategory.PROTOCOL_MISMATCH,
-            OmniBudsErrorCategory.WRITE_REJECTED,
-            OmniBudsErrorCategory.VERIFICATION_FAILED,
-            OmniBudsErrorCategory.TIMEOUT,
-        ).forEach { category ->
-            assertTrue(category.invalidatesSession, "$category leaves device state uncertain")
-        }
-
-        listOf(
-            OmniBudsErrorCategory.BLUETOOTH_DISABLED,
-            OmniBudsErrorCategory.PERMISSION_DENIED,
-            OmniBudsErrorCategory.TRANSPORT_UNAVAILABLE,
-            OmniBudsErrorCategory.UNSUPPORTED_FEATURE,
-            OmniBudsErrorCategory.READ_FAILED,
-            OmniBudsErrorCategory.FIRMWARE_MISMATCH,
-            OmniBudsErrorCategory.CODEC_UNAVAILABLE,
-            OmniBudsErrorCategory.UNKNOWN_DEVICE,
-            OmniBudsErrorCategory.INVALID_STATE,
-        ).forEach { category ->
-            assertFalse(category.invalidatesSession, "$category changes nothing on the device")
-        }
+    /**
+     * Guards against the failure mode where a new category is added and silently joins neither
+     * branch of an assertion list. Both tables above must name every entry of the enum exactly once.
+     */
+    private fun <V> assertFullCoverage(expected: Map<OmniBudsErrorCategory, V>) {
+        val all = OmniBudsErrorCategory.entries.toSet()
+        assertEquals(all, expected.keys, "every category must appear in this table")
+        assertEquals(all.size, expected.size, "a category is listed more than once")
     }
 
     @Test
