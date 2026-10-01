@@ -37,11 +37,16 @@ Phase 3 — `docs/phases/phase-3/decisions.md`:
 | ADR-P3-005 | Failure never becomes an empty list: `ObservationStage` and a typed outcome | accepted |
 | ADR-P3-006 | No new error category; observation failures reuse three existing ones | accepted |
 | ADR-P3-007 | Instrumented verification in the boundary module, five test-only coordinates | accepted — user-selected route |
+| ADR-P3-008 | Event-driven observation reconciled with a proxy snapshot; no list call exists | accepted |
+| ADR-P3-009 | Permission standing consulted before enumeration, so empty never means refused | accepted |
+| ADR-P3-010 | `DeviceObservationKey` carries the address, redacts itself, and is the only join | accepted |
+| ADR-P3-011 | Bluetooth receivers stay exported; Phase 2's flag choice left to a handset | accepted — raises a Phase 2 finding |
+| ADR-P3-012 | `BLUETOOTH_CONNECT` is the only manifest entry this phase earns | accepted — amends ADR-P2-011 |
 
-*Further Phase 3 decisions (device keys and redaction, the observation mechanism itself, the
-manifest entry, the instrumented route and the permission posture) depend on the connection
-research and are allocated only once their citations exist — Phase 2's debt came from citing ADRs
-before they were written.*
+*Two Phase 3 decisions stay open pending the device session rather than being decided by prose: whether
+an adapter-state announcement reaches a `RECEIVER_NOT_EXPORTED` receiver on a real handset
+(ADR-P3-011's finding against Phase 2), and whether binding a profile proxy leaves any trace on the
+audio path (research U-6, against ADR-P3-008).*
 
 Phase 2 — `docs/phases/phase-2/decisions.md`:
 
