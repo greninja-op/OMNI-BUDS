@@ -29,6 +29,8 @@ class DependencyDirectionTest {
 
     private val platformInstrumentedSourceRoot = File("../platform/android/src/androidTest")
 
+    private val platformUnitTestSourceRoot = File("../platform/android/src/test")
+
     private val importPattern = Regex("^import\\s+([A-Za-z0-9_.]+)")
 
     /** Internal areas and the layers they may depend on. Lower is more foundational. */
@@ -123,15 +125,21 @@ class DependencyDirectionTest {
     private fun instrumentedPlatformSources(): List<File> =
         scannedSourceRoot(platformInstrumentedSourceRoot, "the Android instrumented tests")
 
+    private fun platformUnitTestSources(): List<File> =
+        scannedSourceRoot(platformUnitTestSourceRoot, "the Android JVM unit tests")
+
     /**
      * Everything in the platform module that may hold a framework reference at all: production code and
      * the instrumentation that exercises it.
      *
      * One list rather than a second, narrower check, so that widening the scan cannot be done by
-     * forgetting one of two call sites. `src/test` stays out of it deliberately: those sources hold no
-     * framework type to begin with, because the seam classes they script declare none.
+     * forgetting one of three call sites. `src/test` is in it because the claim that it holds no
+     * framework reference turned out to be false - three Phase 2 unit tests import
+     * `android.bluetooth.BluetoothAdapter` for its state constants - and a reason that is not true is
+     * not a reason for excluding a source set from a capability guard.
      */
-    private fun platformCapabilitySources(): List<File> = platformSources() + instrumentedPlatformSources()
+    private fun platformCapabilitySources(): List<File> =
+        platformSources() + instrumentedPlatformSources() + platformUnitTestSources()
 
     private fun scannedSourceRoot(root: File, what: String): List<File> {
         if (!root.isDirectory) {
