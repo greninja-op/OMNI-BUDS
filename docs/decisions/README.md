@@ -45,6 +45,9 @@ Phase 2 — `docs/phases/phase-2/decisions.md`:
 | ADR-P2-013 | Transport boundaries pin their kind; `TransportKind` gains `BLE` | accepted |
 | ADR-P2-014 | Phase authorisation is test metadata, not runtime gating | accepted |
 | ADR-P2-015 | Framework class names banned in core string literals too | accepted |
+| ADR-P2-016 | UI-framework guard split; broadcast reception confined and re-guarded | accepted — amends the Phase 2 rule 9 token list |
+| ADR-P2-017 | A feature flag answers API availability only; hardware evidence stays INFERRED | accepted |
+| ADR-P2-018 | Audit findings R-7/R-8 fixed in the observation machine; `DEDUPED` deleted | accepted — closes audit R-7, R-8 |
 
 Phase 1 — `docs/phases/phase-1/decisions.md`:
 
