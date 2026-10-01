@@ -15,6 +15,9 @@ androidTargetSdk = "35"
 junitJupiter = "5.10.1"
 
 [libraries]
+# ADR-P1-021 removed this from :core as unused; ADR-P2-003 restores it because
+# adapter-state observation is a Flow surface, which is the trigger that was recorded.
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinCoroutines" }
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinCoroutines" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junitJupiter" }
