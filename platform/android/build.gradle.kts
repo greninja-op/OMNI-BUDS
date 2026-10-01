@@ -10,10 +10,12 @@ plugins {
 val omniBudsCompileSdk = libs.versions.androidCompileSdk.get().toInt()
 val omniBudsMinSdk = libs.versions.androidMinSdk.get().toInt()
 
-// The Android platform boundary. Phase 1 deliberately contains no Android source
-// here: no Bluetooth, no permissions, no UI, no notifications, no Quick Settings.
-// The module exists so that the boundary is real and compilable before Phase 2
-// puts platform code behind it (execution prompt sections 7, 33, 51, 52).
+// The Android platform boundary. Phase 1 created it source-free so the boundary was
+// real and compilable before any platform code existed; Phase 2 puts the Bluetooth
+// mechanism behind it (ADR-P2-001). What is still deliberately absent is everything
+// Phase 2 does not authorise: no GATT or RFCOMM traffic, no discovery, no UI, no
+// notifications, no Quick Settings, and no manifest permission (ADR-P2-011). The
+// absence is machine-checked by DependencyDirectionTest rather than by this comment.
 android {
     namespace = "com.omnibuds.android"
     compileSdk = omniBudsCompileSdk
@@ -39,4 +41,21 @@ dependencies {
     // The platform module may depend on core abstractions. Core must never depend
     // back on this module.
     api(project(":core"))
+
+    // Plain JVM unit tests, no device and no instrumentation. Only the seam-bearing
+    // classes are tested this way: the ones that hold framework calls (the receiver
+    // adapter, the system probes) are exercised on physical hardware instead, and
+    // docs/phases/phase-2/validation.md records which is which.
+    testImplementation(libs.kotlin.test)
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testRuntimeOnly(libs.junit.platform.launcher)
+}
+
+tasks.withType<Test>().configureEach {
+    useJUnitPlatform()
+    testLogging {
+        events("failed", "skipped")
+        exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+    }
 }

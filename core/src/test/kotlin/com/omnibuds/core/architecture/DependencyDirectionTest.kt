@@ -295,6 +295,10 @@ class DependencyDirectionTest {
             "BluetoothLeScanner", "startScan", "createRfcommSocket", "listenUsingRfcomm",
             "TileService", "AppWidgetProvider", "NotificationListenerService",
             "androidx.appcompat", "androidx.compose", "setContentView", "ComponentActivity",
+            // Phase 2 inspects permission standing and never asks for one (prompt section 5.3:
+            // "Do not repeatedly trigger permission prompts"). Naming the request API here turns that
+            // clause from a reading of the module into a check that fails the build.
+            "requestPermissions", "requestPermission",
         )
         val pattern = Regex("\\b(${forbidden.joinToString("|")})\\b")
         val violations = platformSources().flatMap { file ->
@@ -336,10 +340,20 @@ class DependencyDirectionTest {
     }
 
     // ---- Rule 9: no UI framework surface exists before its phase ---------------
+    //
+    // `Intent` was in this list until Phase 2 put a broadcast receiver behind the boundary. The type is
+    // Android's general inter-process message, and `ACTION_STATE_CHANGED` - which the prompt authorises
+    // in section 5.4 - cannot be received without naming it, so keeping it banned here would have meant
+    // either deleting the check or faking the mechanism. What the rule actually protects is the absence
+    // of screens and of app-launched components, so the token list now names those things directly and
+    // ADR-P2-016 records the split, with broadcast reception confined by rule 11 below.
 
     @Test
     fun neitherModuleReferencesUiFrameworks() {
-        val forbidden = listOf("Activity", "Fragment", "ViewModel", "Intent", "ContextThemeWrapper")
+        val forbidden = listOf(
+            "Activity", "Fragment", "ViewModel", "ContextThemeWrapper",
+            "setContentView", "startActivity", "PendingIntent",
+        )
         val pattern = Regex("\\b(${forbidden.joinToString("|")})\\b")
 
         val violations = (
@@ -359,7 +373,91 @@ class DependencyDirectionTest {
         )
     }
 
-    // ---- Rule 10: module dependency direction is one way ----------------------
+    // ---- Rule 10: the platform's broadcast use is only ever a listener ---------
+    //
+    // The substitute for the UI-token ban that adapter-state observation made impossible. Registering a
+    // receiver is authorised in Phase 2; sending, exporting or answering an intent from another app is
+    // not, and a component that could is exactly what a later phase must not add quietly.
+
+    @Test
+    fun platformBroadcastUseIsConfinedToListeningForAdapterState() {
+        val receiverTokens = listOf("BroadcastReceiver", "IntentFilter", "Intent", "registerReceiver")
+        val neverTokens = listOf("sendBroadcast", "sendOrderedBroadcast", "PendingIntent", "LocalBroadcastManager")
+        val receiverPattern = Regex("\\b(${receiverTokens.joinToString("|")})\\b")
+        val neverPattern = Regex("\\b(${neverTokens.joinToString("|")})\\b")
+
+        val outsideAdapter = platformSources().flatMap { file ->
+            if ("bluetooth/adapter/" in file.invariantSeparatorsPath) return@flatMap emptyList()
+            codeLinesOf(file)
+                .filter { line -> receiverPattern.containsMatchIn(line) }
+                .map { line -> "${file.name}: $line" }
+        }
+        val talkative = platformSources().flatMap { file ->
+            codeLinesOf(file)
+                .filter { line -> neverPattern.containsMatchIn(line) }
+                .map { line -> "${file.name}: $line" }
+        }
+
+        assertClean(
+            "Only the adapter-state boundary may receive broadcasts, and nothing in the platform module " +
+                "may send one or hold a PendingIntent (Phase 2 prompt sections 5.4, 6; ADR-P2-016).",
+            "Broadcast capability outside its authorised scope:",
+            outsideAdapter + talkative,
+        )
+    }
+
+    // ---- Rule 11: platform sources and the manifest stay inside their envelope --
+
+    @Test
+    fun platformSourcesLiveOnlyUnderTheAuthorisedPackages() {
+        val sources = platformSources()
+        if (sources.isEmpty()) {
+            fail(
+                "The Android boundary has no sources, so this scan proves nothing. Phase 2 put the " +
+                    "Bluetooth mechanism here; if it moved, fix the scan path rather than letting the " +
+                    "rule pass by finding nothing.",
+            )
+        }
+
+        val allowedRoots = listOf(
+            "com/omnibuds/android/bluetooth/",
+            "com/omnibuds/android/di/",
+        )
+        val violations = sources
+            .map { file -> file.invariantSeparatorsPath.substringAfter("kotlin/") }
+            .filterNot { path -> allowedRoots.any { root -> path.startsWith(root) } }
+
+        assertClean(
+            "Platform code belongs below the packages Phase 2 opened (architecture audit section 2.3).",
+            "A new top-level package is a boundary change and needs an ADR first:",
+            violations,
+        )
+    }
+
+    @Test
+    fun platformManifestDeclaresNothingUnjustified() {
+        val manifest = File("../platform/android/src/main/AndroidManifest.xml")
+        if (!manifest.isFile) fail("Expected the platform boundary manifest at '${manifest.invariantSeparatorsPath}'.")
+
+        val text = manifest.readText()
+        val declared = Regex("<uses-permission[^>]*android:name=\"([^\"]+)\"")
+            .findAll(text)
+            .map { match -> match.groupValues[1] }
+            .toList()
+        val allowed = emptySet<String>()
+        val components = listOf("<receiver", "<service", "<activity", "<provider")
+            .filter { tag -> tag in text }
+
+        assertClean(
+            "A permission or component declared before the phase that uses it is a fabricated " +
+                "capability (ADR-P2-011, ADR-P0-001; Phase 2 prompt section 5.3).",
+            "Library manifest entries merge into every consumer silently, so over-declaration is " +
+                "expensive in exactly the way a false capability claim is:",
+            declared.filterNot { name -> name in allowed } + components,
+        )
+    }
+
+    // ---- Rule 12: module dependency direction is one way ----------------------
 
     @Test
     fun theAndroidModuleDependsOnCoreAndNotTheReverse() {
