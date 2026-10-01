@@ -37,13 +37,13 @@ Topic folders are deliberately empty rather than pre-filled with stubs: their co
 | `architecture-audit.md` | Pre-execution audit of Phase 0/1 against the prompt, with the findings this phase had to answer |
 | `bluetooth-api-research.md` | Android Bluetooth behaviour as documented, cited per question, including where the docs disagree with each other |
 | `transport-boundaries.md` | The transport shape Phase 2 establishes and the members it refuses to invent |
-| `requirements.md` | REQ-P2-<NNN> over the authorised inspection scope |
+| `requirements.md` | REQ-P2-001 … REQ-P2-022 over the authorised inspection scope |
 | `design.md` | Platform boundary, adapter abstraction, permission architecture, state observation, concurrency, limitations |
 | `specs.md` | Real signatures, enums, the permission matrix, state machine, error and coroutine contracts |
-| `task-list.md` | TASK-P2-<NNN> with files, required tests and evidence |
-| `test-plan.md` | TEST-P2-<NNN> records, mocked and physical kept apart |
-| `decisions.md` | ADR-P2-001 … ADR-P2-017 |
-| `risk-register.md` | Project risks added by Phase 2, continuing the single register |
+| `task-list.md` | TASK-P2-001 … TASK-P2-032 with files, required tests and evidence |
+| `test-plan.md` | TEST-P2-001 … TEST-P2-040 records, mocked and physical kept apart |
+| `decisions.md` | ADR-P2-001 … ADR-P2-018 |
+| `risk-register.md` | RISK-026 … RISK-043, continuing the single project-wide register |
 | `validation.md` | Phase 2 acceptance record, the evidence-ceiling statement and Phase 3 readiness |
 
 ## Phase 1 index

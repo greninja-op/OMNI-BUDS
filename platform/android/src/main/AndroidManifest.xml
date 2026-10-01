@@ -2,10 +2,20 @@
 <!--
   Android platform boundary manifest.
 
-  Deliberately empty of permissions, components and intent filters. Phase 1 does
-  not implement Bluetooth, background services, notifications or Quick Settings,
-  so declaring any of their permissions here would be a fabricated capability
-  (ADR-P0-001). Permissions are added by the phase that actually uses them, with
-  a documented justification in that phase's security section.
+  Still deliberately empty of permissions, components and intent filters - now by
+  a measured finding rather than by absence of code. Phase 1 left it empty because
+  nothing was implemented (ADR-P0-001: a declaration with no call behind it is a
+  fabricated capability). Phase 2 then verified that an app targeting API 31 or
+  above needs no permission to obtain the adapter, read its state, register for
+  ACTION_STATE_CHANGED, inspect permission standing or query Bluetooth feature
+  flags, so the module gained its mechanism and no uses-permission (ADR-P2-011,
+  bluetooth-api-research.md Q1/Q7).
+
+  A library manifest merges into every consumer APK silently, which makes
+  over-declaration expensive in exactly the way a false capability claim is.
+  Permissions are added by the phase that actually performs the operation they
+  gate, with a justification in that phase's security section. This emptiness is
+  machine-checked by platformManifestDeclaresNothingUnjustified, which also refuses a
+  receiver, service, activity or provider element.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" />

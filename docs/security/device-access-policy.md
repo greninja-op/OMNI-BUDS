@@ -52,12 +52,35 @@ Concretely, until the user's instructions arrive: no installs, no `adb reverse`,
 `dumpsys bluetooth_manager`, no instrumented-test harness or `androidx.test` dependencies, no
 instrumented runs, and no writes of any kind to the device.
 
-What has actually been done on the device, and nothing more: two targeted `getprop` reads
-returning non-personal build facts (SDK level, release, model, manufacturer, ABI). Those facts are
-recorded here because they are what the API-level permission bands will be tested against.
+**Those instructions did arrive on 2026-10-01**, as two documents the user supplied: the local-first
+companion-bridge specification and the ADB deployment audit. They authorise a bounded set of
+actions - build, install, verify, launch, and later capture/input - and the audit added the
+restrictions that now bound them: no `adb uninstall` as troubleshooting, no `install -g`, no
+automatic permission grants, no developer-option changes, no deleting application data, and no
+claim of success a check did not produce.
+
+What has actually been done on the device, and nothing more:
+
+- targeted `getprop` reads returning non-personal build facts (SDK level, release, model,
+  manufacturer, ABI, HyperOS build, USB mode), recorded because they are what the API-level
+  permission bands will be tested against;
+- `adb install` of our own debug APK, including the controlled attempts that reproduced the
+  refusal, and one successful install plus one successful `-r` reinstall of the same package;
+- `pm list packages` / `pm path` **for our own package only**, `cmd package resolve-activity` and
+  `am start` **for our own activity**, and `pidof` for our own package;
+- `dumpsys window` to read which activity holds focus. This is the one command whose output names
+  other packages - the previous focus was a system media app - and it is read for that single
+  field, which is the foreground gate capture and input depend on;
+- `adb devices -l` and `adb version`, host-side.
+
+Not done, at any point: `adb uninstall`, `pm clear`, any `pm grant` or revocation, any change to
+developer options or security settings, any screen capture, any injected input, any read of
+another app's files or databases, `adb reverse`, `dumpsys bluetooth_manager`, or an instrumented
+test run. Capture and input remain unexercised because the foreground gate is the only permission
+this policy grants for them, and the deployment work had no reason to cross it.
 
 ## Status of device validation in Phase 2
 
-No device was attached when Phase 2 was implemented and validated (`adb devices` returned no entries, and no AVD exists). Phase 2 therefore validates adapter, permission, lifecycle and error behavior as JVM unit tests against fake framework seams, and the Android glue in `:platform:android` is compiled and lint-checked only.
+**No device was attached at Phase 2's close-out** (`adb devices -l` returned no entries), and no AVD exists. That is separate from the deployment work earlier the same day, which did run against the attached phone and is recorded in `docs/development/adb-deployment/validation.md`. What matters for this phase is that neither event overlaps: **no Phase 2 Bluetooth class has ever executed on a device.** Phase 2 validates adapter, permission, lifecycle and error behavior as JVM unit tests against fake framework seams, and the Android glue in `:platform:android` is compiled and lint-checked only. The installable module that did reach the phone is the debug-only companion shell, which depends on neither `:core` nor `:platform:android`, so a green deployment run is not evidence about the Bluetooth layer (ADR-P2-010).
 
 Device validation is a scheduled, separate step: when the user connects their phone, install and run the instrumented suite and record what the real adapter and permission state were — and treat any device-level observation not produced by that run as `UNKNOWN` rather than inferred. Until that happens, no Phase 2 statement about real Android behavior is verified.
