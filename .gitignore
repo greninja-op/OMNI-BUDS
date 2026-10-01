@@ -1,0 +1,39 @@
+# Gradle / Kotlin / Android build artifacts
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+*/build/
+**/build/
+**/build/**
+
+# Machine-local configuration — must never be committed
+local.properties
+.kotlin/
+
+# IDE
+.idea/
+*.iml
+.DS_Store
+captures/
+
+# Local secrets and signing material
+*.jks
+*.keystore
+keystore.properties
+secrets.properties
+.env
+.env.*
+
+# OmniBuds-specific: device captures and protocol research artifacts are personal
+# data and hardware-sensitive. Never enter version control. (Phase 0
+# docs/phases/phase-0/security-governance.md SEC-LOG-*)
+*.pcap
+*.pcapng
+*.btsnoop
+protocol-lab/captures/
+**/captures/
+**/packet-logs/
+
+# Diagnostic exports that may contain Bluetooth identifiers
+**/diagnostics/export/
+**/*.diag.json
