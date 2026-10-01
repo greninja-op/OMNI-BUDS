@@ -41,6 +41,39 @@ file depends on them.
   broadcast actions. This is the list `Context.registerReceiver` points at as authoritative for the
   receiver-export-flag exemption **[DOC]**, so it is checked per action in §4. **[SDK]**
 
+### 0.2a Independent re-verification by the orchestrator
+
+The four claims that change Phase 3's design were re-read from the same artifacts by the orchestrator
+before any ADR was written, because this project does not accept a sub-agent's summary as evidence.
+All four held.
+
+- `BluetoothManager.getConnectedDevices(int)` — the shipped Javadoc in the stub source reads
+  `@param profile GATT or GATT_SERVER` and `@return List of devices. The list will be empty on
+  error`, immediately above the same permission block that names `BLUETOOTH_CONNECT` for a
+  `S`-or-higher target. Both halves of the finding are the platform's words, not an inference: the
+  profile restriction, and the empty-on-error behaviour that ADR-P3-009 exists to work around.
+- `ACTION_ACL_CONNECTED`, `ACTION_ACL_DISCONNECTED` and `ACTION_BOND_STATE_CHANGED` are present in
+  the `BluetoothDevice` stubs with a `BLUETOOTH_CONNECT` receiver requirement and **no**
+  `@SystemApi` marker. `ACTION_CONNECTED_ACCESSIBLE_CHANGED` is absent, so it is not offered as an
+  alternative anywhere in Phase 3.
+- `android.jar` negative probes confirmed the absences the design relies on: `getMetadata`,
+  `isConnected`, `getBatteryLevel`, `ACTION_META_CHANGED`, `BluetoothAdapter.getConnectedDevices`
+  and `getSupportedProfiles` do not appear in the public class files at all. `enable` and `disable`
+  *do* appear as names, which is why Phase 3's guard work treats them as prohibited calls rather than
+  as unavailable ones — a name in a constant pool is not a promise that a third-party app may use it.
+- `BluetoothProfile` carries `getConnectedDevices` and `getDevicesMatchingConnectionStates` but not
+  `getProfileConnectionState`, which is the adapter's. The union therefore has two shapes and the
+  design in ADR-P3-008 names both.
+- `data/broadcast_actions.txt` was re-counted at 336 lines and re-grepped: `android.bluetooth.device.action.ACL_CONNECTED`,
+  `...ACL_DISCONNECTED`, `android.bluetooth.device.action.BOND_STATE_CHANGED`,
+  `android.bluetooth.adapter.action.STATE_CHANGED` and `...CONNECTION_STATE_CHANGED` are present,
+  along with A2DP, HEADSET, HEARINGAID, HIDDEVICE, LE_AUDIO and CSIS connection-state actions. Not
+  present: any per-device name-resolution or metadata action.
+
+What this re-check could not settle is the same list the research gives: the sender UID question and
+therefore the export-flag asymmetry, the actual delivery behaviour at target 34 and above, and every
+side-effect question around proxy binding. Those stay UNVERIFIED and belong to the phone.
+
 ### 0.3 The device limit, stated plainly
 
 No phone, no emulator and no `adb` target was used. `adb devices -l` was run against the
