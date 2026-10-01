@@ -27,6 +27,8 @@ class DependencyDirectionTest {
 
     private val platformSourceRoot = File("../platform/android/src/main")
 
+    private val platformInstrumentedSourceRoot = File("../platform/android/src/androidTest")
+
     private val importPattern = Regex("^import\\s+([A-Za-z0-9_.]+)")
 
     /** Internal areas and the layers they may depend on. Lower is more foundational. */
@@ -108,11 +110,44 @@ class DependencyDirectionTest {
         }
     }
 
-    private fun platformSources(): List<File> {
-        if (!platformSourceRoot.isDirectory) {
-            fail("Expected the Android boundary at '${platformSourceRoot.invariantSeparatorsPath}'.")
+    private fun platformSources(): List<File> = scannedSourceRoot(platformSourceRoot, "the Android boundary")
+
+    /**
+     * The instrumented source set, scanned for the capability list from Phase 3 onward.
+     *
+     * ADR-P3-007 named this gap rather than letting it stay theoretical: the guards read `src/main`
+     * only, so an instrumented test could reach a forbidden framework call, compile cleanly, never be
+     * run and pass every check in this file. A test that can do a thing the phase forbids is still a
+     * module that can do it, and the next editor copies the call.
+     */
+    private fun instrumentedPlatformSources(): List<File> =
+        scannedSourceRoot(platformInstrumentedSourceRoot, "the Android instrumented tests")
+
+    /**
+     * Everything in the platform module that may hold a framework reference at all: production code and
+     * the instrumentation that exercises it.
+     *
+     * One list rather than a second, narrower check, so that widening the scan cannot be done by
+     * forgetting one of two call sites. `src/test` stays out of it deliberately: those sources hold no
+     * framework type to begin with, because the seam classes they script declare none.
+     */
+    private fun platformCapabilitySources(): List<File> = platformSources() + instrumentedPlatformSources()
+
+    private fun scannedSourceRoot(root: File, what: String): List<File> {
+        if (!root.isDirectory) {
+            fail(
+                "Expected $what at '${root.invariantSeparatorsPath}'. A scan that silently finds " +
+                    "nothing because a source set moved is a passing check that proves nothing.",
+            )
         }
-        return platformSourceRoot.walk().filter { file -> file.isFile && file.extension == "kt" }.toList()
+        return root.walk()
+            .filter { file -> file.isFile && file.extension == "kt" }
+            .toList()
+            .also { sources ->
+                if (sources.isEmpty()) {
+                    fail("No Kotlin sources under '${root.invariantSeparatorsPath}'; the scan would be vacuous.")
+                }
+            }
     }
 
     // ---- Rule 1: the core may not touch platform or JVM-only frameworks --------
@@ -299,20 +334,43 @@ class DependencyDirectionTest {
             // "Do not repeatedly trigger permission prompts"). Naming the request API here turns that
             // clause from a reading of the module into a check that fails the build.
             "requestPermissions", "requestPermission",
+            // Phase 3's additions, each one a name that reads as a query and is not one. The research
+            // put these forward by name (section 8.2) precisely because the look-alikes are the danger:
+            // `fetchUuidsWithSdp` is an over-the-air service discovery transaction against a named
+            // device, `startVoiceRecognition` and `stopVoiceRecognition` open and shut down the Bluetooth
+            // audio path, and `setPriorityPolicy` writes an LE Audio policy. None of them is observation,
+            // and `connectGatt` was already refused above for the same reason. `setPriorityPolicy` is the
+            // one of the four that the compileSdk 35 public API does not contain at all - no class under
+            // `android/bluetooth` carries the name - so the entry cannot fire today and is kept as the
+            // forward guard it will be the first time the compile SDK widens.
+            "fetchUuidsWithSdp", "startVoiceRecognition", "stopVoiceRecognition", "setPriorityPolicy",
         )
         val pattern = Regex("\\b(${forbidden.joinToString("|")})\\b")
-        val violations = platformSources().flatMap { file ->
+        val violations = platformCapabilitySources().flatMap { file ->
             codeLinesOf(file)
                 .filter { line -> pattern.containsMatchIn(line) }
-                .map { line -> "${file.name}: $line" }
+                .map { line -> "${labelOf(file)}: $line" }
         }
 
         assertClean(
-            "Phase 2 authorises adapter inspection, permission status and capability reporting only " +
-                "(Phase 2 prompt sections 5, 6, 7).",
-            "GATT or RFCOMM traffic, discovery, UI, Quick Settings and widgets belong to later phases:",
+            "Phase 2 authorises adapter inspection, permission status and capability reporting, and " +
+                "Phase 3 adds read-only device observation: per-profile and attribute-protocol " +
+                "enumeration of linked devices, connection and bond announcements, and the descriptor " +
+                "cache reads beside them. Nothing else (Phase 2 prompt sections 5, 6, 7; Phase 3 prompt " +
+                "sections 16, 17; research section 8).",
+            "GATT or RFCOMM traffic, discovery, scanning, pairing, audio-path control, adapter power, UI, " +
+                "Quick Settings and widgets belong to later phases. The instrumented source set is " +
+                "scanned here too, because a test that can reach a refused call is a module that can " +
+                "reach it (ADR-P3-007):",
             violations,
         )
+    }
+
+    /** Where a platform violation came from, so a failure names the source set that has to change. */
+    private fun labelOf(file: File): String {
+        val prefix = "platform/android/src/"
+        val path = file.invariantSeparatorsPath.substringAfter(prefix)
+        return path.substringBefore("/kotlin/").ifEmpty { "main" } + "/" + file.name
     }
 
     // ---- Rule 8: the media audio path is untouched ----------------------------
@@ -378,16 +436,27 @@ class DependencyDirectionTest {
     // The substitute for the UI-token ban that adapter-state observation made impossible. Registering a
     // receiver is authorised in Phase 2; sending, exporting or answering an intent from another app is
     // not, and a component that could is exactly what a later phase must not add quietly.
-
+    //
+    // Phase 3 widened the *location* half of this rule and nothing else. `bluetooth/connection/` holds
+    // the ACL, bond and per-profile connection-state receivers ADR-P3-008 made necessary, because the
+    // platform has no list-connected-devices call and no callback a third-party app may reach, so a
+    // listener outside the adapter package is not an extra capability but the same capability about a
+    // different subject. The method name stays Phase 2's, since `docs/phases/phase-2` cites it by name in
+    // five places and a rename would break the traceability the citations exist to provide. What did NOT
+    // move: the senders stay banned everywhere, the token list is unchanged, and a receiver in any fourth
+    // package still fails this check.
     @Test
     fun platformBroadcastUseIsConfinedToListeningForAdapterState() {
         val receiverTokens = listOf("BroadcastReceiver", "IntentFilter", "Intent", "registerReceiver")
         val neverTokens = listOf("sendBroadcast", "sendOrderedBroadcast", "PendingIntent", "LocalBroadcastManager")
         val receiverPattern = Regex("\\b(${receiverTokens.joinToString("|")})\\b")
         val neverPattern = Regex("\\b(${neverTokens.joinToString("|")})\\b")
+        val authorisedListenerPackages = listOf("bluetooth/adapter/", "bluetooth/connection/")
 
         val outsideAdapter = platformSources().flatMap { file ->
-            if ("bluetooth/adapter/" in file.invariantSeparatorsPath) return@flatMap emptyList()
+            if (authorisedListenerPackages.any { path -> path in file.invariantSeparatorsPath }) {
+                return@flatMap emptyList()
+            }
             codeLinesOf(file)
                 .filter { line -> receiverPattern.containsMatchIn(line) }
                 .map { line -> "${file.name}: $line" }
@@ -399,8 +468,9 @@ class DependencyDirectionTest {
         }
 
         assertClean(
-            "Only the adapter-state boundary may receive broadcasts, and nothing in the platform module " +
-                "may send one or hold a PendingIntent (Phase 2 prompt sections 5.4, 6; ADR-P2-016).",
+            "Only the adapter-state and connected-device boundaries may receive broadcasts, and nothing " +
+                "in the platform module may send one or hold a PendingIntent (Phase 2 prompt sections 5.4, " +
+                "6; ADR-P2-016, widened in location only by ADR-P3-008).",
             "Broadcast capability outside its authorised scope:",
             outsideAdapter + talkative,
         )
@@ -444,7 +514,7 @@ class DependencyDirectionTest {
             .findAll(text)
             .map { match -> match.groupValues[1] }
             .toList()
-        val allowed = emptySet<String>()
+        val allowed = setOf("android.permission.BLUETOOTH_CONNECT")
         val components = listOf("<receiver", "<service", "<activity", "<provider")
             .filter { tag -> tag in text }
 
@@ -452,7 +522,12 @@ class DependencyDirectionTest {
             "A permission or component declared before the phase that uses it is a fabricated " +
                 "capability (ADR-P2-011, ADR-P0-001; Phase 2 prompt section 5.3).",
             "Library manifest entries merge into every consumer silently, so over-declaration is " +
-                "expensive in exactly the way a false capability claim is:",
+                "expensive in exactly the way a false capability claim is. Phase 3 earned exactly one " +
+                "name, BLUETOOTH_CONNECT, because the enumeration and announcement calls it makes name " +
+                "that permission themselves; BLUETOOTH_SCAN and the location permissions stay refused, " +
+                "since this phase neither scans nor reads a location-derived broadcast, and a component " +
+                "stays refused because every receiver here is context-registered and owned by the object " +
+                "that opened it (ADR-P3-012):",
             declared.filterNot { name -> name in allowed } + components,
         )
     }

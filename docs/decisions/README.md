@@ -45,6 +45,7 @@ Phase 3 — `docs/phases/phase-3/decisions.md`:
 | ADR-P3-013 | Bluetooth receivers are exported, Phase 2's included | accepted — supersedes ADR-P2-016's flag reasoning |
 | ADR-P3-014 | Device verification deferred out of completion criteria; application first | accepted — user directive, standing |
 | ADR-P3-015 | Twelve engine rules settled; empty-union category overridden | accepted — amends ADR-P3-010 |
+| ADR-P3-016 | Instrumented sources policed; receiver confinement widened in location only | accepted — amends ADR-P2-016, closes ADR-P3-007's gap |
 
 *Two Phase 3 decisions stay open pending the device session rather than being decided by prose: whether
 an adapter-state announcement reaches a `RECEIVER_NOT_EXPORTED` receiver on a real handset

@@ -2,20 +2,39 @@
 <!--
   Android platform boundary manifest.
 
-  Still deliberately empty of permissions, components and intent filters - now by
-  a measured finding rather than by absence of code. Phase 1 left it empty because
-  nothing was implemented (ADR-P0-001: a declaration with no call behind it is a
-  fabricated capability). Phase 2 then verified that an app targeting API 31 or
-  above needs no permission to obtain the adapter, read its state, register for
-  ACTION_STATE_CHANGED, inspect permission standing or query Bluetooth feature
-  flags, so the module gained its mechanism and no uses-permission (ADR-P2-011,
-  bluetooth-api-research.md Q1/Q7).
+  Phase 2 left this file empty of permissions, components and intent filters, by a measured finding
+  rather than by absence of code. Phase 1 had left it empty because nothing was implemented
+  (ADR-P0-001: a declaration with no call behind it is a fabricated capability). Phase 2 then verified
+  that an app targeting API 31 or above needs no permission to obtain the adapter, read its state,
+  register for ACTION_STATE_CHANGED, inspect permission standing or query Bluetooth feature flags, so
+  the module gained its mechanism and no uses-permission (ADR-P2-011, bluetooth-api-research.md Q1/Q7).
 
-  A library manifest merges into every consumer APK silently, which makes
-  over-declaration expensive in exactly the way a false capability claim is.
-  Permissions are added by the phase that actually performs the operation they
-  gate, with a justification in that phase's security section. This emptiness is
-  machine-checked by platformManifestDeclaresNothingUnjustified, which also refuses a
-  receiver, service, activity or provider element.
+  Phase 3 changes that answer in exactly one place, and ADR-P3-012 is the reason: the calls this phase
+  makes name BLUETOOTH_CONNECT as required in the platform's own per-member documentation - the profile
+  enumerations behind a bound service handle, the per-device name and bond reads, and every
+  connection-state and ACL announcement the stack relays, which the stack sends *with BLUETOOTH_CONNECT
+  as the receiver permission*, so an ungranted app is not told it was refused, it simply hears nothing.
+  An undeclared permission here would not be a bypass; it would be a refusal this app chose for itself,
+  and the refusal Android reports is an empty device list, which is the confusion ADR-P3-009 exists to
+  close.
+
+  What is deliberately NOT declared, each for a cited reason rather than by oversight:
+    - BLUETOOTH_SCAN. Phase 3 does not scan and does not start discovery, so declaring it would move the
+      app into the Nearby devices prompt group for a feature that does not exist. Over-declaration is
+      expensive for the reason ADR-P2-011 gave: a library manifest merges silently into every consumer.
+    - ACCESS_FINE_LOCATION and ACCESS_COARSE_LOCATION. No connection-observation member in the public
+      surface mentions location at all; the only Bluetooth device broadcast that does is ACTION_FOUND,
+      which is a scan result and is out of scope (research section 5.3).
+    - BLUETOOTH and BLUETOOTH_ADMIN. Install-time permissions the modern band ignores; this module
+      targets the runtime model, and if the legacy band is ever supported its resolver rows already
+      exist and that phase declares them with its own justification (ADR-P3-012).
+
+  The manifest stays empty of components. Every receiver this module has is context-registered and
+  scoped to the lifetime of the object that opened it (research section 4.4: most of these actions
+  cannot reach a manifest-declared receiver anyway, and ADR-P2-011 keeps a component out of a library).
+  Both the single permission above and the absence of components are machine-checked by
+  platformManifestDeclaresNothingUnjustified, whose allowed set gained exactly one name and nothing else.
 -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+</manifest>
