@@ -1,0 +1,27 @@
+# OmniBuds version catalog.
+#
+# Phase 1 dependency policy (execution prompt section 34): every entry here needs
+# a recorded reason, and each one is documented in
+# docs/phases/phase-1/decisions.md plus docs/phases/phase-1/specs.md.
+# Nothing was added because it is popular.
+
+[versions]
+kotlin = "2.0.21"
+kotlinCoroutines = "1.9.0"
+androidGradlePlugin = "8.7.3"
+androidCompileSdk = "35"
+androidMinSdk = "26"
+androidTargetSdk = "35"
+junitJupiter = "5.10.1"
+
+[libraries]
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinCoroutines" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinCoroutines" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junitJupiter" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher", version = "1.10.1" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }

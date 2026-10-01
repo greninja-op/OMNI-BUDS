@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Android platform boundary manifest.
+
+  Deliberately empty of permissions, components and intent filters. Phase 1 does
+  not implement Bluetooth, background services, notifications or Quick Settings,
+  so declaring any of their permissions here would be a fabricated capability
+  (ADR-P0-001). Permissions are added by the phase that actually uses them, with
+  a documented justification in that phase's security section.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" />
