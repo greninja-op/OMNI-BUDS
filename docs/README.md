@@ -21,6 +21,7 @@ A phase execution prompt that conflicts with items 1–3 must be reported, not s
 | `phases/phase-0/` | Phase 0: engineering contract, repository rules, governance | validated |
 | `phases/phase-1/` | Phase 1: project foundation and Kotlin architecture | validated |
 | `phases/phase-2/` | Phase 2: Android Bluetooth foundation (mechanism, permissions, capability reporting) | validated, no hardware executed |
+| `phases/phase-3/` | Phase 3: connected-device detection (bond and link observation, profile union, reconciliation) | recorded; no hardware executed, device validation deferred by user directive |
 | `phases/phase-<N>/` | One directory per future phase, created from `templates/` | not started |
 | `templates/` | The eight mandatory phase document templates | complete |
 | `decisions/` | Global ADR index → `decisions/README.md` | complete through Phase 2 |
@@ -28,6 +29,22 @@ A phase execution prompt that conflicts with items 1–3 must be reported, not s
 | `architecture/`, `protocols/`, `bluetooth/`, `audio/`, `testing/`, `security/`, `requirements/`, `product/` | Long-lived topic documents, promoted out of a phase record when content stops being phase-specific | reserved placeholders; `security/` now holds `device-access-policy.md`, the rest are empty until the owning phase fills them |
 
 Topic folders are deliberately empty rather than pre-filled with stubs: their content will come from the phase that actually earns it, and a stub would imply knowledge that does not exist yet.
+
+## Phase 3 index
+
+| Document | Purpose |
+|---|---|
+| `execution-prompt.md` | The Phase 3 contract, verbatim |
+| `architecture-audit.md` | Pre-execution inspection of the tree, the two-axis trap it found, and what Phase 2 left open |
+| `connection-observation-research.md` | What Android will and will not tell an app about connected devices, cited per claim, with the UNVERIFIED list |
+| `requirements.md` | REQ-P3-001 … REQ-P3-027 |
+| `design.md` | Layered flow, the three axes, the maintained profile union, standing-before-looking, lifecycle and platform limits |
+| `specs.md` | Real signatures, enum members, the transition grid, join and redaction rules, mapping tables, guard set |
+| `task-list.md` | TASK-P3-001 … TASK-P3-020 in execution order, including the two corrections made during the phase |
+| `test-plan.md` | TEST-P3-<NNN> records; mocked and physical kept apart, with the deferred device session written as an instruction |
+| `decisions.md` | ADR-P3-001 … ADR-P3-017 |
+| `risk-register.md` | RISK-044 … RISK-064, continuing the single project-wide register |
+| `validation.md` | Phase 3 acceptance record, the deferred-verification list, and Phase 4 readiness |
 
 ## Phase 2 index
 

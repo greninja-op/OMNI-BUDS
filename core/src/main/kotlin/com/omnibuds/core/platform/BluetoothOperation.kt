@@ -63,7 +63,13 @@ enum class BluetoothOperation(
     ),
     DEVICE_DISCOVERY_SCAN(
         "device.discovery-scan",
-        authorizedInPhase = 3,
+        // Corrected from 3 during Phase 3. The roadmap gives Phase 3 "Connected Device Detection",
+        // which observes the state Android already holds; starting classic discovery or a BLE scan
+        // belongs with Phase 5, "Device Fingerprinting & Identification", whose advertisement data is
+        // the first thing that needs it. Leaving it at 3 asserted that a phase whose prompt section 16
+        // forbids discovery and section 10 forbids retaining discovered devices had authorised it -
+        // data that contradicts the phase it names is worse than data with a gap in it (ADR-P3-018).
+        authorizedInPhase = 5,
         description = "Start classic discovery or BLE scanning to find nearby devices",
     ),
     PROFILE_CONNECTION_STATE_INSPECTION(
