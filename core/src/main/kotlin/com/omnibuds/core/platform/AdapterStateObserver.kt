@@ -76,11 +76,16 @@ class AdapterStateObserver(
 
         var registration: PlatformRegistration? = null
         var lastState: BluetoothAdapterState? = null
+        // Whether this observation has already emitted the value it started from. A successful initial
+        // read is that value, so every later change is a PLATFORM_EVENT; when the read failed, the
+        // first differing event is where the consumer's knowledge genuinely begins (audit R-8).
+        var startingValueAnnounced = false
         teardownProblem = null
         try {
             when (val initial = source.readState()) {
                 is OperationOutcome.Success -> {
                     lastState = initial.value
+                    startingValueAnnounced = true
                     send(
                         OperationOutcome.Success(
                             AdapterStateObservation(
@@ -100,15 +105,11 @@ class AdapterStateObserver(
                 }
 
                 OperationOutcome.Cancelled -> {
-                    send(
-                        OperationOutcome.Failure(
-                            OmniBudsError(
-                                category = OmniBudsErrorCategory.PLATFORM_EXCEPTION,
-                                operationId = OPERATION_ID,
-                                detail = "the platform adapter-state read was cancelled",
-                            ),
-                        ),
-                    )
+                    // Cancellation stays cancellation (audit finding R-7, ADR-P1-004). Relabelling it
+                    // as a platform exception would make "the read was called off" look like "the
+                    // adapter is broken", and specs section 5.3's rule - a cancelled operation reports
+                    // CANCELLED - would be false at the one place it matters.
+                    send(OperationOutcome.Cancelled)
                     return@channelFlow
                 }
             }
@@ -116,21 +117,20 @@ class AdapterStateObserver(
             when (val channel = source.openStateChanges()) {
                 is OperationOutcome.Success -> {
                     registration = channel.value.registration
-                    var announcedFirstChange = false
                     channel.value.states.collect { state ->
                         if (state == lastState) return@collect
-                        val alreadyAnnounced = announcedFirstChange
+                        val kind = if (startingValueAnnounced) {
+                            ObservationKind.PLATFORM_EVENT
+                        } else {
+                            ObservationKind.INITIAL_EVENT
+                        }
                         lastState = state
-                        announcedFirstChange = true
+                        startingValueAnnounced = true
                         send(
                             OperationOutcome.Success(
                                 AdapterStateObservation(
                                     state = state,
-                                    kind = if (alreadyAnnounced) {
-                                        ObservationKind.PLATFORM_EVENT
-                                    } else {
-                                        ObservationKind.INITIAL_EVENT
-                                    },
+                                    kind = kind,
                                     observedAtEpochMillis = time.nowEpochMillis(),
                                 ),
                             ),
@@ -140,7 +140,10 @@ class AdapterStateObserver(
 
                 is OperationOutcome.Failure -> send(OperationOutcome.Failure(channel.error))
 
-                OperationOutcome.Cancelled -> Unit
+                // Nothing was registered, so there is nothing to tear down; the slot still releases in
+                // the finally. Ending the stream silently instead would leave a consumer holding a flow
+                // that simply stopped, with no fact about why.
+                OperationOutcome.Cancelled -> send(OperationOutcome.Cancelled)
             }
         } finally {
             // A registration that outlives its collector is the leak this class exists to prevent, so

@@ -25,6 +25,7 @@ class FakeAdapterStateSource(
     private vararg val reads: OperationOutcome<BluetoothAdapterState>,
     private val eventScript: List<BluetoothAdapterState> = emptyList(),
     private val keepOpen: Boolean = false,
+    private val openCancels: Boolean = false,
 ) {
     var readCalls = 0
         private set
@@ -66,6 +67,8 @@ class FakeAdapterStateSource(
                     ),
                 )
             }
+
+            if (openCancels) return OperationOutcome.Cancelled
 
             activeRegistrations += 1
             var live = true

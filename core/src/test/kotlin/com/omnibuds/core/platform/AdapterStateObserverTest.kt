@@ -81,12 +81,33 @@ class AdapterStateObserverTest {
         assertEquals(
             listOf(
                 ObservationKind.INITIAL_READ,
-                ObservationKind.INITIAL_EVENT,
+                ObservationKind.PLATFORM_EVENT,
                 ObservationKind.PLATFORM_EVENT,
                 ObservationKind.PLATFORM_EVENT,
             ),
             kinds,
         )
+    }
+
+    @Test
+    fun theFirstChangeAfterASuccessfulReadIsAPlatformEventNotAnInitialOne() = runTest {
+        val source = FakeAdapterStateSource(
+            enabled,
+            eventScript = listOf(BluetoothAdapterState.ENABLED, BluetoothAdapterState.DISABLED),
+        )
+        val observer = AdapterStateObserver(source.asSource())
+
+        val results = observer.observe().toList()
+
+        // Audit finding R-8: the initial read already said where the adapter was, so a repeat of that
+        // state is suppressed and the next genuine transition is a platform event, not a new starting
+        // point. Tagging it INITIAL_EVENT would tell a consumer the observation had just begun.
+        assertEquals(2, results.size, "the duplicate announcement is dropped")
+        assertEquals(
+            listOf(ObservationKind.INITIAL_READ, ObservationKind.PLATFORM_EVENT),
+            results.mapNotNull { it.valueOrNull?.kind },
+        )
+        assertEquals(BluetoothAdapterState.DISABLED, assertIs<OperationOutcome.Success<AdapterStateObservation>>(results[1]).value.state)
     }
 
     @Test
@@ -185,6 +206,35 @@ class AdapterStateObserverTest {
         val failure = assertIs<OperationOutcome.Failure>(results[1])
         assertEquals(OmniBudsErrorCategory.RESOURCE_UNAVAILABLE, failure.error.category)
         assertEquals(0, source.activeRegistrations)
+    }
+
+    @Test
+    fun aCancelledReadIsReportedAsCancellationNotAsABrokenAdapter() = runTest {
+        val source = FakeAdapterStateSource(OperationOutcome.Cancelled)
+        val observer = AdapterStateObserver(source.asSource())
+
+        val results = observer.observe().toList()
+
+        // Audit finding R-7. Relabelling cancellation as PLATFORM_EXCEPTION made "the read was called
+        // off" indistinguishable from "the adapter is broken", which specs section 5.3 forbids.
+        assertEquals(1, results.size, "a cancelled read ends the observation without inventing a fault")
+        assertIs<OperationOutcome.Cancelled>(results.first())
+        assertEquals(0, source.openCalls, "nothing was registered, because the read never answered")
+        assertFalse(observer.isObserving, "the slot is released even when the read was called off")
+    }
+
+    @Test
+    fun aCancelledRegistrationIsReportedAsCancellationAndReleasesTheSlot() = runTest {
+        val source = FakeAdapterStateSource(enabled, openCancels = true)
+        val observer = AdapterStateObserver(source.asSource())
+
+        val results = observer.observe().toList()
+
+        assertEquals(2, results.size)
+        assertIs<OperationOutcome.Success<AdapterStateObservation>>(results.first())
+        assertIs<OperationOutcome.Cancelled>(results[1])
+        assertEquals(0, source.activeRegistrations)
+        assertFalse(observer.isObserving)
     }
 
     @Test
