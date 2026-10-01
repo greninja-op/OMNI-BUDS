@@ -36,6 +36,7 @@ value class FeatureId private constructor(val qualifiedName: String) {
     companion object {
         private const val VENDOR_ROOT = "vendor"
         private const val MIN_VENDOR_SEGMENTS = 3
+        private const val MIN_SEGMENTS = 2
         private val segmentPattern = Regex("[a-z][a-z0-9]*(-[a-z0-9]+)*")
 
         /** Namespaced core feature, e.g. `of("noise-control", "anc")`. */
@@ -53,7 +54,16 @@ value class FeatureId private constructor(val qualifiedName: String) {
         fun ofVendor(vendor: String, feature: String): FeatureId =
             of(VENDOR_ROOT, vendor, feature)
 
-        fun parseOrNull(raw: String): FeatureId? =
-            if (raw.split('.').all { it.matches(segmentPattern) }) FeatureId(raw) else null
+        /**
+         * Decodes a previously stored identifier, returning null rather than guessing when
+         * the text is not a valid feature id. This is the read path for protocol records
+         * and persisted configuration; it enforces the same shape as [of], so a stored
+         * one-segment name cannot become an identity.
+         */
+        fun parseOrNull(raw: String): FeatureId? {
+            val parts = raw.split('.')
+            if (parts.size < MIN_SEGMENTS) return null
+            return if (parts.all { it.matches(segmentPattern) }) FeatureId(raw) else null
+        }
     }
 }

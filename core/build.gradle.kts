@@ -23,10 +23,11 @@ java {
 }
 
 dependencies {
-    // Coroutines are part of the domain contract: hardware operations are
-    // suspending, and state is exposed as Flow. Documented in specs.md.
-    api(libs.kotlinx.coroutines.core)
-
+    // No production dependency. Suspending contracts are a Kotlin language feature and
+    // need no library, so adding kotlinx-coroutines here would be an unjustified
+    // dependency: the rule is docs/phases/phase-1/execution-prompt.md section 34, and
+    // ADR-P1-011 keeps the foundation lean. The coroutines library returns with the
+    // first Flow surface, which belongs to the Phase 2 state engine.
     testImplementation(libs.kotlin.test)
     testImplementation(libs.junit.jupiter)
     testImplementation(libs.kotlinx.coroutines.test)

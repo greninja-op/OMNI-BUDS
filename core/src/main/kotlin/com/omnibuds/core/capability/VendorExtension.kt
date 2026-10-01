@@ -29,15 +29,14 @@ import com.omnibuds.core.common.FeatureId
  * puts there. It is **not** protocol data: no command bytes, no framing, no encoded
  * packets, and nothing in Phase 1 defines or decodes it (prompt sections 21 and 51).
  *
- * ### Kernel deviation this class works around
+ * ### Why the vendor segment is checked here as well as in [FeatureId]
  *
- * [FeatureId.isVendorExtension] is meant to answer "is this `vendor.<vendor>.<feature>`?"
- * — its own documentation and `FeatureId.ofVendor` both say so — but it currently compares
- * the *whole* namespace (`"vendor.sony"`) against `"vendor"`, which is only true for a
- * two-segment id. It therefore reports `false` for exactly the ids `ofVendor` produces.
- * [isVendorFeature] below is the kernel's flag **or** a correct segment check, so the guard
- * holds today and keeps holding, unchanged, once the kernel property is fixed; the
- * two-segment shape the flag does accept is still refused, because it names no vendor.
+ * [FeatureId.isVendorExtension] answers whether the identity is shaped like
+ * `vendor.<vendor>.<feature>`. That is necessary but not sufficient: an extension record
+ * also has to agree with its own metadata about *which* vendor it belongs to, so `init`
+ * compares the vendor segment against [VendorFeatureMetadata.vendor]. A record naming one
+ * vendor in its id and another in its metadata would misattribute knowledge between
+ * manufacturers, which no single type on its own can detect.
  */
 data class VendorExtension(
     /** Where the feature came from and how far that source is trusted. */
@@ -77,15 +76,10 @@ data class VendorExtension(
 
         /**
          * Whether [feature] is a vendor-only identity that may be carried by a
-         * [VendorExtension].
-         *
-         * True for the documented `vendor.<vendor>.<feature>` shape, and for anything the
-         * kernel's own [FeatureId.isVendorExtension] flag claims — see the class
-         * documentation for why both are consulted, and note that a flag-only pass still
-         * has to clear the vendor comparison in `init` to be usable.
+         * [VendorExtension]: the documented `vendor.<vendor>.<feature>` shape, which is
+         * also the only shape [FeatureId.ofVendor] produces.
          */
-        fun isVendorFeature(feature: FeatureId): Boolean =
-            feature.isVendorExtension || vendorSegmentOf(feature) != null
+        fun isVendorFeature(feature: FeatureId): Boolean = feature.isVendorExtension
 
         /**
          * The vendor segment of a `vendor.<vendor>.<feature>` identity, or `null` when the

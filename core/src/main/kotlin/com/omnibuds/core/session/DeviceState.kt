@@ -4,6 +4,9 @@ import com.omnibuds.core.audio.AudioTransportState
 import com.omnibuds.core.capability.DeviceCapabilities
 import com.omnibuds.core.capability.FeatureCapability
 import com.omnibuds.core.common.FeatureId
+import com.omnibuds.core.common.OmniBudsError
+import com.omnibuds.core.common.OmniBudsErrorCategory
+import com.omnibuds.core.common.OperationOutcome
 import com.omnibuds.core.device.BatteryState
 import com.omnibuds.core.device.DeviceIdentity
 import com.omnibuds.core.state.CapabilityState
@@ -71,16 +74,36 @@ data class DeviceState(
         copy(audio = next, revision = revision + 1, lastUpdatedEpochMillis = atEpochMillis)
 
     /**
-     * Moves connection state, refusing an illegal move by returning this state
-     * untouched. A callback that arrives after a disconnect must not be able to drag
-     * a device back into CONTROL_SESSION (Phase 1 prompt section 30).
+     * Moves connection state, refusing an illegal move as a structured failure.
+     *
+     * This is the only place connection state is held, which is what makes
+     * [com.omnibuds.core.device.DeviceSession] a record about identity and saving
+     * rather than a second competing opinion about where the device has got to
+     * (Phase 1 prompt section 24). The refusal returns
+     * [OmniBudsErrorCategory.INVALID_STATE] instead of throwing or silently ignoring
+     * the move: a callback arriving after a disconnect must not be able to drag a
+     * device into [ConnectionState.CONTROL_SESSION] (prompt section 30), and the
+     * caller keeps its error model rather than an exception.
      */
-    fun withConnection(next: ConnectionState, atEpochMillis: Long?): DeviceState {
-        if (!ConnectionStateTransitions.canTransition(connection, next)) return this
-        return copy(
-            connection = next,
-            revision = revision + 1,
-            lastUpdatedEpochMillis = atEpochMillis,
+    fun attemptConnection(
+        next: ConnectionState,
+        atEpochMillis: Long?,
+    ): OperationOutcome<DeviceState> {
+        if (!ConnectionStateTransitions.canTransition(connection, next)) {
+            return OperationOutcome.Failure(
+                OmniBudsError(
+                    category = OmniBudsErrorCategory.INVALID_STATE,
+                    operationId = CONNECTION_OPERATION_ID,
+                    detail = "cannot move session state from $connection to $next",
+                ),
+            )
+        }
+        return OperationOutcome.Success(
+            copy(
+                connection = next,
+                revision = revision + 1,
+                lastUpdatedEpochMillis = atEpochMillis,
+            ),
         )
     }
 
@@ -113,6 +136,8 @@ data class DeviceState(
 
     companion object {
         const val INITIAL_REVISION = 0L
+
+        private const val CONNECTION_OPERATION_ID = "device-state.attemptConnection"
 
         /**
          * A session before anything is known. Nothing here is zeroed or asserted:

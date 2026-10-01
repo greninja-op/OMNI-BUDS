@@ -1,0 +1,27 @@
+# OmniBuds editor conventions.
+#
+# This file records the conventions the build already enforces; it does not add a tool.
+# The quality baseline for Phase 1 is the Kotlin compiler running with
+# allWarningsAsErrors, plus the architecture tests in
+# core/src/test/kotlin/com/omnibuds/core/architecture/ (ADR-P1-011).
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+max_line_length = 120
+
+[*.{yml,yaml, json}]
+indent_size = 2
+
+[*.md]
+# Markdown tables and wrapped prose depend on trailing spaces and long lines.
+trim_trailing_whitespace = false
+max_line_length = off
+
+[*.toml]
+indent_size = 2
