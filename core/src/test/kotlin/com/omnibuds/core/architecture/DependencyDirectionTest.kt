@@ -382,7 +382,7 @@ class DependencyDirectionTest {
 
         val violations = (
             mainSources().map { file -> relativePath(file) to file } +
-                platformSources().map { file -> "platform/${file.name}" to file }
+                platformCapabilitySources().map { file -> "platform/${file.name}" to file }
             )
             .flatMap { (label, file) ->
                 codeLinesOf(file)
@@ -416,7 +416,7 @@ class DependencyDirectionTest {
 
         val violations = (
             mainSources().map { file -> relativePath(file) to file } +
-                platformSources().map { file -> "platform/${file.name}" to file }
+                platformCapabilitySources().map { file -> "platform/${file.name}" to file }
             )
             .flatMap { (label, file) ->
                 codeLinesOf(file)

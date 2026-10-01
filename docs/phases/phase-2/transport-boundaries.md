@@ -221,3 +221,17 @@ Claims that remain impossible until hardware exists, and their honest tier today
 
 That is the whole deliverable: the boundary set, the claim rules, and a written account of what is
 missing and why. No device was contacted, no channel was opened, and no capability was claimed.
+
+---
+
+## Amendment (Phase 3, 2026-10-02): the profile axis is not a transport
+
+ADR-P3-002 settled that Phase 3's per-device profile observations live in their own vocabulary
+(`ObservedProfile`) and map to no `TransportKind`, so this document's boundaries stay the only place a
+channel is named. The distinction is stated here because both lists contain entries that read alike -
+A2DP, LE Audio, GATT - and the resemblance is the hazard: `TransportKind` answers *which channel would
+carry OmniBuds' own bytes*, while the profile axis answers *which system service reported this device as
+linked*. Observing that a headset is connected over A2DP is a fact about the phone's audio stack, not
+evidence that a classic RFCOMM control channel is available, and it is not evidence about a control
+channel at all. No mapping function between the two is to be written without an ADR that says which
+claim it is trying to make.

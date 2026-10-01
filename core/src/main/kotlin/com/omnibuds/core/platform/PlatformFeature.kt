@@ -6,6 +6,12 @@ package com.omnibuds.core.platform
  * These are phone capabilities, not headset capabilities. Keeping them separate from
  * [com.omnibuds.core.common.FeatureId] - which names something a *device* can do - is what stops
  * "this phone has LE Audio APIs" from being rendered as "your earbuds support LE Audio".
+ *
+ * Nor is this the axis `ObservedProfile` reads, which lists the services **another device** was
+ * reported connected through. A2DP appears in both vocabularies and means something different each
+ * time: here, "this handset can tell me about A2DP at all"; there, "this device's A2DP link was
+ * reported to us". The two must not be mapped onto each other, and no function doing so should be
+ * written without the separation stated in its own documentation (ADR-P3-002).
  */
 enum class PlatformFeature(
     /** Stable identifier for reports and diagnostics. */
