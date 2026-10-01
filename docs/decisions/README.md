@@ -26,6 +26,22 @@ Full text of every ADR lives in the phase record that authored it. This file is 
 | ADR-P0-020 | Two Phase 0 workstreams added beyond prompt §4 | accepted | `docs/phases/phase-0/decisions.md` |
 | ADR-P0-021 | Version control is not initialised in Phase 0 | accepted — **closed by Phase 1** | `docs/phases/phase-0/decisions.md` |
 
+Phase 3 — `docs/phases/phase-3/decisions.md`:
+
+| ADR | Title | Status |
+|---|---|---|
+| ADR-P3-001 | Platform link state, bond state and availability are three axes, not one enum | accepted |
+| ADR-P3-002 | Android profile observations do not enter `TransportKind` | accepted |
+| ADR-P3-003 | Observation vocabulary lives in `platform` at layer 1; no 13th area | accepted |
+| ADR-P3-004 | `ConnectedDeviceSnapshot` — a projection is not a `Repository` | accepted |
+| ADR-P3-005 | Failure never becomes an empty list: `ObservationStage` and a typed outcome | accepted |
+| ADR-P3-006 | No new error category; observation failures reuse three existing ones | accepted |
+
+*Further Phase 3 decisions (device keys and redaction, the observation mechanism itself, the
+manifest entry, the instrumented route and the permission posture) depend on the connection
+research and are allocated only once their citations exist — Phase 2's debt came from citing ADRs
+before they were written.*
+
 Phase 2 — `docs/phases/phase-2/decisions.md`:
 
 | ADR | Title | Status |
