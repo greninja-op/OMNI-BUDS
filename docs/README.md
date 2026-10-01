@@ -19,12 +19,32 @@ A phase execution prompt that conflicts with items 1–3 must be reported, not s
 |---|---|---|
 | `MASTER-CONTEXT.md` | Master contract, sections 1–58 | authoritative |
 | `phases/phase-0/` | Phase 0: engineering contract, repository rules, governance | validated |
+| `phases/phase-1/` | Phase 1: project foundation and Kotlin architecture | validated |
+| `phases/phase-2/` | Phase 2: Android Bluetooth foundation (mechanism, permissions, capability reporting) | validated, no hardware executed |
 | `phases/phase-<N>/` | One directory per future phase, created from `templates/` | not started |
 | `templates/` | The eight mandatory phase document templates | complete |
-| `decisions/` | Global ADR index → `decisions/README.md` | complete for Phase 0 |
-| `architecture/`, `protocols/`, `bluetooth/`, `audio/`, `testing/`, `security/`, `requirements/`, `product/` | Long-lived topic documents, promoted out of a phase record when content stops being phase-specific | reserved placeholders, empty until the owning phase fills them |
+| `decisions/` | Global ADR index → `decisions/README.md` | complete through Phase 2 |
+| `development/adb-deployment/` | The local ADB deployment harness: build, validate, install, launch and its error classes | recorded separately from any phase |
+| `architecture/`, `protocols/`, `bluetooth/`, `audio/`, `testing/`, `security/`, `requirements/`, `product/` | Long-lived topic documents, promoted out of a phase record when content stops being phase-specific | reserved placeholders; `security/` now holds `device-access-policy.md`, the rest are empty until the owning phase fills them |
 
 Topic folders are deliberately empty rather than pre-filled with stubs: their content will come from the phase that actually earns it, and a stub would imply knowledge that does not exist yet.
+
+## Phase 2 index
+
+| Document | Purpose |
+|---|---|
+| `execution-prompt.md` | The Phase 2 contract, verbatim |
+| `architecture-audit.md` | Pre-execution audit of Phase 0/1 against the prompt, with the findings this phase had to answer |
+| `bluetooth-api-research.md` | Android Bluetooth behaviour as documented, cited per question, including where the docs disagree with each other |
+| `transport-boundaries.md` | The transport shape Phase 2 establishes and the members it refuses to invent |
+| `requirements.md` | REQ-P2-<NNN> over the authorised inspection scope |
+| `design.md` | Platform boundary, adapter abstraction, permission architecture, state observation, concurrency, limitations |
+| `specs.md` | Real signatures, enums, the permission matrix, state machine, error and coroutine contracts |
+| `task-list.md` | TASK-P2-<NNN> with files, required tests and evidence |
+| `test-plan.md` | TEST-P2-<NNN> records, mocked and physical kept apart |
+| `decisions.md` | ADR-P2-001 … ADR-P2-017 |
+| `risk-register.md` | Project risks added by Phase 2, continuing the single register |
+| `validation.md` | Phase 2 acceptance record, the evidence-ceiling statement and Phase 3 readiness |
 
 ## Phase 1 index
 
