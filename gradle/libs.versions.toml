@@ -13,6 +13,10 @@ androidCompileSdk = "35"
 androidMinSdk = "26"
 androidTargetSdk = "35"
 junitJupiter = "5.10.1"
+junit4 = "4.13.2"
+androidxTestRunner = "1.6.1"
+androidxTestCore = "1.6.1"
+androidxTestExtJunit = "1.2.1"
 
 [libraries]
 # ADR-P1-021 removed this from :core as unused; ADR-P2-003 restores it because
@@ -22,6 +26,15 @@ kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-t
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junitJupiter" }
 junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher", version = "1.10.1" }
+
+# Phase 3 instrumented-device tests (ADR-P3-007). androidTest-only: none of these reaches
+# `:core`, the production classpath, or `src/test`. JUnit 4 is here because Android's
+# instrumentation runner and androidx.test.ext:junit are JUnit4-based; the project's JVM
+# suites stay on Jupiter and the two never share a source set.
+junit4 = { module = "junit:junit", version.ref = "junit4" }
+androidx-test-runner = { module = "androidx.test:runner", version.ref = "androidxTestRunner" }
+androidx-test-core = { module = "androidx.test:core", version.ref = "androidxTestCore" }
+androidx-test-ext-junit = { module = "androidx.test.ext:junit", version.ref = "androidxTestExtJunit" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

@@ -22,6 +22,10 @@ android {
 
     defaultConfig {
         minSdk = omniBudsMinSdk
+
+        // Phase 3 instrumented verification (ADR-P3-007). The library has no UI to drive, so
+        // the runner targets this module's own package and nothing else.
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     compileOptions {
@@ -50,6 +54,16 @@ dependencies {
     testImplementation(libs.junit.jupiter)
     testImplementation(libs.kotlinx.coroutines.test)
     testRuntimeOnly(libs.junit.platform.launcher)
+
+    // androidTest only. These coordinates exist to run the module's own platform classes against
+    // a real Android runtime; nothing in `src/main` or `src/test` sees them, and the Phase 2
+    // statement that the test foundation was plain JVM in both modules is superseded by the
+    // user's decision to verify Phase 3 on a device (ADR-P3-007 records the trade).
+    androidTestImplementation(libs.kotlin.test)
+    androidTestImplementation(libs.androidx.test.runner)
+    androidTestImplementation(libs.androidx.test.core)
+    androidTestImplementation(libs.androidx.test.ext.junit)
+    androidTestImplementation(libs.junit4)
 }
 
 tasks.withType<Test>().configureEach {

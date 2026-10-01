@@ -36,6 +36,7 @@ Phase 3 — `docs/phases/phase-3/decisions.md`:
 | ADR-P3-004 | `ConnectedDeviceSnapshot` — a projection is not a `Repository` | accepted |
 | ADR-P3-005 | Failure never becomes an empty list: `ObservationStage` and a typed outcome | accepted |
 | ADR-P3-006 | No new error category; observation failures reuse three existing ones | accepted |
+| ADR-P3-007 | Instrumented verification in the boundary module, five test-only coordinates | accepted — user-selected route |
 
 *Further Phase 3 decisions (device keys and redaction, the observation mechanism itself, the
 manifest entry, the instrumented route and the permission posture) depend on the connection
