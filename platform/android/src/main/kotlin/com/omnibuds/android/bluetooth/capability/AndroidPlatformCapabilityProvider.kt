@@ -152,7 +152,8 @@ class AndroidPlatformCapabilityProvider(
     ): ApiAvailability = when (feature) {
         PlatformFeature.CLASSIC_BLUETOOTH -> fromAdvertised(classicAdvertised)
         PlatformFeature.BLE_CENTRAL -> fromAdvertised(bleAdvertised)
-        PlatformFeature.RFCOMM_CLIENT -> gatedBy(level, BLUETOOTH_SOCKET_API_LEVEL) { fromAdvertised(classicAdvertised) }
+        PlatformFeature.RFCOMM_CLIENT ->
+            gatedBy(level, BLUETOOTH_SOCKET_API_LEVEL) { fromAdvertised(classicAdvertised) }
         PlatformFeature.GATT_CLIENT -> gatedBy(level, GATT_API_LEVEL) { fromAdvertised(bleAdvertised) }
         PlatformFeature.LE_AUDIO -> apiLevelSupports(level, LE_AUDIO_API_LEVEL)
         PlatformFeature.ADAPTER_STATE_OBSERVATION -> apiLevelSupports(level, BLUETOOTH_MANAGER_API_LEVEL)

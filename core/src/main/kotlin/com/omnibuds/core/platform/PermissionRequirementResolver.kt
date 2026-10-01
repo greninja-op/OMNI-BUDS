@@ -69,7 +69,9 @@ class FrozenPermissionRequirementResolver : PermissionRequirementResolver {
                 ),
             )
 
-        val modern = targetSdk >= MODERN_TARGET
+        // One representation of the band decision: the context's own predicate, not a second
+        // comparison against a local constant that could disagree with it (ADR-P2-009).
+        val modern = context.usesModernBluetoothModel
         val band = if (modern) "targetSdk>=$MODERN_TARGET (modern model)" else "targetSdk<=$LEGACY_MAX (legacy model)"
 
         val requirements = when (operation) {
@@ -87,7 +89,7 @@ class FrozenPermissionRequirementResolver : PermissionRequirementResolver {
                         requirement(
                             operation,
                             BluetoothPermission.BLUETOOTH,
-                            ApiRange(MIN_MATRIX_SDK, LEGACY_MAX),
+                            ApiRange.LEGACY_BLUETOOTH_MODEL,
                             REASON_LEGACY_ADAPTER_READ,
                         ),
                     )
@@ -108,7 +110,7 @@ class FrozenPermissionRequirementResolver : PermissionRequirementResolver {
                         requirement(
                             operation,
                             BluetoothPermission.BLUETOOTH_CONNECT,
-                            ApiRange(MODERN_TARGET, MAX_MATRIX_SDK),
+                            ApiRange.MODERN_BLUETOOTH_MODEL,
                             REASON_CONNECT_DEVICE_METADATA,
                         ),
                     )
@@ -117,7 +119,7 @@ class FrozenPermissionRequirementResolver : PermissionRequirementResolver {
                         requirement(
                             operation,
                             BluetoothPermission.BLUETOOTH,
-                            ApiRange(MIN_MATRIX_SDK, LEGACY_MAX),
+                            ApiRange.LEGACY_BLUETOOTH_MODEL,
                             REASON_GUIDE_LEVEL_NOT_METHOD_LEVEL,
                         ),
                     )
@@ -129,7 +131,7 @@ class FrozenPermissionRequirementResolver : PermissionRequirementResolver {
                         requirement(
                             operation,
                             BluetoothPermission.BLUETOOTH_SCAN,
-                            ApiRange(MODERN_TARGET, MAX_MATRIX_SDK),
+                            ApiRange.MODERN_BLUETOOTH_MODEL,
                             REASON_SCAN_RESULTS_LOCATION,
                         ),
                     )
@@ -139,7 +141,7 @@ class FrozenPermissionRequirementResolver : PermissionRequirementResolver {
                         scan + requirement(
                             operation,
                             BluetoothPermission.ACCESS_FINE_LOCATION,
-                            ApiRange(MODERN_TARGET, MAX_MATRIX_SDK),
+                            ApiRange.MODERN_BLUETOOTH_MODEL,
                             REASON_LOCATION_UNTIL_NEVER_FOR_LOCATION,
                         )
                     }
@@ -148,25 +150,25 @@ class FrozenPermissionRequirementResolver : PermissionRequirementResolver {
                         requirement(
                             operation,
                             BluetoothPermission.BLUETOOTH,
-                            ApiRange(MIN_MATRIX_SDK, LEGACY_MAX),
+                            ApiRange.LEGACY_BLUETOOTH_MODEL,
                             REASON_LEGACY_ADAPTER_READ,
                         ),
                         requirement(
                             operation,
                             BluetoothPermission.BLUETOOTH_ADMIN,
-                            ApiRange(MIN_MATRIX_SDK, LEGACY_MAX),
+                            ApiRange.LEGACY_BLUETOOTH_MODEL,
                             REASON_LEGACY_DISCOVERY_START,
                         ),
                         requirement(
                             operation,
                             BluetoothPermission.ACCESS_COARSE_LOCATION,
-                            ApiRange(MIN_MATRIX_SDK, LEGACY_MAX),
+                            ApiRange.LEGACY_BLUETOOTH_MODEL,
                             REASON_LEGACY_SCAN_RESULTS,
                         ),
                         requirement(
                             operation,
                             BluetoothPermission.ACCESS_FINE_LOCATION,
-                            ApiRange(MIN_MATRIX_SDK, LEGACY_MAX),
+                            ApiRange.LEGACY_BLUETOOTH_MODEL,
                             REASON_LEGACY_SCAN_RESULTS,
                         ),
                     )
@@ -180,7 +182,7 @@ class FrozenPermissionRequirementResolver : PermissionRequirementResolver {
                         requirement(
                             operation,
                             BluetoothPermission.BLUETOOTH_CONNECT,
-                            ApiRange(MODERN_TARGET, MAX_MATRIX_SDK),
+                            ApiRange.MODERN_BLUETOOTH_MODEL,
                             REASON_CONNECT_SOCKET_OPEN,
                         ),
                     )
@@ -189,7 +191,7 @@ class FrozenPermissionRequirementResolver : PermissionRequirementResolver {
                         requirement(
                             operation,
                             BluetoothPermission.BLUETOOTH,
-                            ApiRange(MIN_MATRIX_SDK, LEGACY_MAX),
+                            ApiRange.LEGACY_BLUETOOTH_MODEL,
                             REASON_GUIDE_LEVEL_NOT_METHOD_LEVEL,
                         ),
                     )
@@ -205,7 +207,7 @@ class FrozenPermissionRequirementResolver : PermissionRequirementResolver {
                         requirement(
                             operation,
                             BluetoothPermission.BLUETOOTH_CONNECT,
-                            ApiRange(MODERN_TARGET, MAX_MATRIX_SDK),
+                            ApiRange.MODERN_BLUETOOTH_MODEL,
                             REASON_LE_AUDIO_PROFILE_STATE,
                         ),
                     )

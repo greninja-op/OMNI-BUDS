@@ -37,10 +37,16 @@ enum class PermissionState {
 fun PermissionState.isGranted(): Boolean = this == PermissionState.GRANTED
 
 /**
- * Whether the app may proceed as if the permission were absent, rather than reporting a refusal.
+ * Whether the app may proceed because the permission was never in its way.
  *
- * Only [NOT_REQUIRED] and a genuine grant allow that. Every other state must surface an outcome to
- * the user, because pretending otherwise is how a permission denial becomes a silent failure.
+ * Only [NOT_REQUIRED] answers true. A grant is not covered here - [isGranted] is the predicate for
+ * that, and the two are kept apart because they mean different things to a user: "this operation
+ * never needed it" versus "you allowed it". `PlatformFeatureSupport.isUsable` takes the disjunction
+ * of the two; conflating them would make an operation that requires nothing report itself as though
+ * the user had granted something.
+ *
+ * Every other state must surface an outcome, because pretending otherwise is how a permission denial
+ * becomes a silent failure.
  */
 fun PermissionState.allowsSilentProceeding(): Boolean = this == PermissionState.NOT_REQUIRED
 

@@ -27,12 +27,42 @@ enum class BluetoothPermission(
     /** Whether this permission belongs to the pre-API 31 model. */
     val isLegacyForTargeting31Plus: Boolean,
 ) {
-    BLUETOOTH("android.permission.BLUETOOTH", 18, isRuntimePermission = false, isLegacyForTargeting31Plus = true),
-    BLUETOOTH_ADMIN("android.permission.BLUETOOTH_ADMIN", 18, isRuntimePermission = false, isLegacyForTargeting31Plus = true),
-    BLUETOOTH_SCAN("android.permission.BLUETOOTH_SCAN", 31, isRuntimePermission = true, isLegacyForTargeting31Plus = false),
-    BLUETOOTH_CONNECT("android.permission.BLUETOOTH_CONNECT", 31, isRuntimePermission = true, isLegacyForTargeting31Plus = false),
-    ACCESS_FINE_LOCATION("android.permission.ACCESS_FINE_LOCATION", 1, isRuntimePermission = true, isLegacyForTargeting31Plus = false),
-    ACCESS_COARSE_LOCATION("android.permission.ACCESS_COARSE_LOCATION", 1, isRuntimePermission = true, isLegacyForTargeting31Plus = false),
+    BLUETOOTH(
+        manifestName = "android.permission.BLUETOOTH",
+        introducedAtSdk = 18,
+        isRuntimePermission = false,
+        isLegacyForTargeting31Plus = true,
+    ),
+    BLUETOOTH_ADMIN(
+        manifestName = "android.permission.BLUETOOTH_ADMIN",
+        introducedAtSdk = 18,
+        isRuntimePermission = false,
+        isLegacyForTargeting31Plus = true,
+    ),
+    BLUETOOTH_SCAN(
+        manifestName = "android.permission.BLUETOOTH_SCAN",
+        introducedAtSdk = 31,
+        isRuntimePermission = true,
+        isLegacyForTargeting31Plus = false,
+    ),
+    BLUETOOTH_CONNECT(
+        manifestName = "android.permission.BLUETOOTH_CONNECT",
+        introducedAtSdk = 31,
+        isRuntimePermission = true,
+        isLegacyForTargeting31Plus = false,
+    ),
+    ACCESS_FINE_LOCATION(
+        manifestName = "android.permission.ACCESS_FINE_LOCATION",
+        introducedAtSdk = 1,
+        isRuntimePermission = true,
+        isLegacyForTargeting31Plus = false,
+    ),
+    ACCESS_COARSE_LOCATION(
+        manifestName = "android.permission.ACCESS_COARSE_LOCATION",
+        introducedAtSdk = 1,
+        isRuntimePermission = true,
+        isLegacyForTargeting31Plus = false,
+    ),
 }
 
 /**

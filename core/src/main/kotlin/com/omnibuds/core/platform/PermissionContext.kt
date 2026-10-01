@@ -30,9 +30,6 @@ data class PermissionContext(
      */
     val assertsNeverForLocation: Boolean = false,
 ) {
-    val isDetermined: Boolean
-        get() = targetSdk != null
-
     /** True when the modern runtime-permission model applies to this app. */
     val usesModernBluetoothModel: Boolean
         get() = (targetSdk ?: 0) >= MODERN_MODEL_TARGET_SDK
@@ -40,11 +37,5 @@ data class PermissionContext(
     companion object {
         /** Android 12, where `BLUETOOTH_SCAN` and `BLUETOOTH_CONNECT` replaced the legacy pair. */
         const val MODERN_MODEL_TARGET_SDK = 31
-
-        /** Android 11, where `getAlias()` and several profile behaviours begin. */
-        const val ALIAS_API_LEVEL = 30
-
-        /** Android 14, where the receiver-export flag rule applies to non-system broadcasts. */
-        const val RECEIVER_EXPORT_TARGET_SDK = 34
     }
 }

@@ -56,13 +56,15 @@ class SystemBluetoothAdapterHandle(
     /**
      * Registers without exporting the receiver.
      *
-     * From API 33 an app targeting that level must say whether a receiver may receive broadcasts from
-     * other apps. `ACTION_STATE_CHANGED` is a protected system broadcast, so this receiver is only ever
-     * reachable by the platform; declaring it not-exported states that intent instead of leaving it to a
-     * default, and the pre-33 branch exists because the flag overload itself does not (research Q7).
-     * Below 33 there is nothing to pass, so nothing is.
+     * Two different version facts meet here and are kept apart deliberately. The *requirement* to say
+     * whether a receiver may hear broadcasts from other apps applies to apps targeting API 34 or above,
+     * and it does not apply at all to receivers listening only for protected system broadcasts, which
+     * `ACTION_STATE_CHANGED` is. The *overload* that carries the flag exists from API 33. So the branch
+     * keys on the device level - because calling the overload is what would throw on an older phone -
+     * and passes `RECEIVER_NOT_EXPORTED` to state the intent rather than leave the export decision to a
+     * default (research Q7, ADR-P2-011). Below 33 there is no flag to pass, so nothing is.
      *
-     * Both lint complaints on this body are the guarded-pattern's own shadow, and are suppressed rather
+     * Both lint complaints on this body are the guarded pattern's own shadow, and are suppressed rather
      * than answered with an `androidx.core` dependency the phase has no reason to take: `InlinedApi`
      * fires on a constant that is only read inside the `>= 33` branch, and
      * `UnspecifiedRegisterReceiverFlag` fires because lint cannot tell that the filter holds a protected
