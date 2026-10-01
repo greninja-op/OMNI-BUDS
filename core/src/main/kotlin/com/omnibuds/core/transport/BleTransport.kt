@@ -33,4 +33,9 @@ package com.omnibuds.core.transport
  * it in favour of [GattTransport]. A marker with a documented reason is preferred to an interface
  * filled with invented methods, which is how fabricated support begins (ADR-P1-013).
  */
-interface BleTransport : BluetoothTransport
+interface BleTransport : BluetoothTransport {
+
+    /** Pinned: this boundary answers for exactly one transport kind, never another. */
+    override val kind: com.omnibuds.core.common.TransportKind
+        get() = com.omnibuds.core.common.TransportKind.BLE
+}

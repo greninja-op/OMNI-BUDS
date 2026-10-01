@@ -28,7 +28,12 @@ package com.omnibuds.core.transport
  * the first device-verified use lands with the Phase 19 vendor device, and nothing may be reported
  * above `IMPLEMENTED` before it executes (PROTO-VERIFY-001).
  *
- * See [docs/phases/phase-2/transport-boundaries.md] for the deferred list and the reason each
+ * See `docs/phases/phase-2/transport-boundaries.md` for the deferred list and the reason each
  * absence exists.
  */
-interface GattTransport : BluetoothTransport
+interface GattTransport : BluetoothTransport {
+
+    /** Pinned: this boundary answers for exactly one transport kind, never another. */
+    override val kind: com.omnibuds.core.common.TransportKind
+        get() = com.omnibuds.core.common.TransportKind.GATT
+}

@@ -9,6 +9,13 @@ package com.omnibuds.core.common
  * established one yet, which is not the same statement as "none is available".
  */
 enum class TransportKind {
+    /**
+     * The BLE physical/link layer as a distinct boundary: advertising, scanning and the link a
+     * GATT service may or may not sit on top of. Phase 2 originally listed only GATT, which left
+     * `BleTransport` with nothing to report as its kind - BLE is not simply GATT (master section 8).
+     */
+    BLE,
+
     /** BLE GATT service/characteristic access. */
     GATT,
 

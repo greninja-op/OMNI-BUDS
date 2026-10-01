@@ -36,8 +36,9 @@ interface BluetoothTransport : TransportContract {
      * Inherited from [TransportContract] unchanged — restated here only so the Bluetooth rule can
      * live with the Bluetooth boundary:
      *  - The value comes from this transport's own identity. It is never inferred from a device
-     *    name, a model string or a vendor (ADR-P2-010: `TransportKind` has no vendor member, and
-     *    `VENDOR_SPECIFIC` is a mechanism placeholder with no mechanism behind it yet).
+     *    name, a model string or a vendor: [TransportKind] has no vendor member, and
+     *    `VENDOR_SPECIFIC` is a mechanism kind with no mechanism behind it yet (ADR-P1-008,
+     *    PROTO-VENDOR-004).
      *  - [TransportKind.UNKNOWN] is a legal reading of it while nothing has been established, and
      *    it is a different statement from "no channel exists" (`TransportKind` documentation).
      *  - It never licenses another channel. A request that fails on this kind stays attributed to
