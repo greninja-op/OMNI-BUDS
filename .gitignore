@@ -37,3 +37,8 @@ protocol-lab/captures/
 # Diagnostic exports that may contain Bluetooth identifiers
 **/diagnostics/export/
 **/*.diag.json
+
+# Python tooling caches (tools/device-bridge)
+__pycache__/
+*.py[cod]
+.pytest_cache/

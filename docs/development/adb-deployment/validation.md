@@ -39,7 +39,7 @@ success.
 
 ## Host-side results
 
-`python tools/device-bridge/tests/test_deploy.py` — 23 tests, 0 failures. They cover: the
+`python -m unittest tools.device-bridge.tests.test_deploy` — **30 tests, 0 failures, 0 errors** (re-measured 2026-10-01 after the pipeline was reconciled with the shared transport). They cover: the
 absent-package install issuing no `-r` and no `-g`; the present-package reinstall using `-r`; a
 rejection never being followed by `uninstall` or `pm clear`; unscripted commands raising rather than
 being absorbed; ambiguous and unauthorised device selection stopping the pipeline before contact;
@@ -48,8 +48,18 @@ rather than assuming a name; `am start` error text not counting as a launch; a d
 counting as success; a build failure producing no device command at all; and error classification
 leaving unseen codes unclassified.
 
-Run against the whole bridge package once the bridge workstream finishes; the pipeline's own tests
-are green now.
+The whole bridge suite — `python -m unittest discover -s tools/device-bridge/tests` — measures
+**416 tests, 0 failures, 0 errors, 1 skipped** on the same date. That suite belongs to the
+companion-bridge workstream, which is still being authored in the same working tree; the one skip is
+`test_readme_is_ascii_too`, which waits for a README the other workstream has not written yet. A
+green run there is evidence about the harness, not about the pipeline's physical behaviour, which is
+what the table above is for.
+
+The pipeline gained a ninth stage since the first version of this record: after a successful launch
+it reads the foreground package and refuses to proceed if it is not ours. Capture and input stay
+gated behind that check, so a run that lands on somebody else's screen stops with
+`NOT_FOREGROUND` instead of tapping it. That refusal is asserted by
+`test_a_launch_that_does_not_reach_the_foreground_is_not_verified` in `test_deploy.py`.
 
 ## Security constraints confirmed
 

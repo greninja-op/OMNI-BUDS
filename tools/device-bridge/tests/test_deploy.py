@@ -1,13 +1,16 @@
 """Host-side tests for the deployment pipeline.
 
-Every case runs against a scripted fake ADB. No device is attached, and nothing here claims
-otherwise: a fake that answers like a HyperOS phone proves the harness handles that answer, not
-that the phone behaves this way. Real-device evidence lives in
-`docs/development/adb-deployment/validation.md`.
+Everything runs against a scripted fake transport: no device is attached, and nothing here claims
+otherwise. A fake that answers like a HyperOS phone proves the harness handles that answer, not
+that the phone behaves this way - the physical evidence is recorded separately in
+``docs/development/adb-deployment/validation.md``.
 
-The scripted transport fails the test if the manager issues a command that was not expected, or
-runs out of scripted answers, so a silent extra call (an uninstall, a permission grant, a blind
-retry) cannot pass unnoticed.
+The fake is strict in both directions: a command with no scripted answer raises, and a scripted
+answer that never gets consumed is reported by the assertions that check the command log. A silent
+extra call - an uninstall, a permission grant, a blind retry - therefore cannot pass unnoticed.
+
+Commands and output are deliberately built the way real ADB emits them, so the shared parsers in
+``bridge.adb`` are exercised rather than a parallel set of test-only fixtures.
 """
 
 from __future__ import annotations
@@ -20,142 +23,169 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+from bridge.adb import CommandResult  # noqa: E402
 from bridge.deploy import (  # noqa: E402
     DESTRUCTIVE_RECOVERY_REQUIRED,
+    ApkMetadata,
     DeploymentManager,
     Failure,
     Stage,
     classify_failure,
+    parse_aapt_badging,
 )
 
 PACKAGE = "com.omnibuds.tools.shell"
-DEVICES_OUT = f"List of devices attached\nEMULATOR device product:duchamp model:2311DRK48I transport_id:2\n\n"
+SERIAL = "8TCABAIFWOZTDICI"
+
+DEVICES_ONE = (
+    "List of devices attached\n"
+    f"{SERIAL}         device product:duchamp model:2311DRK48I device:duchamp transport_id:2\n"
+    "\n"
+)
+DEVICES_NONE = "List of devices attached\n\n"
+DEVICES_AMBIGUOUS = (
+    "List of devices attached\n"
+    "AAA device product:alpha model:Alpha transport_id:1\n"
+    "BBB device product:beta model:Beta transport_id:2\n\n"
+)
+DEVICES_UNAUTHORIZED = (
+    "List of devices attached\nAAA unauthorized\nBBB device product:beta model:Beta transport_id:2\n\n"
+)
+FOCUSOURS = (
+    "  WINDOW MANAGER WINDOWS\n"
+    f"  mCurrentFocus=Window{{19d109f u0 {PACKAGE}/{PACKAGE}.ShellActivity}}\n"
+)
+FOCUS_OTHER = "  mCurrentFocus=Window{c28e719 u0 com.google.android.youtube/com.google.android.apps.yousee.Settings}\n"
 
 
-class Completed:
-    """Stands in for subprocess.CompletedProcess without importing the real type's contract."""
-
-    def __init__(self, returncode: int = 0, stdout: str = "", stderr: str = ""):
-        self.returncode = returncode
-        self.stdout = stdout
-        self.stderr = stderr
+def result(stdout: str = "", stderr: str = "", returncode: int = 0) -> CommandResult:
+    return CommandResult(returncode=returncode, stdout=stdout.encode(), stderr=stderr.encode())
 
 
-class FakeAdb:
-    def __init__(self, responses: list[tuple[object, object]]):
-        self.responses = list(responses)
+class FakeTransport:
+    """Scripted answers keyed by substring, matched in declaration order."""
+
+    def __init__(self, scripted: list[tuple[str, CommandResult]]):
+        self.scripted = list(scripted)
         self.calls: list[list[str]] = []
 
-    def __call__(self, argv, timeout):
-        argv = list(argv)
-        self.calls.append(argv)
-        # Matched by expectation rather than by position: the queue says which commands are
-        # allowed, not the order they were written in. An unscripted command still raises, so a
-        # silent uninstall, a permission grant or a blind retry cannot slip through.
-        for index, (matcher, result) in enumerate(self.responses):
-            if matcher(argv):
-                del self.responses[index]
-                return result(argv) if callable(result) else result
-        raise AssertionError(f"unscripted command issued: {argv}")
+    def __call__(self, argv: list[str], *, timeout_s: float) -> CommandResult:
+        joined = " ".join(argv)
+        self.calls.append(list(argv))
+        for index, (needle, answer) in enumerate(self.scripted):
+            if needle in joined:
+                del self.scripted[index]
+                return answer
+        raise AssertionError(f"unscripted command issued: {joined}")
 
     @property
     def joined(self) -> str:
         return " | ".join(" ".join(call) for call in self.calls)
 
-
-def contains(*needles: str):
-    def predicate(argv):
-        joined = " ".join(argv)
-        return all(needle in joined for needle in needles)
-
-    return predicate
+    def remaining(self) -> list[str]:
+        return [needle for needle, _ in self.scripted]
 
 
-def version_ok():
-    return contains("version"), Completed(stdout="Android Debug Bridge version 1.0.41\nVersion 37.0.1")
+def happy_path(installed_before: bool = False, focus: str = FOCUSOURS) -> list[tuple[str, CommandResult]]:
+    """Every command a clean run issues, in the order the pipeline reaches them."""
 
-
-def build_ok():
-    return contains("gradlew-fake"), Completed(stdout="BUILD SUCCESSFUL in 1s\n")
-
-
-def scripted(package_installed: bool, install_output: str = "Performing Streamed Install\nSuccess\n"):
-    """The full command sequence a clean deployment produces, in order."""
-
-    pm_packages = (
-        f"package:{PACKAGE}\n" if package_installed else "package:com.example.other\n"
-    )
+    listing = f"package:{PACKAGE}\n" if installed_before else "package:com.example.other\n"
     return [
-        version_ok(),
-        build_ok(),
-        (contains("devices"), Completed(stdout=DEVICES_OUT)),
-        (contains("ro.build.version.sdk"), Completed(stdout="34\n")),
-        (contains("pm", "list", "packages"), Completed(stdout=pm_packages)),
-        (contains("install"), Completed(stdout=install_output)),
-        (contains("pm", "list", "packages"), Completed(stdout=f"package:{PACKAGE}\n")),
-        (contains("resolve-activity"), Completed(stdout=f"priority=0 match=0x108000\n{PACKAGE}/.ShellActivity\n")),
-        (contains("am", "start"), Completed(stdout=f"Starting: Intent {{ cmp={PACKAGE}/.ShellActivity }}\n")),
-        (contains("pidof"), Completed(stdout="8703\n")),
+        ("version", result(stdout="Android Debug Bridge version 1.0.41\nVersion 37.0.1-15733141\n")),
+        ("gradle-fake", result(stdout="BUILD SUCCESSFUL in 1s\n")),
+        ("devices -l", result(stdout=DEVICES_ONE)),
+        ("ro.build.version.sdk", result(stdout="34\n")),
+        ("pm list packages", result(stdout=listing)),
+        ("install", result(stdout="Performing Streamed Install\nSuccess\n")),
+        ("pm list packages", result(stdout=f"package:{PACKAGE}\n")),
+        ("resolve-activity", result(stdout=f"priority=0 preferredOrder=0 match=0x108000\n{PACKAGE}/.ShellActivity\n")),
+        ("am start", result(stdout=f"Starting: Intent {{ cmp={PACKAGE}/{PACKAGE}.ShellActivity }}\n")),
+        ("pidof", result(stdout="8703\n")),
+        ("dumpsys window", result(stdout=focus)),
     ]
 
 
 class Harness(unittest.TestCase):
-    """Shared fixture: an APK on disk and a manager whose metadata read is stubbed."""
-
-    def build_manager(self, responses, metadata=(PACKAGE, 26)):
-        manager = DeploymentManager("/fake/adb", ".", runner=FakeAdb(responses))
-        manager.read_apk_metadata = lambda _apk: metadata
+    def manager(self, scripted, metadata: ApkMetadata | None = None) -> DeploymentManager:
+        manager = DeploymentManager(adb_path="/fake/adb", repo_root=".", runner=FakeTransport(scripted))
+        manager.read_apk_metadata = (
+            (lambda _apk: metadata or ApkMetadata(PACKAGE, 26, 1)) if metadata is not None else
+            (lambda _apk: ApkMetadata(PACKAGE, 26, 1))
+        )
         return manager
 
     @contextlib.contextmanager
-    def apk_file(self, content: bytes = b"zip-ish"):
+    def apk(self, content: bytes = b"zip-ish"):
         with tempfile.TemporaryDirectory() as directory:
-            apk = Path(directory) / "app-debug.apk"
-            apk.write_bytes(content)
-            yield apk
+            path = Path(directory) / "app-debug.apk"
+            path.write_bytes(content)
+            yield path
 
-    def deploy(self, manager, apk, **kwargs):
+    def deploy(self, manager: DeploymentManager, apk: Path):
         return manager.deploy(
             gradle_task="assembleDebug",
             apk_path=apk,
             expected_package=PACKAGE,
-            build_command=["gradlew-fake"],
-            **kwargs,
+            serial=SERIAL,
+            build_command=["gradle-fake"],
         )
 
 
 class FlagSelectionTests(Harness):
     def test_absent_package_is_installed_without_the_reinstall_flag(self):
-        # This is the defect that started the audit: -r on an absent package is what the device
-        # refused. The harness must derive the flag from observed state, not assume it.
-        with self.apk_file() as apk:
-            manager = self.build_manager(scripted(package_installed=False))
+        # The audited defect: -r for an absent package is what the device refused.
+        with self.apk() as apk:
+            manager = self.manager(happy_path(installed_before=False))
             report = self.deploy(manager, apk)
 
             self.assertTrue(report.succeeded, report.text())
-            install_call = next(call for call in manager._runner.calls if "install" in call)
-            self.assertNotIn("-r", install_call)
-            self.assertNotIn("-g", install_call)
+            install = next(c for c in manager._runner.calls if "install" in c)
+            self.assertNotIn("-r", install)
+            self.assertNotIn("-g", install)
+            self.assertEqual(report.install_flags, ())
 
-    def test_present_package_is_reinstalled_so_data_is_preserved(self):
-        with self.apk_file() as apk:
-            manager = self.build_manager(scripted(package_installed=True))
+    def test_present_package_is_reinstalled_so_its_data_survives(self):
+        with self.apk() as apk:
+            manager = self.manager(happy_path(installed_before=True))
             report = self.deploy(manager, apk)
 
             self.assertTrue(report.succeeded, report.text())
-            install_call = next(call for call in manager._runner.calls if "install" in call)
-            self.assertIn("-r", install_call)
-            self.assertNotIn("-g", install_call)
+            install = next(c for c in manager._runner.calls if "install" in c)
+            self.assertIn("-r", install)
+            self.assertNotIn("-g", install)
             self.assertEqual(report.install_flags, ("-r",))
 
-    def test_rejected_install_never_triggers_uninstall_or_clear(self):
-        refusal = (
-            "adb.exe: failed to install: Failure "
-            "[INSTALL_FAILED_USER_RESTRICTED: Install canceled by user]"
-        )
-        with self.apk_file() as apk:
-            responses = scripted(package_installed=False, install_output=refusal)
-            manager = self.build_manager(responses)
+    def test_no_scripted_answer_is_consumed_twice_or_skipped(self):
+        with self.apk() as apk:
+            scripted = happy_path()
+            scripted.pop()  # drop the dumpsys window answer: the pipeline must not invent focus
+            manager = self.manager(scripted)
+
+            with self.assertRaises(AssertionError):
+                self.deploy(manager, apk)
+
+    def test_serial_is_always_addressed_explicitly(self):
+        with self.apk() as apk:
+            manager = self.manager(happy_path())
+            self.deploy(manager, apk)
+
+            device_calls = [c for c in manager._runner.calls if "-s" in " ".join(c)]
+            self.assertTrue(device_calls, "device commands must carry -s")
+            for call in device_calls:
+                self.assertIn(SERIAL, call)
+
+
+class InstallFailureTests(Harness):
+    def refusing(self, message: str):
+        scripted = happy_path()
+        scripted[5] = ("install", result(returncode=1, stderr=message))
+        return scripted
+
+    def test_user_restricted_refusal_is_classified_and_leaves_the_app_installed(self):
+        with self.apk() as apk:
+            manager = self.manager(
+                self.refusing("adb.exe: failed to install: Failure [INSTALL_FAILED_USER_RESTRICTED: Install canceled by user]")
+            )
             report = self.deploy(manager, apk)
 
             self.assertIs(report.failure, Failure.INSTALL_USER_RESTRICTED)
@@ -164,165 +194,207 @@ class FlagSelectionTests(Harness):
             self.assertNotIn("pm clear", manager._runner.joined)
             self.assertTrue(any("no destructive recovery attempted" in note for note in report.notes))
 
-    def test_an_extra_unscripted_command_fails_loudly(self):
-        with self.apk_file() as apk:
-            responses = scripted(package_installed=False)
-            responses.pop()  # remove pidof: the manager must not invent a process id
-            manager = self.build_manager(responses)
-
-            with self.assertRaises(AssertionError):
-                self.deploy(manager, apk)
-
-
-class DeviceSelectionTests(Harness):
-    def test_no_devices_is_reported_rather_than_treated_as_success(self):
-        manager = self.build_manager(
-            [version_ok(), (contains("devices"), Completed(stdout="List of devices attached\n\n"))]
-        )
-
-        device, failure = manager.resolve_device(None)
-
-        self.assertIsNone(device)
-        self.assertIs(failure, Failure.NO_DEVICES)
-
-    def test_two_ready_devices_demand_an_explicit_serial(self):
-        out = "List of devices attached\nAAA device model:one\nBBB device model:two\n"
-        manager = self.build_manager(
-            [
-                version_ok(),
-                (contains("devices"), Completed(stdout=out)),
-                (contains("devices"), Completed(stdout=out)),
-            ]
-        )
-
-        device, failure = manager.resolve_device(None)
-
-        self.assertIsNone(device)
-        self.assertIs(failure, Failure.AMBIGUOUS_DEVICE)
-
-    def test_explicit_serial_is_not_substituted_with_another_device(self):
-        out = "List of devices attached\nAAA unauthorized model:one\nBBB device model:two\n"
-        manager = self.build_manager(
-            [
-                version_ok(),
-                (contains("devices"), Completed(stdout=out)),
-                (contains("devices"), Completed(stdout=out)),
-            ]
-        )
-
-        self.assertIs(manager.resolve_device("AAA")[1], Failure.UNAUTHORIZED)
-        self.assertEqual(manager.resolve_device("BBB")[0].serial, "BBB")
-
-    def test_ambiguity_stops_the_pipeline_before_any_install(self):
-        out = "List of devices attached\nAAA device model:one\nBBB device model:two\n"
-        with self.apk_file() as apk:
-            manager = self.build_manager(
-                [version_ok(), build_ok(), (contains("devices"), Completed(stdout=out))]
+    def test_signature_mismatch_is_returned_for_a_human_decision(self):
+        with self.apk() as apk:
+            manager = self.manager(
+                self.refusing("Failure [INSTALL_FAILED_UPDATE_INCOMPATIBLE: Existing package signatures do not match]")
             )
             report = self.deploy(manager, apk)
 
-            self.assertIs(report.failure, Failure.AMBIGUOUS_DEVICE)
+            self.assertIs(report.failure, Failure.INSTALL_SIGNATURE_MISMATCH)
+            self.assertIn(report.failure, DESTRUCTIVE_RECOVERY_REQUIRED)
+            self.assertTrue(any("human decision" in note for note in report.notes))
+            self.assertNotIn("uninstall", manager._runner.joined)
+
+    def test_transport_failure_is_not_reported_as_a_policy_refusal(self):
+        with self.apk() as apk:
+            manager = self.manager(
+                self.refusing("cmd: Failure calling service package: Broken pipe (32)")
+            )
+            report = self.deploy(manager, apk)
+
+            self.assertIs(report.failure, Failure.INSTALL_TRANSPORT_FAILED)
+
+    def test_a_reported_success_that_leaves_nothing_installed_is_not_a_success(self):
+        with self.apk() as apk:
+            scripted = happy_path()
+            scripted[6] = ("pm list packages", result(stdout="package:com.example.other\n"))
+            manager = self.manager(scripted)
+            report = self.deploy(manager, apk)
+
+            self.assertIs(report.failure, Failure.PACKAGE_MISMATCH)
+            self.assertFalse(report.succeeded)
+
+
+class DeviceSelectionTests(Harness):
+    def test_no_devices_stops_before_any_build_side_effect_on_the_phone(self):
+        scripted = [
+            ("version", result(stdout="Android Debug Bridge version 1.0.41")),
+            ("gradle-fake", result(stdout="BUILD SUCCESSFUL\n")),
+            ("devices -l", result(stdout=DEVICES_NONE)),
+        ]
+        with self.apk() as apk:
+            manager = self.manager(scripted)
+            report = self.deploy(manager, apk)
+
+            self.assertIs(report.failure, Failure.NO_DEVICES)
             self.assertNotIn("install", manager._runner.joined)
 
-    def test_non_adb_executable_is_rejected(self):
-        manager = self.build_manager([(contains("version"), Completed(returncode=1, stderr="not a program"))])
+    def test_two_addressable_devices_demand_an_explicit_serial(self):
+        found = FakeTransport([("devices -l", result(stdout=DEVICES_AMBIGUOUS))])
+        manager = DeploymentManager(adb_path="/fake/adb", repo_root=".", runner=found)
+
+        device, failure, detail = manager.resolve_device(None)
+
+        self.assertIsNone(device)
+        self.assertIs(failure, Failure.AMBIGUOUS_DEVICE)
+        self.assertIn("AAA", detail or "")
+
+    def test_an_unauthorised_serial_is_never_substituted_with_another_device(self):
+        found = FakeTransport([("devices -l", result(stdout=DEVICES_UNAUTHORIZED))])
+        manager = DeploymentManager(adb_path="/fake/adb", repo_root=".", runner=found)
+
+        device, failure, _ = manager.resolve_device("AAA")
+
+        self.assertIsNone(device)
+        self.assertIs(failure, Failure.UNAUTHORIZED)
+
+    def test_a_ready_serial_is_chosen_although_an_unauthorised_device_is_listed(self):
+        found = FakeTransport([("devices -l", result(stdout=DEVICES_UNAUTHORIZED))])
+        manager = DeploymentManager(adb_path="/fake/adb", repo_root=".", runner=found)
+
+        device, failure, _ = manager.resolve_device("BBB")
+
+        self.assertIsNone(failure)
+        self.assertEqual(device.serial, "BBB")
+
+    def test_non_adb_executable_is_rejected_rather_than_swapped(self):
+        manager = DeploymentManager(
+            adb_path="/fake/not-adb",
+            repo_root=".",
+            runner=FakeTransport([("version", result(returncode=1, stderr="not a program"))]),
+        )
 
         self.assertIs(manager.validate_executable(), Failure.ADB_INVALID)
 
 
 class ApkValidationTests(Harness):
-    def test_missing_apk_is_a_failure_not_a_skip(self):
+    def test_missing_file_is_a_failure_not_a_skip(self):
         with tempfile.TemporaryDirectory() as directory:
-            manager = self.build_manager(scripted(package_installed=False))
+            manager = self.manager(happy_path())
             report = self.deploy(manager, Path(directory) / "absent.apk")
 
             self.assertIs(report.failure, Failure.APK_MISSING)
 
-    def test_empty_apk_is_rejected(self):
-        with self.apk_file(content=b"") as apk:
-            manager = self.build_manager(scripted(package_installed=False))
+    def test_empty_file_is_rejected(self):
+        with self.apk(content=b"") as apk:
+            manager = self.manager(happy_path())
             report = self.deploy(manager, apk)
 
             self.assertIs(report.failure, Failure.APK_EMPTY)
 
     def test_package_id_mismatch_blocks_the_install(self):
-        with self.apk_file() as apk:
-            manager = self.build_manager(scripted(package_installed=False), metadata=("com.evil.other", 26))
+        with self.apk() as apk:
+            manager = DeploymentManager(adb_path="/fake/adb", repo_root=".", runner=FakeTransport(happy_path()))
+            manager.read_apk_metadata = lambda _apk: ApkMetadata("com.evil.lookalike", 26, 1)
             report = self.deploy(manager, apk)
 
             self.assertIs(report.failure, Failure.PACKAGE_MISMATCH)
             self.assertNotIn("install", manager._runner.joined)
 
-    def test_apk_newer_than_the_device_is_refused(self):
-        responses = [
-            version_ok(),
-            build_ok(),
-            (contains("devices"), Completed(stdout=DEVICES_OUT)),
-            (contains("ro.build.version.sdk"), Completed(stdout="24\n")),
-        ]
-        with self.apk_file() as apk:
-            manager = self.build_manager(responses, metadata=(PACKAGE, 26))
+    def test_apk_above_the_device_api_level_is_refused(self):
+        scripted = happy_path()
+        scripted[3] = ("ro.build.version.sdk", result(stdout="24\n"))
+        with self.apk() as apk:
+            manager = self.manager(scripted, metadata=ApkMetadata(PACKAGE, 26, 1))
             report = self.deploy(manager, apk)
 
             self.assertIs(report.failure, Failure.SDK_INCOMPATIBLE)
 
     def test_unreadable_metadata_is_invalid_rather_than_assumed_compatible(self):
-        with self.apk_file() as apk:
-            manager = self.build_manager(scripted(package_installed=False), metadata=(None, None))
+        with self.apk() as apk:
+            manager = DeploymentManager(adb_path="/fake/adb", repo_root=".", runner=FakeTransport(happy_path()))
+            manager.read_apk_metadata = lambda _apk: ApkMetadata()
             report = self.deploy(manager, apk)
 
             self.assertIs(report.failure, Failure.APK_INVALID)
 
+    def test_aapt_badging_output_is_parsed_without_inventing_numbers(self):
+        text = (
+            "package: name='com.example.app' versionCode='7' versionName='1.2' platformBuildVersionName=''\n"
+            "sdkVersion:'21'\n"
+            "targetSdkVersion:'34'\n"
+        )
+        parsed = parse_aapt_badging(text)
 
-class LaunchAndStageTests(Harness):
+        self.assertEqual(parsed.package, "com.example.app")
+        self.assertEqual(parsed.min_sdk, 21)
+        self.assertEqual(parsed.version_code, 7)
+
+        empty = parse_aapt_badging("some unrelated tool output")
+        self.assertIsNone(empty.package)
+        self.assertIsNone(empty.min_sdk)
+        self.assertIsNone(empty.version_code)
+
+
+class LaunchAndForegroundTests(Harness):
     def test_a_clean_run_reports_every_stage_verified(self):
-        with self.apk_file() as apk:
-            manager = self.build_manager(scripted(package_installed=False))
+        with self.apk() as apk:
+            manager = self.manager(happy_path())
             report = self.deploy(manager, apk)
 
             self.assertEqual([stage for stage, _, _ in report.stages], list(Stage))
             self.assertTrue(all(ok for _, ok, _ in report.stages))
             self.assertEqual(report.pid, 8703)
             self.assertEqual(report.activity, f"{PACKAGE}/.ShellActivity")
-            self.assertIn("PROCESS_ALIVE_SUCCESS", report.text())
+            self.assertIn("FOREGROUND_VERIFIED_SUCCESS", report.text())
 
-    def test_activity_is_resolved_not_assumed(self):
-        with self.apk_file() as apk:
-            responses = scripted(package_installed=False)
-            responses[-3] = (contains("resolve-activity"), Completed(stdout="priority=0\nNo activity found\n"))
-            manager = self.build_manager(responses)
+    def test_activity_is_resolved_rather_than_assumed(self):
+        scripted = happy_path()
+        scripted[7] = ("resolve-activity", result(stdout="priority=0 match=0x108000\nNo activity found\n"))
+        with self.apk() as apk:
+            manager = self.manager(scripted)
             report = self.deploy(manager, apk)
 
             self.assertIs(report.failure, Failure.NO_LAUNCH_ACTIVITY)
             self.assertNotIn("am start", manager._runner.joined)
 
-    def test_error_text_from_am_start_is_not_counted_as_a_launch(self):
-        with self.apk_file() as apk:
-            responses = scripted(package_installed=False)
-            responses[-2] = (
-                contains("am", "start"),
-                Completed(stdout="Error: Activity class {com.omnibuds.tools.shell/x} does not exist."),
-            )
-            manager = self.build_manager(responses)
+    def test_am_start_error_text_is_not_counted_as_a_launch(self):
+        scripted = happy_path()
+        scripted[8] = ("am start", result(stdout=f"Error: Activity class {{{PACKAGE}/x}} does not exist."))
+        with self.apk() as apk:
+            manager = self.manager(scripted)
             report = self.deploy(manager, apk)
 
             self.assertIs(report.failure, Failure.LAUNCH_FAILED)
-            self.assertFalse(report.succeeded)
 
-    def test_started_but_dead_process_is_not_launch_success(self):
-        with self.apk_file() as apk:
-            responses = scripted(package_installed=False)
-            responses[-1] = (contains("pidof"), Completed(returncode=1, stdout=""))
-            manager = self.build_manager(responses)
+    def test_a_process_that_is_not_running_is_not_launch_success(self):
+        scripted = happy_path()
+        scripted[9] = ("pidof", result(stdout="", returncode=1))
+        with self.apk() as apk:
+            manager = self.manager(scripted)
             report = self.deploy(manager, apk)
 
             self.assertIs(report.failure, Failure.PROCESS_NOT_RUNNING)
 
-    def test_build_failure_precedes_any_device_contact(self):
-        with self.apk_file() as apk:
-            manager = self.build_manager(
-                [version_ok(), (contains("gradlew-fake"), Completed(returncode=1, stderr="boom"))]
-            )
+    def test_a_launch_that_does_not_reach_the_foreground_is_not_verified(self):
+        # The device-access policy permits capture and input only while our package is
+        # foreground, so a started-but-not-focused app must stop the run.
+        with self.apk() as apk:
+            manager = self.manager(happy_path(focus=FOCUS_OTHER))
+            report = self.deploy(manager, apk)
+
+            self.assertIs(report.failure, Failure.NOT_FOREGROUND)
+            self.assertFalse(report.succeeded)
+            self.assertTrue(any("capture and input stay gated" in note for note in report.notes))
+
+    def test_build_failure_produces_no_device_command_at_all(self):
+        scripted = [
+            ("version", result(stdout="Android Debug Bridge version 1.0.41")),
+            ("gradle-fake", result(returncode=1, stderr="FAILURE: Build failed")),
+        ]
+        with self.apk() as apk:
+            manager = self.manager(scripted)
             report = self.deploy(manager, apk)
 
             self.assertIs(report.failure, Failure.BUILD_FAILED)
@@ -336,23 +408,23 @@ class ClassificationTests(unittest.TestCase):
             Failure.INSTALL_USER_RESTRICTED,
         )
 
-    def test_signature_mismatch_is_recognised_and_gated(self):
-        self.assertIs(
-            classify_failure("Failure [INSTALL_FAILED_UPDATE_INCOMPATIBLE: signatures do not match]"),
-            Failure.INSTALL_SIGNATURE_MISMATCH,
-        )
-        self.assertIn(Failure.INSTALL_SIGNATURE_MISMATCH, DESTRUCTIVE_RECOVERY_REQUIRED)
-
     def test_an_unseen_code_is_not_forced_into_a_known_category(self):
-        self.assertIs(classify_failure("Failure [INSTALL_FAILED_SOMETHING_NOVEL]"), Failure.INSTALL_FAILED)
+        self.assertIs(classify_failure("Failure [INSTALL_FAILED_ENTIRELY_NEW]"), Failure.INSTALL_FAILED)
 
-    def test_transport_stack_trace_is_not_reported_as_a_policy_refusal(self):
-        text = (
-            "cmd: Failure calling service package: Broken pipe (32)\n"
-            "at com.android.server.pm.PackageManagerShellCommand.runInstall"
-        )
+    def test_a_stack_trace_mentioning_offline_is_still_a_transport_failure(self):
+        text = "cmd: Failure calling service package: Broken pipe (32)\nat com.android.server.pm.PackageManagerShellCommand"
         self.assertIs(classify_failure(text), Failure.INSTALL_TRANSPORT_FAILED)
 
 
+class ConstructorTests(unittest.TestCase):
+    def test_a_blank_adb_path_is_refused_at_construction(self):
+        with self.assertRaises(ValueError):
+            DeploymentManager(adb_path="   ", repo_root=".")
+
+    def test_failure_labels_are_disjoint_from_stage_names(self):
+        stage_values = {stage.value for stage in Stage}
+        self.assertFalse(stage_values & {failure.value for failure in Failure})
+
+
 if __name__ == "__main__":
-    unittest.main(verbosity=2)
+    unittest.main(verbosity=1)

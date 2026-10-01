@@ -61,3 +61,36 @@ The bridge talks to `:tools:companion-shell` (ADR-P2-010), which depends on no p
 successful deploy, capture or tap therefore proves the harness works and proves nothing about
 Bluetooth, capability discovery or control. `docs/security/device-access-policy.md` governs what the
 harness may observe on the device, and capture remains foreground-gated and unpersisted.
+
+## What `deploy.py` shares with the bridge transport, and what it does not
+
+Both live in `tools/device-bridge/bridge/`, and both can reach the phone, so the boundary between
+them is a safety property rather than a tidiness one.
+
+Shared, and therefore impossible for the deployment pipeline to get wrong independently:
+
+- `build_install_argv` - the only construction of an install command in the package, and it cannot
+  emit `-g` (its predecessor, an inline list, could).
+- `AdbDeviceRecord`, `AdbDeviceState` and `parse_device_listing` - so `unauthorized` and `offline`
+  mean the same thing to the gateway and to the deployment manager, including an unrecognised token
+  staying `UNKNOWN` with its raw text instead of defaulting to a state with a remedy.
+- `parse_sdk_value`, `parse_focus_package`, `CommandRunner`, `CommandResult` and
+  `subprocess_command_runner` - one timeout contract, one "no shell", one decode rule.
+
+Not shared, on purpose:
+
+- **`AdbTransport` itself.** It is a per-device object (`AdbTransport(serial=...)`) that answers
+  policy questions by raising typed errors. The deployment manager's contract is the opposite: no
+  stage throws, every refusal becomes a named `Failure` and a note a human can act on, and a
+  missing fact stays `None` so the pipeline can say "API level unknown" instead of aborting.
+  Wrapping a raising transport in a classification pipeline would mean catching everything it raises
+  and re-deriving the classification `classify_failure` already owns.
+- **`AdbTransport.preflight`.** It reads five build properties and refuses a device whose ABI it
+  cannot parse. Deploy needs one property and must keep going when it is absent, because an APK
+  compatibility judgement against an unknown API level is reported as `SDK_INCOMPATIBLE`-adjacent
+  uncertainty, not as a device error. Reusing it would change how many commands reach the phone per
+  run, which is exactly the kind of thing this project keeps explicit.
+- **The one-line `_device_argv` wrapper.** Its shape (`adb -s <serial> ...`) is duplicated; the
+  closed-transport guard and the raising accessors around it are not wanted here. If a later change
+  adds a third consumer of that shape, the right move is an unaddressed free function in `adb.py`
+  that both call - not a transport constructed with a placeholder serial just to list devices.
