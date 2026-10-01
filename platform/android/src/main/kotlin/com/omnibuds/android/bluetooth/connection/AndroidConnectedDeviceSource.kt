@@ -10,6 +10,7 @@ import com.omnibuds.core.common.OperationOutcome
 import com.omnibuds.core.platform.ApiAvailability
 import com.omnibuds.core.platform.BluetoothOperation
 import com.omnibuds.core.platform.BluetoothPermission
+import com.omnibuds.core.platform.BondedDeviceObservation
 import com.omnibuds.core.platform.ConnectedDeviceEventChannel
 import com.omnibuds.core.platform.ConnectedDeviceSource
 import com.omnibuds.core.platform.DeviceAvailability
@@ -58,6 +59,11 @@ import kotlinx.coroutines.withContext
  *  - [openConnectionEvents] settles standing before registering anything, because a receiver the user
  *    has not let this app hear produces exactly one symptom - silence - and a silent stream is the
  *    failure this phase refuses everywhere else.
+ *  - [bondedDevices] settles standing for `device.bonded-list-inspection` on its own terms before the
+ *    bond list is read, and refuses four different platform situations as four refusals rather than as an
+ *    empty list of paired devices. The platform's own documentation for the read says it "will return an
+ *    empty set" whenever the adapter is not on, so this is the same hazard ADR-P3-009 names, arriving from
+ *    the pairing side (ADR-P3-017).
  *
  * All platform work is offloaded to [dispatcher]: `getProfileProxy`, the profile enumerations and
  * receiver registration are binder calls, and blocking the main thread on them is a defect rather than a
@@ -97,10 +103,12 @@ class AndroidConnectedDeviceSource(
         refusalFor(BluetoothOperation.CONNECTED_DEVICE_INSPECTION)?.let { refusal ->
             return@withContext ObservationRound.Failure(refusal)
         }
-        // An adapter that is not there is not a room full of disconnected devices. `getBondedDevices`
-        // and the profile enumerations both answer empty in this situation, which is precisely the
-        // confusion ADR-P3-009 was written to close, so the round is refused with the category that
-        // already means "the phone itself did not answer".
+        // An adapter that is not there is not a room full of disconnected devices. `getBondedDevices` and
+        // the profile enumerations both answer empty in this situation, which is precisely the confusion
+        // ADR-P3-009 was written to close, so the round is refused with the category that already means
+        // "the phone itself did not answer". The bond list says the same thing in code now, through
+        // [bondedDevices] and [ConnectedDeviceHandle.bondedDevices]; this round keeps its own refusal
+        // because the two questions still have separate answers.
         if (!handle.adapterPresent) {
             return@withContext ObservationRound.Failure(
                 OmniBudsError(
@@ -117,6 +125,78 @@ class AndroidConnectedDeviceSource(
             ObservationRound.Success(devices = unionOf(enumeratedProfiles), stage = ObservationStage.OBSERVING)
         }.getOrElse { problem ->
             ObservationRound.Failure(platformFailure("device-snapshot", problem))
+        }
+    }
+
+    /**
+     * Reads the phone's pairing records, gated on its own operation and refused into four shapes.
+     *
+     * This is the fourth entry point, and the one that makes prompt section 10.B exist as data rather than
+     * as a field on a model nobody can fill. It repeats [snapshot]'s ordering rule rather than borrowing its
+     * answer: standing is settled for `device.bonded-list-inspection`, which is the operation this read
+     * performs, and only then is the handle touched. A grant for the connected-device inspection is not a
+     * grant for this one and the resolver is asked separately, because that is the only way the plan for
+     * each operation stays the thing being honoured (ADR-P3-009, ADR-P3-017).
+     *
+     * Three of [BondedListing]'s cases become refusals with categories the model already has, and none of
+     * them becomes an empty list:
+     *  - [BondedListing.AdapterAbsent] is `ADAPTER_UNAVAILABLE`, for the reason [snapshot] states at its own
+     *    guard - a phone with no radio is not a phone with no pairings.
+     *  - [BondedListing.AdapterNotOn] is `BLUETOOTH_DISABLED`, and this one is not caution but quotation:
+     *    the shipped documentation for the call says that when the adapter state is not on, "this API will
+     *    return an empty set". Reporting zero paired devices to a user whose Bluetooth is toggled off would
+     *    be ADR-P3-009's confusion arriving through the door the bond list opened.
+     *  - [BondedListing.ReadFailed] is `RESOURCE_UNAVAILABLE`, because the platform answered with the value
+     *    its own contract reserves for "an error happened" (a null set, or a call that threw) and gave
+     *    nothing to attribute it to. `RESOURCE_UNAVAILABLE` is ADR-P3-006's category for a mechanism that
+     *    could not be held on to, and its retry class says re-read, which is exactly what the next round does.
+     *
+     * Only [BondedListing.Reported] can produce an empty list, and it is reachable only when an adapter was
+     * present, was reading itself as on, and answered with a set - which is when emptiness is a census
+     * rather than a symptom.
+     */
+    override suspend fun bondedDevices(): ObservationRound<BondedDeviceObservation> = withContext(dispatcher) {
+        refusalFor(BluetoothOperation.BONDED_DEVICE_LIST_INSPECTION)?.let { refusal ->
+            return@withContext ObservationRound.Failure(refusal)
+        }
+        runCatching {
+            when (val listing = handle.bondedDevices()) {
+                is BondedListing.Reported -> ObservationRound.Success(
+                    devices = listing.devices.map { report -> pairedObservationOf(report) },
+                    // Restated by the observer and ignored there, for the same reason [snapshot] sets a
+                    // stage it does not claim (ADR-P3-015 rule 10).
+                    stage = ObservationStage.OBSERVING,
+                )
+
+                BondedListing.AdapterAbsent -> ObservationRound.Failure(
+                    OmniBudsError(
+                        category = OmniBudsErrorCategory.ADAPTER_UNAVAILABLE,
+                        operationId = OPERATION_ID,
+                        detail = "this phone reports no Bluetooth adapter, so there is no bond list to read; " +
+                            "an absent adapter is not a phone with no pairings",
+                    ),
+                )
+
+                BondedListing.AdapterNotOn -> ObservationRound.Failure(
+                    OmniBudsError(
+                        category = OmniBudsErrorCategory.BLUETOOTH_DISABLED,
+                        operationId = OPERATION_ID,
+                        detail = "the adapter is not reporting itself on, and the bond-list read answers an " +
+                            "empty set for every phone in that state, so nothing was counted",
+                    ),
+                )
+
+                BondedListing.ReadFailed -> ObservationRound.Failure(
+                    OmniBudsError(
+                        category = OmniBudsErrorCategory.RESOURCE_UNAVAILABLE,
+                        operationId = OPERATION_ID,
+                        detail = "the bond-list read returned the platform's error answer rather than a set, " +
+                            "which is a failed observation and not a report of no paired devices",
+                    ),
+                )
+            }
+        }.getOrElse { problem ->
+            ObservationRound.Failure(platformFailure("bonded-device-list", problem))
         }
     }
 
@@ -196,6 +276,22 @@ class AndroidConnectedDeviceSource(
             observedProfiles = setOf(profile),
             displayName = report.reportedName,
             arrival = ObservationArrival.SNAPSHOT,
+            observedAtEpochMillis = time.nowEpochMillis(),
+        )
+
+    /**
+     * One paired device, mapped into a record that cannot claim a link.
+     *
+     * The bond axis comes from the device object's own reading rather than from the list's membership, so
+     * a phone mid-unbond that still names the device reports what the device says instead of what the
+     * collection implies. Nothing here is invented to fill the gap the type leaves: there is no link, no
+     * profile set and no availability, because the mechanism reported none of them.
+     */
+    private fun pairedObservationOf(report: BondedDeviceReport): BondedDeviceObservation =
+        BondedDeviceObservation.reported(
+            key = DeviceObservationKey.ofReportedAddress(report.reportedAddress),
+            bond = bondStateOf(report.bond),
+            displayName = report.reportedName,
             observedAtEpochMillis = time.nowEpochMillis(),
         )
 

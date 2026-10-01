@@ -21,10 +21,11 @@ import com.omnibuds.core.platform.PlatformRegistration
  * difference is ADR-P3-005's entire subject. So [SystemConnectedDeviceHandle] transcribes numbers into
  * the named cases below, and [AndroidConnectedDeviceSource] decides what they mean.
  *
- * Four members, because four questions are authorised: is there an adapter to ask, can this profile
- * answer, what does it answer, and will it announce changes. Adding a fifth - pair, connect, enable,
- * ask the device for something - would put a capability this phase forbids behind a name that sounds
- * like a read (architecture audit section 10, research section 8.2).
+ * Five members, because five questions are authorised: is there an adapter to ask, can this profile
+ * answer, what does it answer, will it announce changes, and what has this phone paired. The fifth is
+ * still a read in the same sense as the other four - it names no device to send anything to, asks for no
+ * bond and changes nothing - and adding a sixth that did would put a capability this phase forbids behind
+ * a name that sounds like a read (architecture audit section 10, research section 8.2).
  */
 interface ConnectedDeviceHandle {
     /** Whether this phone exposes a Bluetooth adapter at all. False is a real answer, not an error. */
@@ -51,6 +52,25 @@ interface ConnectedDeviceHandle {
      * [answerability] said [ProfileAnswerability.ANSWERABLE] first.
      */
     fun enumerate(profile: ObservedProfile): ProfileEnumeration
+
+    /**
+     * The phone's own list of devices it has paired, in as raw a shape as the platform gave it.
+     *
+     * The four cases of [BondedListing] exist because this call cannot answer one question and four
+     * different situations all look like it. The platform's shipped Javadoc for
+     * `BluetoothAdapter.getBondedDevices()` states both halves of the problem in its own words: "If
+     * Bluetooth state is not STATE_ON, this API will return an empty set" and "@return unmodifiable set
+     * of BluetoothDevice, or null on error". So an empty set arrives for a phone with no pairings, for a
+     * switched-off adapter and, per the reference implementation, for a caller whose standing was
+     * refused - and the caller cannot tell which one it got. This method therefore reports the adapter
+     * facts alongside the list, and lets [AndroidConnectedDeviceSource] decide that a refusal is a
+     * refusal rather than a count of zero (ADR-P3-009, ADR-P3-017).
+     *
+     * No standing is checked here. It is checked one level up, before this method is reachable at all,
+     * for the same reason [enumerate] states about lint: a second permission decision with a second
+     * owner is the failure mode this module's guards exist to keep out.
+     */
+    fun bondedDevices(): BondedListing
 
     /**
      * Registers for the platform's device announcements and binds the service handles [profiles] need.
@@ -128,11 +148,19 @@ enum class ProfileAnswerability {
  * mechanism this process tried and the silence is about nothing at all. An implementation that combined
  * answers from more than one listener by ordinal would report "declined" where the truth was "still
  * binding", and ADR-P3-008's rule about a profile that never binds turns on exactly that distinction.
+ *
+ * The ladder is therefore pending above refused (ADR-P3-019). The two map to different support values one
+ * level up - a refusal becomes [com.omnibuds.core.platform.ProfileObservationSupport.NOT_ANSWERABLE] and a
+ * pending bind stays [com.omnibuds.core.platform.ProfileObservationSupport.UNKNOWN] - and only the first of
+ * those counts as a decline when the engine decides whether a union saw anything at all. Ranking a refusal
+ * higher would let one channel's `getProfileProxy` returning `false` outvote another channel that has not
+ * called back, and an outvoted "still binding" reaching that decision turns a round that was merely early
+ * into a round the platform declined.
  */
 fun ProfileAnswerability.evidenceRank(): Int = when (this) {
     ProfileAnswerability.NOT_REQUESTED -> 0
-    ProfileAnswerability.AWAITING_CALLBACK -> 1
-    ProfileAnswerability.REFUSED -> 2
+    ProfileAnswerability.REFUSED -> 1
+    ProfileAnswerability.AWAITING_CALLBACK -> 2
     ProfileAnswerability.ANSWERABLE -> 3
 }
 
@@ -148,6 +176,55 @@ sealed interface ProfileEnumeration {
     /** The profile could not answer, so it contributes nothing and withdraws nothing. */
     data object Unanswered : ProfileEnumeration
 }
+
+/**
+ * What the bond-list read produced, stated as four situations rather than as one list.
+ *
+ * The reason this is not a `List` is the reason [ProfileEnumeration] exists: the platform answers four
+ * different worlds with the same value. Its own Javadoc for the call says "If Bluetooth state is not
+ * STATE_ON, this API will return an empty set" and "or null on error", and the reference implementation
+ * returns an empty collection when the caller's standing is refused - so an empty list is what a phone
+ * with no pairings, a switched-off adapter, an absent adapter and a refused read all look like from
+ * inside the call. ADR-P3-009's rule that a refusal must never arrive as an empty device list can only be
+ * honoured if the shape underneath it can still tell the four apart, which is what these cases are for.
+ *
+ * [Reported] is the only case that may carry an empty list, and it is only reachable when an adapter was
+ * there, was reading itself as on, and answered with a set. That is not a stricter gate than the platform
+ * applies - it is the same gate, moved to where the decision can be tested.
+ */
+sealed interface BondedListing {
+    /** The adapter was present and on and answered with a set. An empty [devices] is a real census. */
+    data class Reported(val devices: List<BondedDeviceReport>) : BondedListing
+
+    /** This phone exposes no Bluetooth adapter at all, so there was nothing that could hold a bond. */
+    data object AdapterAbsent : BondedListing
+
+    /** An adapter exists and is reading itself as not on: the platform's empty set here says nothing. */
+    data object AdapterNotOn : BondedListing
+
+    /** The read gave an answer this code could not transcribe - a null return, or a call that threw. */
+    data object ReadFailed : BondedListing
+}
+
+/**
+ * One device the bond list named, with no link claim anywhere in it.
+ *
+ * Deliberately narrower than [DeviceReport], which carries a link: the bond list reports stored pairing
+ * keys and is silent about connections, and a record shape that had a link field here would invite
+ * somebody to fill it in from the list's existence. That is the mistake prompt section 6 is written
+ * against, and ADR-P3-017 keeps it unfalsifiable by keeping the field out of the type rather than out of
+ * a convention.
+ */
+data class BondedDeviceReport(
+    /** The address as reported, or null when the platform named a device it would not identify. */
+    val reportedAddress: String?,
+
+    /** The name as reported, or null. A cache read, and a cold cache is the normal case. */
+    val reportedName: String?,
+
+    /** The device object's own bond reading, which may disagree with the list that named it. */
+    val bond: RawBondState,
+)
 
 /**
  * One device a profile named, reduced to what Phase 3 is authorised to read.

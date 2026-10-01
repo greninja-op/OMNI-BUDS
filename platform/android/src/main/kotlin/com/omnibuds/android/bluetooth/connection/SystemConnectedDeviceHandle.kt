@@ -23,11 +23,11 @@ import java.util.concurrent.atomic.AtomicBoolean
 /**
  * The one class in this codebase permitted to touch Android's device-facing Bluetooth API.
  *
- * It holds three facts and nothing else: which profiles can be asked, what they answer, and which
- * announcements the stack makes. `BluetoothAdapter.getProfileProxy` is the only route to a per-profile
- * device list for the audio and human-interface profiles - `BluetoothAdapter` exposes no
- * `getConnectedDevices` and no `getSupportedProfiles` in the public API at all, so which profiles to ask
- * is a list this project carries rather than a question the phone answers (research sections 3.1, 3.4) -
+ * It holds four facts and nothing else: which profiles can be asked, what they answer, which
+ * announcements the stack makes, and which devices this phone has paired. `BluetoothAdapter.getProfileProxy`
+ * is the only route to a per-profile device list for the audio and human-interface profiles - `BluetoothAdapter`
+ * exposes no `getConnectedDevices` and no `getSupportedProfiles` in the public API at all, so which profiles to
+ * ask is a list this project carries rather than a question the phone answers (research sections 3.1, 3.4) -
  * and `BluetoothManager.getDevicesMatchingConnectionStates` answers for the attribute protocol without
  * any binding, which is why [ObservedProfile.GATT] never reaches the binder.
  *
@@ -48,7 +48,9 @@ import java.util.concurrent.atomic.AtomicBoolean
  *
  * No method on this class can pair, connect, enable, discover, scan, open a socket, send anything over
  * the air or change anything at all. `getAddress`, `getName` and `getBondState` are reads of an object
- * the platform handed us, and the mutation-shaped look-alikes - `fetchUuidsWithSdp`, `createBond`,
+ * the platform handed us, and `getBondedDevices` is a read of the phone's own stored pairing records: it
+ * asks nothing of any device, sends nothing, and is the mechanism prompt section 10.B's collection exists
+ * to report. The mutation-shaped look-alikes - `fetchUuidsWithSdp`, `createBond`,
  * `connectGatt`, the voice-recognition calls, `setPriorityPolicy` - are refused by name in
  * `DependencyDirectionTest` rule 7, which since this phase scans `src/androidTest` as well as
  * `src/main` so a test cannot reach one unnoticed (ADR-P3-007's named guard gap).
@@ -120,6 +122,40 @@ class SystemConnectedDeviceHandle(
         return enumerationOf(proxy.getDevicesMatchingConnectionStates(LINKED_STATES)) { device ->
             proxy.getConnectionState(device)
         }
+    }
+
+    /**
+     * The phone's paired-device list, together with the two adapter facts that decide what an empty list
+     * means.
+     *
+     * The adapter reading is taken first and reported as its own case, not folded into the set, because
+     * the shipped Javadoc for `getBondedDevices()` says so in as many words: "If Bluetooth state is not
+     * STATE_ON, this API will return an empty set" and "@return unmodifiable set of BluetoothDevice, or
+     * null on error". A switched-off adapter therefore produces exactly the value that would otherwise
+     * mean "this phone has paired nothing", which is the confusion ADR-P3-009 exists to close and which
+     * the code comment in [AndroidConnectedDeviceSource.snapshot] has said all along that this call would
+     * answer empty. So [BondedListing.AdapterNotOn] and [BondedListing.ReadFailed] are refusals this
+     * method raises before the set can be mistaken for a census, and only a present, on, answering
+     * adapter reaches [BondedListing.Reported].
+     *
+     * The local adapter-state read is the same fact Phase 2 reads through
+     * `SystemBluetoothAdapterHandle`, and it appears here for one reason: the bond call's own
+     * documentation makes its emptiness depend on that reading, so the reading belongs to this call
+     * rather than to a cross-package dependency on another boundary's handle. Nothing is cached, no
+     * receiver is registered here and there is no poll - one read, per round, on the caller's dispatcher.
+     *
+     * `MissingPermission` is suppressed for the reason [enumerate] states: standing for
+     * `device.bonded-list-inspection` is settled one level up, before this method is reachable at all,
+     * and [AndroidConnectedDeviceSource] wraps the call so a thrown [SecurityException] becomes a refused
+     * round rather than an empty one.
+     */
+    @SuppressLint("MissingPermission")
+    override fun bondedDevices(): BondedListing {
+        val adapter = this.adapter ?: return BondedListing.AdapterAbsent
+        val state = runCatching { adapter.state }.getOrNull() ?: return BondedListing.ReadFailed
+        if (state != BluetoothAdapter.STATE_ON) return BondedListing.AdapterNotOn
+        val devices = runCatching { adapter.bondedDevices }.getOrNull() ?: return BondedListing.ReadFailed
+        return BondedListing.Reported(devices.map { device -> bondedReportOf(device) })
     }
 
     /**
@@ -425,6 +461,13 @@ class SystemConnectedDeviceHandle(
          * asked for, and one that would read as a device census. Absence from the union becomes a
          * disconnect only when every profile in it answered, which is ADR-P3-015 rule 4; this list and
          * that rule have to be read together.
+         *
+         * The device the disconnected set would have supplied is now asked for and answered somewhere
+         * else: [bondedDevices] reads the phone's own pairing records, which is a named source for "this
+         * device exists and is paired" rather than a profile's leftover bookkeeping, and it arrives in the
+         * projection's paired collection where a link claim is not available to be made (ADR-P3-017).
+         * Widening this array is therefore still the wrong way to populate the disconnected set, and this
+         * note is the reason it stays that way.
          */
         val LINKED_STATES = intArrayOf(
             BluetoothProfile.STATE_CONNECTED,
@@ -493,6 +536,27 @@ class SystemConnectedDeviceHandle(
                 reportedAddress = runCatching { device.address }.getOrNull(),
                 reportedName = runCatching { device.name }.getOrNull(),
                 link = rawLinkStateOf(runCatching { linkOf(device) }.getOrDefault(RAW_EXTRA_UNREADABLE), null),
+                bond = rawBondStateOf(runCatching { device.bondState }.getOrDefault(RAW_EXTRA_UNREADABLE)),
+            )
+        }
+
+        /**
+         * One paired device, reduced to what this phase is authorised to read, with no link claim in it.
+         *
+         * The same per-field discipline as [deviceReportOf]: each descriptor is a separate cache read and
+         * a failure leaves that field unread instead of ending the list. What is *not* read here is any
+         * link state, because the bond list reports stored keys and the platform's own wording for a bond
+         * is that it "does not necessarily mean the device is currently connected" - so a link field in
+         * this record could only be filled by an inference, and prompt section 6 forbids the inference.
+         */
+        @SuppressLint("MissingPermission")
+        fun bondedReportOf(device: BluetoothDevice?): BondedDeviceReport {
+            if (device == null) {
+                return BondedDeviceReport(null, null, RawBondState.UNREADABLE)
+            }
+            return BondedDeviceReport(
+                reportedAddress = runCatching { device.address }.getOrNull(),
+                reportedName = runCatching { device.name }.getOrNull(),
                 bond = rawBondStateOf(runCatching { device.bondState }.getOrDefault(RAW_EXTRA_UNREADABLE)),
             )
         }

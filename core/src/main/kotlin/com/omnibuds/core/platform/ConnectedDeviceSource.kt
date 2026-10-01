@@ -86,6 +86,11 @@ interface ConnectedDeviceEventChannel {
  * resolver and provider, before enumerating and before registering - returns [ObservationRound.Failure]
  * and the engine never learns a device list it should not have asked for. Ordering is the mechanism,
  * and the type is what makes the ordering the only option.
+ *
+ * [bondedDevices] is the same discipline pointed at a second question, and it is a separate member rather
+ * than a wider [snapshot] round because the two collections prompt section 10 names must not share a
+ * return value: a device the bond list named and no profile reported has no business arriving in a list
+ * whose emptiness means "nobody is connected".
  */
 interface ConnectedDeviceSource {
     /**
@@ -112,6 +117,34 @@ interface ConnectedDeviceSource {
      * [profileSupport] exists to break.
      */
     suspend fun snapshot(): ObservationRound<DeviceObservation>
+
+    /**
+     * Read the platform's list of paired devices - prompt section 10's collection B, and nothing else.
+     *
+     * Three rules make this member a separate question rather than a second way to answer the first one.
+     *
+     *  - **Its own standing, resolved for its own operation.** A source settles
+     *    [BluetoothOperation.BONDED_DEVICE_LIST_INSPECTION] through the Phase 2 resolver and provider
+     *    before the read, exactly as [snapshot] settles
+     *    [BluetoothOperation.CONNECTED_DEVICE_INSPECTION] before enumerating (ADR-P3-009). A grant for one
+     *    is not a grant for the other, and there is no path to a bond record that does not go through
+     *    this check, because this is the only way to obtain them.
+     *  - **A refusal is never an empty list.** The platform answers a permission refusal, a switched-off
+     *    adapter, an absent adapter and a service that returned "null on error" with the same empty
+     *    collection it uses for a phone with no bonds - its own documentation says so - so an empty
+     *    [ObservationRound.Success] may only arrive from a read the source established had an adapter to
+     *    ask and an operation cleared to ask it. Anything else is a [ObservationRound.Failure], and the
+     *    engine keeps whatever it last heard rather than restating zero paired devices.
+     *  - **Its records cannot reach the connected projection.** The return type is
+     *    [BondedDeviceObservation], which has no link field, no profile set and no availability axis: a
+     *    paired device has no route into [snapshot]'s list, and the projection fold credits only the bond
+     *    axis of a record a link mechanism already named (prompt section 6, ADR-P3-001).
+     *
+     * The read is a live view. Nothing here may be persisted or accumulated across rounds: prompt section
+     * 10.C and section 16 forbid a saved-device store, and the bond list is the phone's own record rather
+     * than this app's.
+     */
+    suspend fun bondedDevices(): ObservationRound<BondedDeviceObservation>
 
     /**
      * Open the live announcement stream and return its registration handle.
@@ -144,6 +177,9 @@ private object UnavailableConnectedDeviceSource : ConnectedDeviceSource {
         OperationOutcome.Failure(refusal())
 
     override suspend fun snapshot(): ObservationRound<DeviceObservation> = ObservationRound.Failure(refusal())
+
+    override suspend fun bondedDevices(): ObservationRound<BondedDeviceObservation> =
+        ObservationRound.Failure(refusal())
 
     override suspend fun openConnectionEvents(): OperationOutcome<ConnectedDeviceEventChannel> =
         OperationOutcome.Failure(refusal())

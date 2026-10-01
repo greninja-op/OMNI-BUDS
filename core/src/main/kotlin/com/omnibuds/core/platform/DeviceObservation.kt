@@ -147,45 +147,32 @@ data class DeviceObservation(
         )
 
         /**
-         * Trims reported text and maps blank to null, so a padded name cannot be read as a known field.
+         * Credits [record] with the bond axis [bond] and touches no other field.
          *
-         * [com.omnibuds.core.device.DeviceIdentity] applies the same rule to its own fields and is
-         * unreachable from here - layer 1 may not import layer 2 - so this is the second copy of one
-         * sentence, which is cheaper than the upward edge that putting the observation next to the
-         * identity would have bought (ADR-P3-003's refusal of that placement).
+         * This is the whole of what the paired collection may do to a projection record, and the shape of
+         * it is the point: there is no variant of this function that could set a link, a profile set or an
+         * availability, because the bond list reports none of those things and prompt section 6 forbids
+         * reading its silence as a disconnect. Where the record already holds the more positive report the
+         * value comes back unchanged, which is what lets the fold distinguish a moved projection from an
+         * acknowledgement.
          */
-        private fun normalisedText(value: String?): String? = value?.trim()?.takeIf { it.isNotEmpty() }
+        fun creditingBond(record: DeviceObservation, bond: DeviceBondState): DeviceObservation =
+            record.copy(bond = strongerBond(record.bond, bond))
 
         private fun strongerLink(
             first: DeviceConnectionState,
             second: DeviceConnectionState,
         ): DeviceConnectionState = maxOf(first, second, linkStrength)
 
-        private fun strongerBond(first: DeviceBondState, second: DeviceBondState): DeviceBondState =
-            if (bondRank(first) >= bondRank(second)) first else second
-
         private fun strongerAvailability(
             first: DeviceAvailability,
             second: DeviceAvailability,
         ): DeviceAvailability = if (availabilityRank(first) >= availabilityRank(second)) first else second
 
-        private fun bondRank(bond: DeviceBondState): Int = when (bond) {
-            DeviceBondState.BONDED -> 3
-            DeviceBondState.BONDING -> 2
-            DeviceBondState.NONE -> 1
-            DeviceBondState.UNKNOWN -> 0
-        }
-
         private fun availabilityRank(availability: DeviceAvailability): Int = when (availability) {
             DeviceAvailability.AVAILABLE -> 2
             DeviceAvailability.UNAVAILABLE -> 1
             DeviceAvailability.UNKNOWN -> 0
-        }
-
-        private fun latestReading(first: Long?, second: Long?): Long? = when {
-            first == null -> second
-            second == null -> first
-            else -> maxOf(first, second)
         }
 
         /**
@@ -206,4 +193,121 @@ data class DeviceObservation(
             DeviceConnectionState.CONNECTED -> 4
         }
     }
+}
+
+/**
+ * One device the platform's bond list named, with no link claim anywhere in it.
+ *
+ * This is prompt section 10's collection B, and the type is the reason it cannot be confused with
+ * collection A. It has no [DeviceConnectionState] field, and not because nobody thought of one: the
+ * bond list is a set of stored link keys (the platform's own wording for a bond is "the pending
+ * procedure was completed at some earlier time, and the link key is still stored locally"), so a link
+ * field here could only ever be filled by an inference, and prompt section 6 forbids the inference in
+ * both directions - a paired device is not necessarily connected, and an unobserved link must not
+ * become a claim. A consumer that wants "is this paired device connected?" asks the projection, which
+ * answers from the profiles that report links; the two answers join on [key] and on nothing else
+ * (ADR-P3-010).
+ *
+ * Where a bonded device *is* also reported by the projection, its own bond axis is credited from this
+ * record by [DeviceObservation.creditingBond], which moves the bond axis and no other field. Folding a
+ * paired record into the connected projection - inventing a record for a device only the bond list
+ * named - is not something this model offers a route to.
+ *
+ * [bond] is carried as read rather than assumed to be [DeviceBondState.BONDED], because membership of
+ * the list and the per-device read are two mechanisms and they can disagree mid-unbond. A disagreement
+ * is kept as a finding rather than smoothed away, following [DeviceObservation.mergedWith]'s rule that
+ * two mechanisms disagreeing is not something a data class may splice into a hybrid.
+ *
+ * Deliberately absent, and each absence is a prohibition rather than an oversight: no link, no
+ * profile set, no availability axis, no device class, no manufacturer, no last-seen history. Nothing
+ * here may be retained across a process death (prompt sections 10.C and 16): the collection is a live
+ * view of the bond list, restated by each round that reads it and never accumulated.
+ */
+data class BondedDeviceObservation(
+    /** What the platform gave us to attribute this device by. Absence is [DeviceObservationKey.NotReported]. */
+    val key: DeviceObservationKey,
+
+    /** Name as reported by the device object, or null. Never identity, never a join, never an empty string. */
+    val displayName: String?,
+
+    /** The bond axis as the device itself reported it. The only axis this record can speak about. */
+    val bond: DeviceBondState,
+
+    /** When the platform said it, or null when it supplied no reading - never zero (ADR-P1-012). */
+    val observedAtEpochMillis: Long?,
+) {
+    /** Whether this record can be attributed to a device in a later round. False for an unkeyed report. */
+    val isAttributable: Boolean
+        get() = key.canIdentifyAcrossObservations
+
+    /** Whether a name came with the report. Blank text does not count as a name. */
+    val hasReportedName: Boolean
+        get() = normalisedText(displayName) != null
+
+    /**
+     * Fills what this record does not know from [other] and keeps the more positive bond report.
+     *
+     * Only legal on joinable keys, and it says so by refusing otherwise, for the same reason
+     * [DeviceObservation.mergedWith] refuses: two paired records that carry no key are two devices the
+     * platform could not name, not one device named twice.
+     */
+    fun mergedWith(other: BondedDeviceObservation): BondedDeviceObservation {
+        require(key.joinableWith(other.key)) {
+            "two paired records that cannot be attributed to one device must not be merged"
+        }
+        return BondedDeviceObservation(
+            key = key,
+            displayName = normalisedText(displayName) ?: normalisedText(other.displayName),
+            bond = strongerBond(bond, other.bond),
+            observedAtEpochMillis = latestReading(observedAtEpochMillis, other.observedAtEpochMillis),
+        )
+    }
+
+    companion object {
+        /**
+         * The only construction path a platform adapter should use: it demotes blank reported text to
+         * null and keeps every other value exactly as reported, following [DeviceObservation.reported].
+         */
+        fun reported(
+            key: DeviceObservationKey,
+            bond: DeviceBondState,
+            displayName: String? = null,
+            observedAtEpochMillis: Long? = null,
+        ): BondedDeviceObservation = BondedDeviceObservation(
+            key = key,
+            displayName = normalisedText(displayName),
+            bond = bond,
+            observedAtEpochMillis = observedAtEpochMillis,
+        )
+    }
+}
+
+/**
+ * Trims reported text and maps blank to null, so a padded name cannot be read as a known field.
+ *
+ * [com.omnibuds.core.device.DeviceIdentity] applies the same rule to its own fields and is
+ * unreachable from here - layer 1 may not import layer 2 - so this is the second copy of one
+ * sentence, which is cheaper than the upward edge that putting the observation next to the
+ * identity would have bought (ADR-P3-003's refusal of that placement).
+ *
+ * File-private rather than a member of one record type because both observation records apply it, and a
+ * second copy of a demotion rule is how two types start disagreeing about what a blank name means.
+ */
+private fun normalisedText(value: String?): String? = value?.trim()?.takeIf { it.isNotEmpty() }
+
+/** The more positive bond report, so a fold cannot lose a bond and cannot manufacture one from silence. */
+private fun strongerBond(first: DeviceBondState, second: DeviceBondState): DeviceBondState =
+    if (bondRank(first) >= bondRank(second)) first else second
+
+private fun bondRank(bond: DeviceBondState): Int = when (bond) {
+    DeviceBondState.BONDED -> 3
+    DeviceBondState.BONDING -> 2
+    DeviceBondState.NONE -> 1
+    DeviceBondState.UNKNOWN -> 0
+}
+
+private fun latestReading(first: Long?, second: Long?): Long? = when {
+    first == null -> second
+    second == null -> first
+    else -> maxOf(first, second)
 }

@@ -17,13 +17,17 @@ import kotlinx.coroutines.yield
  * main sources.
  *
  * Deliberate properties, following [FakeAdapterStateSource] rather than inventing a second discipline:
- *  - snapshot rounds come from a fixed queue and report a structured failure if it runs dry, so a test
- *    cannot assert against an answer nobody scripted;
- *  - [ConnectedDeviceSource.snapshot] yields before answering, because a real enumeration takes time
- *    and the interesting ordering question is what the platform announces *during* it. Without the
- *    yield, the mid-snapshot cases would be tests of coroutine luck rather than of the engine's buffer;
- *  - every open, support question and dispose is counted, so a leaked registration or a
- *    double-registration is observable rather than merely plausible;
+ *  - snapshot rounds and paired rounds come from fixed queues and report a structured failure if either
+ *    runs dry, so a test cannot assert against an answer nobody scripted - which for the paired queue is
+ *    the whole point: an unscripted bond list must not default to "empty", because an empty bond list is
+ *    a claim about a phone's pairings and the file exists to keep that claim from arriving by accident;
+ *  - [ConnectedDeviceSource.snapshot] and [ConnectedDeviceSource.bondedDevices] each yield before
+ *    answering, because a real enumeration takes time and the interesting ordering question is what the
+ *    platform announces *during* it. Without the yield, the mid-snapshot cases would be tests of coroutine
+ *    luck rather than of the engine's buffer;
+ *  - every open, support question, bond read and dispose is counted, so a leaked registration, a
+ *    double-registration or a bond read that arrived without its own standing question is observable
+ *    rather than merely plausible;
  *  - [failDisposal] models a platform teardown that throws, which is the case a `finally` block and a
  *    bound profile service are supposed to survive.
  */
@@ -31,10 +35,14 @@ class FakeConnectedDeviceSource(
     private vararg val rounds: ObservationRound<DeviceObservation>,
     private val eventScript: List<DeviceConnectionEvent> = emptyList(),
     private val support: OperationOutcome<ProfileSupportReport> = OperationOutcome.Success(allProfilesAnswerable()),
+    private val pairedRounds: List<ObservationRound<BondedDeviceObservation>> = emptyList(),
     private val keepEventsOpen: Boolean = false,
     private val openCancels: Boolean = false,
 ) {
     var snapshotCalls = 0
+        private set
+
+    var bondedCalls = 0
         private set
 
     var openCalls = 0
@@ -69,6 +77,22 @@ class FakeConnectedDeviceSource(
                         category = OmniBudsErrorCategory.UNKNOWN_FAILURE,
                         operationId = "fake-device-source.snapshot",
                         detail = "the test queue of snapshot rounds ran dry at call $snapshotCalls",
+                    ),
+                )
+            }
+        }
+
+        override suspend fun bondedDevices(): ObservationRound<BondedDeviceObservation> {
+            bondedCalls += 1
+            yield()
+            return pairedRounds.getOrElse(bondedCalls - 1) {
+                // Unscripted is refused, never empty: the fake would otherwise hand every existing test an
+                // invented "this phone has no pairings", which is the exact claim the seam forbids.
+                ObservationRound.Failure(
+                    OmniBudsError(
+                        category = OmniBudsErrorCategory.UNKNOWN_FAILURE,
+                        operationId = "fake-device-source.bonded-devices",
+                        detail = "the test queue of paired rounds ran dry at call $bondedCalls",
                     ),
                 )
             }
@@ -136,4 +160,37 @@ fun profilesAnswerable(answerable: Set<ObservedProfile>): ProfileSupportReport =
 /** A report in which nothing answered, which is the case an empty device list must never explain. */
 fun noProfilesAnswerable(): ProfileSupportReport = ProfileSupportReport(
     ObservedProfile.enumerationUnion.associateWith { ProfileObservationSupport.NOT_ANSWERABLE },
+)
+
+/**
+ * A paired round that answered.
+ *
+ * No arguments is a real answer - the phone named nothing in a read that was allowed to look - and that is
+ * precisely why it has to be written out by a test rather than left to a default.
+ */
+fun pairedRound(vararg devices: BondedDeviceObservation): ObservationRound<BondedDeviceObservation> =
+    ObservationRound.Success(devices = devices.toList(), stage = ObservationStage.OBSERVING)
+
+/** A paired round refused with [category], which is the shape that must never reach the projection as zero. */
+fun pairedRoundRefused(
+    category: OmniBudsErrorCategory = OmniBudsErrorCategory.PERMISSION_DENIED,
+): ObservationRound<BondedDeviceObservation> = ObservationRound.Failure(
+    OmniBudsError(
+        category = category,
+        operationId = "fake-device-source.bonded-devices",
+        detail = "the standing check refused the bond-list read before it began",
+    ),
+)
+
+/** One paired record, built the way a platform adapter builds it: no link field exists to fill in. */
+fun bondedRecord(
+    address: String?,
+    bond: DeviceBondState = DeviceBondState.BONDED,
+    name: String? = null,
+    at: Long? = null,
+): BondedDeviceObservation = BondedDeviceObservation.reported(
+    key = DeviceObservationKey.ofReportedAddress(address),
+    bond = bond,
+    displayName = name,
+    observedAtEpochMillis = at,
 )

@@ -7,6 +7,10 @@ import com.omnibuds.android.bluetooth.permission.PermissionRequestLedger
 import com.omnibuds.android.bluetooth.permission.PermissionStandingReader
 import com.omnibuds.core.common.OmniBudsErrorCategory
 import com.omnibuds.core.common.OperationOutcome
+import com.omnibuds.core.platform.ApiRange
+import com.omnibuds.core.platform.BluetoothOperation
+import com.omnibuds.core.platform.BluetoothPermission
+import com.omnibuds.core.platform.BondedDeviceObservation
 import com.omnibuds.core.platform.ConnectedDeviceEventChannel
 import com.omnibuds.core.platform.DeviceAvailability
 import com.omnibuds.core.platform.DeviceBondState
@@ -14,9 +18,14 @@ import com.omnibuds.core.platform.DeviceConnectionEvent
 import com.omnibuds.core.platform.DeviceConnectionState
 import com.omnibuds.core.platform.DeviceObservation
 import com.omnibuds.core.platform.DeviceObservationKey
+import com.omnibuds.core.platform.FrozenPermissionRequirementResolver
 import com.omnibuds.core.platform.ObservationArrival
 import com.omnibuds.core.platform.ObservationRound
 import com.omnibuds.core.platform.ObservedProfile
+import com.omnibuds.core.platform.PermissionContext
+import com.omnibuds.core.platform.PermissionPlan
+import com.omnibuds.core.platform.PermissionRequirement
+import com.omnibuds.core.platform.PermissionRequirementResolver
 import com.omnibuds.core.platform.ProfileObservationSupport
 import com.omnibuds.core.platform.ProfileSupportReport
 import com.omnibuds.core.platform.TimeProvider
@@ -529,6 +538,207 @@ class AndroidConnectedDeviceSourceTest {
         assertEquals(DeviceObservationKey.ofReportedAddress(LEFT), event.key)
     }
 
+    // ---- The bond list: its own standing, its own refusals ------------------------------------------------
+
+    /**
+     * The same ordering rule the rest of this file pins, aimed at prompt section 10's second collection.
+     *
+     * ADR-P3-009's finding is general: the platform answers "you may not read this" and "there is nothing
+     * here" with the same empty collection, and for the bond list it says so in its own documentation - an
+     * empty set whenever the adapter is not on, "or null on error", an empty list when standing was
+     * refused. So every case below is a refusal that must arrive as a refusal, and the one case that may
+     * arrive empty is the one where the phone actually answered.
+     */
+    @Test
+    fun theBondListRefusesBeforeTouchingTheHandleWhenStandingIsNotAGrant() = runTest {
+        val handle = FakeConnectedDeviceHandle().bondedWith(FakeConnectedDeviceHandle.paired(LEFT))
+        val source = source(handle, reader = PermissionStandingReader { false })
+
+        val round = source.bondedDevices()
+
+        assertIs<ObservationRound.Failure<BondedDeviceObservation>>(round, "a non-granted standing must refuse")
+        assertEquals(OmniBudsErrorCategory.PERMISSION_DENIED, round.error.category)
+        assertEquals(0, handle.bondReads, "the bond list must not have been read by a round that was refused")
+        assertTrue(
+            round.error.detail.orEmpty().contains("device.bonded-list-inspection"),
+            "and the refusal must name the operation it resolved, not the connected one: ${round.error.detail}",
+        )
+    }
+
+    @Test
+    fun theBondListIsClearedByItsOwnPlanAndNeverByTheConnectedDevicesOne() = runTest {
+        // The two reads have separate permission pre-flights, and this is the case that would fail if they
+        // shared one: the resolver here requires nothing for the connected inspection and requires
+        // BLUETOOTH_CONNECT for the bonded list, so a source that borrowed the neighbour's answer would
+        // read the bond list while the operation that governs it was refused.
+        val handle = FakeConnectedDeviceHandle().bondedWith(FakeConnectedDeviceHandle.paired(LEFT))
+        val source = source(
+            handle,
+            reader = PermissionStandingReader { false },
+            resolver = OperationSelectiveResolver(),
+        )
+
+        assertIs<ObservationRound.Success<DeviceObservation>>(
+            source.snapshot(),
+            "the connected inspection's own plan asks for nothing, so a refusal of the permission is not its end",
+        )
+        val round = source.bondedDevices()
+
+        assertIs<ObservationRound.Failure<BondedDeviceObservation>>(round)
+        assertEquals(OmniBudsErrorCategory.PERMISSION_DENIED, round.error.category)
+        assertEquals(0, handle.bondReads)
+    }
+
+    @Test
+    fun aBondReadIsItsOwnCallAndIsNeverASideEffectOfTheSnapshot() = runTest {
+        // Prompt section 10's two collections stay two answers at the seam as well as in the projection: a
+        // snapshot must not read the bond list into the device union, and a bond read must not enumerate a
+        // profile. Either direction would be one list with a flag, which is what ADR-P3-017 refuses.
+        val handle = FakeConnectedDeviceHandle()
+            .answeringTheWholeUnion(LEFT)
+            .bondedWith(FakeConnectedDeviceHandle.paired(RIGHT))
+        val source = source(handle)
+
+        val connected = assertIs<ObservationRound.Success<DeviceObservation>>(source.snapshot())
+        val enumerationsAfterUnion = handle.enumerationRequests.toList()
+        assertEquals(0, handle.bondReads, "the union round did not ask about pairings")
+
+        val paired = assertIs<ObservationRound.Success<BondedDeviceObservation>>(source.bondedDevices())
+
+        assertEquals(enumerationsAfterUnion, handle.enumerationRequests, "and the bond read asked no profile")
+        assertEquals(1, handle.bondReads)
+        assertEquals(
+            listOf(DeviceObservationKey.ofReportedAddress(RIGHT)),
+            paired.devices.map { record -> record.key },
+            "the paired answer names only the device the bond list named",
+        )
+        assertEquals(
+            listOf(DeviceObservationKey.ofReportedAddress(LEFT)),
+            connected.devices.map { record -> record.key },
+            "and the union answer names only the device a profile listed",
+        )
+    }
+
+    @Test
+    fun anAnsweredBondListArrivesAsPairedRecordsThatCarryNoLinkClaim() = runTest {
+        val handle = FakeConnectedDeviceHandle().bondedWith(
+            FakeConnectedDeviceHandle.paired(LEFT, name = "Athens Air"),
+            FakeConnectedDeviceHandle.paired(RIGHT),
+        )
+        val source = source(handle)
+
+        val round = source.bondedDevices()
+
+        assertIs<ObservationRound.Success<BondedDeviceObservation>>(round)
+        val first = round.devices.first()
+        assertEquals(DeviceBondState.BONDED, first.bond)
+        assertEquals("Athens Air", first.displayName)
+        assertEquals(CLOCK_MILLIS, first.observedAtEpochMillis)
+        assertTrue(first.isAttributable)
+        // The type has no link field, so this is the whole assertion and it is the one that matters: a
+        // consumer cannot read a connection out of a pairing report because there is nothing there to read.
+        assertEquals(
+            setOf("key", "displayName", "bond", "observedAtEpochMillis"),
+            BondedDeviceObservation::class.java.declaredFields
+                .map { field -> field.name }
+                .filter { name -> name != "Companion" }
+                .toSet(),
+        )
+    }
+
+    @Test
+    fun anEmptyPairedListArrivesOnlyFromAReadTheAdapterAnswered() = runTest {
+        // The one case emptiness is a finding: an adapter that was there, was on, and answered with a set.
+        val handle = FakeConnectedDeviceHandle().bondedWith()
+        val source = source(handle)
+
+        val round = source.bondedDevices()
+
+        assertIs<ObservationRound.Success<BondedDeviceObservation>>(round)
+        assertTrue(round.devices.isEmpty(), "a phone that answered with nobody is a phone with no pairings")
+        assertEquals(1, handle.bondReads)
+    }
+
+    @Test
+    fun anAbsentAdapterRefusesTheBondListInsteadOfReportingNoPairings() = runTest {
+        val handle = FakeConnectedDeviceHandle(present = false)
+        val source = source(handle)
+
+        val round = source.bondedDevices()
+
+        assertIs<ObservationRound.Failure<BondedDeviceObservation>>(round)
+        assertEquals(OmniBudsErrorCategory.ADAPTER_UNAVAILABLE, round.error.category)
+        assertTrue(
+            round.error.detail.orEmpty().contains("not a phone with no pairings"),
+            "the refusal has to say what it refuses to claim: ${round.error.detail}",
+        )
+    }
+
+    @Test
+    fun anAdapterThatIsNotOnRefusesTheBondListBecauseThatIsWhatThePlatformDoes() = runTest {
+        // Not a defensive guess: the shipped Javadoc for the read states "If Bluetooth state is not
+        // STATE_ON, this API will return an empty set", so a switched-off phone and an unbonded phone are
+        // the same value on the wire. BLUETOOTH_DISABLED is ADR-P3-006's category for an adapter that is
+        // positively off, and the round carries no list to misread.
+        val handle = FakeConnectedDeviceHandle().bondedListing(BondedListing.AdapterNotOn)
+        val source = source(handle)
+
+        val round = source.bondedDevices()
+
+        assertIs<ObservationRound.Failure<BondedDeviceObservation>>(round)
+        assertEquals(OmniBudsErrorCategory.BLUETOOTH_DISABLED, round.error.category)
+    }
+
+    @Test
+    fun abondListThatAnsweredTheErrorValueRefusesRatherThanCountingZeroPairings() = runTest {
+        // "or null on error" is the platform's own contract for this call, and it is the shape the
+        // reference implementation falls through to when the service is not there. RESOURCE_UNAVAILABLE is
+        // the category for a mechanism that could not be held on to, and its retry class says re-read,
+        // which is what the next round does (ADR-P3-006, ADR-P3-015 rule 7's reasoning).
+        val handle = FakeConnectedDeviceHandle().bondedListing(BondedListing.ReadFailed)
+        val source = source(handle)
+
+        val round = source.bondedDevices()
+
+        assertIs<ObservationRound.Failure<BondedDeviceObservation>>(round)
+        assertEquals(OmniBudsErrorCategory.RESOURCE_UNAVAILABLE, round.error.category)
+        assertTrue(round.error.detail.orEmpty().contains("not a report of no paired devices"))
+    }
+
+    @Test
+    fun aThrowingBondReadIsAPlatformExceptionAndNotAnEmptyPairingList() = runTest {
+        val handle = FakeConnectedDeviceHandle().bondedWith(FakeConnectedDeviceHandle.paired(LEFT))
+            .apply { bondFailure = IllegalStateException("the service handle went away") }
+        val source = source(handle)
+
+        val round = source.bondedDevices()
+
+        assertIs<ObservationRound.Failure<BondedDeviceObservation>>(round)
+        assertEquals(OmniBudsErrorCategory.PLATFORM_EXCEPTION, round.error.category)
+        assertTrue(round.error.detail.orEmpty().contains("IllegalStateException"))
+        // The message is not quoted, because a framework exception text can carry a device address.
+        assertFalse(round.error.detail.orEmpty().contains("went away"))
+    }
+
+    @Test
+    fun anUnreadableBondReadingStaysUnknownAndABlankNameStaysNoName() = runTest {
+        // The same two disciplines as the link side, because they are the same hazards: a value this code
+        // could not transcribe is not a report of no bond, and blank text is not a name (ADR-P0-016).
+        val handle = FakeConnectedDeviceHandle().bondedWith(
+            FakeConnectedDeviceHandle.paired(LEFT, name = "   ", bond = RawBondState.UNREADABLE),
+            FakeConnectedDeviceHandle.paired(null, bond = RawBondState.NONE),
+        )
+        val source = source(handle)
+
+        val records = assertIs<ObservationRound.Success<BondedDeviceObservation>>(source.bondedDevices()).devices
+
+        assertEquals(DeviceBondState.UNKNOWN, records.first().bond, "no reading is not a report of no bond")
+        assertNull(records.first().displayName)
+        assertFalse(records.first().hasReportedName)
+        assertIs<DeviceObservationKey.NotReported>(records[1].key, "a paired device the platform would not name")
+        assertEquals(DeviceBondState.NONE, records[1].bond, "and the device's own answer survives the list's")
+    }
+
     // ---- Fixtures ------------------------------------------------------------------------------------
 
     private fun source(
@@ -538,11 +748,13 @@ class AndroidConnectedDeviceSourceTest {
         apiLevel: Int = 35,
         targetSdk: Int? = 35,
         time: TimeProvider = TimeProvider { CLOCK_MILLIS },
+        resolver: PermissionRequirementResolver = FrozenPermissionRequirementResolver(),
     ): AndroidConnectedDeviceSource = AndroidConnectedDeviceSource(
         handle = handle,
         permissionProvider = AndroidPermissionStateProvider(
             reader = reader,
             ledger = PermissionRequestLedger { requestedBefore },
+            resolver = resolver,
         ),
         apiLevel = ApiLevelProvider { apiLevel },
         targetSdk = TargetSdkProvider { targetSdk },
@@ -566,6 +778,46 @@ class AndroidConnectedDeviceSourceTest {
 
     /** One standing that is not a grant, paired with the request history that makes it that standing. */
     private class NonGrant(val reader: PermissionStandingReader, val requestedBefore: Boolean)
+
+    /**
+     * A resolver that makes the two device reads need different things, so their pre-flights can be told
+     * apart.
+     *
+     * The frozen table gives `device.connected-inspection` and `device.bonded-list-inspection` the same
+     * requirement, which is true of the platform and useless for testing independence: a source that
+     * settled standing once and reused the answer for both would pass every assertion against the real
+     * table. This scripted resolver exists to make the two answers differ on purpose, so "the bond list was
+     * cleared by the connected inspection's plan" is a failing test rather than an invisible shortcut
+     * (ADR-P3-009, ADR-P3-017).
+     */
+    private class OperationSelectiveResolver : PermissionRequirementResolver {
+        override fun planFor(
+            operation: BluetoothOperation,
+            context: PermissionContext,
+        ): OperationOutcome<PermissionPlan> {
+            val requirements = if (operation == BluetoothOperation.BONDED_DEVICE_LIST_INSPECTION) {
+                listOf(
+                    PermissionRequirement(
+                        operation = operation,
+                        permission = BluetoothPermission.BLUETOOTH_CONNECT,
+                        appliesTo = ApiRange.MODERN_BLUETOOTH_MODEL,
+                        required = true,
+                        reason = "the scripted case: this operation alone asks for the connect permission",
+                    ),
+                )
+            } else {
+                emptyList()
+            }
+            return OperationOutcome.Success(
+                PermissionPlan(
+                    operation = operation,
+                    requirements = requirements,
+                    bandLabel = "scripted-for-independence",
+                    indeterminate = false,
+                ),
+            )
+        }
+    }
 
     private companion object {
         const val LEFT = "00:11:22:AA:BB:01"

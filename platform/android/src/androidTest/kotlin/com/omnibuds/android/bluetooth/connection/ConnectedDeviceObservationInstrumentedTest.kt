@@ -12,6 +12,7 @@ import com.omnibuds.android.bluetooth.permission.PermissionStandingReader
 import com.omnibuds.android.bluetooth.permission.SystemPermissionStandingReader
 import com.omnibuds.core.common.OmniBudsErrorCategory
 import com.omnibuds.core.common.OperationOutcome
+import com.omnibuds.core.platform.BondedDeviceObservation
 import com.omnibuds.core.platform.ConnectedDeviceEventChannel
 import com.omnibuds.core.platform.ConnectedDeviceObserver
 import com.omnibuds.core.platform.DeviceObservation
@@ -250,6 +251,60 @@ class ConnectedDeviceObservationInstrumentedTest {
         assertNoAddressLeak(describeRound(round))
     }
 
+    /**
+     * 8. The paired collection is read under its own standing, and cannot arrive as a connection.
+     *
+     * ADR-P3-017's second collection, in the only form a handset can settle with no headset connected, no
+     * pairing performed and no user action: whether the read answers at all, and whether what comes back is
+     * shaped as a pairing rather than a link. The two refusals below are the load-bearing half - a phone
+     * whose Bluetooth is off, or whose standing is refused, must produce a refusal carrying a category
+     * rather than an empty census, because the platform's own contract for this call is that it answers an
+     * empty set in exactly those situations.
+     *
+     * What this suite does *not* settle, and cannot without a user pairing something: whether this phone's
+     * bond list contains the user's headset, how many entries it holds, or whether a never-bonded
+     * low-energy device appears in it at all. Those are deferred device-session items (ADR-P3-014), and no
+     * count, name or address of an actual device leaves the phone from here - only shapes and categories.
+     */
+    @Test
+    fun thePairedCollectionRefusesRatherThanReportingNoPairings() = observe {
+        val refused = composedSource(reader = PermissionStandingReader { false }).bondedDevices()
+
+        assertIs<ObservationRound.Failure<BondedDeviceObservation>>(
+            refused,
+            "a refused standing must not produce a list of this phone's pairings",
+        )
+        assertEquals(OmniBudsErrorCategory.PERMISSION_DENIED, refused.error.category)
+        assertNoAddressLeak(refused.error.detail)
+
+        val round = composedSource(reader = SystemPermissionStandingReader(context)).bondedDevices()
+
+        if (round is ObservationRound.Success) {
+            for (record in round.devices) {
+                assertNoAddressLeak(record.toString())
+                assertNoAddressLeak(record.key.toString())
+            }
+            // The structural claim, checked against the real class rather than a fixture: a paired record
+            // has no field a connection could be read out of, so section 10.B can never be presented as
+            // section 10.A by a consumer that forgot to filter.
+            assertEquals(
+                setOf("key", "displayName", "bond", "observedAtEpochMillis"),
+                BondedDeviceObservation::class.java.declaredFields
+                    .map { field -> field.name }
+                    .filter { name -> name != COMPANION_FIELD }
+                    .toSet(),
+                "a paired record carries the four facts a bond read can report and nothing else",
+            )
+        } else {
+            assertIs<ObservationRound.Failure<BondedDeviceObservation>>(round)
+            assertTrue(
+                round.error.category in PAIRED_REFUSAL_CATEGORIES,
+                "an unexpected category means the refusal is not one this phase reasoned about",
+            )
+            assertNoAddressLeak(round.error.detail)
+        }
+    }
+
     // ---- Helpers ---------------------------------------------------------------------------------------
 
     /**
@@ -301,6 +356,25 @@ class ConnectedDeviceObservationInstrumentedTest {
 
     private companion object {
         val ADDRESS_PATTERN = Regex("""(?:[0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}""")
+
+        /** The static field Kotlin emits for a companion object: a factory, not a fact about a device. */
+        const val COMPANION_FIELD = "Companion"
+
+        /**
+         * The refusals this phase has reasoned about for the bond-list read.
+         *
+         * Anything outside the set is a finding about the phone rather than a result to file, and naming
+         * the set is what makes that distinction a failure instead of a shrug: standing refused, no
+         * adapter, adapter not on, the platform's own error answer, and a call that threw (ADR-P3-006
+         * reuses those categories rather than inventing a paired one).
+         */
+        val PAIRED_REFUSAL_CATEGORIES = setOf(
+            OmniBudsErrorCategory.PERMISSION_DENIED,
+            OmniBudsErrorCategory.ADAPTER_UNAVAILABLE,
+            OmniBudsErrorCategory.BLUETOOTH_DISABLED,
+            OmniBudsErrorCategory.RESOURCE_UNAVAILABLE,
+            OmniBudsErrorCategory.PLATFORM_EXCEPTION,
+        )
     }
 }
 
