@@ -46,6 +46,9 @@ Phase 3 — `docs/phases/phase-3/decisions.md`:
 | ADR-P3-014 | Device verification deferred out of completion criteria; application first | accepted — user directive, standing |
 | ADR-P3-015 | Twelve engine rules settled; empty-union category overridden | accepted — amends ADR-P3-010 |
 | ADR-P3-016 | Instrumented sources policed; receiver confinement widened in location only | accepted — amends ADR-P2-016, closes ADR-P3-007's gap |
+| ADR-P3-017 | The paired census is a second question with its own standing; the bond type cannot claim a link | accepted — implements prompt §10's collection B, supersedes this phase's own drafts |
+| ADR-P3-018 | Device discovery is authorised in Phase 5, not Phase 3; the set is pinned by a scope test | accepted — corrects inherited data, closes TEST-P3-036 |
+| ADR-P3-019 | A pending bind outranks a refusal in the answerability ladder | accepted — corrects code against its own KDoc and ADR-P3-008 |
 
 *Two Phase 3 decisions stay open pending the device session rather than being decided by prose: whether
 an adapter-state announcement reaches a `RECEIVER_NOT_EXPORTED` receiver on a real handset
