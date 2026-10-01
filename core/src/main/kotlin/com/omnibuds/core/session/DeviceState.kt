@@ -26,6 +26,14 @@ import com.omnibuds.core.state.ConnectionStateTransitions
  * [revision]. [applyIfNewer] is what makes a late callback harmless: a stale response
  * cannot overwrite a newer fact, because the ordering is carried by the data rather
  * than trusted from the caller.
+ *
+ * **Known limitation.** The state machine is a convention inside `:core`, not a
+ * compiler-enforced wall: `copy(connection = ...)` can still bypass [attemptConnection].
+ * Restricting the primary constructor does not help, because Kotlin exposes a data class's
+ * generated `copy()` publicly regardless of the constructor's visibility and reports that
+ * as a build warning. Confining mutation to a single owner is the Phase 24 global state
+ * engine's job; it is recorded as a Phase 1 limitation in `validation.md` rather than
+ * presented as solved here.
  */
 data class DeviceState(
     val sessionId: String,

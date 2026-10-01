@@ -31,22 +31,39 @@ class OmniBudsErrorCategoryTest {
     }
 
     @Test
-    fun onlyReadsMayBeRetriedBlindly() {
-        assertEquals(RetryClass.SAFE_TO_RETRY, OmniBudsErrorCategory.READ_FAILED.retryClass)
+    fun everyCategoryDeclaresItsRetryClassAndNoneIsUnspecified() {
+        val expected = mapOf(
+            OmniBudsErrorCategory.READ_FAILED to RetryClass.SAFE_TO_RETRY,
+            OmniBudsErrorCategory.BLUETOOTH_DISABLED to RetryClass.RETRY_AFTER_REREAD,
+            OmniBudsErrorCategory.DEVICE_DISCONNECTED to RetryClass.RETRY_AFTER_REREAD,
+            OmniBudsErrorCategory.TRANSPORT_UNAVAILABLE to RetryClass.RETRY_AFTER_REREAD,
+            OmniBudsErrorCategory.GATT_FAILURE to RetryClass.RETRY_AFTER_REREAD,
+            OmniBudsErrorCategory.RFCOMM_FAILURE to RetryClass.RETRY_AFTER_REREAD,
+            OmniBudsErrorCategory.TIMEOUT to RetryClass.RETRY_AFTER_REREAD,
+            OmniBudsErrorCategory.PERMISSION_DENIED to RetryClass.NEVER_RETRY,
+            OmniBudsErrorCategory.PROTOCOL_MISMATCH to RetryClass.NEVER_RETRY,
+            OmniBudsErrorCategory.UNSUPPORTED_FEATURE to RetryClass.NEVER_RETRY,
+            OmniBudsErrorCategory.WRITE_REJECTED to RetryClass.NEVER_RETRY,
+            OmniBudsErrorCategory.VERIFICATION_FAILED to RetryClass.NEVER_RETRY,
+            OmniBudsErrorCategory.FIRMWARE_MISMATCH to RetryClass.NEVER_RETRY,
+            OmniBudsErrorCategory.CODEC_UNAVAILABLE to RetryClass.NEVER_RETRY,
+            OmniBudsErrorCategory.UNKNOWN_DEVICE to RetryClass.NEVER_RETRY,
+            OmniBudsErrorCategory.INVALID_STATE to RetryClass.NEVER_RETRY,
+        )
 
-        listOf(
-            OmniBudsErrorCategory.WRITE_REJECTED,
-            OmniBudsErrorCategory.VERIFICATION_FAILED,
-            OmniBudsErrorCategory.PERMISSION_DENIED,
-            OmniBudsErrorCategory.PROTOCOL_MISMATCH,
-            OmniBudsErrorCategory.UNSUPPORTED_FEATURE,
-            OmniBudsErrorCategory.FIRMWARE_MISMATCH,
-            OmniBudsErrorCategory.CODEC_UNAVAILABLE,
-            OmniBudsErrorCategory.UNKNOWN_DEVICE,
-            OmniBudsErrorCategory.INVALID_STATE,
-        ).forEach { category ->
-            assertEquals(RetryClass.NEVER_RETRY, category.retryClass, "$category must never auto-retry")
+        // A category missing from this table would carry an unchecked retry class, which is
+        // how a side-effecting write starts being re-sent on a timeout.
+        assertEquals(OmniBudsErrorCategory.entries.toSet(), expected.keys, "every category must be pinned")
+        expected.forEach { (category, retry) ->
+            assertEquals(retry, category.retryClass, category.name)
         }
+    }
+
+    @Test
+    fun onlyIdempotentReadsMayBeRetriedWithoutCheckingStateFirst() {
+        val blindRetry = OmniBudsErrorCategory.entries.filter { it.retryClass == RetryClass.SAFE_TO_RETRY }
+
+        assertEquals(setOf(OmniBudsErrorCategory.READ_FAILED), blindRetry.toSet())
     }
 
     @Test

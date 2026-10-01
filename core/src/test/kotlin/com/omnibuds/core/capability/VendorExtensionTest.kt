@@ -65,17 +65,18 @@ class VendorExtensionTest {
      * The documented vendor id shape is accepted and recognised, and the extension reports
      * the identity it was built from.
      *
-     * "Recognised" is [VendorExtension.isVendorFeature], the check the guard actually uses.
-     * The kernel's own [com.omnibuds.core.common.FeatureId.isVendorExtension] answers
-     * `false` for this id today — it compares the whole namespace prefix `vendor.sony`
-     * against `"vendor"`, so it only ever fires for a two-segment id, which contradicts its
-     * own documentation and `FeatureId.ofVendor`. That is reported as a kernel deviation
-     * rather than asserted here, so this test stays correct whichever way the kernel lands;
-     * [CoreFeatureTest] asserts separately that no core identity is flagged as a vendor one.
+     * Both the guard's own check and the kernel property are asserted: the kernel
+     * `isVendorExtension` implementation was repaired during this phase (it once compared
+     * the whole namespace `vendor.sony` against `"vendor"`, so it could never fire for the
+     * ids `FeatureId.ofVendor` produces), and pinning the positive case here is what stops
+     * that regression from returning unnoticed. [CoreFeatureTest] asserts the negative case
+     * for universal identities.
      */
     @Test
     fun aVendorNamespacedIdentityIsAcceptedAndRecognised() {
         assertTrue(VendorExtension.isVendorFeature(adaptiveSoundControl))
+        assertTrue(adaptiveSoundControl.isVendorExtension)
+        assertEquals("sony", adaptiveSoundControl.vendorName)
         assertEquals("sony", VendorExtension.vendorSegmentOf(adaptiveSoundControl))
 
         val extension = VendorExtension(
