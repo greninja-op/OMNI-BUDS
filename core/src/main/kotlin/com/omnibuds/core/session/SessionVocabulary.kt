@@ -59,9 +59,6 @@ enum class SessionIdentityBasis {
  * switched off, put away or unpaired.
  */
 enum class SessionTermination {
-    /** Absent from one complete union, which moved the session to disconnected. */
-    ABSENT_FROM_COMPLETE_UNION,
-
     /** Already disconnected by a completed union, and absent from the one after it. */
     PROVEN_DISCONNECT_PAST_GRACE,
 

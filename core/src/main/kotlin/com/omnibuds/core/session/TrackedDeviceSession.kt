@@ -38,7 +38,6 @@ data class TrackedDeviceSession(
     val session: DeviceSession,
     val state: DeviceState,
     val timeline: SessionTimeline,
-    val termination: SessionTermination? = null,
 ) {
     init {
         require(session.sessionId == state.sessionId && session.sessionId == sessionId) {
@@ -57,17 +56,19 @@ data class TrackedDeviceSession(
     val displayName: String?
         get() = session.identity.displayName
 
-    /** Live until the engine terminates it; a terminated record is only ever published once. */
-    val isLive: Boolean
-        get() = termination == null
-
     /** Connected right now, on the platform's own report, and not merely seen recently. */
     val isActive: Boolean
         get() = connectionState == ConnectionState.CONNECTED
 
-    /** A device the engine is holding in its one-round grace after a proven disconnect. */
+    /**
+     * A device the engine is holding in its one-round grace after a proven disconnect.
+     *
+     * Every record in the store is live by definition - the engine drops a terminated session in the
+     * same round it publishes the end, so there is no ended-record flag to consult and no field with
+     * no producer pretending there is.
+     */
     val isAwaitingGraceExpiry: Boolean
-        get() = connectionState == ConnectionState.DISCONNECTED && termination == null
+        get() = connectionState == ConnectionState.DISCONNECTED
 
     /** True only where the user explicitly kept this device - false for every session Phase 4 makes. */
     val isSaved: Boolean
@@ -75,9 +76,6 @@ data class TrackedDeviceSession(
 
     /** Replaces the authoritative state, leaving identity, basis and timeline untouched. */
     fun withState(next: DeviceState): TrackedDeviceSession = copy(state = next)
-
-    /** Replaces the identity record, which is the only other thing this engine is allowed to know. */
-    fun withSession(next: DeviceSession): TrackedDeviceSession = copy(session = next)
 
     /**
      * Applies newly reported identity to both records at once.
@@ -103,10 +101,6 @@ data class TrackedDeviceSession(
 
     /** Clears the disconnect mark on a resume inside the grace (ADR-P4-006). */
     fun resumed(): TrackedDeviceSession = copy(timeline = timeline.resumed())
-
-    /** Ends the record, with the engine's reason and nothing implied about the device. */
-    fun terminated(reason: SessionTermination, atEpochMillis: Long?): TrackedDeviceSession =
-        copy(termination = reason, timeline = timeline.closedAt(atEpochMillis))
 
     companion object {
         /**

@@ -198,7 +198,6 @@ class SessionStatePurityTest {
         assertEquals(500L, disconnected.disconnectedAtEpochMillis)
         assertEquals(500L, disconnected.markedDisconnected(900L).disconnectedAtEpochMillis, "first mark wins")
         assertNull(disconnected.resumed().disconnectedAtEpochMillis)
-        assertEquals(700L, disconnected.closedAt(700L).endedAtEpochMillis)
     }
 
     @Test
@@ -218,7 +217,6 @@ class SessionStatePurityTest {
 
         assertEquals(
             listOf(
-                "ABSENT_FROM_COMPLETE_UNION",
                 "PROVEN_DISCONNECT_PAST_GRACE",
                 "AMBIGUOUS_SESSION_EXPIRED",
                 "OBSERVATION_STOPPED",
@@ -227,6 +225,9 @@ class SessionStatePurityTest {
             reasons,
         )
         assertTrue(reasons.none { reason -> reason.contains("POWERED_OFF") || reason.contains("UNPAIRED") })
+        // Absence is evidence of a disconnect, never of a termination, so the enum that reports how a
+        // session ended has no absence member - DisconnectEvidence carries that one instead.
+        assertFalse(reasons.contains("ABSENT_FROM_COMPLETE_UNION"))
     }
 
     @Test

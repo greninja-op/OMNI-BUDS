@@ -26,9 +26,10 @@ package com.omnibuds.core.session
  *    session resumed (ADR-P4-006's grace), so a resumed session does not carry a stale
  *    disconnect time beside a connected state. Once the session ends, the value records
  *    the disconnect that preceded the end, not the end itself.
- *  - [endedAtEpochMillis] - set when the engine terminated the session. A session with
- *    this field is on its way out of the store and is never re-opened: a reappearance
- *    mints a new session id.
+ * A session's *end* has no timestamp field, deliberately: the engine drops a terminated
+ * session in the same round it publishes `SessionEnded`, so there is no live value that could read
+ * one, and a field with no producer is vocabulary standing in for a capability - the same refusal
+ * Phase 3 recorded against its own `DEDUPED` kind. The end's *reason* travels on the event instead.
  *
  * ADR-P1-012's other consequence is honoured by construction: the engine never compares
  * these numbers to decide an order. Round sequence is carried by the projection it was
@@ -39,7 +40,6 @@ data class SessionTimeline(
     val startedAtEpochMillis: Long?,
     val lastObservedAtEpochMillis: Long?,
     val disconnectedAtEpochMillis: Long? = null,
-    val endedAtEpochMillis: Long? = null,
 ) {
     /** Opens the timeline at the moment the engine created the session. */
     fun openedAt(atEpochMillis: Long?): SessionTimeline =
@@ -58,10 +58,6 @@ data class SessionTimeline(
 
     /** Clears the disconnect mark, because the session resumed inside its grace. */
     fun resumed(): SessionTimeline = copy(disconnectedAtEpochMillis = null)
-
-    /** Closes the timeline. The value is kept for the round in which the end is published. */
-    fun closedAt(atEpochMillis: Long?): SessionTimeline =
-        copy(endedAtEpochMillis = atEpochMillis, lastObservedAtEpochMillis = atEpochMillis)
 
     companion object {
         /** A timeline for a session that has not yet been opened by a clock reading. */
