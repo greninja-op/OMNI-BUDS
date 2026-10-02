@@ -494,6 +494,78 @@ class DeviceSessionEngineTest {
         assertFalse(published.isEmptyMeaningful)
     }
 
+    @Test
+    fun aStateThatMovesWithoutConnectingOrDisconnectingPublishesOneUpdatedEvent() = runTest {
+        val observed = engine.collectingEvents(this)
+
+        engine.apply(projection(record(KEY_LEFT)))
+        engine.apply(
+            projection(
+                record(KEY_LEFT, link = DeviceConnectionState.UNKNOWN, availability = DeviceAvailability.UNAVAILABLE),
+            ),
+        )
+
+        val updated = observed.all().filterIsInstance<DeviceSessionEvent.SessionUpdated>().single()
+        assertEquals(ConnectionState.CONNECTED, updated.from)
+        assertEquals(ConnectionState.TEMPORARILY_UNAVAILABLE, updated.to)
+        assertEquals("session-1", updated.sessionId)
+        observed.cancel()
+    }
+
+    @Test
+    fun aProvenDisconnectPublishesItsEvidenceAndAnAbsenceSaysSoSeparately() = runTest {
+        val observed = engine.collectingEvents(this)
+
+        engine.apply(projection(record(KEY_LEFT)))
+        engine.apply(projection(record(KEY_LEFT, link = DeviceConnectionState.DISCONNECTED)))
+        engine.apply(projection(record(KEY_RIGHT)))
+        engine.apply(projection(record(KEY_LEFT)))
+
+        val edges = observed.all().filterIsInstance<DeviceSessionEvent.SessionDisconnected>()
+        assertEquals(2, edges.size)
+        assertEquals(DisconnectEvidence.REPORTED, edges.first().evidence)
+        assertEquals(DisconnectEvidence.ABSENT_FROM_COMPLETE_UNION, edges[1].evidence)
+        observed.cancel()
+    }
+
+    @Test
+    fun aNameFillingInPublishesCountsAndNeverTheNameItself() = runTest {
+        val observed = engine.collectingEvents(this)
+
+        engine.apply(projection(record(KEY_LEFT)))
+        engine.apply(projection(record(KEY_LEFT, name = "OmniBuds Air")))
+
+        val changed = observed.all().filterIsInstance<DeviceSessionEvent.SessionIdentityChanged>().single()
+        assertEquals(0, changed.knownFieldCountBefore)
+        assertEquals(1, changed.knownFieldCountAfter)
+        assertNoAddressOrNameText(observed.all().joinToString(" | ") { event -> event.toString() })
+
+        observed.cancel()
+    }
+
+    @Test
+    fun aRefusedObservationPublishesOneEventCarryingThePlatformsCategory() = runTest {
+        val observed = engine.collectingEvents(this)
+
+        engine.apply(projection(record(KEY_LEFT)))
+        engine.apply(projection(refusal = refusal(OmniBudsErrorCategory.ADAPTER_UNAVAILABLE)))
+        engine.apply(projection(refusal = refusal(OmniBudsErrorCategory.ADAPTER_UNAVAILABLE)))
+
+        val failures = observed.all().filterIsInstance<DeviceSessionEvent.SessionObservationFailed>()
+        assertEquals(2, failures.size, "one per refused round, none per device")
+        assertTrue(
+            failures.all { event -> event.error.category == OmniBudsErrorCategory.ADAPTER_UNAVAILABLE },
+            "the refused rounds carried the platform's own category, not a Phase 4 invention",
+        )
+        observed.cancel()
+    }
+
+    private fun assertNoAddressOrNameText(rendered: String) {
+        val macPattern = Regex("([0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}")
+        assertFalse(macPattern.containsMatchIn(rendered), "an address reached an event string")
+        assertFalse("OmniBuds Air" in rendered, "a display name reached an event string")
+    }
+
     private fun DeviceSessionSnapshot.singleConnection(): ConnectionState = sessions.single().connectionState
 
     private fun DeviceSessionEvent.endReason(): SessionTermination =
