@@ -145,7 +145,11 @@ class DeviceSessionEngine(
             val unkeyedReports = mutableListOf<DeviceObservation>()
             for (record in projection.records) {
                 if (record.isAttributable) {
-                    keyedReports[record.key] = record
+                    // Two reports of one key inside a single projection are merged with Phase 3's own
+                    // rule rather than decided by which arrived last: mergedWith ranks each axis, so a
+                    // CONNECTED and a DISCONNECTED report of one device in the same round cannot make a
+                    // session by round-trip order (ADR-P4-004, ADR-P3-010).
+                    keyedReports[record.key] = keyedReports[record.key]?.mergedWith(record) ?: record
                 } else {
                     unkeyedReports += record
                 }

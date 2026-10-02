@@ -18,6 +18,7 @@ import kotlin.test.assertEquals
 import kotlin.test.assertFalse
 import kotlin.test.assertIs
 import kotlin.test.assertNull
+import kotlin.test.assertSame
 import kotlin.test.assertFailsWith
 import kotlin.test.assertTrue
 
@@ -114,6 +115,20 @@ class SessionStatePurityTest {
         assertIs<OperationOutcome.Failure>(moved)
         assertEquals(OmniBudsErrorCategory.INVALID_STATE, moved.error.category)
         assertEquals(ConnectionState.CONNECTED, connected.connectionState)
+    }
+
+    @Test
+    fun anIdentityFillIsNotAStateMoveAndNeverMovesTheRevision() {
+        // `withIdentity` exists so a late name can be recorded, and the revision must stay put for
+        // `applyIfNewer` to keep meaning "a newer *move*" rather than "a newer piece of text".
+        val state = DeviceState.initial("session-1", DeviceIdentity.of(displayName = "Air"))
+
+        val filled = state.withIdentity(state.identity.mergedWith(DeviceIdentity.of(model = "X1")))
+
+        assertEquals(state.revision, filled.revision)
+        assertEquals(state.connection, filled.connection)
+        assertEquals("X1", filled.identity.model)
+        assertSame(state, state.applyIfNewer(filled), "an identity fill is not a newer state")
     }
 
     @Test

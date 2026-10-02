@@ -21,7 +21,7 @@ import com.omnibuds.core.state.ConnectionStateTransitions
  * and the reason [connectionState] below is a read-through rather than a field. A session cannot
  * say it is connected while its state says it is not, because there is only one place to say it.
  *
- * [state] is updated only through [movedTo], and [movedTo] only through
+ * [state] is updated only through [moving], and [moving] only through
  * [DeviceState.attemptConnection], so an illegal move is a returned failure rather than a value
  * that exists. That is not the confinement Phase 24 owns - `copy(connection = ...)` still compiles
  * for anyone holding the record, and ADR-P4-001 says so out loud - it is the audit trail that

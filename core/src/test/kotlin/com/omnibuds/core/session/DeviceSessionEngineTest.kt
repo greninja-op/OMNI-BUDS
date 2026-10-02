@@ -84,6 +84,29 @@ class DeviceSessionEngineTest {
     }
 
     @Test
+    fun twoReportsOfOneKeyInOneRoundAreMergedAndNeverChosenByArrivalOrder() = runTest {
+        // The engine indexes by key, so a projection that carried the same device twice used to be
+        // decided by whichever row came last. It is now decided by Phase 3's own rank: a live link
+        // beats a report of no link, and the profile sets union.
+        val connected = record(KEY_LEFT, link = DeviceConnectionState.CONNECTED, profiles = setOf(ObservedProfile.A2DP))
+        val dropped = record(
+            KEY_LEFT,
+            link = DeviceConnectionState.DISCONNECTED,
+            profiles = setOf(ObservedProfile.LE_AUDIO),
+        )
+
+        engine.apply(projection(connected, dropped))
+
+        assertEquals(1, engine.snapshot.value.sessions.size)
+        assertEquals(ConnectionState.CONNECTED, engine.snapshot.value.singleConnection())
+
+        engine.apply(projection(dropped, connected))
+
+        assertEquals(1, engine.snapshot.value.sessions.size)
+        assertEquals(ConnectionState.CONNECTED, engine.snapshot.value.singleConnection())
+    }
+
+    @Test
     fun twoDevicesCarryingTheSameNameStayTwoSessions() = runTest {
         engine.apply(projection(record(KEY_LEFT, name = "Air Buds"), record(KEY_RIGHT, name = "Air Buds")))
 
@@ -492,6 +515,30 @@ class DeviceSessionEngineTest {
         assertTrue(published.sessions.isEmpty())
         assertIs<SessionObservationStatus.Stopped>(published.observation)
         assertFalse(published.isEmptyMeaningful)
+    }
+
+    @Test
+    fun aTrackedDeviceWhoseLinkReadingVanishesIsRefusedRatherThanRewritten() = runTest {
+        // ADR-P4-004's row 6b: the platform said CONNECTED, then says nothing about the link while
+        // still being observable. The table has no legal CONNECTED -> UNKNOWN move, and pretending
+        // otherwise would turn a missing reading into a state change.
+        engine.apply(projection(record(KEY_LEFT)))
+        engine.apply(projection(record(KEY_LEFT, link = DeviceConnectionState.UNKNOWN)))
+
+        val published = engine.snapshot.value
+        assertEquals(ConnectionState.CONNECTED, published.singleConnection())
+        assertEquals(ConnectionState.UNKNOWN, published.refusedMoves.single().requested)
+    }
+
+    @Test
+    fun anUntrackedDeviceWithNoBondAndNoLinkReadingOpensNothing() = runTest {
+        // ADR-P4-004's row 6c: observable, link unread, not bonded. Nothing here is positive enough
+        // to start a session on, and a session built from that would be a guess with an id.
+        engine.apply(
+            projection(record(KEY_LEFT, link = DeviceConnectionState.UNKNOWN, bond = DeviceBondState.NONE)),
+        )
+
+        assertTrue(engine.snapshot.value.sessions.isEmpty())
     }
 
     @Test
