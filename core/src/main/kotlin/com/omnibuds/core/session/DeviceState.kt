@@ -78,6 +78,19 @@ data class DeviceState(
     fun withBattery(next: BatteryState, atEpochMillis: Long?): DeviceState =
         copy(battery = next, revision = revision + 1, lastUpdatedEpochMillis = atEpochMillis)
 
+    /**
+     * Restates identity and moves nothing else.
+     *
+     * Added by Phase 4 (ADR-P4-002) because a session engine's only legitimate device fact is the
+     * one the platform reports late: a name arriving after the device was already attributed. The
+     * revision deliberately does not move - a fill-in of a field that was unknown is not a state
+     * transition, and letting it bump the revision would let an identity update beat a real
+     * connection change under [applyIfNewer]. The caller passes a value produced by
+     * [com.omnibuds.core.device.DeviceIdentity.mergedWith], which can only add knowledge, so this
+     * method cannot rewrite an established identity any more than the type above can.
+     */
+    fun withIdentity(next: DeviceIdentity): DeviceState = copy(identity = next)
+
     fun withAudio(next: AudioTransportState, atEpochMillis: Long?): DeviceState =
         copy(audio = next, revision = revision + 1, lastUpdatedEpochMillis = atEpochMillis)
 

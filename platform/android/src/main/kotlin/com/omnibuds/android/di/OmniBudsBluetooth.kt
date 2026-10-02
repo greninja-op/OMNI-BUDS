@@ -22,6 +22,8 @@ import com.omnibuds.android.bluetooth.permission.SystemPermissionStandingReader
 import com.omnibuds.core.platform.AdapterStateSource
 import com.omnibuds.core.platform.BluetoothPlatform
 import com.omnibuds.core.platform.ConnectedDeviceObserver
+import com.omnibuds.core.platform.TimeProvider
+import com.omnibuds.core.session.DeviceSessionEngine
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 
@@ -126,3 +128,27 @@ fun omniBudsConnectedDeviceObserver(
         time = SystemTimeProvider,
     )
 }
+
+/**
+ * Builds the Phase 4 session engine against the same clock the platform reads.
+ *
+ * Construction only, and deliberately: the engine owns no coroutine scope, so there is nothing for a
+ * composition root to start, stop or leak (Phase 0 `specs.md` rule 5.1). The caller wires the two
+ * already-built objects itself, in a scope it owns:
+ *
+ * ```text
+ * val engine = omniBudsDeviceSessionEngine()
+ * coroutineScope {
+ *     launch { observer.observe().collect { } }          // drives the observation
+ *     launch { observer.snapshot.collect { engine.apply(it) } }   // folds each projection into sessions
+ * }
+ * ```
+ *
+ * Two calls rather than one helper that hides both, because the second one is the whole of the
+ * engine's input contract: it consumes published projections and never reaches the observer that
+ * produces them (ADR-P4-011), and `PhaseFourScopeTest` fails if the session layer starts importing
+ * the control seam to save writing those two lines.
+ */
+fun omniBudsDeviceSessionEngine(
+    time: TimeProvider = SystemTimeProvider,
+): DeviceSessionEngine = DeviceSessionEngine(time = time)

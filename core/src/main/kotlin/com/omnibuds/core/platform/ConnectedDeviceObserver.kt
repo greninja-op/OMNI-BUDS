@@ -112,6 +112,20 @@ data class ConnectedDeviceSnapshot(
     val restsOnCompletedRound: Boolean,
 
     /**
+     * Why the connected question last refused, or null when nothing has refused it since a round answered.
+     *
+     * [restsOnCompletedRound] says a census did not happen; it does not say why, and a consumer that wants
+     * to tell "we were not allowed to look" from "the phone is off" needs the category rather than the
+     * boolean. This is [pairedRoundRefusal]'s counterpart, added because that one existed on only one side
+     * of a symmetric pair (ADR-P4-007): a projection could explain its empty pairings and not its empty
+     * devices. Recorded rather than thrown, for the same reason the paired one is - a refused link round
+     * says nothing about the entries it did not touch. [ObservationRound.Cancelled] sets nothing here,
+     * because a called-off read is not a finding and must not clear the reason a real refusal left
+     * (ADR-P2-018).
+     */
+    val deviceRoundRefusal: OmniBudsError?,
+
+    /**
      * Whether [pairedDevices] came out of a paired round that answered.
      *
      * The paired question and the connected question have separate standings and separate answers, so this
@@ -178,6 +192,7 @@ data class ConnectedDeviceSnapshot(
             unansweredProfiles = enumerated.toSet(),
             profileSupportConsulted = false,
             restsOnCompletedRound = false,
+            deviceRoundRefusal = null,
             restsOnCompletedPairedRound = false,
             pairedRoundRefusal = null,
             refusedTransitions = emptyList(),
@@ -440,10 +455,16 @@ class ConnectedDeviceObserver(
     private fun ConnectedDeviceSnapshot.foldingDevices(
         round: ObservationRound<DeviceObservation>,
     ): DeviceFold = when (round) {
-        is ObservationRound.Failure -> DeviceFold(snapshot = this, refusal = round.error, cancelled = false)
+        is ObservationRound.Failure -> DeviceFold(
+            snapshot = copy(deviceRoundRefusal = round.error),
+            refusal = round.error,
+            cancelled = false,
+        )
+
         ObservationRound.Cancelled -> DeviceFold(snapshot = this, refusal = null, cancelled = true)
         is ObservationRound.Success -> if (round.devices.isEmpty() && couldSeeNothing()) {
-            DeviceFold(snapshot = this, refusal = emptyUnionRefusal(), cancelled = false)
+            val refusal = emptyUnionRefusal()
+            DeviceFold(snapshot = copy(deviceRoundRefusal = refusal), refusal = refusal, cancelled = false)
         } else {
             DeviceFold(snapshot = withSnapshotReported(round.devices).snapshot, refusal = null, cancelled = false)
         }
@@ -744,6 +765,7 @@ class ConnectedDeviceObserver(
             snapshot = copy(
                 records = next,
                 restsOnCompletedRound = true,
+                deviceRoundRefusal = null,
                 refusedTransitions = refusals,
                 observedAtEpochMillis = time.nowEpochMillis(),
             ),
