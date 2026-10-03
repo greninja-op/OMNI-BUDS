@@ -1,8 +1,12 @@
 package com.omnibuds.core.session
 
+import com.omnibuds.core.common.OmniBudsError
+import com.omnibuds.core.common.OmniBudsErrorCategory
 import com.omnibuds.core.common.OperationOutcome
+import com.omnibuds.core.device.DeviceFingerprint
 import com.omnibuds.core.device.DeviceIdentity
 import com.omnibuds.core.device.DeviceSession
+import com.omnibuds.core.device.IdentificationResult
 import com.omnibuds.core.platform.ConnectedDeviceSnapshot
 import com.omnibuds.core.platform.DeviceBondState
 import com.omnibuds.core.platform.DeviceConnectionState
@@ -204,6 +208,63 @@ class DeviceSessionEngine(
      */
     suspend fun stop(reason: SessionTermination = SessionTermination.OBSERVATION_STOPPED) {
         terminateAll(reason)
+    }
+
+    /**
+     * Attaches a Phase 5 product identity, and the fingerprint that produced it, to a session this
+     * engine already holds.
+     *
+     * This is the safe identity-update policy prompt section 14 asks for, and its shape is the
+     * guarantee: it takes the engine's own [sessionId] rather than a device key, so it can only
+     * enrich a session that already exists and can never mint one; a name that changes does not
+     * re-attribute anything because attribution is [apply]'s job alone. It writes only
+     * [TrackedDeviceSession.productIdentity] and [com.omnibuds.core.device.DeviceSession.fingerprint]
+     * - never the reported [com.omnibuds.core.device.DeviceIdentity], never `connection`, and never
+     * [DeviceState]'s revision, so an enrichment is not a state transition and cannot beat a real
+     * connection change under [DeviceState.applyIfNewer] (ADR-P5-009). A conclusion is kept separate
+     * from a report: the matcher's manufacturer never overwrites a platform-reported one.
+     *
+     * An unknown [sessionId] is a refusal, not a create: the caller asked to enrich a session this
+     * engine does not have, and silently opening one would be the duplicate-device failure prompt
+     * section 14 forbids.
+     */
+    suspend fun enrichIdentity(
+        sessionId: String,
+        fingerprint: DeviceFingerprint,
+        result: IdentificationResult,
+    ): OperationOutcome<Unit> = lock.withLock {
+        val index = tracked.indexOfFirst { session -> session.sessionId == sessionId }
+        if (index < 0) {
+            return@withLock OperationOutcome.Failure(
+                OmniBudsError(
+                    category = OmniBudsErrorCategory.INVALID_STATE,
+                    operationId = ENRICH_OPERATION_ID,
+                    detail = "no session $sessionId to attach an identity to; enrichment never creates one",
+                ),
+            )
+        }
+        val at = time.nowEpochMillis()
+        val enriched = tracked[index].enrichedWith(
+            nextIdentity = tracked[index].session.identity,
+            fingerprint = fingerprint,
+            identification = result,
+        )
+        tracked = tracked.toMutableList().also { list -> list[index] = enriched }
+        revision += 1
+        publish(
+            stage = _snapshot.value.stage,
+            status = _snapshot.value.observation,
+            published = listOf(
+                DeviceSessionEvent.SessionIdentityEnriched(
+                    sessionId = sessionId,
+                    confidence = result.confidence,
+                    isIdentified = result.isIdentified,
+                    atEpochMillis = at,
+                ),
+            ),
+            at = at,
+        )
+        OperationOutcome.Success(Unit)
     }
 
     private suspend fun terminateAll(reason: SessionTermination) {
@@ -523,5 +584,7 @@ class DeviceSessionEngine(
 
         private const val EVENT_REPLAY = 0
         private const val EVENT_BUFFER_CAPACITY = 64
+
+        private const val ENRICH_OPERATION_ID = "device-session.enrichIdentity"
     }
 }

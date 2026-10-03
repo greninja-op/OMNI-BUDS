@@ -5,13 +5,15 @@ import com.omnibuds.core.common.OmniBudsError
 /**
  * An edge the engine observed in its own state, not a message about a device.
  *
- * Seven of prompt section 13's eight candidates exist here, and the missing one is the
- * decision: `SESSION_ACTIVATED` is refused, because "activated" reads as a device becoming
+ * Seven of prompt section 13's eight candidates existed at the end of Phase 4, and the missing one is
+ * the decision: `SESSION_ACTIVATED` is refused, because "activated" reads as a device becoming
  * usable, which is the claim ADR-P4-003 makes unreachable in this phase - a session moving
  * to [com.omnibuds.core.state.ConnectionState.CONNECTED] is the phone reporting a link, and
  * first arrival is already [SessionCreated] while a return is already [SessionReconnected].
  * An event whose meaning is a subset of two other events is how a UI ends up displaying a
- * readiness nobody verified (ADR-P4-008).
+ * readiness nobody verified (ADR-P4-008). [SessionIdentityEnriched] is the eighth, and it was added
+ * by Phase 5 rather than derived from that list: it is the edge form of an identification arriving,
+ * which prompt section 14 requires to be visible without being a connection transition.
  *
  * Three rules hold for every case, and they are the reason each payload is as small as it is:
  *
@@ -99,6 +101,24 @@ sealed interface DeviceSessionEvent {
      */
     data class SessionObservationFailed(
         val error: OmniBudsError,
+        val atEpochMillis: Long?,
+    ) : DeviceSessionEvent
+
+    /**
+     * Phase 5 attached a product identity to a session that already existed.
+     *
+     * Added with [com.omnibuds.core.device.IdentificationResult] (ADR-P5-009), and deliberately not
+     * folded into [SessionIdentityChanged]: that event counts *reported* identity fields, whereas
+     * this edge says a *conclusion* arrived and the reported identity may not have moved at all.
+     * A consumer that treated them as one event would read a matched model as though the device had
+     * reported it. [isIdentified] is the only content beyond the rung - which manufacturer or model
+     * was decided is readable from the authoritative snapshot, and repeating it here would put
+     * device text into the one shape a consumer is most likely to log (SEC-LOG-002).
+     */
+    data class SessionIdentityEnriched(
+        val sessionId: String,
+        val confidence: com.omnibuds.core.device.IdentificationConfidence,
+        val isIdentified: Boolean,
         val atEpochMillis: Long?,
     ) : DeviceSessionEvent
 }

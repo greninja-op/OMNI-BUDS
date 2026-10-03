@@ -1,7 +1,10 @@
 package com.omnibuds.core.session
 
 import com.omnibuds.core.common.OperationOutcome
+import com.omnibuds.core.device.DeviceFingerprint
+import com.omnibuds.core.device.DeviceIdentity
 import com.omnibuds.core.device.DeviceSession
+import com.omnibuds.core.device.IdentificationResult
 import com.omnibuds.core.platform.DeviceObservationKey
 import com.omnibuds.core.state.ConnectionState
 import com.omnibuds.core.state.ConnectionStateTransitions
@@ -30,6 +33,11 @@ import com.omnibuds.core.state.ConnectionStateTransitions
  * [sessionId] is minted by the engine and carries no device content: not an address, not a name,
  * not a hash of either (ADR-P4-005, SEC-ID-003). [key] is the typed Phase 3 key, held as the key
  * and never read out as text, so a printed session cannot leak an identifier it never had.
+ *
+ * [productIdentity] was added by Phase 5 and is the only field here that is a conclusion rather
+ * than a record of what the platform said; prompt section 14's "session identity and product
+ * identity must remain separate concepts" is the reason it is a sibling field of
+ * [DeviceSession.identity] instead of a merge into it.
  */
 data class TrackedDeviceSession(
     val sessionId: String,
@@ -38,6 +46,19 @@ data class TrackedDeviceSession(
     val session: DeviceSession,
     val state: DeviceState,
     val timeline: SessionTimeline,
+
+    /**
+     * What Phase 5 concluded about which product this device is, or null while nothing has been asked.
+     *
+     * Held here, beside but separate from [session]'s [DeviceSession.identity]: the identity is what
+     * the platform *reported* (a name, a manufacturer string), whereas this is what the matcher
+     * *inferred* from evidence and a confidence rung. The two are never merged into one field, so a
+     * matched model can never overwrite a reported value and a reported value can never silently
+     * launder itself into a `HIGH`-confidence conclusion (ADR-P5-009). Carrying it on the session
+     * rather than the state is deliberate: identification does not move the connection, so it must
+     * not be able to bump [state]'s revision or read as a transition.
+     */
+    val productIdentity: IdentificationResult? = null,
 ) {
     init {
         require(session.sessionId == state.sessionId && session.sessionId == sessionId) {
@@ -90,6 +111,31 @@ data class TrackedDeviceSession(
         session = session.copy(identity = next),
         state = state.withIdentity(next),
     )
+
+    /**
+     * Attaches Phase 5's product identity to this session, changing nothing else about the session.
+     *
+     * The whole shape of the method is ADR-P5-009: [nextIdentity] is merged rather than assigned
+     * (through [DeviceSession.withEvidence], which fills only unknown fields), the reported
+     * [DeviceSession.identity] and the matched [productIdentity] stay separate fields, and
+     * [state] is touched only by [DeviceState.withIdentity] - which cannot change `connection` and
+     * deliberately does not move `revision`, so an enrichment is not a transition and cannot beat a
+     * real connection change under [DeviceState.applyIfNewer]. The session id, the key, the identity
+     * basis and the timeline all pass through untouched: enrichment cannot re-mint a session or
+     * re-attribute it, so a device that is called by a new name stays the same tracked device.
+     */
+    fun enrichedWith(
+        nextIdentity: DeviceIdentity,
+        fingerprint: DeviceFingerprint,
+        identification: IdentificationResult,
+    ): TrackedDeviceSession {
+        val nextSession = session.withEvidence(nextIdentity, fingerprint)
+        return copy(
+            session = nextSession,
+            state = state.withIdentity(nextSession.identity),
+            productIdentity = identification,
+        )
+    }
 
     /** Restates freshness from the round that carried this device. */
     fun restatedAt(atEpochMillis: Long?): TrackedDeviceSession =
