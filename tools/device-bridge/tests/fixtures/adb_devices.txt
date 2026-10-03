@@ -1,0 +1,6 @@
+List of devices attached
+BRIDGEFA0001         device product:vermeer model:2311DRK48I device:vermeer transport_id:7
+BRIDGEFA0002         unauthorized product:vermeer model:2311DRK48I device:vermeer transport_id:8
+BRIDGEFA0003         offline product:sdk_gphone64_arm64 model:Pixel 7 transport_id:9
+BRIDGEFA0004         sideload product:foobar model:Synthetic Device Name device:foobar transport_id:10
+emulator-5554        device product:brt3 model:SM-S911B device:brt3 transport_id:11

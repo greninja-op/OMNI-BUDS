@@ -1,0 +1,8 @@
+WINDOW MANAGER WINDOWS dumpsys (dumpsys window)
+  Display mDefaultWindow=Window{2f8a1c7 u0 com.android.systemui/com.android.systemui.statusbar.phone.PhoneStatusBarWindow}
+  mCurrentFocus=Window{6d3b1c8 u0 com.omnibuds.tools.shell/com.omnibuds.tools.shell.ShellActivity}
+  mFocusedApp=AppToken{91aa2b3 Token{4f7c1d8 ActivityRecord{1a2b3c4 u0 com.omnibuds.tools.shell/.ShellActivity t21 f}}}
+  mObscuringWindow=Window{71c2e90 u0 com.android.systemui/com.android.systemui.statusbar.NotificationShadeWindow}
+  Window #7 Window{5b2a9f1 u0 com.example.foreigndemo/com.example.foreigndemo.MainActivity}:
+    mFrame=[0,0][1080,2400] mAttachedWindowLayer=0 mInputDispatchingTimeoutMillis=5000
+  session=Session{4c1d2e3 12345:u0a10234} read=3 written=1

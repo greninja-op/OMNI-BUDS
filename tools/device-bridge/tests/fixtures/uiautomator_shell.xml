@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<!--
+  Hand-authored fixture: the shape of a `uiautomator dump` taken while the companion-shell harness
+  (tools/companion-shell) is foreground on a 1080x2400 panel at density 2.75.
+
+  No real device produced this file. The attribute vocabulary, nesting and bounds format follow the
+  shape uiautomator emits; the numbers are arithmetic on the harness's own 24dp padding. The
+  resource-ids and content-descriptions are the ones declared in
+  tools/companion-shell/src/main/res/values/ids.xml and ShellActivity.kt, because the verification
+  suite resolves targets by those names and a rename on either side must fail the suite.
+-->
+<hierarchy rotation="0">
+  <node index="0" text="" resource-id="" class="android.widget.FrameLayout" package="com.omnibuds.tools.shell" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,0][1080,2400]" drawing-order="0" hint="">
+    <node index="0" text="" resource-id="android:id/content" class="android.widget.FrameLayout" package="com.omnibuds.tools.shell" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[0,0][1080,2400]" drawing-order="1" hint="">
+      <node index="0" text="" resource-id="" class="android.widget.ScrollView" package="com.omnibuds.tools.shell" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" scrollable="true" long-clickable="false" password="false" selected="false" bounds="[0,0][1080,2400]" drawing-order="0" hint="">
+        <node index="0" text="" resource-id="" class="android.widget.LinearLayout" package="com.omnibuds.tools.shell" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[66,66][1014,826]" drawing-order="0" hint="">
+          <node index="0" text="OmniBuds bridge shell" resource-id="com.omnibuds.tools.shell:id/bridge_title" class="android.widget.TextView" package="com.omnibuds.tools.shell" content-desc="bridge-title" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[66,66][520,130]" drawing-order="0" hint="" />
+          <node index="1" text="harness target - no product behaviour" resource-id="com.omnibuds.tools.shell:id/bridge_status" class="android.widget.TextView" package="com.omnibuds.tools.shell" content-desc="bridge-status" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[66,130][900,182]" drawing-order="1" hint="" />
+          <node index="2" text="Probe" resource-id="com.omnibuds.tools.shell:id/bridge_probe_button" class="android.widget.Button" package="com.omnibuds.tools.shell" content-desc="bridge-probe-button" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[66,182][1014,326]" drawing-order="2" hint="" />
+          <node index="3" text="probes: 3" resource-id="com.omnibuds.tools.shell:id/bridge_counter_value" class="android.widget.TextView" package="com.omnibuds.tools.shell" content-desc="bridge-counter" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[66,326][330,378]" drawing-order="3" hint="" />
+          <node index="4" text="Toggle" resource-id="com.omnibuds.tools.shell:id/bridge_toggle" class="android.widget.CheckBox" package="com.omnibuds.tools.shell" content-desc="bridge-toggle" checkable="true" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" password="false" selected="false" bounds="[66,378][400,450]" drawing-order="4" hint="" />
+          <node index="5" text="" resource-id="com.omnibuds.tools.shell:id/bridge_input_field" class="android.widget.EditText" package="com.omnibuds.tools.shell" content-desc="bridge-input" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="true" scrollable="false" long-clickable="true" password="false" selected="false" bounds="[66,450][1014,558]" drawing-order="5" hint="Input" />
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>
