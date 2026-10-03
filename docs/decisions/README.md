@@ -26,6 +26,23 @@ Full text of every ADR lives in the phase record that authored it. This file is 
 | ADR-P0-020 | Two Phase 0 workstreams added beyond prompt §4 | accepted | `docs/phases/phase-0/decisions.md` |
 | ADR-P0-021 | Version control is not initialised in Phase 0 | accepted — **closed by Phase 1** | `docs/phases/phase-0/decisions.md` |
 
+Phase 4 — `docs/phases/phase-4/decisions.md`:
+
+| ADR | Title | Status |
+|---|---|---|
+| ADR-P4-001 | The session engine lives in `core/session`, consumes the projection, owns exactly one thing | accepted — answers Phase 1's three-way deferral (Phase 2/4/24) |
+| ADR-P4-002 | A session carries no second lifecycle axis | accepted — extends Phase 1's `DeviceSession` rule |
+| ADR-P4-003 | Six reachable `ConnectionState` members; the other five, including `ERROR`, are pinned unreachable | accepted — retitled at close-out from "five states plus ERROR" |
+| ADR-P4-004 | Observation-to-session mapping is one table; absence is a disconnect only when the union answered | accepted — the `arrival` claim corrected at close-out |
+| ADR-P4-005 | `sessionId` is minted and opaque; ambiguity is a state, never a merge | accepted — honours SEC-ID-001/003/004 |
+| ADR-P4-006 | Reconnect resumes inside a session; after termination a new id; grace is one round, not a timer | accepted — resolves prompt §9's named policy question |
+| ADR-P4-007 | A refused round never empties the list; the projection now carries its own refusal reason | accepted — amends `ConnectedDeviceSnapshot` |
+| ADR-P4-008 | Events are notifications with a bounded buffer; `SESSION_ACTIVATED` is refused | accepted — Phase 0 specs rules 5.5/5.6 |
+| ADR-P4-009 | One mutex, one revision; `applyIfNewer` is deliberately not called here | accepted — corrected at close-out; the gate is Phase 6's |
+| ADR-P4-010 | Temporary is the only classification the engine can produce; nothing reaches storage | accepted — honours SEC-ID-005/006, ADR-P0-004 |
+| ADR-P4-011 | `refresh()` stays uncalled, and the reason is the engine's input contract | accepted — re-scores Phase 3's RISK-058 without closing it |
+| ADR-P4-012 | Phase 4's evidence ceiling is `IMPLEMENTED`; a session is not a claim about a device | accepted — T1 tier, TST-MOCK-001, ADR-P3-014 |
+
 Phase 3 — `docs/phases/phase-3/decisions.md`:
 
 | ADR | Title | Status |
@@ -115,7 +132,8 @@ Phase 1 — `docs/phases/phase-1/decisions.md`:
 
 | Item | Question | Blocking |
 |---|---|---|
-| ADR-P0-018 | Confirm the research ladder reads *enumerate → identify* rather than the prompt's *identify → discover*. | Phases 3, 5, 20 ordering — **not** Phase 2 |
+| ADR-P0-018 | Confirm the research ladder reads *enumerate → identify* rather than the prompt's *identify → discover*. | Phases 5 and 20 (Phase 3 ran without it and recorded the consequence in its own register) ordering — **not** Phase 2 |
+| Deferred device session | The end-of-project handset session the user scheduled instead of per-phase verification (ADR-P3-014) has no date, no owner and no trigger; RISK-045 names that as the process risk and RISK-065/066 carry it into Phase 4. Phases 1-4 built no hardware claim, so nothing is blocked — but every `IMPLEMENTED` in this index stays one until that session runs. | Nothing blocked; everything unverified |
 | ADR-P1-015 | Phase 2 must re-decide `minSdk` (26 was chosen only to make the library module compile; the Bluetooth runtime-permission model changed at API 31). | Phase 2 |
 | ADR-P1-018 | Per-endpoint codec support (phone versus headset) is unmodelled; it needs a discriminator that must not read as "unknown". | Phase 11 |
 | ADR-P0-021 / RISK-015 | Closed by Phase 1: the repository is initialised on branch `main`. CI and any remote remain undecided. | None; CI still absent (RISK-015 partially open) |

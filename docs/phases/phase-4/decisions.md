@@ -74,12 +74,17 @@ plausible name: `ACTIVE` versus `CONNECTED`, `ENDED` versus `DISCONNECTED`, `TEM
 in both.
 **Decision.** The engine holds one `TrackedDeviceSession` per session, composed of Phase 1's types plus
 the facts that are genuinely neither connection state nor identity:
-`sessionId` (opaque, engine-minted), `identityBasis` (keyed or ambiguous), `timeline`
-(`startedAt`/`lastObservedAt`/`disconnectedAt` epoch millis, each nullable and never zero-filled), and
-`termination: SessionTermination?` (why a session ended, null while it has not). `SessionTermination`
-is a fact about the *engine's decision*, not a device state, and it is deliberately not a
-`ConnectionState`. No type in Phase 4 can express "the device is ACTIVE" without also having moved
-`DeviceState.connection`, so the two cannot disagree.
+`sessionId` (opaque, engine-minted), `identityBasis` (keyed or ambiguous), and `timeline`
+(`startedAt`/`lastObservedAt`/`disconnectedAt` epoch millis, each nullable and never zero-filled).
+`SessionTermination` is a fact about the *engine's decision*, not a device state, and it is deliberately
+not a `ConnectionState`; it travels on the `SessionEnded` event rather than on the record, because the
+engine drops a terminated session in the same round that publishes its end — so there is no live value
+that could carry a `termination` field or an `endedAt` time, and adding one would be vocabulary standing
+in for a capability, which is the failure Phase 3 convicted its own `DEDUPED` observation kind of
+(ADR-P2-018). Removing those two members was a close-out correction, not the original design: the first
+draft of the record had `termination: SessionTermination?` and `SessionTimeline.endedAtEpochMillis`, both
+unreachable, both deleted rather than left as decoration. No type in Phase 4 can express "the device is
+ACTIVE" without also having moved `DeviceState.connection`, so the two cannot disagree.
 **Alternatives considered.** Adopt prompt §7's names as a `SessionLifecycleState` enum — rejected, for
 the reason in Context; it would have needed a documented mapping table proving it never contradicts
 `ConnectionState`, which is a second source of truth wearing a reconciliation sheet. Put the timeline on
@@ -90,8 +95,8 @@ on this session" is engine bookkeeping.
 silently doubled field. Timestamp semantics are documented per field and read epoch millis from the
 injected `TimeProvider` only (ADR-P1-012), so `:core` still compiles for a non-JVM target.
 
-### ADR-P4-003 — Phase 4's reachable `ConnectionState` subset is five states plus ERROR, and the other four are pinned unreachable
-**Status.** accepted
+### ADR-P4-003 — Phase 4's reachable `ConnectionState` subset is six states, and the other five — including `ERROR` — are pinned unreachable
+**Status.** accepted — retitled and corrected at close-out, having first read "five states plus `ERROR`", which counted the reachable set wrongly and claimed a state the engine never produces
 **Context.** `ConnectionState` has eleven members. Four of them describe work Phase 4 is forbidden to do:
 `IDENTIFYING` is fingerprinting (Phase 5), `CAPABILITY_DISCOVERY` is the capability engine (Phase 8),
 `READY` and `CONTROL_SESSION` are an open transport (Phase 6) — and prompt §6 says a session "must not
@@ -99,13 +104,19 @@ imply vendor support", "must not imply control readiness", "must not imply that 
 have been discovered". A `StateFlow` of sessions is precisely the surface a future UI reads, so an
 unreachable-but-constructible state is a claim waiting to be made.
 **Decision.** The engine moves sessions only among `UNKNOWN`, `DISCOVERED`, `PAIRED`, `CONNECTED`,
-`TEMPORARILY_UNAVAILABLE`, `DISCONNECTED` and `ERROR`. The mapping is ADR-P4-004's table, and every move
+`TEMPORARILY_UNAVAILABLE` and `DISCONNECTED` — six, derived from `ConnectionStateTransitions.allowedNext(UNKNOWN)`
+minus `ERROR` rather than listed beside the table, so the set cannot silently drift. The mapping is
+ADR-P4-004's table, and every move
 goes through `DeviceState.attemptConnection`, which refuses an illegal move as
-`Failure(INVALID_STATE)` rather than performing it (`DeviceState.kt:96-116`). `SessionStatePurityTest` pins
-the four excluded states as never emitted by any engine path, and the transition the table permits but
+`Failure(INVALID_STATE)` rather than performing it (`DeviceState.kt:109-129`). `SessionStatePurityTest` pins
+the five excluded states as never emitted by any engine path, and the transition the table permits but
 this phase declines to use — `CONNECTED → IDENTIFYING` and onward — is named in the test rather than
-left to reading.
-**Alternatives considered.** Mint a Phase-4-only state enum with five members — rejected: it is a second
+left to reading. `ERROR` is refused with the other four rather than treated as the safety valve it looks
+like: it is the one member a `TEMPORARILY_UNAVAILABLE`-and-refused round would tempt a writer into, and
+its presence in a session would read as *the device* faulting when the only honest sentence is that this
+app's evidence ran out. Prompt §15 asks for observation failure to be represented; ADR-P4-007 represents
+it as a status carrying the platform's category, which is where that fault actually lives.
+**Alternatives considered.** Mint a Phase-4-only state enum with six members — rejected: it is a second
 vocabulary for one axis, and the day Phase 5 arrives there would be two `CONNECTED`s. Allow `READY` when
 a device is observed connected — rejected outright: `READY` means "a control session could start", which
 is a hardware claim this phase has no evidence for.
@@ -148,9 +159,12 @@ this app witnessed.
 **Consequences.** Every cell of the table is a named test in `DeviceSessionEngineTest`, so a later phase
 editing one cell edits a decision. The two weakest rows (`CONNECTING`, `DISCONNECTING`) are the ones a
 handset may never deliver at all — research U-4/U-9 — so the engine is written to be right if they never
-occur and wrong in no way if they do. The table is also the first place where a `DeviceObservation`'s
-`arrival` (SNAPSHOT or EVENT) changes what is *believed*: an event that disagrees with the last completed
-census is applied as a state move but cannot re-classify a device's identity basis.
+occur and wrong in no way if they do. The table also reads the projection's completeness flags and never
+a record's `arrival` provenance, which is worth stating because the field is right there and invites use:
+by the time a record reaches this layer, Phase 3's `mergedWith` has already resolved any same-round
+disagreement by keeping the later arrival (`DeviceObservation.kt:114-116`), so the only thing left to
+believe is *whether the union answered* — a property of the snapshot (`isUnionComplete`), not of any
+device row. ADR-P4-009 states the same boundary from the ordering side.
 
 ### ADR-P4-005 — `sessionId` is minted, opaque and never derived from the device; ambiguity is a state, never a merge
 **Status.** accepted — honours SEC-ID-001/003/004, ADR-P3-010, prompt §8, §12
@@ -195,9 +209,12 @@ that is the grace in which downstream consumers see the transition (prompt §9's
 long enough"). If the next round is a complete union that still omits it, the session is `ENDED` and
 removed. If it reappears inside the grace, it resumes the same id and publishes `SESSION_RECONNECTED`.
 (3) After removal, reappearance mints a **new** sessionId and publishes `SESSION_CREATED`, with no
-lineage pointer retained. Termination reasons are an enum (`ABSENT_FROM_COMPLETE_UNION`,
-`PROVEN_DISCONNECT_PAST_GRACE`, `OBSERVATION_STOPPED`, `ENGINE_CANCELLED`), so "why did this session
-end" is answerable without inferring it from an absence.
+lineage pointer retained. Termination reasons are an enum (`PROVEN_DISCONNECT_PAST_GRACE`,
+`AMBIGUOUS_SESSION_EXPIRED`, `OBSERVATION_STOPPED`, `ENGINE_CANCELLED`), so "why did this session end" is
+answerable without inferring it from an absence. Absence is deliberately **not** one of them: being
+missing from a complete union is evidence of a *disconnect*, which is a state the session moves to and a
+`DisconnectEvidence` on the event, and only the round after that is evidence of an end — collapsing the
+two would let one quiet round delete a session.
 **Alternatives considered.** One session id per device forever, reused across reconnects — rejected: it
 is a permanent device record wearing a session name, which is prompt §10's forbidden history and
 SEC-ID-006's "scanning is not saving". Time-window grace (resume within 30 s) — rejected: a timer makes
@@ -238,7 +255,7 @@ owned the other half. Any future consumer of `ConnectedDeviceSnapshot` gets the 
 subscribing to the round flow, and the session engine's input is one type instead of two.
 
 ### ADR-P4-008 — Events are notifications with a bounded buffer, and `SESSION_ACTIVATED` is refused
-**Status.** accepted — honours `docs/phases/phase-0/specs.md:146-147` rules 5.5/5.6
+**Status.** accepted — honours `docs/phases/phase-0/specs.md:145-146` rules 5.5/5.6
 **Decision.** `DeviceSessionEvent` carries `SESSION_CREATED`, `SESSION_UPDATED`, `SESSION_DISCONNECTED`,
 `SESSION_RECONNECTED`, `SESSION_ENDED`, `SESSION_IDENTITY_CHANGED` and `SESSION_OBSERVATION_FAILED` —
 each one emitted only where a real move in `DeviceState.connection` or in the session's identity
@@ -271,12 +288,17 @@ sequences, and it forbids an old event overwriting newer state without a documen
 Phase 3 already settled this shape: a `Mutex` slot, publication of the new value inside the lock, and
 teardown in a `finally` that also runs on cancellation.
 **Decision.** The engine holds a `Mutex` around the whole reconcile-and-publish step, so a snapshot is
-never seen half-applied. Ordering across rounds is carried by `DeviceState.revision`, already monotonic
-and already guarded by `applyIfNewer` (`DeviceState.kt:125-126`): a candidate that is not newer for that
-session is discarded, not failed. The documented stale-input rule is a hierarchy of *authority*, not of
-timestamps — a completed census outranks a single-device event even if the event carries a later
-`observedAtEpochMillis`, because the census is a restatement of the whole union while an event is one
-service reporting one moment; within one class, the newer reading wins. The engine starts nothing and
+never seen half-applied. Ordering across rounds is carried by that one lock plus `DeviceState.revision`,
+which is monotonic by construction: the engine is the only writer and applies whole rounds inside the
+lock, so no second candidate arrives to be reconciled. `applyIfNewer` (`DeviceState.kt:138-139`) is
+therefore **not** called by Phase 4, and it is named rather than quietly ignored — it exists to discard a
+stale *command response* that arrives after newer state, and this phase sends no commands and awaits no
+responses. It is the method Phase 6's transport must route through the moment a second writer exists, and
+the risk register records that today's protection is single-writer serialization, not the revision gate.
+The documented stale-input rule is a hierarchy of *authority*, not of timestamps — a completed union is
+what licenses reading absence as a disconnect, while an unanswered or refused round is not (ADR-P4-004's
+last two rows), and nothing in the engine compares two devices' `observedAtEpochMillis` to decide which
+one to believe, because a handset's timestamps are themselves unverified (U-4). The engine starts nothing and
 stops nothing on its own: `consume(Flow<ConnectedDeviceSnapshot>)` runs in the **caller's** scope, so
 there is no `GlobalScope`, no owned `CoroutineScope` and no dispatcher to close (rule 5.1), and
 cancellation of the caller's job is the only shutdown — on which every session is ended with

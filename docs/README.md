@@ -22,6 +22,7 @@ A phase execution prompt that conflicts with items 1–3 must be reported, not s
 | `phases/phase-1/` | Phase 1: project foundation and Kotlin architecture | validated |
 | `phases/phase-2/` | Phase 2: Android Bluetooth foundation (mechanism, permissions, capability reporting) | validated, no hardware executed |
 | `phases/phase-3/` | Phase 3: connected-device detection (bond and link observation, the paired census, profile union, reconciliation) | validated; no hardware executed, device validation deferred by user directive |
+| `phases/phase-4/` | Phase 4: device sessions (the session engine, lifecycle over the projection, reconnect policy, authoritative reactive state) | validated; no hardware executed, device validation deferred by user directive |
 | `phases/phase-<N>/` | One directory per future phase, created from `templates/` | not started |
 | `templates/` | The eight mandatory phase document templates | complete |
 | `decisions/` | Global ADR index → `decisions/README.md` | complete through Phase 3 |
@@ -29,6 +30,21 @@ A phase execution prompt that conflicts with items 1–3 must be reported, not s
 | `architecture/`, `protocols/`, `bluetooth/`, `audio/`, `testing/`, `security/`, `requirements/`, `product/` | Long-lived topic documents, promoted out of a phase record when content stops being phase-specific | reserved placeholders; `security/` now holds `device-access-policy.md`, the rest are empty until the owning phase fills them |
 
 Topic folders are deliberately empty rather than pre-filled with stubs: their content will come from the phase that actually earns it, and a stub would imply knowledge that does not exist yet.
+
+## Phase 4 index
+
+| Document | Purpose |
+|---|---|
+| `execution-prompt.md` | The Phase 4 contract, verbatim |
+| `architecture-audit.md` | What Phase 1 and Phase 3 had already decided about sessions, the naming collision it created, and the three-way deferral conflict reported rather than resolved |
+| `requirements.md` | REQ-P4-001 … REQ-P4-030 |
+| `design.md` | The prompt's diagram as actually built, the dataflow, the mapping table, identity, lifecycle, concurrency, privacy |
+| `specs.md` | Real signatures, the reachable-state set, the 13-row mapping table, flow declarations, guard set, open items |
+| `task-list.md` | TASK-P4-001 … TASK-P4-018 in execution order |
+| `test-plan.md` | TEST-P4-<NNN> records; mocked and physical kept apart, the gap table, and the deferred device session as an instruction |
+| `decisions.md` | ADR-P4-001 … ADR-P4-012, with four dated close-out corrections where an ADR had overstated its own implementation |
+| `risk-register.md` | RISK-065 … RISK-085, continuing the single project-wide register |
+| `validation.md` | Phase 4 acceptance record: the state machine, the reconnection policy, the close-out findings, and Phase 5 readiness |
 
 ## Phase 3 index
 

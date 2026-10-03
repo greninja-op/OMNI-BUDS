@@ -41,9 +41,9 @@ not undoing the decisions in them.
   answers "is this move legal" and refuses to answer it twice.
 - **`core/session/DeviceState.kt`** — the authoritative per-device record: `sessionId`, `identity`,
   `connection`, `capabilities`, `battery`, `audio`, `revision`, `lastUpdatedEpochMillis`. It carries
-  `attemptConnection` (`:96-116`) which refuses an illegal move as `Failure(INVALID_STATE)` rather than
-  performing it, `applyIfNewer` (`:125-126`) for stale-callback safety, `invalidatedForDisconnect`
-  (`:134-143`), and `initial(...)` which starts everything unknown. Its KDoc at `:30-36` states the
+  `attemptConnection` (`:109-129`) which refuses an illegal move as `Failure(INVALID_STATE)` rather than
+  performing it, `applyIfNewer` (`:138-139`) for stale-callback safety, `invalidatedForDisconnect`
+  (`:147-156`), and `initial(...)` which starts everything unknown. Its KDoc at `:30-36` states the
   copy-bypass limitation and says in terms that confining mutation is a later phase's job.
 - **`core/device/DeviceSession.kt:9-15`** — identity, fingerprint, classification and creation time,
   with the connection field **deleted on purpose** because two values disagreeing about one device is
