@@ -2,6 +2,7 @@ package com.omnibuds.core.transport
 
 import com.omnibuds.core.common.OperationOutcome
 import com.omnibuds.core.common.TransportKind
+import kotlinx.coroutines.flow.StateFlow
 
 /**
  * The Bluetooth-specific shape of a [TransportContract], stated as a boundary only.
@@ -45,6 +46,28 @@ interface BluetoothTransport : TransportContract {
      *    this kind (PROTO-XPORT-007).
      */
     override val kind: TransportKind
+
+    /**
+     * The channel's lifecycle, as one authoritative reactive value.
+     *
+     * Added by Phase 6 (ADR-P6-002): the root [TransportContract.isOpen] could say "on" or "off" but not
+     * where a connect or teardown had got to, and prompt §8's rule — never report a channel connected
+     * before the platform confirms it — is only enforceable if there is one place that state lives. This
+     * is that place. A concrete transport drives it through [TransportStateTransitions] and nothing else
+     * may write it, so the "authoritative reactive state" requirement is met at channel granularity below
+     * the session, exactly as [com.omnibuds.core.session.DeviceSessionEngine] does at session granularity.
+     */
+    val state: StateFlow<TransportState>
+
+    /**
+     * Whether the channel is attached, derived from [state] and stored nowhere else.
+     *
+     * The override is the point: `isOpen` and `CONNECTED` cannot disagree because there is only one value,
+     * the same reason Phase 4 deleted the duplicate connection field from `DeviceSession`. A channel that
+     * is [TransportState.CONNECTING] is not open — the attempt is in flight, not confirmed.
+     */
+    override val isOpen: Boolean
+        get() = state.value == TransportState.CONNECTED
 
     /**
      * Ask whether this kind of channel could exist for the caller, without trying to use it.

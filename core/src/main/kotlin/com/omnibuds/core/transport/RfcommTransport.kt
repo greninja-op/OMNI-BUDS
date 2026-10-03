@@ -1,5 +1,7 @@
 package com.omnibuds.core.transport
 
+import com.omnibuds.core.common.OperationOutcome
+
 /**
  * The serial port profile over classic Bluetooth: RFCOMM, a streamed bidirectional socket.
  *
@@ -37,4 +39,32 @@ interface RfcommTransport : BluetoothTransport {
     /** Pinned: this boundary answers for exactly one transport kind, never another. */
     override val kind: com.omnibuds.core.common.TransportKind
         get() = com.omnibuds.core.common.TransportKind.RFCOMM
+
+    /**
+     * The service record or channel this socket will connect to, supplied by a caller who resolved it from
+     * evidence — never a value this layer guesses (PROTO-NOMAGIC-002). [BluetoothTransport]'s inherited
+     * `open()` connects to exactly this endpoint.
+     */
+    val endpoint: RfcommEndpoint
+
+    /**
+     * Read the bytes currently delivered by the stream.
+     *
+     * An RFCOMM socket carries no message boundaries, so one read may return a partial message, an exact
+     * one, or several — and this type deliberately does not pretend otherwise. Turning a byte run into a
+     * message is framing, which belongs to the protocol layer (PROTO-ABST-006), so the transport neither
+     * buffers to a delimiter nor splits on one. An empty array is "nothing available this call", distinct
+     * from a [com.omnibuds.core.common.OmniBudsErrorCategory] failure, and a closed channel refuses rather
+     * than blocking forever.
+     */
+    suspend fun read(): OperationOutcome<ByteArray>
+
+    /**
+     * Write bytes to the stream as given, with no framing and no implicit retry.
+     *
+     * Concurrent writes are serialised by the implementation (prompt §10's "prevent concurrent writes from
+     * corrupting future framing"): the ordering that a later protocol will depend on is established here
+     * at the mechanism level, even though the bytes themselves are opaque.
+     */
+    suspend fun write(bytes: ByteArray): OperationOutcome<Unit>
 }

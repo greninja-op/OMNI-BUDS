@@ -16,22 +16,26 @@ package com.omnibuds.core.transport
  *  - a scan or advertisement member — device discovery is Phase 3
  *    (`BluetoothOperation.DEVICE_DISCOVERY_SCAN`) and Phase 2 prompt section 6 excludes it;
  *  - a characteristic, descriptor or handle member — that is [GattTransport]'s vocabulary, and
- *    OQ-PROTO-01 defers the concrete channel shape to Phase 6;
- *  - a `TransportKind` naming BLE — [com.omnibuds.core.common.TransportKind] deliberately has no
- *    `BLE` constant, because a control channel over BLE *is* a GATT service. Inventing a second
- *    kind for one physical link would let a single operation have two identities, which is the
- *    "assume GATT" defect (PROTO-XPORT-001) arriving from the other direction.
+ *    OQ-PROTO-01 deferred the concrete channel shape to Phase 6, which put it there and not here;
+ *  - a `TransportKind` naming BLE — resolved at Phase 6 (ADR-P6-004): [com.omnibuds.core.common.TransportKind.BLE]
+ *    **does** exist (Phase 2 added it so this boundary had a kind to report), and this file previously
+ *    claimed the opposite while returning it. The kind describes the *link*, not a control channel; a
+ *    vendor control service reachable over BLE is a GATT service, so opening and exchanging happen through
+ *    [GattTransport]. One link having a link-kind and a riding-service-kind is not the "two identities for
+ *    one operation" defect (PROTO-XPORT-001) — an operation is addressed to exactly one of them, and the
+ *    link kind answers availability questions the attribute kind cannot.
  *
  * What the boundary still reserves: the link-level facts that the attribute protocol does not
  * answer — whether the platform can observe BLE at all, whether an advertisement was seen, and
  * whether availability over this link differs from availability of the GATT service riding on it.
  * Those acquire types in the phase that can answer them.
  *
- * Implementing phase: Phase 3 for link observation, Phase 6 for any channel
- * (`BluetoothOperation.TRANSPORT_GATT_OPEN`). Until then no implementation exists, and the audit
- * recommendation for this file is explicit: either Phase 6 gives it distinct meaning or it retires
- * it in favour of [GattTransport]. A marker with a documented reason is preferred to an interface
- * filled with invented methods, which is how fabricated support begins (ADR-P1-013).
+ * Decided at Phase 6 (ADR-P6-004): `BleTransport` is the **link-layer availability boundary**, not a
+ * control channel. It answers whether the platform can observe BLE at all and whether that availability
+ * differs from availability of the [GattTransport] riding on it; `open`/`exchange` for a device over BLE
+ * go through [GattTransport], because a control service on a BLE link *is* a GATT service. It therefore
+ * stays a member interface that inherits [BluetoothTransport.probeAvailability] and adds no control
+ * mechanics of its own — which is Phase 6 giving it distinct meaning, not an invented member.
  */
 interface BleTransport : BluetoothTransport {
 

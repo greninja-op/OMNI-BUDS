@@ -1,5 +1,8 @@
 package com.omnibuds.core.transport
 
+import com.omnibuds.core.common.OperationOutcome
+import kotlinx.coroutines.flow.Flow
+
 /**
  * The GATT attribute protocol as a control channel: services, characteristics and descriptors.
  *
@@ -36,4 +39,50 @@ interface GattTransport : BluetoothTransport {
     /** Pinned: this boundary answers for exactly one transport kind, never another. */
     override val kind: com.omnibuds.core.common.TransportKind
         get() = com.omnibuds.core.common.TransportKind.GATT
+
+    /**
+     * The negotiated ATT payload size, or null while it is not yet established.
+     *
+     * A bound on one characteristic value, not a suggestion: [exchange] of a payload larger than
+     * [MtuInfo.usablePayloadBytes] is refused rather than silently fragmented, because fragmenting is a
+     * framing decision and framing is the protocol layer's, not the transport's (PROTO-ABST-006).
+     */
+    val mtu: MtuInfo?
+
+    /**
+     * Enumerate the services and characteristics the device exposes, as the device declared them.
+     *
+     * Discovery is not assumed to succeed ([com.omnibuds.core.common.OmniBudsErrorCategory.GATT_FAILURE])
+     * and an empty result is a real "nothing is published," distinct from a refused probe. No UUID is
+     * passed in: the device answers for itself, and the caller then names what it wants from the answer
+     * (prompt §9's "do not assume every device exposes GATT / that discovery succeeds").
+     */
+    suspend fun discoverServices(): OperationOutcome<List<GattService>>
+
+    /** Read one characteristic's value. Refused when [target] is not readable or the channel is not open. */
+    suspend fun readCharacteristic(target: GattCharacteristic): OperationOutcome<ByteArray>
+
+    /**
+     * Write one characteristic's value.
+     *
+     * [withResponse] selects a confirmatory write versus a bulk write; either way the transport reports
+     * only that the platform accepted or rejected the operation, never that a value "took effect"
+     * ([TransportResponse.acknowledged]'s rung-2 limit). The bytes are opaque — this is the mechanism, and
+     * what they mean is decided by a protocol this phase does not have.
+     */
+    suspend fun writeCharacteristic(
+        target: GattCharacteristic,
+        value: ByteArray,
+        withResponse: Boolean,
+    ): OperationOutcome<Unit>
+
+    /**
+     * Device-initiated value changes for one notifying characteristic.
+     *
+     * A cold [Flow]: collecting it starts the subscription and cancelling the collector stops it, so a
+     * dropped consumer cannot leak the platform registration (ADR-P6-011). Refused when the characteristic
+     * is not [GattCharacteristic.isNotifiable]. This is the notification channel Phase 2 left open — it
+     * lives on GATT only, because RFCOMM has no indication concept at this layer.
+     */
+    fun notifications(target: GattCharacteristic): Flow<OperationOutcome<ByteArray>>
 }

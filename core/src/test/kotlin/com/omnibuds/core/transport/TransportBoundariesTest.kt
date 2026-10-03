@@ -345,14 +345,19 @@ class TransportBoundariesTest {
         assertTrue(codeLines.none { (_, line) -> line.contains(".probeAvailability") })
 
         val mechanismTokens = listOf(
-            "connectGatt", "closeGatt", "writeCharacteristic", "readCharacteristic",
-            "setCharacteristicNotification", "createRfcommSocket", "listenUsingRfcomm",
-            "BluetoothSocket",
+            // Android framework symbols that must never appear in `:core`. Amended at Phase 6
+            // (ADR-P6-003): this phase legitimately declares domain members, and `readCharacteristic` /
+            // `writeCharacteristic` are among their names, so those *method names* are no longer
+            // forbidden tokens. What stays forbidden is the *framework* — the class and call forms that
+            // would mean a real GATT/socket API leaked into the domain. `probeAvailability`'s call-site
+            // rule above is the same idea: a declaration is allowed, a caller is not.
+            "connectGatt", "BluetoothGatt", "BluetoothSocket", "BluetoothDevice",
+            "createRfcommSocket", "listenUsingRfcomm", "setCharacteristicNotification",
         )
         val violations = codeLines
             .filter { (_, line) -> mechanismTokens.any { token -> line.contains(token) } }
             .map { (name, line) -> "$name: $line" }
-        assertTrue(violations.isEmpty(), "transport holds mechanics, not boundaries:\n$violations")
+        assertTrue(violations.isEmpty(), "transport reached an Android framework API, not a domain type:\n$violations")
     }
 
     private fun transportMainSources(): List<File> {

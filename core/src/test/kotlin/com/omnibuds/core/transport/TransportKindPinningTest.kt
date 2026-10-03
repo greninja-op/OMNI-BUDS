@@ -1,6 +1,9 @@
 package com.omnibuds.core.transport
 
+import com.omnibuds.core.common.OperationOutcome
 import com.omnibuds.core.common.TransportKind
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.StateFlow
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
@@ -60,6 +63,10 @@ private abstract class KindReader : BluetoothTransport {
     override val isOpen: Boolean
         get() = false
 
+    /** A pin reader has no lifecycle to expose; reading state is as unsupported as opening. */
+    override val state: StateFlow<TransportState>
+        get() = unsupported()
+
     override suspend fun open(): Nothing = unsupported()
     override suspend fun close(): Nothing = unsupported()
 
@@ -67,20 +74,36 @@ private abstract class KindReader : BluetoothTransport {
 
     override suspend fun probeAvailability(): Nothing = unsupported()
 
-    private fun unsupported(): Nothing =
+    protected fun unsupported(): Nothing =
         throw UnsupportedOperationException("a pin reader exposes TransportKind.kind and nothing else")
+}
+
+/** GattPin's base: every Phase 6 GATT member throws, so the object still tests only the pinned kind. */
+private abstract class GattReader : KindReader(), GattTransport {
+    override val mtu: MtuInfo? get() = unsupported()
+    override suspend fun discoverServices(): OperationOutcome<List<GattService>> = unsupported()
+    override suspend fun readCharacteristic(target: GattCharacteristic): OperationOutcome<ByteArray> = unsupported()
+    override suspend fun writeCharacteristic(
+        target: GattCharacteristic,
+        value: ByteArray,
+        withResponse: Boolean,
+    ): OperationOutcome<Unit> = unsupported()
+    override fun notifications(target: GattCharacteristic): Flow<OperationOutcome<ByteArray>> = unsupported()
+}
+
+/** RfcommPin's base: same, for the Phase 6 stream members. */
+private abstract class RfcommReader : KindReader(), RfcommTransport {
+    override val endpoint: RfcommEndpoint get() = unsupported()
+    override suspend fun read(): OperationOutcome<ByteArray> = unsupported()
+    override suspend fun write(bytes: ByteArray): OperationOutcome<Unit> = unsupported()
 }
 
 private object BlePin : KindReader(), BleTransport
 
-
-private object GattPin : KindReader(), GattTransport
-
+private object GattPin : GattReader()
 
 private object ClassicPin : KindReader(), ClassicTransport
 
-
-private object RfcommPin : KindReader(), RfcommTransport
-
+private object RfcommPin : RfcommReader()
 
 private object LeAudioPin : KindReader(), LeAudioTransport

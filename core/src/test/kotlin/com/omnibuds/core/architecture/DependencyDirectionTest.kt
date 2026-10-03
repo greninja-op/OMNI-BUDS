@@ -334,8 +334,14 @@ class DependencyDirectionTest {
     @Test
     fun platformModuleContainsNoUnauthorisedCapabilities() {
         val forbidden = listOf(
-            "connectGatt", "BluetoothGatt", "writeCharacteristic", "startDiscovery",
-            "BluetoothLeScanner", "startScan", "createRfcommSocket", "listenUsingRfcomm",
+            // Phase 6 (ADR-P6-008) authorised *client* transport opens, so `connectGatt`, `BluetoothGatt`,
+            // `writeCharacteristic` and `createRfcommSocket*` no longer belong on this list — they are the
+            // mechanism this phase exists to build, gated by BluetoothOperation.TRANSPORT_GATT_OPEN /
+            // TRANSPORT_RFCOMM_OPEN (authorizedInPhase = 6) and confined to System*TransportHandle. What
+            // stays forbidden is everything Phase 6 still may not do:
+            "startDiscovery", // discovery/scanning is deferred (ADR-P5-012, ADR-P6-012): no scanner here
+            "BluetoothLeScanner", "startScan",
+            "listenUsingRfcomm", // server-side listen is not the client transport Phase 6 opens
             "TileService", "AppWidgetProvider", "NotificationListenerService",
             "androidx.appcompat", "androidx.compose", "setContentView", "ComponentActivity",
             // Phase 2 inspects permission standing and never asks for one (prompt section 5.3:
@@ -343,14 +349,10 @@ class DependencyDirectionTest {
             // clause from a reading of the module into a check that fails the build.
             "requestPermissions", "requestPermission",
             // Phase 3's additions, each one a name that reads as a query and is not one. The research
-            // put these forward by name (section 8.2) precisely because the look-alikes are the danger:
-            // `fetchUuidsWithSdp` is an over-the-air service discovery transaction against a named
-            // device, `startVoiceRecognition` and `stopVoiceRecognition` open and shut down the Bluetooth
-            // audio path, and `setPriorityPolicy` writes an LE Audio policy. None of them is observation,
-            // and `connectGatt` was already refused above for the same reason. `setPriorityPolicy` is the
-            // one of the four that the compileSdk 35 public API does not contain at all - no class under
-            // `android/bluetooth` carries the name - so the entry cannot fire today and is kept as the
-            // forward guard it will be the first time the compile SDK widens.
+            // put these forward by name (section 8.2): `fetchUuidsWithSdp` is an over-the-air service
+            // discovery transaction, `startVoiceRecognition`/`stopVoiceRecognition` open and shut the
+            // Bluetooth audio path, and `setPriorityPolicy` writes an LE Audio policy. Phase 6 opens a
+            // control channel; it does none of these, and prompt section 11 keeps media audio with Android.
             "fetchUuidsWithSdp", "startVoiceRecognition", "stopVoiceRecognition", "setPriorityPolicy",
         )
         val pattern = Regex("\\b(${forbidden.joinToString("|")})\\b")
