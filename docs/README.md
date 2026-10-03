@@ -25,13 +25,29 @@ A phase execution prompt that conflicts with items 1–3 must be reported, not s
 | `phases/phase-4/` | Phase 4: device sessions (the session engine, lifecycle over the projection, reconnect policy, authoritative reactive state) | validated; no hardware executed, device validation deferred by user directive |
 | `phases/phase-5/` | Phase 5: device fingerprinting & identification (typed signals, versioned normalization, deterministic matching, an empty evidence-gated registry, session enrichment) | validated; no hardware executed, device validation deferred by user directive |
 | `phases/phase-6/` | Phase 6: Bluetooth transport layer (lifecycle state machine, GATT/RFCOMM operation surface, resolver contract, Android mechanism behind a seam) | validated; no hardware executed, device validation deferred by user directive |
+| `phases/phase-7/` | Phase 7: protocol abstraction engine (lifecycle machine, session + transport-adapter contracts, resolver, command/response, events, vendor-extension reuse — registry ships empty) | validated; no hardware executed, device validation deferred by user directive |
 | `phases/phase-<N>/` | One directory per future phase, created from `templates/` | not started |
 | `templates/` | The eight mandatory phase document templates | complete |
-| `decisions/` | Global ADR index → `decisions/README.md` | complete through Phase 6 |
+| `decisions/` | Global ADR index → `decisions/README.md` | complete through Phase 7 |
 | `development/adb-deployment/` | The local ADB deployment harness: build, validate, install, launch and its error classes | recorded separately from any phase |
 | `architecture/`, `protocols/`, `bluetooth/`, `audio/`, `testing/`, `security/`, `requirements/`, `product/` | Long-lived topic documents, promoted out of a phase record when content stops being phase-specific | reserved placeholders; `security/` now holds `device-access-policy.md`, the rest are empty until the owning phase fills them |
 
 Topic folders are deliberately empty rather than pre-filled with stubs: their content will come from the phase that actually earns it, and a stub would imply knowledge that does not exist yet.
+
+## Phase 7 index
+
+| Document | Purpose |
+|---|---|
+| `execution-prompt.md` | The Phase 7 contract, verbatim |
+| `architecture-audit.md` | That Phases 1/2 already built the protocol knowledge model, what Phase 7 genuinely adds, and the §8/§11 vocabulary discrepancies surfaced rather than forked |
+| `requirements.md` | OB-P7-REQ-001 … OB-P7-REQ-020 |
+| `design.md` | The protocol engine mapped onto the reused model — lifecycle, session/transport boundary, resolver, commands, events, vendor extensions, and what it refuses to be |
+| `specs.md` | Descriptor contract, verification-ladder aliasing, lifecycle transition table, session/adapter signatures, resolution rules, command/response/event contracts, security, limitations |
+| `task-list.md` | P7-T-001 … P7-T-010 mapped to commit `d1fe1a0` and the test proving each, plus the explicitly-not-run scope |
+| `test-plan.md` | 31 tests (all tier T1) grouped by requirement, the reused registry guards, the test-only scripted session, and the deferred device session as `NOT RUN` |
+| `decisions.md` | ADR-P7-001 … ADR-P7-010 — reuse not rebuild, the ladder reconciliations, the empty-registry discipline |
+| `risk-register.md` | RISK-110 … RISK-121, continuing the single project-wide register |
+| `validation.md` | Phase 7 acceptance record (prompt §20), the claim-ceiling statement, the close-out findings, and Phase 8 readiness |
 
 ## Phase 6 index
 

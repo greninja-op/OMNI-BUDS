@@ -26,6 +26,21 @@ Full text of every ADR lives in the phase record that authored it. This file is 
 | ADR-P0-020 | Two Phase 0 workstreams added beyond prompt §4 | accepted | `docs/phases/phase-0/decisions.md` |
 | ADR-P0-021 | Version control is not initialised in Phase 0 | accepted — **closed by Phase 1** | `docs/phases/phase-0/decisions.md` |
 
+Phase 7 — `docs/phases/phase-7/decisions.md`:
+
+| ADR | Title | Status |
+|---|---|---|
+| ADR-P7-001 | Reuse the Phase 1/2 protocol knowledge model; no duplicate descriptor, registry or manager | accepted — answers prompt §2's "no duplicate protocol managers" |
+| ADR-P7-002 | A `ProtocolSession` is a separate runtime type; `EarbudProtocol` stays the stateless family contract | accepted — keeps Phase 8's `discoverCapabilities` out of scope |
+| ADR-P7-003 | Reuse the master `VerificationLevel` ladder; §8's `RESEARCHED`/`AUTOMATED_TESTED` are aliases | accepted — no parallel evidence enum (ADR-P0-014) |
+| ADR-P7-004 | Reuse `EffectClass`; "unknown side effect" is structural absence, not a fourth member | accepted — read/write retry asymmetry preserved (specs §4) |
+| ADR-P7-005 | `ProtocolState` is a third lifecycle axis; `READY` only after `initialize()` succeeds | accepted — distinct from `ConnectionState`/`TransportState` (ADR-P3-002) |
+| ADR-P7-006 | `ProtocolResolver` returns six outcomes over the registry + Phase 5 evidence; connects/executes nothing | accepted — a manufacturer name never selects a protocol (PROTO-ID-001) |
+| ADR-P7-007 | The transport-adapter boundary is a `:core` interface; no Android types, no framework binding shipped | accepted — prompt §16 |
+| ADR-P7-008 | Protocol events are a bounded, cancellation-safe `Flow`; requested ≠ device-confirmed | accepted — prompt §13; Phase 4 event pattern |
+| ADR-P7-009 | Vendor extensions reuse `core.capability.VendorExtension`; namespaced, non-colliding, unknown-resolved | accepted — prompt §14; ADR-P1-008 |
+| ADR-P7-010 | The protocol set ships empty; ceiling `IMPLEMENTED`; scripted protocols are test-only | accepted — ADR-P1-013/ADR-P5-006 precedent; prompt §16/§17 |
+
 Phase 6 — `docs/phases/phase-6/decisions.md`:
 
 | ADR | Title | Status |
