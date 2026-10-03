@@ -26,6 +26,21 @@ Full text of every ADR lives in the phase record that authored it. This file is 
 | ADR-P0-020 | Two Phase 0 workstreams added beyond prompt §4 | accepted | `docs/phases/phase-0/decisions.md` |
 | ADR-P0-021 | Version control is not initialised in Phase 0 | accepted — **closed by Phase 1** | `docs/phases/phase-0/decisions.md` |
 
+Phase 8 — `docs/phases/phase-8/decisions.md`:
+
+| ADR | Title | Status |
+|---|---|---|
+| ADR-P8-001 | Reuse the Phase 1 capability model; no `CapabilityId`, no second container, no four parallel §7 enums | accepted — answers prompt §2's "reuse models / do not duplicate registries"; snapshot *wraps* `DeviceCapabilities` |
+| ADR-P8-002 | Add exactly one §7 dimension — `CapabilityAvailability` — carried beside, never inside, `FeatureCapability` | accepted — the only dimension the `CapabilityState` ladder does not encode |
+| ADR-P8-003 | Reuse `VerificationLevel`; an evidence kind caps the rung its claim may reach | accepted — no competing verification ladder (ADR-P0-014); ceiling `IMPLEMENTED`/`LAB_TESTED` |
+| ADR-P8-004 | Discovery errors reuse `OmniBudsErrorCategory`; §15 names are mapped, none added | accepted — malformed → `INVALID_STATE`; conflict/dependency are fields, not categories (ADR-P3-006/P6-006 precedent) |
+| ADR-P8-005 | The engine consumes a handed-in read-only `CapabilityDiscoverySource`; it never imports the protocol layer | accepted — honours the L2↮L4 layer ban; binding to `EarbudProtocol.discoverCapabilities` is deferred L3/L4 wiring |
+| ADR-P8-006 | Evidence carries provenance; reads fold through the evidence ladder and disagreements surface as `UnresolvedConflict` | accepted — no silent overwrite, no numeric confidence (ADR-P5-004) |
+| ADR-P8-007 | Dependencies are per-protocol/firmware edges with cycle detection; a missing prerequisite blocks availability only, never support | accepted — never infers or enables a prerequisite (prompt §11; master §53) |
+| ADR-P8-008 | The snapshot is immutable, deterministic, schema-versioned and wraps `DeviceCapabilities`; complete ≠ partial ≠ failed | accepted — `subjectRef` is a `String?` because capability and device share a layer |
+| ADR-P8-009 | Vendor extensions reuse `VendorExtension`/namespaced `FeatureId`; unparseable extensions preserved, no command implemented | accepted — prompt §12; ADR-P1-008/P7-009 |
+| ADR-P8-010 | The engine ships with no protocol and no production source; ceiling `IMPLEMENTED`; device discovery `NOT RUN` | accepted — ADR-P1-013/ADR-P5-006/ADR-P7-010 precedent; standing build-first directive |
+
 Phase 7 — `docs/phases/phase-7/decisions.md`:
 
 | ADR | Title | Status |

@@ -26,13 +26,29 @@ A phase execution prompt that conflicts with items 1–3 must be reported, not s
 | `phases/phase-5/` | Phase 5: device fingerprinting & identification (typed signals, versioned normalization, deterministic matching, an empty evidence-gated registry, session enrichment) | validated; no hardware executed, device validation deferred by user directive |
 | `phases/phase-6/` | Phase 6: Bluetooth transport layer (lifecycle state machine, GATT/RFCOMM operation surface, resolver contract, Android mechanism behind a seam) | validated; no hardware executed, device validation deferred by user directive |
 | `phases/phase-7/` | Phase 7: protocol abstraction engine (lifecycle machine, session + transport-adapter contracts, resolver, command/response, events, vendor-extension reuse — registry ships empty) | validated; no hardware executed, device validation deferred by user directive |
+| `phases/phase-8/` | Phase 8: capability discovery engine (evidence provenance, the availability axis, per-protocol dependency validation with cycle detection, a deterministic lifecycle + snapshot wrapping `DeviceCapabilities`, a read-only engine driven by a handed-in source — no protocol, no production source, no device claim) | validated; no hardware executed, device validation deferred by user directive |
 | `phases/phase-<N>/` | One directory per future phase, created from `templates/` | not started |
 | `templates/` | The eight mandatory phase document templates | complete |
-| `decisions/` | Global ADR index → `decisions/README.md` | complete through Phase 7 |
+| `decisions/` | Global ADR index → `decisions/README.md` | complete through Phase 8 |
 | `development/adb-deployment/` | The local ADB deployment harness: build, validate, install, launch and its error classes | recorded separately from any phase |
 | `architecture/`, `protocols/`, `bluetooth/`, `audio/`, `testing/`, `security/`, `requirements/`, `product/` | Long-lived topic documents, promoted out of a phase record when content stops being phase-specific | reserved placeholders; `security/` now holds `device-access-policy.md`, the rest are empty until the owning phase fills them |
 
 Topic folders are deliberately empty rather than pre-filled with stubs: their content will come from the phase that actually earns it, and a stub would imply knowledge that does not exist yet.
+
+## Phase 8 index
+
+| Document | Purpose |
+|---|---|
+| `execution-prompt.md` | The Phase 8 contract, verbatim |
+| `architecture-audit.md` | That Phases 1/2 already built the capability model, what Phase 8 genuinely adds (evidence, availability, dependencies, lifecycle, snapshot, engine), the §7/§15 vocabulary reconciliations, and the L2↮L4 layer rule that forces a handed-in source |
+| `requirements.md` | OB-P8-REQ-001 … OB-P8-REQ-028 |
+| `design.md` | The discovery engine mapped onto the reused model — the read-only seam, evidence folding + conflict, the three-way lifecycle, deterministic snapshot, dependency resolution as a report, and what it refuses to be |
+| `specs.md` | Identity reuse, the four dimensions, the evidence ceiling, the fold/conflict rule, the source contract, the §15→category map, the lifecycle table, the snapshot schema, dependency rules, vendor rules, prohibitions, deferrals |
+| `task-list.md` | P8-T-001 … P8-T-023 mapped to commit `968adb4` and the test proving each, plus the deferred L3/L4 source binding and device discovery as `NOT RUN` |
+| `test-plan.md` | 48 tests (all tier T1) grouped by requirement, the reused Phase 1 capability guards, the test-only scripted source, and the deferred device session as `NOT RUN` |
+| `decisions.md` | ADR-P8-001 … ADR-P8-010 — reuse not rebuild, the availability addition, the evidence-ladder fold, the read-only seam, the empty-registry discipline |
+| `risk-register.md` | RISK-122 … RISK-138, continuing the single project-wide register |
+| `validation.md` | Phase 8 acceptance record (prompt §21/§22), the claim-ceiling statement, the re-summed counts (`:core` 628), and Phase 9 readiness |
 
 ## Phase 7 index
 
