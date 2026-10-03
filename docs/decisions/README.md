@@ -26,6 +26,23 @@ Full text of every ADR lives in the phase record that authored it. This file is 
 | ADR-P0-020 | Two Phase 0 workstreams added beyond prompt §4 | accepted | `docs/phases/phase-0/decisions.md` |
 | ADR-P0-021 | Version control is not initialised in Phase 0 | accepted — **closed by Phase 1** | `docs/phases/phase-0/decisions.md` |
 
+Phase 6 — `docs/phases/phase-6/decisions.md`:
+
+| ADR | Title | Status |
+|---|---|---|
+| ADR-P6-001 | Phase 6 fills the Phase 1/2 transport hierarchy; no parallel interface tree, no new area | accepted — answers prompt §2's "reuse, do not duplicate" |
+| ADR-P6-002 | A transport has one authoritative lifecycle state; `CONNECTED` only on the platform's confirmation | accepted — `TransportState`/`Transitions`, mirrors `ConnectionStateTransitions` |
+| ADR-P6-003 | Capability-specific transport interfaces, never one oversized `DeviceTransport` | accepted — GATT/RFCOMM members; PROTO-ABST-006 held |
+| ADR-P6-004 | A control channel over BLE *is* GATT; `BleTransport` is the link-availability boundary | accepted — **corrects the stale "no BLE constant" docs** (RISK-039-class) |
+| ADR-P6-005 | `TransportResolver` selects nothing; the only Phase 6 impl is the safe unknown | accepted — no manufacturer rule, no auto-connect (prompt §12) |
+| ADR-P6-006 | No new error category; platform statuses map onto existing ones with their retry class intact | accepted — ADR-P3-006 precedent; timeout never means no-effect |
+| ADR-P6-007 | One operation in flight per channel, cancellation-safe teardown, closed rejects work, no auto-reconnect | accepted — prompt §14 |
+| ADR-P6-008 | The Android mechanism is written and seam-tested but never run; ceiling `IMPLEMENTED` | accepted — user's "Domain + Android mechanism" choice; Phase 2/3 precedent |
+| ADR-P6-009 | Audio/control separation is enforced by the layer map, not a runtime check | accepted — transport L1 cannot import audio L2; prompt §11 |
+| ADR-P6-010 | Timeouts flow through the `TimeProvider` seam; `:core` reads no wall clock | accepted — exchange bound = min(caller, request) |
+| ADR-P6-011 | The notification channel gets a Flow home on `GattTransport`, subscription-leak-safe | accepted — closes Phase 2's deferred item 1 |
+| ADR-P6-012 | Phase 6 authorises transport opens and keeps the scan deferred; constructs, never connects | accepted — extends ADR-P5-012; scan tag stays at 6, unexercised |
+
 Phase 5 — `docs/phases/phase-5/decisions.md`:
 
 | ADR | Title | Status |

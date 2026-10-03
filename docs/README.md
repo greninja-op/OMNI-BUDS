@@ -24,13 +24,29 @@ A phase execution prompt that conflicts with items 1–3 must be reported, not s
 | `phases/phase-3/` | Phase 3: connected-device detection (bond and link observation, the paired census, profile union, reconciliation) | validated; no hardware executed, device validation deferred by user directive |
 | `phases/phase-4/` | Phase 4: device sessions (the session engine, lifecycle over the projection, reconnect policy, authoritative reactive state) | validated; no hardware executed, device validation deferred by user directive |
 | `phases/phase-5/` | Phase 5: device fingerprinting & identification (typed signals, versioned normalization, deterministic matching, an empty evidence-gated registry, session enrichment) | validated; no hardware executed, device validation deferred by user directive |
+| `phases/phase-6/` | Phase 6: Bluetooth transport layer (lifecycle state machine, GATT/RFCOMM operation surface, resolver contract, Android mechanism behind a seam) | validated; no hardware executed, device validation deferred by user directive |
 | `phases/phase-<N>/` | One directory per future phase, created from `templates/` | not started |
 | `templates/` | The eight mandatory phase document templates | complete |
-| `decisions/` | Global ADR index → `decisions/README.md` | complete through Phase 5 |
+| `decisions/` | Global ADR index → `decisions/README.md` | complete through Phase 6 |
 | `development/adb-deployment/` | The local ADB deployment harness: build, validate, install, launch and its error classes | recorded separately from any phase |
 | `architecture/`, `protocols/`, `bluetooth/`, `audio/`, `testing/`, `security/`, `requirements/`, `product/` | Long-lived topic documents, promoted out of a phase record when content stops being phase-specific | reserved placeholders; `security/` now holds `device-access-policy.md`, the rest are empty until the owning phase fills them |
 
 Topic folders are deliberately empty rather than pre-filled with stubs: their content will come from the phase that actually earns it, and a stub would imply knowledge that does not exist yet.
+
+## Phase 6 index
+
+| Document | Purpose |
+|---|---|
+| `execution-prompt.md` | The Phase 6 contract, verbatim |
+| `architecture-audit.md` | That Phases 1/2 already built the transport boundaries and left them unimplemented, the layer-map facts, and the `BleTransport` doc/code contradiction escalated rather than filled |
+| `requirements.md` | OB-P6-REQ-001 … OB-P6-REQ-022 |
+| `design.md` | The transport hierarchy as filled in — lifecycle, operation surface, concurrency, resolution, the framework-free seam and the Android mechanism, and what the design refuses to be |
+| `specs.md` | Taxonomy table, state transition table, GATT/RFCOMM member signatures, error mapping, resolution outcomes, platform limitations |
+| `task-list.md` | P6-T-001 … P6-T-015 mapped to commit `83740c5` and the test proving each, plus the explicitly-not-run scope |
+| `test-plan.md` | 24 tests (all tier T1) grouped by requirement, the two inherited guards amended in the open, and the deferred device session as `NOT RUN` |
+| `decisions.md` | ADR-P6-001 … ADR-P6-012, including the `BleTransport` contradiction correction and the scan-tag/scope boundary carried from Phase 5 |
+| `risk-register.md` | RISK-098 … RISK-109, continuing the single project-wide register |
+| `validation.md` | Phase 6 acceptance record (prompt §19), the claim-ceiling statement, the close-out findings, and Phase 7 readiness |
 
 ## Phase 5 index
 
