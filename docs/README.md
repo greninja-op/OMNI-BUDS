@@ -23,13 +23,29 @@ A phase execution prompt that conflicts with items 1–3 must be reported, not s
 | `phases/phase-2/` | Phase 2: Android Bluetooth foundation (mechanism, permissions, capability reporting) | validated, no hardware executed |
 | `phases/phase-3/` | Phase 3: connected-device detection (bond and link observation, the paired census, profile union, reconciliation) | validated; no hardware executed, device validation deferred by user directive |
 | `phases/phase-4/` | Phase 4: device sessions (the session engine, lifecycle over the projection, reconnect policy, authoritative reactive state) | validated; no hardware executed, device validation deferred by user directive |
+| `phases/phase-5/` | Phase 5: device fingerprinting & identification (typed signals, versioned normalization, deterministic matching, an empty evidence-gated registry, session enrichment) | validated; no hardware executed, device validation deferred by user directive |
 | `phases/phase-<N>/` | One directory per future phase, created from `templates/` | not started |
 | `templates/` | The eight mandatory phase document templates | complete |
-| `decisions/` | Global ADR index → `decisions/README.md` | complete through Phase 3 |
+| `decisions/` | Global ADR index → `decisions/README.md` | complete through Phase 5 |
 | `development/adb-deployment/` | The local ADB deployment harness: build, validate, install, launch and its error classes | recorded separately from any phase |
 | `architecture/`, `protocols/`, `bluetooth/`, `audio/`, `testing/`, `security/`, `requirements/`, `product/` | Long-lived topic documents, promoted out of a phase record when content stops being phase-specific | reserved placeholders; `security/` now holds `device-access-policy.md`, the rest are empty until the owning phase fills them |
 
 Topic folders are deliberately empty rather than pre-filled with stubs: their content will come from the phase that actually earns it, and a stub would imply knowledge that does not exist yet.
+
+## Phase 5 index
+
+| Document | Purpose |
+|---|---|
+| `execution-prompt.md` | The Phase 5 contract, verbatim |
+| `architecture-audit.md` | What Phase 1 had built-but-never-fed for identity, the reuse decision, the layer arithmetic, and the two inherited over-claims escalated rather than filled |
+| `requirements.md` | OB-P5-REQ-001 … OB-P5-REQ-030 |
+| `design.md` | The identity pipeline mapped onto the existing architecture, the signal/fingerprint/registry/result models, matching and confidence, session integration, and what the design refuses to be |
+| `specs.md` | Signal contract and reachability table, normalization rules, fingerprint format, confidence semantics table, result contract, matching rules, registry versioning, privacy rules, platform limitations |
+| `task-list.md` | P5-T-001 … P5-T-012 mapped to commit `a5a177d` and the test that proves each, plus the explicitly-not-run scope |
+| `test-plan.md` | 43 tests (all tier T1) grouped by requirement, the inherited guards, and the deferred physical-device verification as `NOT RUN` |
+| `decisions.md` | ADR-P5-001 … ADR-P5-012, including the settlement of the long-`proposed` ADR-P0-018 and the scan-tag correction to inherited data |
+| `risk-register.md` | RISK-086 … RISK-097, continuing the single project-wide register |
+| `validation.md` | Phase 5 acceptance record (prompt §20), the claim-ceiling statement, the close-out findings, and Phase 6 readiness |
 
 ## Phase 4 index
 

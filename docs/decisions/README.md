@@ -21,10 +21,27 @@ Full text of every ADR lives in the phase record that authored it. This file is 
 | ADR-P0-015 | Six codec states; "Selected" maps to `ENABLED` | accepted | `docs/phases/phase-0/decisions.md` |
 | ADR-P0-016 | Unknown representation is tiered, not absolute | accepted (interpretation) | `docs/phases/phase-0/decisions.md` |
 | ADR-P0-017 | Persistence ladder is the master's eight steps | accepted | `docs/phases/phase-0/decisions.md` |
-| **ADR-P0-018** | **Research order: enumeration precedes identification** | **proposed — needs user confirmation** | `docs/phases/phase-0/decisions.md` |
+| ADR-P0-018 | Research order: enumeration precedes identification | accepted — settled by ADR-P5-002 on the user's explicit deferral (was `proposed` since Phase 0 while Phase 1's code relied on it, breaching rule 3) | `docs/phases/phase-0/decisions.md`, `docs/phases/phase-5/decisions.md` |
 | ADR-P0-019 | `docs/product/` created to match master §56 | accepted | `docs/phases/phase-0/decisions.md` |
 | ADR-P0-020 | Two Phase 0 workstreams added beyond prompt §4 | accepted | `docs/phases/phase-0/decisions.md` |
 | ADR-P0-021 | Version control is not initialised in Phase 0 | accepted — **closed by Phase 1** | `docs/phases/phase-0/decisions.md` |
+
+Phase 5 — `docs/phases/phase-5/decisions.md`:
+
+| ADR | Title | Status |
+|---|---|---|
+| ADR-P5-001 | Phase 5 consumes Phase 1's fingerprint model; no parallel identity type, no 13th area | accepted — answers prompt §2's "no duplicate identity models" |
+| ADR-P5-002 | The ladder runs enumerate → identify; a fingerprint is evidence, an identification a conclusion | accepted — **settles ADR-P0-018** (was `proposed`; code relied on it, breaching rule 3) |
+| ADR-P5-003 | Signals are typed by quality, not a boolean: observed/derived/inferred/unknown/unavailable/invalid | accepted — ADR-P0-016 widened to identity; passive-read facts corrected |
+| ADR-P5-004 | `VERIFIED` confidence exists in the type and is unreachable from Phase 5's code | accepted — HIGH needs two independent kinds; no numeric scores |
+| ADR-P5-005 | A name is evidence of nothing except a name: normalization is trim/collapse/case-fold only | accepted — no fuzzy/substring/brand-stripping (prompt §7) |
+| ADR-P5-006 | The registry ships with no vendor rules, and a test asserts the emptiness | accepted — ADR-P1-013 precedent; invented signatures refused by construction |
+| ADR-P5-007 | No scan, no advertisement, no service discovery: the passive boundary is the user's decision | accepted — user "skip the phone" directive; MANUFACTURER_DATA/CHARACTERISTIC_UUID are UNAVAILABLE |
+| ADR-P5-008 | Ambiguity is a result with candidates in it, never an arbitrary winner | accepted — `Ambiguous` exposes no single manufacturer/model |
+| ADR-P5-009 | Identification enriches a session; never recreates one, never touches connection, stays a separate concept | accepted — `productIdentity` is a sibling of reported `DeviceIdentity` |
+| ADR-P5-010 | An address is never an identity signal, and identity data is never a store | accepted — SEC-ID-003; nothing persisted |
+| ADR-P5-011 | Matching is synchronous pure logic in the caller's thread, with the boundary stated not hidden | accepted — prompt §16; no cache, no ML |
+| ADR-P5-012 | The discovery-scan authorization tag moves off Phase 5, which opens no scanner | accepted — **corrects ADR-P3-018's Phase-5 tag to Phase 6** |
 
 Phase 4 — `docs/phases/phase-4/decisions.md`:
 
@@ -64,7 +81,7 @@ Phase 3 — `docs/phases/phase-3/decisions.md`:
 | ADR-P3-015 | Twelve engine rules settled; empty-union category overridden | accepted — amends ADR-P3-010 |
 | ADR-P3-016 | Instrumented sources policed; receiver confinement widened in location only | accepted — amends ADR-P2-016, closes ADR-P3-007's gap |
 | ADR-P3-017 | The paired census is a second question with its own standing; the bond type cannot claim a link | accepted — implements prompt §10's collection B, supersedes this phase's own drafts |
-| ADR-P3-018 | Device discovery is authorised in Phase 5, not Phase 3; the set is pinned by a scope test | accepted — corrects inherited data, closes TEST-P3-036 |
+| ADR-P3-018 | Device discovery is authorised in Phase 5, not Phase 3; the set is pinned by a scope test | accepted — corrects inherited data, closes TEST-P3-036; **its Phase-5 tag superseded by ADR-P5-012 (moved to Phase 6, which is the first that opens a scanner)** |
 | ADR-P3-019 | A pending bind outranks a refusal in the answerability ladder | accepted — corrects code against its own KDoc and ADR-P3-008 |
 
 *Two Phase 3 decisions stay open pending the device session rather than being decided by prose: whether
@@ -132,8 +149,8 @@ Phase 1 — `docs/phases/phase-1/decisions.md`:
 
 | Item | Question | Blocking |
 |---|---|---|
-| ADR-P0-018 | Confirm the research ladder reads *enumerate → identify* rather than the prompt's *identify → discover*. | Phases 5 and 20 (Phase 3 ran without it and recorded the consequence in its own register) ordering — **not** Phase 2 |
-| Deferred device session | The end-of-project handset session the user scheduled instead of per-phase verification (ADR-P3-014) has no date, no owner and no trigger; RISK-045 names that as the process risk and RISK-065/066 carry it into Phase 4. Phases 1-4 built no hardware claim, so nothing is blocked — but every `IMPLEMENTED` in this index stays one until that session runs. | Nothing blocked; everything unverified |
+| ~~ADR-P0-018~~ **CLOSED by Phase 5** | The research ladder question (*enumerate → identify* vs *identify → discover*) was settled in ADR-P5-002: the user had no preference and directed the phone work be skipped, so the ordering the code already assumed was recorded. No longer awaiting the user. | Nothing |
+| Deferred device session | The end-of-project handset session the user scheduled instead of per-phase verification (ADR-P3-014) has no date, no owner and no trigger; RISK-045 names that as the process risk and RISK-065/066 carry it into Phase 4. Phases 1-5 built no hardware claim (Phase 5 adds RISK-097), so nothing is blocked — but every `IMPLEMENTED` in this index stays one until that session runs. | Nothing blocked; everything unverified |
 | ADR-P1-015 | Phase 2 must re-decide `minSdk` (26 was chosen only to make the library module compile; the Bluetooth runtime-permission model changed at API 31). | Phase 2 |
 | ADR-P1-018 | Per-endpoint codec support (phone versus headset) is unmodelled; it needs a discriminator that must not read as "unknown". | Phase 11 |
 | ADR-P0-021 / RISK-015 | Closed by Phase 1: the repository is initialised on branch `main`. CI and any remote remain undecided. | None; CI still absent (RISK-015 partially open) |
