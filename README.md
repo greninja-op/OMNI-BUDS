@@ -82,7 +82,9 @@ export JAVA_HOME=/path/to/jdk-17     # not written into any committed file
 ./gradlew :platform:android:lintDebug  # static analysis of the boundary module
 ```
 
-Create a git-ignored `local.properties` containing `sdk.dir=<path to your Android SDK>`. Nothing machine-specific is committed, and no user-level Gradle or JDK configuration is modified by this project.
+Create a git-ignored `local.properties` containing `sdk.dir=<path to your Android SDK>` (see `local.properties.example`). Nothing machine-specific is committed, and no user-level Gradle or JDK configuration is modified by this project.
+
+For an automated one-step clean rebuild and self-check, run `rebuild.bat` (Windows) or `rebuild.sh` (macOS/Linux). For full instructions, see [REBUILD.md](REBUILD.md).
 
 ## Documentation
 
