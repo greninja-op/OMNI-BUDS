@@ -4,13 +4,17 @@
 
 > **OmniBuds controls actual device capabilities and does not simulate unsupported hardware functionality.**
 
+> **Working with this repo? Start with [CONTEXT.md](CONTEXT.md)** — the living
+> conversation context: current phase state, standing instructions, and the
+> rules for keeping it updated. Read it first, every session.
+
 A universal hardware-control platform for Bluetooth earbuds and headphones: it discovers, verifies and controls the capabilities a connected device actually implements, regardless of manufacturer, so one app can replace a drawer full of brand-specific ones.
 
 Primary platform Android. Language Kotlin. Architecture Kotlin-Multiplatform-ready.
 
 ## Current state — read this before judging anything else
 
-**Phases 0–11 are complete. Nothing user-facing exists yet.**
+**Phases 0–12 are complete. Nothing user-facing exists yet.**
 
 | | |
 |---|---|
