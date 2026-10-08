@@ -49,6 +49,11 @@ class DependencyDirectionTest {
         "session" to 3,
         "persistence" to 3,
         "protocol" to 4,
+        // Phase 9: the hardware feature engine sits above the protocol layer — it
+        // drives the handed-in FeatureProtocolPort seam, consumes capability
+        // snapshots, and owns the control-state axis. It may depend on any lower
+        // layer, and nothing below it may depend on it (ADR-P9-001).
+        "feature" to 5,
     )
 
     private fun mainSources(): List<File> {
