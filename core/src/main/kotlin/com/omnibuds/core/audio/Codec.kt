@@ -38,6 +38,13 @@ enum class Codec(
     APTX_LOSSLESS("aptX Lossless", CodecFamily.CLASSIC_A2DP),
     LDAC("LDAC", CodecFamily.CLASSIC_A2DP),
     LC3("LC3", CodecFamily.LE_AUDIO),
+    /**
+     * Opus as reported by the platform (`SOURCE_CODEC_TYPE_OPUS`,
+     * `CODEC_ID_OPUS`). Listed in the A2DP codec-config family by Android;
+     * carried here so the mapping stays honest instead of dropping a real
+     * platform report.
+     */
+    OPUS("Opus", CodecFamily.CLASSIC_A2DP),
 
     /** Not determined — an unread or unrecognised codec, never a positive claim. */
     UNKNOWN("Unknown", CodecFamily.UNKNOWN),

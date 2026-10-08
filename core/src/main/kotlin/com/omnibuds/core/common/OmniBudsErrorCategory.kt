@@ -69,4 +69,23 @@ enum class OmniBudsErrorCategory(
      * session untouched.
      */
     AUDIO_STATE_CONFLICT(RetryClass.NEVER_RETRY, invalidatesSession = false),
+    /**
+     * Codec observation failed (platform read threw, permission denied
+     * mid-read). Safe to retry: codec reads are side-effect-free, like audio
+     * reads (ADR-P10-007 precedent). Never invalidates the session.
+     */
+    CODEC_OBSERVATION_FAILED(RetryClass.SAFE_TO_RETRY, invalidatesSession = false),
+    /**
+     * The codec state is not observable on this platform (no public API
+     * exposes it). Never retried: the answer will not change without an OS
+     * upgrade. Distinct from "unsupported" — the codec may exist; OmniBuds
+     * simply cannot see its state.
+     */
+    CODEC_NOT_OBSERVABLE(RetryClass.NEVER_RETRY, invalidatesSession = false),
+    /**
+     * A codec runtime record aged out or its device disconnected. Safe to
+     * retry by re-observing; the stale record is kept explicitly stale, never
+     * silently current.
+     */
+    CODEC_STATE_STALE(RetryClass.SAFE_TO_RETRY, invalidatesSession = false),
 }

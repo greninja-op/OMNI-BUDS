@@ -35,6 +35,22 @@ data class CodecCapability(
      * never a guess from another phone or firmware version (AUD-CONFIG-001..003).
      */
     val configurable: Boolean,
+    /**
+     * Why OmniBuds believes this record: source, confidence, and observation time.
+     * Confidence never increases during normalization (Phase 11 §38).
+     */
+    val evidence: CodecEvidence = CodecEvidence.unknown(),
+    /**
+     * Whether the platform can currently observe this codec's state. Separates
+     * platform limitations from device limitations: UNKNOWN state with
+     * [CodecObservability.NOT_OBSERVABLE] is "unexposed", never "unsupported".
+     */
+    val observability: CodecObservability = CodecObservability.UNKNOWN,
+    /**
+     * Parameters as observed (advertised capability or live configuration —
+     * callers must know which); null when nothing was reported.
+     */
+    val metadata: CodecMetadata? = null,
 ) {
 
     /**
