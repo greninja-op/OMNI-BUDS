@@ -1,6 +1,7 @@
 # OmniBuds
 
-![OmniBuds logo](docs/branding/logo.jpg)
+<img width="1254" height="1254" alt="image" src="https://github.com/user-attachments/assets/a1a3b59f-ad00-43a8-ab1d-73066f74a4d1" />
+
 
 > **OmniBuds controls actual device capabilities and does not simulate unsupported hardware functionality.**
 
