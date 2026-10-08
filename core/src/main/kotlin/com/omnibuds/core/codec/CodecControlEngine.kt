@@ -260,8 +260,16 @@ class CodecControlEngine(
         }
 
         // REFRESH_STATE is read-only: observe and return.
+        // Bounded: a hanging adapter must not hold the per-device lock
+        // indefinitely (security review observation).
         if (operation.type == CodecOperationType.REFRESH_STATE) {
-            val observed = safeObserve(device, operation.codec)
+            val observed = try {
+                withTimeout(operation.timeoutMillis ?: CodecOperation.DEFAULT_TIMEOUT_MILLIS) {
+                    safeObserve(device, operation.codec)
+                }
+            } catch (e: TimeoutCancellationException) {
+                null
+            }
             updateState(device) {
                 it.copy(
                     observedCodec = observed?.codec ?: Codec.UNKNOWN,
@@ -327,8 +335,16 @@ class CodecControlEngine(
             }
         }
 
-        // RE-OBSERVE through the adapter.
-        val observed = safeObserve(device, operation.codec)
+        // RE-OBSERVE through the adapter. Bounded: a hanging adapter must not
+        // hold the per-device lock indefinitely (security review observation).
+        // A timed-out observation reads as null → verification fails honestly.
+        val observed = try {
+            withTimeout(timeout) {
+                safeObserve(device, operation.codec)
+            }
+        } catch (e: TimeoutCancellationException) {
+            null
+        }
         updateState(device) {
             it.copy(
                 observedCodec = observed?.codec ?: Codec.UNKNOWN,

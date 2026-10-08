@@ -5,6 +5,7 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertIs
 import kotlin.test.assertTrue
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.test.runTest
 
 /**
@@ -70,5 +71,31 @@ class CodecControlTimeoutTest {
         )
         val result = engine.execute(op)
         assertIs<CodecOperationResult.Verified>(result)
+    }
+
+    @Test
+    fun `refresh with hanging observation does not hold the lock - returns promptly`() = runTest {
+        val hangingAdapter = object : CodecControlAdapter {
+            override suspend fun apply(operation: CodecOperation): CodecApplyOutcome =
+                CodecApplyOutcome.Performed
+            override suspend fun observeAfterApply(
+                device: com.omnibuds.core.device.DeviceIdentity,
+                codec: Codec,
+            ): CodecConfiguration? {
+                delay(60_000L) // Hangs.
+                return null
+            }
+        }
+        val engine = CodecControlEngine(
+            FakeResolver(mapOf(Codec.AAC to fullControlCapability(Codec.AAC))),
+            hangingAdapter,
+            FakeLiveness(),
+            clockMillis = { 1_000L },
+        )
+        val op = CodecOperation.refresh(device, Codec.AAC, "op-1")
+            .copy(timeoutMillis = 100L)
+        val result = engine.execute(op)
+        // Returns promptly (bounded) rather than hanging on the lock.
+        assertIs<CodecOperationResult.Applied>(result)
     }
 }
