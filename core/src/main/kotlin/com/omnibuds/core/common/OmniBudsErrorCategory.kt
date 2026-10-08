@@ -78,8 +78,10 @@ enum class OmniBudsErrorCategory(
     /**
      * The codec state is not observable on this platform (no public API
      * exposes it). Never retried: the answer will not change without an OS
-     * upgrade. Distinct from "unsupported" — the codec may exist; OmniBuds
-     * simply cannot see its state.
+     * upgrade. Distinct from [CODEC_UNAVAILABLE] (the codec itself is not
+     * available) and from "unsupported" — the codec may exist and be active;
+     * OmniBuds simply cannot see its state. This is a platform limitation,
+     * never a device limitation.
      */
     CODEC_NOT_OBSERVABLE(RetryClass.NEVER_RETRY, invalidatesSession = false),
     /**
