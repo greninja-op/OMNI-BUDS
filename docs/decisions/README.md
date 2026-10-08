@@ -244,3 +244,15 @@ Phase 1 — `docs/phases/phase-1/decisions.md`:
 | ADR-P1-015 | Phase 2 must re-decide `minSdk` (26 was chosen only to make the library module compile; the Bluetooth runtime-permission model changed at API 31). | Phase 2 |
 | ADR-P1-018 | Per-endpoint codec support (phone versus headset) is unmodelled; it needs a discriminator that must not read as "unknown". | Phase 11 |
 | ADR-P0-021 / RISK-015 | Closed by Phase 1: the repository is initialised on branch `main`. CI and any remote remain undecided. | None; CI still absent (RISK-015 partially open) |
+
+Phase 12 — `docs/phases/phase-12/decisions.md`:
+
+| ADR | Title | Status |
+|---|---|---|
+| ADR-P12-001 | Honest unavailability over stubbed control (no public Android codec-control API) | accepted — adapter reports NotAvailable; resolver all-false control |
+| ADR-P12-002 | Reuse SideEffectClass; move `feature` → `common` (layer 0) | accepted — forced by DependencyDirectionTest (codec L3 cannot depend on feature L5) |
+| ADR-P12-003 | Rollback re-asserts the last verified state | accepted |
+| ADR-P12-004 | REFRESH_STATE exempt from the verification gate | accepted — refresh is observation, not control |
+| ADR-P12-005 | Rollback does not overwrite the recorded request | accepted |
+| ADR-P12-006 | No new codec identities in Phase 12 | accepted |
+| ADR-P12-007 | `CODEC_OPERATION_FAILED` is SAFE_TO_RETRY (after re-observation) | accepted |
