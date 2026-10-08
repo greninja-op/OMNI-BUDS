@@ -123,7 +123,7 @@ class CodecCapabilityEngine(
                 OmniBudsError(
                     OmniBudsErrorCategory.CODEC_OBSERVATION_FAILED,
                     "codec/start",
-                    "Codec observation failed for device: ${e.message}",
+                    "Codec observation failed for device (${e::class.simpleName}).",
                 ),
             )
         }
@@ -180,7 +180,7 @@ class CodecCapabilityEngine(
                 OmniBudsError(
                     OmniBudsErrorCategory.CODEC_OBSERVATION_FAILED,
                     "codec/refresh",
-                    "Codec refresh failed for device: ${e.message}",
+                    "Codec refresh failed for device (${e::class.simpleName}).",
                 ),
             )
         }
