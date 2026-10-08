@@ -26,6 +26,21 @@ Full text of every ADR lives in the phase record that authored it. This file is 
 | ADR-P0-020 | Two Phase 0 workstreams added beyond prompt §4 | accepted | `docs/phases/phase-0/decisions.md` |
 | ADR-P0-021 | Version control is not initialised in Phase 0 | accepted — **closed by Phase 1** | `docs/phases/phase-0/decisions.md` |
 
+Phase 9 — `docs/phases/phase-9/decisions.md`:
+
+| ADR | Title | Status |
+|---|---|---|
+| ADR-P9-001 | Extend `ConfigurationValue` instead of forking a value hierarchy | accepted — no parallel value enums (ADR-P8-001); the protocol seam already speaks `ConfigurationValue` |
+| ADR-P9-002 | The engine reaches the device only through the handed-in `FeatureProtocolPort` | accepted — ADR-P8-005 pattern; no protocol/transport imports in the feature area; no production port in Phase 9 |
+| ADR-P9-003 | Reconcile the prompt's two state vocabularies onto the §9 six-state model | accepted — requested → `Pending.requested`, confirmed → `Confirmed`; `CapabilityState` untouched |
+| ADR-P9-004 | EQ bands are values, not identities | accepted — one `equalization.equalizer` identity with a structured value (the `CoreFeature` precedent), not three form identities |
+| ADR-P9-005 | `FeatureAccess.WRITE_ONLY` is reserved vocabulary, never produced | accepted — the capability model cannot express it without a new ADR |
+| ADR-P9-006 | Conflict activity convention (`isActiveValue`) | accepted — documented modelling, not hardware truth |
+| ADR-P9-007 | Failed reads keep last-confirmed as stale knowledge | accepted — control state differs from discovery (ADR-P8-007 context) |
+| ADR-P9-008 | Superseded writes report the newer device truth | accepted — the outcome carries truth, not attribution |
+| ADR-P9-009 | The standard catalogue declares only safe structural relations | accepted — prompt §19 examples are examples, not universal truths |
+| ADR-P9-010 | No new error categories | accepted — prompt §24 names map onto existing categories (ADR-P8-004 precedent) |
+
 Phase 8 — `docs/phases/phase-8/decisions.md`:
 
 | ADR | Title | Status |

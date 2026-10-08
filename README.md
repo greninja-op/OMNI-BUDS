@@ -1,5 +1,7 @@
 # OmniBuds
 
+![OmniBuds logo](docs/branding/logo.jpg)
+
 > **OmniBuds controls actual device capabilities and does not simulate unsupported hardware functionality.**
 
 A universal hardware-control platform for Bluetooth earbuds and headphones: it discovers, verifies and controls the capabilities a connected device actually implements, regardless of manufacturer, so one app can replace a drawer full of brand-specific ones.

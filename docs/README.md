@@ -27,13 +27,27 @@ A phase execution prompt that conflicts with items 1–3 must be reported, not s
 | `phases/phase-6/` | Phase 6: Bluetooth transport layer (lifecycle state machine, GATT/RFCOMM operation surface, resolver contract, Android mechanism behind a seam) | validated; no hardware executed, device validation deferred by user directive |
 | `phases/phase-7/` | Phase 7: protocol abstraction engine (lifecycle machine, session + transport-adapter contracts, resolver, command/response, events, vendor-extension reuse — registry ships empty) | validated; no hardware executed, device validation deferred by user directive |
 | `phases/phase-8/` | Phase 8: capability discovery engine (evidence provenance, the availability axis, per-protocol dependency validation with cycle detection, a deterministic lifecycle + snapshot wrapping `DeviceCapabilities`, a read-only engine driven by a handed-in source — no protocol, no production source, no device claim) | validated; no hardware executed, device validation deferred by user directive |
+| `phases/phase-9/` | Phase 9: hardware feature engine (six-state control machine with requested-vs-confirmed separation, 10-step validator, six-kind dependency/conflict evaluation, mandatory write read-back with never-resent timeouts, per-feature serialization, session invalidation, reactive state repository — handed-in port seam, no vendor commands, no hardware contact) | validated; no hardware executed, device validation deferred by user directive |
 | `phases/phase-<N>/` | One directory per future phase, created from `templates/` | not started |
 | `templates/` | The eight mandatory phase document templates | complete |
-| `decisions/` | Global ADR index → `decisions/README.md` | complete through Phase 8 |
+| `decisions/` | Global ADR index → `decisions/README.md` | complete through Phase 9 |
 | `development/adb-deployment/` | The local ADB deployment harness: build, validate, install, launch and its error classes | recorded separately from any phase |
 | `architecture/`, `protocols/`, `bluetooth/`, `audio/`, `testing/`, `security/`, `requirements/`, `product/` | Long-lived topic documents, promoted out of a phase record when content stops being phase-specific | reserved placeholders; `security/` now holds `device-access-policy.md`, the rest are empty until the owning phase fills them |
 
 Topic folders are deliberately empty rather than pre-filled with stubs: their content will come from the phase that actually earns it, and a stub would imply knowledge that does not exist yet.
+
+## Phase 9 index
+
+| Document | Purpose |
+|---|---|
+| `requirements.md` | OB-P9-REQ-001 … OB-P9-REQ-025 |
+| `design.md` | The feature engine mapped onto the reused models — the control state machine, the 10-step validator, dependencies/conflicts, the operation lifecycle, the port seam, the standard catalogue, and what it refuses to be |
+| `specs.md` | Package layout, `FeatureOperation`/`FeatureStateRepository`/`FeatureEngine`/`FeatureProtocolPort` contracts, the five new value shapes, the §24→category error map, the nine invariants |
+| `task-list.md` | TASK-P9-001 … TASK-P9-024 and their status |
+| `test-plan.md` | TEST-P9-001 … TEST-P9-011 grouped by requirement, the scripted port, and the deferred device session as `NOT RUN` |
+| `decisions.md` | ADR-P9-001 … ADR-P9-010 — value-shape extension, the port seam, vocabulary reconciliation, EQ-as-value, write-only reservation, the conflict convention |
+| `risk-register.md` | RISK-P9-001 … RISK-P9-008, continuing the single project-wide register |
+| `validation.md` | Phase 9 acceptance record, the claim-ceiling statement, and Phase 10 readiness |
 
 ## Phase 8 index
 
