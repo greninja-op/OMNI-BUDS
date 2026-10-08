@@ -31,6 +31,8 @@ class OmniBudsErrorCategoryTest {
             "ADAPTER_UNAVAILABLE", "UNSUPPORTED_OPERATION", "PLATFORM_API_UNAVAILABLE",
             "CONNECTION_UNAVAILABLE", "RESOURCE_UNAVAILABLE", "PLATFORM_EXCEPTION",
             "UNKNOWN_FAILURE",
+            // ADR-P10-007, the audio-observation categories Phase 10 needs
+            "AUDIO_OBSERVATION_FAILED", "LE_AUDIO_UNAVAILABLE", "AUDIO_STATE_CONFLICT",
         )
 
         assertEquals(expected, OmniBudsErrorCategory.entries.map { it.name }.toSet())
@@ -40,6 +42,9 @@ class OmniBudsErrorCategoryTest {
     fun everyCategoryDeclaresItsRetryClassAndNoneIsUnspecified() {
         val expected = mapOf(
             OmniBudsErrorCategory.READ_FAILED to RetryClass.SAFE_TO_RETRY,
+            // Phase 10: observation is read-only, so re-reading after a failed
+            // observation has no side effects to compound (ADR-P10-007).
+            OmniBudsErrorCategory.AUDIO_OBSERVATION_FAILED to RetryClass.SAFE_TO_RETRY,
 
             OmniBudsErrorCategory.BLUETOOTH_DISABLED to RetryClass.RETRY_AFTER_REREAD,
             OmniBudsErrorCategory.DEVICE_DISCONNECTED to RetryClass.RETRY_AFTER_REREAD,
@@ -64,6 +69,10 @@ class OmniBudsErrorCategoryTest {
             OmniBudsErrorCategory.UNSUPPORTED_OPERATION to RetryClass.NEVER_RETRY,
             OmniBudsErrorCategory.PLATFORM_API_UNAVAILABLE to RetryClass.NEVER_RETRY,
             OmniBudsErrorCategory.UNKNOWN_FAILURE to RetryClass.NEVER_RETRY,
+            // Phase 10: LE Audio absence will not change without an OS upgrade,
+            // and a state conflict is a data condition, not a failure.
+            OmniBudsErrorCategory.LE_AUDIO_UNAVAILABLE to RetryClass.NEVER_RETRY,
+            OmniBudsErrorCategory.AUDIO_STATE_CONFLICT to RetryClass.NEVER_RETRY,
         )
 
         assertFullCoverage(expected)
@@ -76,9 +85,13 @@ class OmniBudsErrorCategoryTest {
     fun aWriteOrUnknownEffectIsNeverBlindlyRetried() {
         val blindRetry = OmniBudsErrorCategory.entries.filter { it.retryClass == RetryClass.SAFE_TO_RETRY }
 
-        // Exactly one category may be repeated without first checking what the device did: a failed
-        // read. Widening this set is how a side-effecting command eventually gets re-sent.
-        assertEquals(setOf(OmniBudsErrorCategory.READ_FAILED), blindRetry.toSet())
+        // Exactly two categories may be repeated without first checking what the device did:
+        // a failed read, and a failed audio observation. Both are side-effect-free reads;
+        // widening this set to anything side-effecting is how a command eventually gets re-sent.
+        assertEquals(
+            setOf(OmniBudsErrorCategory.READ_FAILED, OmniBudsErrorCategory.AUDIO_OBSERVATION_FAILED),
+            blindRetry.toSet(),
+        )
     }
 
     @Test
@@ -109,6 +122,11 @@ class OmniBudsErrorCategoryTest {
             OmniBudsErrorCategory.UNSUPPORTED_OPERATION to false,
             OmniBudsErrorCategory.PLATFORM_API_UNAVAILABLE to false,
             OmniBudsErrorCategory.RESOURCE_UNAVAILABLE to false,
+            // Phase 10: observation is read-only, so it can never leave the
+            // device state uncertain (ADR-P10-007).
+            OmniBudsErrorCategory.AUDIO_OBSERVATION_FAILED to false,
+            OmniBudsErrorCategory.LE_AUDIO_UNAVAILABLE to false,
+            OmniBudsErrorCategory.AUDIO_STATE_CONFLICT to false,
         )
 
         assertFullCoverage(expected)

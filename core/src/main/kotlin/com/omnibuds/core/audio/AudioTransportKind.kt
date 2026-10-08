@@ -19,6 +19,14 @@ enum class AudioTransportKind {
     /** Hands-free profile call audio, whose codec rules differ from media audio. */
     HFP,
 
+    /**
+     * Headset profile call audio. Phase 10 addition (OB-P10-REQ-002): HSP is a
+     * distinct classic profile from HFP with its own proxy and state, and
+     * collapsing the two would lose the ability to say which one the platform
+     * actually reported.
+     */
+    HSP,
+
     /** LE Audio transport, carrying LC3. A separate family, not an A2DP codec (master section 20). */
     LE_AUDIO,
 
