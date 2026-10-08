@@ -2,7 +2,6 @@
 
 <img width="1254" height="1254" alt="image" src="https://github.com/user-attachments/assets/a1a3b59f-ad00-43a8-ab1d-73066f74a4d1" />
 
-
 > **OmniBuds controls actual device capabilities and does not simulate unsupported hardware functionality.**
 
 A universal hardware-control platform for Bluetooth earbuds and headphones: it discovers, verifies and controls the capabilities a connected device actually implements, regardless of manufacturer, so one app can replace a drawer full of brand-specific ones.
@@ -11,15 +10,15 @@ Primary platform Android. Language Kotlin. Architecture Kotlin-Multiplatform-rea
 
 ## Current state — read this before judging anything else
 
-**Phase 2 is complete. Nothing user-facing exists yet.**
+**Phases 0–10 are complete. Nothing user-facing exists yet.**
 
 | | |
 |---|---|
-| What is built | Module and build foundation; the platform-independent domain contracts (device identity, fingerprint, session, capability states, codec state, audio transport state, structured errors, protocol and transport contracts, persistence contracts); and Phase 2's Bluetooth foundation: the phone's adapter can be inspected and its state observed, permission requirements are resolved per `targetSdkVersion` with the standing read from the platform, the phone's own capability set is reported with OS availability kept apart from hardware evidence, transport boundaries exist as contracts, and the Android mechanism behind the boundary is real code in `platform/android/`. |
-| What is **not** built | Any contact with a headset: device detection, paired-device lists, GATT, RFCOMM, LE Audio, codec control, ANC, transparency, EQ, gestures, battery reading, vendor protocols, storage, notifications, Quick Settings, widgets, and all product UI. Also absent on purpose: the app declares **no Bluetooth permission at all** and requests none, because Phase 2 needs none to inspect the phone's own adapter. |
-| Devices supported | **None.** No earbud or headphone has been tested, and no Phase 2 class has run on a phone either — `platform/android` is a library with nothing installed to host it. Every statement in this repository about hardware behaviour is a rule, not a verified capability. |
-| Test status | 353 JVM unit tests in `:core` and 45 in `:platform:android`, 0 failures. All run against scripted seams; none touches a radio, so none can justify a `HARDWARE_VERIFIED` claim. |
-| Next phase | Phase 3 — device discovery. It has not started and will not begin without an explicit instruction, and it additionally needs a decision about which module hosts the Bluetooth layer on a device. |
+| What is built | Module and build foundation; the platform-independent domain contracts (device identity, fingerprint, session, capability states, codec state, audio transport state, structured errors, protocol and transport contracts, persistence contracts); the Android Bluetooth foundation (adapter inspection, version-aware permissions, platform capability reporting, transport boundaries); connected-device observation (link/bond/availability vocabulary, profile-union reconciliation, paired census); device sessions; device fingerprinting and identification; the Bluetooth transport layer (GATT/RFCOMM operation surfaces behind a framework-free seam); the protocol abstraction engine; the capability discovery engine; the hardware feature engine (six-state control machine, 10-step validator, standard feature catalogue); and the **audio transport engine** — observation-only A2DP/HFP/HSP/LE Audio state with a 7-state connection vocabulary, audio-device observation separate from Bluetooth identity, a pure-function reconciler, a lifecycle-safe engine, API-33-guarded LE Audio, and audio/control plane separation. No audio is captured, no codec is configured, no routing is changed. |
+| What is **not** built | Codec discovery and control, audio capture or processing of any kind, production UI, notifications, widgets, and any contact with real headset hardware beyond observation contracts. The app still declares no unjustified permissions and requests none for observation. |
+| Devices supported | **None tested.** No earbud or headphone has been tested on hardware, and no platform class has run on a phone — `platform/android` is a library with nothing installed to host it. Every statement in this repository about hardware behaviour is a rule, not a verified capability. |
+| Test status | 890 JVM unit tests — 774 in `:core`, 116 in `:platform:android` — 0 failures. All run against scripted seams; none touches a radio, so none can justify a `HARDWARE_VERIFIED` claim. |
+| Next phase | Phase 11 — audio codec discovery. It has not started and will not begin without an explicit instruction. |
 
 Development is deliberately **backend-first**: the capability and state model is finished before any screen exists, so the UI can only ever show what discovery actually established.
 

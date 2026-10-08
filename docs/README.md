@@ -28,13 +28,27 @@ A phase execution prompt that conflicts with items 1–3 must be reported, not s
 | `phases/phase-7/` | Phase 7: protocol abstraction engine (lifecycle machine, session + transport-adapter contracts, resolver, command/response, events, vendor-extension reuse — registry ships empty) | validated; no hardware executed, device validation deferred by user directive |
 | `phases/phase-8/` | Phase 8: capability discovery engine (evidence provenance, the availability axis, per-protocol dependency validation with cycle detection, a deterministic lifecycle + snapshot wrapping `DeviceCapabilities`, a read-only engine driven by a handed-in source — no protocol, no production source, no device claim) | validated; no hardware executed, device validation deferred by user directive |
 | `phases/phase-9/` | Phase 9: hardware feature engine (six-state control machine with requested-vs-confirmed separation, 10-step validator, six-kind dependency/conflict evaluation, mandatory write read-back with never-resent timeouts, per-feature serialization, session invalidation, reactive state repository — handed-in port seam, no vendor commands, no hardware contact) | validated; no hardware executed, device validation deferred by user directive |
+| `phases/phase-10/` | Phase 10: audio transport engine (observation-only; A2DP/HFP/HSP/LE Audio taxonomy, 7-state connection vocabulary, audio-device observation separate from Bluetooth identity, immutable snapshot, 5-rule pure reconciler, lifecycle-safe engine, API-33-guarded LE Audio, audio/control plane separation — no capture, no codec configuration, no routing control) | validated; no hardware executed, device validation deferred by user directive |
 | `phases/phase-<N>/` | One directory per future phase, created from `templates/` | not started |
 | `templates/` | The eight mandatory phase document templates | complete |
-| `decisions/` | Global ADR index → `decisions/README.md` | complete through Phase 9 |
+| `decisions/` | Global ADR index → `decisions/README.md` | complete through Phase 10 |
 | `development/adb-deployment/` | The local ADB deployment harness: build, validate, install, launch and its error classes | recorded separately from any phase |
 | `architecture/`, `protocols/`, `bluetooth/`, `audio/`, `testing/`, `security/`, `requirements/`, `product/` | Long-lived topic documents, promoted out of a phase record when content stops being phase-specific | reserved placeholders; `security/` now holds `device-access-policy.md`, the rest are empty until the owning phase fills them |
 
 Topic folders are deliberately empty rather than pre-filled with stubs: their content will come from the phase that actually earns it, and a stub would imply knowledge that does not exist yet.
+
+## Phase 10 index
+
+| Document | Purpose |
+|---|---|
+| `requirements.md` | OB-P10-REQ-001 … OB-P10-REQ-025 |
+| `design.md` | The observation-only engine: ports, handle seam, reconciler rules, lifecycle, audio/control separation, and what it refuses to be |
+| `specs.md` | Domain types, engine contract, platform contract, error categories, API-level matrix, permissions, forbidden list |
+| `task-list.md` | Phase 10 tasks and their status |
+| `test-plan.md` | Core + Android unit tests, the fake-handle pattern, explicit non-coverage |
+| `decisions.md` | ADR-P10-001 … ADR-P10-010 — observation-only, taxonomy reuse, pure reconciler, HSP honesty, LE Audio isolation, AutoCloseable, error categories, injected dispatcher, bluetooth.audio package, SCO non-attribution |
+| `risk-register.md` | RISK-P10-001 … RISK-P10-008, continuing the single project-wide register |
+| `validation.md` | Phase 10 acceptance record (890 tests), the claim-ceiling statement, and Phase 11 readiness |
 
 ## Phase 9 index
 

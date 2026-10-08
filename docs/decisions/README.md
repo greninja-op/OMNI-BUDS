@@ -26,6 +26,21 @@ Full text of every ADR lives in the phase record that authored it. This file is 
 | ADR-P0-020 | Two Phase 0 workstreams added beyond prompt §4 | accepted | `docs/phases/phase-0/decisions.md` |
 | ADR-P0-021 | Version control is not initialised in Phase 0 | accepted — **closed by Phase 1** | `docs/phases/phase-0/decisions.md` |
 
+Phase 10 — `docs/phases/phase-10/decisions.md`:
+
+| ADR | Title | Status |
+|---|---|---|
+| ADR-P10-001 | Observation-only engine; Android owns the media path | accepted — no capture/decode/route code paths exist; `PhaseTenScopeTest` machine-checks the ban |
+| ADR-P10-002 | Reuse `AudioTransportKind`, extend with HSP | accepted — no parallel taxonomy; same concept, same package, same layer |
+| ADR-P10-003 | Reconciler is a pure function; conflicts become UNKNOWN + diagnostics | accepted — plausibility is how fabrications start |
+| ADR-P10-004 | HSP reported UNKNOWN on Android | accepted — no HSP-specific platform state; copying HFP would invent knowledge |
+| ADR-P10-005 | `LeAudioApi33` isolated; never loaded below API 33 | accepted — absence of an instance is the "unavailable" answer |
+| ADR-P10-006 | `AutoCloseable` for the audio callback registration | accepted — `awaitClose` cannot suspend; idempotent close |
+| ADR-P10-007 | Three error categories; observation never invalidates a session | accepted — `SAFE_TO_RETRY` widening is deliberate (reads are side-effect-free) |
+| ADR-P10-008 | Engine dispatcher injected | accepted — deterministic tests need the test scheduler |
+| ADR-P10-009 | Adapters live under `bluetooth.audio` | accepted — existing architecture boundary fits; no new top-level package |
+| ADR-P10-010 | SCO devices not attributed to HFP or HSP | accepted — shared path; attribution would be a guess |
+
 Phase 9 — `docs/phases/phase-9/decisions.md`:
 
 | ADR | Title | Status |
