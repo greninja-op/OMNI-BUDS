@@ -90,4 +90,12 @@ enum class OmniBudsErrorCategory(
      * silently current.
      */
     CODEC_STATE_STALE(RetryClass.SAFE_TO_RETRY, invalidatesSession = false),
+
+    /**
+     * A codec control operation failed at the mechanism level (the platform
+     * or vendor path reported failure). Safe to retry only after
+     * re-observation: a timed-out or failed write is followed by a read,
+     * never by a blind second write.
+     */
+    CODEC_OPERATION_FAILED(RetryClass.SAFE_TO_RETRY, invalidatesSession = false),
 }

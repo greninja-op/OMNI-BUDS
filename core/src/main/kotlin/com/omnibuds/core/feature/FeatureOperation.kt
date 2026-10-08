@@ -1,6 +1,7 @@
 package com.omnibuds.core.feature
 
 import com.omnibuds.core.common.FeatureId
+import com.omnibuds.core.common.SideEffectClass
 import com.omnibuds.core.config.ConfigurationValue
 
 /**
@@ -19,26 +20,6 @@ enum class FeatureOperationType {
     SUBSCRIBE,
     UNSUBSCRIBE,
     RESET,
-}
-
-/**
- * Whether an operation may change device state.
- *
- * The class is data, not derived per call site, so a side-effecting command can
- * never be retried by accident: the engine consults this together with the error
- * category's [com.omnibuds.core.common.RetryClass] before any repeat (Phase 9
- * prompt section 21, mirroring [com.omnibuds.core.common.RetryClass]'s contract).
- */
-enum class SideEffectClass {
-
-    /** Idempotent reads; may be retried under a bounded policy. */
-    READ_ONLY_SAFE,
-
-    /**
-     * May change device state; never re-sent blindly. A timed-out write is
-     * followed by a read, never by a second write (PROTO-ERR-002).
-     */
-    SIDE_EFFECTING,
 }
 
 /**
