@@ -35,6 +35,7 @@ class OmniBudsErrorCategoryTest {
             "AUDIO_OBSERVATION_FAILED", "LE_AUDIO_UNAVAILABLE", "AUDIO_STATE_CONFLICT",
             // Phase 11, the codec-observation categories
             "CODEC_OBSERVATION_FAILED", "CODEC_NOT_OBSERVABLE", "CODEC_STATE_STALE",
+            "CODEC_OPERATION_FAILED",
         )
 
         assertEquals(expected, OmniBudsErrorCategory.entries.map { it.name }.toSet())
@@ -50,6 +51,7 @@ class OmniBudsErrorCategoryTest {
             // Phase 11: codec reads are side-effect-free; stale state is fixed by re-observing.
             OmniBudsErrorCategory.CODEC_OBSERVATION_FAILED to RetryClass.SAFE_TO_RETRY,
             OmniBudsErrorCategory.CODEC_STATE_STALE to RetryClass.SAFE_TO_RETRY,
+            OmniBudsErrorCategory.CODEC_OPERATION_FAILED to RetryClass.SAFE_TO_RETRY,
 
             OmniBudsErrorCategory.BLUETOOTH_DISABLED to RetryClass.RETRY_AFTER_REREAD,
             OmniBudsErrorCategory.DEVICE_DISCONNECTED to RetryClass.RETRY_AFTER_REREAD,
@@ -102,6 +104,7 @@ class OmniBudsErrorCategoryTest {
                 OmniBudsErrorCategory.AUDIO_OBSERVATION_FAILED,
                 OmniBudsErrorCategory.CODEC_OBSERVATION_FAILED,
                 OmniBudsErrorCategory.CODEC_STATE_STALE,
+                OmniBudsErrorCategory.CODEC_OPERATION_FAILED,
             ),
             blindRetry.toSet(),
         )
@@ -144,6 +147,7 @@ class OmniBudsErrorCategoryTest {
             OmniBudsErrorCategory.CODEC_OBSERVATION_FAILED to false,
             OmniBudsErrorCategory.CODEC_NOT_OBSERVABLE to false,
             OmniBudsErrorCategory.CODEC_STATE_STALE to false,
+            OmniBudsErrorCategory.CODEC_OPERATION_FAILED to false,
         )
 
         assertFullCoverage(expected)

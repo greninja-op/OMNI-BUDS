@@ -2,6 +2,7 @@ package com.omnibuds.core.feature
 
 import com.omnibuds.core.capability.CapabilityAvailability
 import com.omnibuds.core.common.FeatureId
+import com.omnibuds.core.common.SideEffectClass
 import com.omnibuds.core.common.TransportKind
 import com.omnibuds.core.config.ConfigurationValue
 import com.omnibuds.core.state.CapabilityState
