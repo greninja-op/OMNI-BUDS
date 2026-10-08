@@ -79,7 +79,7 @@ survive.
 
 | Platform fact | Adapter behavior |
 |---|---|
-| API 35+ `getSupportedCodecTypes()` | → SUPPORTED rung, OBSERVED, per-codec |
+| API 35+ `getSupportedCodecTypes()` | → SUPPORTED rung, OBSERVED, per-codec — **but requires `BLUETOOTH_PRIVILEGED`** (system apps only), so OmniBuds degrades to NOT_OBSERVABLE in practice; the path exists for completeness |
 | Below API 35 / no permission | → all codecs UNKNOWN + NOT_OBSERVABLE |
 | Active/negotiated codec | → null runtime ("unobserved"), NOT_OBSERVABLE + limitation |
 | aptX Adaptive/Lossless | → identity exists, NOT_OBSERVABLE (no platform constant) |

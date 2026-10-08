@@ -51,8 +51,8 @@
 |---|---|---|
 | `BluetoothCodecConfig` / `BluetoothCodecStatus` (public) | 33 | Data classes only; no public getter |
 | `BluetoothLeAudioCodecConfig` / `...Status` (public) | 33 | Data classes only; no public getter on `BluetoothLeAudio` |
-| `BluetoothA2dp.getSupportedCodecTypes()` | 35 | Local phone capabilities; needs BLUETOOTH_CONNECT |
-| `BluetoothCodecType` (+ `CODEC_ID_*`) | 35 | SBC=0, AAC=2, APTX=16797695, APTX_HD=604035071, LDAC=-1442763265, OPUS=16834815 |
+| `BluetoothA2dp.getSupportedCodecTypes()` | 35 | Local phone capabilities; **requires `BLUETOOTH_PRIVILEGED` (system apps only)** — effectively unusable by OmniBuds; needs BLUETOOTH_CONNECT |
+| `BluetoothCodecType` (+ `CODEC_ID_*`) | 35 | SBC=0, AAC=2, APTX=16797695, APTX_HD=604035071, LDAC=-1442763265, OPUS=16834815; no aptX Adaptive/Lossless/LC3 |
 | `SOURCE_CODEC_TYPE_*` | 33 | SBC=0, AAC=1, APTX=2, APTX_HD=3, LDAC=4, LC3=5, OPUS=6 |
 | Active/negotiated codec getter | — | **Does not exist in public API** |
 | Codec broadcast | — | **None public** |
