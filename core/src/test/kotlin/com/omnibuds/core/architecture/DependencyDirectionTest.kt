@@ -54,6 +54,12 @@ class DependencyDirectionTest {
         // snapshots, and owns the control-state axis. It may depend on any lower
         // layer, and nothing below it may depend on it (ADR-P9-001).
         "feature" to 5,
+        // Phase 11: the codec capability engine sits above the audio vocabulary —
+        // it consumes Codec/CodecState/CodecCapability, keys snapshots by
+        // DeviceIdentity, and owns the codec-state axis behind the
+        // CodecObservationSource port. It may depend on any lower layer, and
+        // nothing below it may depend on it.
+        "codec" to 3,
     )
 
     private fun mainSources(): List<File> {

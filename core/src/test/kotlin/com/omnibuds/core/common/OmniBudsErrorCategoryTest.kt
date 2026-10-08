@@ -33,6 +33,8 @@ class OmniBudsErrorCategoryTest {
             "UNKNOWN_FAILURE",
             // ADR-P10-007, the audio-observation categories Phase 10 needs
             "AUDIO_OBSERVATION_FAILED", "LE_AUDIO_UNAVAILABLE", "AUDIO_STATE_CONFLICT",
+            // Phase 11, the codec-observation categories
+            "CODEC_OBSERVATION_FAILED", "CODEC_NOT_OBSERVABLE", "CODEC_STATE_STALE",
         )
 
         assertEquals(expected, OmniBudsErrorCategory.entries.map { it.name }.toSet())
@@ -45,6 +47,9 @@ class OmniBudsErrorCategoryTest {
             // Phase 10: observation is read-only, so re-reading after a failed
             // observation has no side effects to compound (ADR-P10-007).
             OmniBudsErrorCategory.AUDIO_OBSERVATION_FAILED to RetryClass.SAFE_TO_RETRY,
+            // Phase 11: codec reads are side-effect-free; stale state is fixed by re-observing.
+            OmniBudsErrorCategory.CODEC_OBSERVATION_FAILED to RetryClass.SAFE_TO_RETRY,
+            OmniBudsErrorCategory.CODEC_STATE_STALE to RetryClass.SAFE_TO_RETRY,
 
             OmniBudsErrorCategory.BLUETOOTH_DISABLED to RetryClass.RETRY_AFTER_REREAD,
             OmniBudsErrorCategory.DEVICE_DISCONNECTED to RetryClass.RETRY_AFTER_REREAD,
@@ -73,6 +78,8 @@ class OmniBudsErrorCategoryTest {
             // and a state conflict is a data condition, not a failure.
             OmniBudsErrorCategory.LE_AUDIO_UNAVAILABLE to RetryClass.NEVER_RETRY,
             OmniBudsErrorCategory.AUDIO_STATE_CONFLICT to RetryClass.NEVER_RETRY,
+            // Phase 11: unobservability will not change without an OS upgrade.
+            OmniBudsErrorCategory.CODEC_NOT_OBSERVABLE to RetryClass.NEVER_RETRY,
         )
 
         assertFullCoverage(expected)
@@ -85,11 +92,17 @@ class OmniBudsErrorCategoryTest {
     fun aWriteOrUnknownEffectIsNeverBlindlyRetried() {
         val blindRetry = OmniBudsErrorCategory.entries.filter { it.retryClass == RetryClass.SAFE_TO_RETRY }
 
-        // Exactly two categories may be repeated without first checking what the device did:
-        // a failed read, and a failed audio observation. Both are side-effect-free reads;
-        // widening this set to anything side-effecting is how a command eventually gets re-sent.
+        // Exactly four categories may be repeated without first checking what the device did:
+        // failed reads (generic, audio, codec) and stale codec state. All are
+        // side-effect-free; widening this set to anything side-effecting is how
+        // a command eventually gets re-sent.
         assertEquals(
-            setOf(OmniBudsErrorCategory.READ_FAILED, OmniBudsErrorCategory.AUDIO_OBSERVATION_FAILED),
+            setOf(
+                OmniBudsErrorCategory.READ_FAILED,
+                OmniBudsErrorCategory.AUDIO_OBSERVATION_FAILED,
+                OmniBudsErrorCategory.CODEC_OBSERVATION_FAILED,
+                OmniBudsErrorCategory.CODEC_STATE_STALE,
+            ),
             blindRetry.toSet(),
         )
     }
@@ -127,6 +140,10 @@ class OmniBudsErrorCategoryTest {
             OmniBudsErrorCategory.AUDIO_OBSERVATION_FAILED to false,
             OmniBudsErrorCategory.LE_AUDIO_UNAVAILABLE to false,
             OmniBudsErrorCategory.AUDIO_STATE_CONFLICT to false,
+            // Phase 11: codec observation is read-only; stale state is explicit, not uncertain.
+            OmniBudsErrorCategory.CODEC_OBSERVATION_FAILED to false,
+            OmniBudsErrorCategory.CODEC_NOT_OBSERVABLE to false,
+            OmniBudsErrorCategory.CODEC_STATE_STALE to false,
         )
 
         assertFullCoverage(expected)
