@@ -26,6 +26,19 @@ Full text of every ADR lives in the phase record that authored it. This file is 
 | ADR-P0-020 | Two Phase 0 workstreams added beyond prompt §4 | accepted | `docs/phases/phase-0/decisions.md` |
 | ADR-P0-021 | Version control is not initialised in Phase 0 | accepted — **closed by Phase 1** | `docs/phases/phase-0/decisions.md` |
 
+Phase 11 — `docs/phases/phase-11/decisions.md`:
+
+| ADR | Title | Status |
+|---|---|---|
+| ADR-P11-001 | Extend the Phase 1 codec vocabulary; no parallel taxonomy | accepted — the ladder already solves the seven-states requirement |
+| ADR-P11-002 | Add OPUS to the domain codec enum | accepted — the platform genuinely reports it; dropping it would be dishonest |
+| ADR-P11-003 | Active codec is NOT_OBSERVABLE via public Android APIs | accepted — verified by android.jar reflection + api-versions.xml; no hidden-API workarounds |
+| ADR-P11-004 | `CodecApi35` isolated for VerifyError safety | accepted — ADR-P10-005 pattern |
+| ADR-P11-005 | Staleness marks, never deletes; reconnect re-observes | accepted — "was active, now stale" is honest |
+| ADR-P11-006 | Three codec error categories; failure ≠ "unsupported" | accepted — blind-retry set grows to four, all side-effect-free |
+| ADR-P11-007 | `CodecScopeTest` machine-checks the boundary | accepted — PhaseTenScopeTest precedent |
+| ADR-P11-008 | Engine in `com.omnibuds.core.codec` (layer 3) | accepted — vocabulary stays dependency-free in audio (layer 2) |
+
 Phase 10 — `docs/phases/phase-10/decisions.md`:
 
 | ADR | Title | Status |

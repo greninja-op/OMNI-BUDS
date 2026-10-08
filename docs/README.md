@@ -29,13 +29,28 @@ A phase execution prompt that conflicts with items 1–3 must be reported, not s
 | `phases/phase-8/` | Phase 8: capability discovery engine (evidence provenance, the availability axis, per-protocol dependency validation with cycle detection, a deterministic lifecycle + snapshot wrapping `DeviceCapabilities`, a read-only engine driven by a handed-in source — no protocol, no production source, no device claim) | validated; no hardware executed, device validation deferred by user directive |
 | `phases/phase-9/` | Phase 9: hardware feature engine (six-state control machine with requested-vs-confirmed separation, 10-step validator, six-kind dependency/conflict evaluation, mandatory write read-back with never-resent timeouts, per-feature serialization, session invalidation, reactive state repository — handed-in port seam, no vendor commands, no hardware contact) | validated; no hardware executed, device validation deferred by user directive |
 | `phases/phase-10/` | Phase 10: audio transport engine (observation-only; A2DP/HFP/HSP/LE Audio taxonomy, 7-state connection vocabulary, audio-device observation separate from Bluetooth identity, immutable snapshot, 5-rule pure reconciler, lifecycle-safe engine, API-33-guarded LE Audio, audio/control plane separation — no capture, no codec configuration, no routing control) | validated; no hardware executed, device validation deferred by user directive |
+| `phases/phase-11/` | Phase 11: codec capability engine (extends the Phase 1 codec vocabulary — no parallel taxonomy; `CodecState` ladder + orthogonal configurable; evidence/confidence/observability models; nullable metadata; per-device immutable snapshots; staleness as a state; API-35-isolated adapter; active codec honestly NOT_OBSERVABLE via public APIs — no switching, no forcing, no media interception) | validated; no hardware executed, device validation deferred by user directive |
 | `phases/phase-<N>/` | One directory per future phase, created from `templates/` | not started |
 | `templates/` | The eight mandatory phase document templates | complete |
-| `decisions/` | Global ADR index → `decisions/README.md` | complete through Phase 10 |
+| `decisions/` | Global ADR index → `decisions/README.md` | complete through Phase 11 |
 | `development/adb-deployment/` | The local ADB deployment harness: build, validate, install, launch and its error classes | recorded separately from any phase |
 | `architecture/`, `protocols/`, `bluetooth/`, `audio/`, `testing/`, `security/`, `requirements/`, `product/` | Long-lived topic documents, promoted out of a phase record when content stops being phase-specific | reserved placeholders; `security/` now holds `device-access-policy.md`, the rest are empty until the owning phase fills them |
 
 Topic folders are deliberately empty rather than pre-filled with stubs: their content will come from the phase that actually earns it, and a stub would imply knowledge that does not exist yet.
+
+## Phase 11 index
+
+| Document | Purpose |
+|---|---|
+| `requirements.md` | OB-P11-REQ-001 … OB-P11-REQ-025 |
+| `design.md` | Extending the Phase 1 codec vocabulary; the honest adapter; evidence, observability, staleness |
+| `architecture.md` | Layering, the evidence ladder, provenance flow, observability semantics, snapshot lifecycle, what the control phase must know |
+| `specs.md` | Domain types, engine contract, platform contract, verified API-level matrix, error categories, invariants |
+| `task-list.md` | Phase 11 tasks and their status |
+| `test-plan.md` | Core + Android unit tests, explicit non-coverage |
+| `decisions.md` | ADR-P11-001 … ADR-P11-008 — vocabulary reuse, OPUS, NOT_OBSERVABLE honesty, CodecApi35 isolation, staleness, error categories, scope test, layer placement |
+| `risk-register.md` | RISK-P11-001 … RISK-P11-008, continuing the single project-wide register |
+| `validation.md` | Phase 11 acceptance record (944 tests), the claim-ceiling statement, and Phase 12 readiness |
 
 ## Phase 10 index
 
