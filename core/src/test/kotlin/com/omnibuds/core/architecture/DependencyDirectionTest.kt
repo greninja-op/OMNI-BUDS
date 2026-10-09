@@ -606,6 +606,8 @@ class DependencyDirectionTest {
             "com/omnibuds/android/widget/",
             // Phase 28: lifecycle monitor package.
             "com/omnibuds/android/lifecycle/",
+            // Phase 32: platform compatibility policy package.
+            "com/omnibuds/android/compat/",
         )
         val violations = sources
             .map { file -> file.invariantSeparatorsPath.substringAfter("kotlin/") }
