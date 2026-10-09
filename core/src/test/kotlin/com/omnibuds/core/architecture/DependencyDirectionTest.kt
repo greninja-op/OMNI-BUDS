@@ -132,6 +132,11 @@ class DependencyDirectionTest {
         // CodecObservationSource port. It may depend on any lower layer, and
         // nothing below it may depend on it.
         "codec" to 3,
+        // Phase 43: Community Protocol SDK. Sits on top of the vendor expansion
+        // framework (layer 5), consuming vendor contracts, protocol (4), capability (2),
+        // device (2), security (1), transport (1), state (0), common (0).
+        // Layer 6.
+        "sdk" to 6,
     )
 
     private fun mainSources(): List<File> {
