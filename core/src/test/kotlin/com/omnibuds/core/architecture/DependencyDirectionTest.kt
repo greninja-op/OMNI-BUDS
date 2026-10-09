@@ -482,7 +482,10 @@ class DependencyDirectionTest {
     fun neitherModuleReferencesUiFrameworks() {
         val forbidden = listOf(
             "Activity", "Fragment", "ViewModel", "ContextThemeWrapper",
-            "setContentView", "startActivity", "PendingIntent",
+            "setContentView", "startActivity",
+            // Phase 26 authorises PendingIntent for notification actions only:
+            // immutable, identity-keyed, validated as untrusted input.
+            // `startActivity` above stays forbidden — actions use getBroadcast.
         )
         val pattern = Regex("\\b(${forbidden.joinToString("|")})\\b")
 
@@ -520,10 +523,19 @@ class DependencyDirectionTest {
     @Test
     fun platformBroadcastUseIsConfinedToListeningForAdapterState() {
         val receiverTokens = listOf("BroadcastReceiver", "IntentFilter", "Intent", "registerReceiver")
-        val neverTokens = listOf("sendBroadcast", "sendOrderedBroadcast", "PendingIntent", "LocalBroadcastManager")
+        // Phase 26 authorises PendingIntent for notification actions only:
+        // immutable, identity-keyed, validated as untrusted input.
+        val neverTokens = listOf("sendBroadcast", "sendOrderedBroadcast", "LocalBroadcastManager")
         val receiverPattern = Regex("\\b(${receiverTokens.joinToString("|")})\\b")
         val neverPattern = Regex("\\b(${neverTokens.joinToString("|")})\\b")
-        val authorisedListenerPackages = listOf("bluetooth/adapter/", "bluetooth/connection/")
+        val authorisedListenerPackages = listOf(
+            "bluetooth/adapter/",
+            "bluetooth/connection/",
+            // Phase 26: notification action receiver. Exported=false, intent
+            // validated as untrusted input, dispatches through the feature
+            // engine — never sends broadcasts or starts activities.
+            "notification/",
+        )
 
         val outsideAdapter = platformSources().flatMap { file ->
             if (authorisedListenerPackages.any { path -> path in file.invariantSeparatorsPath }) {
@@ -566,6 +578,8 @@ class DependencyDirectionTest {
             "com/omnibuds/android/di/",
             // Phase 25: Quick Settings tile package.
             "com/omnibuds/android/tile/",
+            // Phase 26: notification controls package.
+            "com/omnibuds/android/notification/",
         )
         val violations = sources
             .map { file -> file.invariantSeparatorsPath.substringAfter("kotlin/") }
@@ -597,12 +611,22 @@ class DependencyDirectionTest {
         // it renders GlobalDeviceState snapshots and dispatches through the
         // existing feature engine. BIND_QUICK_SETTINGS_TILE is the
         // platform-required permission for tile services.
+        //
+        // Phase 26 earns exactly one receiver: the notification action
+        // receiver. Exported=false, intent-filter for the internal action
+        // only. It validates every intent as untrusted input and dispatches
+        // through the existing feature engine — never direct Bluetooth.
         val allowedServices = listOf(
             "com.omnibuds.android.tile.OmniBudsTileService",
             ".tile.OmniBudsTileService",
         )
+        val allowedReceivers = listOf(
+            "com.omnibuds.android.notification.OmniBudsNotificationReceiver",
+            ".notification.OmniBudsNotificationReceiver",
+        )
         val unexpectedComponents = components.filterNot { tag ->
-            tag == "<service" && allowedServices.any { name -> name in text }
+            (tag == "<service" && allowedServices.any { name -> name in text }) ||
+                (tag == "<receiver" && allowedReceivers.any { name -> name in text })
         }
 
         // The tile service must carry the platform-required permission.
@@ -611,6 +635,14 @@ class DependencyDirectionTest {
                 "android.permission.BIND_QUICK_SETTINGS_TILE" in text
         if (!tilePermissionOk) {
             fail("TileService must declare android.permission.BIND_QUICK_SETTINGS_TILE.")
+        }
+
+        // The notification receiver must not be exported.
+        val receiverExportedOk =
+            "<receiver" !in text ||
+                Regex("<receiver[^>]*android:exported=\"true\"").find(text) == null
+        if (!receiverExportedOk) {
+            fail("OmniBudsNotificationReceiver must not be exported.")
         }
 
         assertClean(

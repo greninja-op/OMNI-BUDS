@@ -55,5 +55,18 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>
         </service>
+
+        <!--
+          Phase 26: notification action receiver. Exported=false; only the
+          system's PendingIntent delivery reaches it. Every intent is validated
+          as untrusted input.
+        -->
+        <receiver
+            android:name=".notification.OmniBudsNotificationReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.omnibuds.android.notification.TOGGLE_FEATURE" />
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>
