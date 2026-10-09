@@ -1,175 +1,111 @@
-# CONTEXT.md — Living Conversation Context
+# CONTEXT.md — Agent Continuity File
 
-> **RULE FOR THE AGENT — READ THIS FIRST, EVERY SESSION.**
+> **AGENT: READ THIS FIRST, EVERY SESSION. UPDATE AFTER EVERY PROMPT.**
 >
-> This file is the persistent memory of the working conversation. It exists so
-> that if the user switches accounts, devices, or chats, the full context is
-> preserved and work can continue without loss.
->
-> 1. **Read this file at the start of every session** before doing any work.
-> 2. **Update this file after every significant prompt** — new decisions, new
->    preferences, phase completions, commit SHAs, test counts, and anything
->    the next session would need to know.
-> 3. **Never delete history** — append and update; keep the log chronological.
-> 4. The latest entry at the bottom is the current state of the world.
+> This file is your memory. If you lose context, read this and you'll know:
+> who the user is, what we're building, what's done, what the rules are,
+> and what to do next. Keep it current — a stale CONTEXT.md is worse than none.
 
 ---
 
-## Project overview
+## 1. Who the user is
 
-**OmniBuds** (`greninja-op/OMNI-BUDS`) — a universal Bluetooth earbuds/headphones
-hardware-control app. Backend-first: the capability and state model is finished
-before any screen exists. Kotlin, `:core` (platform-independent) +
-`:platform:android` (Android Bluetooth).
+- **GitHub:** greninja-op (profile name Arjun Sabu, India)
+- **Timezone:** Asia/Kolkata (IST)
+- **Working style:** Casual and direct ("bro"), short messages, zero tolerance for hedging or invented numbers. Professional standard: trust earned through honest limitation reports and owning mistakes.
+- **Language:** Follow his language turn by turn (recently all English).
 
-**Phases 0–12 are complete.** Phase 13 (Audio Quality & Negotiation State) has
-**not** started and must not begin without an explicit user instruction.
+## 2. What we're building
 
-## Current state (2026-10-09)
+**OmniBuds** (`greninja-op/OMNI-BUDS`) — a universal Bluetooth earbuds/headphones hardware-control app. Backend-first: capability and state model before any UI. Kotlin, `:core` (platform-independent) + `:platform:android` (Android Bluetooth). Phases 0–52 planned.
 
-- **Phase 12** (Codec Support & Configuration Architecture) complete, pushed to
-  `main` in 6 commits: `5eb3a3c`, `1597b05`, `2ddad61`, `108614b`, `19d0f6f`,
-  `e70f2bd`.
-- **Tests:** 1011 passing (877 core + 134 Android), 0 failures.
-- **Key honest finding:** no public Android API exposes codec *control*
-  (selection/configuration); the adapter correctly reports
-  `NOT_SELECTABLE`/`NOT_CONFIGURABLE`. No fake control, no hidden APIs.
-- **Security review:** PASS, no findings; hardening applied (bounded
-  observation timeouts).
+**Phases 0–19 are complete.** Phase 20 has not started and must not begin without explicit user instruction.
 
-## Standing user preferences
+## 3. Quota guardrail (STANDING — overrides all speed directives)
+
+- **Free weekly quota:** check with `subscription-status status` before spawning each phase agent.
+- **HARD STOP at 98%:** stop ALL work immediately — no new phases, no agents, no pushes. Notify the user that the weekly quota is exhausted.
+- **1B additional-token pool:** NEVER touch without the user's explicit approval in chat. It is currently 0% used.
+- **Last checked:** 2026-10-09 ~13:30 IST — 42% free used, resets Oct 15 9:36 PM IST, 1B pool untouched.
+- **FULL SPEED** applies *within* the free quota only.
+
+## 4. Standing preferences
 
 1. **Push directly to `main`.** No PR, no separate branch. Ever.
-2. **Single-batch pushes.** One `push_files` call per phase → one approval
-   prompt, not five. (Set 2026-10-09 after the user complained about repeated
-   approval prompts.)
-3. **Periodic progress updates** during long-running build phases, not just a
-   completion report at the end. (Set 2026-10-09.)
-4. **Run at FULL SPEED.** No token conservation/throttling, even if it burns
-   the weekly allowance and the 1B extra-token pool. (Set 2026-10-09.)
-5. **Phase reports** go in the build thread after each phase.
+2. **One batched `push_files` call per phase** → one approval prompt. (Shell arg-size limit may force splits for very large phases.)
+3. **Periodic progress updates** during long builds, not just completion reports.
+4. **Phase reports** go in the build thread after each phase.
+5. **Stop at phase boundaries.** Never start the next phase without explicit authorization.
 
-## Standing constraints (every phase)
+## 5. Standing constraints (every phase)
 
-- No UI. No media-audio interception/decoding/re-encoding. No `RECORD_AUDIO`.
+- No UI. No media-audio capture/decode/intercept/re-encode. No `RECORD_AUDIO`.
 - No hidden APIs, reflection, shell commands, root, or system-file changes.
 - No guessed vendor commands (protocol registry ships empty — correct).
 - No physical-device testing (deferred by user directive).
-- Never fabricate codec support or runtime state; preserve UNKNOWN and
-  NOT_OBSERVABLE where the platform lacks evidence.
-- Do not claim Gradle/Lint success unless those commands actually ran
-  (Gradle daemon is broken in this sandbox; use the manual kotlinc toolchain).
+- Never fabricate capabilities or state; UNKNOWN stays UNKNOWN, never becomes UNSUPPORTED.
+- Never claim a push landed until remote files/commits are read back and verified.
+- Never claim Gradle/Lint success unless those commands actually ran (Gradle daemon broken in sandbox; use manual kotlinc toolchain).
 
-## Key technical facts
+## 6. Anti-stale rule (user directive)
 
-- Toolchain: kotlinc 2.0.21, JVM 17, `-Werror`, JUnit Platform Console 1.10.1.
-- `SideEffectClass` lives in `com.omnibuds.core.common` (moved from `feature`
-  in Phase 12 — layer 3 `codec` cannot depend on layer 5 `feature`).
-- GitHub writes use the `github` CLI (App API), never SSH/`git push`.
-- Local git history is stale (phases pushed via API); never push local history
-  blindly — build explicit file lists per push.
-- Logo: `https://github.com/user-attachments/assets/a1a3b59f-ad00-43a8-ab1d-73066f74a4d1`
-  (local copy `~/workspace/user/files/omnibuds-logo.png`); the README `<img>`
-  tag must be preserved verbatim.
+**Always fetch the REMOTE CONTEXT.md fresh before updating.** Merge into the newest remote version — never overwrite a newer remote with a stale local copy. Verify by readback after push. An agent that skips the CONTEXT.md update counts as incomplete.
 
-## Conversation log
+## 7. Key technical facts
 
-- **2026-10-09 — Phase 11 completed** (Codec Capability Engine): 944 tests,
-  5 commits (`f6d0d8a`…`cbedb2a`). Extended Phase 1 codec vocabulary; honest
-  NOT_OBSERVABLE for active codec.
-- **2026-10-09 — Phase 12 authorized and executed** (this chat): full codec
-  control architecture (operations, transactions, verification, rollback,
-  per-device serialization). Agents confirmed: no public Android control API,
-  no verified vendor protocol. 1011 tests, security PASS, pushed in 6 commits.
-- **2026-10-09 — User asked about token usage:** 18% of free weekly limit used
-  (resets Oct 15, 9:36 PM IST); 1B extra-token pool untouched. Muse reports
-  percentages, not exact token counts; no per-project breakdown exists.
-- **2026-10-09 — User asked to reduce approval prompts:** single-batch pushes
-  adopted; standing "always allow" must be set by the user in the app's
-  permissions settings (agent cannot grant it).
-- **2026-10-09 — This file created** per user request: living context,
-  README-linked, updated after every prompt.
-- **2026-10-09 — Phase 13 authorized and started** (Audio Quality & Negotiation
-  State Engine): unified `AudioQualityState`, negotiation state machine,
-  sessions, events, resolver with source precedence, conflict resolution.
-  Observation/normalization/state/analytics only — no media interception.
-- **2026-10-09 — Phase 13 implementation complete** (pending push): 10 new
-  core types in `core.quality` (layer 4), `AudioQualityEngine`,
-  `AudioQualityResolver`, Android bridge. **1065 tests passing**
-  (926 core + 139 android), 0 failures. Docs: 8 records + architecture +
-  negotiation-model. Phase 14 NOT started.
-- **2026-10-09 — Phase 13 pushed to main** in 6 commits (batch 1: `9efee761`).
-  All 31 files verified on remote `main`.
-- **2026-10-09 — Phase 14 authorized and started** (Audio Path Validation):
-  validation engine answering whether observed transport/device/route/codec/
-  state is internally consistent and evidence-backed. No signal-path claims.
-- **2026-10-09 — Phase 14 implementation complete** (pending push): 9 new
-  core types + 10 rules in `core.validation` (layer 5),
-  `AudioPathValidationEngine` with session generations. **1116 tests passing**
-  (977 core + 139 android), 0 failures. Docs: 8 records. Phase 15 NOT started.
-- **2026-10-09 — Phase 14 pushed to main** in 5 commits. All 28 files verified
-  on remote `main`.
-- **2026-10-09 — Phase 15 authorized and started** (Hardware DSP / Audio
-  Separation): processing-domain model separating device hardware DSP,
-  Android platform processing, and OmniBuds application logic. No hardware
-  simulation, no media-path changes.
-- **2026-10-09 — Phase 15 implementation complete** (pending push): 4 new
-  core types in `core.processing` (layer 5): `AudioProcessingDomain`,
-  `ProcessingDomainResolver`, `ProcessingOwnership`,
-  `ProcessingControlBoundary`. Reuses `FeatureCapability`,
-  `VerificationLevel`, `CoreFeature` — no duplication. **1126 tests passing**
-  (987 core + 139 android), 0 failures. Docs: 8 records. Phase 16 NOT started.
-- **2026-10-09 — Phase 15 pushed to main** in one commit
-  (`ed37ab3d`). 36 files verified on remote `main` (8 docs, main sources,
-  test sources, CONTEXT.md, README.md).
-- **2026-10-09 — Phase 16 authorized and started** (Battery & Power State):
-  per-component battery levels, charging-state semantics, freshness,
-  partial updates, multi-device isolation. No invented readings, no UI,
-  no firmware-update/charging-control functionality.
-- **2026-10-09 — Phase 16 implementation complete** (pending push): 11 new
-  core types in `core.battery` (layer 5): `BatteryEngine` with per-device
-  StateFlow, explicit partial-update semantics, conflict resolver, legacy
-  adapter. Android adapter honestly reports UNSUPPORTED (no public API).
-  **1157 tests passing** (1018 core + 139 android), 0 failures. Docs:
-  8 records. Phase 17 NOT started.
-- **2026-10-09 — Phase 16 pushed to main** in one commit (`13ebb58`).
-  28 files verified on remote `main` (requirements.md SHA `e025a6e`,
-  BatteryEngine.kt SHA `ce40f74`).
-- **2026-10-09 — Phase 17 authorized and started** (Persistent Configuration
-  Engine): global/device preferences, typed config models, validation,
-  schema migrations, corruption recovery, device isolation. Saved preference
-  ≠ hardware applied. No UI, no invented capabilities.
-- **2026-10-09 — Phase 17 implementation complete** (pending push): 9 new
-  core types in `core.configuration` (layer 5) + `FileConfigurationStorage`
-  in Android module. Pure-Kotlin JSON, explicit result types, per-device
-  mutexes, capability-aware eligibility. **1189 tests passing**
-  (1047 core + 142 android), 0 failures. Docs: 8 records. Phase 18 NOT started.
-- **2026-10-09 — Phase 17 pushed to main** in one commit (`9d99a4b`;
-  first attempt timed out, retry succeeded). 23 files verified on remote
-  `main` (requirements.md SHA `5be9125`, ConfigurationEngine.kt SHA `8ceed93`).
-- **2026-10-09 — Phase 18 authorized and started** (Persistence Verification
-  Framework): protocol-independent verification of whether hardware config
-  was requested/accepted/applied/read-back/retained across session,
-  reconnect, restart, power-cycle boundaries. Evidence-proven scopes only.
-  No UI, no vendor expansion, no physical hardware.
-- **2026-10-09 — Phase 18 implementation complete** (pending push): 12 new
-  types in `core.verification` (layer 5, event-driven). **1234 tests passing**
-  (1092 core + 142 android), 0 failures. ConfigurationValueJson moved to
-  `core.config`. Docs: 8 records. Phase 19 NOT started.
-- **2026-10-09 — Phase 18 pushed to main** in 2 commits (code + docs; single
-  call exceeded arg limits). Remote-verified: VerificationStateMachine.kt
-  SHA `746df38`, requirements.md SHA `af6ccb5`.
-- **2026-10-09 — Phase 19 authorized and started** (First Fully Supported
-  Vendor Device): select defensible target, implement evidence-backed vendor
-  adapter through existing protocol/transport/capability/feature layers.
-  No fabricated protocols. No UI, no Phase 20, no physical hardware.
-- **2026-10-09 — Phase 19 implementation complete** (pending push): 4 new
-  types in `core.vendor` (layer 5). **1242 tests passing** (1100 core +
-  142 android), 0 failures. NO vendor protocol implemented — no candidate
-  had sufficient accessible, license-clear, verifiable evidence (Bose BMAP
-  documented as leading future candidate). Docs: 11 records. Phase 20 NOT started.
-- **2026-10-09 — Phase 19 pushed to main** (remote-verified).
+- **Toolchain:** kotlinc 2.0.21, JVM 17, `-Werror`, JUnit Platform Console 1.10.1.
+- **GitHub writes:** `github` CLI (App API `push_files`), never SSH or `git push`. Never recommend SSH keys.
+- **Local git history is stale/divergent** (API pushes bypass it). Build explicit file lists per push; never push local history blindly.
+- **Architecture layers:** common(0), device(2), config(2), capability(2), persistence(3), protocol(4), then feature/battery/processing/configuration/validation/verification/vendor at 5. `DependencyDirectionTest` enforces downward-only.
+- **Core forbids JVM-only imports** (`java.io` etc.) — file I/O lives in `:platform:android`.
+- **`ConfigurationValueJson`** moved to `com.omnibuds.core.config` (Phase 18); old path is a deprecated typealias shim.
+- **Logo:** `https://github.com/user-attachments/assets/a1a3b59f-ad00-43a8-ab1d-73066f74a4d1` — preserve the README `<img>` tag verbatim.
+- **No emulator in sandbox** — on-device validation deferred to real hardware.
+
+## 8. Phase history (condensed)
+
+| Phase | What was built | Tests | Commit(s) |
+|---|---|---|---|
+| 0–6 | Foundation, device identity, transport, sessions | — | various |
+| 7 | Protocol abstraction engine (registry ships empty) | — | various |
+| 8 | Capability discovery engine | — | various |
+| 9 | Hardware feature engine (6-state control) | — | various |
+| 10 | Audio transport engine (observation-only) | 890 | 5 commits |
+| 11 | Codec capability engine (honest NOT_OBSERVABLE) | 944 | 5 commits |
+| 12 | Codec control architecture (honest NOT_SELECTABLE) | 1011 | 6 commits |
+| 13 | Audio quality & negotiation state engine | 1065 | 6 commits |
+| 14 | Audio path validation engine | 1116 | 5 commits |
+| 15 | Hardware DSP / audio separation | 1126 | `ed37ab3` |
+| 16 | Battery & power state engine | 1157 | `13ebb58` |
+| 17 | Persistent configuration engine (saved ≠ applied) | 1189 | `9d99a4b` |
+| 18 | Persistence verification framework (evidence-proven scopes) | 1234 | 2 commits |
+| 19 | Vendor adapter infrastructure (no protocol — blocked, honest) | 1242 | `80320e5` |
+
+**Current:** 1242 tests (1100 core + 142 android), 0 failures.
+
+**Key honest findings to preserve:**
+- No public Android API exposes the active codec → `NOT_OBSERVABLE`.
+- No public Android API exposes codec control → `NOT_SELECTABLE`/`NOT_CONFIGURABLE`.
+- No public API exposes Bluetooth battery → adapter reports unsupported.
+- No vendor protocol has sufficient evidence → registry stays empty (correct).
+
+## 9. Gotchas (things that bit us)
+
+1. **`push_files` arg-size limit:** large phases must split into 2+ calls (code + docs).
+2. **MCP timeouts on push:** if a push times out, verify on remote before retrying — it may have landed.
+3. **Sideways layer imports** (5→5) fail `DependencyDirectionTest` — check before writing.
+4. **`ProtocolDefinition` rejects `TransportKind.UNKNOWN`** — use a real transport.
+5. **Deprecated typealias + `-Werror`:** update old imports, don't use the shim.
+6. **Scope-test false positives:** banned-term lists must not match legitimate code (e.g. `Json.decode`).
+
+## 10. Conversation log (2026-10-09)
+
+- Phase 11→12: codec capability → control architecture. User asked about token usage (18% free used).
+- User asked to reduce approval prompts → single-batch pushes adopted.
+- Phase 13→14→15→16→17→18→19 executed sequentially, each pushed to `main` with remote verification.
+- **Quota guardrail set (~13:35 IST):** stop at 98% free, never touch 1B pool without approval. Overrides the old "burn through everything" wording.
+- **CONTEXT.md redesign requested (~13:37 IST):** this file rewritten as the canonical agent continuity file.
 
 ---
 
-*Last updated: 2026-10-09 (Phase 19 pushed; Phase 20 not started).*
+*Last updated: 2026-10-09 (Phase 19 pushed as `80320e5`; Phase 20 not started; quota at 42%).*
