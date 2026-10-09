@@ -139,7 +139,15 @@ before any screen exists. Kotlin, `:core` (platform-independent) +
   Engine): global/device preferences, typed config models, validation,
   schema migrations, corruption recovery, device isolation. Saved preference
   ≠ hardware applied. No UI, no invented capabilities.
+- **2026-10-09 — Phase 17 implementation complete** (pending push): 9 new
+  core types in `core.configuration` (layer 5) + `FileConfigurationStorage`
+  in Android module. Pure-Kotlin JSON, explicit result types, per-device
+  mutexes, capability-aware eligibility. **1189 tests passing**
+  (1047 core + 142 android), 0 failures. Docs: 8 records. Phase 18 NOT started.
+- **2026-10-09 — Phase 17 pushed to main** in one commit (`9d99a4b`;
+  first attempt timed out, retry succeeded). 23 files verified on remote
+  `main` (requirements.md SHA `5be9125`, ConfigurationEngine.kt SHA `8ceed93`).
 
 ---
 
-*Last updated: 2026-10-09 (Phase 16 pushed; Phase 17 started).*
+*Last updated: 2026-10-09 (Phase 17 pushed; Phase 18 not started).*
