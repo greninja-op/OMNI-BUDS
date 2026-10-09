@@ -85,6 +85,11 @@ class DependencyDirectionTest {
         // transport, and coroutines only; never imported by production
         // code. Layer 5 alongside the engines it doubles.
         "testkit" to 5,
+        // Phase 34: failure classification, recovery policy, recovery
+        // state machine, and bounded diagnostic events. Consumes
+        // common (RetryClass) and lifecycle (ReconnectPolicy) only.
+        // Layer 5 alongside the engines it supports.
+        "recovery" to 5,
         "diagnostics" to 2,
         "session" to 3,
         "persistence" to 3,
