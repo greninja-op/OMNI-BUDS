@@ -76,6 +76,11 @@ class DependencyDirectionTest {
         // contracts, never imports battery, feature, access, knowledge,
         // extension, or vendor sideways.
         "globalstate" to 5,
+        // Phase 28: background lifecycle orchestration consumes coroutines
+        // and common only. Layer 5; depends on nothing sideways — the
+        // coordinator integrates via the LifecycleHooks interface, not by
+        // importing session/globalstate/feature engines.
+        "lifecycle" to 5,
         "diagnostics" to 2,
         "session" to 3,
         "persistence" to 3,
@@ -498,6 +503,11 @@ class DependencyDirectionTest {
                 platformCapabilitySources().map { file -> "platform/${file.name}" to file }
             )
             .flatMap { (label, file) ->
+                // Phase 28: the lifecycle monitor implements
+                // Application.ActivityLifecycleCallbacks, which names Activity
+                // in its signatures. That is process-lifecycle observation,
+                // not a UI screen — no activity is ever launched or shown.
+                if ("lifecycle/" in file.invariantSeparatorsPath) return@flatMap emptyList<String>()
                 codeLinesOf(file)
                     .filter { line -> pattern.containsMatchIn(line) }
                     .map { line -> "$label: $line" }
@@ -590,6 +600,8 @@ class DependencyDirectionTest {
             "com/omnibuds/android/notification/",
             // Phase 27: home-screen widget package.
             "com/omnibuds/android/widget/",
+            // Phase 28: lifecycle monitor package.
+            "com/omnibuds/android/lifecycle/",
         )
         val violations = sources
             .map { file -> file.invariantSeparatorsPath.substringAfter("kotlin/") }
