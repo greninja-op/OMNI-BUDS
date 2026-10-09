@@ -57,6 +57,9 @@ class DependencyDirectionTest {
         // Phase 19: vendor adapters consume device (2), protocol (4),
         // common (0). Layer 5; never imports feature (5) sideways.
         "vendor" to 5,
+        // Phase 20: lab consumes common (0), state (0). Layer 5;
+        // passive analysis only — never imports feature or protocol.
+        "lab" to 5,
         "diagnostics" to 2,
         "session" to 3,
         "persistence" to 3,
