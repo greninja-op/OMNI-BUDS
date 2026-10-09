@@ -60,6 +60,9 @@ class DependencyDirectionTest {
         // Phase 20: lab consumes common (0), state (0). Layer 5;
         // passive analysis only — never imports feature or protocol.
         "lab" to 5,
+        // Phase 21: access control consumes device (2), state (0), common (0),
+        // diagnostics (2). Layer 5; centralizes default-deny policy.
+        "access" to 5,
         "diagnostics" to 2,
         "session" to 3,
         "persistence" to 3,
