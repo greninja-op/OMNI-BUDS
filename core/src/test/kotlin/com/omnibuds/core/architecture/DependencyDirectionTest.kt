@@ -45,6 +45,10 @@ class DependencyDirectionTest {
         "capability" to 2,
         "audio" to 2,
         "config" to 2,
+        // Phase 17: the configuration engine consumes device (2), config (2),
+        // capability (2), persistence (3). Layer 5; never imports feature (5)
+        // sideways.
+        "configuration" to 5,
         "diagnostics" to 2,
         "session" to 3,
         "persistence" to 3,

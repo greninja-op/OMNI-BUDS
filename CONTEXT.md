@@ -135,7 +135,11 @@ before any screen exists. Kotlin, `:core` (platform-independent) +
 - **2026-10-09 — Phase 16 pushed to main** in one commit (`13ebb58`).
   28 files verified on remote `main` (requirements.md SHA `e025a6e`,
   BatteryEngine.kt SHA `ce40f74`).
+- **2026-10-09 — Phase 17 authorized and started** (Persistent Configuration
+  Engine): global/device preferences, typed config models, validation,
+  schema migrations, corruption recovery, device isolation. Saved preference
+  ≠ hardware applied. No UI, no invented capabilities.
 
 ---
 
-*Last updated: 2026-10-09 (Phase 16 pushed; Phase 17 not started).*
+*Last updated: 2026-10-09 (Phase 16 pushed; Phase 17 started).*
