@@ -101,6 +101,10 @@ class DependencyDirectionTest {
         // contracts (layer 5) and the testkit reporting model. Layer 5
         // alongside the engines it tests.
         "protocoltest" to 5,
+        // Phase 38: hardware-in-the-loop testing framework. Self-
+        // contained; depends on nothing sideways. Layer 5 alongside
+        // the test engines.
+        "hil" to 5,
         // Phase 13: the audio quality & negotiation engine consumes the audio
         // vocabulary (layer 2) and the codec engine (layer 3). It sits above
         // both and nothing below it may depend on it.
