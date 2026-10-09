@@ -91,6 +91,9 @@ class DependencyDirectionTest {
         // Layer 5 alongside the engines it supports.
         "recovery" to 5,
         "diagnostics" to 2,
+        // Phase 35: bounded input validation and log redaction.
+        // Stateless utilities; depends on nothing. Layer 1.
+        "security" to 1,
         "session" to 3,
         "persistence" to 3,
         "protocol" to 4,
