@@ -115,6 +115,13 @@ data class TraceDiff(
 data class DifferenceHypothesis(
     val differenceIndex: Int,
     val hypothesis: String,
-    /** One of: HYPOTHESIS, CONFIRMED, IMPLEMENTED, VERIFIED. */
-    val status: String,
+    val status: HypothesisStatus,
 )
+
+/** The lifecycle of a hypothesis. */
+enum class HypothesisStatus {
+    HYPOTHESIS,
+    CONFIRMED,
+    IMPLEMENTED,
+    VERIFIED,
+}

@@ -145,6 +145,23 @@ class LabAnalysisTest {
     }
 
     @Test
+    fun `truncated hex does not crash runner`() {
+        // F1: toHex appends "…(+N bytes)" for large payloads; the runner
+        // must not throw on this.
+        val parser = LengthPrefixedParser()
+        val fixtures = listOf(
+            ParserFixture(
+                "f-trunc", FixtureOrigin.SYNTHETIC, null, true, false,
+                "aabb…(+100 bytes)", "malformed", null, 1,
+            ),
+        )
+        val report = ParserTestRunner.run(parser, fixtures)
+        assertEquals(1, report.total)
+        // Must produce a structured result, not throw.
+        assertEquals(1, report.passed + report.failed)
+    }
+
+    @Test
     fun `synthetic cannot promote to hardware verified`() {
         assertFalse(
             EvidenceWorkflow.canPromote(

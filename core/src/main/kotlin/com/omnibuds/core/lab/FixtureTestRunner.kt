@@ -73,13 +73,20 @@ object ParserTestRunner {
         fixtures: List<ParserFixture>,
     ): TestRunReport {
         val results = fixtures.map { fixture ->
-            val input = hexToBytes(fixture.inputHex)
-            val outcome = try {
-                parser.parse(input)
+            val (outcome, actual) = try {
+                val input = hexToBytes(fixture.inputHex)
+                    ?: return@map FixtureResult(
+                        fixtureId = fixture.fixtureId,
+                        parserId = parser.parserId,
+                        expected = fixture.expectedOutcome,
+                        actual = "malformed",
+                        passed = fixture.expectedOutcome == "malformed",
+                    )
+                val parsed = parser.parse(input)
+                parsed to parsed.describe()
             } catch (e: Exception) {
-                ParseOutcome.Malformed("parser threw: ${e.message}")
+                ParseOutcome.Malformed("parser threw: ${e.message}") to "malformed"
             }
-            val actual = outcome.describe()
             FixtureResult(
                 fixtureId = fixture.fixtureId,
                 parserId = parser.parserId,
@@ -97,11 +104,24 @@ object ParserTestRunner {
         )
     }
 
-    private fun hexToBytes(hex: String): ByteArray {
-        val clean = hex.filter { it.isLetterOrDigit() }
-        if (clean.length % 2 != 0 || clean.isEmpty()) return ByteArray(0)
-        return ByteArray(clean.length / 2) { i ->
-            clean.substring(i * 2, i * 2 + 2).toInt(16).toByte()
+    /**
+     * Decode hex, or null when the input is not valid hex.
+     * The `toHex` truncation suffix (`…(+N bytes)`) is not valid hex —
+     * fixtures from truncated payloads are treated as malformed input.
+     */
+    private fun hexToBytes(hex: String): ByteArray? {
+        // Strip the truncation suffix if present.
+        val truncated = hex.substringBefore("…")
+        val clean = truncated.filter { it in '0'..'9' || it in 'a'..'f' || it in 'A'..'F' }
+        if (clean.length % 2 != 0 || clean.isEmpty()) return null
+        // If filtering removed characters, the input wasn't pure hex.
+        if (clean.length != truncated.filter { !it.isWhitespace() }.length) return null
+        return try {
+            ByteArray(clean.length / 2) { i ->
+                clean.substring(i * 2, i * 2 + 2).toInt(16).toByte()
+            }
+        } catch (e: NumberFormatException) {
+            null
         }
     }
 
