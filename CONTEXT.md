@@ -98,7 +98,16 @@ before any screen exists. Kotlin, `:core` (platform-independent) +
   `AudioQualityResolver`, Android bridge. **1065 tests passing**
   (926 core + 139 android), 0 failures. Docs: 8 records + architecture +
   negotiation-model. Phase 14 NOT started.
+- **2026-10-09 — Phase 13 pushed to main** in 6 commits (batch 1: `9efee761`).
+  All 31 files verified on remote `main`.
+- **2026-10-09 — Phase 14 authorized and started** (Audio Path Validation):
+  validation engine answering whether observed transport/device/route/codec/
+  state is internally consistent and evidence-backed. No signal-path claims.
+- **2026-10-09 — Phase 14 implementation complete** (pending push): 9 new
+  core types + 10 rules in `core.validation` (layer 5),
+  `AudioPathValidationEngine` with session generations. **1116 tests passing**
+  (977 core + 139 android), 0 failures. Docs: 8 records. Phase 15 NOT started.
 
 ---
 
-*Last updated: 2026-10-09 (Phase 13 complete, pending push).*
+*Last updated: 2026-10-09 (Phase 14 complete, pending push).*
