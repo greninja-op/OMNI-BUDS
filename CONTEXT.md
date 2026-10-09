@@ -147,7 +147,12 @@ before any screen exists. Kotlin, `:core` (platform-independent) +
 - **2026-10-09 — Phase 17 pushed to main** in one commit (`9d99a4b`;
   first attempt timed out, retry succeeded). 23 files verified on remote
   `main` (requirements.md SHA `5be9125`, ConfigurationEngine.kt SHA `8ceed93`).
+- **2026-10-09 — Phase 18 authorized and started** (Persistence Verification
+  Framework): protocol-independent verification of whether hardware config
+  was requested/accepted/applied/read-back/retained across session,
+  reconnect, restart, power-cycle boundaries. Evidence-proven scopes only.
+  No UI, no vendor expansion, no physical hardware.
 
 ---
 
-*Last updated: 2026-10-09 (Phase 17 pushed; Phase 18 not started).*
+*Last updated: 2026-10-09 (Phase 17 pushed; Phase 18 started).*
