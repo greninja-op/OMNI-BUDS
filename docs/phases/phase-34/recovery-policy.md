@@ -1,0 +1,34 @@
+# Phase 34 — Recovery Policy
+
+## Decisions
+
+NO_ACTION, RETRY_OPERATION, RETRY_CONNECTION, RECREATE_SESSION,
+REVALIDATE_PERMISSIONS, WAIT_FOR_ADAPTER, RECONCILE_DEVICE_STATE,
+RELOAD_PERSISTED_CONFIGURATION, ABORT_OPERATION,
+REQUIRE_USER_INTERVENTION, MARK_SESSION_UNAVAILABLE.
+
+## Rule summary
+
+1. Cancelled or CANCELLED → ABORT_OPERATION.
+2. Superseded session → ABORT_OPERATION.
+3. mayHaveExecuted + non-idempotent → RECONCILE_DEVICE_STATE.
+4. PERMISSION_DENIED → REVALIDATE_PERMISSIONS.
+5. BLUETOOTH_DISABLED/UNAVAILABLE → WAIT_FOR_ADAPTER.
+6. Disconnect/timeout/transport failures → WAIT_FOR_ADAPTER if BT off,
+   else RETRY_CONNECTION.
+7. PROTOCOL_TIMEOUT/DEVICE_BUSY/RESOURCE_EXHAUSTED → RETRY_OPERATION
+   if authorized, within budget, not background-restricted;
+   else REQUIRE_USER_INTERVENTION or MARK_SESSION_UNAVAILABLE.
+8. Malformed/unsupported/rejected/unavailable capability →
+   ABORT_OPERATION.
+9. OPERATION_OUTCOME_UNKNOWN/STALE_STATE → RECONCILE_DEVICE_STATE.
+10. PERSISTENCE_FAILURE → RELOAD_PERSISTED_CONFIGURATION.
+11. BACKGROUND_RESTRICTED → MARK_SESSION_UNAVAILABLE.
+12. INTERNAL_ERROR → ABORT_OPERATION.
+
+## Invariants
+
+- A decision is not permission to execute hardware; authorization
+  policy still approves.
+- No unbounded retries; no reconnect while Bluetooth is off.
+- No permission retry storms.
