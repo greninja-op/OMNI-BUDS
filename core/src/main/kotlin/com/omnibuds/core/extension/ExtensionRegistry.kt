@@ -62,11 +62,10 @@ class ExtensionRegistry {
                 )
             }
             // Namespace must be declared by the extension.
-            val namespace = "${definition.id.manufacturer}.${definition.id.family}"
             val ext = extensions[definition.extensionId.value]!!
-            if (namespace !in ext.descriptor.featureNamespaces) {
+            if (definition.namespace !in ext.descriptor.featureNamespaces) {
                 return RegistrationResult.Rejected(
-                    "namespace $namespace not declared by extension ${definition.extensionId.value}",
+                    "namespace ${definition.namespace} not declared by extension ${definition.extensionId.value}",
                 )
             }
             // Dependency cycle check among features.

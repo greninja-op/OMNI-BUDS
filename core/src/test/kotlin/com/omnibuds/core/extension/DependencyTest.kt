@@ -15,6 +15,7 @@ class DependencyTest {
     ) = VendorFeatureDefinition(
         id = VendorFeatureId(id),
         extensionId = VendorExtensionId("ext.acme.budsproto"),
+        namespace = "acme.buds",
         canonicalName = id.substringAfterLast("."),
         category = "audio",
         valueType = VendorValueType.BOOLEAN,
@@ -25,16 +26,16 @@ class DependencyTest {
     @Test
     fun `satisfied dependencies`() {
         val f = feature(
-            "vendor.acme.buds.advanced",
-            deps = setOf(VendorFeatureId("vendor.acme.buds.basic")),
+            "vendor.acme.advanced",
+            deps = setOf(VendorFeatureId("vendor.acme.basic")),
         )
         val known = mapOf(
-            "vendor.acme.buds.basic" to feature("vendor.acme.buds.basic"),
-            "vendor.acme.buds.advanced" to f,
+            "vendor.acme.basic" to feature("vendor.acme.basic"),
+            "vendor.acme.advanced" to f,
         )
         val result = FeatureDependencies.check(
             f,
-            satisfiedFeatures = setOf(VendorFeatureId("vendor.acme.buds.basic")),
+            satisfiedFeatures = setOf(VendorFeatureId("vendor.acme.basic")),
             activeFeatures = emptySet(),
             knownFeatures = known,
         )
@@ -44,12 +45,12 @@ class DependencyTest {
     @Test
     fun `missing prerequisite blocks`() {
         val f = feature(
-            "vendor.acme.buds.advanced",
-            deps = setOf(VendorFeatureId("vendor.acme.buds.basic")),
+            "vendor.acme.advanced",
+            deps = setOf(VendorFeatureId("vendor.acme.basic")),
         )
         val known = mapOf(
-            "vendor.acme.buds.basic" to feature("vendor.acme.buds.basic"),
-            "vendor.acme.buds.advanced" to f,
+            "vendor.acme.basic" to feature("vendor.acme.basic"),
+            "vendor.acme.advanced" to f,
         )
         val result = FeatureDependencies.check(
             f, satisfiedFeatures = emptySet(),
@@ -61,8 +62,8 @@ class DependencyTest {
     @Test
     fun `unknown dependency unresolved`() {
         val f = feature(
-            "vendor.acme.buds.advanced",
-            deps = setOf(VendorFeatureId("vendor.acme.buds.ghost")),
+            "vendor.acme.advanced",
+            deps = setOf(VendorFeatureId("vendor.acme.ghost")),
         )
         val result = FeatureDependencies.check(
             f, satisfiedFeatures = emptySet(),
@@ -74,15 +75,15 @@ class DependencyTest {
     @Test
     fun `conflict detected`() {
         val f = feature(
-            "vendor.acme.buds.modea",
-            conflicts = setOf(VendorFeatureId("vendor.acme.buds.modeb")),
+            "vendor.acme.modea",
+            conflicts = setOf(VendorFeatureId("vendor.acme.modeb")),
         )
         val result = FeatureDependencies.check(
             f, satisfiedFeatures = emptySet(),
-            activeFeatures = setOf(VendorFeatureId("vendor.acme.buds.modeb")),
+            activeFeatures = setOf(VendorFeatureId("vendor.acme.modeb")),
             knownFeatures = mapOf(
-                "vendor.acme.buds.modea" to f,
-                "vendor.acme.buds.modeb" to feature("vendor.acme.buds.modeb"),
+                "vendor.acme.modea" to f,
+                "vendor.acme.modeb" to feature("vendor.acme.modeb"),
             ),
         )
         assertTrue(result is DependencyResult.Conflict)

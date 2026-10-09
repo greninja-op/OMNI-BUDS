@@ -25,3 +25,14 @@ success/failure.
 ## D-23-05: no transport in the framework
 **Decision:** The framework defines contracts; verified adapters execute.
 **Rationale:** Keeps the safety boundary intact.
+
+## D-23-06: identifier grammar alignment
+**Decision:** `VendorFeatureId` uses the established 3-segment grammar
+`vendor.<vendor>.<feature>` (matching `common.FeatureId.ofVendor` and
+`feature.VendorFeatureContract`), not the conceptual 4-segment form from
+the phase prompt. Product family is descriptor metadata (`featureNamespaces`
++ explicit `namespace` field on definitions), not an identifier segment.
+**Rationale:** The 3-segment grammar is enforced in existing code; a second
+incompatible grammar would diverge. The phase prompt's format was marked
+conceptual; existing conventions take precedence per the prompt's own
+guidance to adapt to project conventions.

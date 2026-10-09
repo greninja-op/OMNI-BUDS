@@ -22,6 +22,12 @@
 2. **Unknown-firmware fail-closed** — initial logic allowed compatibility
    when firmware was unknown but rules existed; fixed to always return
    `UnknownFirmware` (fail closed).
+3. **Identifier grammar divergence** — the Phase 23 auditor found the new
+   4-segment `vendor.<mfg>.<family>.<feature>` grammar diverged from the
+   established 3-segment `vendor.<vendor>.<feature>` grammar enforced by
+   `FeatureId`/`VendorFeatureContract`. Fixed: `VendorFeatureId` now uses
+   the 3-segment grammar with the same segment pattern; product family is
+   explicit `namespace` metadata on definitions.
 
 ## Environment notes
 - No Gradle/Lint (sandbox limitation).

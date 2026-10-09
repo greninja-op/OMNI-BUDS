@@ -22,11 +22,12 @@ class ExtensionRegistryTest {
         )
 
     private fun feature(
-        id: String = "vendor.acme.buds.ancplus",
+        id: String = "vendor.acme.ancplus",
         ext: String = "ext.acme.budsproto",
     ) = VendorFeatureDefinition(
         id = VendorFeatureId(id),
         extensionId = VendorExtensionId(ext),
+        namespace = "acme.buds",
         canonicalName = "anc_plus",
         category = "audio",
         valueType = VendorValueType.BOOLEAN,
@@ -108,13 +109,13 @@ class ExtensionRegistryTest {
         val registry = ExtensionRegistry()
         registry.registerExtension(descriptor())
         registry.registerFeature(
-            feature("vendor.acme.buds.feata").copy(
-                dependencies = setOf(VendorFeatureId("vendor.acme.buds.featb")),
+            feature("vendor.acme.feata").copy(
+                dependencies = setOf(VendorFeatureId("vendor.acme.featb")),
             ),
         )
         val result = registry.registerFeature(
-            feature("vendor.acme.buds.featb").copy(
-                dependencies = setOf(VendorFeatureId("vendor.acme.buds.feata")),
+            feature("vendor.acme.featb").copy(
+                dependencies = setOf(VendorFeatureId("vendor.acme.feata")),
             ),
         )
         assertTrue(result is RegistrationResult.Rejected)
@@ -154,6 +155,6 @@ class ExtensionRegistryTest {
     fun `unknown extension lookup returns null`() = runTest {
         val registry = ExtensionRegistry()
         assertEquals(null, registry.extension(VendorExtensionId("ext.nope.nope")))
-        assertEquals(null, registry.feature(VendorFeatureId("vendor.nope.nope.nope")))
+        assertEquals(null, registry.feature(VendorFeatureId("vendor.nope.nope")))
     }
 }

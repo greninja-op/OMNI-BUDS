@@ -13,8 +13,10 @@ execution contracts. No UI, no Phase 24, no physical hardware.
 - **Priority:** Must | **Verification:** `ExtensionContractTest`.
 
 ## OB-P23-REQ-002 — Namespaced identifiers
-- **Description:** `vendor.<manufacturer>.<family>.<feature>` format;
-  validated; stable; unique; serialization-safe; distinct from shared IDs.
+- **Description:** `vendor.<vendor>.<feature>` format aligned with the
+  established `FeatureId.ofVendor` grammar; validated; stable; unique;
+  serialization-safe; distinct from shared IDs. Product family is descriptor
+  metadata, not an identifier segment.
 - **Priority:** Must | **Verification:** `ExtensionContractTest`.
 
 ## OB-P23-REQ-003 — Extension descriptor

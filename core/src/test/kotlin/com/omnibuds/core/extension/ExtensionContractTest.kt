@@ -14,10 +14,9 @@ class ExtensionContractTest {
 
     @Test
     fun `valid feature identifier`() {
-        val id = VendorFeatureId("vendor.acme.buds.ancplus")
-        assertEquals("acme", id.manufacturer)
-        assertEquals("buds", id.family)
-        assertEquals("ancplus", id.feature)
+        val id = VendorFeatureId("vendor.acme.anc-plus")
+        assertEquals("acme", id.vendor)
+        assertEquals("anc-plus", id.feature)
     }
 
     @Test
@@ -26,7 +25,7 @@ class ExtensionContractTest {
             VendorFeatureId("acme.anc")
         }
         assertFailsWith<IllegalArgumentException> {
-            VendorFeatureId("vendor.acme.buds")
+            VendorFeatureId("vendor.acme")
         }
         assertFailsWith<IllegalArgumentException> {
             VendorFeatureId("vendor.Acme.Buds.ANC")
@@ -35,10 +34,10 @@ class ExtensionContractTest {
 
     @Test
     fun `identifier built from parts`() {
-        val id = VendorFeatureId.of("acme", "buds", "ancplus")
+        val id = VendorFeatureId.of("acme", "anc-plus")
         assertNotNull(id)
-        assertEquals("vendor.acme.buds.ancplus", id.value)
-        assertNull(VendorFeatureId.of("Acme", "buds", "ancplus"))
+        assertEquals("vendor.acme.anc-plus", id.value)
+        assertNull(VendorFeatureId.of("Acme", "anc-plus"))
     }
 
     @Test

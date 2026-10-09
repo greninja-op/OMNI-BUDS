@@ -3,7 +3,12 @@ package com.omnibuds.core.extension
 /**
  * Namespaced vendor feature identifier.
  *
- * Phase 23 (OB-P23-REQ-002): format `vendor.<manufacturer>.<family>.<feature>`.
+ * Phase 23 (OB-P23-REQ-002): aligned with the established project grammar
+ * `vendor.<vendor>.<feature>` (see `common.FeatureId.ofVendor` and
+ * `feature.VendorFeatureContract`). The product family is metadata on the
+ * extension descriptor, not an identifier segment — a second, incompatible
+ * grammar would diverge from the enforced convention.
+ *
  * Stable across sessions, independent of display labels, unique within the
  * knowledge database, serialization-safe, version-compatible.
  */
@@ -14,32 +19,33 @@ value class VendorFeatureId(val value: String) {
     }
 
     companion object {
-        private val pattern = Regex("^[a-z0-9]+(\\.[a-z0-9]+){3}$")
+        private val segmentPattern = Regex("[a-z][a-z0-9]*(-[a-z0-9]+)*")
 
         /** Validate the identifier format without constructing. */
-        fun isValid(value: String): Boolean =
-            value.startsWith("vendor.") && pattern.matches(value)
+        fun isValid(value: String): Boolean {
+            val segments = value.split(".")
+            return segments.size == 3 &&
+                segments[0] == "vendor" &&
+                segments.all { it.matches(segmentPattern) }
+        }
 
         /** Build from parts, or null when the parts are invalid. */
-        fun of(manufacturer: String, family: String, feature: String): VendorFeatureId? {
-            val id = "vendor.$manufacturer.$family.$feature"
+        fun of(vendor: String, feature: String): VendorFeatureId? {
+            val id = "vendor.$vendor.$feature"
             return if (isValid(id)) VendorFeatureId(id) else null
         }
     }
 
-    /** The manufacturer segment. */
-    val manufacturer: String get() = value.split(".")[1]
-
-    /** The product-family segment. */
-    val family: String get() = value.split(".")[2]
+    /** The vendor segment — matches `FeatureId.vendorName`. */
+    val vendor: String get() = value.split(".")[1]
 
     /** The feature segment. */
-    val feature: String get() = value.split(".")[3]
+    val feature: String get() = value.split(".")[2]
 }
 
 /**
  * Stable extension identifier.
- * Format: `ext.<manufacturer>.<name>` (e.g. `ext.acme.budsproto`).
+ * Format: `ext.<vendor>.<name>` (e.g. `ext.sony.budsproto`).
  */
 @JvmInline
 value class VendorExtensionId(val value: String) {
@@ -48,8 +54,13 @@ value class VendorExtensionId(val value: String) {
     }
 
     companion object {
-        private val pattern = Regex("^ext\\.[a-z0-9]+\\.[a-z0-9]+$")
+        private val segmentPattern = Regex("[a-z][a-z0-9]*(-[a-z0-9]+)*")
 
-        fun isValid(value: String): Boolean = pattern.matches(value)
+        fun isValid(value: String): Boolean {
+            val segments = value.split(".")
+            return segments.size == 3 &&
+                segments[0] == "ext" &&
+                segments.all { it.matches(segmentPattern) }
+        }
     }
 }

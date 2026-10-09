@@ -22,8 +22,11 @@ See design.md and source. Key types: `VendorFeatureId`, `VendorExtensionId`,
 
 ## Identifier rules
 
-- Feature: `vendor.<manufacturer>.<family>.<feature>` (lowercase alphanumerics).
-- Extension: `ext.<manufacturer>.<name>`.
+- Feature: `vendor.<vendor>.<feature>` (3 segments, lowercase alphanumerics
+  and hyphens) — aligned with `common.FeatureId.ofVendor` and
+  `feature.VendorFeatureContract`. Product family is descriptor metadata,
+  not an identifier segment.
+- Extension: `ext.<vendor>.<name>`.
 - Validated at construction; invalid rejected.
 
 ## Registration lifecycle

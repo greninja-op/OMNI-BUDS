@@ -69,6 +69,8 @@ data class ValueConstraints(
 data class VendorFeatureDefinition(
     val id: VendorFeatureId,
     val extensionId: VendorExtensionId,
+    /** Feature namespace declared by the owning extension, e.g. "acme.buds". */
+    val namespace: String,
     /** Display-independent canonical name. */
     val canonicalName: String,
     val category: String,

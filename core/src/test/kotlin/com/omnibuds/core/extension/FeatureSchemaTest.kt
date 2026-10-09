@@ -10,8 +10,9 @@ import kotlin.test.assertTrue
 class FeatureSchemaTest {
 
     private fun intFeature() = VendorFeatureDefinition(
-        id = VendorFeatureId("vendor.acme.buds.volume"),
+        id = VendorFeatureId("vendor.acme.volume"),
         extensionId = VendorExtensionId("ext.acme.budsproto"),
+        namespace = "acme.buds",
         canonicalName = "volume",
         category = "audio",
         valueType = VendorValueType.INT,
@@ -53,8 +54,9 @@ class FeatureSchemaTest {
     @Test
     fun `enum constrained`() {
         val f = VendorFeatureDefinition(
-            id = VendorFeatureId("vendor.acme.buds.ancmode"),
+            id = VendorFeatureId("vendor.acme.ancmode"),
             extensionId = VendorExtensionId("ext.acme.budsproto"),
+        namespace = "acme.buds",
             canonicalName = "anc_mode",
             category = "audio",
             valueType = VendorValueType.ENUM,
@@ -69,8 +71,9 @@ class FeatureSchemaTest {
     @Test
     fun `structured required fields`() {
         val f = VendorFeatureDefinition(
-            id = VendorFeatureId("vendor.acme.buds.eqpreset"),
+            id = VendorFeatureId("vendor.acme.eqpreset"),
             extensionId = VendorExtensionId("ext.acme.budsproto"),
+        namespace = "acme.buds",
             canonicalName = "eq_preset",
             category = "audio",
             valueType = VendorValueType.STRUCTURED,
@@ -108,8 +111,9 @@ class FeatureSchemaTest {
     @Test
     fun `list length bounded`() {
         val f = VendorFeatureDefinition(
-            id = VendorFeatureId("vendor.acme.buds.gestures"),
+            id = VendorFeatureId("vendor.acme.gestures"),
             extensionId = VendorExtensionId("ext.acme.budsproto"),
+        namespace = "acme.buds",
             canonicalName = "gestures",
             category = "input",
             valueType = VendorValueType.LIST,
@@ -126,8 +130,9 @@ class FeatureSchemaTest {
     fun `default value must satisfy constraints`() {
         try {
             VendorFeatureDefinition(
-                id = VendorFeatureId("vendor.acme.buds.volume"),
+                id = VendorFeatureId("vendor.acme.volume"),
                 extensionId = VendorExtensionId("ext.acme.budsproto"),
+        namespace = "acme.buds",
                 canonicalName = "volume",
                 category = "audio",
                 valueType = VendorValueType.INT,
@@ -143,8 +148,9 @@ class FeatureSchemaTest {
     @Test
     fun `float boundaries`() {
         val f = VendorFeatureDefinition(
-            id = VendorFeatureId("vendor.acme.buds.balance"),
+            id = VendorFeatureId("vendor.acme.balance"),
             extensionId = VendorExtensionId("ext.acme.budsproto"),
+        namespace = "acme.buds",
             canonicalName = "balance",
             category = "audio",
             valueType = VendorValueType.FLOAT,

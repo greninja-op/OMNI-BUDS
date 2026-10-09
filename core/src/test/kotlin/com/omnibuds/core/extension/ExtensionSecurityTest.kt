@@ -47,8 +47,9 @@ class ExtensionSecurityTest {
     @Test
     fun `oversized list rejected by constraints`() {
         val f = VendorFeatureDefinition(
-            id = VendorFeatureId("vendor.acme.buds.list"),
+            id = VendorFeatureId("vendor.acme.list"),
             extensionId = VendorExtensionId("ext.acme.budsproto"),
+        namespace = "acme.buds",
             canonicalName = "list",
             category = "test",
             valueType = VendorValueType.LIST,
@@ -62,8 +63,8 @@ class ExtensionSecurityTest {
     @Test
     fun `invalid identifiers rejected`() {
         // Path-traversal-like identifiers must not validate.
-        assertFalse(VendorFeatureId.isValid("vendor.acme.buds.../etc"))
-        assertFalse(VendorFeatureId.isValid("vendor.acme.buds."))
+        assertFalse(VendorFeatureId.isValid("vendor.acme.../etc"))
+        assertFalse(VendorFeatureId.isValid("vendor.acme."))
         assertFalse(VendorExtensionId.isValid("ext.acme"))
         assertFalse(VendorExtensionId.isValid("ext.acme.buds.extra"))
     }
