@@ -68,5 +68,23 @@
                 <action android:name="com.omnibuds.android.notification.TOGGLE_FEATURE" />
             </intent-filter>
         </receiver>
+
+        <!--
+          Phase 27: home-screen widget provider. Exported=false; the launcher
+          binds through AppWidgetManager, not direct intents. Renders
+          GlobalDeviceState snapshots; actions dispatch through the feature
+          engine with full revalidation.
+        -->
+        <receiver
+            android:name=".widget.OmniBudsWidgetProvider"
+            android:exported="false"
+            android:label="OmniBuds">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/omnibuds_widget_info" />
+        </receiver>
     </application>
 </manifest>

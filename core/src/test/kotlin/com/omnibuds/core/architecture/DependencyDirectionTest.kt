@@ -402,9 +402,12 @@ class DependencyDirectionTest {
             "listenUsingRfcomm", // server-side listen is not the client transport Phase 6 opens
             // Phase 25 authorises Quick Settings (TileService): the tile renders
             // GlobalDeviceState snapshots and dispatches through the existing
-            // feature engine. AppWidgetProvider and NotificationListenerService
-            // stay forbidden (Phases 26/27).
-            "AppWidgetProvider", "NotificationListenerService",
+            // feature engine. AppWidgetProvider stays forbidden until Phase 27.
+            // Phase 27 authorises the home-screen widget (AppWidgetProvider):
+            // it renders GlobalDeviceState snapshots and dispatches through
+            // the existing feature engine. NotificationListenerService stays
+            // forbidden (Phase 28+).
+            "NotificationListenerService",
             "androidx.appcompat", "androidx.compose", "setContentView", "ComponentActivity",
             // Phase 2 inspects permission standing and never asks for one (prompt section 5.3:
             // "Do not repeatedly trigger permission prompts"). Naming the request API here turns that
@@ -431,8 +434,9 @@ class DependencyDirectionTest {
                 "cache reads beside them. Nothing else (Phase 2 prompt sections 5, 6, 7; Phase 3 prompt " +
                 "sections 16, 17; research section 8).",
             "GATT or RFCOMM traffic, discovery, scanning, pairing, audio-path control, adapter power, UI, " +
-                "and widgets belong to later phases (Quick Settings was authorised in Phase 25). The " +
-                "instrumented source set is scanned here too, because a test that can reach a refused " +
+                "and widgets belong to later phases (Quick Settings was authorised in Phase 25, " +
+                "home-screen widgets in Phase 27). The instrumented source set is " +
+                "scanned here too, because a test that can reach a refused " +
                 "call is a module that can reach it (ADR-P3-007):",
             violations,
         )
@@ -534,7 +538,11 @@ class DependencyDirectionTest {
             // Phase 26: notification action receiver. Exported=false, intent
             // validated as untrusted input, dispatches through the feature
             // engine — never sends broadcasts or starts activities.
+            // Phase 27: widget provider receiver. Exported=false; the launcher
+            // binds through AppWidgetManager; actions dispatch through the
+            // feature engine with full revalidation.
             "notification/",
+            "widget/",
         )
 
         val outsideAdapter = platformSources().flatMap { file ->
@@ -580,6 +588,8 @@ class DependencyDirectionTest {
             "com/omnibuds/android/tile/",
             // Phase 26: notification controls package.
             "com/omnibuds/android/notification/",
+            // Phase 27: home-screen widget package.
+            "com/omnibuds/android/widget/",
         )
         val violations = sources
             .map { file -> file.invariantSeparatorsPath.substringAfter("kotlin/") }
@@ -616,6 +626,11 @@ class DependencyDirectionTest {
         // receiver. Exported=false, intent-filter for the internal action
         // only. It validates every intent as untrusted input and dispatches
         // through the existing feature engine — never direct Bluetooth.
+        //
+        // Phase 27 earns exactly one more receiver: the home-screen widget
+        // provider. Exported=false; the launcher binds through
+        // AppWidgetManager. Actions dispatch through the feature engine
+        // with full revalidation.
         val allowedServices = listOf(
             "com.omnibuds.android.tile.OmniBudsTileService",
             ".tile.OmniBudsTileService",
@@ -623,6 +638,8 @@ class DependencyDirectionTest {
         val allowedReceivers = listOf(
             "com.omnibuds.android.notification.OmniBudsNotificationReceiver",
             ".notification.OmniBudsNotificationReceiver",
+            "com.omnibuds.android.widget.OmniBudsWidgetProvider",
+            ".widget.OmniBudsWidgetProvider",
         )
         val unexpectedComponents = components.filterNot { tag ->
             (tag == "<service" && allowedServices.any { name -> name in text }) ||
