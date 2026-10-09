@@ -1,6 +1,7 @@
 package com.omnibuds.core.configuration
 
 import com.omnibuds.core.config.ConfigurationValue
+import com.omnibuds.core.config.ConfigurationValueJson
 import java.nio.file.Files
 import java.nio.file.Paths
 import kotlin.streams.asSequence

@@ -54,6 +54,9 @@ class DependencyDirectionTest {
         // storage. Layer 5; event-driven — never imports feature (5)
         // sideways; the caller drives protocol ports.
         "verification" to 5,
+        // Phase 19: vendor adapters consume device (2), protocol (4),
+        // common (0). Layer 5; never imports feature (5) sideways.
+        "vendor" to 5,
         "diagnostics" to 2,
         "session" to 3,
         "persistence" to 3,

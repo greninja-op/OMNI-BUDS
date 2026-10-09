@@ -159,7 +159,17 @@ before any screen exists. Kotlin, `:core` (platform-independent) +
 - **2026-10-09 — Phase 18 pushed to main** in 2 commits (code + docs; single
   call exceeded arg limits). Remote-verified: VerificationStateMachine.kt
   SHA `746df38`, requirements.md SHA `af6ccb5`.
+- **2026-10-09 — Phase 19 authorized and started** (First Fully Supported
+  Vendor Device): select defensible target, implement evidence-backed vendor
+  adapter through existing protocol/transport/capability/feature layers.
+  No fabricated protocols. No UI, no Phase 20, no physical hardware.
+- **2026-10-09 — Phase 19 implementation complete** (pending push): 4 new
+  types in `core.vendor` (layer 5). **1242 tests passing** (1100 core +
+  142 android), 0 failures. NO vendor protocol implemented — no candidate
+  had sufficient accessible, license-clear, verifiable evidence (Bose BMAP
+  documented as leading future candidate). Docs: 11 records. Phase 20 NOT started.
+- **2026-10-09 — Phase 19 pushed to main** (remote-verified).
 
 ---
 
-*Last updated: 2026-10-09 (Phase 18 pushed; Phase 19 not started).*
+*Last updated: 2026-10-09 (Phase 19 pushed; Phase 20 not started).*
