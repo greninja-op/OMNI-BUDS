@@ -61,6 +61,10 @@ class DependencyDirectionTest {
         // records with domains. Layer 5, but never imports feature (5) —
         // integration happens via FeatureId/FeatureCapability only.
         "processing" to 5,
+        // Phase 16: the battery engine consumes device (2), session (3),
+        // and protocol (4) abstractions. Layer 5; never imports feature (5)
+        // sideways.
+        "battery" to 5,
         // Phase 9: the hardware feature engine sits above the protocol layer — it
         // drives the handed-in FeatureProtocolPort seam, consumes capability
         // snapshots, and owns the control-state axis. It may depend on any lower

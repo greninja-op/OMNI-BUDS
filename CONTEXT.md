@@ -113,7 +113,20 @@ before any screen exists. Kotlin, `:core` (platform-independent) +
   Separation): processing-domain model separating device hardware DSP,
   Android platform processing, and OmniBuds application logic. No hardware
   simulation, no media-path changes.
+- **2026-10-09 — Phase 15 implementation complete** (pending push): 4 new
+  core types in `core.processing` (layer 5): `AudioProcessingDomain`,
+  `ProcessingDomainResolver`, `ProcessingOwnership`,
+  `ProcessingControlBoundary`. Reuses `FeatureCapability`,
+  `VerificationLevel`, `CoreFeature` — no duplication. **1126 tests passing**
+  (987 core + 139 android), 0 failures. Docs: 8 records. Phase 16 NOT started.
+- **2026-10-09 — Phase 15 pushed to main** in one commit
+  (`ed37ab3d`). 36 files verified on remote `main` (8 docs, main sources,
+  test sources, CONTEXT.md, README.md).
+- **2026-10-09 — Phase 16 authorized and started** (Battery & Power State):
+  per-component battery levels, charging-state semantics, freshness,
+  partial updates, multi-device isolation. No invented readings, no UI,
+  no firmware-update/charging-control functionality.
 
 ---
 
-*Last updated: 2026-10-09 (Phase 14 pushed; Phase 15 started).*
+*Last updated: 2026-10-09 (Phase 15 pushed; Phase 16 started).*
