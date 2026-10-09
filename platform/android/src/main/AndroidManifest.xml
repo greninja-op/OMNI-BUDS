@@ -37,4 +37,23 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <!--
+      Phase 25: Quick Settings tile. The service holds no Bluetooth connection
+      and no state authority of its own; it renders GlobalDeviceState snapshots
+      and dispatches through the existing feature engine. BIND_QUICK_SETTINGS_TILE
+      is the platform-required permission for tile services.
+    -->
+    <application>
+        <service
+            android:name=".tile.OmniBudsTileService"
+            android:label="OmniBuds"
+            android:icon="@android:drawable/ic_lock_silent_mode_off"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+    </application>
 </manifest>

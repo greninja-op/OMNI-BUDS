@@ -400,7 +400,11 @@ class DependencyDirectionTest {
             "startDiscovery", // discovery/scanning is deferred (ADR-P5-012, ADR-P6-012): no scanner here
             "BluetoothLeScanner", "startScan",
             "listenUsingRfcomm", // server-side listen is not the client transport Phase 6 opens
-            "TileService", "AppWidgetProvider", "NotificationListenerService",
+            // Phase 25 authorises Quick Settings (TileService): the tile renders
+            // GlobalDeviceState snapshots and dispatches through the existing
+            // feature engine. AppWidgetProvider and NotificationListenerService
+            // stay forbidden (Phases 26/27).
+            "AppWidgetProvider", "NotificationListenerService",
             "androidx.appcompat", "androidx.compose", "setContentView", "ComponentActivity",
             // Phase 2 inspects permission standing and never asks for one (prompt section 5.3:
             // "Do not repeatedly trigger permission prompts"). Naming the request API here turns that
@@ -427,9 +431,9 @@ class DependencyDirectionTest {
                 "cache reads beside them. Nothing else (Phase 2 prompt sections 5, 6, 7; Phase 3 prompt " +
                 "sections 16, 17; research section 8).",
             "GATT or RFCOMM traffic, discovery, scanning, pairing, audio-path control, adapter power, UI, " +
-                "Quick Settings and widgets belong to later phases. The instrumented source set is " +
-                "scanned here too, because a test that can reach a refused call is a module that can " +
-                "reach it (ADR-P3-007):",
+                "and widgets belong to later phases (Quick Settings was authorised in Phase 25). The " +
+                "instrumented source set is scanned here too, because a test that can reach a refused " +
+                "call is a module that can reach it (ADR-P3-007):",
             violations,
         )
     }
@@ -560,6 +564,8 @@ class DependencyDirectionTest {
         val allowedRoots = listOf(
             "com/omnibuds/android/bluetooth/",
             "com/omnibuds/android/di/",
+            // Phase 25: Quick Settings tile package.
+            "com/omnibuds/android/tile/",
         )
         val violations = sources
             .map { file -> file.invariantSeparatorsPath.substringAfter("kotlin/") }
@@ -586,6 +592,27 @@ class DependencyDirectionTest {
         val components = listOf("<receiver", "<service", "<activity", "<provider")
             .filter { tag -> tag in text }
 
+        // Phase 25 earns exactly one service: the Quick Settings tile.
+        // The tile holds no Bluetooth connection and no state authority;
+        // it renders GlobalDeviceState snapshots and dispatches through the
+        // existing feature engine. BIND_QUICK_SETTINGS_TILE is the
+        // platform-required permission for tile services.
+        val allowedServices = listOf(
+            "com.omnibuds.android.tile.OmniBudsTileService",
+            ".tile.OmniBudsTileService",
+        )
+        val unexpectedComponents = components.filterNot { tag ->
+            tag == "<service" && allowedServices.any { name -> name in text }
+        }
+
+        // The tile service must carry the platform-required permission.
+        val tilePermissionOk =
+            "<service" !in text ||
+                "android.permission.BIND_QUICK_SETTINGS_TILE" in text
+        if (!tilePermissionOk) {
+            fail("TileService must declare android.permission.BIND_QUICK_SETTINGS_TILE.")
+        }
+
         assertClean(
             "A permission or component declared before the phase that uses it is a fabricated " +
                 "capability (ADR-P2-011, ADR-P0-001; Phase 2 prompt section 5.3).",
@@ -596,7 +623,7 @@ class DependencyDirectionTest {
                 "since this phase neither scans nor reads a location-derived broadcast, and a component " +
                 "stays refused because every receiver here is context-registered and owned by the object " +
                 "that opened it (ADR-P3-012):",
-            declared.filterNot { name -> name in allowed } + components,
+            declared.filterNot { name -> name in allowed } + unexpectedComponents,
         )
     }
 
