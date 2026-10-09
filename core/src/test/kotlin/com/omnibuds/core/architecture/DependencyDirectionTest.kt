@@ -63,6 +63,10 @@ class DependencyDirectionTest {
         // Phase 21: access control consumes device (2), state (0), common (0),
         // diagnostics (2). Layer 5; centralizes default-deny policy.
         "access" to 5,
+        // Phase 22: knowledge database consumes common (0), state (0).
+        // Layer 5; descriptive knowledge only. Storage is injected as
+        // function types so no sideways import is needed.
+        "knowledge" to 5,
         "diagnostics" to 2,
         "session" to 3,
         "persistence" to 3,
