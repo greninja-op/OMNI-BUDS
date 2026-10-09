@@ -1,6 +1,7 @@
 package com.omnibuds.core.configuration
 
 import com.omnibuds.core.config.ConfigurationValue
+import com.omnibuds.core.config.ConfigurationValueJson
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

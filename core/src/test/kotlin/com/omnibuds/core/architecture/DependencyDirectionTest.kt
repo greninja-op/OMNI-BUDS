@@ -49,6 +49,11 @@ class DependencyDirectionTest {
         // capability (2), persistence (3). Layer 5; never imports feature (5)
         // sideways.
         "configuration" to 5,
+        // Phase 18: the verification framework consumes common (0),
+        // config (2), capability (2), device (2), configuration (5) for
+        // storage. Layer 5; event-driven — never imports feature (5)
+        // sideways; the caller drives protocol ports.
+        "verification" to 5,
         "diagnostics" to 2,
         "session" to 3,
         "persistence" to 3,
