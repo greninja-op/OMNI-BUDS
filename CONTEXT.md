@@ -152,7 +152,14 @@ before any screen exists. Kotlin, `:core` (platform-independent) +
   was requested/accepted/applied/read-back/retained across session,
   reconnect, restart, power-cycle boundaries. Evidence-proven scopes only.
   No UI, no vendor expansion, no physical hardware.
+- **2026-10-09 — Phase 18 implementation complete** (pending push): 12 new
+  types in `core.verification` (layer 5, event-driven). **1234 tests passing**
+  (1092 core + 142 android), 0 failures. ConfigurationValueJson moved to
+  `core.config`. Docs: 8 records. Phase 19 NOT started.
+- **2026-10-09 — Phase 18 pushed to main** in 2 commits (code + docs; single
+  call exceeded arg limits). Remote-verified: VerificationStateMachine.kt
+  SHA `746df38`, requirements.md SHA `af6ccb5`.
 
 ---
 
-*Last updated: 2026-10-09 (Phase 17 pushed; Phase 18 started).*
+*Last updated: 2026-10-09 (Phase 18 pushed; Phase 19 not started).*
