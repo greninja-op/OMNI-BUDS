@@ -71,6 +71,11 @@ class DependencyDirectionTest {
         // only, plus coroutines. Layer 5; never imports feature, vendor,
         // access, lab, or knowledge sideways.
         "extension" to 5,
+        // Phase 24: global state engine consumes common (0), state (0),
+        // platform (1), plus coroutines. Layer 5; aggregates via typed
+        // contracts, never imports battery, feature, access, knowledge,
+        // extension, or vendor sideways.
+        "globalstate" to 5,
         "diagnostics" to 2,
         "session" to 3,
         "persistence" to 3,
