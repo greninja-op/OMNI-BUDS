@@ -57,6 +57,10 @@ class DependencyDirectionTest {
         // engine (layer 4) and the codec/audio vocabularies. It sits above
         // quality; nothing may depend on it.
         "validation" to 5,
+        // Phase 15: the processing-domain model annotates capability (2)
+        // records with domains. Layer 5, but never imports feature (5) —
+        // integration happens via FeatureId/FeatureCapability only.
+        "processing" to 5,
         // Phase 9: the hardware feature engine sits above the protocol layer — it
         // drives the handed-in FeatureProtocolPort seam, consumes capability
         // snapshots, and owns the control-state axis. It may depend on any lower

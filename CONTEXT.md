@@ -107,7 +107,13 @@ before any screen exists. Kotlin, `:core` (platform-independent) +
   core types + 10 rules in `core.validation` (layer 5),
   `AudioPathValidationEngine` with session generations. **1116 tests passing**
   (977 core + 139 android), 0 failures. Docs: 8 records. Phase 15 NOT started.
+- **2026-10-09 — Phase 14 pushed to main** in 5 commits. All 28 files verified
+  on remote `main`.
+- **2026-10-09 — Phase 15 authorized and started** (Hardware DSP / Audio
+  Separation): processing-domain model separating device hardware DSP,
+  Android platform processing, and OmniBuds application logic. No hardware
+  simulation, no media-path changes.
 
 ---
 
-*Last updated: 2026-10-09 (Phase 14 complete, pending push).*
+*Last updated: 2026-10-09 (Phase 14 pushed; Phase 15 started).*
