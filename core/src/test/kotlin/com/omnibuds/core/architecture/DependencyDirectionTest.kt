@@ -49,6 +49,10 @@ class DependencyDirectionTest {
         "session" to 3,
         "persistence" to 3,
         "protocol" to 4,
+        // Phase 13: the audio quality & negotiation engine consumes the audio
+        // vocabulary (layer 2) and the codec engine (layer 3). It sits above
+        // both and nothing below it may depend on it.
+        "quality" to 4,
         // Phase 9: the hardware feature engine sits above the protocol layer — it
         // drives the handed-in FeatureProtocolPort seam, consumes capability
         // snapshots, and owns the control-state axis. It may depend on any lower
