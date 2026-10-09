@@ -67,6 +67,10 @@ class DependencyDirectionTest {
         // Layer 5; descriptive knowledge only. Storage is injected as
         // function types so no sideways import is needed.
         "knowledge" to 5,
+        // Phase 23: extension framework consumes common (0) and state (0)
+        // only, plus coroutines. Layer 5; never imports feature, vendor,
+        // access, lab, or knowledge sideways.
+        "extension" to 5,
         "diagnostics" to 2,
         "session" to 3,
         "persistence" to 3,
