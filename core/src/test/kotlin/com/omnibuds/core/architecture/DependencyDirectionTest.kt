@@ -81,6 +81,10 @@ class DependencyDirectionTest {
         // coordinator integrates via the LifecycleHooks interface, not by
         // importing session/globalstate/feature engines.
         "lifecycle" to 5,
+        // Phase 30: device-test infrastructure. Consumes common,
+        // transport, and coroutines only; never imported by production
+        // code. Layer 5 alongside the engines it doubles.
+        "testkit" to 5,
         "diagnostics" to 2,
         "session" to 3,
         "persistence" to 3,
