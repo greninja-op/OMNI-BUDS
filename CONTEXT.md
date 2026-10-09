@@ -126,7 +126,16 @@ before any screen exists. Kotlin, `:core` (platform-independent) +
   per-component battery levels, charging-state semantics, freshness,
   partial updates, multi-device isolation. No invented readings, no UI,
   no firmware-update/charging-control functionality.
+- **2026-10-09 — Phase 16 implementation complete** (pending push): 11 new
+  core types in `core.battery` (layer 5): `BatteryEngine` with per-device
+  StateFlow, explicit partial-update semantics, conflict resolver, legacy
+  adapter. Android adapter honestly reports UNSUPPORTED (no public API).
+  **1157 tests passing** (1018 core + 139 android), 0 failures. Docs:
+  8 records. Phase 17 NOT started.
+- **2026-10-09 — Phase 16 pushed to main** in one commit (`13ebb58`).
+  28 files verified on remote `main` (requirements.md SHA `e025a6e`,
+  BatteryEngine.kt SHA `ce40f74`).
 
 ---
 
-*Last updated: 2026-10-09 (Phase 15 pushed; Phase 16 started).*
+*Last updated: 2026-10-09 (Phase 16 pushed; Phase 17 not started).*
