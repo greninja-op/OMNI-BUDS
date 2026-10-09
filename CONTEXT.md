@@ -80,8 +80,13 @@
 | 17 | Persistent configuration engine (saved ≠ applied) | 1189 | `9d99a4b` |
 | 18 | Persistence verification framework (evidence-proven scopes) | 1234 | 2 commits |
 | 19 | Vendor adapter infrastructure (no protocol — blocked, honest) | 1242 | `80320e5` |
+| 20–42 | Protocol lab, knowledge DB, vendor framework, test automation, HIL, integrations, AirPods research, Community Protocol SDK | 1855 (1583 core + 272 android) | various |
+| 43 | Community Protocol SDK (api/validation/testing/examples) | 1623 core* | 4 commits |
+| 44 | Protocol versioning & compatibility management (`core/protocol/version/`: typed version domains, canonical identity, deterministic resolver, registry, schema migration, versioned codec; 17 docs) | 1623/1623 core (30 new) | (this push) |
 
-**Current:** 1242 tests (1100 core + 142 android), 0 failures.
+*Phase 43 test count folded into the 1623 core total verified at Phase 44.
+
+**Current:** 1623/1623 core tests pass (verified 2026-10-10 via standalone kotlinc+JUnit; Android module untouched by Phase 44 — 272 android tests from Phase 42 unaffected, android compile blocked by sandbox `R`-class limitation).
 
 **Key honest findings to preserve:**
 - No public Android API exposes the active codec → `NOT_OBSERVABLE`.
@@ -108,4 +113,4 @@
 
 ---
 
-*Last updated: 2026-10-10 (Phase 43 pushed; Phase 44 queued; quota at 88%).*
+*Last updated: 2026-10-10 (Phase 44 pushed; Phase 45 queued; quota at 88%).*
