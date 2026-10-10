@@ -88,11 +88,13 @@
 | 47 | Desktop Bluetooth integration layer (`core/platform/desktop/`: DesktopBluetoothAvailability, DesktopDiscoveredDevice, DesktopDiscoveryProvider, DesktopConnectionSessionState, DesktopBluetoothAdapter, Linux/macOS/Windows/Generic boundaries; 8 docs) | 1949/1949 (1674 core + 275 android; 12 new) | `759feb7`, `1e3310d`, `61c99ee` |
 | 48 | Desktop Application (`:platform:desktop`: DesktopApplicationShell, DesktopWindowController, DesktopNavigationCoordinator, DevicesViewModel, DeviceWorkspaceViewModel, BatteryPresentationModel, AudioPresentationModel, DiagnosticsViewModel, SettingsViewModel, DesktopTheme, AccessibilityNode, DesktopUiRenderer; 8 docs) | 1986/1986 (1674 core + 275 android + 37 desktop; 37 new) | `e2a44f7` |
 | 49 | Android UI (`:platform:android`: pure-Kotlin presentation layer in `com.omnibuds.android.presentation.*` with DevicesViewModel, DeviceWorkspaceViewModel, BatteryPresentationModel, AudioPresentationModel, SettingsViewModel, DiagnosticsViewModel, AndroidApplicationShell, AndroidNavigation, AndroidThemeTokens, AndroidAccessibilitySemantics, AndroidSurfaceCoordinator; thin Compose UI screens in `com.omnibuds.android.ui.compose.*`; 8 docs) | 2025/2025 (1674 core + 314 android + 37 desktop; 39 new) | `3dc6d24`..`22e0c4b` (13 batches) |
-| 50 | Unified UI/UX consolidation (new `core/presentation/` at layer 6: OmniBudsTokens design tokens, OmniBudsStrings terminology, AccessibilitySpec, UnifiedBatteryModel, UnifiedAudioModel, UnifiedControlModels, DevicePresentationState, ComponentCatalogSpec; Android + desktop presentation models consolidated onto unified tokens/strings; AndroidThemeConsolidationTest, DesktopThemeConsolidationTest, UnifiedDesignSystemTest; 8 docs) | 2051/2051 (1688 core + 321 android + 42 desktop; 26 new) | (this push) |
+| 50 | Unified UI/UX consolidation (new `core/presentation/` at layer 6: OmniBudsTokens design tokens, OmniBudsStrings terminology, AccessibilitySpec, UnifiedBatteryModel, UnifiedAudioModel, UnifiedControlModels, DevicePresentationState, ComponentCatalogSpec; Android + desktop presentation models consolidated onto unified tokens/strings; AndroidThemeConsolidationTest, DesktopThemeConsolidationTest, UnifiedDesignSystemTest; 8 docs) | 2051/2051 (1688 core + 321 android + 42 desktop; 26 new) | `160c8e9`, `42e667c`, `b842934` |
+| 51 | Release engineering (ApplicationVersion.kt semver 1.0.0; scripts/release_build.sh multi-target packaging; 8 docs; release-dist/ artifacts local-only, no binaries committed; signing BLOCKED_NO_KEYS; `.github/workflows/release-verification.yml` unpushable via API — App lacks workflow scope, preserved locally) | 2051/2051 (1688 core + 321 android + 42 desktop) | `d0487c3`..`8bf29af` + `3eb4e60`, `a192a40` |
+| 52 | Final QA & production release (CONDITIONAL GO: 13/13 software gates pass, hardware gates NOT VERIFIED — no physical environment; 3 defects registered; docs/phases/phase-52/ + docs/qa/ + docs/release/ incl. release-readiness, known-limitations, release-notes-1.0.0, final-test-matrix, hardware-verification, defect-register) | 2056/2056 (1693 core + 321 android + 42 desktop; 5 new) | (this push) |
 
 *Phase 43 test count folded into the 1623 core total verified at Phase 44.
 
-**Current:** 2051/2051 tests pass (1688 core + 321 android + 42 desktop; verified 2026-10-11 via standalone kotlinc+JUnit; 26 new Phase 50 tests, 0 failures, 0 skips).
+**Current:** 2056/2056 tests pass (1693 core + 321 android + 42 desktop; verified 2026-10-11 via standalone kotlinc+JUnit; 5 new Phase 52 tests, 0 failures, 0 skips).
 
 **Key honest findings to preserve:**
 - No public Android API exposes the active codec → `NOT_OBSERVABLE`.
@@ -122,4 +124,4 @@
 
 ---
 
-*Last updated: 2026-10-11 (Phase 50 completed).*
+*Last updated: 2026-10-11 (Phase 52 completed — all 52 phases done).*
