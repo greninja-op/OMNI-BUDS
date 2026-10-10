@@ -44,3 +44,6 @@ protocol-lab/captures/
 __pycache__/
 *.py[cod]
 .pytest_cache/
+
+# Prompt queue workspace data (lives in the working clone but must never be committed)
+queued-prompts/
