@@ -1,9 +1,12 @@
 package com.omnibuds.android.presentation.audio
 
 import com.omnibuds.core.globalstate.AudioState
+import com.omnibuds.core.presentation.audio.UnifiedAudioModel
+import com.omnibuds.core.presentation.audio.UnifiedCodecItem
 
 /**
  * Status of a specific codec capability.
+ * Backed by unified core model.
  */
 data class CodecStatusItem(
     val codecName: String,
@@ -11,10 +14,30 @@ data class CodecStatusItem(
     val isConfigurable: Boolean = false,
     val isNegotiated: Boolean = false,
     val isActive: Boolean = false,
-)
+) {
+    fun toUnified(): UnifiedCodecItem = UnifiedCodecItem(
+        codecName = codecName,
+        isSupported = isSupported,
+        isConfigurable = isConfigurable,
+        isNegotiated = isNegotiated,
+        isActive = isActive,
+    )
+
+    companion object {
+        fun fromUnified(core: UnifiedCodecItem): CodecStatusItem =
+            CodecStatusItem(
+                codecName = core.codecName,
+                isSupported = core.isSupported,
+                isConfigurable = core.isConfigurable,
+                isNegotiated = core.isNegotiated,
+                isActive = core.isActive,
+            )
+    }
+}
 
 /**
  * Honest, evidence-backed audio and codec presentation model for Android.
+ * Adapts unified core model (com.omnibuds.core.presentation.audio.UnifiedAudioModel).
  * Never fabricates active codec readings or fake selectable codec controls.
  */
 data class AudioPresentationModel(
@@ -46,43 +69,24 @@ data class AudioPresentationModel(
         }
 
     companion object {
+        fun fromUnified(core: UnifiedAudioModel): AudioPresentationModel =
+            AudioPresentationModel(
+                activeCodecName = core.activeCodecName,
+                isCodecObservable = core.isCodecObservable,
+                isCodecSelectable = core.isCodecSelectable,
+                knownSupportedCodecs = core.knownSupportedCodecs.map { CodecStatusItem.fromUnified(it) },
+                audioTransport = core.audioTransport,
+                routeDescription = core.routeDescription,
+                observableSampleRateHz = core.observableSampleRateHz,
+                observableBitDepth = core.observableBitDepth,
+                unavailableReason = core.unavailableReason,
+            )
+
         fun unavailable(
             reason: String = "Android operating system does not expose active Bluetooth audio codec telemetry via public APIs.",
-        ): AudioPresentationModel = AudioPresentationModel(
-            activeCodecName = null,
-            isCodecObservable = false,
-            isCodecSelectable = false,
-            knownSupportedCodecs = emptyList(),
-            audioTransport = null,
-            routeDescription = null,
-            observableSampleRateHz = null,
-            observableBitDepth = null,
-            unavailableReason = reason,
-        )
+        ): AudioPresentationModel = fromUnified(UnifiedAudioModel.unavailable(reason))
 
-        fun fromCoreState(audioState: AudioState): AudioPresentationModel {
-            val observedCodec = audioState.codec?.value
-            val isObservable = audioState.codecObservable
-
-            val reason = if (!isObservable) {
-                "Active codec is not observable: Android public Bluetooth API does not expose negotiated A2DP codec telemetry without private APIs."
-            } else if (observedCodec == null) {
-                "Codec state has not been reported by the audio transport."
-            } else {
-                null
-            }
-
-            return AudioPresentationModel(
-                activeCodecName = if (isObservable) observedCodec else null,
-                isCodecObservable = isObservable,
-                isCodecSelectable = false, // Public Android API has no third-party codec switching API
-                knownSupportedCodecs = emptyList(), // Not assumed without device descriptor evidence
-                audioTransport = audioState.route?.value,
-                routeDescription = audioState.route?.value,
-                observableSampleRateHz = null,
-                observableBitDepth = null,
-                unavailableReason = reason,
-            )
-        }
+        fun fromCoreState(audioState: AudioState): AudioPresentationModel =
+            fromUnified(UnifiedAudioModel.fromCoreState(audioState))
     }
 }

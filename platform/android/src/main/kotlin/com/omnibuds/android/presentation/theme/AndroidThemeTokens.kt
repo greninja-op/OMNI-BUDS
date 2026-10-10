@@ -1,5 +1,11 @@
 package com.omnibuds.android.presentation.theme
 
+import com.omnibuds.core.presentation.accessibility.AccessibilitySpec
+import com.omnibuds.core.presentation.theme.OmniBudsColors
+import com.omnibuds.core.presentation.theme.OmniBudsElevation
+import com.omnibuds.core.presentation.theme.OmniBudsShapes
+import com.omnibuds.core.presentation.theme.OmniBudsSpacing
+
 /**
  * Display theme modes supported by the OmniBuds Android user interface.
  */
@@ -31,6 +37,7 @@ enum class AndroidWindowSizeClass {
 
 /**
  * Cohesive color palette for Android controls and hardware state presentation.
+ * Directly adapts unified core design tokens (com.omnibuds.core.presentation.theme.OmniBudsColors).
  * Adheres to WCAG AA / AAA contrast ratios against dark and light surfaces.
  */
 data class AndroidColors(
@@ -55,68 +62,30 @@ data class AndroidColors(
     val statusActive: String,
 ) {
     companion object {
-        val Dark = AndroidColors(
-            background = "#121316",
-            surface = "#1A1C20",
-            surfaceElevated = "#242830",
-            surfaceVariant = "#2E333D",
-            onBackground = "#E6EDF3",
-            onSurface = "#E0E4E8",
-            onSurfaceVariant = "#9CA3AF",
-            primary = "#38BDF8",
-            onPrimary = "#031525",
-            primaryContainer = "#0C4A6E",
-            onPrimaryContainer = "#E0F2FE",
-            outline = "#374151",
-            outlineVariant = "#1F2937",
-            statusAvailable = "#22C55E",
-            statusWarning = "#F59E0B",
-            statusError = "#EF4444",
-            statusNeutral = "#6B7280",
-            statusActive = "#38BDF8",
+        fun fromCore(core: OmniBudsColors): AndroidColors = AndroidColors(
+            background = core.background,
+            surface = core.surface,
+            surfaceElevated = core.surfaceElevated,
+            surfaceVariant = core.surfaceVariant,
+            onBackground = core.onBackground,
+            onSurface = core.onSurface,
+            onSurfaceVariant = core.onSurfaceVariant,
+            primary = core.primary,
+            onPrimary = core.onPrimary,
+            primaryContainer = core.primaryContainer,
+            onPrimaryContainer = core.onPrimaryContainer,
+            outline = core.outline,
+            outlineVariant = core.outlineVariant,
+            statusAvailable = core.statusAvailable,
+            statusWarning = core.statusWarning,
+            statusError = core.statusError,
+            statusNeutral = core.statusNeutral,
+            statusActive = core.statusActive,
         )
 
-        val Light = AndroidColors(
-            background = "#F8FAFC",
-            surface = "#FFFFFF",
-            surfaceElevated = "#F1F5F9",
-            surfaceVariant = "#E2E8F0",
-            onBackground = "#0F172A",
-            onSurface = "#1E293B",
-            onSurfaceVariant = "#64748B",
-            primary = "#0284C7",
-            onPrimary = "#FFFFFF",
-            primaryContainer = "#E0F2FE",
-            onPrimaryContainer = "#0369A1",
-            outline = "#CBD5E1",
-            outlineVariant = "#E2E8F0",
-            statusAvailable = "#16A34A",
-            statusWarning = "#D97706",
-            statusError = "#DC2626",
-            statusNeutral = "#64748B",
-            statusActive = "#0284C7",
-        )
-
-        val HighContrast = AndroidColors(
-            background = "#000000",
-            surface = "#0A0A0A",
-            surfaceElevated = "#1A1A1A",
-            surfaceVariant = "#262626",
-            onBackground = "#FFFFFF",
-            onSurface = "#FFFFFF",
-            onSurfaceVariant = "#F0F0F0",
-            primary = "#00E5FF",
-            onPrimary = "#000000",
-            primaryContainer = "#00363A",
-            onPrimaryContainer = "#FFFFFF",
-            outline = "#FFFFFF",
-            outlineVariant = "#CCCCCC",
-            statusAvailable = "#00FF66",
-            statusWarning = "#FFD700",
-            statusError = "#FF3333",
-            statusNeutral = "#B0B0B0",
-            statusActive = "#00E5FF",
-        )
+        val Dark: AndroidColors = fromCore(OmniBudsColors.Dark)
+        val Light: AndroidColors = fromCore(OmniBudsColors.Light)
+        val HighContrast: AndroidColors = fromCore(OmniBudsColors.HighContrast)
     }
 }
 
@@ -145,39 +114,42 @@ object AndroidTypography {
 
 /**
  * Spacing grid tokens (8-point grid with 4-point half steps) in density-independent pixels.
+ * Backed by unified core spacing tokens.
  */
 object AndroidSpacing {
-    const val noneDp: Int = 0
-    const val xsDp: Int = 4
-    const val smDp: Int = 8
-    const val mdDp: Int = 16
-    const val lgDp: Int = 24
-    const val xlDp: Int = 32
-    const val xxlDp: Int = 48
+    const val noneDp: Int = OmniBudsSpacing.space0
+    const val xsDp: Int = OmniBudsSpacing.space4
+    const val smDp: Int = OmniBudsSpacing.space8
+    const val mdDp: Int = OmniBudsSpacing.space16
+    const val lgDp: Int = OmniBudsSpacing.space24
+    const val xlDp: Int = OmniBudsSpacing.space32
+    const val xxlDp: Int = OmniBudsSpacing.space48
 }
 
 /**
  * Elevation tokens for depth hierarchy.
+ * Backed by unified core elevation tokens.
  */
 object AndroidElevation {
-    const val level0Dp: Int = 0
-    const val level1Dp: Int = 1
-    const val level2Dp: Int = 3
-    const val level3Dp: Int = 6
-    const val level4Dp: Int = 8
-    const val level5Dp: Int = 12
+    const val level0Dp: Int = OmniBudsElevation.level0
+    const val level1Dp: Int = OmniBudsElevation.level1
+    const val level2Dp: Int = OmniBudsElevation.level2
+    const val level3Dp: Int = OmniBudsElevation.level3
+    const val level4Dp: Int = OmniBudsElevation.level4
+    const val level5Dp: Int = OmniBudsElevation.level5
 }
 
 /**
  * Corner radius shapes in density-independent pixels.
+ * Backed by unified core shape tokens.
  */
 object AndroidShapes {
-    const val noneDp: Int = 0
-    const val smallDp: Int = 8
-    const val mediumDp: Int = 12
-    const val largeDp: Int = 16
+    const val noneDp: Int = OmniBudsShapes.radiusNone
+    const val smallDp: Int = OmniBudsShapes.radiusMedium
+    const val mediumDp: Int = OmniBudsShapes.radiusLarge
+    const val largeDp: Int = OmniBudsShapes.radiusExtraLarge
     const val extraLargeDp: Int = 28
-    const val pillDp: Int = 999
+    const val pillDp: Int = OmniBudsShapes.radiusPill
 }
 
 /**
@@ -185,6 +157,6 @@ object AndroidShapes {
  * Per WCAG 2.5.5 and Android accessibility guidelines, minimum touch target is 48 dp x 48 dp.
  */
 object AndroidTouchTargets {
-    const val minTouchTargetDp: Int = 48
+    const val minTouchTargetDp: Int = AccessibilitySpec.MIN_TOUCH_TARGET_DP
     const val recommendedTouchTargetDp: Int = 56
 }

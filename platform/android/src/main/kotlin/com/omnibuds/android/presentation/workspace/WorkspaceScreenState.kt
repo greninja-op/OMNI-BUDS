@@ -3,6 +3,12 @@ package com.omnibuds.android.presentation.workspace
 import com.omnibuds.android.presentation.audio.AudioPresentationModel
 import com.omnibuds.android.presentation.battery.BatteryPresentationModel
 import com.omnibuds.core.globalstate.ConnectionState
+import com.omnibuds.core.presentation.control.ControlExecutionStatus
+import com.omnibuds.core.presentation.control.FeatureCapabilityKind
+
+// Re-export core enums for backward compatibility
+typealias ControlExecutionStatus = ControlExecutionStatus
+typealias FeatureCapabilityKind = FeatureCapabilityKind
 
 enum class WorkspaceTab {
     OVERVIEW,
@@ -25,28 +31,6 @@ data class DeviceOverviewModel(
     val confidence: String? = null,
     val isReady: Boolean = false,
 )
-
-enum class ControlExecutionStatus {
-    IDLE,
-    PENDING,
-    SUCCEEDED,
-    REJECTED,
-    TIMED_OUT,
-    AMBIGUOUS,
-    FAILED,
-}
-
-/**
- * 6-state capability representation for hardware features.
- */
-enum class FeatureCapabilityKind {
-    UNSUPPORTED,
-    UNKNOWN,
-    READ_ONLY,
-    VOLATILE,
-    PERSISTENT,
-    PERSISTENCE_VERIFIED,
-}
 
 data class HardwareControlModel(
     val featureId: String,

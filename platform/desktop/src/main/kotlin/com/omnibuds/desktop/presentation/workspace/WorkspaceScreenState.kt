@@ -1,24 +1,17 @@
 package com.omnibuds.desktop.presentation.workspace
 
 import com.omnibuds.core.platform.desktop.DesktopConnectionSessionState
+import com.omnibuds.core.presentation.control.ControlExecutionStatus
+import com.omnibuds.core.presentation.control.FeatureCapabilityKind
 import com.omnibuds.desktop.presentation.audio.AudioPresentationModel
 import com.omnibuds.desktop.presentation.battery.BatteryPresentationModel
 
-/**
- * Status of an in-flight control operation on a hardware feature.
- */
-enum class ControlExecutionStatus {
-    IDLE,
-    PENDING,
-    SUCCEEDED,
-    REJECTED,
-    TIMED_OUT,
-    AMBIGUOUS,
-    FAILED,
-}
+// Re-export core enums for backward compatibility
+typealias ControlExecutionStatus = ControlExecutionStatus
+typealias FeatureCapabilityKind = FeatureCapabilityKind
 
 /**
- * Visual model for a specific hardware control.
+ * Visual model for a specific hardware control on desktop.
  */
 data class HardwareControlItem(
     val featureId: String,
@@ -32,8 +25,17 @@ data class HardwareControlItem(
     val executionStatus: ControlExecutionStatus = ControlExecutionStatus.IDLE,
     val options: List<String> = emptyList(),
     val rejectionOrFailureReason: String? = null,
+    val capabilityKind: FeatureCapabilityKind = if (!isSupported) {
+        FeatureCapabilityKind.UNSUPPORTED
+    } else if (isActionable) {
+        FeatureCapabilityKind.PERSISTENT
+    } else {
+        FeatureCapabilityKind.READ_ONLY
+    },
 ) {
     val isPending: Boolean get() = executionStatus == ControlExecutionStatus.PENDING
+    val isReadOnly: Boolean get() = capabilityKind == FeatureCapabilityKind.READ_ONLY
+    val isUnsupported: Boolean get() = capabilityKind == FeatureCapabilityKind.UNSUPPORTED
 }
 
 /**

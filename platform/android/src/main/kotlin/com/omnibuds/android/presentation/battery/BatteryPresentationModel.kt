@@ -1,9 +1,12 @@
 package com.omnibuds.android.presentation.battery
 
 import com.omnibuds.core.globalstate.BatteryState
+import com.omnibuds.core.presentation.battery.UnifiedBatteryComponent
+import com.omnibuds.core.presentation.battery.UnifiedBatteryModel
 
 /**
  * Single battery component reading (e.g. left bud, right bud, charging case, or overall device).
+ * Backed by unified core model.
  */
 data class BatteryComponentReading(
     val componentName: String,
@@ -22,10 +25,28 @@ data class BatteryComponentReading(
             levelPercent != null -> "$levelPercent%${if (isCharging == true) " ⚡" else ""}"
             else -> "Unknown"
         }
+
+    fun toUnified(): UnifiedBatteryComponent = UnifiedBatteryComponent(
+        componentName = componentName,
+        levelPercent = levelPercent,
+        isCharging = isCharging,
+        isPresent = isPresent,
+    )
+
+    companion object {
+        fun fromUnified(core: UnifiedBatteryComponent): BatteryComponentReading =
+            BatteryComponentReading(
+                componentName = core.componentName,
+                levelPercent = core.levelPercent,
+                isCharging = core.isCharging,
+                isPresent = core.isPresent,
+            )
+    }
 }
 
 /**
  * Pure presentation model for hardware battery state on Android.
+ * Adapts unified core model (com.omnibuds.core.presentation.battery.UnifiedBatteryModel).
  * Preserves nullability strictly: never substitutes 0% for unknown readings.
  */
 data class BatteryPresentationModel(
@@ -77,53 +98,34 @@ data class BatteryPresentationModel(
         }
 
     companion object {
-        const val STALE_THRESHOLD_MS: Long = 60_000L
+        const val STALE_THRESHOLD_MS: Long = UnifiedBatteryModel.STALE_THRESHOLD_MS
+
+        fun fromUnified(core: UnifiedBatteryModel): BatteryPresentationModel =
+            BatteryPresentationModel(
+                isAvailable = core.isAvailable,
+                components = core.components.map { BatteryComponentReading.fromUnified(it) },
+                overallPercent = core.overallPercent,
+                isCharging = core.isCharging,
+                lastUpdatedMillis = core.lastUpdatedMillis,
+                isStale = core.isStale,
+                unavailableReason = core.unavailableReason,
+            )
 
         fun unavailable(
             reason: String = "No public Android API exposes Bluetooth device battery telemetry as of API 35.",
-        ): BatteryPresentationModel = BatteryPresentationModel(
-            isAvailable = false,
-            components = emptyList(),
-            overallPercent = null,
-            isCharging = null,
-            lastUpdatedMillis = null,
-            isStale = false,
-            unavailableReason = reason,
-        )
+        ): BatteryPresentationModel = fromUnified(UnifiedBatteryModel.unavailable(reason))
 
         fun fromCoreState(
             batteryState: BatteryState,
             currentEpochMillis: Long = System.currentTimeMillis(),
             staleThresholdMillis: Long = STALE_THRESHOLD_MS,
-        ): BatteryPresentationModel = when (batteryState) {
-            is BatteryState.Unknown -> unavailable()
-            is BatteryState.Known -> {
-                val observedAt = batteryState.observation?.provenance?.observedAtMillis
-                val isStale = if (observedAt != null) {
-                    (currentEpochMillis - observedAt) > staleThresholdMillis
-                } else {
-                    false
-                }
-
-                BatteryPresentationModel(
-                    isAvailable = true,
-                    components = listOfNotNull(
-                        batteryState.levelPercent?.let {
-                            BatteryComponentReading(
-                                componentName = "Headset",
-                                levelPercent = it,
-                                isCharging = batteryState.charging,
-                            )
-                        },
-                    ),
-                    overallPercent = batteryState.levelPercent,
-                    isCharging = batteryState.charging,
-                    lastUpdatedMillis = observedAt,
-                    isStale = isStale,
-                    unavailableReason = null,
-                )
-            }
-        }
+        ): BatteryPresentationModel = fromUnified(
+            UnifiedBatteryModel.fromCoreState(
+                batteryState = batteryState,
+                currentEpochMillis = currentEpochMillis,
+                staleThresholdMillis = staleThresholdMillis,
+            ),
+        )
 
         fun fromComponents(
             left: Int?,
@@ -134,33 +136,19 @@ data class BatteryPresentationModel(
             caseCharging: Boolean? = null,
             observedAt: Long? = null,
             currentEpochMillis: Long = System.currentTimeMillis(),
-        ): BatteryPresentationModel {
-            val isAvailable = left != null || right != null || case != null
-            val isStale = if (observedAt != null && observedAt > 0) {
-                (currentEpochMillis - observedAt) > STALE_THRESHOLD_MS
-            } else {
-                false
-            }
-            val comps = mutableListOf<BatteryComponentReading>()
-            if (left != null || leftCharging != null) {
-                comps.add(BatteryComponentReading("Left", left, leftCharging))
-            }
-            if (right != null || rightCharging != null) {
-                comps.add(BatteryComponentReading("Right", right, rightCharging))
-            }
-            if (case != null || caseCharging != null) {
-                comps.add(BatteryComponentReading("Case", case, caseCharging))
-            }
-
-            return BatteryPresentationModel(
-                isAvailable = isAvailable,
-                components = comps,
-                overallPercent = comps.mapNotNull { it.levelPercent }.average().takeIf { !it.isNaN() }?.toInt(),
-                isCharging = leftCharging == true || rightCharging == true || caseCharging == true,
-                lastUpdatedMillis = observedAt,
-                isStale = isStale,
-                unavailableReason = if (!isAvailable) "Battery telemetry not reported" else null,
-            )
-        }
+            staleThresholdMillis: Long = STALE_THRESHOLD_MS,
+        ): BatteryPresentationModel = fromUnified(
+            UnifiedBatteryModel.fromComponents(
+                left = left,
+                right = right,
+                case = case,
+                leftCharging = leftCharging,
+                rightCharging = rightCharging,
+                caseCharging = caseCharging,
+                observedAt = observedAt,
+                currentEpochMillis = currentEpochMillis,
+                staleThresholdMillis = staleThresholdMillis,
+            ),
+        )
     }
 }
