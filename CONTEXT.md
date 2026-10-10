@@ -84,7 +84,7 @@
 | 43 | Community Protocol SDK (api/validation/testing/examples) | 1623 core* | 4 commits |
 | 44 | Protocol versioning & compatibility management (`core/protocol/version/`: typed version domains, canonical identity, deterministic resolver, registry, schema migration, versioned codec; 17 docs) | 1623/1623 core (30 new) | `55a09aa`, `a8500ae`, `6125b49` |
 | 45 | Firmware compatibility & device revision management (`core/firmware/`: typed firmware versions, observation provenance, evidence-backed rules, deterministic firmware-aware resolver, operation gate, state invalidation, metadata migration; 17 docs) | 1927/1927 (1655 core + 272 android; 32 new) | `a4d4140`, `7db5465`, `2c5af24` |
-| 46 | Kotlin Multiplatform Core & Platform Independence (`core/platform/`: PlatformType, PlatformDescriptor, PlatformIdentifierSource, PlatformStoragePort, PlatformLifecycleSource, PlatformDiagnosticSink, PlatformTransportFactory; Android compat adapters; 18 docs) | 1937/1937 (1662 core + 275 android; 10 new) | uncommitted (Phase 46) |
+| 46 | Kotlin Multiplatform core & platform independence (platform-abstraction seams in `core/platform/`: PlatformType/Descriptor/IdentifierSource/LifecycleSource/StoragePort/TransportFactory/DiagnosticSink; Android implementations; KMP plugin registered but not applied — Gradle non-functional in sandbox, source tree stays `src/main/kotlin`; 18 docs) | 1937/1937 (1662 core + 275 android; 10 new) | (this push) |
 
 *Phase 43 test count folded into the 1623 core total verified at Phase 44.
 
@@ -115,4 +115,4 @@
 
 ---
 
-*Last updated: 2026-10-10 (Phase 46 completed; Phase 47 queued).*
+*Last updated: 2026-10-10 (Phase 46 pushed; Phase 47 queued).*
