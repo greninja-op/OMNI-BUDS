@@ -84,11 +84,12 @@
 | 43 | Community Protocol SDK (api/validation/testing/examples) | 1623 core* | 4 commits |
 | 44 | Protocol versioning & compatibility management (`core/protocol/version/`: typed version domains, canonical identity, deterministic resolver, registry, schema migration, versioned codec; 17 docs) | 1623/1623 core (30 new) | `55a09aa`, `a8500ae`, `6125b49` |
 | 45 | Firmware compatibility & device revision management (`core/firmware/`: typed firmware versions, observation provenance, evidence-backed rules, deterministic firmware-aware resolver, operation gate, state invalidation, metadata migration; 17 docs) | 1927/1927 (1655 core + 272 android; 32 new) | `a4d4140`, `7db5465`, `2c5af24` |
-| 46 | Kotlin Multiplatform core & platform independence (platform-abstraction seams in `core/platform/`: PlatformType/Descriptor/IdentifierSource/LifecycleSource/StoragePort/TransportFactory/DiagnosticSink; Android implementations; KMP plugin registered but not applied — Gradle non-functional in sandbox, source tree stays `src/main/kotlin`; 18 docs) | 1937/1937 (1662 core + 275 android; 10 new) | (this push) |
+| 46 | Kotlin Multiplatform core & platform independence (platform-abstraction seams in `core/platform/`: PlatformType/Descriptor/IdentifierSource/LifecycleSource/StoragePort/TransportFactory/DiagnosticSink; Android implementations; KMP plugin registered but not applied — Gradle non-functional in sandbox, source tree stays `src/main/kotlin`; 18 docs) | 1937/1937 (1662 core + 275 android; 10 new) | `3104c1e` |
+| 47 | Desktop Bluetooth integration layer (`core/platform/desktop/`: DesktopBluetoothAvailability, DesktopDiscoveredDevice, DesktopDiscoveryProvider, DesktopConnectionSessionState, DesktopBluetoothAdapter, Linux/macOS/Windows/Generic boundaries; 8 docs) | 1949/1949 (1674 core + 275 android; 12 new) | (pending commit) |
 
 *Phase 43 test count folded into the 1623 core total verified at Phase 44.
 
-**Current:** 1937/1937 tests pass (1662 core + 275 android; verified 2026-10-10 via standalone kotlinc+JUnit with aapt2-generated `R.java`; 10 new Phase 46 tests, 0 failures).
+**Current:** 1949/1949 tests pass (1674 core + 275 android; verified 2026-10-10 via standalone kotlinc+JUnit with aapt2-generated `R.java`; 12 new Phase 47 tests, 0 failures).
 
 **Key honest findings to preserve:**
 - No public Android API exposes the active codec → `NOT_OBSERVABLE`.
@@ -115,4 +116,4 @@
 
 ---
 
-*Last updated: 2026-10-10 (Phase 46 pushed; Phase 47 queued).*
+*Last updated: 2026-10-10 (Phase 47 completed; Phase 48 queued).*
