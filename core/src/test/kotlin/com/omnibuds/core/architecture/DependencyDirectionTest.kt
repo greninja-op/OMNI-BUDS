@@ -39,6 +39,7 @@ class DependencyDirectionTest {
         // and placing it above `common` would make every foundational area import upward.
         "common" to 0,
         "state" to 0,
+        "release" to 0,
         "transport" to 1,
         "platform" to 1,
         "device" to 2,
