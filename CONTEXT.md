@@ -85,17 +85,19 @@
 | 44 | Protocol versioning & compatibility management (`core/protocol/version/`: typed version domains, canonical identity, deterministic resolver, registry, schema migration, versioned codec; 17 docs) | 1623/1623 core (30 new) | `55a09aa`, `a8500ae`, `6125b49` |
 | 45 | Firmware compatibility & device revision management (`core/firmware/`: typed firmware versions, observation provenance, evidence-backed rules, deterministic firmware-aware resolver, operation gate, state invalidation, metadata migration; 17 docs) | 1927/1927 (1655 core + 272 android; 32 new) | `a4d4140`, `7db5465`, `2c5af24` |
 | 46 | Kotlin Multiplatform core & platform independence (platform-abstraction seams in `core/platform/`: PlatformType/Descriptor/IdentifierSource/LifecycleSource/StoragePort/TransportFactory/DiagnosticSink; Android implementations; KMP plugin registered but not applied — Gradle non-functional in sandbox, source tree stays `src/main/kotlin`; 18 docs) | 1937/1937 (1662 core + 275 android; 10 new) | `3104c1e` |
-| 47 | Desktop Bluetooth integration layer (`core/platform/desktop/`: DesktopBluetoothAvailability, DesktopDiscoveredDevice, DesktopDiscoveryProvider, DesktopConnectionSessionState, DesktopBluetoothAdapter, Linux/macOS/Windows/Generic boundaries; 8 docs) | 1949/1949 (1674 core + 275 android; 12 new) | (pending commit) |
+| 47 | Desktop Bluetooth integration layer (`core/platform/desktop/`: DesktopBluetoothAvailability, DesktopDiscoveredDevice, DesktopDiscoveryProvider, DesktopConnectionSessionState, DesktopBluetoothAdapter, Linux/macOS/Windows/Generic boundaries; 8 docs) | 1949/1949 (1674 core + 275 android; 12 new) | `759feb7`, `1e3310d`, `61c99ee` |
+| 48 | Desktop Application (`:platform:desktop`: DesktopApplicationShell, DesktopWindowController, DesktopNavigationCoordinator, DevicesViewModel, DeviceWorkspaceViewModel, BatteryPresentationModel, AudioPresentationModel, DiagnosticsViewModel, SettingsViewModel, DesktopTheme, AccessibilityNode, DesktopUiRenderer; 8 docs) | 1986/1986 (1674 core + 275 android + 37 desktop; 37 new) | (pending commit) |
 
 *Phase 43 test count folded into the 1623 core total verified at Phase 44.
 
-**Current:** 1949/1949 tests pass (1674 core + 275 android; verified 2026-10-10 via standalone kotlinc+JUnit with aapt2-generated `R.java`; 12 new Phase 47 tests, 0 failures).
+**Current:** 1986/1986 tests pass (1674 core + 275 android + 37 desktop; verified 2026-10-10 via standalone kotlinc+JUnit; 37 new Phase 48 tests, 0 failures, 0 skips).
 
 **Key honest findings to preserve:**
 - No public Android API exposes the active codec → `NOT_OBSERVABLE`.
 - No public Android API exposes codec control → `NOT_SELECTABLE`/`NOT_CONFIGURABLE`.
 - No public API exposes Bluetooth battery → adapter reports unsupported.
 - No vendor protocol has sufficient evidence → registry stays empty (correct).
+- Headless execution environment has no display server; graphical rendering is verified via pure-Kotlin MVI/MVVM presentation models and headless semantic accessibility trees.
 
 ## 9. Gotchas (things that bit us)
 
@@ -116,4 +118,4 @@
 
 ---
 
-*Last updated: 2026-10-10 (Phase 47 completed; Phase 48 queued).*
+*Last updated: 2026-10-10 (Phase 48 completed; Phase 49 queued).*

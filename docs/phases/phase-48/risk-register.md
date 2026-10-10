@@ -1,0 +1,12 @@
+# Phase 48 — Desktop Application Risk Register
+
+## 1. Risk Matrix
+
+| Risk ID | Risk Description | Severity | Likelihood | Mitigation Strategy | Status |
+|---|---|---|---|---|---|
+| **RSK-48-01** | **Headless Environment UI Verification Gap**<br>Absence of X11/Wayland display server prevents verifying pixel rendering, font rasterization, and OS window decorations. | High | High | Decouple presentation state and accessibility semantic trees from graphical canvas. Verify all UI logic, keyboard navigation, and theme tokens via unit tests. Defer visual rendering verification to interactive Phase 52. | Mitigated |
+| **RSK-48-02** | **Stale Hardware Telemetry Representation**<br>Bluetooth devices may disconnect or stop sending battery/codec updates while the workspace is open. | Medium | Medium | Track observation timestamps on battery telemetry; flag telemetry as stale when older than 60 seconds; clear active vendor status on transport disconnect. | Mitigated |
+| **RSK-48-03** | **Unauthenticated or Fabricated Hardware Controls**<br>Displaying controls that the connected peripheral does not implement or authorize. | High | Low | Enforce read-only safe mode for unidentified devices (`IdentityState.Unknown`); verify feature support in `CapabilityState.Ready` and vendor protocol compatibility before making controls actionable. | Mitigated |
+| **RSK-48-04** | **Sensitive Diagnostic Information Leakage**<br>Bluetooth MAC addresses, authentication tokens, or vendor proprietary payloads exposed in logs. | High | Medium | Pass all diagnostic log entries through `LogRedactor.redact()`; redact MAC addresses to `[REDACTED]`; restrict UI display to max 256 entries; provide explicit sanitized local JSON export only. | Mitigated |
+| **RSK-48-05** | **Corrupt Stored Application Preferences**<br>Corrupted or manually tampered settings values leading to application crashes on startup. | Medium | Low | Clamping and graceful fallback on preference retrieval: timeout clamped to 5..120s, retention clamped to 64..2048, corrupt theme string falls back safely to `ThemeMode.DARK`. | Mitigated |
+| **RSK-48-06** | **Unbounded Multi-Device Concurrency & Race Conditions**<br>State bleed between concurrently connected or observed devices. | Medium | Low | Scope `DeviceWorkspaceViewModel` strictly to one `deviceIdentifier`; use `GlobalDeviceStateRepository`'s isolated per-device aggregators. Verified in `MultiDeviceIsolationTest`. | Mitigated |
