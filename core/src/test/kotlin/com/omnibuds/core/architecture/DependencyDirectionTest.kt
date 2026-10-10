@@ -143,6 +143,10 @@ class DependencyDirectionTest {
         // integration flows through the existing resolver, gate, and
         // invalidation contracts.
         "firmware" to 5,
+        // Phase 50: unified design system, design tokens, and presentation contracts.
+        // Consumes globalstate (5), recovery (5), diagnostics (2), audio (2),
+        // device (2), platform (1), state (0), common (0). Layer 6.
+        "presentation" to 6,
     )
 
     private fun mainSources(): List<File> {
