@@ -26,6 +26,9 @@ data class BluetoothPlatformCapabilities(
 
     /** transports the platform says it could offer, empty when nothing was probed. */
     val candidateTransports: Set<TransportKind>,
+
+    /** The runtime host platform type. Defaults to UNKNOWN until probed. */
+    val platformType: PlatformType = PlatformType.UNKNOWN,
 ) {
     /** Copy-on-write safe view of the feature map. */
     val supportedFeatures: Map<PlatformFeature, PlatformFeatureSupport>

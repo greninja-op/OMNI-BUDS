@@ -14,6 +14,7 @@ import com.omnibuds.core.platform.BluetoothPlatformCapabilities
 import com.omnibuds.core.platform.PermissionContext
 import com.omnibuds.core.platform.PlatformFeature
 import com.omnibuds.core.platform.PlatformFeatureSupport
+import com.omnibuds.core.platform.PlatformType
 import com.omnibuds.core.platform.apiLevelSupports
 import com.omnibuds.core.state.VerificationLevel
 
@@ -105,6 +106,7 @@ class AndroidPlatformCapabilityProvider(
             features = emptyMap(),
             permissionStatus = permissionProvider.standings(),
             candidateTransports = emptySet(),
+            platformType = PlatformType.ANDROID,
         )
 
         for (feature in PlatformFeature.entries) {
