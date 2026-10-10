@@ -56,7 +56,7 @@
 - **Toolchain:** kotlinc 2.0.21, JVM 17, `-Werror`, JUnit Platform Console 1.10.1.
 - **GitHub writes:** `github` CLI (App API `push_files`), never SSH or `git push`. Never recommend SSH keys.
 - **Local git history is stale/divergent** (API pushes bypass it). Build explicit file lists per push; never push local history blindly.
-- **Architecture layers:** common(0), device(2), config(2), capability(2), persistence(3), protocol(4), then feature/battery/processing/configuration/validation/verification/vendor at 5. `DependencyDirectionTest` enforces downward-only.
+- **Architecture layers:** common(0), device(2), config(2), capability(2), persistence(3), protocol(4), then feature/battery/processing/configuration/validation/verification/vendor/firmware at 5, sdk at 6. `DependencyDirectionTest` enforces downward-only.
 - **Core forbids JVM-only imports** (`java.io` etc.) — file I/O lives in `:platform:android`.
 - **`ConfigurationValueJson`** moved to `com.omnibuds.core.config` (Phase 18); old path is a deprecated typealias shim.
 - **Logo:** `https://github.com/user-attachments/assets/a1a3b59f-ad00-43a8-ab1d-73066f74a4d1` — preserve the README `<img>` tag verbatim.
@@ -82,11 +82,12 @@
 | 19 | Vendor adapter infrastructure (no protocol — blocked, honest) | 1242 | `80320e5` |
 | 20–42 | Protocol lab, knowledge DB, vendor framework, test automation, HIL, integrations, AirPods research, Community Protocol SDK | 1855 (1583 core + 272 android) | various |
 | 43 | Community Protocol SDK (api/validation/testing/examples) | 1623 core* | 4 commits |
-| 44 | Protocol versioning & compatibility management (`core/protocol/version/`: typed version domains, canonical identity, deterministic resolver, registry, schema migration, versioned codec; 17 docs) | 1623/1623 core (30 new) | (this push) |
+| 44 | Protocol versioning & compatibility management (`core/protocol/version/`: typed version domains, canonical identity, deterministic resolver, registry, schema migration, versioned codec; 17 docs) | 1623/1623 core (30 new) | `55a09aa`, `a8500ae`, `6125b49` |
+| 45 | Firmware compatibility & device revision management (`core/firmware/`: typed firmware versions, observation provenance, evidence-backed rules, deterministic firmware-aware resolver, operation gate, state invalidation, metadata migration; 17 docs) | 1927/1927 (1655 core + 272 android; 32 new) | (this push) |
 
 *Phase 43 test count folded into the 1623 core total verified at Phase 44.
 
-**Current:** 1623/1623 core tests pass (verified 2026-10-10 via standalone kotlinc+JUnit; Android module untouched by Phase 44 — 272 android tests from Phase 42 unaffected, android compile blocked by sandbox `R`-class limitation).
+**Current:** 1927/1927 tests pass (1655 core + 272 android; verified 2026-10-10 via standalone kotlinc+JUnit with aapt2-generated `R.java`; 32 new Phase 45 tests, 0 failures).
 
 **Key honest findings to preserve:**
 - No public Android API exposes the active codec → `NOT_OBSERVABLE`.
@@ -113,4 +114,4 @@
 
 ---
 
-*Last updated: 2026-10-10 (Phase 44 pushed; Phase 45 queued; quota at 88%).*
+*Last updated: 2026-10-10 (Phase 45 pushed; Phase 46 queued).*
