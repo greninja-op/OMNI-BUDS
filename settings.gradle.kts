@@ -30,3 +30,8 @@ include(":platform:android")
 // verify deploy, capture, hierarchy extraction and input against, so that artifact lives here as a
 // debug-only debuggable shell with no product code and no release variant.
 include(":tools:companion-shell")
+
+// Desktop platform application (Phase 48). Desktop application shell, presentation layer,
+// desktop storage, and UI toolkit boundaries.
+include(":platform:desktop")
+
