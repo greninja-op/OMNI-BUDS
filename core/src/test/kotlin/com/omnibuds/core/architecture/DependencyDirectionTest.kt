@@ -458,6 +458,10 @@ class DependencyDirectionTest {
         )
         val pattern = Regex("\\b(${forbidden.joinToString("|")})\\b")
         val violations = platformCapabilitySources().flatMap { file ->
+            // Phase 49: Compose UI and presentation layers are authorised.
+            if ("ui/compose/" in file.invariantSeparatorsPath || "presentation/" in file.invariantSeparatorsPath) {
+                return@flatMap emptyList<String>()
+            }
             codeLinesOf(file)
                 .filter { line -> pattern.containsMatchIn(line) }
                 .map { line -> "${labelOf(file)}: $line" }
@@ -539,6 +543,8 @@ class DependencyDirectionTest {
                 // in its signatures. That is process-lifecycle observation,
                 // not a UI screen — no activity is ever launched or shown.
                 if ("lifecycle/" in file.invariantSeparatorsPath) return@flatMap emptyList<String>()
+                // Phase 49: Android presentation and UI layers are authorised.
+                if ("presentation/" in file.invariantSeparatorsPath || "ui/" in file.invariantSeparatorsPath) return@flatMap emptyList<String>()
                 codeLinesOf(file)
                     .filter { line -> pattern.containsMatchIn(line) }
                     .map { line -> "$label: $line" }
@@ -635,6 +641,9 @@ class DependencyDirectionTest {
             "com/omnibuds/android/lifecycle/",
             // Phase 32: platform compatibility policy package.
             "com/omnibuds/android/compat/",
+            // Phase 49: presentation and Compose UI packages.
+            "com/omnibuds/android/presentation/",
+            "com/omnibuds/android/ui/",
         )
         val violations = sources
             .map { file -> file.invariantSeparatorsPath.substringAfter("kotlin/") }
