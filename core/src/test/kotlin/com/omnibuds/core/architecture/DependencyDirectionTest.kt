@@ -137,6 +137,12 @@ class DependencyDirectionTest {
         // device (2), security (1), transport (1), state (0), common (0).
         // Layer 6.
         "sdk" to 6,
+        // Phase 45: firmware compatibility and device revision management.
+        // Consumes protocol (4), device (2), state (0), common (0). Layer 5;
+        // never imports feature, vendor, access, or globalstate sideways —
+        // integration flows through the existing resolver, gate, and
+        // invalidation contracts.
+        "firmware" to 5,
     )
 
     private fun mainSources(): List<File> {
