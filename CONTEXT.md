@@ -87,11 +87,12 @@
 | 46 | Kotlin Multiplatform core & platform independence (platform-abstraction seams in `core/platform/`: PlatformType/Descriptor/IdentifierSource/LifecycleSource/StoragePort/TransportFactory/DiagnosticSink; Android implementations; KMP plugin registered but not applied — Gradle non-functional in sandbox, source tree stays `src/main/kotlin`; 18 docs) | 1937/1937 (1662 core + 275 android; 10 new) | `3104c1e` |
 | 47 | Desktop Bluetooth integration layer (`core/platform/desktop/`: DesktopBluetoothAvailability, DesktopDiscoveredDevice, DesktopDiscoveryProvider, DesktopConnectionSessionState, DesktopBluetoothAdapter, Linux/macOS/Windows/Generic boundaries; 8 docs) | 1949/1949 (1674 core + 275 android; 12 new) | `759feb7`, `1e3310d`, `61c99ee` |
 | 48 | Desktop Application (`:platform:desktop`: DesktopApplicationShell, DesktopWindowController, DesktopNavigationCoordinator, DevicesViewModel, DeviceWorkspaceViewModel, BatteryPresentationModel, AudioPresentationModel, DiagnosticsViewModel, SettingsViewModel, DesktopTheme, AccessibilityNode, DesktopUiRenderer; 8 docs) | 1986/1986 (1674 core + 275 android + 37 desktop; 37 new) | `e2a44f7` |
-| 49 | Android UI (`:platform:android`: pure-Kotlin presentation layer in `com.omnibuds.android.presentation.*` with DevicesViewModel, DeviceWorkspaceViewModel, BatteryPresentationModel, AudioPresentationModel, SettingsViewModel, DiagnosticsViewModel, AndroidApplicationShell, AndroidNavigation, AndroidThemeTokens, AndroidAccessibilitySemantics, AndroidSurfaceCoordinator; thin Compose UI screens in `com.omnibuds.android.ui.compose.*`; 8 docs) | 2025/2025 (1674 core + 314 android + 37 desktop; 39 new) | (working tree) |
+| 49 | Android UI (`:platform:android`: pure-Kotlin presentation layer in `com.omnibuds.android.presentation.*` with DevicesViewModel, DeviceWorkspaceViewModel, BatteryPresentationModel, AudioPresentationModel, SettingsViewModel, DiagnosticsViewModel, AndroidApplicationShell, AndroidNavigation, AndroidThemeTokens, AndroidAccessibilitySemantics, AndroidSurfaceCoordinator; thin Compose UI screens in `com.omnibuds.android.ui.compose.*`; 8 docs) | 2025/2025 (1674 core + 314 android + 37 desktop; 39 new) | `3dc6d24`..`22e0c4b` (13 batches) |
+| 50 | Unified UI/UX consolidation (new `core/presentation/` at layer 6: OmniBudsTokens design tokens, OmniBudsStrings terminology, AccessibilitySpec, UnifiedBatteryModel, UnifiedAudioModel, UnifiedControlModels, DevicePresentationState, ComponentCatalogSpec; Android + desktop presentation models consolidated onto unified tokens/strings; AndroidThemeConsolidationTest, DesktopThemeConsolidationTest, UnifiedDesignSystemTest; 8 docs) | 2051/2051 (1688 core + 321 android + 42 desktop; 26 new) | (this push) |
 
 *Phase 43 test count folded into the 1623 core total verified at Phase 44.
 
-**Current:** 2025/2025 tests pass (1674 core + 314 android + 37 desktop; verified 2026-10-10 via standalone kotlinc+JUnit; 39 new Phase 49 tests, 0 failures, 0 skips).
+**Current:** 2051/2051 tests pass (1688 core + 321 android + 42 desktop; verified 2026-10-11 via standalone kotlinc+JUnit; 26 new Phase 50 tests, 0 failures, 0 skips).
 
 **Key honest findings to preserve:**
 - No public Android API exposes the active codec → `NOT_OBSERVABLE`.
@@ -121,4 +122,4 @@
 
 ---
 
-*Last updated: 2026-10-10 (Phase 49 completed).*
+*Last updated: 2026-10-11 (Phase 50 completed).*
