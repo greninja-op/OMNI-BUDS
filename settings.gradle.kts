@@ -35,3 +35,6 @@ include(":tools:companion-shell")
 // desktop storage, and UI toolkit boundaries.
 include(":platform:desktop")
 
+// Android Application (com.omnibuds.app)
+include(":app")
+

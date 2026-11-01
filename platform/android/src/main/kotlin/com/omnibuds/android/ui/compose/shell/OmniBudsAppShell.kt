@@ -26,6 +26,7 @@ import com.omnibuds.android.ui.compose.screens.DevicesScreen
 import com.omnibuds.android.ui.compose.screens.DiagnosticsScreen
 import com.omnibuds.android.ui.compose.screens.SettingsScreen
 import com.omnibuds.android.ui.compose.screens.WorkspaceScreen
+import com.omnibuds.android.ui.compose.theme.OmniBudsOutlineIcons
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -46,25 +47,25 @@ fun OmniBudsAppShell(
                     selected = currentDest is AndroidDestination.Devices,
                     onClick = { shell.navigateTo(AndroidDestination.Devices) },
                     label = { Text("Devices") },
-                    icon = { Text("🎧") },
+                    icon = { Icon(imageVector = OmniBudsOutlineIcons.Headphones, contentDescription = "Devices") },
                 )
                 NavigationRailItem(
                     selected = currentDest is AndroidDestination.Settings,
                     onClick = { shell.navigateTo(AndroidDestination.Settings) },
                     label = { Text("Settings") },
-                    icon = { Text("⚙️") },
+                    icon = { Icon(imageVector = OmniBudsOutlineIcons.Settings, contentDescription = "Settings") },
                 )
                 NavigationRailItem(
                     selected = currentDest is AndroidDestination.Diagnostics,
                     onClick = { shell.navigateTo(AndroidDestination.Diagnostics) },
                     label = { Text("Diag") },
-                    icon = { Text("📊") },
+                    icon = { Icon(imageVector = OmniBudsOutlineIcons.Diagnostics, contentDescription = "Diagnostics") },
                 )
                 NavigationRailItem(
                     selected = currentDest is AndroidDestination.About,
                     onClick = { shell.navigateTo(AndroidDestination.About) },
                     label = { Text("About") },
-                    icon = { Text("ℹ️") },
+                    icon = { Icon(imageVector = OmniBudsOutlineIcons.About, contentDescription = "About") },
                 )
             }
             Box(modifier = Modifier.weight(1f)) {
@@ -93,7 +94,7 @@ fun OmniBudsAppShell(
                     navigationIcon = {
                         if (navState.canNavigateBack) {
                             IconButton(onClick = { shell.handleBackGesture() }) {
-                                Text("←")
+                                Icon(imageVector = OmniBudsOutlineIcons.ArrowBack, contentDescription = "Back")
                             }
                         }
                     },
@@ -105,25 +106,25 @@ fun OmniBudsAppShell(
                         selected = currentDest is AndroidDestination.Devices,
                         onClick = { shell.navigateTo(AndroidDestination.Devices) },
                         label = { Text("Devices") },
-                        icon = { Text("🎧") },
+                        icon = { Icon(imageVector = OmniBudsOutlineIcons.Headphones, contentDescription = "Devices") },
                     )
                     NavigationBarItem(
                         selected = currentDest is AndroidDestination.Settings,
                         onClick = { shell.navigateTo(AndroidDestination.Settings) },
                         label = { Text("Settings") },
-                        icon = { Text("⚙️") },
+                        icon = { Icon(imageVector = OmniBudsOutlineIcons.Settings, contentDescription = "Settings") },
                     )
                     NavigationBarItem(
                         selected = currentDest is AndroidDestination.Diagnostics,
                         onClick = { shell.navigateTo(AndroidDestination.Diagnostics) },
                         label = { Text("Diag") },
-                        icon = { Text("📊") },
+                        icon = { Icon(imageVector = OmniBudsOutlineIcons.Diagnostics, contentDescription = "Diagnostics") },
                     )
                     NavigationBarItem(
                         selected = currentDest is AndroidDestination.About,
                         onClick = { shell.navigateTo(AndroidDestination.About) },
                         label = { Text("About") },
-                        icon = { Text("ℹ️") },
+                        icon = { Icon(imageVector = OmniBudsOutlineIcons.About, contentDescription = "About") },
                     )
                 }
             },

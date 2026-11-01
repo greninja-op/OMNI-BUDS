@@ -23,6 +23,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.Role
@@ -36,6 +37,7 @@ import com.omnibuds.android.presentation.devices.DevicesViewModel
 import com.omnibuds.android.presentation.theme.AndroidTouchTargets
 import com.omnibuds.android.ui.compose.components.ErrorBanner
 import com.omnibuds.android.ui.compose.components.StatusBadge
+import kotlinx.coroutines.launch
 
 @Composable
 fun DevicesScreen(
@@ -44,6 +46,7 @@ fun DevicesScreen(
     modifier: Modifier = Modifier,
 ) {
     val state by viewModel.state.collectAsState()
+    val coroutineScope = rememberCoroutineScope()
 
     Column(
         modifier = modifier
@@ -70,14 +73,14 @@ fun DevicesScreen(
             )
             if (state.isDiscovering) {
                 Button(
-                    onClick = { viewModel.stopDiscovery() },
+                    onClick = { coroutineScope.launch { viewModel.stopDiscovery() } },
                     modifier = Modifier.defaultMinSize(minHeight = AndroidTouchTargets.minTouchTargetDp.dp),
                 ) {
                     Text("Stop Scanning")
                 }
             } else {
                 Button(
-                    onClick = { viewModel.startDiscovery() },
+                    onClick = { coroutineScope.launch { viewModel.startDiscovery() } },
                     modifier = Modifier.defaultMinSize(minHeight = AndroidTouchTargets.minTouchTargetDp.dp),
                 ) {
                     Text("Scan for Earbuds")

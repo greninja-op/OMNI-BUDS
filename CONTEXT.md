@@ -46,6 +46,7 @@
 - Never fabricate capabilities or state; UNKNOWN stays UNKNOWN, never becomes UNSUPPORTED.
 - Never claim a push landed until remote files/commits are read back and verified.
 - Never claim Gradle/Lint success unless those commands actually ran (Gradle daemon broken in sandbox; use manual kotlinc toolchain).
+- No AI-generated icon images or raster files anywhere in the app; all icons (menu options, navigation, headphone status, settings, etc.) must be clean, uniform outline-style vector icons with consistent stroke and geometry. No emoji characters as icon placeholders.
 
 ## 6. Anti-stale rule (user directive)
 
