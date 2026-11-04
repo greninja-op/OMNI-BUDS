@@ -62,6 +62,7 @@ fun DevicesScreen(
     onAddDevice: () -> Unit = {},
     productOverrideFor: (String) -> String? = { null },
     productPhotoFor: (String) -> String? = { null },
+    deviceAliasFor: (String) -> String? = { null },
 ) {
     val state by viewModel.state.collectAsState()
 
@@ -131,6 +132,7 @@ fun DevicesScreen(
                             device = device,
                             overrideCatalogId = productOverrideFor(device.id),
                     userPhotoPath = productPhotoFor(device.id),
+                    userAlias = deviceAliasFor(device.id),
                             onClick = { onDeviceSelected(device.id) },
                             modifier = Modifier.animateItem(fadeInSpec = tween(300)),
                         )
@@ -206,6 +208,7 @@ fun DeviceItemCard(
     modifier: Modifier = Modifier,
     overrideCatalogId: String? = null,
     userPhotoPath: String? = null,
+    userAlias: String? = null,
 ) {
     val product = ProductCatalog.resolve(device.name, overrideCatalogId)
     val connected = device.connectionState is ConnectionState.Connected
@@ -217,7 +220,7 @@ fun DeviceItemCard(
             .clickable(onClick = onClick)
             .semantics {
                 role = Role.Button
-                contentDescription = "${device.displayName}, ${connectionLabel(device.connectionState)}"
+                contentDescription = "${userAlias ?: device.displayName}, ${connectionLabel(device.connectionState)}"
             },
     ) {
         Column(modifier = Modifier.fillMaxWidth()) {
@@ -248,7 +251,7 @@ fun DeviceItemCard(
                 modifier = Modifier.padding(horizontal = 14.dp, vertical = 12.dp),
             ) {
                 Text(
-                    text = device.displayName,
+                    text = userAlias ?: device.displayName,
                     style = MaterialTheme.typography.titleSmall,
                     color = MaterialTheme.colorScheme.onSurface,
                     maxLines = 2,

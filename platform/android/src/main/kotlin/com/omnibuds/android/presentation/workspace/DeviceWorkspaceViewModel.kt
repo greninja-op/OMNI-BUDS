@@ -129,14 +129,21 @@ class DeviceWorkspaceViewModel(
 
         return DeviceOverviewModel(
             deviceId = snapshot.deviceId.value,
-            displayName = model ?: mfg ?: "Device (${snapshot.deviceId.value})",
+            // Iteration 3: the display name is composed by the core
+            // resolver from the identity evidence. The old chain
+            // (model ?: manufacturer) promoted the bridge's placeholder
+            // manufacturer literal into the header as "Unknown".
+            displayName = com.omnibuds.core.device.DisplayIdentityResolver.resolve(
+                verifiedManufacturer = mfg,
+                bluetoothName = model,
+            ).displayName,
             connectionState = snapshot.connection,
             transport = transportStr,
             protocolId = pId,
             protocolVersion = pVer,
             firmwareVersion = fw,
-            manufacturer = mfg,
-            model = model,
+            manufacturer = com.omnibuds.core.device.DisplayIdentityResolver.usableName(mfg),
+            model = null,
             confidence = conf,
             isReady = snapshot.capabilities is CapabilityState.Ready,
         )

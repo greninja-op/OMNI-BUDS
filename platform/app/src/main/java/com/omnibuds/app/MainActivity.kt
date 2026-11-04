@@ -75,6 +75,7 @@ class MainActivity : ComponentActivity() {
      * preferences file as the catalog overrides.
      */
     private val productPhotos = mutableStateMapOf<String, String>()
+    private val deviceAliases = mutableStateMapOf<String, String>()
 
     private lateinit var devicesViewModel: DevicesViewModel
 
@@ -155,6 +156,8 @@ class MainActivity : ComponentActivity() {
                 if (value !is String) continue
                 if (key.startsWith(PHOTO_KEY_PREFIX)) {
                     productPhotos[key.removePrefix(PHOTO_KEY_PREFIX)] = value
+                } else if (key.startsWith(ALIAS_KEY_PREFIX)) {
+                    deviceAliases[key.removePrefix(ALIAS_KEY_PREFIX)] = value
                 } else {
                     productOverrides[key] = value
                 }
@@ -230,6 +233,18 @@ class MainActivity : ComponentActivity() {
                     },
                     productOverrideFor = { address -> productOverrides[address] },
                     productPhotoFor = { address -> productPhotos[address] },
+                    deviceAliasFor = { address -> deviceAliases[address] },
+                    onDeviceAliasChange = { address, alias ->
+                        val prefs = getSharedPreferences(PREFS_PRODUCT_OVERRIDES, MODE_PRIVATE)
+                        val trimmed = alias?.trim()?.takeIf { it.isNotEmpty() }
+                        if (trimmed == null) {
+                            deviceAliases.remove(address)
+                            prefs.edit().remove(ALIAS_KEY_PREFIX + address).apply()
+                        } else {
+                            deviceAliases[address] = trimmed
+                            prefs.edit().putString(ALIAS_KEY_PREFIX + address, trimmed).apply()
+                        }
+                    },
                     onProductPhotoChange = { address, path ->
                         try {
                             val prefs = getSharedPreferences(PREFS_PRODUCT_OVERRIDES, MODE_PRIVATE)
@@ -273,9 +288,11 @@ class MainActivity : ComponentActivity() {
                             val prefs = getSharedPreferences(PREFS_PRODUCT_OVERRIDES, MODE_PRIVATE)
                             val photoPath = productPhotos.remove(address)
                             productOverrides.remove(address)
+                            deviceAliases.remove(address)
                             prefs.edit()
                                 .remove(address)
                                 .remove(PHOTO_KEY_PREFIX + address)
+                                .remove(ALIAS_KEY_PREFIX + address)
                                 .apply()
                             if (photoPath != null) java.io.File(photoPath).delete()
                         } catch (_: Exception) {
@@ -462,6 +479,7 @@ class MainActivity : ComponentActivity() {
     private companion object {
         const val PREFS_PRODUCT_OVERRIDES = "product_overrides"
         const val PHOTO_KEY_PREFIX = "photo:"
+        const val ALIAS_KEY_PREFIX = "alias:"
         const val ACTION_BATTERY_LEVEL_CHANGED = "android.bluetooth.device.action.BATTERY_LEVEL_CHANGED"
         const val EXTRA_BATTERY_LEVEL = "android.bluetooth.device.extra.BATTERY_LEVEL"
     }

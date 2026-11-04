@@ -20,16 +20,16 @@ import com.omnibuds.android.presentation.theme.AndroidThemeMode
  * Battery keeps its restrained green; warnings amber; errors red.
  */
 object OmniBrand {
-    val Background = Color(0xFF050506) // deep black
-    val Surface = Color(0xFF101013) // near-black charcoal
-    val SurfaceVariant = Color(0xFF17171B) // card charcoal
-    val SurfaceElevated = Color(0xFF1E1E23) // elevated charcoal
-    val SurfaceHighest = Color(0xFF26262C)
-    val Accent = Color(0xFFE9FF3C) // fluorescent yellow
+    val Background = Color(0xFF080808) // deep black (Iteration 3 palette)
+    val Surface = Color(0xFF17171B) // primary surface
+    val SurfaceVariant = Color(0xFF222228) // secondary surface
+    val SurfaceElevated = Color(0xFF26262C) // elevated charcoal
+    val SurfaceHighest = Color(0xFF2E2E35)
+    val Accent = Color(0xFFE5FF36) // fluorescent yellow
     val OnAccent = Color(0xFF0A0A0A)
-    val TextPrimary = Color(0xFFF5F5F0)
-    val TextSecondary = Color(0xFF9C9CA3)
-    val Border = Color(0xFF26262B)
+    val TextPrimary = Color(0xFFF5F5F5)
+    val TextSecondary = Color(0xFFA1A1AA)
+    val Border = Color(0xFF303036)
     val Disabled = Color(0xFF55555C)
     val Success = Color(0xFF34A853)
     val Warning = Color(0xFFFFB020)

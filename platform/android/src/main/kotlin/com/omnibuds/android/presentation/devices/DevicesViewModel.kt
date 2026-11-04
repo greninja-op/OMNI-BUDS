@@ -50,7 +50,11 @@ class DevicesViewModel(
                     mutex.withLock {
                         val known = deviceMap.values.map { gds ->
                             val name = when (val id = gds.identity) {
-                                is IdentityState.Identified -> id.modelId ?: id.manufacturerId
+                                // modelId carries the device-reported name
+                                // evidence; a placeholder manufacturer value
+                                // must never become the name (Iteration 3).
+                                is IdentityState.Identified ->
+                                    com.omnibuds.core.device.DisplayIdentityResolver.usableName(id.modelId)
                                 else -> null
                             }
                             val batterySummary = when (val b = gds.battery) {

@@ -59,6 +59,8 @@ fun OmniBudsAppShell(
     onProductOverrideChange: (String, String?) -> Unit = { _, _ -> },
     productPhotoFor: (String) -> String? = { null },
     onProductPhotoChange: (String, String?) -> Unit = { _, _ -> },
+    deviceAliasFor: (String) -> String? = { null },
+    onDeviceAliasChange: (String, String?) -> Unit = { _, _ -> },
 ) {
     val navState by shell.navigationCoordinator.state.collectAsState()
     val currentDest = navState.currentDestination
@@ -142,6 +144,8 @@ fun OmniBudsAppShell(
                     onProductOverrideChange = onProductOverrideChange,
                     productPhotoFor = productPhotoFor,
                     onProductPhotoChange = onProductPhotoChange,
+                    deviceAliasFor = deviceAliasFor,
+                    onDeviceAliasChange = onDeviceAliasChange,
                 )
             }
         }
@@ -160,6 +164,8 @@ private fun AppScreenContent(
     onProductOverrideChange: (String, String?) -> Unit = { _, _ -> },
     productPhotoFor: (String) -> String? = { null },
     onProductPhotoChange: (String, String?) -> Unit = { _, _ -> },
+    deviceAliasFor: (String) -> String? = { null },
+    onDeviceAliasChange: (String, String?) -> Unit = { _, _ -> },
 ) {
     when (destination) {
         is AndroidDestination.Devices -> {
@@ -169,6 +175,7 @@ private fun AppScreenContent(
                 onAddDevice = { shell.navigateTo(AndroidDestination.AddDevice) },
                 productOverrideFor = productOverrideFor,
                 productPhotoFor = productPhotoFor,
+                deviceAliasFor = deviceAliasFor,
             )
         }
         is AndroidDestination.AddDevice -> {
@@ -190,6 +197,10 @@ private fun AppScreenContent(
                 productPhotoPath = productPhotoFor(destination.deviceId),
                 onProductPhotoChange = { path ->
                     onProductPhotoChange(destination.deviceId, path)
+                },
+                deviceAlias = deviceAliasFor(destination.deviceId),
+                onDeviceAliasChange = { alias ->
+                    onDeviceAliasChange(destination.deviceId, alias)
                 },
             )
         }

@@ -28,6 +28,8 @@ enum class DevicesScreenMode {
 data class AndroidDiscoveredDevice(
     val id: String,
     val name: String?,
+    /** The user-visible alias Android reports for the device (API 30+), if any. */
+    val alias: String? = null,
     val address: String,
     val connectionState: ConnectionState = ConnectionState.Disconnected,
     val rssi: Int? = null,
@@ -36,7 +38,16 @@ data class AndroidDiscoveredDevice(
     val isSupported: Boolean = true,
     val lastSeenTimestamp: Long = 0L,
 ) {
-    val displayName: String get() = name ?: "Unknown Device ($address)"
+    /**
+     * Best display identity: alias, then the reported name, then the
+     * neutral fallback. Never a placeholder, never a raw address.
+     * (Iteration 3: composed by [DisplayIdentityResolver].)
+     */
+    val displayName: String
+        get() = com.omnibuds.core.device.DisplayIdentityResolver.resolve(
+            bluetoothAlias = alias,
+            bluetoothName = name,
+        ).displayName
 
     /** Redacted identifier for safe logging and diagnostics. */
     val redactedAddress: String get() {

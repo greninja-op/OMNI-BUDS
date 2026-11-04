@@ -145,6 +145,7 @@ class SystemDiscoveryProvider(
         return AndroidDiscoveredDevice(
             id = address,
             name = name,
+            alias = deviceAlias(device),
             address = address,
             connectionState = connectionStateFor(address),
             rssi = null,
@@ -413,6 +414,7 @@ class SystemDiscoveryProvider(
             devices[address] = AndroidDiscoveredDevice(
                 id = address,
                 name = name ?: existing?.name,
+                alias = deviceAlias(device) ?: existing?.alias,
                 address = address,
                 connectionState = if (connected) {
                     ConnectionState.Connected("android-system", 1L, "Bluetooth")
@@ -464,5 +466,21 @@ class SystemDiscoveryProvider(
                 receiver = null
             }
         }
+    }
+}
+
+/**
+ * The alias Android displays for this device (the name the user sees in
+ * system Bluetooth settings), API 30+. Null when unavailable.
+ * Never throws. Top-level so both the provider and its scan session
+ * (a non-inner nested class) can use it.
+ */
+@SuppressLint("MissingPermission")
+private fun deviceAlias(device: BluetoothDevice): String? {
+    if (Build.VERSION.SDK_INT < 30) return null
+    return try {
+        device.alias?.trim()?.takeIf { it.isNotEmpty() }
+    } catch (_: Exception) {
+        null
     }
 }

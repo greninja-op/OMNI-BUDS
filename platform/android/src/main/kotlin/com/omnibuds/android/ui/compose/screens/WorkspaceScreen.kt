@@ -10,6 +10,7 @@ import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.snap
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -29,6 +30,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Button
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -75,7 +78,16 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 /**
- * Device details — Iteration 2.
+ * Device details — Iteration 3.
+ *
+ * Identity is composed by the core DisplayIdentityResolver (alias,
+ * then the reported name, then a neutral fallback) — the header can no
+ * longer degrade to a placeholder. The layout follows the reference
+ * hierarchy: hero, three-slot battery, segmented noise control,
+ * per-feature cards, management actions.
+ *
+ * Iteration 2 notes follow.
+ *
  *
  * Information architecture: product identity (genuine photograph where
  * one legitimately exists, the user's own photo, or honest category
@@ -99,9 +111,13 @@ fun WorkspaceScreen(
     onProductOverrideChange: (String?) -> Unit = {},
     productPhotoPath: String? = null,
     onProductPhotoChange: (String?) -> Unit = {},
+    deviceAlias: String? = null,
+    onDeviceAliasChange: (String?) -> Unit = {},
 ) {
     val state by viewModel.state.collectAsState()
     var showProductPicker by remember { mutableStateOf(false) }
+    var showAliasEditor by remember { mutableStateOf(false) }
+    var aliasText by remember { mutableStateOf("") }
     var confirmDisconnect by remember { mutableStateOf(false) }
     var confirmForget by remember { mutableStateOf(false) }
     val context = LocalContext.current
@@ -195,11 +211,32 @@ fun WorkspaceScreen(
                 )
             }
             Spacer(modifier = Modifier.height(20.dp))
-            Text(
-                text = overview?.displayName ?: "Device",
-                style = MaterialTheme.typography.headlineSmall,
-                textAlign = TextAlign.Center,
-            )
+            val headerName = deviceAlias ?: overview?.displayName ?: "Bluetooth audio device"
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center,
+                modifier = Modifier.fillMaxWidth(),
+            ) {
+                Text(
+                    text = headerName,
+                    style = MaterialTheme.typography.headlineSmall,
+                    textAlign = TextAlign.Center,
+                )
+                IconButton(
+                    onClick = {
+                        aliasText = deviceAlias ?: ""
+                        showAliasEditor = true
+                    },
+                    modifier = Modifier.size(36.dp),
+                ) {
+                    Icon(
+                        imageVector = OmniIcons.Edit,
+                        contentDescription = "Rename device",
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.size(18.dp),
+                    )
+                }
+            }
             Spacer(modifier = Modifier.height(2.dp))
             Text(
                 text = product.category.label,
@@ -207,29 +244,34 @@ fun WorkspaceScreen(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center,
             )
-            Spacer(modifier = Modifier.height(8.dp))
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Center,
-                modifier = Modifier.fillMaxWidth(),
+            Spacer(modifier = Modifier.height(10.dp))
+            Surface(
+                shape = RoundedCornerShape(50),
+                color = MaterialTheme.colorScheme.surface,
+                border = BorderStroke(1.dp, OmniBrand.Border),
             ) {
-                Box(
-                    modifier = Modifier
-                        .size(8.dp)
-                        .clip(CircleShape)
-                        .background(if (connected) OmniBrand.Accent else OmniBrand.Disabled),
-                )
-                Spacer(modifier = Modifier.size(8.dp))
-                Text(
-                    text = when (overview?.connectionState) {
-                        is ConnectionState.Connected -> "Active"
-                        is ConnectionState.Connecting -> "Connecting"
-                        is ConnectionState.Disconnecting -> "Disconnecting"
-                        else -> "Not connected"
-                    },
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.padding(horizontal = 14.dp, vertical = 6.dp),
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .size(8.dp)
+                            .clip(CircleShape)
+                            .background(if (connected) OmniBrand.Success else OmniBrand.Disabled),
+                    )
+                    Spacer(modifier = Modifier.size(8.dp))
+                    Text(
+                        text = when (overview?.connectionState) {
+                            is ConnectionState.Connected -> "Connected"
+                            is ConnectionState.Connecting -> "Connecting"
+                            is ConnectionState.Disconnecting -> "Disconnecting"
+                            else -> "Not connected"
+                        },
+                        style = MaterialTheme.typography.labelLarge,
+                        color = if (connected) OmniBrand.Accent else MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
             }
             TextButton(onClick = { showProductPicker = true }) {
                 Text(
@@ -260,7 +302,26 @@ fun WorkspaceScreen(
         if (showAnc && ancControl != null) {
             item {
                 Spacer(modifier = Modifier.height(28.dp))
-                SectionLabel("Noise control")
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Icon(
+                        imageVector = OmniIcons.SoundWaves,
+                        contentDescription = null,
+                        tint = OmniBrand.Accent,
+                        modifier = Modifier.size(22.dp),
+                    )
+                    Spacer(modifier = Modifier.size(12.dp))
+                    Column {
+                        Text(
+                            text = "Active noise control",
+                            style = MaterialTheme.typography.titleMedium,
+                        )
+                        Text(
+                            text = "Modes this model supports. OmniBuds shows the state it can observe.",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                }
                 Spacer(modifier = Modifier.height(12.dp))
                 val modes = buildList {
                     if (knownFeatures?.anc == true) add("ANC")
@@ -302,39 +363,29 @@ fun WorkspaceScreen(
         if (featureRows.isNotEmpty() || codecRow != null) {
             item {
                 Spacer(modifier = Modifier.height(28.dp))
-                SectionLabel("Device features")
+                SectionLabel("Sound & features")
                 Spacer(modifier = Modifier.height(12.dp))
-                Surface(
-                    shape = RoundedCornerShape(20.dp),
-                    color = MaterialTheme.colorScheme.surfaceVariant,
-                    modifier = Modifier.fillMaxWidth(),
-                ) {
-                    Column(modifier = Modifier.padding(vertical = 4.dp)) {
-                        featureRows.forEachIndexed { index, control ->
-                            if (index > 0) HorizontalDivider(
-                                modifier = Modifier.padding(horizontal = 16.dp),
-                                color = MaterialTheme.colorScheme.outlineVariant,
-                            )
-                            FeatureInfoRow(control = control)
-                        }
-                        if (codecRow != null) {
-                            if (featureRows.isNotEmpty()) HorizontalDivider(
-                                modifier = Modifier.padding(horizontal = 16.dp),
-                                color = MaterialTheme.colorScheme.outlineVariant,
-                            )
+                Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                    featureRows.forEach { control ->
+                        FeatureInfoRow(control = control)
+                    }
+                    if (codecRow != null) {
+                        Surface(
+                            shape = RoundedCornerShape(24.dp),
+                            color = MaterialTheme.colorScheme.surfaceVariant,
+                            modifier = Modifier.fillMaxWidth(),
+                        ) {
                             Row(
                                 verticalAlignment = Alignment.CenterVertically,
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(horizontal = 16.dp, vertical = 12.dp),
+                                modifier = Modifier.padding(horizontal = 20.dp, vertical = 16.dp),
                             ) {
                                 Icon(
                                     imageVector = OmniIcons.SoundWaves,
                                     contentDescription = null,
-                                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                                    modifier = Modifier.size(22.dp),
+                                    tint = OmniBrand.Accent,
+                                    modifier = Modifier.size(24.dp),
                                 )
-                                Spacer(modifier = Modifier.size(12.dp))
+                                Spacer(modifier = Modifier.size(16.dp))
                                 Column {
                                     Text("Sound", style = MaterialTheme.typography.bodyLarge)
                                     Text(
@@ -348,7 +399,7 @@ fun WorkspaceScreen(
                     }
                 }
                 if (featureRows.isNotEmpty()) {
-                    Spacer(modifier = Modifier.height(8.dp))
+                    Spacer(modifier = Modifier.height(10.dp))
                     Text(
                         text = "This model has these features. OmniBuds cannot control them yet — no verified control link exists for it.",
                         style = MaterialTheme.typography.bodySmall,
@@ -382,13 +433,36 @@ fun WorkspaceScreen(
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
             ) {
                 OutlinedButton(
-                    onClick = { confirmDisconnect = true },
-                    modifier = Modifier.weight(1f),
-                ) { Text("Disconnect") }
-                OutlinedButton(
                     onClick = { confirmForget = true },
-                    modifier = Modifier.weight(1f),
-                ) { Text("Forget") }
+                    shape = RoundedCornerShape(50),
+                    border = BorderStroke(1.dp, OmniBrand.Border),
+                    modifier = Modifier
+                        .weight(1f)
+                        .height(52.dp),
+                ) {
+                    Icon(
+                        imageVector = OmniIcons.Trash,
+                        contentDescription = null,
+                        modifier = Modifier.size(18.dp),
+                    )
+                    Spacer(modifier = Modifier.size(8.dp))
+                    Text("Forget")
+                }
+                Button(
+                    onClick = { confirmDisconnect = true },
+                    shape = RoundedCornerShape(50),
+                    modifier = Modifier
+                        .weight(1f)
+                        .height(52.dp),
+                ) {
+                    Icon(
+                        imageVector = OmniIcons.Power,
+                        contentDescription = null,
+                        modifier = Modifier.size(18.dp),
+                    )
+                    Spacer(modifier = Modifier.size(8.dp))
+                    Text("Disconnect")
+                }
             }
             Spacer(modifier = Modifier.height(32.dp))
         }
@@ -398,7 +472,7 @@ fun WorkspaceScreen(
     if (confirmDisconnect) {
         AlertDialog(
             onDismissRequest = { confirmDisconnect = false },
-            title = { Text("Disconnect ${state.overview?.displayName ?: "device"}?") },
+            title = { Text("Disconnect ${deviceAlias ?: state.overview?.displayName ?: "device"}?") },
             text = {
                 Text(
                     "The earbuds will disconnect from this phone. You can reconnect " +
@@ -422,7 +496,7 @@ fun WorkspaceScreen(
     if (confirmForget) {
         AlertDialog(
             onDismissRequest = { confirmForget = false },
-            title = { Text("Forget ${state.overview?.displayName ?: "device"}?") },
+            title = { Text("Forget ${deviceAlias ?: state.overview?.displayName ?: "device"}?") },
             text = {
                 Text(
                     "Android will unpair this device. Your product match and any " +
@@ -439,6 +513,52 @@ fun WorkspaceScreen(
             },
             dismissButton = {
                 TextButton(onClick = { confirmForget = false }) { Text("Cancel") }
+            },
+        )
+    }
+
+    if (showAliasEditor) {
+        AlertDialog(
+            onDismissRequest = { showAliasEditor = false },
+            title = { Text("Device name") },
+            text = {
+                Column {
+                    Text(
+                        text = "Shown only in OmniBuds, on this phone. The name your " +
+                            "device reports over Bluetooth does not change.",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                    Spacer(modifier = Modifier.height(12.dp))
+                    OutlinedTextField(
+                        value = aliasText,
+                        onValueChange = { aliasText = it },
+                        label = { Text("Name") },
+                        singleLine = true,
+                        modifier = Modifier.fillMaxWidth(),
+                    )
+                }
+            },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        onDeviceAliasChange(aliasText)
+                        showAliasEditor = false
+                    },
+                ) { Text("Save") }
+            },
+            dismissButton = {
+                Row {
+                    if (deviceAlias != null) {
+                        TextButton(
+                            onClick = {
+                                onDeviceAliasChange(null)
+                                showAliasEditor = false
+                            },
+                        ) { Text("Remove name") }
+                    }
+                    TextButton(onClick = { showAliasEditor = false }) { Text("Cancel") }
+                }
             },
         )
     }
@@ -484,8 +604,8 @@ fun WorkspaceScreen(
 private fun SectionLabel(text: String) {
     Text(
         text = text,
-        style = MaterialTheme.typography.titleSmall,
-        color = MaterialTheme.colorScheme.onSurfaceVariant,
+        style = MaterialTheme.typography.titleMedium,
+        color = MaterialTheme.colorScheme.onSurface,
         modifier = Modifier.fillMaxWidth(),
     )
 }
@@ -585,10 +705,15 @@ private fun BatterySection(
                         ProductCatalog.Category.NECKBAND -> OmniIcons.Neckband
                         else -> OmniIcons.Headphones
                     },
-                    label = if (category == ProductCatalog.Category.TWS) "Earbuds" else "Battery",
+                    label = if (category == ProductCatalog.Category.TWS) {
+                        "Earbuds (combined)"
+                    } else {
+                        "Battery"
+                    },
                     percent = battery.overallPercent,
                     charging = battery.isCharging == true,
                     lastKnown = lastKnown,
+                    ringSize = 116.dp,
                 )
                 when {
                     lastKnown -> LastKnownCaption()
@@ -645,6 +770,7 @@ private fun BatteryRing(
     percent: Int,
     charging: Boolean,
     lastKnown: Boolean,
+    ringSize: Dp = 92.dp,
 ) {
     val motionEnabled = rememberMotionEnabled()
     val animatedProgress by animateFloatAsState(
@@ -653,28 +779,37 @@ private fun BatteryRing(
         label = "batteryRing",
     )
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        Box(contentAlignment = Alignment.Center, modifier = Modifier.size(88.dp)) {
+        Box(contentAlignment = Alignment.Center, modifier = Modifier.size(ringSize)) {
             CircularProgressIndicator(
                 progress = { animatedProgress },
-                modifier = Modifier.size(88.dp),
-                strokeWidth = 6.dp,
+                modifier = Modifier.size(ringSize),
+                strokeWidth = 7.dp,
                 color = batteryRingColor(percent, lastKnown),
-                trackColor = MaterialTheme.colorScheme.surfaceVariant,
+                trackColor = MaterialTheme.colorScheme.surfaceContainerHighest,
             )
             Icon(
                 imageVector = glyph,
                 contentDescription = null,
-                modifier = Modifier.size(34.dp),
+                modifier = Modifier.size(32.dp),
                 tint = MaterialTheme.colorScheme.onSurface,
             )
         }
-        Spacer(modifier = Modifier.height(8.dp))
-        Text(text = "$label: $percent%", style = MaterialTheme.typography.bodyMedium)
+        Spacer(modifier = Modifier.height(10.dp))
+        Text(
+            text = label,
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        Text(
+            text = "$percent%",
+            style = MaterialTheme.typography.titleMedium,
+            color = MaterialTheme.colorScheme.onSurface,
+        )
         if (charging) {
             Text(
                 text = "Charging",
                 style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                color = OmniBrand.Success,
             )
         }
     }
@@ -683,25 +818,30 @@ private fun BatteryRing(
 @Composable
 private fun UnavailableBatterySlot(kind: BatteryComponentKind) {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        Box(contentAlignment = Alignment.Center, modifier = Modifier.size(88.dp)) {
+        Box(contentAlignment = Alignment.Center, modifier = Modifier.size(92.dp)) {
             CircularProgressIndicator(
                 progress = { 0f },
-                modifier = Modifier.size(88.dp),
-                strokeWidth = 6.dp,
-                color = MaterialTheme.colorScheme.surfaceVariant,
-                trackColor = MaterialTheme.colorScheme.surfaceVariant,
+                modifier = Modifier.size(92.dp),
+                strokeWidth = 7.dp,
+                color = MaterialTheme.colorScheme.surfaceContainerHighest,
+                trackColor = MaterialTheme.colorScheme.surfaceContainerHighest,
             )
-            Text(
-                text = "—",
-                style = MaterialTheme.typography.titleLarge,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            Icon(
+                imageVector = glyphFor(kind),
+                contentDescription = null,
+                modifier = Modifier.size(32.dp),
+                tint = OmniBrand.Disabled,
             )
         }
-        Spacer(modifier = Modifier.height(8.dp))
-        Text(text = labelFor(kind), style = MaterialTheme.typography.bodyMedium)
+        Spacer(modifier = Modifier.height(10.dp))
+        Text(
+            text = labelFor(kind),
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
         Text(
             text = "Not reported",
-            style = MaterialTheme.typography.bodySmall,
+            style = MaterialTheme.typography.titleMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
     }
@@ -718,7 +858,7 @@ private fun NoiseControlSegmented(
 ) {
     val motionEnabled = rememberMotionEnabled()
     Surface(
-        shape = RoundedCornerShape(24.dp),
+        shape = RoundedCornerShape(28.dp),
         color = MaterialTheme.colorScheme.surfaceVariant,
         modifier = Modifier.fillMaxWidth(),
     ) {
@@ -754,7 +894,7 @@ private fun NoiseControlSegmented(
                     targetValue = if (selected) {
                         OmniBrand.Accent
                     } else {
-                        MaterialTheme.colorScheme.surfaceContainerHigh
+                        Color.Transparent
                     },
                     animationSpec = if (motionEnabled) tween(260) else snap(),
                     label = "segmentBg",
@@ -777,9 +917,9 @@ private fun NoiseControlSegmented(
                     ) {
                         Icon(
                             imageVector = when (mode) {
-                                "ANC" -> OmniIcons.NoiseOff
-                                "OFF" -> Icons.Filled.Close
-                                "TRANSPARENCY" -> OmniIcons.SoundWaves
+                                "ANC" -> OmniIcons.SoundWaves
+                                "OFF" -> OmniIcons.NoiseOff
+                                "TRANSPARENCY" -> OmniIcons.PersonOutline
                                 "ADAPTIVE" -> OmniIcons.Sparkle
                                 else -> OmniIcons.SoundWaves
                             },
@@ -821,46 +961,42 @@ private fun NoiseControlSegmented(
 
 @Composable
 private fun FeatureInfoRow(control: HardwareControlModel) {
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 12.dp),
+    Surface(
+        shape = RoundedCornerShape(24.dp),
+        color = MaterialTheme.colorScheme.surfaceVariant,
+        modifier = Modifier.fillMaxWidth(),
     ) {
-        Icon(
-            imageVector = when (control.featureId) {
-                "eq_preset" -> OmniIcons.Sliders
-                "spatial_audio" -> OmniIcons.SoundWaves
-                "wear_detection" -> OmniIcons.BudsPair
-                "multipoint" -> OmniIcons.Headphones
-                else -> OmniIcons.Sliders
-            },
-            contentDescription = null,
-            tint = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier.size(22.dp),
-        )
-        Spacer(modifier = Modifier.size(12.dp))
-        Text(
-            text = control.displayName,
-            style = MaterialTheme.typography.bodyLarge,
-            modifier = Modifier.weight(1f),
-        )
-        if (control.isActionable) {
-            Text(
-                text = control.currentValue?.let { prettyMode(it) } ?: "Available",
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.padding(horizontal = 20.dp, vertical = 16.dp),
+        ) {
+            Icon(
+                imageVector = when (control.featureId) {
+                    "eq_preset" -> OmniIcons.Sliders
+                    "spatial_audio" -> OmniIcons.Sparkle
+                    "wear_detection" -> OmniIcons.BudsPair
+                    "multipoint" -> OmniIcons.Headphones
+                    else -> OmniIcons.Sliders
+                },
+                contentDescription = null,
+                tint = OmniBrand.Accent,
+                modifier = Modifier.size(24.dp),
             )
-        } else {
-            Surface(
-                shape = RoundedCornerShape(50),
-                color = MaterialTheme.colorScheme.surfaceContainerHigh,
-            ) {
+            Spacer(modifier = Modifier.size(16.dp))
+            Column(modifier = Modifier.weight(1f)) {
                 Text(
-                    text = "Not linked",
-                    style = MaterialTheme.typography.labelSmall,
+                    text = control.displayName,
+                    style = MaterialTheme.typography.bodyLarge,
+                )
+                Text(
+                    text = if (control.isActionable) {
+                        control.currentValue?.let { "Current: ${prettyMode(it)}" }
+                            ?: "Linked to the device"
+                    } else {
+                        "Not linked in OmniBuds yet"
+                    },
+                    style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp),
                 )
             }
         }

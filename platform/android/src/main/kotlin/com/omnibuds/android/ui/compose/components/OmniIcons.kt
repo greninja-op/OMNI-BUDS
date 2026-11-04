@@ -415,6 +415,137 @@ object OmniIcons {
         }.build()
     }
 
+    /** Pencil — rename / edit alias. */
+    val Edit: ImageVector by lazy {
+        ImageVector.Builder(
+            name = "OmniEdit",
+            defaultWidth = 24.dp,
+            defaultHeight = 24.dp,
+            viewportWidth = 24f,
+            viewportHeight = 24f,
+        ).apply {
+            path(fill = SolidColor(Color.Black)) {
+                moveTo(3f, 17.25f)
+                verticalLineTo(21f)
+                horizontalLineToRelative(3.75f)
+                lineTo(17.81f, 9.94f)
+                lineToRelative(-3.75f, -3.75f)
+                lineTo(3f, 17.25f)
+                close()
+                moveTo(20.71f, 7.04f)
+                curveToRelative(0.39f, -0.39f, 0.39f, -1.02f, 0f, -1.41f)
+                lineToRelative(-2.34f, -2.34f)
+                arcToRelative(0.9959f, 0.9959f, 0f, false, false, -1.41f, 0f)
+                lineToRelative(-1.83f, 1.83f)
+                lineToRelative(3.75f, 3.75f)
+                lineToRelative(1.83f, -1.83f)
+                close()
+            }
+        }.build()
+    }
+
+    /** Trash can — forget device. */
+    val Trash: ImageVector by lazy {
+        ImageVector.Builder(
+            name = "OmniTrash",
+            defaultWidth = 24.dp,
+            defaultHeight = 24.dp,
+            viewportWidth = 24f,
+            viewportHeight = 24f,
+        ).apply {
+            path(fill = SolidColor(Color.Black)) {
+                moveTo(6f, 19f)
+                curveToRelative(0f, 1.1f, 0.9f, 2f, 2f, 2f)
+                horizontalLineToRelative(8f)
+                curveToRelative(1.1f, 0f, 2f, -0.9f, 2f, -2f)
+                verticalLineTo(7f)
+                horizontalLineTo(6f)
+                verticalLineToRelative(12f)
+                close()
+                moveTo(19f, 4f)
+                horizontalLineToRelative(-3.5f)
+                lineToRelative(-1f, -1f)
+                horizontalLineToRelative(-5f)
+                lineToRelative(-1f, 1f)
+                horizontalLineTo(5f)
+                verticalLineToRelative(2f)
+                horizontalLineToRelative(14f)
+                verticalLineTo(4f)
+                close()
+            }
+        }.build()
+    }
+
+    /** Power symbol — disconnect action. */
+    val Power: ImageVector by lazy {
+        ImageVector.Builder(
+            name = "OmniPower",
+            defaultWidth = 24.dp,
+            defaultHeight = 24.dp,
+            viewportWidth = 24f,
+            viewportHeight = 24f,
+        ).apply {
+            path(fill = SolidColor(Color.Black)) {
+                moveTo(13f, 3f)
+                horizontalLineToRelative(-2f)
+                verticalLineToRelative(10f)
+                horizontalLineToRelative(2f)
+                verticalLineTo(3f)
+                close()
+                moveToRelative(4.83f, 2.17f)
+                lineToRelative(-1.42f, 1.42f)
+                curveTo(17.99f, 7.86f, 19f, 9.81f, 19f, 12f)
+                curveToRelative(0f, 3.87f, -3.13f, 7f, -7f, 7f)
+                reflectiveCurveToRelative(-7f, -3.13f, -7f, -7f)
+                curveToRelative(0f, -2.19f, 1.01f, -4.14f, 2.58f, -5.42f)
+                lineTo(6.17f, 4.17f)
+                curveTo(4.23f, 5.71f, 3f, 8.22f, 3f, 12f)
+                curveToRelative(0f, 4.97f, 4.03f, 9f, 9f, 9f)
+                reflectiveCurveToRelative(9f, -4.03f, 9f, -9f)
+                curveToRelative(0f, -2.78f, -1.23f, -5.29f, -3.17f, -6.83f)
+                close()
+            }
+        }.build()
+    }
+
+    /** Person outline — transparency mode. */
+    val PersonOutline: ImageVector by lazy {
+        ImageVector.Builder(
+            name = "OmniPersonOutline",
+            defaultWidth = 24.dp,
+            defaultHeight = 24.dp,
+            viewportWidth = 24f,
+            viewportHeight = 24f,
+        ).apply {
+            path(fill = SolidColor(Color.Black)) {
+                moveTo(12f, 5.9f)
+                curveToRelative(1.16f, 0f, 2.1f, 0.94f, 2.1f, 2.1f)
+                reflectiveCurveToRelative(-0.94f, 2.1f, -2.1f, 2.1f)
+                reflectiveCurveTo(9.9f, 9.16f, 9.9f, 8f)
+                reflectiveCurveToRelative(0.94f, -2.1f, 2.1f, -2.1f)
+                moveToRelative(0f, 9f)
+                curveToRelative(2.97f, 0f, 6.1f, 1.46f, 6.1f, 2.1f)
+                verticalLineToRelative(1.1f)
+                horizontalLineTo(5.9f)
+                verticalLineTo(17f)
+                curveToRelative(0f, -0.64f, 3.13f, -2.1f, 6.1f, -2.1f)
+                moveToRelative(0f, -12f)
+                curveTo(9.79f, 3f, 8f, 4.79f, 8f, 7f)
+                reflectiveCurveToRelative(1.79f, 4f, 4f, 4f)
+                reflectiveCurveToRelative(4f, -1.79f, 4f, -4f)
+                reflectiveCurveToRelative(-1.79f, -4f, -4f, -4f)
+                close()
+                moveToRelative(0f, 9.9f)
+                curveToRelative(-2.67f, 0f, -8f, 1.34f, -8f, 4f)
+                verticalLineToRelative(3f)
+                horizontalLineToRelative(16f)
+                verticalLineToRelative(-3f)
+                curveToRelative(0f, -2.66f, -5.33f, -4f, -8f, -4f)
+                close()
+            }
+        }.build()
+    }
+
     /** Pair of earbuds — single-reading battery ring glyph. */
     val BudsPair: ImageVector by lazy {
         ImageVector.Builder(
