@@ -159,10 +159,52 @@ key throughout, so every build installs over the previous).
   until a real protocol write+readback exists.
 - Still open: `.github/workflows/release-verification.yml` cannot be
   pushed through the GitHub App API (no workflow scope) — kept
-  locally. On-device confirmation of v1.9 pending. Iteration 3
-  (identity "Unknown" root-cause + device-details repair) in
-  progress when this entry was written.
+  locally. On-device confirmation of v1.9 was pending at the time; Iteration 3 followed (see §12).
+
+## 12. Iteration 3 — identity root cause fixed, device details rebuilt (v1.10, 2026-11-04)
+
+- **Root cause of the "Unknown" device name** (docs:
+  `docs/ui-redesign/iteration-3/identity-root-cause.md`): the state
+  bridge froze identity at first registration — often a nameless
+  mid-scan sighting — and the workspace view-model promoted the
+  internal "Unknown" manufacturer placeholder into the header. The
+  catalog resolves from that name, so the same defect also removed
+  the product image, the noise-control section, and the feature
+  rows. `BluetoothDevice.alias` was never read anywhere.
+- **Fix**: core `DisplayIdentityResolver` composes every display
+  identity (user alias → Bluetooth alias → reported name → verified
+  "Manufacturer Model" → "Bluetooth audio device"; blank /
+  placeholder / MAC-shaped candidates rejected; manufacturer and
+  model stay separate fields, filled only by verified catalog
+  matches). The provider captures the alias (API 30+), the bridge
+  re-ingests identity whenever the reported evidence improves and
+  verifies the manufacturer against both name and alias, and both
+  view-models resolve through the resolver. A per-device user alias
+  (pencil action on the device page, persisted, cleared by Forget)
+  changes only what OmniBuds shows; catalog matching always uses
+  the hardware name.
+- **Device page rebuilt** to the supplied reference in the brief's
+  palette (bg #080808, surfaces #17171B/#222228, text #F5F5F5 /
+  #A1A1AA, accent #E5FF36, border #303036): hero, Connected pill,
+  LEFT | CASE | RIGHT battery slots with an honest aggregate ring
+  ("Earbuds (combined)") until a component source exists,
+  segmented Active-noise-control, "Sound & features" cards with
+  truthful Not-linked states, Forget (outlined) + Disconnect
+  (accent) pills. No fabricated toggles, per-bud percentages, or
+  touch/gaming/find rows (device-controls-audit.md).
+- **Battery audit**: no component data is dropped in app code; the
+  standard broadcast carries one device-level value and no seeded
+  model exposes components through a standard surface
+  (battery-root-cause.md, battery-source-matrix.md).
+- **Delivered: OmniBuds-v1.10.apk** — versionCode 10, 11,915,980
+  bytes, SHA-256
+  fb5bdaa852931c0d83e19b0656e0f740fcb0ba8402fd30fccb0d50a6cfdf4732,
+  same signing certificate as v1.0–v1.9 (installs in place). Full
+  compile clean; 114/114 tests pass (18 new identity tests
+  including the frozen-identity regression; Iteration-2 suite
+  re-run). On-device confirmation pending — see the checklist in
+  `docs/ui-redesign/iteration-3/visual-validation.md`.
 
 ---
 
-*Last updated: 2026-11-04 (app builds v1.0–v1.9 pushed; Iteration 3 in progress).*
+*Last updated: 2026-11-04 (v1.10 delivered; Iteration 3 complete, on-device confirmation pending).*
