@@ -67,12 +67,16 @@ object AirpodsCapabilityScope {
         aggregatePercent: Int?,
         sourceDistinguishesBuds: Boolean,
     ): BatteryState {
-        if (aggregatePercent == null) return BatteryState()
-        // Without per-source provenance we refuse to attribute the value.
-        if (!sourceDistinguishesBuds) return BatteryState()
-        return BatteryState(
-            leftLevel = aggregatePercent,
-            rightLevel = aggregatePercent,
-        )
+        // An aggregate value is never attributed to individual buds or
+        // the case — regardless of what the source claims. This
+        // function's contract is per-component state, and an Android
+        // aggregate belongs to the aggregate channel of the battery
+        // model, not to any component slot. Per-component values enter
+        // the system only from a source that reports each component
+        // separately. (Iteration-2 correction: an earlier version
+        // copied the aggregate into both buds when
+        // sourceDistinguishesBuds was true; that fabricated per-bud
+        // data and has been removed.)
+        return BatteryState()
     }
 }

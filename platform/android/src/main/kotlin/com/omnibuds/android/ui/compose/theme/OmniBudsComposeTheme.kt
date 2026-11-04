@@ -1,89 +1,69 @@
 package com.omnibuds.android.ui.compose.theme
 
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-import com.omnibuds.android.presentation.theme.AndroidColors
 import com.omnibuds.android.presentation.theme.AndroidThemeMode
 
-private fun parseColor(hex: String): Color {
-    val clean = hex.removePrefix("#")
-    val colorInt = clean.toLong(16)
-    return if (clean.length == 6) {
-        Color(colorInt or 0x00000000FF000000L)
-    } else {
-        Color(colorInt)
-    }
+/**
+ * OmniBuds brand theme (UI redesign, v1.8).
+ *
+ * A fixed product identity — deep black, charcoal surfaces, one
+ * fluorescent-yellow accent — replacing the system dynamic color that
+ * made the app inherit the phone wallpaper's blue. The app is dark by
+ * design now: [themeMode] is accepted for call-site compatibility but
+ * the brand scheme is always applied.
+ *
+ * Accent discipline: OmniYellow marks selection, active hardware modes,
+ * primary actions and the connected state. It is never decoration.
+ * Battery keeps its restrained green; warnings amber; errors red.
+ */
+object OmniBrand {
+    val Background = Color(0xFF050506) // deep black
+    val Surface = Color(0xFF101013) // near-black charcoal
+    val SurfaceVariant = Color(0xFF17171B) // card charcoal
+    val SurfaceElevated = Color(0xFF1E1E23) // elevated charcoal
+    val SurfaceHighest = Color(0xFF26262C)
+    val Accent = Color(0xFFE9FF3C) // fluorescent yellow
+    val OnAccent = Color(0xFF0A0A0A)
+    val TextPrimary = Color(0xFFF5F5F0)
+    val TextSecondary = Color(0xFF9C9CA3)
+    val Border = Color(0xFF26262B)
+    val Disabled = Color(0xFF55555C)
+    val Success = Color(0xFF34A853)
+    val Warning = Color(0xFFFFB020)
+    val Error = Color(0xFFFF5449)
 }
 
-val OmniBudsDarkColorScheme = darkColorScheme(
-    primary = parseColor(AndroidColors.Dark.primary),
-    onPrimary = parseColor(AndroidColors.Dark.onPrimary),
-    primaryContainer = parseColor(AndroidColors.Dark.primaryContainer),
-    onPrimaryContainer = parseColor(AndroidColors.Dark.onPrimaryContainer),
-    surface = parseColor(AndroidColors.Dark.surface),
-    onSurface = parseColor(AndroidColors.Dark.onSurface),
-    surfaceVariant = parseColor(AndroidColors.Dark.surfaceVariant),
-    onSurfaceVariant = parseColor(AndroidColors.Dark.onSurfaceVariant),
-    background = parseColor(AndroidColors.Dark.background),
-    onBackground = parseColor(AndroidColors.Dark.onBackground),
-    outline = parseColor(AndroidColors.Dark.outline),
-    outlineVariant = parseColor(AndroidColors.Dark.outlineVariant),
-)
-
-val OmniBudsLightColorScheme = lightColorScheme(
-    primary = parseColor(AndroidColors.Light.primary),
-    onPrimary = parseColor(AndroidColors.Light.onPrimary),
-    primaryContainer = parseColor(AndroidColors.Light.primaryContainer),
-    onPrimaryContainer = parseColor(AndroidColors.Light.onPrimaryContainer),
-    surface = parseColor(AndroidColors.Light.surface),
-    onSurface = parseColor(AndroidColors.Light.onSurface),
-    surfaceVariant = parseColor(AndroidColors.Light.surfaceVariant),
-    onSurfaceVariant = parseColor(AndroidColors.Light.onSurfaceVariant),
-    background = parseColor(AndroidColors.Light.background),
-    onBackground = parseColor(AndroidColors.Light.onBackground),
-    outline = parseColor(AndroidColors.Light.outline),
-    outlineVariant = parseColor(AndroidColors.Light.outlineVariant),
-)
-
-val OmniBudsHighContrastColorScheme = darkColorScheme(
-    primary = parseColor(AndroidColors.HighContrast.primary),
-    onPrimary = parseColor(AndroidColors.HighContrast.onPrimary),
-    primaryContainer = parseColor(AndroidColors.HighContrast.primaryContainer),
-    onPrimaryContainer = parseColor(AndroidColors.HighContrast.onPrimaryContainer),
-    surface = parseColor(AndroidColors.HighContrast.surface),
-    onSurface = parseColor(AndroidColors.HighContrast.onSurface),
-    surfaceVariant = parseColor(AndroidColors.HighContrast.surfaceVariant),
-    onSurfaceVariant = parseColor(AndroidColors.HighContrast.onSurfaceVariant),
-    background = parseColor(AndroidColors.HighContrast.background),
-    onBackground = parseColor(AndroidColors.HighContrast.onBackground),
-    outline = parseColor(AndroidColors.HighContrast.outline),
-    outlineVariant = parseColor(AndroidColors.HighContrast.outlineVariant),
+val OmniBudsBrandColorScheme = darkColorScheme(
+    primary = OmniBrand.Accent,
+    onPrimary = OmniBrand.OnAccent,
+    primaryContainer = OmniBrand.SurfaceHighest,
+    onPrimaryContainer = OmniBrand.TextPrimary,
+    secondary = OmniBrand.TextSecondary,
+    background = OmniBrand.Background,
+    onBackground = OmniBrand.TextPrimary,
+    surface = OmniBrand.Surface,
+    onSurface = OmniBrand.TextPrimary,
+    surfaceVariant = OmniBrand.SurfaceVariant,
+    onSurfaceVariant = OmniBrand.TextSecondary,
+    surfaceContainer = OmniBrand.SurfaceVariant,
+    surfaceContainerHigh = OmniBrand.SurfaceElevated,
+    surfaceContainerHighest = OmniBrand.SurfaceHighest,
+    outline = OmniBrand.Border,
+    outlineVariant = OmniBrand.Border,
+    error = OmniBrand.Error,
+    onError = OmniBrand.TextPrimary,
 )
 
 @Composable
 fun OmniBudsTheme(
-    themeMode: AndroidThemeMode = AndroidThemeMode.SYSTEM,
+    @Suppress("UNUSED_PARAMETER") themeMode: AndroidThemeMode = AndroidThemeMode.SYSTEM,
     content: @Composable () -> Unit,
 ) {
-    val darkTheme = when (themeMode) {
-        AndroidThemeMode.SYSTEM -> isSystemInDarkTheme()
-        AndroidThemeMode.DARK -> true
-        AndroidThemeMode.LIGHT -> false
-        AndroidThemeMode.HIGH_CONTRAST -> true
-    }
-
-    val colorScheme = when {
-        themeMode == AndroidThemeMode.HIGH_CONTRAST -> OmniBudsHighContrastColorScheme
-        darkTheme -> OmniBudsDarkColorScheme
-        else -> OmniBudsLightColorScheme
-    }
-
     MaterialTheme(
-        colorScheme = colorScheme,
+        colorScheme = OmniBudsBrandColorScheme,
         content = content,
     )
 }

@@ -117,11 +117,36 @@ sealed interface OperationStatus {
 /** Battery state. */
 sealed interface BatteryState {
     data object Unknown : BatteryState
+
+    /**
+     * @param levelPercent the device-level (aggregate) reading, when a
+     * source reports one. Never derived from [components].
+     * @param components independently observed per-component readings.
+     * A component appears here only when a source reported that exact
+     * component; the aggregate is never copied into component slots.
+     */
     data class Known(
         val levelPercent: Int?,
         val charging: Boolean?,
         val observation: ObservedValue<Unit>?,
+        val components: List<ComponentLevel> = emptyList(),
     ) : BatteryState
+
+    /** The physical battery component a [ComponentLevel] describes. */
+    enum class Component { LEFT_EARBUD, RIGHT_EARBUD, CHARGING_CASE }
+
+    /** One independently observed battery component reading. */
+    data class ComponentLevel(
+        val component: Component,
+        val levelPercent: Int?,
+        val charging: Boolean?,
+    ) {
+        init {
+            require(levelPercent == null || levelPercent in 0..100) {
+                "levelPercent must be between 0 and 100 or null, was $levelPercent"
+            }
+        }
+    }
 }
 
 /** Audio route and codec state. */

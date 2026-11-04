@@ -1,6 +1,7 @@
 package com.omnibuds.android.presentation.battery
 
 import com.omnibuds.core.globalstate.BatteryState
+import com.omnibuds.core.presentation.battery.BatteryComponentKind
 import com.omnibuds.core.presentation.battery.UnifiedBatteryComponent
 import com.omnibuds.core.presentation.battery.UnifiedBatteryModel
 
@@ -13,6 +14,7 @@ data class BatteryComponentReading(
     val levelPercent: Int?,
     val isCharging: Boolean?,
     val isPresent: Boolean = true,
+    val kind: BatteryComponentKind = BatteryComponentKind.DEVICE,
 ) {
     init {
         levelPercent?.let {
@@ -31,6 +33,7 @@ data class BatteryComponentReading(
         levelPercent = levelPercent,
         isCharging = isCharging,
         isPresent = isPresent,
+        kind = kind,
     )
 
     companion object {
@@ -40,6 +43,7 @@ data class BatteryComponentReading(
                 levelPercent = core.levelPercent,
                 isCharging = core.isCharging,
                 isPresent = core.isPresent,
+                kind = core.kind,
             )
     }
 }
@@ -57,6 +61,8 @@ data class BatteryPresentationModel(
     val lastUpdatedMillis: Long? = null,
     val isStale: Boolean = false,
     val unavailableReason: String? = null,
+    /** True when the device is disconnected: values shown are last-known, not live. */
+    val isLastKnown: Boolean = false,
 ) {
     val hasAnyData: Boolean
         get() = overallPercent != null || components.any { it.levelPercent != null }

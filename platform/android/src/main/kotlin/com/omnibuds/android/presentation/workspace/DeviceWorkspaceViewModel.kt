@@ -87,7 +87,10 @@ class DeviceWorkspaceViewModel(
 
             val overview = buildOverview(snapshot)
             val controls = buildControls(snapshot, overview)
+            // While disconnected, retained battery values are last-known
+            // readings, never live ones — the UI labels them as such.
             val battery = BatteryPresentationModel.fromCoreState(snapshot.battery)
+                .copy(isLastKnown = snapshot.connection !is ConnectionState.Connected)
             val audio = AudioPresentationModel.fromCoreState(snapshot.audio)
 
             _state.value = WorkspaceScreenState(

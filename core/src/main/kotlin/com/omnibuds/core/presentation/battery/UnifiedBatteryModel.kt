@@ -5,11 +5,14 @@ import com.omnibuds.core.globalstate.BatteryState
 /**
  * Single battery component reading (e.g. left bud, right bud, charging case, or whole device).
  */
+enum class BatteryComponentKind { LEFT, RIGHT, CASE, DEVICE }
+
 data class UnifiedBatteryComponent(
     val componentName: String,
     val levelPercent: Int?,
     val isCharging: Boolean?,
     val isPresent: Boolean = true,
+    val kind: BatteryComponentKind = BatteryComponentKind.DEVICE,
 ) {
     init {
         levelPercent?.let {
@@ -105,25 +108,35 @@ data class UnifiedBatteryModel(
                     false
                 }
 
-                val components = mutableListOf<UnifiedBatteryComponent>()
-                if (batteryState.levelPercent != null) {
-                    components.add(
-                        UnifiedBatteryComponent(
-                            componentName = "Device",
-                            levelPercent = batteryState.levelPercent,
-                            isCharging = batteryState.charging,
-                        ),
+                // Per-component readings map by kind — never by name
+                // matching, and never derived from the aggregate.
+                val components = batteryState.components.map { component ->
+                    val (name, kind) = when (component.component) {
+                        BatteryState.Component.LEFT_EARBUD ->
+                            "Left" to BatteryComponentKind.LEFT
+                        BatteryState.Component.RIGHT_EARBUD ->
+                            "Right" to BatteryComponentKind.RIGHT
+                        BatteryState.Component.CHARGING_CASE ->
+                            "Case" to BatteryComponentKind.CASE
+                    }
+                    UnifiedBatteryComponent(
+                        componentName = name,
+                        levelPercent = component.levelPercent,
+                        isCharging = component.charging,
+                        kind = kind,
                     )
                 }
 
+                val hasData = batteryState.levelPercent != null ||
+                    components.any { it.levelPercent != null }
                 UnifiedBatteryModel(
-                    isAvailable = batteryState.levelPercent != null,
+                    isAvailable = hasData,
                     components = components,
                     overallPercent = batteryState.levelPercent,
                     isCharging = batteryState.charging,
                     lastUpdatedMillis = observedAt,
                     isStale = isStale,
-                    unavailableReason = if (batteryState.levelPercent == null) "Battery level was not reported." else null,
+                    unavailableReason = if (!hasData) "Battery level was not reported." else null,
                 )
             }
         }
@@ -146,15 +159,18 @@ data class UnifiedBatteryModel(
             }
 
             val components = mutableListOf<UnifiedBatteryComponent>()
-            if (left != null) components.add(UnifiedBatteryComponent("Left", left, leftCharging))
-            if (right != null) components.add(UnifiedBatteryComponent("Right", right, rightCharging))
-            if (case != null) components.add(UnifiedBatteryComponent("Case", case, caseCharging))
+            if (left != null) components.add(UnifiedBatteryComponent("Left", left, leftCharging, kind = BatteryComponentKind.LEFT))
+            if (right != null) components.add(UnifiedBatteryComponent("Right", right, rightCharging, kind = BatteryComponentKind.RIGHT))
+            if (case != null) components.add(UnifiedBatteryComponent("Case", case, caseCharging, kind = BatteryComponentKind.CASE))
 
             val hasAny = components.isNotEmpty()
             return UnifiedBatteryModel(
                 isAvailable = hasAny,
                 components = components,
-                overallPercent = components.firstOrNull()?.levelPercent,
+                // Components are not an aggregate: with no device-level
+                // reading, overall stays unknown instead of borrowing
+                // the first component's value.
+                overallPercent = null,
                 isCharging = components.any { it.isCharging == true },
                 lastUpdatedMillis = observedAt,
                 isStale = isStale,

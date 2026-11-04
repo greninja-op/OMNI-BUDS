@@ -38,38 +38,13 @@ fun SettingsScreen(
         Text(text = "Settings", style = MaterialTheme.typography.headlineSmall)
         Spacer(modifier = Modifier.height(16.dp))
 
-        Text(text = "Theme Preference", style = MaterialTheme.typography.titleMedium)
+        Text(text = "Appearance", style = MaterialTheme.typography.titleMedium)
         Spacer(modifier = Modifier.height(8.dp))
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
-            AndroidThemeMode.values().forEach { mode ->
-                OutlinedButton(
-                    onClick = { viewModel.setThemeMode(mode) },
-                    modifier = Modifier.defaultMinSize(minHeight = AndroidTouchTargets.minTouchTargetDp.dp),
-                ) {
-                    Text(mode.name)
-                }
-            }
-        }
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            Column {
-                Text(text = "High Contrast Mode", style = MaterialTheme.typography.titleMedium)
-                Text(text = "Enhanced visibility with WCAG AAA contrast ratios", style = MaterialTheme.typography.bodySmall)
-            }
-            Switch(
-                checked = state.isHighContrast,
-                onCheckedChange = { viewModel.setHighContrast(it) },
-            )
-        }
+        Text(
+            text = "OmniBuds uses its own dark brand theme — deep black, charcoal, and a fluorescent yellow accent. There is nothing to configure here; it looks the same on every phone.",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
 
         Spacer(modifier = Modifier.height(16.dp))
 

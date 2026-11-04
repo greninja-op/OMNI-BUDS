@@ -129,6 +129,20 @@ class AppleAirpodsAdapterTest {
     }
 
     @Test
+    fun `aggregate is never attributed to buds even when source claims to distinguish`() {
+        // Iteration 2 regression test: an earlier version copied the
+        // aggregate into both buds in this branch, fabricating per-bud
+        // data. The branch is now covered and must stay empty.
+        val state = AirpodsCapabilityScope.batteryFromAndroidAggregate(
+            aggregatePercent = 80,
+            sourceDistinguishesBuds = true,
+        )
+        assertEquals(null, state.leftLevel)
+        assertEquals(null, state.rightLevel)
+        assertEquals(null, state.caseLevel)
+    }
+
+    @Test
     fun `missing battery value stays unknown`() {
         val state = AirpodsCapabilityScope.batteryFromAndroidAggregate(
             aggregatePercent = null,

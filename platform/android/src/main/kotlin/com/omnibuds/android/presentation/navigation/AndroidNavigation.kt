@@ -15,6 +15,10 @@ sealed interface AndroidDestination {
         override val route: String = "devices"
     }
 
+    data object AddDevice : AndroidDestination {
+        override val route: String = "add-device"
+    }
+
     data class DeviceWorkspace(val deviceId: String) : AndroidDestination {
         override val route: String = "workspace/$deviceId"
     }
@@ -34,6 +38,7 @@ sealed interface AndroidDestination {
     companion object {
         fun fromRoute(route: String): AndroidDestination = when {
             route == "devices" -> Devices
+            route == "add-device" -> AddDevice
             route.startsWith("workspace/") -> {
                 val id = route.removePrefix("workspace/")
                 DeviceWorkspace(id)

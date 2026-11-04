@@ -47,6 +47,14 @@ fun AboutScreen(
 
         Spacer(modifier = Modifier.height(16.dp))
 
+        Text(text = "Image Credits", style = MaterialTheme.typography.titleMedium)
+        Spacer(modifier = Modifier.height(8.dp))
+        Text(
+            text = "Sony WI-C100 product photograph: KKPCW (Kyu3), licensed CC BY-SA 4.0, via Wikimedia Commons. No other product photographs are bundled - OmniBuds does not redistribute manufacturer imagery without a license. Devices without a licensed photo show a drawn category symbol, or your own photo of your device if you add one.",
+            style = MaterialTheme.typography.bodySmall,
+        )
+        Spacer(modifier = Modifier.height(16.dp))
+
         Text(text = "Honest Platform Limitations", style = MaterialTheme.typography.titleMedium)
         Spacer(modifier = Modifier.height(8.dp))
         state.honestLimitations.forEach { limitation ->
