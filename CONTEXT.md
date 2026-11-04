@@ -123,6 +123,46 @@
 - **Quota guardrail set (~13:35 IST):** stop at 98% free, never touch 1B pool without approval. Overrides the old "burn through everything" wording.
 - **CONTEXT.md redesign requested (~13:37 IST):** this file rewritten as the canonical agent continuity file.
 
+
+## 11. Android app builds (2026-11-04)
+
+The 52 phases produced no installable app, so a hand-built application
+module now lives at `platform/app/` (package `com.omnibuds.app`,
+minSdk 26, targetSdk 35), assembled without AGP in the sandbox
+(kotlinc + aapt2 + d8 pipeline). Delivered APK line: **OmniBuds-v1.0
+through v1.9** (versionCode = N of v1.<N>, one stable debug signing
+key throughout, so every build installs over the previous).
+
+- v1.1–v1.5: universal wiring (SystemDiscoveryProvider,
+  DeviceStateBridge into the global-state engine), connection-truth
+  fixes for HyperOS, icon fill fix, segmented-control system.
+- v1.6: version stamping fix (v1.0–v1.5 shipped empty
+  versionCode/versionName and forced uninstall/reinstall).
+- v1.7: system back button wired to the in-app stack; segments as
+  real buttons; connection truth v3 (profile proxies + audio outputs).
+- v1.8: fixed OmniBrand theme (dark, fluorescent-yellow accent),
+  product catalog, dashboard product cards, device-page hero,
+  per-device product-match override. Docs: `docs/ui-redesign/`.
+- v1.9 (Iteration 2): AI-generated product imagery REMOVED. Only
+  genuinely licensed photo bundled: Sony WI-C100 (CC BY-SA 4.0,
+  KKPCW/Kyu3, Wikimedia Commons) — binary stored as base64 parts
+  under `platform/app/binary-assets/` (see its README; the GitHub
+  push API corrupts raw binaries). Other models: vector category
+  artwork or the user's own photo of their device. Media-player card
+  removed. Component-aware battery model wired into the live
+  global-state stack; the AirPods aggregate-to-buds duplication
+  defect fixed + regression-tested. Docs:
+  `docs/ui-redesign/iteration-2/` (root-cause audit first).
+- Standing honesty rules unchanged: capabilities ingest as
+  Discovering only; no fake battery/control state; the workspace
+  view-model's self-acknowledging control path must not be enabled
+  until a real protocol write+readback exists.
+- Still open: `.github/workflows/release-verification.yml` cannot be
+  pushed through the GitHub App API (no workflow scope) — kept
+  locally. On-device confirmation of v1.9 pending. Iteration 3
+  (identity "Unknown" root-cause + device-details repair) in
+  progress when this entry was written.
+
 ---
 
-*Last updated: 2026-10-11 (Phase 52 completed — all 52 phases done).*
+*Last updated: 2026-11-04 (app builds v1.0–v1.9 pushed; Iteration 3 in progress).*
