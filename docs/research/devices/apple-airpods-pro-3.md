@@ -4,7 +4,9 @@
 
 **Retrieved.** 5 November 2026 (Asia/Kolkata).
 
-**Plate.** `airpods-pro-3-plate.svg` is the vector drawing that opens the PDF. It is an original sensor plate, not an Apple product photograph.
+**Photographs.** The PDF opens with three product photographs downloaded from Apple: the hero pair on [apple.com/airpods-pro](https://www.apple.com/airpods-pro/), the open case from the Apple Store gallery, and the heart-rate close-up from the same product page. The files are `images/apple-airpods-pro-3-pair.jpg`, `images/apple-airpods-pro-3-case.jpg`, and `images/apple-airpods-pro-3-heart-rate.jpg`. They are Apple’s photographs.
+
+**Plate.** `airpods-pro-3-plate.svg` is an original sensor diagram later in the PDF. It names the openings. It is not the product photograph.
 
 **Figures.** The designed charts are in `AirPods-Pro-3-research.pdf` beside this note. Frequency plots use a logarithmic frequency axis. Blue is ANC, teal is Transparency, amber is Adaptive Audio, and stone is the unpowered seal.
 
@@ -50,7 +52,7 @@ A doubling of acoustic **power** is 3 dB. A four-times change in power is 6 dB. 
 
 IP57 means dust-protected (the “5”) and protected against temporary immersion (the “7”, 1 metre for 30 minutes under the IEC lab test). Apple says the rating is for sweat and water during non-water sport, it is not permanent, and the case must not be charged while wet. It is not a swim rating.
 
-The official product photograph is on [apple.com/airpods-pro](https://www.apple.com/airpods-pro/). This dossier does not copy that photograph. The companion chart note uses a labeled schematic so the stem, the ear tip, and the sensor jobs can be pointed at.
+The product photographs at the front of the PDF are Apple’s, from apple.com/airpods-pro and the Apple Store gallery. The labeled plate later in the note is drawn for this dossier so the stem, the ear tip, and the sensor jobs can be pointed at. It is not a measured drawing, and the driver diameter is still unpublished.
 
 ## 2. Acoustic hardware
 
@@ -418,6 +420,7 @@ Lossless listening is not an AirPods Pro 3 wireless specification on the tech-sp
 
 ## Sources
 
+- Apple product photographs: the hero pair on [apple.com/airpods-pro](https://www.apple.com/airpods-pro/), the open-case gallery image on the Apple Store page, and the heart-rate close-up from the same product page. Saved beside this note under `images/`
 - Apple, AirPods Pro 3 technical specifications, including the support mirror dated as year introduced 2025: [apple.com/airpods-pro/specs](https://www.apple.com/airpods-pro/specs/) and [support.apple.com/en-us/125135](https://support.apple.com/en-us/125135)
 - Apple Newsroom, 9 September 2025, “Introducing AirPods Pro 3”
 - Apple Store, AirPods Pro 3, price and the Live Translation language list as retrieved 5 November 2026
