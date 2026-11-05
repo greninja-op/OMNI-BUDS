@@ -4,6 +4,8 @@
 
 **Retrieved.** 5 November 2026 (Asia/Kolkata).
 
+**Plate.** `airpods-pro-3-plate.svg` is the vector drawing that opens the PDF. It is an original sensor plate, not an Apple product photograph.
+
 **Figures.** The designed charts are in `AirPods-Pro-3-research.pdf` beside this note. Frequency plots use a logarithmic frequency axis. Blue is ANC, teal is Transparency, amber is Adaptive Audio, and stone is the unpowered seal.
 
 **Scope.** This file records what Apple publishes about AirPods Pro 3, plus one independent lab curve that Apple does not publish. It is catalogue research. It is not a measurement made on hardware in this repository, and it does not change the Phase 42 rule that an Android app cannot set these features through a supported Apple API. The stem controls themselves are on the earbud, so a person can still change listening mode with a press even when the phone is not an iPhone.
@@ -17,6 +19,7 @@ Three different decibel numbers appear below. They are not interchangeable.
 | Hearing Protection total attenuation | Estimated real-world protection in sustained noise, as a single number for a whole noise environment. Given as a range: most users, then proficient users. | Apple, ANSI/ASA S12.68, datasheet dated September 2025 |
 | Passive octave-band means | How much the seal blocks, earbud powered off, at one octave frequency. | Same Apple datasheet, ANSI S3.19-1974 |
 | Lab attenuation and frequency response | One fixture measurement (B&K 5128) of playback balance, and of outside noise blocked with ANC off versus ANC on. | SoundGuys product page, retrieved 5 November 2026 |
+| RTINGS category averages | One number per band or per noise scene: overall, bass, mids, treble, airplane, office, street. | A public October 2025 summary of an RTINGS review. The review page itself is behind a login, so these figures are cited as secondary |
 
 Apple does not publish a frequency-response curve, a driver diameter, a microphone part count beyond the sensor list, or an ANC attenuation curve in decibels versus frequency. Where a number is absent, this dossier says so. It does not fill the gap with a typical value.
 
@@ -38,7 +41,12 @@ A doubling of acoustic **power** is 3 dB. A four-times change in power is 6 dB. 
 | Case | 47.2 mm high, 62.2 mm wide, 21.8 mm deep, 43.99 g | Apple tech specs |
 | Ear tips in the box | Foam-infused silicone, five sizes: XXS, XS, S, M, L | Apple tech specs and Newsroom |
 | Cable | USB-C charge cable is sold separately | Apple tech specs |
-| Regulatory file names on the hearing-protection sheet | A3063 and A3064 appear in the Apple regulatory filename | Apple regulatory PDF. Which number is the left bud, the right bud, or the case is not stated in that sheet |
+| Earbud model numbers | A3063, A3064, A3065 | Apple Support, “Identify your AirPods” |
+| Case model number | A3122. FCC IDs on the regulatory sheet are BCG-A3063, BCG-A3064, and BCG-A3122 | Apple regulatory compliance PDF |
+| Left and right assignment | Model tables commonly list A3064 as the left earbud and A3063 as the right. Apple’s identify page lists A3065 with them and does not say which body it is | Apple Wiki model table and a retailer lookup. A3065 is not assigned here |
+| Retail order number | MFHP4, and MFHP4HN/A on one India listing | Apple Wiki, and Croma’s product page. A code written MFH4HN/A is missing a character |
+| Current firmware, Apple’s list | 9A348 | Apple Support, “About firmware updates for AirPods”, read with this revision. Build 8B30 was a December 2025 update, not the current build |
+| What A3047 and A3048 are | AirPods Pro 2 with the USB-C case, together with case A3049 or, on other lists, A2968 | Apple Support, “Identify your AirPods”. They are the previous generation |
 
 IP57 means dust-protected (the “5”) and protected against temporary immersion (the “7”, 1 metre for 30 minutes under the IEC lab test). Apple says the rating is for sweat and water during non-water sport, it is not permanent, and the case must not be charged while wet. It is not a swim rating.
 
@@ -177,15 +185,28 @@ What the table supports:
 
 SoundGuys did not publish a Transparency transfer curve on the page retrieved. Their short spec line says the ambient mode is adaptive transparency, and lists modes as Off, ANC, and transparency. Apple’s own list also includes Adaptive Audio as a distinct mode.
 
-A public October 2025 summary attributed RTINGS band averages to this model (overall 28.69 dB, bass 23.84, mid 32.38, treble 30.51). The RTINGS review itself is behind a login, so those figures are not charted here.
+A public October 2025 summary of an RTINGS review gives category averages, not a frequency curve. The review page is behind a login, so the numbers below are a secondary citation. They are charted in the PDF on their own figure, apart from the SoundGuys sweep.
+
+| RTINGS category, as cited | AirPods Pro 3 | AirPods Pro 2, same summary |
+|---|---|---|
+| Overall | 28.69 dB | 24.48 dB |
+| Bass | 23.84 dB | 20.83 dB |
+| Mids | 32.38 dB | 26.68 dB |
+| Treble | 30.51 dB | 26.47 dB |
+| Airplane | 26.78 dB | 23.48 dB |
+| Office | 24.95 dB | 21.63 dB |
+| Street | 30.01 dB | 25.52 dB |
+
+The overall step from 24.48 dB to 28.69 dB is 4.21 dB, about 2.6 times the acoustic power. That sits near Apple’s “up to 2×” power claim. It is not the same test as Apple’s 26–32 dB hearing-protection band, and it is not the SoundGuys sweep, whose deepest point is 43.5 dB at 3.1 kHz.
 
 ## 6. Playback frequency balance, and the equalizer question
 
-Apple does not publish a frequency response. There is no user graphic equalizer on AirPods Pro 3. SoundGuys’ review states “No EQ” as a limitation. What exists instead:
+Apple does not publish a frequency response. There is no 10-band parametric equalizer, and Apple does not publish a Q factor or a decibel limit for any slider. What the wearer can actually set:
 
 | Control | Who sets it | What it changes |
 |---|---|---|
-| Adaptive EQ | The earbud, continuously | Level versus frequency to match the seal the inward mic measures. Not a saved bass/treble preset |
+| Custom EQ | The user, on iPhone, iPad, or Mac | Three bands only: Low, Mid, and High. Settings, the AirPods name, Audio & Routing, Equalizer, Custom. Stored on the earbuds and carried to other paired Apple devices. Choose Recommended to return to Apple’s profile. Added in the iOS 27 era. Apple’s guide does not publish the slider range in decibels, the center frequency of each band, or a Q |
+| Adaptive EQ | The earbud, continuously | Level versus frequency to match the seal the inward mic measures. Separate from the three sliders |
 | Personalized Spatial Audio | The user, once, with a TrueDepth iPhone | An ear-geometry profile for spatial rendering |
 | Headphone Accommodations | The user, in Accessibility | A hearing-based playback shape. Apple exposes an audiogram (from the Hearing Test or imported) and tone choices aimed at balanced, vocal, or bright sound, plus amplification strength and left/right balance. Apple does not publish the decibel value of each step |
 | Hearing Aid | The user, after a Hearing Test, mild to moderate loss, age 18 or older | Frequency-specific gain from the audiogram, with automatic Conversation Boost on this model. FDA-authorized. This is amplification for hearing loss, not a music EQ |
@@ -265,7 +286,15 @@ There is no separate mechanical button. Nothing clicks. Each stem is a force sen
 | Which modes the hold cycles | ANC and Transparency | Any two or three of ANC, Transparency, Adaptive Audio, and Off. If both stems are set to listening mode, editing one stem’s mode list changes both |
 | Mute / unmute versus end call | Press once mutes. Press twice ends the call | Those two actions can be swapped |
 
-Press-once for play/pause, press-twice for next track, and press-three-times for previous track are not described as reassignable on this model. Volume swipe is not described as reassignable.
+Press-once for play/pause, press-twice for next track, and press-three-times for previous track are not described as reassignable on this model. Volume swipe is not described as reassignable. Apple does not publish a decibel step per swipe.
+
+Under Settings, Accessibility, AirPods, the phone can change Press Speed, Press and Hold Duration, the volume of the earbuds’ own tones, and whether spatial audio follows the head or stays on the phone. Noise Cancellation with One AirPod can be turned on, so cancellation is available while only one earbud is worn. That switch does not, by itself, publish what the other ear does when the switch is left off.
+
+The call microphone can be set to switch automatically, always the left earbud, or always the right. If it is pinned to one side, that earbud stays the microphone even after it leaves the ear.
+
+### The case
+
+Apple’s spec page describes the speaker, the lanyard loop, and the status light. It does not describe a pairing button. Reviews in 2026, including 9to5Mac, say the physical rear button is gone and pairing is a tap on the case. One review says the tap is on the indicator light. The exact factory-reset gesture is not in the Apple page used here, so it is not specified.
 
 ### Both stems at once
 
@@ -280,8 +309,9 @@ Automatic Ear Detection is on by default. It uses the skin-detect sensor.
 - Wear neither, with detection on: audio comes out of the phone or computer speakers.
 - Wear one, with the other in the case: audio plays on the worn earbud.
 - Turn detection off: audio keeps going to the earbuds whether or not they are in the ears, and the features that depend on detection stay off.
+- Noise Cancellation with One AirPod, in Accessibility, allows ANC while a single earbud is worn.
 
-A call can be taken with one earbud. Each bud has its own microphones, so the worn bud still has a voice path.
+A call can be taken with one earbud. Each bud has its own microphones, so the worn bud still has a voice path. Apple does not publish a number of seconds for the automatic resume.
 
 ### Hands-free, beyond the stem
 
@@ -306,13 +336,16 @@ The earbuds do not contain a general speech-to-text engine that turns everything
 | Voice Isolation | The wearer’s voice on a call | Cleaner uplink audio. No transcript | Noise rejection in the voice path so the far end hears less of the room |
 | Hearing Aid and Conversation Boost | The room, especially speech | Louder, clearer sound in the ear. No transcript | Frequency gain from the audiogram. Boost emphasizes speech. Clinical feature, not a captioner |
 | Live Listen | The iPhone microphone | That audio in the earbuds | The phone is the remote microphone. No transcription is part of the feature |
-| Studio-quality audio recording | Listed on the spec page | Apple does not publish sample rate, bit depth, or which app stores the file | Treat as an unpublished recording claim |
+| Studio-quality audio recording | The wearer’s voice | A recording in the phone’s apps. Sample rate and bit depth are still unpublished | Firmware notes for 8A356 name the Camera app, Voice Memos, and dictation in Messages |
+| Workout Buddy | None required from the wearer | Spoken encouragement, milestones, and a summary after the workout | Apple Intelligence on the iPhone, iOS 27 or later, English or Spanish. It uses Fitness history and the current workout. It is text-to-speech from the phone, not speech-to-text in the earbud |
 
 Live Translation languages on the Apple Store page retrieved 5 November 2026: Chinese (Mandarin, Simplified), Chinese (Mandarin, Traditional), English (UK and US), French (France), German (Germany), Italian (Italy), Japanese (Japan), Korean (South Korea), Portuguese (Brazil), and Spanish (Spain). At announcement on 9 September 2025 the shipping set was English, French, German, Portuguese, and Spanish, with Italian, Japanese, Korean, and simplified Chinese described as coming later. Availability is still regional, and the feature is marked beta.
 
 Siri AI is a separate host feature. A current Apple Store footnote describes hands-free Siri AI as an iOS 27, macOS 27, and watchOS 27 beta that works on all AirPods, starting in English, French, Japanese, Korean, Portuguese, and Spanish, and not initially in the EU. That is phone software, not a decoder inside this earbud.
 
-Nothing in the published feature list captions a podcast, a song, or a meeting into a text file stored on the earbuds.
+Nothing in the published feature list captions a podcast, a song, or a meeting into a text file stored on the earbuds. Apple does not describe the recognizer as Whisper, and it does not publish a sample rate of 48 kHz for the cancellation loop.
+
+Workout Buddy, from Apple’s Fitness guide, covers outdoor and indoor run and walk, outdoor and indoor cycle, hiking, elliptical, stair stepper, HIIT, and functional or traditional strength training. A MacRumors report says Pro 3 can use it without an Apple Watch because the earbud measures heart rate. Apple’s own guide describes the spoken cues as pace, distance, duration, milestones, and a closing summary. It does not publish a heart-rate-zone script.
 
 ## 10. Battery, case, and charging
 
@@ -327,7 +360,7 @@ Test conditions, unless noted: Apple, July and August 2025, preproduction buds a
 | ANC on, buds plus case, repeated discharge | 24 hours |
 | 5 minutes in the case, then play with ANC | about 1 hour |
 
-Case charging: MagSafe, Apple Watch charger, Qi, or USB-C. The case has a speaker for Find My and a lanyard loop. The tech-specs footnote for this model says Find My functionality requires iOS 26 or later. A later multi-product store page uses different footnote numbers for other models; the Pro 3 tech-specs page is the one used here.
+Case charging: MagSafe, Apple Watch charger, a Qi-certified charger, or USB-C. Apple’s spec page does not say Qi2. The case has a speaker for Find My and a lanyard loop. The tech-specs footnote for this model says Find My functionality requires iOS 26 or later. A later multi-product store page uses different footnote numbers for other models; the Pro 3 tech-specs page is the one used here.
 
 ## 11. Connectivity
 
@@ -351,7 +384,8 @@ Lossless listening is not an AirPods Pro 3 wireless specification on the tech-sp
 | Adaptive Audio | Yes | Same, and customization changes the protection figures | 19–31 dB at default |
 | Off | Yes | Same | Passive NRR 12 dB, plus the octave-band means |
 | Adaptive EQ | Yes | No | None |
-| Graphic EQ / bass slider | No | — | — |
+| Custom EQ, three bands | Yes, iOS 27 era, stored on the earbuds | Low, Mid, and High. Apple does not publish the range, the center frequencies, or a Q | None |
+| 10-band parametric EQ | Not a product feature | — | A generated preset with one Q on every band is not a measurement of this model |
 | Spatial Audio, personalized, head tracked | Yes | Profile on a TrueDepth iPhone | None |
 | Conversation Awareness | Yes | Toggle | None |
 | Personalized Volume | Yes | Toggle | None |
@@ -369,7 +403,6 @@ Lossless listening is not an AirPods Pro 3 wireless specification on the tech-sp
 | In-ear fit tones / ear-tip test | Part of fitting for hearing features; Apple’s sheet tells the wearer to seat the tip until it feels snug | — | A poor seal lowers every attenuation number in this paper |
 | Find My, case speaker, precision finding | Yes | — | — |
 | Multipoint | Not published | — | — |
-| User bass / treble / custom EQ bands | Not provided | — | — |
 | On-bud speech-to-text of arbitrary audio | Not provided | — | — |
 
 ## 13. What this dossier will not claim
@@ -377,16 +410,20 @@ Lossless listening is not an AirPods Pro 3 wireless specification on the tech-sp
 - No frequency response measured by this project.
 - No driver size, THD, latency in milliseconds, or microphone self-noise.
 - No per-microphone part numbers, and no claim that a teardown found more than the three channels Apple lists.
-- No Transparency frequency curve.
+- No Transparency frequency curve. Apple’s hearing-protection table is the Transparency decibel source: 4–9 dB at 90 dBA, rising to 20–25 dB at 110 dBA.
+- No 48 kHz cancellation rate, no 90 percent noise-reduction claim, and no fixed hearing-aid boost such as +6 to +14 dB. Aid gain follows the wearer’s audiogram.
+- No 10-band equalizer, no Q factors, and no published decibel range for the three Custom EQ sliders.
 - No statement that OmniBuds, or any Android app, can write ANC, EQ, or gestures to this model through a supported API.
-- The SoundGuys rows are one lab’s published table, read on 5 November 2026. A later firmware can move a curve. Apple’s hearing-protection rows are from the September 2025 datasheet for models filed as A3063 / A3064.
+- The SoundGuys rows are one lab’s published table, read on 5 November 2026. A later firmware can move a curve. The RTINGS category averages are a secondary citation. Apple’s hearing-protection rows are from the September 2025 datasheet.
 
 ## Sources
 
 - Apple, AirPods Pro 3 technical specifications, including the support mirror dated as year introduced 2025: [apple.com/airpods-pro/specs](https://www.apple.com/airpods-pro/specs/) and [support.apple.com/en-us/125135](https://support.apple.com/en-us/125135)
 - Apple Newsroom, 9 September 2025, “Introducing AirPods Pro 3”
 - Apple Store, AirPods Pro 3, price and the Live Translation language list as retrieved 5 November 2026
-- Apple Support, “Use controls and gestures with your AirPods” (guide for iOS 27 and the matching releases) and “Change the settings of your AirPods and AirPods Pro” (108764)
+- Apple Support, “Identify your AirPods” (109525), “Use controls and gestures with your AirPods”, “Change the settings of your AirPods and AirPods Pro” (108764, published 14 September 2026), “Customize EQ on AirPods”, “Adjust the accessibility settings for AirPods”, “Use Workout Buddy”, and “About firmware updates for AirPods”
+- Apple, regulatory compliance information for A3063, A3064, and A3122
 - Apple, Hearing Protection data sheet for AirPods Pro 3, September 2025, regulatory file `A3063_A3064_HP_Datasheet_ANSI_MH_English`, and support article 120850
 - SoundGuys, AirPods Pro 3rd Gen product page, lab tables retrieved 5 November 2026
+- RTINGS category averages, cited from a public summary of the October 2025 review. The review page is behind a login, so those seven numbers are a secondary citation and are not a frequency curve
 - This repository, `docs/phases/phase-42/research-and-evidence-register.md`, for the Android control boundary only

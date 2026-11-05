@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <rect width="1200" height="680" fill="#F7F5F2"/>
+  <text x="56" y="58" fill="#1C1917" font-family="Inter, Helvetica, sans-serif" font-size="28" font-weight="600">AirPods Pro 3</text>
+  <text x="56" y="84" fill="#57534E" font-family="Inter, Helvetica, sans-serif" font-size="14">Sensor and control plate. Original vector for this note. Not an Apple photograph.</text>
+  <text x="900" y="58" fill="#57534E" font-family="Inter, Helvetica, sans-serif" font-size="12" text-anchor="end">Earbuds A3063, A3064, A3065</text>
+  <text x="900" y="78" fill="#57534E" font-family="Inter, Helvetica, sans-serif" font-size="12" text-anchor="end">Case A3122</text>
+
+  <!-- earbud -->
+  <g transform="translate(70,70)">
+    <ellipse cx="210" cy="118" rx="86" ry="46" fill="#EFE8DC" stroke="#1C1917" stroke-width="2.2"/>
+    <ellipse cx="210" cy="118" rx="62" ry="30" fill="none" stroke="#B7AB9A" stroke-width="1.6"/>
+    <text x="210" y="123" text-anchor="middle" fill="#78716C" font-family="Inter, Helvetica, sans-serif" font-size="11">foam tip</text>
+    <rect x="156" y="150" width="108" height="128" rx="50" fill="#FFFCF8" stroke="#1C1917" stroke-width="2.2"/>
+    <circle cx="210" cy="214" r="28" fill="none" stroke="#A8A29E" stroke-width="1.4" stroke-dasharray="3 3"/>
+    <text x="210" y="218" text-anchor="middle" fill="#A8A29E" font-family="Inter, Helvetica, sans-serif" font-size="10">driver</text>
+    <rect x="186" y="258" width="48" height="228" rx="24" fill="#FFFCF8" stroke="#1C1917" stroke-width="2.2"/>
+    <rect x="194" y="318" width="32" height="108" rx="10" fill="none" stroke="#1D4ED8" stroke-width="2.2"/>
+    <circle cx="210" cy="100" r="5" fill="#0F766E"/>
+    <circle cx="248" cy="188" r="5" fill="#B45309"/>
+    <circle cx="198" cy="452" r="4.5" fill="#1C1917"/>
+    <circle cx="222" cy="468" r="4.5" fill="#1C1917"/>
+    <line x1="292" y1="118" x2="360" y2="70" stroke="#0F766E" stroke-width="1"/>
+    <line x1="253" y1="188" x2="360" y2="150" stroke="#B45309" stroke-width="1"/>
+    <line x1="226" y1="360" x2="360" y2="250" stroke="#1D4ED8" stroke-width="1"/>
+    <line x1="226" y1="460" x2="360" y2="340" stroke="#1C1917" stroke-width="1"/>
+  </g>
+
+  <!-- callouts -->
+  <g font-family="Inter, Helvetica, sans-serif">
+    <text x="500" y="150" fill="#0F766E" font-size="13" font-weight="600">1  Inward microphone</text>
+    <text x="518" y="170" fill="#57534E" font-size="12">Faces the ear canal. Feedback cancellation and Adaptive EQ.</text>
+    <text x="500" y="214" fill="#B45309" font-size="13" font-weight="600">2  Heart-rate sensor</text>
+    <text x="518" y="234" fill="#57534E" font-size="12">Optical sensor beside the tip. Workouts in the Fitness app.</text>
+    <text x="500" y="278" fill="#1D4ED8" font-size="13" font-weight="600">3  Force sensor</text>
+    <text x="518" y="298" fill="#57534E" font-size="12">Press once, twice, three times, or press and hold. Swipe for volume.</text>
+    <text x="518" y="316" fill="#57534E" font-size="12">No mechanical button on the stem.</text>
+    <text x="500" y="360" fill="#1C1917" font-size="13" font-weight="600">4  Two outward microphones</text>
+    <text x="518" y="380" fill="#57534E" font-size="12">Beam toward the mouth for calls. Sample outside noise for ANC.</text>
+    <text x="518" y="398" fill="#57534E" font-size="12">The same pair does both jobs.</text>
+  </g>
+
+  <!-- case -->
+  <g transform="translate(500,450)">
+    <rect x="0" y="20" width="250" height="150" rx="28" fill="#FFFCF8" stroke="#1C1917" stroke-width="2"/>
+    <path d="M18 20 L232 20 L220 0 L30 0 Z" fill="#F3EDE3" stroke="#1C1917" stroke-width="2"/>
+    <circle cx="125" cy="92" r="5" fill="#0F766E"/>
+    <rect x="108" y="148" width="34" height="8" rx="3" fill="none" stroke="#78716C" stroke-width="1.4"/>
+    <text x="270" y="48" fill="#1C1917" font-family="Inter, Helvetica, sans-serif" font-size="13" font-weight="600">Case</text>
+    <text x="270" y="70" fill="#57534E" font-family="Inter, Helvetica, sans-serif" font-size="12">USB-C, MagSafe, Qi, Apple Watch charger.</text>
+    <text x="270" y="90" fill="#57534E" font-family="Inter, Helvetica, sans-serif" font-size="12">Speaker for Find My. Lanyard loop. UWB chip.</text>
+    <text x="270" y="110" fill="#57534E" font-family="Inter, Helvetica, sans-serif" font-size="12">Reviews: the rear pairing button is gone.</text>
+    <text x="270" y="130" fill="#57534E" font-family="Inter, Helvetica, sans-serif" font-size="12">A tap on the case starts pairing.</text>
+  </g>
+
+  <text x="56" y="650" fill="#A8A29E" font-family="Inter, Helvetica, sans-serif" font-size="11">Openings show the job of each sensor. This is not a measured mechanical drawing, and the driver diameter is unpublished.</text>
+</svg>
