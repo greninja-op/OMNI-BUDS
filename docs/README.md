@@ -37,6 +37,7 @@ A phase execution prompt that conflicts with items 1–3 must be reported, not s
 | `decisions/` | Global ADR index → `decisions/README.md` | complete through Phase 12 |
 | `development/adb-deployment/` | The local ADB deployment harness: build, validate, install, launch and its error classes | recorded separately from any phase |
 | `architecture/`, `protocols/`, `bluetooth/`, `audio/`, `testing/`, `security/`, `requirements/`, `product/` | Long-lived topic documents, promoted out of a phase record when content stops being phase-specific | reserved placeholders; `security/` now holds `device-access-policy.md`, the rest are empty until the owning phase fills them |
+| `research/devices/` | Catalogue dossiers for one product at a time. First entry is AirPods Pro 3. A dossier is not an app capability claim | sample, one model |
 
 Topic folders are deliberately empty rather than pre-filled with stubs: their content will come from the phase that actually earns it, and a stub would imply knowledge that does not exist yet.
 
