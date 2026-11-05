@@ -4,6 +4,8 @@
 
 **Retrieved.** 5 November 2026 (Asia/Kolkata).
 
+**Figures.** The designed charts are in `AirPods-Pro-3-research.pdf` beside this note. Frequency plots use a logarithmic frequency axis. Blue is ANC, teal is Transparency, amber is Adaptive Audio, and stone is the unpowered seal.
+
 **Scope.** This file records what Apple publishes about AirPods Pro 3, plus one independent lab curve that Apple does not publish. It is catalogue research. It is not a measurement made on hardware in this repository, and it does not change the Phase 42 rule that an Android app cannot set these features through a supported Apple API. The stem controls themselves are on the earbud, so a person can still change listening mode with a press even when the phone is not an iPhone.
 
 ## How to read a decibel in this paper
