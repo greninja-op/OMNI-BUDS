@@ -1,6 +1,7 @@
 package com.omnibuds.android.notification
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
@@ -18,6 +19,7 @@ class NotificationPermissionChecker(
     /**
      * True when the app may post notifications.
      */
+    @SuppressLint("InlinedApi")
     fun canPost(): Boolean {
         if (sdkInt >= Build.VERSION_CODES.TIRAMISU) {
             return context.checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) ==

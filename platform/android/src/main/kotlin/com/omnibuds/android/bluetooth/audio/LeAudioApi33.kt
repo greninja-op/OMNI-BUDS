@@ -1,11 +1,13 @@
 package com.omnibuds.android.bluetooth.audio
 
+import android.annotation.SuppressLint
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
 import android.bluetooth.BluetoothLeAudio
 import android.bluetooth.BluetoothProfile
 import android.content.Context
 import android.os.Build
+import androidx.annotation.RequiresApi
 
 /**
  * The API-33-only LE Audio handle implementation.
@@ -33,6 +35,8 @@ import android.os.Build
  * host must check [com.omnibuds.core.audio.leAudioSupport] first; the check
  * in `init` is the backstop, not the plan.
  */
+@RequiresApi(Build.VERSION_CODES.TIRAMISU)
+@SuppressLint("MissingPermission", "InlinedApi")
 class LeAudioApi33(
     private val context: Context,
     private val adapter: BluetoothAdapter,

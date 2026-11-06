@@ -46,6 +46,13 @@ class BatteryPresentationTest {
             levelPercent = 85,
             charging = true,
             observation = obs,
+            components = listOf(
+                BatteryState.ComponentLevel(
+                    component = BatteryState.Component.LEFT_EARBUD,
+                    levelPercent = 85,
+                    charging = true,
+                ),
+            ),
         )
 
         val model = BatteryPresentationModel.fromCoreState(state, currentEpochMillis = now + 5000L)

@@ -111,10 +111,9 @@ class SystemDiscoveryProvider(
         } catch (_: Exception) {
             return ConnectionState.Disconnected
         }
-        val connected = PROFILES.any { profileConnected(manager, device, it) } ||
-            proxyConnected(device) ||
-            audioOutputConnected(device)
-        return if (connected) {
+        val btConnected = PROFILES.any { profileConnected(manager, device, it) } ||
+            proxyConnected(device)
+        return if (btConnected) {
             ConnectionState.Connected(
                 sessionId = "android-system",
                 generation = 1L,

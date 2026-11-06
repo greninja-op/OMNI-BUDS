@@ -59,6 +59,11 @@ class AndroidApplicationShell(
         _shellState.update { it.copy(currentDestination = destination) }
     }
 
+    fun selectDevice(deviceId: String) {
+        devicesViewModel.selectDevice(deviceId)
+        navigateTo(AndroidDestination.DeviceWorkspace(deviceId))
+    }
+
     fun handleBackGesture(): Boolean {
         val handled = navigationCoordinator.navigateBack()
         if (handled) {

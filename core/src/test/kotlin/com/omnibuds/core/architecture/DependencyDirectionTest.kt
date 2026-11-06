@@ -464,7 +464,11 @@ class DependencyDirectionTest {
         val pattern = Regex("\\b(${forbidden.joinToString("|")})\\b")
         val violations = platformCapabilitySources().flatMap { file ->
             // Phase 49: Compose UI and presentation layers are authorised.
-            if ("ui/compose/" in file.invariantSeparatorsPath || "presentation/" in file.invariantSeparatorsPath) {
+            // Phase 50: Universal TWS Engine & hardware protocol layers authorised.
+            if ("ui/compose/" in file.invariantSeparatorsPath ||
+                "presentation/" in file.invariantSeparatorsPath ||
+                "hardware/" in file.invariantSeparatorsPath
+            ) {
                 return@flatMap emptyList<String>()
             }
             codeLinesOf(file)
@@ -649,6 +653,8 @@ class DependencyDirectionTest {
             // Phase 49: presentation and Compose UI packages.
             "com/omnibuds/android/presentation/",
             "com/omnibuds/android/ui/",
+            // Phase 50: Universal TWS Engine & hardware protocol package.
+            "com/omnibuds/android/hardware/",
         )
         val violations = sources
             .map { file -> file.invariantSeparatorsPath.substringAfter("kotlin/") }

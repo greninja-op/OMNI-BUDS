@@ -15,6 +15,27 @@ import androidx.compose.ui.unit.dp
  */
 object OmniIcons {
 
+    /** Bolt / Lightning glyph — charging indicator badge. */
+    val Bolt: ImageVector by lazy {
+        ImageVector.Builder(
+            name = "OmniBolt",
+            defaultWidth = 24.dp,
+            defaultHeight = 24.dp,
+            viewportWidth = 24f,
+            viewportHeight = 24f,
+        ).apply {
+            path(fill = SolidColor(Color.Black)) {
+                moveTo(11f, 21f)
+                lineTo(13f, 13f)
+                horizontalLineTo(18f)
+                lineTo(13f, 3f)
+                lineTo(11f, 11f)
+                horizontalLineTo(6f)
+                close()
+            }
+        }.build()
+    }
+
     /** Headphones — earbuds, gallery cards, device rows. */
     val Headphones: ImageVector by lazy {
         ImageVector.Builder(

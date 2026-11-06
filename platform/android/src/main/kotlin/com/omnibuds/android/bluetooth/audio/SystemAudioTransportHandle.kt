@@ -141,7 +141,7 @@ class SystemAudioTransportHandle(
 
     override fun readRawAudioDevices(): List<RawAudioDevice> {
         val infos = runCatching {
-            audioManager.getDevices(AudioManager.GET_DEVICES_ALL)
+            audioManager.getDevices(AudioManager.GET_DEVICES_INPUTS or AudioManager.GET_DEVICES_OUTPUTS)
         }.getOrDefault(emptyArray())
         return infos.map { info: AudioDeviceInfo ->
             RawAudioDevice(

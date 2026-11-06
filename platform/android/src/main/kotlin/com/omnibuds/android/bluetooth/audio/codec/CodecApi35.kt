@@ -1,9 +1,11 @@
 package com.omnibuds.android.bluetooth.audio.codec
 
+import android.annotation.SuppressLint
 import android.bluetooth.BluetoothA2dp
 import android.bluetooth.BluetoothProfile
 import android.content.Context
 import android.os.Build
+import androidx.annotation.RequiresApi
 import com.omnibuds.android.bluetooth.audio.codec.mapping.codecFromCodecId
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.TimeUnit
@@ -16,6 +18,8 @@ import java.util.concurrent.TimeUnit
  * otherwise, so the absence of an instance is the "unavailable" answer
  * (ADR-P10-005 pattern).
  */
+@RequiresApi(Build.VERSION_CODES.VANILLA_ICE_CREAM)
+@SuppressLint("MissingPermission")
 class CodecApi35(context: Context) {
     private val appContext: Context = context.applicationContext
 

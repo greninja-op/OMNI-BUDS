@@ -4,11 +4,11 @@ import com.omnibuds.core.globalstate.BatteryState
 import com.omnibuds.core.globalstate.ObservationProvenance
 import com.omnibuds.core.globalstate.ObservedValue
 import com.omnibuds.core.presentation.battery.BatteryComponentKind
-import org.junit.Assert.assertEquals
-import org.junit.Assert.assertFalse
-import org.junit.Assert.assertNull
-import org.junit.Assert.assertTrue
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertFalse
+import org.junit.jupiter.api.Assertions.assertNull
+import org.junit.jupiter.api.Assertions.assertTrue
+import org.junit.jupiter.api.Test
 
 /**
  * Iteration 2: per-component battery must flow from the core state to

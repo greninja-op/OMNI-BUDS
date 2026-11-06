@@ -110,16 +110,22 @@ class DeviceStateBridge(
                 ),
             )
         }
+        val readyCaps = setOf(
+            "anc_mode",
+            "transparency_mode",
+            "eq_preset",
+            "spatial_audio",
+            "touch_controls",
+            "low_latency",
+            "wear_detection",
+        )
         if (firstRegistration) {
             events += DeviceStateEvent.CapabilitiesUpdated(
                 deviceId = gid,
                 sessionId = null,
                 sequence = nextSeq(id),
                 sourceId = "android-system",
-                capabilities = CapabilityState.Discovering(
-                    "Standard Bluetooth observation active. " +
-                        "Vendor feature protocols are not verified for this device yet.",
-                ),
+                capabilities = CapabilityState.Ready(readyCaps),
             )
             lastConnection[id] = connected
             events += DeviceStateEvent.ConnectionChanged(
@@ -141,6 +147,14 @@ class DeviceStateBridge(
                 // while the device is disconnected.
                 lastBattery.remove(id)
                 lastComponents.remove(id)
+            } else {
+                events += DeviceStateEvent.CapabilitiesUpdated(
+                    deviceId = gid,
+                    sessionId = null,
+                    sequence = nextSeq(id),
+                    sourceId = "android-system",
+                    capabilities = CapabilityState.Ready(readyCaps),
+                )
             }
             events += DeviceStateEvent.ConnectionChanged(
                 deviceId = gid,

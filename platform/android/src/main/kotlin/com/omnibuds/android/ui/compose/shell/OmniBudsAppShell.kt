@@ -37,14 +37,13 @@ import com.omnibuds.android.ui.compose.screens.DevicesScreen
 import com.omnibuds.android.ui.compose.screens.DiagnosticsScreen
 import com.omnibuds.android.ui.compose.screens.SettingsScreen
 import com.omnibuds.android.ui.compose.screens.WorkspaceScreen
+import com.omnibuds.core.globalstate.ConnectionState
 
 /**
- * OmniBuds shell — deliberately minimal.
+ * OmniBuds shell — focused controls design.
  *
- * Front page: your earbuds gallery (auto-detected paired devices).
- * A "+" in the top bar opens the Add screen, the only place scanning
- * happens. Settings lives behind the gear. A device tap opens its
- * details page. No bottom navigation bar.
+ * Direct entry: connected earbuds controls are shown upfront without extra taps.
+ * Top bar allows quick access to the Add/Scanning screen (+) and Settings (gear).
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -64,12 +63,35 @@ fun OmniBudsAppShell(
 ) {
     val navState by shell.navigationCoordinator.state.collectAsState()
     val currentDest = navState.currentDestination
+    val devicesState by shell.devicesViewModel.state.collectAsState()
     val motionEnabled = rememberMotionEnabled()
 
-    // System back button: walk the in-app stack first; only at the home
-    // (Devices) destination does the system default — leaving the app —
-    // take over. Without this the activity simply finished from anywhere.
-    BackHandler(enabled = navState.canNavigateBack) {
+    // Automatically navigate straight to the connected earbuds controls on launch
+    LaunchedEffect(devicesState) {
+        val allDevices = (devicesState.knownDevices + devicesState.discoveredDevices).distinctBy { it.id }
+        val connectedDevice = allDevices.firstOrNull { it.connectionState is ConnectionState.Connected }
+        if (connectedDevice != null) {
+            // Always prioritize the live connected earbuds!
+            if (currentDest !is AndroidDestination.DeviceWorkspace || (currentDest as AndroidDestination.DeviceWorkspace).deviceId != connectedDevice.id) {
+                // If user is not currently in Settings or Scan screen, jump straight to the connected bud
+                if (currentDest is AndroidDestination.Devices || currentDest is AndroidDestination.DeviceWorkspace) {
+                    shell.selectDevice(connectedDevice.id)
+                }
+            }
+        } else if (currentDest is AndroidDestination.Devices) {
+            val fallback = allDevices.firstOrNull()
+            if (fallback != null) {
+                shell.selectDevice(fallback.id)
+            } else {
+                shell.navigateTo(AndroidDestination.AddDevice)
+            }
+        }
+    }
+
+    // System back button: only back out from secondary screens (Settings, AddDevice)
+    // The main earbud controls page acts as the root home.
+    val isRootControlsScreen = currentDest is AndroidDestination.DeviceWorkspace
+    BackHandler(enabled = !isRootControlsScreen && navState.canNavigateBack) {
         shell.handleBackGesture()
     }
 
@@ -87,26 +109,26 @@ fun OmniBudsAppShell(
                 title = {
                     Text(
                         when (currentDest) {
-                            is AndroidDestination.Devices -> "OmniBuds"
-                            is AndroidDestination.AddDevice -> "Add earbuds"
-                            is AndroidDestination.DeviceWorkspace -> "Device details"
+                            is AndroidDestination.DeviceWorkspace -> "OmniBuds"
+                            is AndroidDestination.AddDevice -> "Scan Earbuds"
                             is AndroidDestination.Settings -> "Settings"
                             is AndroidDestination.Diagnostics -> "Diagnostics"
                             is AndroidDestination.About -> "About"
+                            is AndroidDestination.Devices -> "OmniBuds"
                         },
                     )
                 },
                 navigationIcon = {
-                    if (navState.canNavigateBack) {
+                    if (currentDest !is AndroidDestination.DeviceWorkspace && navState.canNavigateBack) {
                         IconButton(onClick = { shell.handleBackGesture() }) {
                             Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
                         }
                     }
                 },
                 actions = {
-                    if (currentDest is AndroidDestination.Devices) {
+                    if (currentDest is AndroidDestination.DeviceWorkspace || currentDest is AndroidDestination.Devices) {
                         IconButton(onClick = { shell.navigateTo(AndroidDestination.AddDevice) }) {
-                            Icon(Icons.Filled.Add, contentDescription = "Add earbuds")
+                            Icon(Icons.Filled.Add, contentDescription = "Scan Earbuds")
                         }
                         IconButton(onClick = { shell.navigateTo(AndroidDestination.Settings) }) {
                             Icon(Icons.Filled.Settings, contentDescription = "Settings")

@@ -1,9 +1,11 @@
 package com.omnibuds.android.ui.compose.components
 
+import android.annotation.SuppressLint
 import android.graphics.BitmapFactory
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -57,7 +59,7 @@ fun ProductVisual(
                 contentDescription = null,
                 contentScale = photoContentScale,
                 colorFilter = if (grayscale) grayscaleFilter() else null,
-                modifier = modifier,
+                modifier = modifier.padding(8.dp),
             )
             return
         }
@@ -72,7 +74,9 @@ fun ProductVisual(
                 contentDescription = null,
                 contentScale = photoContentScale,
                 colorFilter = if (grayscale) grayscaleFilter() else null,
-                modifier = modifier.background(MaterialTheme.colorScheme.surfaceVariant),
+                modifier = modifier
+                    .background(MaterialTheme.colorScheme.surfaceVariant)
+                    .padding(8.dp),
             )
             return
         }
@@ -112,6 +116,7 @@ private fun rememberDrawableId(assetName: String): Int {
     }
 }
 
+@SuppressLint("ProduceStateDoesNotAssignValue")
 @Composable
 private fun rememberFileBitmap(path: String) = produceState<ImageBitmap?>(
     initialValue = null,
@@ -119,8 +124,7 @@ private fun rememberFileBitmap(path: String) = produceState<ImageBitmap?>(
 ) {
     value = withContext(Dispatchers.IO) {
         runCatching {
-            val options = BitmapFactory.Options().apply { inSampleSize = 2 }
-            BitmapFactory.decodeFile(path, options)?.asImageBitmap()
+            BitmapFactory.decodeFile(path)?.asImageBitmap()
         }.getOrNull()
     }
 }

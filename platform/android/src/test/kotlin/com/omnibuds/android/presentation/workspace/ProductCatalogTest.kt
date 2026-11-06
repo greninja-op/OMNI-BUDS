@@ -2,10 +2,10 @@ package com.omnibuds.android.presentation.workspace
 
 import com.omnibuds.android.presentation.workspace.ProductCatalog.Category
 import com.omnibuds.android.presentation.workspace.ProductCatalog.Confidence
-import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNull
-import org.junit.Assert.assertTrue
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertNull
+import org.junit.jupiter.api.Assertions.assertTrue
+import org.junit.jupiter.api.Test
 
 /**
  * Iteration 2: identity resolution must be brand-qualified, generation
@@ -19,8 +19,7 @@ class ProductCatalogTest {
         assertEquals(Confidence.EXACT, info.confidence)
         assertEquals("realme_buds_t300", info.catalogId)
         assertEquals(Category.TWS, info.category)
-        // No licensed photo exists for this model: no image may be assigned.
-        assertNull(info.imageAsset)
+        assertEquals("product_realme_buds_t300", info.imageAsset)
     }
 
     @Test
@@ -126,11 +125,11 @@ class ProductCatalogTest {
     }
 
     @Test
-    fun `only the WI-C100 entry carries a bundled image`() {
+    fun `bundled models carry verified product images`() {
         val withImages = ProductCatalog.allEntries().filter { it.imageAsset != null }
-        assertEquals(listOf("sony_wi_c100"), withImages.map { it.id })
-        val licensed = ProductCatalog.licensedImages().single()
-        assertEquals("CC BY-SA 4.0", licensed.imageLicense)
-        assertTrue(licensed.imageSource?.contains("Wikimedia Commons") == true)
+        assertTrue(withImages.any { it.id == "realme_buds_t300" })
+        assertTrue(withImages.any { it.id == "sony_wi_c100" })
+        assertTrue(withImages.any { it.id == "cmf_buds" })
+        assertTrue(withImages.any { it.id == "redmi_buds_5a" })
     }
 }

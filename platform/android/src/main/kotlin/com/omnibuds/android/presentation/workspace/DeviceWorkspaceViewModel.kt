@@ -33,6 +33,7 @@ class DeviceWorkspaceViewModel(
     private val scope: CoroutineScope,
     private val stateRepository: GlobalDeviceStateRepository? = null,
     initialTab: WorkspaceTab = WorkspaceTab.OVERVIEW,
+    private val onFeatureControlDispatched: (featureId: String, value: String) -> Unit = { _, _ -> },
 ) {
     private val mutex = Mutex()
     private val globalDeviceId = GlobalDeviceId(deviceIdentifier)
@@ -172,10 +173,12 @@ class DeviceWorkspaceViewModel(
 
         return featureDefinitions.map { def ->
             val isKnownCapability = readyCaps.contains(def.featureId)
+            val isConnected = snapshot.connection is ConnectionState.Connected
             val capKind = when {
-                !overview.isReady -> FeatureCapabilityKind.UNKNOWN
-                !isKnownCapability -> FeatureCapabilityKind.UNSUPPORTED
-                else -> FeatureCapabilityKind.PERSISTENT
+                !isConnected -> FeatureCapabilityKind.UNKNOWN
+                overview.isReady && isKnownCapability -> FeatureCapabilityKind.PERSISTENT
+                overview.isReady && !isKnownCapability -> FeatureCapabilityKind.UNSUPPORTED
+                else -> FeatureCapabilityKind.UNKNOWN
             }
 
             val desired = snapshot.features.desired[def.featureId]?.value
@@ -223,6 +226,10 @@ class DeviceWorkspaceViewModel(
 
     fun submitFeatureControl(featureId: String, targetValue: String) {
         scope.launch {
+            if (featureId == "raw_hex" || featureId == "eq_custom" || featureId == "learn_mode") {
+                onFeatureControlDispatched(featureId, targetValue)
+                return@launch
+            }
             mutex.withLock {
                 val currentControl = _state.value.controls.firstOrNull { it.featureId == featureId }
                 if (currentControl == null) {
@@ -317,6 +324,7 @@ class DeviceWorkspaceViewModel(
                     )
 
                     updateControlStatusInState(featureId, ControlExecutionStatus.SUCCEEDED, newValue = targetValue)
+                    onFeatureControlDispatched(featureId, targetValue)
                 } catch (e: Exception) {
                     inFlightOperations[featureId] = ControlExecutionStatus.REJECTED
                     failureReasons[featureId] = e.message ?: "Operation failed"

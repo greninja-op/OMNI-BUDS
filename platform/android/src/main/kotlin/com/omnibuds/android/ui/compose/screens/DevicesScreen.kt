@@ -229,10 +229,11 @@ fun DeviceItemCard(
                     product = product,
                     userPhotoPath = userPhotoPath,
                     grayscale = !connected,
-                    photoContentScale = androidx.compose.ui.layout.ContentScale.Crop,
+                    photoContentScale = androidx.compose.ui.layout.ContentScale.Fit,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .aspectRatio(1.25f),
+                        .aspectRatio(1.33f)
+                        .padding(6.dp),
                 )
                 // Connection indicator: a single quiet dot — yellow when
                 // connected, hollow grey when not. No shouting pills.
