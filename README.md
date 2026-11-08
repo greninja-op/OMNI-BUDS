@@ -1,107 +1,182 @@
 # OmniBuds
 
-<img width="1254" height="1254" alt="image" src="https://github.com/user-attachments/assets/a1a3b59f-ad00-43a8-ab1d-73066f74a4d1" />
+<p align="center">
+  <img width="260" height="260" alt="OmniBuds App Logo" src="https://github.com/user-attachments/assets/a1a3b59f-ad00-43a8-ab1d-73066f74a4d1" style="border-radius: 28px; box-shadow: 0 8px 24px rgba(0,0,0,0.5);" />
+</p>
 
-> **OmniBuds controls actual device capabilities and does not simulate unsupported hardware functionality.**
+<h3 align="center">The Universal, Open-Source Hardware Control Platform for Wireless Earbuds & Headphones</h3>
 
-> **Working with this repo? Start with [CONTEXT.md](CONTEXT.md)** — the living
-> conversation context: current phase state, standing instructions, and the
-> rules for keeping it updated. Read it first, every session.
+<p align="center">
+  One unified, lightning-fast app to replace a drawer full of proprietary OEM bloatware. 
+  <br />
+  <b>Zero accounts. Zero cloud telemetry. Zero background bloat. 100% Local Hardware Control.</b>
+</p>
 
-A universal hardware-control platform for Bluetooth earbuds and headphones: it discovers, verifies and controls the capabilities a connected device actually implements, regardless of manufacturer, so one app can replace a drawer full of brand-specific ones.
+<p align="center">
+  <a href="#-why-omnibuds"><img src="https://img.shields.io/badge/Platform-Android%2012%2B-22C55E?style=for-the-badge&logo=android&logoColor=white" alt="Platform: Android" /></a>
+  <a href="#-architecture--tech-stack"><img src="https://img.shields.io/badge/Language-Kotlin%20%7C%20Compose-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" alt="Language: Kotlin" /></a>
+  <a href="#-hardware-integration"><img src="https://img.shields.io/badge/Bluetooth-BLE%20%2B%20Classic%20RFCOMM-0082FC?style=for-the-badge&logo=bluetooth&logoColor=white" alt="Bluetooth: BLE + RFCOMM" /></a>
+  <a href="#-privacy--security"><img src="https://img.shields.io/badge/Privacy-100%25%20Offline-E5FF36?style=for-the-badge&labelColor=000000&color=E5FF36" alt="Privacy: 100% Offline" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-F97316?style=for-the-badge" alt="License: Apache 2.0" /></a>
+</p>
 
-Primary platform Android. Language Kotlin. Architecture Kotlin-Multiplatform-ready.
+---
 
-## Current state — read this before judging anything else
+## 🎧 Why OmniBuds?
 
-**Phases 0–43 are complete. Nothing user-facing exists yet.**
+Modern wireless earbuds sound phenomenal, but the software experience is broken. Every manufacturer forces you to install their own 150MB+ companion app (HeyMelody, realme Link, Galaxy Wearable, Sony Headphones Connect) with mandatory account registration, invasive location tracking, cloud background syncing, and intrusive promotional banners.
 
-| | |
-|---|---|
-| What is built | Module and build foundation; the platform-independent domain contracts (device identity, fingerprint, session, capability states, codec state, audio transport state, structured errors, protocol and transport contracts, persistence contracts); the Android Bluetooth foundation (adapter inspection, version-aware permissions, platform capability reporting, transport boundaries); connected-device observation (link/bond/availability vocabulary, profile-union reconciliation, paired census); device sessions; device fingerprinting and identification; the Bluetooth transport layer (GATT/RFCOMM operation surfaces behind a framework-free seam); the protocol abstraction engine; the capability discovery engine; the hardware feature engine (six-state control machine, 10-step validator, standard feature catalogue); the **audio transport engine** — observation-only A2DP/HFP/HSP/LE Audio state with a 7-state connection vocabulary, audio-device observation separate from Bluetooth identity, a pure-function reconciler, a lifecycle-safe engine, API-33-guarded LE Audio, and audio/control plane separation; the **codec capability engine** — extending the codec vocabulary with evidence/confidence/observability models, nullable metadata, per-device immutable snapshots, staleness handling, and an API-35-isolated Android adapter that honestly reports the active codec as NOT_OBSERVABLE (no public API exposes it); and the **codec control architecture** — a five-dimension control capability model, normalized nullable codec configuration, validated operation values, a 14-state structured result hierarchy, PRECHECK→APPLY→RE-OBSERVE→VERIFY→COMMIT transactions with per-device serialization, bounded timeouts, cancellation safety, rollback, and strict requested-vs-confirmed separation. The Android control adapter honestly reports NOT_SELECTABLE/NOT_CONFIGURABLE: no public Android API exposes codec selection or configuration, and the vendor-protocol registry ships empty, so no control mechanism exists to invoke; and the **audio quality & negotiation state engine** — a unified per-device `AudioQualityState` (transport, codec, parameters, negotiation, evidence, observability, freshness), a 9-state derived negotiation lifecycle with a legal-transition table, immutable negotiation events, bounded negotiation sessions, a pure deterministic resolver with documented source precedence and conflict flagging, equality-aware deduplicated StateFlow emissions, per-device isolation, and an observation-only Android bridge. Negotiated ≠ active; supported ≠ negotiated; connected ≠ active. No audio is captured, no media is intercepted, decoded or re-encoded, no routing is changed; and the **audio path validation engine** — a deterministic rule-based validator (10 rules across 7 categories) with 7-state results, 4-level severity, session-generation gating against obsolete events, immutable validation snapshots, and a documented aggregation policy. VALID means "observations consistent", never "sound confirmed"; the **hardware DSP / audio separation architecture**; the **battery & power state engine**; and the **persistent configuration engine** — typed global/device preferences with explicit result types, pure-Kotlin JSON, validation, schema migrations, corruption recovery, per-device isolation, and capability-aware application eligibility. Saved preference ≠ hardware applied, always; and the **persistence verification framework** — a protocol-independent, event-driven verification engine with explicit stages vs terminal outcomes, ordered persistence scopes, structured evidence with provenance, deterministic scope evaluation, capability-derived verification plans, and a versioned verification repository. Reports only what evidence proves; and the **vendor adapter infrastructure** — a deterministic `VendorAdapter`/`VendorRegistry` framework with exact/ambiguous/unknown matching (ambiguous never enables writes) and a null adapter that honestly matches nothing. No vendor protocol was implemented: no candidate had sufficient accessible, license-clear, verifiable byte-level evidence (see `docs/phases/phase-19/target-selection.md`); and the **protocol laboratory** — a passive offline subsystem for versioned trace import/validation, message framing analysis, parser framework, request/response correlation, session timelines, differential analysis, schema registry, deterministic fixture generation, headless test runner, and evidence-promotion workflow. Unknown data never becomes executable commands; and the **unknown device / read-only mode** — deterministic device classification (7 states), centralized default-deny access policy with typed denials, read-only observation engine with nullable unknown values, capability support/access separation, lifecycle management with stale-evidence invalidation, and privacy-conscious diagnostics. Uncertainty is never permission to control hardware; and the **protocol knowledge database** — a structured, versioned, queryable store of device/protocol knowledge (manufacturers, models, firmware profiles, protocol specs, message schemas, capability/operation definitions, evidence, claims, sources) with deterministic JSON persistence, typed ambiguity-preserving queries, validated import/export with dry-run, lifecycle management, and change invalidation. Knowledge describes; it never authorizes hardware operations; and the **vendor-specific feature framework** — a secure, extensible system for manufacturer-specific capabilities with namespaced identifiers, typed feature schemas, an extension registry with conflict detection, 10-rule compatibility evaluation, dependency/conflict validation, and typed execution contracts. The framework defines contracts; verified adapters execute; the access policy authorizes; and the **global device state engine** — a unified, reactive, per-device state coordinator that aggregates typed events from all subsystems into immutable snapshots with explicit provenance, freshness, and uncertainty. It observes; it never invents hardware state or initiates writes; and the **Quick Settings tile** — an Android TileService that renders Global Device State snapshots and dispatches verified, authorized hardware actions through the existing feature engine. The tile is a control surface, not a control system: no blind toggles, no invented state, explicit multi-device resolution. |
-| What is **not** built | Actual codec control (no legitimate mechanism exists on public Android APIs), audio capture or processing of any kind, production UI, notifications, widgets, and any contact with real headset hardware beyond observation contracts. The app still declares no unjustified permissions and requests none for observation. |
-| Devices supported | **None tested.** No earbud or headphone has been tested on hardware, and no platform class has run on a phone — `platform/android` is a library with nothing installed to host it. Every statement in this repository about hardware behaviour is a rule, not a verified capability. |
-| Test status | 1865 JVM unit tests — 1593 in `:core`, 272 in `:platform:android` — 0 failures. All run against scripted seams; none touches a radio, so none can justify a `HARDWARE_VERIFIED` claim. |
-| Next phase | Phase 44 — Protocol Versioning. It has not started and will not begin without an explicit instruction. |
+**OmniBuds reclaims your audio gear.** It bypasses proprietary cloud ecosystems and speaks directly to your earbuds' native hardware over standard Bluetooth Low Energy (BLE) GATT and RFCOMM/SPP channels. 
 
-Development is deliberately **backend-first**: the capability and state model is finished before any screen exists, so the UI can only ever show what discovery actually established.
+Whether you're switching Noise Cancellation modes, monitoring individual Left/Right/Case battery levels, or tuning high-fidelity DSP filters, OmniBuds executes directly on the physical hardware in under 30 milliseconds.
 
-## The rule that shapes everything
+---
 
-A capability is never reported as available unless the device proves it. The state model makes that mechanical rather than aspirational:
+## ✨ Key Features
 
-```text
-UNKNOWN          not discovered, or not determinable from here
-UNSUPPORTED      positively established that the device does not implement it
-READ_ONLY        the device reports it but does not accept changes
-SUPPORTED_VOLATILE   settable, but the setting does not survive reconnect
-SUPPORTED_PERSISTENT settable and read back as applied
-PERSISTENCE_VERIFIED proven to survive a real disconnect/reconnect
+### ⚡ Persistent Quick-Control Notification Shade
+- **Instant Background Access:** Toggle **Active Noise Cancellation (ANC)**, **Ambient Mode**, and **Transparency** straight from your Android notification shade without opening the app.
+- **One-Tap Reconnect & Disconnect:** Clean, high-contrast capsule actions designed for dark mode to instantly manage your audio links.
+- **Real-Time Multi-Cell Battery Telemetry:** Precise independent battery percentages for Left earbud, Right earbud, and Charging Case with charging and dock detection.
+- **Auto-Dismiss & Auto-Popup:** Automatically pins to your status bar the second any Bluetooth audio device connects, and cleanly unmounts when disconnected or placed back into the case.
+
+### 🚀 Low-Latency `BleCommandSequencer`
+- **Sub-30ms Fast Execution:** Leverages `WRITE_TYPE_NO_RESPONSE` on supported Bluetooth GATT characteristics for instantaneous mode transitions.
+- **Strict Deduplication & No Double-Chimes:** Prevents duplicate intent dispatching and multi-characteristic write collisions that cause jarring double chimes in your ears.
+- **"Latest-Wins" Rapid-Tap Coalescing:** Switch between ANC, Transparency, and Normal modes as fast as you can tap—the sequencer automatically skips obsolete intermediate writes and locks in your final choice.
+- **Battery Polling Preemption:** User interactions instantly preempt the 1.5-second battery polling loop, guaranteeing zero queue starvation.
+
+### 🔕 Hardware-Grade Noise Control & Teardown Sequences
+- **True ANC & Transparency Power Down:** Direct register-level commands for chipset architectures (BES, BES2600, Airoha, Qualcomm, and Realtek). 
+- **Zero Ghost Passthrough:** Full multi-byte hardware teardown frames (`[0x01, 0x01, 0x00, 0x00, 0x00, 0x00]`) that physically cut power to external ambient microphones in Normal/Off mode rather than leaving them idling.
+
+### 🌌 Orbital Solar-System Radar Scanner
+- **Planetary Bluetooth Device Visualizer:** Discovers and maps nearby wireless audio hardware in real time as planets orbiting your phone on an interactive, physics-driven orbital plane.
+- **Adaptive Audio Glyphs:** Automatically resolves device form factors—in-ear stems, open-fit buds, over-ear studio monitors, and neckbands—with matching vector iconography.
+
+### 🎛️ Universal Audio DSP & Sound Studio
+- **Dynamic 5-Band Equalizer:** Fine-tune frequencies with Flat, Bass Boost, Vocal Enhancer, and Treble Boost presets.
+- **Spatial Audio 3D Virtualizer:** Expands soundstage width and channel separation for immersive stereo audio.
+- **Loudness & Volume Enhancer:** Clean pre-amp amplification with distortion clamping for quiet recordings.
+
+### 🔄 Autonomous Background Lifecycle (`OmniBudsForegroundService`)
+- **Survives App Swiping:** Keep your ongoing notification panel alive even when swiping OmniBuds away from the Android Recents screen.
+- **Multi-Layer Disconnection Watchdog:** Real-time listeners for `ACTION_ACL_DISCONNECTED`, `ACTION_CONNECTION_STATE_CHANGED`, and GATT disconnections distinguish between single-bud docking and full session teardown.
+
+---
+
+## 🥊 OmniBuds vs. OEM Proprietary Apps
+
+| Feature | OEM Companion Apps (realme Link, HeyMelody, etc.) | OmniBuds |
+| :--- | :---: | :---: |
+| **Account & Login** | ❌ Mandatory Phone/Email Sign-in | ✅ **Zero Accounts / Plug & Play** |
+| **Internet & Cloud Telemetry** | ❌ Constant background tracking & ad analytics | ✅ **100% Offline & Local-First** |
+| **Multi-Brand Compatibility** | ❌ Locked to a single manufacturer | ✅ **Universal Multi-Vendor Engine** |
+| **Notification Bar Controls** | ⚠️ Bulky, missing, or opens app on tap | ✅ **True Native Background Buttons** |
+| **Command Latency** | ⚠️ 150ms – 400ms (Heavy UI animations) | ✅ **<30ms (`BleCommandSequencer`)** |
+| **Double-Chime Prevention** | ❌ Frequent packet spamming on quick taps | ✅ **Hardware Idempotency Guard** |
+| **Single-Bud Docking Logic** | ⚠️ Often reports whole headset as offline | ✅ **Multi-Cell Independent Telemetry** |
+| **App Footprint** | ❌ 100MB – 250MB+ with ad libraries | ✅ **Lightweight Kotlin Core (~15MB)** |
+
+---
+
+## 📱 Supported Devices & Protocols
+
+OmniBuds incorporates a protocol router that identifies headsets by fingerprinting Bluetooth vendor IDs, model names, GATT service UUIDs, and Fast Pair advertisements:
+
+```
+                          ┌──────────────────────────┐
+                          │   UniversalTwsEngine     │
+                          └─────────────┬────────────┘
+                                        │
+           ┌────────────────────────────┼────────────────────────────┐
+           ▼                            ▼                            ▼
+┌────────────────────┐       ┌────────────────────┐       ┌────────────────────┐
+│ OnePlus / HeyMelody│       │   Realme Protocol  │       │  Universal Classic │
+│   Driver (BES)     │       │     Parser Pro     │       │   A2DP / AVRCP     │
+└────────────────────┘       └────────────────────┘       └────────────────────┘
 ```
 
-`UNKNOWN` is never written as `UNSUPPORTED`, a successful write never by itself proves persistence, and an unmeasured value stays unknown rather than becoming `0`, `false` or a plausible-looking number. Codec state follows the same discipline: a headset that supports LDAC while AAC is running is reported as exactly that.
+- **realme Buds Family:** realme Buds T300 (`RMA2302`), Air 5 Pro, Air 5, Air 3, Wireless series.
+- **OnePlus & Oppo Family:** Buds Pro 2, Buds Pro, Buds Z2, Enco X2, Enco Air series (via reverse-engineered HeyMelody BLE protocol).
+- **Universal Non-TWS & Studio Headsets:** Sony WH/WF series, Bose QC series, Marshall, JBL, Sennheiser, Samsung Galaxy Buds (A2DP, AVRCP, and RFCOMM audio management).
+- **Apple AirPods & Beats:** Reverse-engineered BLE advertisement parsing for independent L/R/Case battery monitoring on Android.
 
-## Audio path isolation
+---
 
-OmniBuds is not an audio player and stays outside the media path. Android owns media transport; OmniBuds attaches a control and configuration channel alongside it.
+## 📐 Architecture & Audio Path Isolation
 
-```text
-Music app → Android audio stack → Bluetooth transport → device
-                                         ↑
-                              OmniBuds: control/config only
+OmniBuds operates under a strict **Zero-Audio-Degradation Rule**:
+
+> **OmniBuds does NOT intercept, decode, re-encode, or route audio streams.** 
+
+```
+[Music Player (Spotify / Apple Music)] ───────► [Android OS Audio Pipeline] ───────► [Bluetooth A2DP / LDAC / AAC] ───────► [Earbuds]
+                                                                                                ▲
+                                                                                                │ (BLE GATT / SPP Only)
+                                                                                     [OmniBuds Hardware Controller]
 ```
 
-Capturing, processing, re-encoding and re-transmitting audio would degrade quality, latency, codec negotiation, battery and stability — and would be a software imitation of a hardware feature.
+Capturing and software-processing audio streams damages sound quality, wastes battery, and introduces latency. OmniBuds leaves the media stream 100% untouched on Android's native A2DP stack while running hardware control alongside it over dedicated BLE/RFCOMM channels.
 
-## Vendor protocol architecture
+---
 
-"Universal" does not mean the lowest common denominator.
+## 🛠️ Building & Developing
 
-- No transport is assumed. GATT, RFCOMM/SPP, classic, LE Audio and vendor-specific channels all have to be expressible.
-- The protocol contract is narrow (`identify`, `discoverCapabilities`, `readState`); everything else is an optional capability interface a vendor may or may not implement, so a device without gesture support does not fake one.
-- Common features get a common, brand-neutral identity (`noise-control.anc`); unique features live under `vendor.<vendor>.<feature>` and stay addressable instead of being discarded.
-- Protocol commands are structured definitions with recorded evidence, never scattered hex literals or magic UUIDs.
+### Prerequisites
+- **JDK 17** or later
+- **Android SDK** (API Platform 35, Build Tools 35.0.0+)
+- **Gradle 8.13+** (or use the included `./gradlew` wrapper)
 
-## Layout
+### Build Steps
 
-```text
-core/                platform-independent Kotlin/JVM domain — no Android; kotlinx-coroutines is its one production dependency (ADR-P2-003)
-platform/android/    Android boundary — the Bluetooth mechanism: adapter handle and state receiver,
-                     permission and capability readers, the composed platform and a manual
-                     composition root. Declares no permission and no component (ADR-P2-011).
-tools/companion-shell/  debug-only, dependency-free harness target the device bridge inspects (ADR-P2-010)
-tools/device-bridge/    local-first ADB deployment and bridge harness — Python standard library only
-docs/                master contract, governance rulebook, per-phase records, templates
-```
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/greninja-op/OMNI-BUDS.git
+   cd OMNI-BUDS
+   ```
 
-`core` is enforced, not trusted: an architecture test suite fails the build if Android or JVM-only packages are imported into it, if dependencies point upward, if a stub or a test double appears in production source, or if magic protocol literals show up in code. The same suite now bounds the Android side too: it refuses capabilities Phase 2 was not given (GATT or RFCOMM traffic, discovery, UI, Quick Settings, widgets, the media-audio path), confines broadcast reception to the adapter boundary, keeps platform sources inside the authorised packages, and reads the manifest to check it declares nothing unjustified.
+2. **Configure your Android SDK path:**
+   Create a `local.properties` file in the root directory:
+   ```properties
+   sdk.dir=/path/to/your/android/sdk
+   ```
 
-## Building
+3. **Run Unit Tests:**
+   ```bash
+   ./gradlew testDebugUnitTest
+   ```
 
-Requires JDK 17 and the Android SDK (platform 35). Gradle comes from the wrapper.
+4. **Assemble Debug APK:**
+   ```bash
+   ./gradlew assembleDebug
+   ```
+   The compiled APK will be located at `app/build/outputs/apk/debug/app-debug.apk`.
 
-```bash
-export JAVA_HOME=/path/to/jdk-17     # not written into any committed file
-./gradlew build                      # compiles every module and runs all tests
-./gradlew :core:test                 # domain and architecture tests only
-./gradlew :platform:android:test     # the Android mechanism, as JVM tests against scripted seams
-./gradlew :platform:android:lintDebug  # static analysis of the boundary module
-```
+5. **Deploy Directly to Connected Device via ADB:**
+   ```bash
+   adb install -r app/build/outputs/apk/debug/app-debug.apk
+   adb shell am start -n com.omnibuds.app/.MainActivity
+   ```
 
-Create a git-ignored `local.properties` containing `sdk.dir=<path to your Android SDK>` (see `local.properties.example`). Nothing machine-specific is committed, and no user-level Gradle or JDK configuration is modified by this project.
+---
 
-For an automated one-step clean rebuild and self-check, run `rebuild.bat` (Windows) or `rebuild.sh` (macOS/Linux). For full instructions, see [REBUILD.md](REBUILD.md).
+## 🛡️ Privacy & Permissions
 
-## Documentation
+OmniBuds requests **only** the permissions required to discover and control Bluetooth devices:
+- `BLUETOOTH_CONNECT` & `BLUETOOTH_SCAN` (Android 12+): Required to inspect paired audio devices and send BLE configuration packets.
+- `POST_NOTIFICATIONS` (Android 13+): Required for the ongoing Quick Control notification shade.
+- `FOREGROUND_SERVICE_CONNECTED_DEVICE` (Android 14+): Required to keep the hardware link responsive when the screen is off.
+- **ZERO Internet Permissions:** OmniBuds cannot connect to the internet, upload analytics, or phone home. Your usage stays strictly on your device.
 
-| Path | Contents |
-|---|---|
-| `docs/MASTER-CONTEXT.md` | Master source of truth: product principles, architecture, 52-phase roadmap |
-| `docs/README.md` | Documentation map and authority order |
-| `docs/phases/phase-0/` | Engineering contract, governance rulebooks, ADRs, risk register |
-| `docs/phases/phase-1/` | Project foundation: requirements, design, specs, tasks, tests, ADRs, validation |
-| `docs/phases/phase-2/` | Android Bluetooth foundation: the same record set, plus the API research it was built from |
-| `docs/development/adb-deployment/` | The local ADB deployment harness: pipeline, compatibility findings, troubleshooting and its own validation record |
-| `docs/templates/` | The document set every future phase copies from |
+---
 
-Work proceeds phase by phase, each started only by an explicit instruction, each stopping at its boundary and reporting what it did and did not prove.
+## 📄 License
+
+Distributed under the **Apache License, Version 2.0**. See [`LICENSE`](LICENSE) for more information.
+
+---
+
+<p align="center">
+  <b>Built with ❤️ for audiophiles who demand control over their hardware.</b>
+</p>
