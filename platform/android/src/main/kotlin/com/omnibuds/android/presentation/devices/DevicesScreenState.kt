@@ -2,6 +2,7 @@ package com.omnibuds.android.presentation.devices
 
 import com.omnibuds.android.compat.BluetoothPlatformState
 import com.omnibuds.android.compat.PermissionState
+import com.omnibuds.android.hardware.pairing.BondingStage
 import com.omnibuds.core.common.TransportKind
 import com.omnibuds.core.globalstate.ConnectionState
 
@@ -37,6 +38,7 @@ data class AndroidDiscoveredDevice(
     val batterySummary: String? = null,
     val isSupported: Boolean = true,
     val lastSeenTimestamp: Long = 0L,
+    val isBonded: Boolean = false,
 ) {
     /**
      * Best display identity: alias, then the reported name, then the
@@ -78,6 +80,7 @@ data class DevicesScreenState(
     val errorBanner: String? = null,
     val isRecoverable: Boolean = true,
     val permissionGuidance: String? = null,
+    val bondingStage: BondingStage = BondingStage.Idle,
 ) {
     val totalDeviceCount: Int get() = (discoveredDevices.map { it.id } + knownDevices.map { it.id }).distinct().size
 

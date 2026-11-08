@@ -55,6 +55,20 @@ class DeviceWorkspaceViewModel(
 
     init {
         startObservingDevice()
+
+        // Two-Way Sync: Observe real-time confirmed ANC mode notifications from hardware
+        scope.launch {
+            com.omnibuds.android.hardware.protocol.EarbudProtocolManager.confirmedAncMode.collect { map ->
+                val confirmed = map[deviceIdentifier]
+                if (confirmed != null) {
+                    mutex.withLock {
+                        inFlightOperations["anc_mode"] = ControlExecutionStatus.SUCCEEDED
+                        failureReasons.remove("anc_mode")
+                        updateControlStatusInState("anc_mode", ControlExecutionStatus.SUCCEEDED, newValue = confirmed)
+                    }
+                }
+            }
+        }
     }
 
     private fun startObservingDevice() {
@@ -164,9 +178,10 @@ class DeviceWorkspaceViewModel(
             FeatureDef("transparency_mode", "Transparency / Ambient Sound", "ANC", listOf("OFF", "NATURAL", "VOICE")),
             FeatureDef("eq_preset", "Equalizer Preset", "AUDIO", listOf("FLAT", "BASS_BOOST", "VOCAL", "TREBLE_BOOST")),
             FeatureDef("spatial_audio", "Spatial Audio", "AUDIO", listOf("OFF", "ON", "HEAD_TRACKING")),
+            FeatureDef("game_mode", "Game Mode (Low Latency)", "SYSTEM", listOf("OFF", "ON")),
+            FeatureDef("volume_enhancer", "Volume Enhancer", "AUDIO", listOf("OFF", "ON")),
             FeatureDef("wear_detection", "Auto-Pause Wear Detection", "GESTURE", listOf("DISABLED", "ENABLED")),
             FeatureDef("multipoint", "Bluetooth Multipoint Connection", "SYSTEM", listOf("DISABLED", "ENABLED")),
-            FeatureDef("low_latency", "Gaming / Low-Latency Mode", "SYSTEM", listOf("OFF", "ON")),
             FeatureDef("sidetone", "Microphone Sidetone", "AUDIO", listOf("OFF", "LOW", "HIGH")),
             FeatureDef("voice_prompts", "Voice Guidance Prompts", "SYSTEM", listOf("OFF", "ON")),
         )
@@ -226,14 +241,11 @@ class DeviceWorkspaceViewModel(
 
     fun submitFeatureControl(featureId: String, targetValue: String) {
         scope.launch {
-            if (featureId == "raw_hex" || featureId == "eq_custom" || featureId == "learn_mode") {
-                onFeatureControlDispatched(featureId, targetValue)
-                return@launch
-            }
             mutex.withLock {
                 val currentControl = _state.value.controls.firstOrNull { it.featureId == featureId }
                 if (currentControl == null) {
-                    _state.update { it.copy(errorBanner = "Feature '$featureId' is not registered on this device.") }
+                    // Fallback: Dispatch directly to platform hardware engine rather than dropping
+                    onFeatureControlDispatched(featureId, targetValue)
                     return@launch
                 }
 

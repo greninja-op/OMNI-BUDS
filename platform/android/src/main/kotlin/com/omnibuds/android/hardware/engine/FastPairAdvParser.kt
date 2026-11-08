@@ -93,7 +93,7 @@ object FastPairAdvParser {
 
         val left = parseLevel(b0)
         val right = parseLevel(b1)
-        val case = parseLevel(b2)
+        val case = (b2 and 0x7F).takeIf { it in 1..100 }
 
         if (left == null && right == null && case == null) return null
 
@@ -109,6 +109,7 @@ object FastPairAdvParser {
             rightCharging = rightCharging,
             caseCharging = caseCharging,
             rawHex = HexUtils.formatHex(data.copyOfRange(offset, offset + 3)),
+            sourceProtocol = "Google Fast Pair BLE Adv",
         )
     }
 }

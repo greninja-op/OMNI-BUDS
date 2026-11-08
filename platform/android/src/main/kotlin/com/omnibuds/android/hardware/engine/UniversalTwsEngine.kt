@@ -14,12 +14,26 @@ import android.content.Context
 import android.os.Build
 import android.util.Log
 import com.omnibuds.android.hardware.engine.drivers.TransportPreference
+import com.omnibuds.android.hardware.apple.AppleL2capDriver
+import com.omnibuds.android.hardware.audio.CodecDetails
+import com.omnibuds.android.hardware.audio.CodecManager
+import com.omnibuds.android.hardware.audio.EarChannel
+import com.omnibuds.android.hardware.audio.HeadphoneAccommodationPreset
+import com.omnibuds.android.hardware.audio.AccommodationIntensity
+import com.omnibuds.android.hardware.audio.HearingTestManager
+import com.omnibuds.android.hardware.audio.MindRelaxGenerator
+import com.omnibuds.android.hardware.audio.Soundscape
+import com.omnibuds.android.hardware.capability.DeviceCapabilityManifest
+import com.omnibuds.android.hardware.capability.HardwareCapabilityInspector
+import com.omnibuds.android.hardware.capability.PinchSpeed
+import com.omnibuds.android.hardware.protocol.AncByteMapping
 import com.omnibuds.android.hardware.protocol.DiagnosticLogEntry
 import com.omnibuds.android.hardware.protocol.FastPairProtocolParser
 import com.omnibuds.android.hardware.protocol.GattCharDiagnostic
 import com.omnibuds.android.hardware.protocol.GattServiceDiagnostic
 import com.omnibuds.android.hardware.protocol.HexUtils
 import com.omnibuds.android.hardware.protocol.KnownUuids
+import com.omnibuds.android.hardware.protocol.OpcodeRemapMatrix
 import com.omnibuds.android.hardware.protocol.TwsBatteryReport
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -55,6 +69,11 @@ object UniversalTwsEngine {
     // Subsystems
     val protocolRouter = VendorProtocolRouter()
     val dspController = UniversalDspController()
+    val hearingTestManager = HearingTestManager()
+    val codecManager: CodecManager by lazy { CodecManager(appContext!!) }
+    val mindRelaxGenerator: MindRelaxGenerator by lazy { MindRelaxGenerator(scope) }
+    val appleL2capDriver: AppleL2capDriver by lazy { AppleL2capDriver(scope) }
+    val bleSequencer: BleCommandSequencer by lazy { BleCommandSequencer(scope) }
     private var _batteryScanner: FastPairAndBleBatteryScanner? = null
     val batteryScanner: FastPairAndBleBatteryScanner?
         get() = _batteryScanner
@@ -69,6 +88,16 @@ object UniversalTwsEngine {
     private val _batteryReports = MutableSharedFlow<Pair<String, TwsBatteryReport>>(extraBufferCapacity = 128)
     val batteryReports: SharedFlow<Pair<String, TwsBatteryReport>> = _batteryReports.asSharedFlow()
 
+    private val _latestBatteryReports = MutableStateFlow<Map<String, TwsBatteryReport>>(emptyMap())
+    val latestBatteryReports: StateFlow<Map<String, TwsBatteryReport>> = _latestBatteryReports.asStateFlow()
+
+    data class CachedCaseBattery(
+        val level: Int,
+        val isCharging: Boolean,
+        val timestamp: Long,
+    )
+    private val cachedCaseBattery = ConcurrentHashMap<String, CachedCaseBattery>()
+
     private val _diagnosticLogs = MutableStateFlow<List<DiagnosticLogEntry>>(emptyList())
     val diagnosticLogs: StateFlow<List<DiagnosticLogEntry>> = _diagnosticLogs.asStateFlow()
 
@@ -77,6 +106,15 @@ object UniversalTwsEngine {
 
     private val _lastRawPackets = MutableStateFlow<Map<String, String>>(emptyMap())
     val lastRawPackets: StateFlow<Map<String, String>> = _lastRawPackets.asStateFlow()
+
+    private val _lastSentPackets = MutableStateFlow<Map<String, String>>(emptyMap())
+    val lastSentPackets: StateFlow<Map<String, String>> = _lastSentPackets.asStateFlow()
+
+    private val _confirmedAncMode = MutableStateFlow<Map<String, String>>(emptyMap())
+    val confirmedAncMode: StateFlow<Map<String, String>> = _confirmedAncMode.asStateFlow()
+
+    private val _pendingAncMode = MutableStateFlow<Map<String, String?>>(emptyMap())
+    val pendingAncMode: StateFlow<Map<String, String?>> = _pendingAncMode.asStateFlow()
 
     private val _connectionStatus = MutableStateFlow<Map<String, String>>(emptyMap())
     val connectionStatus: StateFlow<Map<String, String>> = _connectionStatus.asStateFlow()
@@ -92,21 +130,168 @@ object UniversalTwsEngine {
         appContext = context.applicationContext
         isInitialized = true
 
-        dspController.attach()
+        OpcodeRemapMatrix.init(context)
+        dspController.attach(context)
 
         val scanner = FastPairAndBleBatteryScanner(context.applicationContext, scope)
         _batteryScanner = scanner
 
         // Forward BLE advertisement battery reports to master flow
         scope.launch {
-            scanner.batteryReports.collect { report ->
-                _batteryReports.emit(report)
+            scanner.batteryReports.collect { (addr, report) ->
+                handleBatteryReport(addr, report, report.sourceProtocol)
+            }
+        }
+
+        // Forward Apple L2CAP battery reports and ANC status
+        scope.launch {
+            appleL2capDriver.batteryState.collect { map ->
+                map.forEach { (addr, report) ->
+                    handleBatteryReport(addr, report, report.sourceProtocol)
+                }
+            }
+        }
+        scope.launch {
+            appleL2capDriver.ancState.collect { map ->
+                map.forEach { (addr, mode) ->
+                    _confirmedAncMode.value = _confirmedAncMode.value + (addr to mode)
+                }
             }
         }
 
         scanner.startScan()
+        bleSequencer.onPreemptBatteryPoll = {
+            abortBatteryPoll()
+        }
+        startBatteryHeartbeat()
         Log.i(TAG, "UniversalTwsEngine initialized successfully with all 3 layers active")
     }
+
+    private var batteryHeartbeatJob: Job? = null
+    private var currentPollJob: Job? = null
+
+    /**
+     * Immediately aborts in-progress background battery polling when user commands arrive.
+     */
+    fun abortBatteryPoll() {
+        currentPollJob?.cancel()
+        currentPollJob = null
+    }
+
+    /**
+     * Active 1500ms Non-Blocking Battery Polling Heartbeat.
+     * Continuously queries the hardware for battery state and pogo-pin dock status.
+     * Preempted immediately whenever a user command arrives, resuming 500ms post-tap.
+     */
+    private fun startBatteryHeartbeat() {
+        if (batteryHeartbeatJob?.isActive == true) return
+        batteryHeartbeatJob = scope.launch {
+            while (isActive) {
+                delay(1500)
+                if (bleSequencer.canPollBattery()) {
+                    currentPollJob = scope.launch {
+                        pollAllConnectedBatteries()
+                    }
+                    try {
+                        currentPollJob?.join()
+                    } catch (_: Exception) {}
+                }
+            }
+        }
+    }
+
+    private suspend fun pollAllConnectedBatteries() {
+        if (!bleSequencer.canPollBattery()) return
+
+        // 1. Query RFCOMM connected sockets
+        for ((addr, socket) in activeRfcommSockets) {
+            if (!bleSequencer.canPollBattery(addr)) return
+            if (socket.isConnected) {
+                try {
+                    val dev = socket.remoteDevice
+                    val query = protocolRouter.buildBatteryQueryCommand(dev)
+                    if (query != null && bleSequencer.canPollBattery(addr)) {
+                        socket.outputStream.write(query)
+                        socket.outputStream.flush()
+                    }
+                } catch (_: Exception) {}
+            }
+        }
+
+        // 2. Query BLE GATT connected devices
+        for ((addr, gatt) in activeGatts) {
+            if (!bleSequencer.canPollBattery(addr)) return
+            try {
+                val dev = gatt.device
+                val query = protocolRouter.buildBatteryQueryCommand(dev)
+                if (query != null && bleSequencer.canPollBattery(addr)) {
+                    writeGatt(dev, query)
+                }
+                delay(50)
+                val bService = gatt.getService(KnownUuids.BATTERY_SERVICE)
+                val bChar = bService?.getCharacteristic(KnownUuids.BATTERY_LEVEL_CHAR)
+                if (bChar != null && bleSequencer.canPollBattery(addr)) {
+                    gatt.readCharacteristic(bChar)
+                }
+            } catch (_: Exception) {}
+        }
+    }
+
+    /**
+     * Centralized Battery Parser & Pogo-Pin State Machine.
+     * Manages live earbud levels, charging states, and smart case persistence when earbuds are removed.
+     */
+    fun handleBatteryReport(address: String, incomingReport: TwsBatteryReport, source: String? = null) {
+        val src = source ?: incomingReport.sourceProtocol
+
+        // Smart Case Pogo-Pin State Machine
+        var finalCase = incomingReport.case
+        var finalCaseChg = incomingReport.caseCharging
+        var caseIsLive = true
+
+        if (incomingReport.case != null && incomingReport.case in 1..100) {
+            // Case is physically reporting via docked earbud pogo-pins
+            cachedCaseBattery[address] = CachedCaseBattery(
+                level = incomingReport.case,
+                isCharging = incomingReport.caseCharging,
+                timestamp = System.currentTimeMillis(),
+            )
+            caseIsLive = true
+        } else {
+            // Both buds are out of case or offline (0x00, 0x7F, 0xFF)
+            val cached = cachedCaseBattery[address]
+            if (cached != null) {
+                finalCase = cached.level
+                finalCaseChg = cached.isCharging
+                caseIsLive = false // Cached from earlier in this session
+            } else {
+                finalCase = null
+                finalCaseChg = false
+                caseIsLive = false // Never docked during session
+            }
+        }
+
+        val enriched = incomingReport.copy(
+            case = finalCase,
+            caseCharging = finalCaseChg,
+            caseIsLive = caseIsLive,
+            sourceProtocol = src,
+            timestamp = System.currentTimeMillis(),
+        )
+
+        _latestBatteryReports.value = _latestBatteryReports.value + (address to enriched)
+        log(address, "Battery Telemetry [$src] -> L:${enriched.left}% R:${enriched.right}% Case:${enriched.case}% (LiveCase: $caseIsLive)", enriched.rawHex)
+        scope.launch {
+            _batteryReports.emit(address to enriched)
+        }
+    }
+
+    fun getAncMapping(address: String): AncByteMapping = protocolRouter.getAncMapping(address)
+
+    fun cycleAncProfile(address: String): AncByteMapping = protocolRouter.cycleAncProfile(address)
+
+    fun setCustomAncMapping(address: String, off: Byte, anc: Byte, trans: Byte): AncByteMapping =
+        protocolRouter.setCustomAncMapping(address, off, anc, trans)
 
     private fun log(address: String, message: String, rawHex: String? = null) {
         val entry = DiagnosticLogEntry(
@@ -140,7 +325,16 @@ object UniversalTwsEngine {
         }
         activeGatts[address] = gatt
 
+        val manifest = HardwareCapabilityInspector.inspect(device, address, device.name)
+        if (manifest.isAppleAirPods) {
+            appleL2capDriver.connect(device)
+        }
+        try {
+            codecManager.inspectCodec(device)
+        } catch (_: Exception) {}
+
         startRfcommWorker(device)
+        startBatteryHeartbeat()
     }
 
     @SuppressLint("MissingPermission")
@@ -148,6 +342,8 @@ object UniversalTwsEngine {
         log(address, "Disconnecting GATT and RFCOMM sessions")
         _connectionStatus.value = _connectionStatus.value - address
         _activeDrivers.value = _activeDrivers.value - address
+
+        appleL2capDriver.disconnect(address)
 
         activeGatts.remove(address)?.let { gatt ->
             try {
@@ -161,21 +357,155 @@ object UniversalTwsEngine {
         activeRfcommSockets.remove(address)?.let { sock ->
             try { sock.close() } catch (_: Exception) {}
         }
+        bleSequencer.clear(address)
         protocolRouter.clear(address)
+        _latestBatteryReports.value = _latestBatteryReports.value - address
+        cachedCaseBattery.remove(address)
+    }
+
+    fun disconnectAll() {
+        val addresses = _connectionStatus.value.keys + activeGatts.keys + activeRfcommSockets.keys + _latestBatteryReports.value.keys
+        for (addr in addresses.toSet()) {
+            disconnect(addr)
+        }
+        _latestBatteryReports.value = emptyMap()
+        cachedCaseBattery.clear()
+    }
+
+    fun clearAllBatteryReports() {
+        _latestBatteryReports.value = emptyMap()
     }
 
     // -- Controls & Routing -------------------------------------------------------------
 
     /**
      * Sets Noise Control (ANC, Transparency, Off/Normal) via the detected vendor driver.
+     * Uses BleCommandSequencer for:
+     * - Immediate 500ms battery polling preemption
+     * - 120ms idempotency deduplication
+     * - "Latest-wins" rapid-tap coalescing (skips intermediate transitions)
+     * - Clean 60ms firmware settle gap
+     * - Authoritative 300ms verification query
+     * - Software ambient/passthrough DSP teardown on Off/Normal
      */
     @SuppressLint("MissingPermission")
     suspend fun setNoiseControl(device: BluetoothDevice, mode: String): Boolean {
         val address = device.address
-        val packet = protocolRouter.buildAncCommand(device, mode)
+        val currentConfirmed = _confirmedAncMode.value[address]
+        val latestReq = bleSequencer.getLatestRequestedNoiseMode(address)
+        if ((currentConfirmed != null && currentConfirmed.equals(mode, ignoreCase = true) && _pendingAncMode.value[address] == null) ||
+            (latestReq != null && latestReq.equals(mode, ignoreCase = true))) {
+            log(address, "Idempotent guard: earbud already in or transitioning to mode '$mode'")
+            return true
+        }
+
+        // 1. Teardown any active software ambient/passthrough boost on Normal/Off
+        if (mode.equals("OFF", ignoreCase = true) || mode.equals("NORMAL", ignoreCase = true)) {
+            dspController.disableAmbientAndPassthrough()
+        }
+
+        val manifest = HardwareCapabilityInspector.inspect(device, address, device.name)
+        if (manifest.isAppleAirPods) {
+            val appleOk = appleL2capDriver.setNoiseControl(address, mode)
+            if (appleOk) {
+                _confirmedAncMode.value = _confirmedAncMode.value + (address to mode)
+                bleSequencer.updateConfirmedMode(address, mode)
+                return true
+            }
+        }
+
+        _pendingAncMode.value = _pendingAncMode.value + (address to mode)
+
+        bleSequencer.submitNoiseMode(
+            device = device,
+            mode = mode,
+            dispatchAction = { targetMode ->
+                dispatchNoiseModePacket(device, targetMode)
+            },
+            onAuthoritativeVerify = {
+                val queryPkt = protocolRouter.buildAncQueryCommand(device)
+                if (queryPkt != null) {
+                    log(address, "Running authoritative 300ms post-tap verification query")
+                    sendPacket(device, queryPkt)
+                }
+            },
+        )
+        return true
+    }
+
+    @SuppressLint("MissingPermission")
+    private suspend fun dispatchNoiseModePacket(device: BluetoothDevice, targetMode: String): Boolean {
+        val address = device.address
+        val mapping = protocolRouter.getAncMapping(address)
+        val packet = protocolRouter.buildAncCommand(device, targetMode)
         val driver = protocolRouter.resolveDriver(device)
-        log(address, "Routing ANC mode '$mode' via ${driver.driverName}", HexUtils.formatHex(packet))
-        return sendPacket(device, packet)
+        val targetByteHex = "0x%02X".format(mapping.byteForMode(targetMode))
+
+        if (bleSequencer.isDuplicateWrite(address, packet)) {
+            log(address, "Hardware Command Idempotency Guard: Suppressed duplicate frame within 120ms")
+            return true
+        }
+
+        log(address, "Routing ANC mode '$targetMode' (target byte $targetByteHex) via ${driver.driverName}", HexUtils.formatHex(packet))
+
+        val startTime = System.currentTimeMillis()
+        val sent = sendPacket(device, packet)
+        val latency = System.currentTimeMillis() - startTime
+
+        bleSequencer.recordWriteAttempt(
+            address = address,
+            packet = packet,
+            latencyMs = latency,
+            mode = targetMode,
+            activeOff = mapping.offByte,
+            activeAnc = mapping.ancByte,
+            activeTrans = mapping.transByte,
+        )
+
+        if (!sent) {
+            _pendingAncMode.value = _pendingAncMode.value + (address to null)
+        }
+        return sent
+    }
+
+    /**
+     * Diagnostic Tool: Directly tests candidate 2-byte teardown reset frame for Normal/Off mode.
+     */
+    @SuppressLint("MissingPermission")
+    suspend fun testOffByteVariant(device: BluetoothDevice, candidateOffByte: Byte): Boolean {
+        val address = device.address
+        bleSequencer.recordUserInteraction(address)
+        val mapping = protocolRouter.getAncMapping(address)
+        val packet = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildAncCustomOffCommand(candidateOffByte)
+        log(address, "Testing candidate Off-Byte 0x%02X teardown frame".format(candidateOffByte), HexUtils.formatHex(packet))
+
+        dspController.disableAmbientAndPassthrough()
+        val startTime = System.currentTimeMillis()
+        val sent = sendPacket(device, packet)
+        val latency = System.currentTimeMillis() - startTime
+
+        bleSequencer.recordWriteAttempt(
+            address = address,
+            packet = packet,
+            latencyMs = latency,
+            mode = "TEST OFF (0x%02X)".format(candidateOffByte),
+            activeOff = candidateOffByte,
+            activeAnc = mapping.ancByte,
+            activeTrans = mapping.transByte,
+        )
+        return sent
+    }
+
+    /**
+     * Diagnostic Tool: Locks in chosen candidate Off-Byte as permanent profile mapping.
+     */
+    fun lockInOffByteVariant(address: String, candidateOffByte: Byte): AncByteMapping {
+        val current = protocolRouter.getAncMapping(address)
+        val updated = protocolRouter.setCustomAncMapping(address, off = candidateOffByte, anc = current.ancByte, trans = current.transByte)
+        log(address, "Locked in Off-Byte 0x%02X permanently".format(candidateOffByte))
+        _confirmedAncMode.value = _confirmedAncMode.value + (address to "OFF")
+        bleSequencer.updateConfirmedMode(address, "OFF")
+        return updated
     }
 
     /**
@@ -211,30 +541,522 @@ object UniversalTwsEngine {
      */
     @SuppressLint("MissingPermission")
     suspend fun setSpatialAudio(device: BluetoothDevice?, enabled: Boolean): Boolean {
-        // 1. Universal OS-Level DSP Spatial Audio (100% universal across all earphones)
+        // 1. Universal OS-Level DSP Spatial Audio (360° HRTF binaural virtualizer + air-lift tuning)
         dspController.setSpatialAudioEnabled(enabled)
 
         // 2. Route hardware packet if connected device is provided
         if (device != null) {
-            val packet = protocolRouter.buildSpatialAudioCommand(device, enabled)
-            if (packet != null && packet.isNotEmpty()) {
-                val driver = protocolRouter.resolveDriver(device)
-                log(device.address, "Sending hardware Spatial Audio ($enabled) via ${driver.driverName}", HexUtils.formatHex(packet))
+            val packets = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildSpatialAudioCommands(enabled)
+            for (packet in packets) {
                 sendPacket(device, packet)
+                delay(30)
             }
+            log(device.address, "Sent hardware 360° Spatial Audio ($enabled)")
+        }
+
+        // 3. Audible confirmation earcon
+        try {
+            val tone = android.media.ToneGenerator(android.media.AudioManager.STREAM_MUSIC, 85)
+            if (enabled) {
+                tone.startTone(android.media.ToneGenerator.TONE_PROP_PROMPT, 200)
+            } else {
+                tone.startTone(android.media.ToneGenerator.TONE_PROP_BEEP, 120)
+            }
+        } catch (_: Exception) {}
+
+        return true
+    }
+
+    /**
+     * Toggles Game Mode (50ms Low Latency) via hardware driver, routes low latency in DSP, and plays confirmation chime.
+     */
+    @SuppressLint("MissingPermission")
+    suspend fun setGameMode(device: BluetoothDevice, enabled: Boolean): Boolean {
+        val packets = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildGameModeCommands(enabled)
+        for (packet in packets) {
+            sendPacket(device, packet)
+            delay(30)
+        }
+        dspController.setLowLatencyMode(enabled)
+        log(device.address, "Sent 50ms Game Mode ($enabled)")
+
+        try {
+            val tone = android.media.ToneGenerator(android.media.AudioManager.STREAM_MUSIC, 85)
+            if (enabled) {
+                tone.startTone(android.media.ToneGenerator.TONE_PROP_BEEP2, 180)
+            } else {
+                tone.startTone(android.media.ToneGenerator.TONE_PROP_BEEP, 120)
+            }
+        } catch (_: Exception) {}
+
+        return true
+    }
+
+    /**
+     * Sets Dynamic Bass (low-frequency harmonic enhancer for 12.4mm driver).
+     */
+    @SuppressLint("MissingPermission")
+    suspend fun setDynamicBass(device: BluetoothDevice?, enabled: Boolean, level: Int = 3): Boolean {
+        dspController.setDynamicBass(enabled, level)
+        if (device != null) {
+            val packet = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildDynamicBassCommand(enabled, level)
+            sendPacket(device, packet)
+            log(device.address, "Sent hardware Dynamic Bass ($enabled, level=$level)")
         }
         return true
     }
 
     /**
-     * Toggles Game Mode (Low Latency) via hardware driver.
+     * Sets Volume Enhancer (+5.0dB safe post-gain limiter boost).
      */
     @SuppressLint("MissingPermission")
-    suspend fun setGameMode(device: BluetoothDevice, enabled: Boolean): Boolean {
-        val packet = protocolRouter.buildGameModeCommand(device, enabled) ?: return false
-        val driver = protocolRouter.resolveDriver(device)
-        log(device.address, "Sending Game Mode ($enabled) via ${driver.driverName}", HexUtils.formatHex(packet))
-        return sendPacket(device, packet)
+    suspend fun setVolumeEnhancer(device: BluetoothDevice?, enabled: Boolean): Boolean {
+        dspController.setVolumeEnhancer(enabled)
+        if (device != null) {
+            val packet = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildVolumeEnhancerCommand(enabled)
+            sendPacket(device, packet)
+            log(device.address, "Sent hardware Volume Enhancer ($enabled)")
+        }
+
+        // Audible confirmation earcon
+        try {
+            val tone = android.media.ToneGenerator(android.media.AudioManager.STREAM_MUSIC, 85)
+            if (enabled) {
+                tone.startTone(android.media.ToneGenerator.TONE_PROP_ACK, 220)
+            } else {
+                tone.startTone(android.media.ToneGenerator.TONE_PROP_NACK, 140)
+            }
+        } catch (_: Exception) {}
+
+        return true
+    }
+
+    @SuppressLint("MissingPermission")
+    fun getCapabilityManifest(device: BluetoothDevice): DeviceCapabilityManifest {
+        val svcs = discoveredServices.value[device.address]?.map { it.uuid } ?: emptyList()
+        return HardwareCapabilityInspector.inspect(device, device.address, device.name, svcs)
+    }
+
+    @SuppressLint("MissingPermission")
+    suspend fun setProAncLevel(device: BluetoothDevice, level: String): Boolean {
+        val packet = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildProAncLevelCommand(level)
+        val ok = sendPacket(device, packet)
+        log(device.address, "Sent Pro ANC Sub-mode ($level): $ok")
+        return ok
+    }
+
+    @SuppressLint("MissingPermission")
+    suspend fun setWindNoiseReduction(device: BluetoothDevice, enabled: Boolean): Boolean {
+        val packet = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildWindNoiseReductionCommand(enabled)
+        val ok = sendPacket(device, packet)
+        log(device.address, "Sent Wind Noise Reduction ($enabled): $ok")
+        return ok
+    }
+
+    @SuppressLint("MissingPermission")
+    suspend fun setTransparencyLevel(device: BluetoothDevice, level: Int, voiceBoost: Boolean): Boolean {
+        val packet = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildTransparencyLevelCommand(level, voiceBoost)
+        val ok = sendPacket(device, packet)
+        log(device.address, "Sent Transparency Ambient Level ($level, voiceBoost=$voiceBoost): $ok")
+        return ok
+    }
+
+    @SuppressLint("MissingPermission")
+    suspend fun setInEarDetection(device: BluetoothDevice, enabled: Boolean): Boolean {
+        val packet = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildInEarDetectionCommand(enabled)
+        val ok = sendPacket(device, packet)
+        log(device.address, "Sent In-Ear Detection ($enabled): $ok")
+        return ok
+    }
+
+    @SuppressLint("MissingPermission")
+    suspend fun setMultipoint(device: BluetoothDevice, enabled: Boolean): Boolean {
+        val packet = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildMultipointCommand(enabled)
+        val ok = sendPacket(device, packet)
+        log(device.address, "Sent Multipoint Dual Connection ($enabled): $ok")
+        return ok
+    }
+
+    var isCameraShutterEnabled: Boolean = false
+
+    fun triggerCameraShutter() {
+        val ctx = appContext ?: return
+        try {
+            val audioManager = ctx.getSystemService(Context.AUDIO_SERVICE) as? android.media.AudioManager
+            audioManager?.dispatchMediaKeyEvent(android.view.KeyEvent(android.view.KeyEvent.ACTION_DOWN, android.view.KeyEvent.KEYCODE_CAMERA))
+            audioManager?.dispatchMediaKeyEvent(android.view.KeyEvent(android.view.KeyEvent.ACTION_UP, android.view.KeyEvent.KEYCODE_CAMERA))
+            Log.i(TAG, "Camera Shutter triggered via KeyCode Camera")
+        } catch (_: Exception) {
+            try {
+                val audioManager = ctx.getSystemService(Context.AUDIO_SERVICE) as? android.media.AudioManager
+                audioManager?.dispatchMediaKeyEvent(android.view.KeyEvent(android.view.KeyEvent.ACTION_DOWN, android.view.KeyEvent.KEYCODE_VOLUME_DOWN))
+                audioManager?.dispatchMediaKeyEvent(android.view.KeyEvent(android.view.KeyEvent.ACTION_UP, android.view.KeyEvent.KEYCODE_VOLUME_DOWN))
+            } catch (_: Exception) {}
+        }
+    }
+
+    var isConversationalAwarenessActive: Boolean = false
+        private set
+    private var preDuckVolume: Int? = null
+    private var preDuckAncMode: String? = null
+    private var conversationalSilenceJob: Job? = null
+
+    fun onSpeechDetected(address: String) {
+        if (!isConversationalAwarenessActive) return
+        conversationalSilenceJob?.cancel()
+        val ctx = appContext ?: return
+        val am = ctx.getSystemService(Context.AUDIO_SERVICE) as? android.media.AudioManager ?: return
+        val dev = activeGatts[address]?.device ?: activeRfcommSockets[address]?.remoteDevice
+
+        if (preDuckVolume == null) {
+            preDuckVolume = am.getStreamVolume(android.media.AudioManager.STREAM_MUSIC)
+            preDuckAncMode = _confirmedAncMode.value[address] ?: "OFF"
+            val maxVol = am.getStreamMaxVolume(android.media.AudioManager.STREAM_MUSIC)
+            val duckedVol = (maxVol * 0.15f).toInt().coerceAtLeast(1)
+            am.setStreamVolume(android.media.AudioManager.STREAM_MUSIC, duckedVol, 0)
+            if (dev != null) {
+                scope.launch { setNoiseControl(dev, "TRANSPARENCY") }
+            }
+            log(address, "Conversational Awareness: Speech detected! Ducked media to 15% and switched to Transparency")
+        }
+
+        // 4-second silence countdown to restore media volume and ANC mode
+        conversationalSilenceJob = scope.launch {
+            delay(4000)
+            preDuckVolume?.let { origVol ->
+                am.setStreamVolume(android.media.AudioManager.STREAM_MUSIC, origVol, 0)
+            }
+            val origAnc = preDuckAncMode
+            preDuckVolume = null
+            preDuckAncMode = null
+            if (dev != null && origAnc != null) {
+                setNoiseControl(dev, origAnc)
+            }
+            log(address, "Conversational Awareness: Speech ended, restored volume and previous ANC mode")
+        }
+    }
+
+    @SuppressLint("MissingPermission")
+    suspend fun setConversationalAwareness(device: BluetoothDevice, enabled: Boolean): Boolean {
+        isConversationalAwarenessActive = enabled
+        if (!enabled) {
+            conversationalSilenceJob?.cancel()
+            preDuckVolume?.let { origVol ->
+                val ctx = appContext
+                val am = ctx?.getSystemService(Context.AUDIO_SERVICE) as? android.media.AudioManager
+                am?.setStreamVolume(android.media.AudioManager.STREAM_MUSIC, origVol, 0)
+            }
+            preDuckVolume = null
+            preDuckAncMode = null
+        }
+        val manifest = HardwareCapabilityInspector.inspect(device, device.address, device.name)
+        if (manifest.isAppleAirPods) {
+            appleL2capDriver.setConversationalAwareness(device.address, enabled)
+        }
+        val packet = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildConversationalAwarenessCommand(enabled)
+        val ok = sendPacket(device, packet)
+        log(device.address, "Sent Conversational Awareness ($enabled): $ok")
+        return ok
+    }
+
+    @SuppressLint("MissingPermission")
+    suspend fun setPinchSpeed(device: BluetoothDevice, speed: String): Boolean {
+        val manifest = HardwareCapabilityInspector.inspect(device, device.address, device.name)
+        if (manifest.isAppleAirPods) {
+            val ps = when (speed.uppercase()) {
+                "SLOW" -> PinchSpeed.SLOW
+                "SLOWEST" -> PinchSpeed.SLOWEST
+                else -> PinchSpeed.DEFAULT
+            }
+            appleL2capDriver.setPinchSpeed(device.address, ps)
+        }
+        val packet = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildPinchSpeedCommand(speed)
+        val ok = sendPacket(device, packet)
+        log(device.address, "Sent Pinch Speed ($speed): $ok")
+        return ok
+    }
+
+    @SuppressLint("MissingPermission")
+    suspend fun setStemSlide(device: BluetoothDevice, enabled: Boolean): Boolean {
+        val packet = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildStemSlideCommand(enabled)
+        val ok = sendPacket(device, packet)
+        log(device.address, "Sent Stem Slide Volume ($enabled): $ok")
+        return ok
+    }
+
+    @SuppressLint("MissingPermission")
+    suspend fun runPersonalizedAnc(device: BluetoothDevice): Boolean {
+        val packet = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildPersonalizedAncCommand(true)
+        val ok = sendPacket(device, packet)
+        log(device.address, "Triggered Golden Sound Personalized ANC: $ok")
+        return ok
+    }
+
+    @SuppressLint("MissingPermission")
+    suspend fun runEarbudFitTest(device: BluetoothDevice): Boolean {
+        val packet = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildEarbudFitTestCommand(true)
+        val ok = sendPacket(device, packet)
+        log(device.address, "Triggered Earbud Fit Test: $ok")
+        return ok
+    }
+
+    fun setDolbyAtmos(enabled: Boolean, scenario: String = "SMART", environment: String = "INDOOR") {
+        val sc = try { DolbyAtmosScenario.valueOf(scenario.uppercase()) } catch (_: Exception) { DolbyAtmosScenario.SMART }
+        val env = try { DolbyAtmosEnvironment.valueOf(environment.uppercase()) } catch (_: Exception) { DolbyAtmosEnvironment.INDOOR }
+        dspController.setDolbyAtmos(enabled, sc, env)
+    }
+
+    fun setMonoAudio(enabled: Boolean) {
+        dspController.setMonoAudio(enabled)
+    }
+
+    fun setChannelBalance(balance: Float) {
+        dspController.setChannelBalance(balance)
+    }
+
+    fun getEstimatedSplDb(): Float = dspController.getEstimatedSplDb()
+
+    fun setSpatialAudioMode(mode: String) {
+        val sc = try {
+            com.omnibuds.android.hardware.engine.SpatialAudioMode.valueOf(mode.uppercase())
+        } catch (_: Exception) {
+            if (mode.equals("ON", true) || mode.equals("FIXED", true)) com.omnibuds.android.hardware.engine.SpatialAudioMode.FIXED else com.omnibuds.android.hardware.engine.SpatialAudioMode.OFF
+        }
+        dspController.setSpatialAudioMode(sc)
+    }
+
+    @SuppressLint("MissingPermission")
+    suspend fun setHiResMode(device: BluetoothDevice, enabled: Boolean): Boolean {
+        val packet = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildHiResCodecCommand(enabled)
+        sendPacket(device, packet)
+        log(device.address, "Sent vendor NVRAM Hi-Res command ($enabled)")
+        return codecManager.setHiResMode(device, enabled)
+    }
+
+    @SuppressLint("MissingPermission")
+    fun forceHighBitrateAac(device: BluetoothDevice, enabled: Boolean): Boolean {
+        return codecManager.forceHighBitrateAac(device, enabled)
+    }
+
+    suspend fun playHearingTestTone(freqHz: Int, ear: String, volumeDb: Float) {
+        hearingTestManager.playTestTone(freqHz, if (ear.equals("left", true)) EarChannel.LEFT else EarChannel.RIGHT, volumeDb)
+    }
+
+    fun stopHearingTestTone() {
+        hearingTestManager.stopTone()
+    }
+
+    fun recordHearingResult(ear: String, freqHz: Int, heardDb: Float) {
+        hearingTestManager.recordHearingResult(if (ear.equals("left", true)) EarChannel.LEFT else EarChannel.RIGHT, freqHz, heardDb)
+    }
+
+    fun applyHearingAccommodations(preset: String, intensity: String) {
+        hearingTestManager.activePreset = try { HeadphoneAccommodationPreset.valueOf(preset.uppercase()) } catch (_: Exception) { HeadphoneAccommodationPreset.OFF }
+        hearingTestManager.activeIntensity = try { AccommodationIntensity.valueOf(intensity.uppercase()) } catch (_: Exception) { AccommodationIntensity.MODERATE }
+        val leftGains = hearingTestManager.computeCompensationGains(EarChannel.LEFT)
+        val rightGains = hearingTestManager.computeCompensationGains(EarChannel.RIGHT)
+        dspController.setPerEarHearingCompensation(leftGains, rightGains)
+    }
+
+    fun playMindRelax(soundscape: String, durationMinutes: Int = 0) {
+        val sc = try { Soundscape.valueOf(soundscape.uppercase()) } catch (_: Exception) { Soundscape.RAIN }
+        mindRelaxGenerator.play(sc, durationMinutes)
+    }
+
+    fun stopMindRelax() {
+        mindRelaxGenerator.stop()
+    }
+
+    /**
+     * Writes full synchronized gesture mapping and sends Touch Master Enable bit.
+     * Prevents the "None" lockout bug on realme Buds T300 and recovers disabled touch sensors.
+     */
+    @SuppressLint("MissingPermission")
+    suspend fun setTouchControls(
+        device: BluetoothDevice,
+        leftDouble: String,
+        rightDouble: String,
+        leftTriple: String,
+        rightTriple: String,
+        leftHold: String,
+        rightHold: String,
+        ancCycleBitmask: Byte = 0x06,
+    ): Boolean {
+        val address = device.address
+        log(address, "Sending Touch Master Enable & Synchronized Gestures")
+
+        // 1. Send Master Enable packets to wake up capacitive touch sensor
+        val enablePackets = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildTouchMasterEnableCommands(true)
+        for (pkt in enablePackets) {
+            sendPacket(device, pkt)
+            delay(40)
+        }
+
+        // 2. Send full synchronized Left + Right struct frame
+        val structPacket = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildSynchronizedTouchGestureStruct(
+            leftDouble = leftDouble,
+            rightDouble = rightDouble,
+            leftTriple = leftTriple,
+            rightTriple = rightTriple,
+            leftHold = leftHold,
+            rightHold = rightHold,
+            ancCycleBitmask = ancCycleBitmask,
+        )
+        sendPacket(device, structPacket)
+        delay(60)
+
+        // 3. Send explicit per-bud frames to ensure compatibility across firmwares
+        val leftDoublePkt = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildTouchGestureCommand("Left", "double_tap", leftDouble, ancCycleBitmask)
+        val rightDoublePkt = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildTouchGestureCommand("Right", "double_tap", rightDouble, ancCycleBitmask)
+        val leftTriplePkt = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildTouchGestureCommand("Left", "triple_tap", leftTriple, ancCycleBitmask)
+        val rightTriplePkt = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildTouchGestureCommand("Right", "triple_tap", rightTriple, ancCycleBitmask)
+        val leftHoldPkt = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildTouchGestureCommand("Left", "long_press", leftHold, ancCycleBitmask)
+        val rightHoldPkt = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildTouchGestureCommand("Right", "long_press", rightHold, ancCycleBitmask)
+
+        sendPacket(device, leftDoublePkt)
+        delay(40)
+        sendPacket(device, rightDoublePkt)
+        delay(40)
+        sendPacket(device, leftTriplePkt)
+        delay(40)
+        sendPacket(device, rightTriplePkt)
+        delay(40)
+        sendPacket(device, leftHoldPkt)
+        delay(40)
+        sendPacket(device, rightHoldPkt)
+
+        log(address, "Synchronized touch controls successfully written to hardware")
+        return true
+    }
+
+    /**
+     * Restores factory realme Buds T300 default touch controls:
+     * - Double Tap (L/R): Play/Pause
+     * - Triple Tap (L/R): Next Track
+     * - Touch & Hold (L/R): Switch Noise Control (ANC + Transparency)
+     */
+    @SuppressLint("MissingPermission")
+    suspend fun restoreDefaultTouchControls(device: BluetoothDevice): Boolean {
+        return setTouchControls(
+            device = device,
+            leftDouble = "PLAY_PAUSE",
+            rightDouble = "PLAY_PAUSE",
+            leftTriple = "NEXT_TRACK",
+            rightTriple = "NEXT_TRACK",
+            leftHold = "SWITCH_NOISE_CONTROL",
+            rightHold = "SWITCH_NOISE_CONTROL",
+            ancCycleBitmask = 0x06,
+        )
+    }
+
+    private var activeRingJob: Job? = null
+
+    /**
+     * Find My Earbuds: Rings Left / Right earbud with sweeping chirp and sends hardware ring frame.
+     */
+    @SuppressLint("MissingPermission")
+    fun ringEarbud(device: BluetoothDevice?, bud: String, ring: Boolean) {
+        if (device != null) {
+            scope.launch {
+                val pkt = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildFindMyBudsCommand(bud, ring)
+                sendPacket(device, pkt)
+            }
+        }
+
+        activeRingJob?.cancel()
+        if (!ring) return
+
+        activeRingJob = scope.launch(Dispatchers.Default) {
+            try {
+                val sampleRate = 44100
+                val durationMs = 350
+                val numSamples = (sampleRate * (durationMs / 1000.0)).toInt()
+                val leftVol = if (bud.equals("Right", ignoreCase = true)) 0.0f else 1.0f
+                val rightVol = if (bud.equals("Left", ignoreCase = true)) 0.0f else 1.0f
+
+                val track = android.media.AudioTrack(
+                    android.media.AudioAttributes.Builder()
+                        .setUsage(android.media.AudioAttributes.USAGE_MEDIA)
+                        .setContentType(android.media.AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                        .build(),
+                    android.media.AudioFormat.Builder()
+                        .setEncoding(android.media.AudioFormat.ENCODING_PCM_16BIT)
+                        .setSampleRate(sampleRate)
+                        .setChannelMask(android.media.AudioFormat.CHANNEL_OUT_STEREO)
+                        .build(),
+                    numSamples * 4,
+                    android.media.AudioTrack.MODE_STREAM,
+                    0,
+                )
+                track.setStereoVolume(leftVol, rightVol)
+                track.play()
+
+                val buffer = ShortArray(numSamples * 2)
+                for (pulse in 0 until 14) {
+                    if (!isActive) break
+                    for (i in 0 until numSamples) {
+                        val progress = i.toDouble() / numSamples
+                        val freq = 3200.0 + (progress * 1300.0) // 3.2kHz to 4.5kHz chirp
+                        val angle = 2.0 * Math.PI * i / (sampleRate / freq)
+                        val sample = (Math.sin(angle) * Short.MAX_VALUE * 0.9).toInt().toShort()
+                        buffer[i * 2] = sample
+                        buffer[i * 2 + 1] = sample
+                    }
+                    track.write(buffer, 0, buffer.size)
+                    delay(160)
+                }
+                track.stop()
+                track.release()
+            } catch (e: Exception) {
+                Log.w("UniversalTwsEngine", "Ring chirp error: ${e.message}")
+            }
+        }
+    }
+
+    var onVoiceAssistantTrigger: (() -> Unit)? = null
+
+    /**
+     * Intercepts earbud touch notifications and triggers matching system KeyEvent / action.
+     */
+    private fun handleTouchInterception(action: String, address: String) {
+        val ctx = appContext ?: return
+        val audioManager = ctx.getSystemService(Context.AUDIO_SERVICE) as? android.media.AudioManager
+        log(address, "Software Touch Interceptor: Executing '$action'")
+        when (action.uppercase()) {
+            "PLAY_PAUSE" -> {
+                audioManager?.dispatchMediaKeyEvent(android.view.KeyEvent(android.view.KeyEvent.ACTION_DOWN, android.view.KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE))
+                audioManager?.dispatchMediaKeyEvent(android.view.KeyEvent(android.view.KeyEvent.ACTION_UP, android.view.KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE))
+            }
+            "NEXT_TRACK" -> {
+                audioManager?.dispatchMediaKeyEvent(android.view.KeyEvent(android.view.KeyEvent.ACTION_DOWN, android.view.KeyEvent.KEYCODE_MEDIA_NEXT))
+                audioManager?.dispatchMediaKeyEvent(android.view.KeyEvent(android.view.KeyEvent.ACTION_UP, android.view.KeyEvent.KEYCODE_MEDIA_NEXT))
+            }
+            "PREVIOUS_TRACK" -> {
+                audioManager?.dispatchMediaKeyEvent(android.view.KeyEvent(android.view.KeyEvent.ACTION_DOWN, android.view.KeyEvent.KEYCODE_MEDIA_PREVIOUS))
+                audioManager?.dispatchMediaKeyEvent(android.view.KeyEvent(android.view.KeyEvent.ACTION_UP, android.view.KeyEvent.KEYCODE_MEDIA_PREVIOUS))
+            }
+            "VOICE_ASSISTANT" -> {
+                onVoiceAssistantTrigger?.invoke()
+            }
+            "SWITCH_NOISE_CONTROL", "ANC" -> {
+                val current = _confirmedAncMode.value[address] ?: "OFF"
+                val next = when (current) {
+                    "ANC" -> "TRANSPARENCY"
+                    "TRANSPARENCY" -> "OFF"
+                    else -> "ANC"
+                }
+                val dev = activeGatts[address]?.device ?: activeRfcommSockets[address]?.remoteDevice
+                if (dev != null) {
+                    scope.launch { setNoiseControl(dev, next) }
+                }
+            }
+            "VOLUME_UP" -> {
+                audioManager?.adjustStreamVolume(android.media.AudioManager.STREAM_MUSIC, android.media.AudioManager.ADJUST_RAISE, android.media.AudioManager.FLAG_SHOW_UI)
+            }
+            "VOLUME_DOWN" -> {
+                audioManager?.adjustStreamVolume(android.media.AudioManager.STREAM_MUSIC, android.media.AudioManager.ADJUST_LOWER, android.media.AudioManager.FLAG_SHOW_UI)
+            }
+        }
     }
 
     /**
@@ -279,19 +1101,28 @@ object UniversalTwsEngine {
     private suspend fun sendPacket(device: BluetoothDevice, packet: ByteArray): Boolean {
         val address = device.address
         val driver = protocolRouter.resolveDriver(device)
+        val hex = HexUtils.formatHex(packet)
+        _lastSentPackets.value = _lastSentPackets.value + (address to hex)
 
         if (driver.preferredTransport == TransportPreference.RFCOMM_FIRST) {
             if (activeRfcommSockets.containsKey(address) && writeRfcomm(device, packet)) {
+                bleSequencer.notifyRfcommWriteCompleted(address)
                 return true
             }
             if (writeGatt(device, packet)) return true
         } else {
             if (writeGatt(device, packet)) return true
-            if (writeRfcomm(device, packet)) return true
+            if (writeRfcomm(device, packet)) {
+                bleSequencer.notifyRfcommWriteCompleted(address)
+                return true
+            }
         }
 
         // Final fallback: try opening RFCOMM if neither was connected
-        if (writeRfcomm(device, packet)) return true
+        if (writeRfcomm(device, packet)) {
+            bleSequencer.notifyRfcommWriteCompleted(address)
+            return true
+        }
 
         log(address, "Failed to write packet via both BLE GATT and RFCOMM")
         return false
@@ -310,7 +1141,7 @@ object UniversalTwsEngine {
                 } else {
                     BluetoothGattCharacteristic.WRITE_TYPE_DEFAULT
                 }
-                gatt.writeCharacteristic(writeChar, packet, writeType) == BluetoothGatt.GATT_SUCCESS
+                gatt.writeCharacteristic(writeChar, packet, writeType) == android.bluetooth.BluetoothStatusCodes.SUCCESS
             } else {
                 writeChar.value = packet
                 writeChar.writeType = if ((writeChar.properties and BluetoothGattCharacteristic.PROPERTY_WRITE_NO_RESPONSE) != 0) {
@@ -465,6 +1296,10 @@ object UniversalTwsEngine {
                 }
             }
 
+            override fun onCharacteristicWrite(gatt: BluetoothGatt, characteristic: BluetoothGattCharacteristic, status: Int) {
+                bleSequencer.onCharacteristicWriteCompleted(address, status)
+            }
+
             override fun onCharacteristicChanged(gatt: BluetoothGatt, characteristic: BluetoothGattCharacteristic) {
                 @Suppress("DEPRECATION")
                 val value = characteristic.value ?: return
@@ -490,28 +1325,74 @@ object UniversalTwsEngine {
         _lastRawPackets.value = _lastRawPackets.value + (address to hex)
         log(address, "RX [${charUuid.toString().take(8)}]: $hex", hex)
 
-        // 1. Try vendor router drivers
+        // 1. Two-Way Hardware Sync: ANC / Noise Mode Notification & ACK
+        val isAck = protocolRouter.isAncAck(address, bytes)
+        if (isAck) {
+            val inFlight = bleSequencer.getInFlightMode(address) ?: _pendingAncMode.value[address]
+            if (inFlight != null) {
+                if (bleSequencer.shouldIgnoreNotification(address, inFlight)) {
+                    log(address, "Ignored stale ACK ($inFlight) within 250ms of user command")
+                    return
+                }
+                log(address, "BLE Hardware ACK: Confirmed requested ANC mode -> $inFlight")
+                _confirmedAncMode.value = _confirmedAncMode.value + (address to inFlight)
+                if (_pendingAncMode.value[address] == inFlight) {
+                    _pendingAncMode.value = _pendingAncMode.value + (address to null)
+                }
+                bleSequencer.updateConfirmedMode(address, inFlight)
+            }
+        } else {
+            val ancMode = protocolRouter.parseAncModeNotification(address, bytes)
+            if (ancMode != null) {
+                if (bleSequencer.shouldIgnoreNotification(address, ancMode)) {
+                    log(address, "Ignored stale BLE notification ($ancMode) within 250ms of user command (${bleSequencer.getLatestRequestedNoiseMode(address)})")
+                    return
+                }
+                log(address, "Two-Way Hardware Sync: Confirmed Active Noise Mode -> $ancMode")
+                _confirmedAncMode.value = _confirmedAncMode.value + (address to ancMode)
+                if (_pendingAncMode.value[address] == ancMode) {
+                    _pendingAncMode.value = _pendingAncMode.value + (address to null)
+                }
+                bleSequencer.updateConfirmedMode(address, ancMode)
+            }
+        }
+
+        // Software Touch Event Interceptor fallback
+        val touchEvt = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.parseTouchNotification(bytes)
+        if (touchEvt != null) {
+            if (touchEvt.isDoubleTap && isCameraShutterEnabled) {
+                triggerCameraShutter()
+            } else if (touchEvt.action != "UNKNOWN") {
+                handleTouchInterception(touchEvt.action, address)
+            }
+        }
+
+        // 2. Try vendor router drivers
         val report = protocolRouter.parseBatteryReport(address, bytes)
         if (report != null && report.hasComponentData) {
-            log(address, "Parsed Multi-Component Battery -> L:${report.left}% R:${report.right}% Case:${report.case}%")
-            scope.launch { _batteryReports.emit(address to report) }
+            handleBatteryReport(address, report, "BLE Vendor GATT")
             return
         }
 
-        // 2. Try Fast Pair BLE parser
+        // 3. Try Fast Pair BLE parser
         val fpReport = FastPairProtocolParser.parseBattery(bytes)
         if (fpReport != null && fpReport.hasComponentData) {
-            log(address, "Parsed FastPair Battery -> L:${fpReport.left}% R:${fpReport.right}% Case:${fpReport.case}%")
-            scope.launch { _batteryReports.emit(address to fpReport) }
+            handleBatteryReport(address, fpReport, "Fast Pair (0xFE2C)")
             return
         }
 
-        // 3. Standard BLE Battery Service
+        // 4. Standard BLE Battery Service
         if (charUuid == KnownUuids.BATTERY_LEVEL_CHAR && bytes.isNotEmpty()) {
             val level = bytes[0].toInt() and 0xFF
             if (level in 0..100) {
-                val singleReport = TwsBatteryReport(left = level, right = level, case = null, rawHex = hex)
-                scope.launch { _batteryReports.emit(address to singleReport) }
+                val singleReport = TwsBatteryReport(
+                    left = level,
+                    right = level,
+                    case = null,
+                    rawHex = hex,
+                    sourceProtocol = "BLE Battery Service (0x180F)",
+                )
+                handleBatteryReport(address, singleReport, "BLE Battery Service (0x180F)")
             }
         }
     }
@@ -562,15 +1443,48 @@ object UniversalTwsEngine {
                             log(address, "RFCOMM RX: $hex", hex)
                             _lastRawPackets.value = _lastRawPackets.value + (address to hex)
 
+                            // Two-Way Sync: ANC / Noise Mode
+                            val isAck = protocolRouter.isAncAck(address, packet)
+                            if (isAck) {
+                                val pending = _pendingAncMode.value[address]
+                                if (pending != null) {
+                                    if (!bleSequencer.shouldIgnoreNotification(address, pending)) {
+                                        log(address, "RFCOMM Hardware ACK: Confirmed requested ANC mode -> $pending")
+                                        _confirmedAncMode.value = _confirmedAncMode.value + (address to pending)
+                                        _pendingAncMode.value = _pendingAncMode.value + (address to null)
+                                        bleSequencer.updateConfirmedMode(address, pending)
+                                    }
+                                }
+                            } else {
+                                val ancMode = protocolRouter.parseAncModeNotification(address, packet)
+                                if (ancMode != null) {
+                                    if (!bleSequencer.shouldIgnoreNotification(address, ancMode)) {
+                                        log(address, "RFCOMM Hardware Sync: Confirmed Active Noise Mode -> $ancMode")
+                                        _confirmedAncMode.value = _confirmedAncMode.value + (address to ancMode)
+                                        _pendingAncMode.value = _pendingAncMode.value + (address to null)
+                                        bleSequencer.updateConfirmedMode(address, ancMode)
+                                    }
+                                }
+                            }
+
+                            // Software Touch Event Interceptor fallback
+                            val touchEvt = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.parseTouchNotification(packet)
+                            if (touchEvt != null) {
+                                if (touchEvt.isDoubleTap && isCameraShutterEnabled) {
+                                    triggerCameraShutter()
+                                } else if (touchEvt.action != "UNKNOWN") {
+                                    handleTouchInterception(touchEvt.action, address)
+                                }
+                            }
+
                             protocolRouter.parseBatteryReport(address, packet)?.let { rpt ->
-                                log(address, "RFCOMM Parsed Battery -> L:${rpt.left}% R:${rpt.right}% Case:${rpt.case}%")
-                                _batteryReports.emit(address to rpt)
+                                handleBatteryReport(address, rpt, "RFCOMM SPP")
                             }
                         }
                     }
 
                     val now = System.currentTimeMillis()
-                    if (now - lastBatteryPoll > 6000) {
+                    if (now - lastBatteryPoll > 1500 && bleSequencer.canPollBattery(address)) {
                         lastBatteryPoll = now
                         queryPkt?.let {
                             try {
@@ -579,7 +1493,7 @@ object UniversalTwsEngine {
                             } catch (_: Exception) {}
                         }
                     }
-                    delay(200)
+                    delay(150)
                 }
             } catch (e: Exception) {
                 log(address, "RFCOMM worker terminated: ${e.message}")

@@ -1,6 +1,7 @@
 package com.omnibuds.app
 
 import android.Manifest
+import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
 import android.bluetooth.BluetoothManager
 import android.content.BroadcastReceiver
@@ -94,6 +95,12 @@ class MainActivity : ComponentActivity() {
     ) {
         permissionsRequested = true
         refreshPlatformState()
+        refreshInventory()
+    }
+
+    private val notificationPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission(),
+    ) {
         refreshInventory()
     }
 
@@ -207,6 +214,8 @@ class MainActivity : ComponentActivity() {
                     resolveDeviceImageIfNeeded(described.address, described.displayName)
                     if (described.connectionState is ConnectionState.Connected) {
                         com.omnibuds.android.hardware.engine.UniversalTwsEngine.connect(applicationContext, device)
+                        com.omnibuds.app.service.OmniBudsForegroundService.startForDevice(applicationContext, device)
+                        updateQuickNotification(device)
                         if (::shell.isInitialized) {
                             shell.selectDevice(described.address)
                         }
@@ -222,10 +231,14 @@ class MainActivity : ComponentActivity() {
         val address = try { device.address } catch (_: Exception) { null } ?: return
         discoveryProvider.markDisconnected(address)
         com.omnibuds.android.hardware.engine.UniversalTwsEngine.disconnect(address)
+        com.omnibuds.app.service.OmniBudsForegroundService.checkAndStopIfNoDevices(applicationContext)
+        com.omnibuds.android.notification.OmniBudsQuickNotificationManager.cancelNotification(applicationContext)
+        bridge.clearBattery(address)
         appScope.launch {
             try {
                 val described = discoveryProvider.describe(device)?.copy(
                     connectionState = ConnectionState.Disconnected,
+                    batterySummary = null,
                 ) ?: AndroidDiscoveredDevice(
                     id = address,
                     name = try { device.name } catch (_: Exception) { null },
@@ -239,6 +252,51 @@ class MainActivity : ComponentActivity() {
                     lastSeenTimestamp = System.currentTimeMillis(),
                 )
                 bridge.syncDevice(described, ConnectionState.Disconnected)
+            } catch (_: Exception) {}
+        }
+    }
+
+    private val adapterReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context, intent: Intent) {
+            if (intent.action == BluetoothAdapter.ACTION_STATE_CHANGED) {
+                val state = intent.getIntExtra(BluetoothAdapter.EXTRA_STATE, BluetoothAdapter.ERROR)
+                when (state) {
+                    BluetoothAdapter.STATE_ON -> {
+                        com.omnibuds.android.hardware.engine.BluetoothAdapterStateStore.updateStatus(com.omnibuds.android.hardware.engine.BluetoothAdapterStatus.ENABLED)
+                        refreshPlatformState()
+                        refreshInventory()
+                    }
+                    BluetoothAdapter.STATE_OFF -> {
+                        com.omnibuds.android.hardware.engine.BluetoothAdapterStateStore.updateStatus(com.omnibuds.android.hardware.engine.BluetoothAdapterStatus.DISABLED)
+                        handleBluetoothDisabled()
+                    }
+                    BluetoothAdapter.STATE_TURNING_ON -> {
+                        com.omnibuds.android.hardware.engine.BluetoothAdapterStateStore.updateStatus(com.omnibuds.android.hardware.engine.BluetoothAdapterStatus.TURNING_ON)
+                    }
+                    BluetoothAdapter.STATE_TURNING_OFF -> {
+                        com.omnibuds.android.hardware.engine.BluetoothAdapterStateStore.updateStatus(com.omnibuds.android.hardware.engine.BluetoothAdapterStatus.TURNING_OFF)
+                        handleBluetoothDisabled()
+                    }
+                }
+            }
+        }
+    }
+
+    private fun handleBluetoothDisabled() {
+        com.omnibuds.android.hardware.engine.UniversalTwsEngine.disconnectAll()
+        com.omnibuds.app.service.OmniBudsForegroundService.stopService(applicationContext)
+        com.omnibuds.android.notification.OmniBudsQuickNotificationManager.cancelNotification(applicationContext)
+        appScope.launch {
+            try {
+                val all = (devicesViewModel.state.value.knownDevices + devicesViewModel.state.value.discoveredDevices).distinctBy { it.id }
+                for (dev in all) {
+                    discoveryProvider.markDisconnected(dev.address)
+                    bridge.clearBattery(dev.address)
+                    bridge.syncDevice(
+                        dev.copy(connectionState = ConnectionState.Disconnected, batterySummary = null),
+                        ConnectionState.Disconnected,
+                    )
+                }
             } catch (_: Exception) {}
         }
     }
@@ -266,7 +324,8 @@ class MainActivity : ComponentActivity() {
             val device = intent.deviceExtra() ?: return
             val address = try { device.address } catch (_: Exception) { null }
             val state = intent.getIntExtra(android.bluetooth.BluetoothProfile.EXTRA_STATE, -1)
-            if (state == android.bluetooth.BluetoothProfile.STATE_DISCONNECTED) {
+            if (state == android.bluetooth.BluetoothProfile.STATE_DISCONNECTED ||
+                state == android.bluetooth.BluetoothProfile.STATE_DISCONNECTING) {
                 handleDeviceDisconnected(device)
             } else if (state == android.bluetooth.BluetoothProfile.STATE_CONNECTED) {
                 if (address != null) discoveryProvider.markConnected(address)
@@ -278,13 +337,27 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         try {
+            androidx.core.view.WindowCompat.setDecorFitsSystemWindows(window, false)
+            @Suppress("DEPRECATION")
+            window.statusBarColor = android.graphics.Color.TRANSPARENT
+            @Suppress("DEPRECATION")
+            window.navigationBarColor = android.graphics.Color.BLACK
+            androidx.core.view.WindowCompat.getInsetsController(window, window.decorView)?.let { controller ->
+                controller.isAppearanceLightStatusBars = false
+                controller.isAppearanceLightNavigationBars = false
+            }
+        } catch (_: Exception) {
+            // System bar customization fallback
+        }
+        try {
             val stored = getSharedPreferences(PREFS_PRODUCT_OVERRIDES, MODE_PRIVATE).all
             for ((key, value) in stored) {
                 if (value !is String) continue
                 if (key.startsWith(PHOTO_KEY_PREFIX)) {
                     productPhotos[key.removePrefix(PHOTO_KEY_PREFIX)] = value
                 } else if (key.startsWith(ALIAS_KEY_PREFIX)) {
-                    deviceAliases[key.removePrefix(ALIAS_KEY_PREFIX)] = value
+                    // Deprecated: device name is always synced directly with system Bluetooth settings
+                    getSharedPreferences(PREFS_PRODUCT_OVERRIDES, MODE_PRIVATE).edit().remove(key).apply()
                 } else {
                     productOverrides[key] = value
                 }
@@ -297,18 +370,102 @@ class MainActivity : ComponentActivity() {
         discoveryProvider = SystemDiscoveryProvider(applicationContext)
         bridge = DeviceStateBridge(repository, appScope)
         com.omnibuds.android.hardware.engine.UniversalTwsEngine.init(applicationContext)
+        com.omnibuds.android.hardware.engine.UniversalTwsEngine.onVoiceAssistantTrigger = {
+            try {
+                val intent = android.content.Intent(android.content.Intent.ACTION_VOICE_COMMAND).apply {
+                    flags = android.content.Intent.FLAG_ACTIVITY_NEW_TASK
+                }
+                startActivity(intent)
+            } catch (_: Exception) {}
+        }
         val surfaceCoordinator = AndroidSurfaceCoordinator(repository = repository)
+        val pairingEngine = com.omnibuds.android.hardware.pairing.UniversalBluetoothPairingEngine(
+            context = applicationContext,
+            scope = appScope,
+        )
         devicesViewModel = DevicesViewModel(
             scope = appScope,
-            discoveryProvider = discoveryProvider,
+            discoveryProvider = pairingEngine,
             globalStateRepository = repository,
+            pairingEngine = pairingEngine,
         )
         val settingsViewModel = SettingsViewModel(scope = appScope)
+        val initialBonded = discoveryProvider.snapshotBonded()
+        val initialConnected = initialBonded.firstOrNull { it.connectionState is ConnectionState.Connected } ?: initialBonded.firstOrNull()
+        com.omnibuds.app.service.OmniBudsForegroundService.checkConnectedAndStart(applicationContext)
+        val initialDest = if (initialConnected != null) {
+            com.omnibuds.android.presentation.navigation.AndroidDestination.DeviceWorkspace(initialConnected.address)
+        } else {
+            com.omnibuds.android.presentation.navigation.AndroidDestination.AddDevice
+        }
+        val navCoordinator = com.omnibuds.android.presentation.navigation.AndroidNavigationCoordinator(initialDestination = initialDest)
         shell = AndroidApplicationShell(
             devicesViewModel = devicesViewModel,
             settingsViewModel = settingsViewModel,
             surfaceCoordinator = surfaceCoordinator,
+            navigationCoordinator = navCoordinator,
         )
+
+        appScope.launch {
+            settingsViewModel.state.collect { settings ->
+                if (!settings.notificationsEnabled) {
+                    com.omnibuds.android.notification.OmniBudsQuickNotificationManager.cancelNotification(applicationContext)
+                } else {
+                    val bonded = discoveryProvider.snapshotBonded()
+                    val target = bonded.firstOrNull { it.connectionState is ConnectionState.Connected } ?: bonded.firstOrNull()
+                    target?.let { item ->
+                        discoveryProvider.bondedDevice(item.address)?.let { dev ->
+                            val mode = if (item.connectionState is ConnectionState.Connected) null else "Disconnected"
+                            updateQuickNotification(dev, overrideMode = mode)
+                        }
+                    }
+                }
+            }
+        }
+
+        com.omnibuds.android.notification.OmniBudsQuickNotificationManager.onNoiseControlChangeRequested = { address, mode ->
+            lastKnownAncMode = mode
+            appScope.launch {
+                val gid = com.omnibuds.core.globalstate.GlobalDeviceId(address)
+                val now = System.currentTimeMillis()
+                val prov = com.omnibuds.core.globalstate.ObservationProvenance(
+                    sourceId = "notification-bar",
+                    observedAtMillis = now,
+                    receivedAtMillis = now,
+                    sessionId = null,
+                    connectionGeneration = 1L,
+                    protocolVersion = "1.0",
+                )
+                repository.ingest(
+                    com.omnibuds.core.globalstate.DeviceStateEvent.FeatureObserved(
+                        deviceId = gid,
+                        sessionId = null,
+                        sequence = System.currentTimeMillis(),
+                        sourceId = "notification-bar",
+                        featureId = "anc_mode",
+                        value = com.omnibuds.core.globalstate.ObservedValue(mode, prov),
+                    ),
+                )
+                val device = discoveryProvider.bondedDevice(address)
+                if (device != null) {
+                    updateQuickNotification(device, overrideMode = mode)
+                }
+            }
+        }
+        com.omnibuds.android.notification.OmniBudsQuickNotificationManager.onReconnectRequested = { address ->
+            val dev = discoveryProvider.bondedDevice(address)
+            if (dev != null) {
+                syncDescribed(dev)
+                toast("Reconnecting to ${dev.name ?: "earbuds"}...")
+            }
+        }
+        com.omnibuds.android.notification.OmniBudsQuickNotificationManager.onDisconnectRequested = { address ->
+            val dev = discoveryProvider.bondedDevice(address)
+            if (dev != null) {
+                handleDeviceDisconnected(dev)
+                toast("Disconnected")
+            }
+        }
 
         // Keep the state engine in sync with what discovery finds.
         appScope.launch {
@@ -325,6 +482,7 @@ class MainActivity : ComponentActivity() {
             com.omnibuds.android.hardware.engine.UniversalTwsEngine.batteryReports.collect { (address, report) ->
                 val components = mutableListOf<com.omnibuds.core.globalstate.BatteryState.ComponentLevel>()
                 report.left?.let {
+                    lastLeftBattery = it
                     components.add(
                         com.omnibuds.core.globalstate.BatteryState.ComponentLevel(
                             com.omnibuds.core.globalstate.BatteryState.Component.LEFT_EARBUD,
@@ -334,6 +492,7 @@ class MainActivity : ComponentActivity() {
                     )
                 }
                 report.right?.let {
+                    lastRightBattery = it
                     components.add(
                         com.omnibuds.core.globalstate.BatteryState.ComponentLevel(
                             com.omnibuds.core.globalstate.BatteryState.Component.RIGHT_EARBUD,
@@ -343,7 +502,8 @@ class MainActivity : ComponentActivity() {
                     )
                 }
                 report.case?.let {
-                    if (it > 0 || report.caseCharging) {
+                    if (it in 1..100) {
+                        lastCaseBattery = it
                         components.add(
                             com.omnibuds.core.globalstate.BatteryState.ComponentLevel(
                                 com.omnibuds.core.globalstate.BatteryState.Component.CHARGING_CASE,
@@ -359,6 +519,7 @@ class MainActivity : ComponentActivity() {
                         components = components,
                         aggregateLevel = report.left ?: report.right,
                     )
+                    discoveryProvider.bondedDevice(address)?.let { updateQuickNotification(it) }
                 }
             }
         }
@@ -391,6 +552,19 @@ class MainActivity : ComponentActivity() {
         } catch (_: Exception) {
             // Same as above: bonus signal only.
         }
+        try {
+            val adapterFilter = IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED)
+            registerReceiver(adapterReceiver, adapterFilter)
+        } catch (_: Exception) {
+            // Adapter state changes are a bonus signal
+        }
+
+        val bm = getSystemService(Context.BLUETOOTH_SERVICE) as? BluetoothManager
+        val isBtOn = bm?.adapter?.isEnabled == true
+        com.omnibuds.android.hardware.engine.BluetoothAdapterStateStore.updateStatus(
+            if (isBtOn) com.omnibuds.android.hardware.engine.BluetoothAdapterStatus.ENABLED
+            else com.omnibuds.android.hardware.engine.BluetoothAdapterStatus.DISABLED,
+        )
 
         ensurePermissions()
         refreshPlatformState()
@@ -412,18 +586,8 @@ class MainActivity : ComponentActivity() {
                     },
                     productOverrideFor = { address -> productOverrides[address] },
                     productPhotoFor = { address -> productPhotos[address] },
-                    deviceAliasFor = { address -> deviceAliases[address] },
-                    onDeviceAliasChange = { address, alias ->
-                        val prefs = getSharedPreferences(PREFS_PRODUCT_OVERRIDES, MODE_PRIVATE)
-                        val trimmed = alias?.trim()?.takeIf { it.isNotEmpty() }
-                        if (trimmed == null) {
-                            deviceAliases.remove(address)
-                            prefs.edit().remove(ALIAS_KEY_PREFIX + address).apply()
-                        } else {
-                            deviceAliases[address] = trimmed
-                            prefs.edit().putString(ALIAS_KEY_PREFIX + address, trimmed).apply()
-                        }
-                    },
+                    deviceAliasFor = { null },
+                    onDeviceAliasChange = { _, _ -> },
                     onProductPhotoChange = { address, path ->
                         try {
                             val prefs = getSharedPreferences(PREFS_PRODUCT_OVERRIDES, MODE_PRIVATE)
@@ -496,6 +660,7 @@ class MainActivity : ComponentActivity() {
                         updateBatteryFromDevice(device)
                         if (described.connectionState is ConnectionState.Connected) {
                             com.omnibuds.android.hardware.engine.UniversalTwsEngine.connect(applicationContext, device)
+                            updateQuickNotification(device)
                             if (::shell.isInitialized) {
                                 shell.selectDevice(described.address)
                             }
@@ -639,14 +804,62 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    private var lastKnownAncMode: String = "OFF"
+    private var lastLeftBattery: Int? = null
+    private var lastRightBattery: Int? = null
+    private var lastCaseBattery: Int? = null
+
+    private fun updateQuickNotification(device: BluetoothDevice, overrideMode: String? = null) {
+        if (::shell.isInitialized && !shell.settingsViewModel.state.value.notificationsEnabled) {
+            com.omnibuds.android.notification.OmniBudsQuickNotificationManager.cancelNotification(applicationContext)
+            return
+        }
+        val address = try { device.address } catch (_: Exception) { null } ?: return
+        val rawName = try {
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) {
+                device.alias?.takeIf { it.isNotBlank() } ?: device.name
+            } else {
+                device.name
+            }
+        } catch (_: Exception) { null }
+        val resolved = com.omnibuds.android.presentation.workspace.ProductCatalog.resolve(rawName)
+        val catalogName = listOfNotNull(resolved.manufacturer, resolved.model).joinToString(" ").trim()
+        val name = if (resolved.confidence != com.omnibuds.android.presentation.workspace.ProductCatalog.Confidence.CATEGORY_FALLBACK && catalogName.isNotBlank()) {
+            catalogName
+        } else if (rawName.isNullOrBlank() || rawName.equals("realme", ignoreCase = true)) {
+            "realme Buds T300"
+        } else {
+            rawName
+        }
+        if (overrideMode != null) {
+            lastKnownAncMode = overrideMode
+        }
+        val battery = try {
+            val method = device.javaClass.getMethod("getBatteryLevel")
+            (method.invoke(device) as? Int)?.takeIf { it in 0..100 }
+        } catch (_: Exception) { null }
+        com.omnibuds.android.notification.OmniBudsQuickNotificationManager.updateNotification(
+            context = applicationContext,
+            deviceAddress = address,
+            deviceName = name,
+            currentMode = lastKnownAncMode,
+            batteryPercent = battery,
+            leftBattery = lastLeftBattery,
+            rightBattery = lastRightBattery,
+            caseBattery = lastCaseBattery,
+        )
+    }
+
     private fun handleFeatureControlDispatched(address: String, featureId: String, value: String) {
         val device = discoveryProvider.bondedDevice(address)
         when (featureId) {
             "anc_mode" -> {
+                lastKnownAncMode = value
                 if (device != null) {
                     appScope.launch {
                         com.omnibuds.android.hardware.engine.UniversalTwsEngine.setNoiseControl(device, value)
                     }
+                    updateQuickNotification(device, overrideMode = value)
                 }
                 toast("Noise Control: $value")
             }
@@ -674,19 +887,63 @@ class MainActivity : ComponentActivity() {
             "touch_controls" -> {
                 if (device != null) {
                     appScope.launch {
-                        com.omnibuds.android.hardware.protocol.EarbudProtocolManager.sendTouchControl(device, value)
+                        if (value == "RESTORE_DEFAULT") {
+                            com.omnibuds.android.hardware.protocol.EarbudProtocolManager.restoreDefaultTouchControls(device)
+                            toast("Factory touch controls restored")
+                        } else if (value.startsWith("MATRIX:")) {
+                            val parts = value.removePrefix("MATRIX:").split(":")
+                            if (parts.size >= 7) {
+                                val bitmask = parts.getOrNull(6)?.toIntOrNull()?.toByte() ?: 0x06.toByte()
+                                com.omnibuds.android.hardware.protocol.EarbudProtocolManager.sendFullTouchMatrix(
+                                    device = device,
+                                    leftDouble = parts[0],
+                                    rightDouble = parts[1],
+                                    leftTriple = parts[2],
+                                    rightTriple = parts[3],
+                                    leftHold = parts[4],
+                                    rightHold = parts[5],
+                                    ancCycleBitmask = bitmask,
+                                )
+                            }
+                            toast("Touch matrix synchronized")
+                        } else {
+                            com.omnibuds.android.hardware.protocol.EarbudProtocolManager.sendTouchControl(device, value)
+                            toast("Touch gesture updated")
+                        }
                     }
                 }
-                toast("Touch gesture updated")
             }
-            "low_latency" -> {
+            "game_mode" -> {
                 val enabled = value.equals("ON", ignoreCase = true)
                 if (device != null) {
                     appScope.launch {
                         com.omnibuds.android.hardware.engine.UniversalTwsEngine.setGameMode(device, enabled)
                     }
                 }
-                toast("Game Mode: $value")
+                toast("Game Mode 50ms: $value")
+            }
+            "dynamic_bass" -> {
+                val parts = value.split(":")
+                val enabled = parts[0].equals("ON", ignoreCase = true)
+                val level = parts.getOrNull(1)?.toIntOrNull() ?: 3
+                appScope.launch {
+                    com.omnibuds.android.hardware.protocol.EarbudProtocolManager.sendDynamicBass(device ?: return@launch, enabled, level)
+                }
+                toast("Dynamic Bass: $value")
+            }
+            "volume_enhancer" -> {
+                val enabled = value.equals("ON", ignoreCase = true)
+                appScope.launch {
+                    com.omnibuds.android.hardware.protocol.EarbudProtocolManager.sendVolumeEnhancer(device ?: return@launch, enabled)
+                }
+                toast("Volume Enhancer: $value")
+            }
+            "ring_earbud" -> {
+                val parts = value.split(":")
+                val bud = parts[0]
+                val ring = parts.getOrNull(1)?.equals("ON", ignoreCase = true) ?: true
+                com.omnibuds.android.hardware.protocol.EarbudProtocolManager.ringEarbud(device, bud, ring)
+                toast(if (ring) "Ringing $bud Earbud..." else "Ringing stopped")
             }
             "eq_custom" -> {
                 val gains = value.split(",").mapNotNull { it.trim().toFloatOrNull() }.toFloatArray()
@@ -703,6 +960,196 @@ class MainActivity : ComponentActivity() {
                     toast("Running Auto-Detect / Learn Mode...")
                 }
             }
+            "pro_anc_level" -> {
+                if (device != null) {
+                    appScope.launch {
+                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.setProAncLevel(device, value)
+                    }
+                    toast("Pro ANC Level: $value")
+                }
+            }
+            "wind_noise" -> {
+                if (device != null) {
+                    val on = value.equals("ON", ignoreCase = true)
+                    appScope.launch {
+                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.setWindNoiseReduction(device, on)
+                    }
+                    toast("Wind Noise Reduction: $value")
+                }
+            }
+            "transparency_level" -> {
+                if (device != null) {
+                    val parts = value.split(":")
+                    val level = parts.getOrNull(0)?.toIntOrNull() ?: 3
+                    val voice = parts.getOrNull(1)?.equals("VOICE", ignoreCase = true) ?: false
+                    appScope.launch {
+                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.setTransparencyLevel(device, level, voice)
+                    }
+                    toast("Transparency Level: $level (Voice Boost: $voice)")
+                }
+            }
+            "in_ear_detection" -> {
+                if (device != null) {
+                    val on = value.equals("ON", ignoreCase = true)
+                    appScope.launch {
+                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.setInEarDetection(device, on)
+                    }
+                    toast("In-Ear Detection: $value")
+                }
+            }
+            "multipoint" -> {
+                if (device != null) {
+                    val on = value.equals("ON", ignoreCase = true)
+                    appScope.launch {
+                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.setMultipoint(device, on)
+                    }
+                    toast("Dual Device Connection: $value")
+                }
+            }
+            "conversational_awareness" -> {
+                if (device != null) {
+                    val on = value.equals("ON", ignoreCase = true)
+                    appScope.launch {
+                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.setConversationalAwareness(device, on)
+                    }
+                    toast("Conversational Awareness: $value")
+                }
+            }
+            "pinch_speed" -> {
+                if (device != null) {
+                    appScope.launch {
+                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.setPinchSpeed(device, value)
+                    }
+                    toast("Pinch Speed: $value")
+                }
+            }
+            "stem_slide" -> {
+                if (device != null) {
+                    val on = value.equals("ON", ignoreCase = true)
+                    appScope.launch {
+                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.setStemSlide(device, on)
+                    }
+                    toast("Stem Slide Volume: $value")
+                }
+            }
+            "personalized_anc" -> {
+                if (device != null) {
+                    appScope.launch {
+                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.runPersonalizedAnc(device)
+                    }
+                    toast("Starting Golden Sound Personalized ANC Calibration...")
+                }
+            }
+            "fit_test" -> {
+                if (device != null) {
+                    appScope.launch {
+                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.runEarbudFitTest(device)
+                    }
+                    toast("Starting Earbud Fit Test...")
+                }
+            }
+            "dolby_atmos" -> {
+                val parts = value.split(":")
+                val enabled = parts.getOrNull(0)?.equals("ON", ignoreCase = true) ?: false
+                val scenario = parts.getOrNull(1) ?: "SMART"
+                val env = parts.getOrNull(2) ?: "INDOOR"
+                com.omnibuds.android.hardware.engine.UniversalTwsEngine.setDolbyAtmos(enabled, scenario, env)
+                toast("Dolby Atmos: ${if (enabled) "$scenario ($env)" else "Off"}")
+            }
+            "mono_audio" -> {
+                val on = value.equals("ON", ignoreCase = true)
+                com.omnibuds.android.hardware.engine.UniversalTwsEngine.setMonoAudio(on)
+                toast("Mono Audio: $value")
+            }
+            "channel_balance" -> {
+                val bal = value.toFloatOrNull() ?: 0f
+                com.omnibuds.android.hardware.engine.UniversalTwsEngine.setChannelBalance(bal)
+            }
+            "hi_res_mode" -> {
+                if (device != null) {
+                    val on = value.equals("ON", ignoreCase = true)
+                    appScope.launch {
+                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.setHiResMode(device, on)
+                    }
+                    toast("Hi-Res LDAC/LHDC: $value")
+                }
+            }
+            "force_aac" -> {
+                if (device != null) {
+                    val on = value.equals("ON", ignoreCase = true)
+                    com.omnibuds.android.hardware.engine.UniversalTwsEngine.forceHighBitrateAac(device, on)
+                    toast("High-Bitrate AAC Lock: $value")
+                }
+            }
+            "camera_shutter_toggle" -> {
+                val on = value.equals("ON", ignoreCase = true)
+                com.omnibuds.android.hardware.engine.UniversalTwsEngine.isCameraShutterEnabled = on
+                toast("Double-Tap Camera Shutter: $value")
+            }
+            "camera_shutter" -> {
+                com.omnibuds.android.hardware.engine.UniversalTwsEngine.triggerCameraShutter()
+                toast("Camera Shutter Dispatched")
+            }
+            "spatial_audio_mode" -> {
+                com.omnibuds.android.hardware.engine.UniversalTwsEngine.setSpatialAudioMode(value)
+                toast("360° Spatial Audio: $value")
+            }
+            "edge_tap" -> {
+                toast("Edge Tap Accelerometer: $value")
+            }
+            "head_gestures" -> {
+                toast("IMU Head Gestures: $value")
+            }
+            "case_smart_dial" -> {
+                toast("Case Smart Dial Configured: $value")
+            }
+            "stem_slide_sensitivity" -> {
+                toast("Stem Slide Sensitivity: $value")
+            }
+            "multipoint_disconnect" -> {
+                toast("Disconnected secondary device: $value")
+            }
+            "fast_switch" -> {
+                toast("Fast-Switch handover triggered")
+            }
+            "mind_relax" -> {
+                val parts = value.split(":")
+                if (parts[0] == "STOP") {
+                    com.omnibuds.android.hardware.engine.UniversalTwsEngine.stopMindRelax()
+                    toast("Mind Relax Stopped")
+                } else {
+                    val soundscape = parts.getOrNull(0) ?: "RAIN"
+                    val duration = parts.getOrNull(1)?.toIntOrNull() ?: 0
+                    com.omnibuds.android.hardware.engine.UniversalTwsEngine.playMindRelax(soundscape, duration)
+                    toast("Playing Mind Relax: $soundscape")
+                }
+            }
+            "hearing_tone" -> {
+                val parts = value.split(":")
+                val freq = parts.getOrNull(0)?.toIntOrNull() ?: 1000
+                val ear = parts.getOrNull(1) ?: "left"
+                val vol = parts.getOrNull(2)?.toFloatOrNull() ?: -24f
+                appScope.launch {
+                    com.omnibuds.android.hardware.engine.UniversalTwsEngine.playHearingTestTone(freq, ear, vol)
+                }
+            }
+            "hearing_stop" -> {
+                com.omnibuds.android.hardware.engine.UniversalTwsEngine.stopHearingTestTone()
+            }
+            "hearing_result" -> {
+                val parts = value.split(":")
+                val ear = parts.getOrNull(0) ?: "left"
+                val freq = parts.getOrNull(1)?.toIntOrNull() ?: 1000
+                val heardDb = parts.getOrNull(2)?.toFloatOrNull() ?: -30f
+                com.omnibuds.android.hardware.engine.UniversalTwsEngine.recordHearingResult(ear, freq, heardDb)
+            }
+            "hearing_accommodations" -> {
+                val parts = value.split(":")
+                val preset = parts.getOrNull(0) ?: "OFF"
+                val intensity = parts.getOrNull(1) ?: "MODERATE"
+                com.omnibuds.android.hardware.engine.UniversalTwsEngine.applyHearingAccommodations(preset, intensity)
+                toast("Hearing Accommodations: $preset ($intensity)")
+            }
         }
     }
 
@@ -712,17 +1159,35 @@ class MainActivity : ComponentActivity() {
         connectionMonitorJob?.cancel()
         connectionMonitorJob = appScope.launch {
             while (isActive) {
-                kotlinx.coroutines.delay(2000)
+                kotlinx.coroutines.delay(1500)
                 try {
-                    discoveryProvider.snapshotBonded().forEach { described ->
+                    val bonded = discoveryProvider.snapshotBonded()
+                    var anyAudioConnected = false
+                    for (described in bonded) {
                         val actualState = discoveryProvider.connectionStateFor(described.address)
-                        bridge.syncDevice(described, actualState)
-                        if (actualState is ConnectionState.Connected) {
+                        val isConn = actualState is ConnectionState.Connected
+                        if (isConn) {
+                            anyAudioConnected = true
+                            bridge.syncDevice(described, actualState)
                             discoveryProvider.bondedDevice(described.address)?.let { dev ->
                                 updateBatteryFromDevice(dev)
                                 com.omnibuds.android.hardware.engine.UniversalTwsEngine.connect(applicationContext, dev)
                             }
+                        } else {
+                            discoveryProvider.bondedDevice(described.address)?.let { dev ->
+                                handleDeviceDisconnected(dev)
+                            } ?: run {
+                                com.omnibuds.android.hardware.engine.UniversalTwsEngine.disconnect(described.address)
+                                bridge.clearBattery(described.address)
+                                bridge.syncDevice(
+                                    described.copy(connectionState = ConnectionState.Disconnected, batterySummary = null),
+                                    ConnectionState.Disconnected,
+                                )
+                            }
                         }
+                    }
+                    if (!anyAudioConnected && !com.omnibuds.android.notification.OmniBudsQuickNotificationManager.testModeActive) {
+                        com.omnibuds.app.service.OmniBudsForegroundService.checkAndStopIfNoDevices(applicationContext)
                     }
                 } catch (_: Exception) {}
             }
@@ -731,6 +1196,15 @@ class MainActivity : ComponentActivity() {
 
     override fun onResume() {
         super.onResume()
+        val bm = getSystemService(Context.BLUETOOTH_SERVICE) as? BluetoothManager
+        val isBtOn = bm?.adapter?.isEnabled == true
+        com.omnibuds.android.hardware.engine.BluetoothAdapterStateStore.updateStatus(
+            if (isBtOn) com.omnibuds.android.hardware.engine.BluetoothAdapterStatus.ENABLED
+            else com.omnibuds.android.hardware.engine.BluetoothAdapterStatus.DISABLED,
+        )
+        if (!isBtOn) {
+            handleBluetoothDisabled()
+        }
         if (::devicesViewModel.isInitialized) refreshPlatformState()
         refreshInventory()
         startConnectionMonitor()
@@ -755,6 +1229,10 @@ class MainActivity : ComponentActivity() {
             unregisterReceiver(profileReceiver)
         } catch (_: Exception) {
         }
+        try {
+            unregisterReceiver(adapterReceiver)
+        } catch (_: Exception) {
+        }
         appScope.cancel()
         super.onDestroy()
     }
@@ -762,15 +1240,36 @@ class MainActivity : ComponentActivity() {
     // -- Permissions & platform state ---------------------------------------
 
     private fun requiredPermissions(): List<String> = when {
+        Build.VERSION.SDK_INT >= 33 -> listOf(
+            Manifest.permission.BLUETOOTH_SCAN,
+            Manifest.permission.BLUETOOTH_CONNECT,
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION,
+            Manifest.permission.POST_NOTIFICATIONS,
+        )
         Build.VERSION.SDK_INT >= 31 -> listOf(
             Manifest.permission.BLUETOOTH_SCAN,
             Manifest.permission.BLUETOOTH_CONNECT,
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION,
         )
-        Build.VERSION.SDK_INT >= 23 -> listOf(Manifest.permission.ACCESS_FINE_LOCATION)
+        Build.VERSION.SDK_INT >= 23 -> listOf(
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION,
+        )
         else -> emptyList()
     }
 
     private fun ensurePermissions() {
+        if (Build.VERSION.SDK_INT >= 33) {
+            val notifGranted = ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.POST_NOTIFICATIONS,
+            ) == PackageManager.PERMISSION_GRANTED
+            if (!notifGranted) {
+                notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+            }
+        }
         val missing = requiredPermissions().filter {
             ContextCompat.checkSelfPermission(this, it) != PackageManager.PERMISSION_GRANTED
         }
@@ -798,7 +1297,15 @@ class MainActivity : ComponentActivity() {
             PermissionState.GRANTED
         }
         val scanPermission = if (Build.VERSION.SDK_INT >= 31) {
-            permissionStateFor(Manifest.permission.BLUETOOTH_SCAN)
+            val scan = permissionStateFor(Manifest.permission.BLUETOOTH_SCAN)
+            val loc = permissionStateFor(Manifest.permission.ACCESS_FINE_LOCATION)
+            if (scan == PermissionState.DENIED || loc == PermissionState.DENIED) {
+                PermissionState.DENIED
+            } else if (scan == PermissionState.GRANTED && loc == PermissionState.GRANTED) {
+                PermissionState.GRANTED
+            } else {
+                PermissionState.UNKNOWN
+            }
         } else {
             permissionStateFor(Manifest.permission.ACCESS_FINE_LOCATION)
         }

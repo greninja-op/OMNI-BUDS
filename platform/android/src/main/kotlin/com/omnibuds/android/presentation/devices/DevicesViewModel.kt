@@ -4,6 +4,8 @@ import com.omnibuds.android.compat.BluetoothDecision
 import com.omnibuds.android.compat.BluetoothPlatformPolicy
 import com.omnibuds.android.compat.BluetoothPlatformState
 import com.omnibuds.android.compat.PermissionState
+import com.omnibuds.android.hardware.pairing.BondingStage
+import com.omnibuds.android.hardware.pairing.UniversalBluetoothPairingEngine
 import com.omnibuds.core.common.TransportKind
 import com.omnibuds.core.globalstate.BatteryState
 import com.omnibuds.core.globalstate.CapabilityState
@@ -28,6 +30,7 @@ class DevicesViewModel(
     private val scope: CoroutineScope,
     private val discoveryProvider: AndroidDiscoveryProvider? = null,
     private val globalStateRepository: GlobalDeviceStateRepository? = null,
+    val pairingEngine: UniversalBluetoothPairingEngine? = null,
     initialState: DevicesScreenState = DevicesScreenState(),
 ) {
     private val mutex = Mutex()
@@ -37,9 +40,24 @@ class DevicesViewModel(
     private var activeDiscoverySession: AndroidDiscoverySession? = null
     private var discoveryJob: Job? = null
     private var repositoryJob: Job? = null
+    private var bondingJob: Job? = null
 
     init {
         startObservingKnownDevices()
+        startObservingBondingStage()
+    }
+
+    private fun startObservingBondingStage() {
+        val engine = pairingEngine ?: return
+        bondingJob = scope.launch {
+            try {
+                engine.bondingStage.collect { stage ->
+                    mutex.withLock {
+                        _state.update { it.copy(bondingStage = stage) }
+                    }
+                }
+            } catch (_: CancellationException) {}
+        }
     }
 
     private fun startObservingKnownDevices() {
@@ -267,6 +285,31 @@ class DevicesViewModel(
         }
     }
 
+    fun pairDevice(device: AndroidDiscoveredDevice, onComplete: ((Boolean) -> Unit)? = null) {
+        selectDevice(device.id)
+        val engine = pairingEngine
+        if (engine != null) {
+            engine.pairAndConnect(device) { stage ->
+                when (stage) {
+                    is BondingStage.Connected -> onComplete?.invoke(true)
+                    is BondingStage.Failed -> onComplete?.invoke(false)
+                    else -> {}
+                }
+            }
+        } else {
+            onComplete?.invoke(true)
+        }
+    }
+
+    fun retryBonding(device: AndroidDiscoveredDevice) {
+        pairingEngine?.pairAndConnect(device)
+    }
+
+    fun resetBondingStage() {
+        pairingEngine?.resetBondingStage()
+        _state.update { it.copy(bondingStage = BondingStage.Idle) }
+    }
+
     fun cleanUp() {
         val session = activeDiscoverySession
         activeDiscoverySession = null
@@ -282,6 +325,8 @@ class DevicesViewModel(
         discoveryJob = null
         repositoryJob?.cancel()
         repositoryJob = null
+        bondingJob?.cancel()
+        bondingJob = null
         _state.update { it.copy(isDiscovering = false) }
     }
 }

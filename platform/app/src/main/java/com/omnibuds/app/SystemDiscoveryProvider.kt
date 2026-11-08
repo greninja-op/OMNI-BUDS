@@ -259,7 +259,7 @@ class SystemDiscoveryProvider(
     }
 
     companion object {
-        private val PROFILES = listOf(BluetoothProfile.A2DP, BluetoothProfile.HEADSET, BluetoothProfile.GATT)
+        private val PROFILES = listOf(BluetoothProfile.A2DP, BluetoothProfile.HEADSET)
 
         /**
          * True only when the system positively reports this profile connected.

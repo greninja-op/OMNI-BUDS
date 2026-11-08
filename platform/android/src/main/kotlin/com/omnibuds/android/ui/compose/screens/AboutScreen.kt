@@ -23,7 +23,8 @@ fun AboutScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(16.dp),
+            .padding(horizontal = 16.dp)
+            .padding(top = 96.dp, bottom = 48.dp),
     ) {
         Text(text = "About ${state.appName}", style = MaterialTheme.typography.headlineSmall)
         Spacer(modifier = Modifier.height(8.dp))

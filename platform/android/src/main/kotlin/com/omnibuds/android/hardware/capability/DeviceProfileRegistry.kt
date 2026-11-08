@@ -1,0 +1,354 @@
+package com.omnibuds.android.hardware.capability
+
+import com.omnibuds.android.ui.compose.model.AudioFormFactor
+
+/**
+ * Universal Device Hardware Profile Registry.
+ *
+ * Pre-configured capability definitions for high-volume audio hardware spanning:
+ * 1. Wireless Neckbands (OnePlus Bullets, realme Buds Wireless, Sony WI, Boat Rockerz, Edifier)
+ * 2. Over-Ear / On-Ear Headsets (Sony WH-1000XM4/5, AirPods Max, Bose QC, Sennheiser Momentum, Crusher)
+ * 3. Open-Back Audiophile Cans (HiFiMAN Deva Pro, Grado)
+ * 4. Open-Ear Hooks & Clips (Nothing Ear open, Bose Ultra Open, Huawei FreeClip, Soundgear)
+ * 5. Bone Conduction Headsets (Shokz OpenRun / OpenRun Pro 2)
+ * 6. True Wireless Earbuds (realme Buds T300, Buds Air 5/6 Pro, AirPods Pro, Galaxy Buds, etc.)
+ */
+object DeviceProfileRegistry {
+
+    data class Profile(
+        val modelKey: String,
+        val manufacturer: String,
+        val modelName: String,
+        val formFactor: AudioFormFactor,
+        val hasAnc: Boolean,
+        val ancDb: Int = 0,
+        val hasMagneticHallSwitch: Boolean = false,
+        val hasCollarVibration: Boolean = false,
+        val hasQuickSwitch: Boolean = false,
+        val hasPhysicalInlineButtons: Boolean = false,
+        val has20LevelAmbient: Boolean = false,
+        val hasSpeakToChat: Boolean = false,
+        val hasClampingOptimizer: Boolean = false,
+        val hasSensoryCrusherBass: Boolean = false,
+        val hasAutoStandbyTimer: Boolean = false,
+        val hasDigitalCrown: Boolean = false,
+        val hasSwipeTouchpad: Boolean = false,
+        val hasDipoleBassRestorer: Boolean = false,
+        val hasAntiLeakageMode: Boolean = false,
+        val hasBinauralCrossfeed: Boolean = false,
+        val hasBoneConductionClarifier: Boolean = false,
+        val hasMultipoint: Boolean = false,
+        val hasLdac: Boolean = false,
+        val hasSpatialAudio360: Boolean = true,
+        val hasGameMode50ms: Boolean = true,
+    )
+
+    private val PROFILES = listOf(
+        // === REALME BUDS T300 (Target Device) ===
+        Profile(
+            modelKey = "t300",
+            manufacturer = "realme",
+            modelName = "realme Buds T300",
+            formFactor = AudioFormFactor.STEM_IN_EAR,
+            hasAnc = true,
+            ancDb = 30,
+            hasSpatialAudio360 = true,
+            hasGameMode50ms = true,
+            hasMultipoint = false, // T300 does NOT support dual connection
+            hasLdac = false, // T300 does NOT support LDAC
+        ),
+
+        // === WIRELESS NECKBANDS ===
+        Profile(
+            modelKey = "bullets wireless z2 anc",
+            manufacturer = "OnePlus",
+            modelName = "Bullets Wireless Z2 ANC",
+            formFactor = AudioFormFactor.NECKBAND,
+            hasAnc = true,
+            ancDb = 45,
+            hasMagneticHallSwitch = true,
+            hasCollarVibration = true,
+            hasQuickSwitch = true,
+            hasPhysicalInlineButtons = true,
+        ),
+        Profile(
+            modelKey = "bullets wireless z2",
+            manufacturer = "OnePlus",
+            modelName = "Bullets Wireless Z2",
+            formFactor = AudioFormFactor.NECKBAND,
+            hasAnc = false,
+            hasMagneticHallSwitch = true,
+            hasCollarVibration = false,
+            hasQuickSwitch = true,
+            hasPhysicalInlineButtons = true,
+        ),
+        Profile(
+            modelKey = "buds wireless 3",
+            manufacturer = "realme",
+            modelName = "Buds Wireless 3 ANC",
+            formFactor = AudioFormFactor.NECKBAND,
+            hasAnc = true,
+            ancDb = 30,
+            hasMagneticHallSwitch = true,
+            hasCollarVibration = false,
+            hasQuickSwitch = true,
+            hasPhysicalInlineButtons = true,
+        ),
+        Profile(
+            modelKey = "buds wireless 5 anc",
+            manufacturer = "realme",
+            modelName = "Buds Wireless 5 ANC",
+            formFactor = AudioFormFactor.NECKBAND,
+            hasAnc = true,
+            ancDb = 50,
+            hasMagneticHallSwitch = true,
+            hasCollarVibration = true,
+            hasQuickSwitch = true,
+            hasPhysicalInlineButtons = true,
+            hasMultipoint = true,
+            hasLdac = true,
+        ),
+        Profile(
+            modelKey = "enco m32",
+            manufacturer = "OPPO",
+            modelName = "Enco M32",
+            formFactor = AudioFormFactor.NECKBAND,
+            hasAnc = false,
+            hasMagneticHallSwitch = true,
+            hasQuickSwitch = true,
+            hasPhysicalInlineButtons = true,
+        ),
+        Profile(
+            modelKey = "wi-c100",
+            manufacturer = "Sony",
+            modelName = "Sony WI-C100",
+            formFactor = AudioFormFactor.NECKBAND,
+            hasAnc = false,
+            hasPhysicalInlineButtons = true,
+            hasAutoStandbyTimer = true,
+        ),
+        Profile(
+            modelKey = "wi-1000xm2",
+            manufacturer = "Sony",
+            modelName = "Sony WI-1000XM2",
+            formFactor = AudioFormFactor.NECKBAND,
+            hasAnc = true,
+            ancDb = 40,
+            hasCollarVibration = true,
+            hasPhysicalInlineButtons = true,
+            has20LevelAmbient = true,
+            hasLdac = true,
+        ),
+        Profile(
+            modelKey = "rockerz",
+            manufacturer = "boAt",
+            modelName = "boAt Rockerz Series",
+            formFactor = AudioFormFactor.NECKBAND,
+            hasAnc = false,
+            hasPhysicalInlineButtons = true,
+        ),
+        Profile(
+            modelKey = "edifier w210bt",
+            manufacturer = "Edifier",
+            modelName = "Edifier W210BT",
+            formFactor = AudioFormFactor.NECKBAND,
+            hasAnc = false,
+            hasPhysicalInlineButtons = true,
+            hasLdac = true,
+        ),
+
+        // === OVER-EAR / ON-EAR HEADSETS ===
+        Profile(
+            modelKey = "wh-1000xm5",
+            manufacturer = "Sony",
+            modelName = "Sony WH-1000XM5",
+            formFactor = AudioFormFactor.HEADSET_OVER_ON_EAR,
+            hasAnc = true,
+            ancDb = 50,
+            has20LevelAmbient = true,
+            hasSpeakToChat = true,
+            hasClampingOptimizer = true,
+            hasSwipeTouchpad = true,
+            hasAutoStandbyTimer = true,
+            hasMultipoint = true,
+            hasLdac = true,
+        ),
+        Profile(
+            modelKey = "wh-1000xm4",
+            manufacturer = "Sony",
+            modelName = "Sony WH-1000XM4",
+            formFactor = AudioFormFactor.HEADSET_OVER_ON_EAR,
+            hasAnc = true,
+            ancDb = 45,
+            has20LevelAmbient = true,
+            hasSpeakToChat = true,
+            hasClampingOptimizer = true,
+            hasSwipeTouchpad = true,
+            hasAutoStandbyTimer = true,
+            hasMultipoint = true,
+            hasLdac = true,
+        ),
+        Profile(
+            modelKey = "airpods max",
+            manufacturer = "Apple",
+            modelName = "Apple AirPods Max",
+            formFactor = AudioFormFactor.HEADSET_OVER_ON_EAR,
+            hasAnc = true,
+            ancDb = 48,
+            hasDigitalCrown = true,
+            hasClampingOptimizer = true,
+            hasAutoStandbyTimer = true,
+            hasSpatialAudio360 = true,
+        ),
+        Profile(
+            modelKey = "quietcomfort",
+            manufacturer = "Bose",
+            modelName = "Bose QuietComfort Series",
+            formFactor = AudioFormFactor.HEADSET_OVER_ON_EAR,
+            hasAnc = true,
+            ancDb = 45,
+            hasClampingOptimizer = true,
+            hasAutoStandbyTimer = true,
+            hasMultipoint = true,
+        ),
+        Profile(
+            modelKey = "momentum 4",
+            manufacturer = "Sennheiser",
+            modelName = "Sennheiser Momentum 4 Wireless",
+            formFactor = AudioFormFactor.HEADSET_OVER_ON_EAR,
+            hasAnc = true,
+            ancDb = 48,
+            has20LevelAmbient = true,
+            hasSwipeTouchpad = true,
+            hasAutoStandbyTimer = true,
+            hasMultipoint = true,
+        ),
+        Profile(
+            modelKey = "crusher",
+            manufacturer = "Skullcandy",
+            modelName = "Skullcandy Crusher Evo / ANC 2",
+            formFactor = AudioFormFactor.HEADSET_OVER_ON_EAR,
+            hasAnc = true,
+            ancDb = 35,
+            hasSensoryCrusherBass = true,
+            hasAutoStandbyTimer = true,
+        ),
+        Profile(
+            modelKey = "major",
+            manufacturer = "Marshall",
+            modelName = "Marshall Major IV / V",
+            formFactor = AudioFormFactor.HEADSET_OVER_ON_EAR,
+            hasAnc = false,
+            hasAutoStandbyTimer = true,
+        ),
+        Profile(
+            modelKey = "tour one",
+            manufacturer = "JBL",
+            modelName = "JBL Tour One M2",
+            formFactor = AudioFormFactor.HEADSET_OVER_ON_EAR,
+            hasAnc = true,
+            ancDb = 42,
+            has20LevelAmbient = true,
+            hasSwipeTouchpad = true,
+            hasAutoStandbyTimer = true,
+            hasMultipoint = true,
+        ),
+
+        // === OPEN-BACK AUDIOPHILE HEADPHONES ===
+        Profile(
+            modelKey = "deva",
+            manufacturer = "HiFiMAN",
+            modelName = "HiFiMAN Deva Pro Wireless",
+            formFactor = AudioFormFactor.HEADSET_OPEN_BACK,
+            hasAnc = false, // Acoustic physics: open backs cannot seal or do ANC
+            hasDipoleBassRestorer = true,
+            hasAntiLeakageMode = true,
+            hasBinauralCrossfeed = true,
+            hasLdac = true,
+        ),
+        Profile(
+            modelKey = "ananda",
+            manufacturer = "HiFiMAN",
+            modelName = "HiFiMAN Ananda-BT",
+            formFactor = AudioFormFactor.HEADSET_OPEN_BACK,
+            hasAnc = false,
+            hasDipoleBassRestorer = true,
+            hasAntiLeakageMode = true,
+            hasBinauralCrossfeed = true,
+            hasLdac = true,
+        ),
+        Profile(
+            modelKey = "grado",
+            manufacturer = "Grado",
+            modelName = "Grado GW100x Wireless Open-Back",
+            formFactor = AudioFormFactor.HEADSET_OPEN_BACK,
+            hasAnc = false,
+            hasDipoleBassRestorer = true,
+            hasAntiLeakageMode = true,
+            hasBinauralCrossfeed = true,
+        ),
+
+        // === OPEN-EAR HOOKS & CLIPS ===
+        Profile(
+            modelKey = "ear (open)",
+            manufacturer = "Nothing",
+            modelName = "Nothing Ear (open)",
+            formFactor = AudioFormFactor.OPEN_EAR_HOOK,
+            hasAnc = false,
+            hasDipoleBassRestorer = true,
+            hasAntiLeakageMode = true,
+            hasMultipoint = true,
+        ),
+        Profile(
+            modelKey = "ultra open",
+            manufacturer = "Bose",
+            modelName = "Bose Ultra Open Earbuds",
+            formFactor = AudioFormFactor.OPEN_EAR_CLIP,
+            hasAnc = false,
+            hasDipoleBassRestorer = true,
+            hasAntiLeakageMode = true,
+            hasMultipoint = true,
+        ),
+        Profile(
+            modelKey = "freeclip",
+            manufacturer = "Huawei",
+            modelName = "Huawei FreeClip",
+            formFactor = AudioFormFactor.OPEN_EAR_CLIP,
+            hasAnc = false,
+            hasDipoleBassRestorer = true,
+            hasAntiLeakageMode = true,
+            hasMultipoint = true,
+        ),
+        Profile(
+            modelKey = "soundgear",
+            manufacturer = "JBL",
+            modelName = "JBL Soundgear Sense",
+            formFactor = AudioFormFactor.OPEN_EAR_HOOK,
+            hasAnc = false,
+            hasDipoleBassRestorer = true,
+            hasAntiLeakageMode = true,
+            hasMultipoint = true,
+        ),
+
+        // === BONE CONDUCTION ===
+        Profile(
+            modelKey = "openrun",
+            manufacturer = "Shokz",
+            modelName = "Shokz OpenRun / OpenRun Pro",
+            formFactor = AudioFormFactor.BONE_CONDUCTION,
+            hasAnc = false,
+            hasBoneConductionClarifier = true,
+            hasDipoleBassRestorer = true,
+            hasMultipoint = true,
+        ),
+    )
+
+    /**
+     * Resolves a known profile matching [deviceName].
+     */
+    fun findProfile(deviceName: String?): Profile? {
+        val name = (deviceName ?: "").lowercase().trim()
+        return PROFILES.firstOrNull { name.contains(it.modelKey) }
+    }
+}
+

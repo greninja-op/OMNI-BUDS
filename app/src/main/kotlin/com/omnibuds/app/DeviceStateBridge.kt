@@ -116,7 +116,8 @@ class DeviceStateBridge(
             "eq_preset",
             "spatial_audio",
             "touch_controls",
-            "low_latency",
+            "game_mode",
+            "volume_enhancer",
             "wear_detection",
         )
         if (firstRegistration) {
@@ -147,6 +148,13 @@ class DeviceStateBridge(
                 // while the device is disconnected.
                 lastBattery.remove(id)
                 lastComponents.remove(id)
+                events += DeviceStateEvent.BatteryUpdated(
+                    deviceId = gid,
+                    sessionId = null,
+                    sequence = nextSeq(id),
+                    sourceId = "android-system",
+                    battery = BatteryState.Unknown,
+                )
             } else {
                 events += DeviceStateEvent.CapabilitiesUpdated(
                     deviceId = gid,
@@ -221,6 +229,20 @@ class DeviceStateBridge(
                 charging = null,
                 observation = ObservedValue(Unit, provenance(null)),
             ),
+        )
+        scope.launch { repository.ingest(event) }
+    }
+
+    /** Clears all battery telemetry when a device disconnects or Bluetooth is disabled. */
+    fun clearBattery(address: String) {
+        lastBattery.remove(address)
+        lastComponents.remove(address)
+        val event = DeviceStateEvent.BatteryUpdated(
+            deviceId = GlobalDeviceId(address),
+            sessionId = null,
+            sequence = nextSeq(address),
+            sourceId = "android-system",
+            battery = BatteryState.Unknown,
         )
         scope.launch { repository.ingest(event) }
     }

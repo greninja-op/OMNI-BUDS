@@ -8,6 +8,8 @@ import com.omnibuds.android.hardware.engine.drivers.NothingEarbudsDriver
 import com.omnibuds.android.hardware.engine.drivers.OnePlusHeyMelodyDriver
 import com.omnibuds.android.hardware.engine.drivers.SamsungGalaxyBudsDriver
 import com.omnibuds.android.hardware.engine.drivers.XiaomiAirohaRaceDriver
+import com.omnibuds.android.hardware.protocol.AncByteMapping
+import com.omnibuds.android.hardware.protocol.OpcodeRemapMatrix
 import com.omnibuds.android.hardware.protocol.TwsBatteryReport
 import java.util.concurrent.ConcurrentHashMap
 
@@ -54,6 +56,7 @@ class VendorProtocolRouter {
 
     fun getDriverForAddress(address: String): IVendorDriver? = resolvedDrivers[address]
 
+    @SuppressLint("MissingPermission")
     fun registerDiscoveredServices(address: String, device: BluetoothDevice, serviceUuids: List<String>) {
         val name = try { device.name } catch (_: Exception) { null }
         for (driver in drivers) {
@@ -66,12 +69,45 @@ class VendorProtocolRouter {
         }
     }
 
+    fun getAncMapping(address: String): AncByteMapping = OpcodeRemapMatrix.getMapping(address)
+
+    fun cycleAncProfile(address: String): AncByteMapping = OpcodeRemapMatrix.cycleProfile(address)
+
+    fun setCustomAncMapping(address: String, off: Byte, anc: Byte, trans: Byte): AncByteMapping =
+        OpcodeRemapMatrix.setCustomMapping(address, off, anc, trans)
+
     /**
-     * Builds the matching ANC command packet for the given device.
+     * Builds the matching ANC command packet for the given device with opcode remap matrix applied.
      */
     fun buildAncCommand(device: BluetoothDevice, mode: String, serviceUuids: List<String> = emptyList()): ByteArray {
         val driver = resolveDriver(device, serviceUuids)
-        return driver.buildAncCommand(mode)
+        val mapping = getAncMapping(device.address)
+        return driver.buildFullHardwareAncCommand(mode, mapping)
+    }
+
+    /**
+     * Builds status query packet to retrieve current ANC / noise control status from hardware.
+     */
+    fun buildAncQueryCommand(device: BluetoothDevice, serviceUuids: List<String> = emptyList()): ByteArray? {
+        val driver = resolveDriver(device, serviceUuids)
+        return driver.buildAncQueryCommand()
+    }
+
+    /**
+     * Parses incoming byte payload for ANC mode ACK, notification, or earbud pinch/tap.
+     */
+    fun parseAncModeNotification(address: String, bytes: ByteArray): String? {
+        val driver = getDriverForAddress(address) ?: drivers.first()
+        val mapping = getAncMapping(address)
+        return driver.parseAncModeNotification(bytes, mapping)
+    }
+
+    /**
+     * Checks if the incoming packet is a noise control command execution ACK for the driver.
+     */
+    fun isAncAck(address: String, bytes: ByteArray): Boolean {
+        val driver = getDriverForAddress(address) ?: drivers.first()
+        return driver.isAncAck(bytes)
     }
 
     /**

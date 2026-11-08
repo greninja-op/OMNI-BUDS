@@ -26,7 +26,8 @@ object FastPairProtocolParser {
 
         val left = parseLevel(b0)
         val right = parseLevel(b1)
-        val case = parseLevel(b2)
+        // Case is only valid when in 1..100 (0x00, 0x7F, 0xFF represent pogo pins offline / both buds out)
+        val case = (b2 and 0x7F).takeIf { it in 1..100 }
 
         val leftChg = (b0 and 0x80) != 0
         val rightChg = (b1 and 0x80) != 0
@@ -42,6 +43,7 @@ object FastPairProtocolParser {
             rightCharging = rightChg,
             caseCharging = caseChg,
             rawHex = HexUtils.formatHex(bytes),
+            sourceProtocol = "Fast Pair (0xFE2C)",
         )
     }
 }

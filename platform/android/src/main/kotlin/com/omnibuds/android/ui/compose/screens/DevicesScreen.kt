@@ -69,7 +69,8 @@ fun DevicesScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(horizontal = 16.dp, vertical = 8.dp),
+            .padding(horizontal = 16.dp)
+            .padding(top = 96.dp, bottom = 48.dp),
     ) {
         state.errorBanner?.let { banner ->
             ErrorBanner(
@@ -276,13 +277,15 @@ fun DeviceItemCard(
                             MaterialTheme.colorScheme.onSurfaceVariant
                         },
                     )
-                    device.batterySummary?.let { battery ->
-                        Spacer(modifier = Modifier.width(8.dp))
-                        Text(
-                            text = battery,
-                            style = MaterialTheme.typography.labelMedium,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        )
+                    if (connected) {
+                        device.batterySummary?.let { battery ->
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Text(
+                                text = battery,
+                                style = MaterialTheme.typography.labelMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
                     }
                 }
             }

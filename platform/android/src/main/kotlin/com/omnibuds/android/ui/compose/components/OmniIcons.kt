@@ -285,6 +285,38 @@ object OmniIcons {
         }.build()
     }
 
+    /** Ambient / Normal mode — neutral bypass state (both ANC and Transparency inactive). */
+    val AmbientNormal: ImageVector by lazy {
+        ImageVector.Builder(
+            name = "OmniAmbientNormal",
+            defaultWidth = 24.dp,
+            defaultHeight = 24.dp,
+            viewportWidth = 24f,
+            viewportHeight = 24f,
+        ).apply {
+            path(fill = SolidColor(Color.Black)) {
+                moveTo(13f, 3f)
+                horizontalLineToRelative(-2f)
+                verticalLineToRelative(9f)
+                horizontalLineToRelative(2f)
+                verticalLineTo(3f)
+                close()
+                moveToRelative(4.83f, 2.17f)
+                lineToRelative(-1.42f, 1.42f)
+                curveTo(17.99f, 7.86f, 19f, 9.81f, 19f, 12f)
+                curveToRelative(0f, 3.87f, -3.13f, 7f, -7f, 7f)
+                reflectiveCurveToRelative(-7f, -3.13f, -7f, -7f)
+                curveToRelative(0f, -2.19f, 1.01f, -4.14f, 2.58f, -5.42f)
+                lineTo(6.17f, 4.17f)
+                curveTo(4.23f, 5.71f, 3f, 8.22f, 3f, 12f)
+                curveToRelative(0f, 4.97f, 4.03f, 9f, 9f, 9f)
+                reflectiveCurveToRelative(9f, -4.03f, 9f, -9f)
+                curveToRelative(0f, -2.78f, -1.23f, -5.29f, -3.17f, -6.83f)
+                close()
+            }
+        }.build()
+    }
+
     /** Transparency — sound bars passing through, unblocked. */
     val SoundWaves: ImageVector by lazy {
         ImageVector.Builder(
@@ -342,7 +374,7 @@ object OmniIcons {
         }.build()
     }
 
-    /** Right earbud — battery ring glyph. */
+    /** Right earbud — battery ring glyph (ergonomic angled silhouette). */
     val BudRight: ImageVector by lazy {
         ImageVector.Builder(
             name = "OmniBudRight",
@@ -352,22 +384,20 @@ object OmniIcons {
             viewportHeight = 24f,
         ).apply {
             path(fill = SolidColor(Color.Black)) {
-                moveTo(12.4f, 2.2f)
-                curveTo(16.8f, 2.2f, 19.9f, 5.5f, 19.9f, 9.7f)
-                curveTo(19.9f, 12.0f, 19.2f, 14.0f, 18.0f, 15.7f)
-                lineTo(20.6f, 20.3f)
-                curveTo(21.2f, 21.4f, 20.5f, 22.7f, 19.3f, 22.6f)
-                curveTo(18.6f, 22.6f, 18.0f, 22.1f, 17.6f, 21.4f)
-                lineTo(15.2f, 16.9f)
-                curveTo(14.3f, 17.4f, 13.2f, 17.7f, 12.0f, 17.7f)
-                curveTo(7.7f, 17.7f, 4.4f, 14.2f, 4.4f, 9.9f)
-                curveTo(4.4f, 5.6f, 8.0f, 2.2f, 12.4f, 2.2f)
+                moveTo(16.5f, 4.5f)
+                curveTo(14.5f, 2.5f, 10.5f, 3.2f, 9.2f, 5.5f)
+                curveTo(7.5f, 8.5f, 6.5f, 10.5f, 7.5f, 12.0f)
+                curveTo(8.5f, 13.5f, 10.8f, 13.0f, 12.5f, 11.8f)
+                lineTo(13.8f, 19.5f)
+                curveTo(14.0f, 20.8f, 15.8f, 20.8f, 16.0f, 19.5f)
+                lineTo(16.8f, 11.0f)
+                curveTo(18.8f, 9.8f, 18.5f, 6.5f, 16.5f, 4.5f)
                 close()
             }
         }.build()
     }
 
-    /** Left earbud — battery ring glyph. */
+    /** Left earbud — battery ring glyph (ergonomic angled silhouette). */
     val BudLeft: ImageVector by lazy {
         ImageVector.Builder(
             name = "OmniBudLeft",
@@ -377,16 +407,14 @@ object OmniIcons {
             viewportHeight = 24f,
         ).apply {
             path(fill = SolidColor(Color.Black)) {
-                moveTo(11.6f, 2.2f)
-                curveTo(7.2f, 2.2f, 4.1f, 5.5f, 4.1f, 9.7f)
-                curveTo(4.1f, 12.0f, 4.8f, 14.0f, 6.0f, 15.7f)
-                lineTo(3.4f, 20.3f)
-                curveTo(2.8f, 21.4f, 3.5f, 22.7f, 4.7f, 22.6f)
-                curveTo(5.4f, 22.6f, 6.0f, 22.1f, 6.4f, 21.4f)
-                lineTo(8.8f, 16.9f)
-                curveTo(9.7f, 17.4f, 10.8f, 17.7f, 12.0f, 17.7f)
-                curveTo(16.3f, 17.7f, 19.6f, 14.2f, 19.6f, 9.9f)
-                curveTo(19.6f, 5.6f, 16.0f, 2.2f, 11.6f, 2.2f)
+                moveTo(7.5f, 4.5f)
+                curveTo(9.5f, 2.5f, 13.5f, 3.2f, 14.8f, 5.5f)
+                curveTo(16.5f, 8.5f, 17.5f, 10.5f, 16.5f, 12.0f)
+                curveTo(15.5f, 13.5f, 13.2f, 13.0f, 11.5f, 11.8f)
+                lineTo(10.2f, 19.5f)
+                curveTo(10.0f, 20.8f, 8.2f, 20.8f, 8.0f, 19.5f)
+                lineTo(7.2f, 11.0f)
+                curveTo(5.2f, 9.8f, 5.5f, 6.5f, 7.5f, 4.5f)
                 close()
             }
         }.build()
@@ -656,6 +684,66 @@ object OmniIcons {
                 moveTo(18f, 15.5f)
                 arcTo(2.5f, 2.5f, 0f, false, true, 18f, 20.5f)
                 arcTo(2.5f, 2.5f, 0f, false, true, 18f, 15.5f)
+                close()
+            }
+        }.build()
+    }
+
+    /** Radar / Scanner icon for Bluetooth discovery */
+    val Radar: ImageVector by lazy {
+        ImageVector.Builder(
+            name = "OmniRadar",
+            defaultWidth = 24.dp,
+            defaultHeight = 24.dp,
+            viewportWidth = 24f,
+            viewportHeight = 24f,
+        ).apply {
+            path(fill = SolidColor(Color.Black)) {
+                moveTo(12f, 2f)
+                curveTo(6.48f, 2f, 2f, 6.48f, 2f, 12f)
+                curveToRelative(0f, 5.52f, 4.48f, 10f, 10f, 10f)
+                reflectiveCurveToRelative(10f, -4.48f, 10f, -10f)
+                curveTo(22f, 6.48f, 17.52f, 2f, 12f, 2f)
+                close()
+                moveTo(12f, 20f)
+                curveToRelative(-4.42f, 0f, -8f, -3.58f, -8f, -8f)
+                reflectiveCurveToRelative(3.58f, -8f, 8f, -8f)
+                reflectiveCurveToRelative(8f, 3.58f, 8f, 8f)
+                reflectiveCurveToRelative(-3.58f, 8f, -8f, 8f)
+                close()
+                moveTo(12f, 6f)
+                curveToRelative(-3.31f, 0f, -6f, 2.69f, -6f, 6f)
+                curveToRelative(0f, 1.42f, 0.5f, 2.73f, 1.33f, 3.76f)
+                lineTo(12f, 12f)
+                verticalLineTo(7f)
+                curveToRelative(0f, -0.55f, 0.45f, -1f, 1f, -1f)
+                reflectiveCurveToRelative(1f, 0.45f, 1f, 1f)
+                verticalLineToRelative(5f)
+                lineToRelative(4.67f, 3.76f)
+                curveTo(17.5f, 14.73f, 18f, 13.42f, 18f, 12f)
+                curveToRelative(0f, -3.31f, -2.69f, -6f, -6f, -6f)
+                close()
+            }
+        }.build()
+    }
+
+    /** Shield / Security icon */
+    val Shield: ImageVector by lazy {
+        ImageVector.Builder(
+            name = "OmniShield",
+            defaultWidth = 24.dp,
+            defaultHeight = 24.dp,
+            viewportWidth = 24f,
+            viewportHeight = 24f,
+        ).apply {
+            path(fill = SolidColor(Color.Black)) {
+                moveTo(12f, 1f)
+                lineTo(3f, 5f)
+                verticalLineToRelative(6f)
+                curveToRelative(0f, 5.55f, 3.84f, 10.74f, 9f, 12f)
+                curveToRelative(5.16f, -1.26f, 9f, -6.45f, 9f, -12f)
+                verticalLineTo(5f)
+                lineToRelative(-9f, -4f)
                 close()
             }
         }.build()

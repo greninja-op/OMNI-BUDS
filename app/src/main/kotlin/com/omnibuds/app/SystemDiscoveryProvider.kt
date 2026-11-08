@@ -278,7 +278,11 @@ class SystemDiscoveryProvider(
     }
 
     companion object {
-        private val PROFILES = listOf(BluetoothProfile.A2DP, BluetoothProfile.HEADSET, BluetoothProfile.GATT)
+        // Audio wearables are only connected when A2DP (media) or HEADSET (calls) profile is connected.
+        // GATT is intentionally excluded: our own app connects a GATT client for telemetry/control,
+        // so checking GATT creates a ghost connection that keeps the device reported as connected
+        // even after the user disconnects or docks the earbuds!
+        private val PROFILES = listOf(BluetoothProfile.A2DP, BluetoothProfile.HEADSET)
 
         /**
          * True only when the system positively reports this profile connected.

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.OmniBuds" parent="android:Theme.Material.NoActionBar">
-        <item name="android:windowBackground">#121316</item>
-        <item name="android:statusBarColor">#121316</item>
-        <item name="android:navigationBarColor">#121316</item>
+        <item name="android:windowBackground">#000000</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
     </style>
 </resources>

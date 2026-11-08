@@ -7,14 +7,15 @@
 
 [versions]
 kotlin = "2.0.21"
-kotlinCoroutines = "1.9.0"
+kotlinCoroutines = "1.10.1"
 androidGradlePlugin = "8.7.3"
 androidCompileSdk = "35"
 androidMinSdk = "26"
 androidTargetSdk = "35"
-junitJupiter = "5.10.1"
+junitJupiter = "5.11.4"
+junitPlatformLauncher = "1.11.4"
 junit4 = "4.13.2"
-androidxTestRunner = "1.6.1"
+androidxTestRunner = "1.6.2"
 androidxTestCore = "1.6.1"
 androidxTestExtJunit = "1.2.1"
 
@@ -28,7 +29,7 @@ kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-c
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinCoroutines" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junitJupiter" }
-junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher", version = "1.10.1" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher", version.ref = "junitPlatformLauncher" }
 
 # Compose dependencies
 androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }

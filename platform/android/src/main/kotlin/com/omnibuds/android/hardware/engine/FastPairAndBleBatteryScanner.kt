@@ -105,6 +105,10 @@ class FastPairAndBleBatteryScanner(
             ScanFilter.Builder()
                 .setManufacturerData(AppleProximityParser.APPLE_MANUFACTURER_ID, null)
                 .build(),
+            // 5. Realme / BBK / OnePlus Manufacturer ID (0x072F)
+            ScanFilter.Builder()
+                .setManufacturerData(0x072F, null)
+                .build(),
         )
 
         val settings = ScanSettings.Builder()

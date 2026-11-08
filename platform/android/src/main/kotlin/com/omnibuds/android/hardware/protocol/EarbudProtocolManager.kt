@@ -22,6 +22,9 @@ object EarbudProtocolManager {
     val batteryReports: SharedFlow<Pair<String, TwsBatteryReport>>
         get() = UniversalTwsEngine.batteryReports
 
+    val latestBatteryReports: StateFlow<Map<String, TwsBatteryReport>>
+        get() = UniversalTwsEngine.latestBatteryReports
+
     val diagnosticLogs: StateFlow<List<DiagnosticLogEntry>>
         get() = UniversalTwsEngine.diagnosticLogs
 
@@ -31,8 +34,34 @@ object EarbudProtocolManager {
     val lastRawPackets: StateFlow<Map<String, String>>
         get() = UniversalTwsEngine.lastRawPackets
 
+    val lastSentPackets: StateFlow<Map<String, String>>
+        get() = UniversalTwsEngine.lastSentPackets
+
+    val confirmedAncMode: StateFlow<Map<String, String>>
+        get() = UniversalTwsEngine.confirmedAncMode
+
+    val pendingAncMode: StateFlow<Map<String, String?>>
+        get() = UniversalTwsEngine.pendingAncMode
+
     val connectionStatus: StateFlow<Map<String, String>>
         get() = UniversalTwsEngine.connectionStatus
+
+    val noiseControlDiagnosticStates: StateFlow<Map<String, com.omnibuds.android.hardware.engine.NoiseControlDiagnosticState>>
+        get() = UniversalTwsEngine.bleSequencer.diagnosticStates
+
+    fun getAncMapping(address: String): AncByteMapping = UniversalTwsEngine.getAncMapping(address)
+
+    fun cycleAncProfile(address: String): AncByteMapping = UniversalTwsEngine.cycleAncProfile(address)
+
+    fun setCustomAncMapping(address: String, off: Byte, anc: Byte, trans: Byte): AncByteMapping =
+        UniversalTwsEngine.setCustomAncMapping(address, off, anc, trans)
+
+    @SuppressLint("MissingPermission")
+    suspend fun testOffByteVariant(device: BluetoothDevice, candidateOffByte: Byte): Boolean =
+        UniversalTwsEngine.testOffByteVariant(device, candidateOffByte)
+
+    fun lockInOffByteVariant(address: String, candidateOffByte: Byte): AncByteMapping =
+        UniversalTwsEngine.lockInOffByteVariant(address, candidateOffByte)
 
     /**
      * Connects to a device via BLE GATT and Classic Bluetooth RFCOMM.
@@ -84,15 +113,78 @@ object EarbudProtocolManager {
     }
 
     /**
-     * Sends Touch Gesture Configuration: "bud:gesture:action"
+     * Sends Dynamic Bass command.
+     */
+    @SuppressLint("MissingPermission")
+    suspend fun sendDynamicBass(device: BluetoothDevice, enabled: Boolean, level: Int = 3): Boolean {
+        return UniversalTwsEngine.setDynamicBass(device, enabled, level)
+    }
+
+    /**
+     * Sends Volume Enhancer command.
+     */
+    @SuppressLint("MissingPermission")
+    suspend fun sendVolumeEnhancer(device: BluetoothDevice, enabled: Boolean): Boolean {
+        return UniversalTwsEngine.setVolumeEnhancer(device, enabled)
+    }
+
+    /**
+     * Sends Touch Gesture Configuration: "bud:gesture:action" or full struct.
      */
     @SuppressLint("MissingPermission")
     suspend fun sendTouchControl(device: BluetoothDevice, config: String): Boolean {
         val parts = config.split(":")
-        if (parts.size != 3) return false
-        val (bud, gesture, action) = parts
-        val packet = RealmeProtocolParser.buildTouchGestureCommand(bud, gesture, action)
-        return UniversalTwsEngine.sendRawHex(device, HexUtils.formatHex(packet))
+        if (parts.size == 3) {
+            val (bud, gesture, action) = parts
+            // Master enable wake-up + single write
+            val enablePkts = RealmeProtocolParser.buildTouchMasterEnableCommands(true)
+            for (p in enablePkts) UniversalTwsEngine.sendRawHex(device, HexUtils.formatHex(p))
+            val packet = RealmeProtocolParser.buildTouchGestureCommand(bud, gesture, action)
+            return UniversalTwsEngine.sendRawHex(device, HexUtils.formatHex(packet))
+        }
+        return false
+    }
+
+    /**
+     * Sends the complete synchronized Left + Right touch gesture matrix.
+     */
+    @SuppressLint("MissingPermission")
+    suspend fun sendFullTouchMatrix(
+        device: BluetoothDevice,
+        leftDouble: String,
+        rightDouble: String,
+        leftTriple: String,
+        rightTriple: String,
+        leftHold: String,
+        rightHold: String,
+        ancCycleBitmask: Byte = 0x06,
+    ): Boolean {
+        return UniversalTwsEngine.setTouchControls(
+            device = device,
+            leftDouble = leftDouble,
+            rightDouble = rightDouble,
+            leftTriple = leftTriple,
+            rightTriple = rightTriple,
+            leftHold = leftHold,
+            rightHold = rightHold,
+            ancCycleBitmask = ancCycleBitmask,
+        )
+    }
+
+    /**
+     * Restores default touch controls on earbuds.
+     */
+    @SuppressLint("MissingPermission")
+    suspend fun restoreDefaultTouchControls(device: BluetoothDevice): Boolean {
+        return UniversalTwsEngine.restoreDefaultTouchControls(device)
+    }
+
+    /**
+     * Rings earbud: bud = "Left", "Right", or "Both".
+     */
+    @SuppressLint("MissingPermission")
+    fun ringEarbud(device: BluetoothDevice?, bud: String, ring: Boolean) {
+        UniversalTwsEngine.ringEarbud(device, bud, ring)
     }
 
     /**
@@ -110,4 +202,63 @@ object EarbudProtocolManager {
     suspend fun queryBattery(device: BluetoothDevice) {
         UniversalTwsEngine.queryBattery(device)
     }
+
+    @SuppressLint("MissingPermission")
+    fun getCapabilityManifest(device: BluetoothDevice) = UniversalTwsEngine.getCapabilityManifest(device)
+
+    @SuppressLint("MissingPermission")
+    suspend fun sendProAncLevel(device: BluetoothDevice, level: String) = UniversalTwsEngine.setProAncLevel(device, level)
+
+    @SuppressLint("MissingPermission")
+    suspend fun sendWindNoiseReduction(device: BluetoothDevice, enabled: Boolean) = UniversalTwsEngine.setWindNoiseReduction(device, enabled)
+
+    @SuppressLint("MissingPermission")
+    suspend fun sendTransparencyLevel(device: BluetoothDevice, level: Int, voiceBoost: Boolean) = UniversalTwsEngine.setTransparencyLevel(device, level, voiceBoost)
+
+    @SuppressLint("MissingPermission")
+    suspend fun sendInEarDetection(device: BluetoothDevice, enabled: Boolean) = UniversalTwsEngine.setInEarDetection(device, enabled)
+
+    @SuppressLint("MissingPermission")
+    suspend fun sendMultipoint(device: BluetoothDevice, enabled: Boolean) = UniversalTwsEngine.setMultipoint(device, enabled)
+
+    @SuppressLint("MissingPermission")
+    suspend fun sendConversationalAwareness(device: BluetoothDevice, enabled: Boolean) = UniversalTwsEngine.setConversationalAwareness(device, enabled)
+
+    @SuppressLint("MissingPermission")
+    suspend fun sendPinchSpeed(device: BluetoothDevice, speed: String) = UniversalTwsEngine.setPinchSpeed(device, speed)
+
+    @SuppressLint("MissingPermission")
+    suspend fun sendStemSlide(device: BluetoothDevice, enabled: Boolean) = UniversalTwsEngine.setStemSlide(device, enabled)
+
+    @SuppressLint("MissingPermission")
+    suspend fun runPersonalizedAnc(device: BluetoothDevice) = UniversalTwsEngine.runPersonalizedAnc(device)
+
+    @SuppressLint("MissingPermission")
+    suspend fun runEarbudFitTest(device: BluetoothDevice) = UniversalTwsEngine.runEarbudFitTest(device)
+
+    fun sendDolbyAtmos(enabled: Boolean, scenario: String = "SMART", environment: String = "INDOOR") = UniversalTwsEngine.setDolbyAtmos(enabled, scenario, environment)
+
+    fun sendMonoAudio(enabled: Boolean) = UniversalTwsEngine.setMonoAudio(enabled)
+
+    fun sendChannelBalance(balance: Float) = UniversalTwsEngine.setChannelBalance(balance)
+
+    fun getEstimatedSplDb(): Float = UniversalTwsEngine.getEstimatedSplDb()
+
+    @SuppressLint("MissingPermission")
+    suspend fun sendHiResMode(device: BluetoothDevice, enabled: Boolean) = UniversalTwsEngine.setHiResMode(device, enabled)
+
+    @SuppressLint("MissingPermission")
+    fun sendForceHighBitrateAac(device: BluetoothDevice, enabled: Boolean) = UniversalTwsEngine.forceHighBitrateAac(device, enabled)
+
+    suspend fun playHearingTestTone(freqHz: Int, ear: String, volumeDb: Float) = UniversalTwsEngine.playHearingTestTone(freqHz, ear, volumeDb)
+
+    fun stopHearingTestTone() = UniversalTwsEngine.stopHearingTestTone()
+
+    fun recordHearingResult(ear: String, freqHz: Int, heardDb: Float) = UniversalTwsEngine.recordHearingResult(ear, freqHz, heardDb)
+
+    fun applyHearingAccommodations(preset: String, intensity: String) = UniversalTwsEngine.applyHearingAccommodations(preset, intensity)
+
+    fun playMindRelax(soundscape: String, durationMinutes: Int = 0) = UniversalTwsEngine.playMindRelax(soundscape, durationMinutes)
+
+    fun stopMindRelax() = UniversalTwsEngine.stopMindRelax()
 }

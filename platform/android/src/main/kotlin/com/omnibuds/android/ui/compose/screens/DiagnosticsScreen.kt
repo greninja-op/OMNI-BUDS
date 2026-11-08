@@ -36,7 +36,8 @@ fun DiagnosticsScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(16.dp),
+            .padding(horizontal = 16.dp)
+            .padding(top = 96.dp, bottom = 48.dp),
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),

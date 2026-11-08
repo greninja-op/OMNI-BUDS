@@ -151,6 +151,19 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         try {
+            androidx.core.view.WindowCompat.setDecorFitsSystemWindows(window, false)
+            @Suppress("DEPRECATION")
+            window.statusBarColor = android.graphics.Color.TRANSPARENT
+            @Suppress("DEPRECATION")
+            window.navigationBarColor = android.graphics.Color.BLACK
+            androidx.core.view.WindowCompat.getInsetsController(window, window.decorView)?.let { controller ->
+                controller.isAppearanceLightStatusBars = false
+                controller.isAppearanceLightNavigationBars = false
+            }
+        } catch (_: Exception) {
+            // System bar customization fallback
+        }
+        try {
             val stored = getSharedPreferences(PREFS_PRODUCT_OVERRIDES, MODE_PRIVATE).all
             for ((key, value) in stored) {
                 if (value !is String) continue

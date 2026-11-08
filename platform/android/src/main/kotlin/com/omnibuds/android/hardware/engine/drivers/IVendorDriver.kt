@@ -1,5 +1,6 @@
 package com.omnibuds.android.hardware.engine.drivers
 
+import com.omnibuds.android.hardware.protocol.AncByteMapping
 import com.omnibuds.android.hardware.protocol.TwsBatteryReport
 
 enum class TransportPreference {
@@ -29,6 +30,31 @@ interface IVendorDriver {
      * mode: "ANC", "TRANSPARENCY", or "OFF" (Normal)
      */
     fun buildAncCommand(mode: String): ByteArray
+
+    /**
+     * Profile-aware and calibrated noise control command builder.
+     */
+    fun buildAncCommand(mode: String, mapping: AncByteMapping): ByteArray = buildAncCommand(mode)
+
+    /**
+     * Builds full multi-byte hardware teardown frame with all filter/gain registers explicitly set.
+     */
+    fun buildFullHardwareAncCommand(mode: String, mapping: AncByteMapping): ByteArray = buildAncCommand(mode, mapping)
+
+    /**
+     * Builds packet frame to query current noise control state from hardware.
+     */
+    fun buildAncQueryCommand(): ByteArray? = null
+
+    /**
+     * Parses incoming byte payload for ANC mode ACK, notification, or pinch telemetry.
+     */
+    fun parseAncModeNotification(bytes: ByteArray, mapping: AncByteMapping): String? = null
+
+    /**
+     * Checks if the incoming packet is a noise control command execution ACK.
+     */
+    fun isAncAck(bytes: ByteArray): Boolean = false
 
     /**
      * Builds packet frame to set EQ preset:

@@ -117,6 +117,8 @@ class DeviceStateBridge(
             "spatial_audio",
             "touch_controls",
             "low_latency",
+            "game_mode",
+            "volume_enhancer",
             "wear_detection",
         )
         if (firstRegistration) {

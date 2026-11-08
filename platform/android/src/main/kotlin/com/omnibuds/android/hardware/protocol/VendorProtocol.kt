@@ -12,7 +12,9 @@ data class TwsBatteryReport(
     val leftCharging: Boolean = false,
     val rightCharging: Boolean = false,
     val caseCharging: Boolean = false,
+    val caseIsLive: Boolean = true,
     val rawHex: String? = null,
+    val sourceProtocol: String = "RFCOMM SPP",
     val timestamp: Long = System.currentTimeMillis(),
 ) {
     val hasComponentData: Boolean

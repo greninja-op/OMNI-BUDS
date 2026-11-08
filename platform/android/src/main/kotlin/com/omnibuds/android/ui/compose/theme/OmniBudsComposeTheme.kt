@@ -1,15 +1,19 @@
 package com.omnibuds.android.ui.compose.theme
 
+import android.app.Activity
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalView
+import androidx.core.view.WindowCompat
 import com.omnibuds.android.presentation.theme.AndroidThemeMode
 
 /**
  * OmniBuds brand theme (UI redesign, v1.8).
  *
- * A fixed product identity — deep black, charcoal surfaces, one
+ * A fixed product identity — pure black, charcoal surfaces, one
  * fluorescent-yellow accent — replacing the system dynamic color that
  * made the app inherit the phone wallpaper's blue. The app is dark by
  * design now: [themeMode] is accepted for call-site compatibility but
@@ -20,7 +24,7 @@ import com.omnibuds.android.presentation.theme.AndroidThemeMode
  * Battery keeps its restrained green; warnings amber; errors red.
  */
 object OmniBrand {
-    val Background = Color(0xFF080808) // deep black (Iteration 3 palette)
+    val Background = Color(0xFF000000) // pure black
     val Surface = Color(0xFF17171B) // primary surface
     val SurfaceVariant = Color(0xFF222228) // secondary surface
     val SurfaceElevated = Color(0xFF26262C) // elevated charcoal
@@ -62,6 +66,24 @@ fun OmniBudsTheme(
     @Suppress("UNUSED_PARAMETER") themeMode: AndroidThemeMode = AndroidThemeMode.SYSTEM,
     content: @Composable () -> Unit,
 ) {
+    val view = LocalView.current
+    if (!view.isInEditMode) {
+        SideEffect {
+            val window = (view.context as? Activity)?.window
+            if (window != null) {
+                WindowCompat.setDecorFitsSystemWindows(window, false)
+                @Suppress("DEPRECATION")
+                window.statusBarColor = android.graphics.Color.TRANSPARENT
+                @Suppress("DEPRECATION")
+                window.navigationBarColor = android.graphics.Color.BLACK
+                WindowCompat.getInsetsController(window, view).apply {
+                    isAppearanceLightStatusBars = false
+                    isAppearanceLightNavigationBars = false
+                }
+            }
+        }
+    }
+
     MaterialTheme(
         colorScheme = OmniBudsBrandColorScheme,
         content = content,

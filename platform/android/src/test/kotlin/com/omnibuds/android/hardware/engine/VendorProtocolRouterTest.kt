@@ -9,6 +9,7 @@ import com.omnibuds.android.hardware.protocol.HexUtils
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
+import org.junit.jupiter.api.Assertions.assertNull
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 
@@ -143,5 +144,40 @@ class VendorProtocolRouterTest {
         assertEquals(85, report?.right)
         assertEquals(100, report?.case)
         assertTrue(report?.leftCharging == true)
+    }
+
+    @Test
+    fun `OpcodeRemapMatrix and Profile-aware ANC builders prevent mode byte scramble`() {
+        val driver = OnePlusHeyMelodyDriver()
+
+        // Test Profile A (Standard HeyMelody/OnePlus/Realme)
+        val ancFrameA = driver.buildAncCommand("ANC", com.omnibuds.android.hardware.protocol.AncByteMapping.PROFILE_A)
+        assertEquals(0x01.toByte(), ancFrameA[ancFrameA.size - 1])
+
+        val transFrameA = driver.buildAncCommand("TRANSPARENCY", com.omnibuds.android.hardware.protocol.AncByteMapping.PROFILE_A)
+        assertEquals(0x02.toByte(), transFrameA[transFrameA.size - 1])
+
+        val offFrameA = driver.buildAncCommand("OFF", com.omnibuds.android.hardware.protocol.AncByteMapping.PROFILE_A)
+        assertEquals(0x00.toByte(), offFrameA[offFrameA.size - 1])
+
+        // Test Profile B (Alternative)
+        val ancFrameB = driver.buildAncCommand("ANC", com.omnibuds.android.hardware.protocol.AncByteMapping.PROFILE_B)
+        assertEquals(0x01.toByte(), ancFrameB[ancFrameB.size - 1])
+
+        val transFrameB = driver.buildAncCommand("TRANSPARENCY", com.omnibuds.android.hardware.protocol.AncByteMapping.PROFILE_B)
+        assertEquals(0x03.toByte(), transFrameB[transFrameB.size - 1])
+
+        val offFrameB = driver.buildAncCommand("OFF", com.omnibuds.android.hardware.protocol.AncByteMapping.PROFILE_B)
+        assertEquals(0x02.toByte(), offFrameB[offFrameB.size - 1])
+
+        // Test Notification parsing for Two-Way Hardware Sync
+        val incomingAncNotification = byteArrayOf(0xAA.toByte(), 0x08, 0x00, 0x00, 0x04, 0x84.toByte(), 0x01, 0x01, 0x00, 0x01)
+        val detectedMode = driver.parseAncModeNotification(incomingAncNotification, com.omnibuds.android.hardware.protocol.AncByteMapping.PROFILE_A)
+        assertEquals("ANC", detectedMode)
+
+        // Test ACK detection (0x00 status on CMD_ANC_RESP)
+        val incomingAck = byteArrayOf(0xAA.toByte(), 0x08, 0x00, 0x00, 0x04, 0x84.toByte(), 0x01, 0x01, 0x00, 0x00)
+        assertTrue(driver.isAncAck(incomingAck))
+        assertNull(driver.parseAncModeNotification(incomingAck, com.omnibuds.android.hardware.protocol.AncByteMapping.PROFILE_A))
     }
 }

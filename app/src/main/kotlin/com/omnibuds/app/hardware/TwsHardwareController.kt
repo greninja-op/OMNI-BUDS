@@ -147,11 +147,11 @@ object TwsHardwareController {
                 val level = (rawVal and 0x7F).takeIf { it in 0..100 }
                 val charging = (rawVal and 0x80) != 0
 
-                when (comp) {
-                    1 -> { left = level; leftChg = charging }
-                    2 -> { right = level; rightChg = charging }
-                    3 -> { case = level; caseChg = charging }
-                }
+                    when (comp) {
+                        1 -> { left = level; leftChg = charging }
+                        2 -> { right = level; rightChg = charging }
+                        3 -> { case = (rawVal and 0x7F).takeIf { it in 1..100 }; caseChg = charging }
+                    }
                 cur += 2
             }
             if (left != null || right != null || case != null) {

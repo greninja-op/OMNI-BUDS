@@ -1,5 +1,6 @@
 package com.omnibuds.android.hardware.engine.drivers
 
+import com.omnibuds.android.hardware.protocol.AncByteMapping
 import com.omnibuds.android.hardware.protocol.HexUtils
 import com.omnibuds.android.hardware.protocol.RealmeProtocolParser
 import com.omnibuds.android.hardware.protocol.TwsBatteryReport
@@ -11,7 +12,7 @@ class OnePlusHeyMelodyDriver : IVendorDriver {
 
     override val driverName: String = "OnePlus / Realme / Oppo (HeyMelody / BES)"
 
-    override val preferredTransport: TransportPreference = TransportPreference.RFCOMM_FIRST
+    override val preferredTransport: TransportPreference = TransportPreference.BLE_FIRST
 
     private val knownOuiPrefixes = listOf(
         "74:D7:13", // realme Buds T300
@@ -58,7 +59,27 @@ class OnePlusHeyMelodyDriver : IVendorDriver {
     }
 
     override fun buildAncCommand(mode: String): ByteArray {
-        return RealmeProtocolParser.buildAncCommand(mode)
+        return RealmeProtocolParser.buildAncCommand(mode, AncByteMapping.PROFILE_C)
+    }
+
+    override fun buildAncCommand(mode: String, mapping: AncByteMapping): ByteArray {
+        return RealmeProtocolParser.buildAncCommand(mode, mapping)
+    }
+
+    override fun buildFullHardwareAncCommand(mode: String, mapping: AncByteMapping): ByteArray {
+        return RealmeProtocolParser.buildFullHardwareAncCommand(mode, mapping)
+    }
+
+    override fun buildAncQueryCommand(): ByteArray {
+        return RealmeProtocolParser.buildAncQueryCommand()
+    }
+
+    override fun parseAncModeNotification(bytes: ByteArray, mapping: AncByteMapping): String? {
+        return RealmeProtocolParser.parseAncModeResponse(bytes, mapping)
+    }
+
+    override fun isAncAck(bytes: ByteArray): Boolean {
+        return RealmeProtocolParser.isAncCommandAck(bytes)
     }
 
     override fun buildEqualizerCommand(preset: String): ByteArray {
