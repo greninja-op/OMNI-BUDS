@@ -1,0 +1,6 @@
+platform/
+core/
+build/
+.gradle/
+.idea/
+scripts/

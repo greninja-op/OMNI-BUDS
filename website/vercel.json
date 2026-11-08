@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "omnibuds",
   "cleanUrls": true,
   "routes": [
     {
@@ -24,4 +23,3 @@
     }
   ]
 }
-
