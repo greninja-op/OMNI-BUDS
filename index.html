@@ -11,8 +11,95 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main.css?v=3.5">
   <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <style>
+    /* Critical Inline Fallbacks for Footer & Base Layout */
+    .footer-section {
+      padding: 4.5rem 0 3rem 0 !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+      background: #050507 !important;
+      color: #9C9EA8 !important;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    }
+    .footer-grid {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 2.5rem !important;
+      margin-bottom: 3.5rem !important;
+    }
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr 1fr !important;
+      }
+    }
+    .footer-brand h4 {
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-size: 1.25rem !important;
+      font-weight: 700 !important;
+      color: #FFFFFF !important;
+      margin-bottom: 0.8rem !important;
+    }
+    .footer-brand p {
+      font-size: 0.88rem !important;
+      color: #9C9EA8 !important;
+      line-height: 1.65 !important;
+      margin: 0 !important;
+      max-width: 360px !important;
+    }
+    .footer-brand-logo {
+      width: 36px !important;
+      height: 36px !important;
+      border-radius: 50% !important;
+    }
+    .footer-col h5 {
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-size: 0.82rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.08em !important;
+      color: #FFFFFF !important;
+      margin: 0 0 1.25rem 0 !important;
+    }
+    .footer-col ul {
+      list-style: none !important;
+      list-style-type: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 0.75rem !important;
+    }
+    .footer-col li {
+      list-style: none !important;
+      list-style-type: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .footer-col a {
+      color: #9C9EA8 !important;
+      text-decoration: none !important;
+      font-size: 0.88rem !important;
+      transition: color 0.15s ease, transform 0.15s ease !important;
+      display: inline-block !important;
+    }
+    .footer-col a:hover {
+      color: #E6FF00 !important;
+      transform: translateX(2px) !important;
+    }
+    .footer-bottom {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 1rem !important;
+      padding-top: 2rem !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+      font-size: 0.82rem !important;
+      color: #666675 !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -984,53 +1071,53 @@
   <!-- ========================================================================
        6. Clean Footer
        ======================================================================== -->
-  <footer class="footer-section">
-    <div class="section-container">
-      <div class="footer-grid">
-        <div class="footer-brand">
+  <footer class="footer-section" style="padding:4.5rem 0 3rem 0;border-top:1px solid rgba(255,255,255,0.08);background:#050507;color:#9C9EA8;display:block;width:100%;">
+    <div class="section-container" style="max-width:1200px;margin:0 auto;padding:0 1.5rem;">
+      <div class="footer-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:2.5rem;margin-bottom:3.5rem;">
+        <div class="footer-brand" style="max-width:360px;">
           <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.9rem;">
-            <img src="assets/logo.png" alt="OmniBuds" class="footer-brand-logo">
-            <h4 style="margin:0;font-size:1.25rem;">OmniBuds</h4>
+            <img src="assets/logo.png" alt="OmniBuds" class="footer-brand-logo" style="width:36px;height:36px;border-radius:50%;display:block;">
+            <h4 style="margin:0;font-family:'Space Grotesk',sans-serif;font-size:1.25rem;font-weight:700;color:#FFFFFF;">OmniBuds</h4>
           </div>
-          <p>The universal, open-source wireless audio companion. Connect your earphones in Bluetooth, open the app, and enjoy tailored controls with permanent on-chip hardware memory. Zero accounts. Zero cloud telemetry.</p>
+          <p style="font-size:0.88rem;color:#9C9EA8;line-height:1.65;margin:0;">The universal, open-source wireless audio companion. Connect your earphones in Bluetooth, open the app, and enjoy tailored controls with permanent on-chip hardware memory. Zero accounts. Zero cloud telemetry.</p>
         </div>
 
         <div class="footer-col">
-          <h5>Navigation</h5>
-          <ul>
-            <li><a href="#hero">Live Phone Simulator</a></li>
-            <li><a href="#auto-connect">Auto-Connect &amp; Memory</a></li>
-            <li><a href="#notification-controls">Notification Controls</a></li>
-            <li><a href="#features">Consumer Features</a></li>
-            <li><a href="#comparison">Why OmniBuds</a></li>
+          <h5 style="font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#FFFFFF;margin:0 0 1.25rem 0;">Navigation</h5>
+          <ul style="list-style:none;list-style-type:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0.75rem;">
+            <li style="list-style:none;"><a href="#hero" style="color:#9C9EA8;text-decoration:none;font-size:0.88rem;">Live Phone Simulator</a></li>
+            <li style="list-style:none;"><a href="#auto-connect" style="color:#9C9EA8;text-decoration:none;font-size:0.88rem;">Auto-Connect &amp; Memory</a></li>
+            <li style="list-style:none;"><a href="#notification-controls" style="color:#9C9EA8;text-decoration:none;font-size:0.88rem;">Notification Controls</a></li>
+            <li style="list-style:none;"><a href="#features" style="color:#9C9EA8;text-decoration:none;font-size:0.88rem;">Consumer Features</a></li>
+            <li style="list-style:none;"><a href="#comparison" style="color:#9C9EA8;text-decoration:none;font-size:0.88rem;">Why OmniBuds</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h5>Supported Hardware</h5>
-          <ul>
-            <li><a href="#auto-connect">Sony WF / WH-1000X</a></li>
-            <li><a href="#auto-connect">Apple AirPods &amp; Pro</a></li>
-            <li><a href="#auto-connect">realme / OnePlus / Oppo</a></li>
-            <li><a href="#auto-connect">Samsung Galaxy Buds</a></li>
-            <li><a href="#auto-connect">Nothing Ear Series</a></li>
+          <h5 style="font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#FFFFFF;margin:0 0 1.25rem 0;">Supported Hardware</h5>
+          <ul style="list-style:none;list-style-type:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0.75rem;">
+            <li style="list-style:none;"><a href="#auto-connect" style="color:#9C9EA8;text-decoration:none;font-size:0.88rem;">Sony WF / WH-1000X</a></li>
+            <li style="list-style:none;"><a href="#auto-connect" style="color:#9C9EA8;text-decoration:none;font-size:0.88rem;">Apple AirPods &amp; Pro</a></li>
+            <li style="list-style:none;"><a href="#auto-connect" style="color:#9C9EA8;text-decoration:none;font-size:0.88rem;">realme / OnePlus / Oppo</a></li>
+            <li style="list-style:none;"><a href="#auto-connect" style="color:#9C9EA8;text-decoration:none;font-size:0.88rem;">Samsung Galaxy Buds</a></li>
+            <li style="list-style:none;"><a href="#auto-connect" style="color:#9C9EA8;text-decoration:none;font-size:0.88rem;">Nothing Ear Series</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h5>Open Source</h5>
-          <ul>
-            <li><a href="https://github.com/greninja-op/OMNI-BUDS" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
-            <li><a href="https://github.com/greninja-op/OMNI-BUDS/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache 2.0 License</a></li>
-            <li><a href="https://github.com/greninja-op/OMNI-BUDS/releases" target="_blank" rel="noopener noreferrer">Releases &amp; Changelog</a></li>
-            <li><a href="#download">Direct APK Download</a></li>
+          <h5 style="font-family:'Space Grotesk',sans-serif;font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#FFFFFF;margin:0 0 1.25rem 0;">Open Source</h5>
+          <ul style="list-style:none;list-style-type:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0.75rem;">
+            <li style="list-style:none;"><a href="https://github.com/greninja-op/OMNI-BUDS" target="_blank" rel="noopener noreferrer" style="color:#9C9EA8;text-decoration:none;font-size:0.88rem;">GitHub Repository</a></li>
+            <li style="list-style:none;"><a href="https://github.com/greninja-op/OMNI-BUDS/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" style="color:#9C9EA8;text-decoration:none;font-size:0.88rem;">Apache 2.0 License</a></li>
+            <li style="list-style:none;"><a href="https://github.com/greninja-op/OMNI-BUDS/releases" target="_blank" rel="noopener noreferrer" style="color:#9C9EA8;text-decoration:none;font-size:0.88rem;">Releases &amp; Changelog</a></li>
+            <li style="list-style:none;"><a href="#download" style="color:#9C9EA8;text-decoration:none;font-size:0.88rem;">Direct APK Download</a></li>
           </ul>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <div>© 2026 OmniBuds Open-Source Project. Released under Apache 2.0.</div>
-        <div style="color:#E6FF00;font-family:var(--font-mono);font-size:0.75rem;">100% OFFLINE // HARDWARE SOVEREIGNTY</div>
+      <div class="footer-bottom" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.06);font-size:0.82rem;color:#666675;">
+        <div>&copy; 2026 OmniBuds Open-Source Project. Released under Apache 2.0.</div>
+        <div style="color:#E6FF00;font-family:var(--font-mono, monospace);font-size:0.75rem;letter-spacing:0.06em;">100% OFFLINE // HARDWARE SOVEREIGNTY</div>
       </div>
     </div>
   </footer>
