@@ -21,7 +21,7 @@ function initNavbarAudioVibe() {
     if (!window.audioVibe) return;
     const isActive = window.audioVibe.toggle();
     btn.classList.toggle('active', isActive);
-    label.textContent = isActive ? 'LIVE AUDIO WAVE: ON' : 'LIVE AUDIO WAVE: OFF';
+    label.textContent = isActive ? 'LIVE WAVE: ON' : 'LIVE WAVE: OFF';
   });
 }
 
