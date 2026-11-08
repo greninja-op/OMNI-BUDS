@@ -1,6 +1,8 @@
 # Gradle / Kotlin / Android build artifacts
 .gradle/
 build/
+bin/
+**/bin/
 !gradle/wrapper/gradle-wrapper.jar
 */build/
 **/build/

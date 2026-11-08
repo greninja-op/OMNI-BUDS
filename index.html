@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmniBuds — Universal Wireless Audio Companion & Hardware Controller</title>
+  <meta name="description" content="OmniBuds breaks ecosystem lock-in across all TWS earbuds, neckbands, open-ear hooks, and over-ear headphones. Zero cloud bloat. 100% local hardware control.">
+  
+  <!-- Preconnect and Google Fonts: Space Grotesk, Syne, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- Micro-noise overlay across viewport -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       1. Floating Glassmorphic Navigation Pill
+       ======================================================================== -->
+  <header class="nav-wrapper">
+    <nav class="nav-pill">
+      <a href="#" class="nav-logo-group">
+        <svg class="nav-logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="14" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+          <circle cx="16" cy="16" r="9" stroke="#E6FF00" stroke-width="2" stroke-dasharray="14 4"/>
+          <circle cx="16" cy="16" r="4" fill="#E6FF00"/>
+        </svg>
+        <span class="nav-logo-text">OmniBuds</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#bypass">The Bypass</a></li>
+        <li><a href="#simulator">Live Simulator</a></li>
+        <li><a href="#form-factors">9 Form Factors</a></li>
+        <li><a href="#orbital-radar">Orbital Radar</a></li>
+        <li><a href="#fidelity-bento">Acoustic DSP</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Live Audio Vibe Controller Toggle -->
+        <button id="navbarVibeToggle" class="vibe-toggle-btn" title="Toggle Synthesized Audio Atmosphere">
+          <div class="vibe-bars">
+            <span class="vibe-bar"></span>
+            <span class="vibe-bar"></span>
+            <span class="vibe-bar"></span>
+            <span class="vibe-bar"></span>
+          </div>
+          <span id="vibeStatusText">LIVE AUDIO WAVE: OFF</span>
+        </button>
+
+        <!-- Primary Volt CTA -->
+        <a href="#download" class="nav-cta-btn download-apk-trigger">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          <span>Download APK / Launch App</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========================================================================
+       2. Monumental Hero Section + Interactive iPhone Titanium Mockup
+       ======================================================================== -->
+  <section class="hero-section" id="hero">
+    <div id="bypass" style="position:absolute;top:0;left:0;pointer-events:none;"></div>
+    <!-- HTML5 Canvas Acoustic Waveform in Background -->
+    <canvas id="heroCanvas" class="hero-canvas-bg"></canvas>
+
+    <div class="section-container hero-grid">
+      <!-- Left Content Column -->
+      <div class="hero-content">
+        <div class="hero-telemetry-badge">
+          <span class="badge-icon">●</span>
+          <span>0xFE2C FAST PAIR</span>
+          <span class="badge-split">|</span>
+          <span>&lt;18ms HARDWARE GATT</span>
+          <span class="badge-split">|</span>
+          <span class="text-volt">100% OFFLINE</span>
+        </div>
+
+        <h1 class="hero-title">
+          Every Earbud.<br>
+          Every Flagship Feature.<br>
+          <span class="glow-volt">Zero Ecosystem Lock-In.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Bypass 150MB manufacturer cloud bloat. OmniBuds executes proprietary register-level Active Noise Cancellation, multi-cell pogo-pin battery telemetry, 360° Spatial Audio, and iOS CoreAudio-grade fidelity across realme, OnePlus, AirPods, Sony, Samsung, Nothing, and Studio cans—directly on any phone.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#download" class="btn-primary-volt download-apk-trigger">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            <span>Download OmniBuds v1.8.4</span>
+          </a>
+
+          <a href="#simulator" class="btn-secondary-glass">
+            <span>Play With Live Simulator</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Telemetry & Silicon Specs Row -->
+        <div class="hero-specs-row">
+          <div class="spec-pill">
+            <span class="spec-label">Execution Latency</span>
+            <span class="spec-val text-volt">&lt; 30 ms Direct</span>
+          </div>
+          <div class="spec-pill">
+            <span class="spec-label">Cloud Telemetry</span>
+            <span class="spec-val text-emerald">0 Bytes / Offline</span>
+          </div>
+          <div class="spec-pill">
+            <span class="spec-label">Account Requirement</span>
+            <span class="spec-val">None (Plug & Play)</span>
+          </div>
+          <div class="spec-pill">
+            <span class="spec-label">Silicon Support</span>
+            <span class="spec-val">BES • Airoha • QCC • Apple</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Photorealistic Titanium iPhone 16 Pro Mockup -->
+      <div class="mockup-container" id="simulator">
+        <div class="phone-bezel">
+          <!-- Physical Hardware Buttons -->
+          <div class="phone-btn-action" title="Action Button"></div>
+          <div class="phone-btn-vol-up"></div>
+          <div class="phone-btn-vol-down"></div>
+          <div class="phone-btn-power"></div>
+
+          <!-- Inside Phone Screen Display -->
+          <div class="phone-screen">
+            <!-- Dynamic Island with Interactive Music & Telemetry Widget -->
+            <div class="dynamic-island" id="dynamicIsland" title="Click to Expand Dynamic Island">
+              <div class="island-dot"></div>
+              <div class="island-status-pill">
+                <span>LDAC 990k</span>
+                <div class="island-wave-anim">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Status Bar -->
+            <div class="phone-status-bar">
+              <span>09:41</span>
+              <div class="phone-status-right">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m7 7 10 10-5 5V2l5 5L7 17"/></svg>
+                <span>100%</span>
+              </div>
+            </div>
+
+            <!-- Pull-Down Trigger for Persistent Background Notification Shade -->
+            <div class="phone-notification-trigger" id="phoneNotificationTrigger">
+              <span>▼ Pull for Background Notification Controls</span>
+            </div>
+
+            <!-- Persistent Background Notification Shade Drawer (Simulated Android/iOS) -->
+            <div class="phone-notification-shade" id="phoneNotificationShade">
+              <div class="shade-header">
+                <div class="shade-header-brand">
+                  <svg width="12" height="12" viewBox="0 0 32 32" fill="#E6FF00"><circle cx="16" cy="16" r="10"/></svg>
+                  <span>OMNIBUDS PERSISTENT SERVICE</span>
+                </div>
+                <span>KEEP-ALIVE</span>
+              </div>
+              <div class="shade-device-info">
+                <span class="shade-device-name">realme Buds T300</span>
+                <div class="shade-battery-pills">
+                  <span class="shade-battery-pill">L: 90%</span>
+                  <span class="shade-battery-pill">R: 85%</span>
+                  <span class="shade-battery-pill">Case: 75%</span>
+                </div>
+              </div>
+              <div class="shade-quick-actions">
+                <button class="shade-action-btn active" data-mode="anc">ANC ON</button>
+                <button class="shade-action-btn" data-mode="off">OFF</button>
+                <button class="shade-action-btn" data-mode="transparency">TRANSPARENCY</button>
+              </div>
+            </div>
+
+            <!-- In-Phone Mini Build App Body -->
+            <div class="phone-app-body">
+              <div class="app-topbar">
+                <div class="app-device-title-wrap">
+                  <h3>realme Buds T300</h3>
+                  <div class="app-device-subtitle">Active • BLE 5.3 GATT</div>
+                </div>
+                <button style="background:none;border:none;color:#9C9EA8;cursor:pointer;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                </button>
+              </div>
+
+              <!-- Two-Tone Angled Earbud Vector Artwork inside Phone -->
+              <div class="app-device-hero">
+                <svg class="device-interactive-svg" viewBox="0 0 200 160" fill="none">
+                  <!-- Left Angled Bud -->
+                  <g transform="translate(45, 10) rotate(-12 40 60)">
+                    <ellipse cx="25" cy="40" rx="16" ry="22" fill="#8E929B"/>
+                    <ellipse cx="25" cy="40" rx="8" ry="12" fill="#1C1D21"/>
+                    <path d="M32 28 C 45 18, 70 28, 75 48 C 80 62, 72 75, 60 78 L 68 120 C 69 124, 65 128, 60 128 C 55 128, 52 124, 51 120 L 46 78 C 34 76, 25 60, 25 50 Z" fill="#F4F5F7"/>
+                    <rect x="64" y="38" width="3" height="10" rx="1.5" fill="#1C1D21"/>
+                    <circle cx="58" cy="125" r="2" fill="#E6FF00"/>
+                  </g>
+                  <!-- Right Angled Bud -->
+                  <g transform="translate(100, 10) rotate(12 40 60)">
+                    <ellipse cx="55" cy="40" rx="16" ry="22" fill="#8E929B"/>
+                    <ellipse cx="55" cy="40" rx="8" ry="12" fill="#1C1D21"/>
+                    <path d="M48 28 C 35 18, 10 28, 5 48 C 0 62, 8 75, 20 78 L 12 120 C 11 124, 15 128, 20 128 C 25 128, 28 124, 29 120 L 34 78 C 46 76, 55 60, 55 50 Z" fill="#F4F5F7"/>
+                    <rect x="13" y="38" width="3" height="10" rx="1.5" fill="#1C1D21"/>
+                    <circle cx="22" cy="125" r="2" fill="#E6FF00"/>
+                  </g>
+                </svg>
+              </div>
+
+              <!-- Split Battery 3-Ring Cluster with Angled Two-Tone AdaptiveAudioGlyphs -->
+              <div class="battery-rings-cluster">
+                <!-- Left -->
+                <div class="battery-item">
+                  <div class="battery-percent-center">
+                    <svg class="battery-ring-svg" viewBox="0 0 44 44">
+                      <circle class="ring-bg" cx="22" cy="22" r="18"/>
+                      <circle class="ring-fill" id="ringLeft" cx="22" cy="22" r="18"/>
+                    </svg>
+                    <div class="battery-val-text" id="valLeft">90%</div>
+                  </div>
+                  <div class="battery-subtext">
+                    <svg class="adaptive-audio-glyph" viewBox="0 0 16 16" width="13" height="13" style="display:inline-block;vertical-align:middle;margin-right:2px;">
+                      <g transform="rotate(-15 8 8)">
+                        <ellipse cx="6" cy="6" rx="3.2" ry="4.8" fill="#8E929B"/>
+                        <path d="M7 4 C 9 3, 13 5, 13 8 C 13 10, 11 12, 9 12 L 10 15 C 10 15.5, 9.5 16, 9 16 C 8.5 16, 8 15.5, 8 15 L 7 12 Z" fill="#F4F5F7"/>
+                        <circle cx="9" cy="15" r="0.8" fill="#E6FF00"/>
+                      </g>
+                    </svg>
+                    <span>L</span> <span class="bolt">⚡</span>
+                  </div>
+                </div>
+
+                <!-- Right -->
+                <div class="battery-item">
+                  <div class="battery-percent-center">
+                    <svg class="battery-ring-svg" viewBox="0 0 44 44">
+                      <circle class="ring-bg" cx="22" cy="22" r="18"/>
+                      <circle class="ring-fill" id="ringRight" cx="22" cy="22" r="18"/>
+                    </svg>
+                    <div class="battery-val-text" id="valRight">85%</div>
+                  </div>
+                  <div class="battery-subtext">
+                    <svg class="adaptive-audio-glyph" viewBox="0 0 16 16" width="13" height="13" style="display:inline-block;vertical-align:middle;margin-right:2px;">
+                      <g transform="rotate(15 8 8)">
+                        <ellipse cx="10" cy="6" rx="3.2" ry="4.8" fill="#8E929B"/>
+                        <path d="M9 4 C 7 3, 3 5, 3 8 C 3 10, 5 12, 7 12 L 6 15 C 6 15.5, 6.5 16, 7 16 C 7.5 16, 8 15.5, 8 15 L 9 12 Z" fill="#F4F5F7"/>
+                        <circle cx="7" cy="15" r="0.8" fill="#E6FF00"/>
+                      </g>
+                    </svg>
+                    <span>R</span> <span class="bolt">⚡</span>
+                  </div>
+                </div>
+
+                <!-- Case -->
+                <div class="battery-item">
+                  <div class="battery-percent-center">
+                    <svg class="battery-ring-svg" viewBox="0 0 44 44">
+                      <circle class="ring-bg" cx="22" cy="22" r="18"/>
+                      <circle class="ring-fill" id="ringCase" cx="22" cy="22" r="18"/>
+                    </svg>
+                    <div class="battery-val-text" id="valCase">75%</div>
+                  </div>
+                  <div class="battery-subtext">
+                    <svg class="adaptive-audio-glyph" viewBox="0 0 16 16" width="13" height="13" style="display:inline-block;vertical-align:middle;margin-right:2px;">
+                      <rect x="2" y="4" width="12" height="9" rx="4.5" fill="#F4F5F7"/>
+                      <line x1="2" y1="7.5" x2="14" y2="7.5" stroke="#1C1D21" stroke-width="0.8"/>
+                      <circle cx="8" cy="10" r="1" fill="#22E55E"/>
+                    </svg>
+                    <span>Case</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Clickable Raw Hex Telemetry Pill -->
+              <div class="raw-hex-pill" id="rawHexPill" title="Click to Toggle Hex / Dec Telemetry">
+                <span>TELEMETRY</span>
+                <span>0xFE2C • L: 0x5A (90%) R: 0x55 (85%) Case: 0x4B (75%) • 1.5s Poll</span>
+              </div>
+
+              <!-- Noise Control 3-Way Segmented Switch -->
+              <div class="anc-control-card">
+                <div class="anc-header">
+                  <span class="anc-header-title">Noise Control</span>
+                  <span class="anc-attenuation-db" id="ancDbText">-50dB</span>
+                </div>
+                <div class="anc-segmented-switch">
+                  <button class="anc-btn active" data-mode="anc">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm0 14a4 4 0 1 1 4-4 4 4 0 0 1-4 4Z" stroke-width="2"/></svg>
+                    <span>ANC</span>
+                  </button>
+                  <button class="anc-btn" data-mode="off">
+                    <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="2"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07" stroke-width="2"/></svg>
+                    <span>Off</span>
+                  </button>
+                  <button class="anc-btn" data-mode="transparency">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M2 12h20M7 8l-5 4 5 4M17 8l5 4-5 4" stroke-width="2"/></svg>
+                    <span>Ambient</span>
+                  </button>
+                </div>
+                <!-- ANC Depth Stepper (30dB - 50dB) -->
+                <div class="anc-depth-stepper" id="ancStepperContainer">
+                  <button class="stepper-btn" data-depth="30">30dB</button>
+                  <button class="stepper-btn" data-depth="40">40dB</button>
+                  <button class="stepper-btn active" data-depth="50">50dB Max</button>
+                </div>
+              </div>
+
+              <!-- DSP Quick Toggles Grid -->
+              <div class="dsp-grid">
+                <div class="dsp-toggle-capsule active" data-dsp="spatial">
+                  <div class="dsp-capsule-text">
+                    <span class="dsp-capsule-title">360° Spatial</span>
+                    <span class="dsp-capsule-sub">Gyro Locked</span>
+                  </div>
+                  <div class="dsp-toggle-dot"></div>
+                </div>
+
+                <div class="dsp-toggle-capsule" data-dsp="gameMode">
+                  <div class="dsp-capsule-text">
+                    <span class="dsp-capsule-title">50ms Game Mode</span>
+                    <span class="dsp-capsule-sub">Ultra-Low Latency</span>
+                  </div>
+                  <div class="dsp-toggle-dot"></div>
+                </div>
+
+                <div class="dsp-toggle-capsule active" data-dsp="dolby">
+                  <div class="dsp-capsule-text">
+                    <span class="dsp-capsule-title">Dolby Atmos</span>
+                    <span class="dsp-capsule-sub">Studio Mesh</span>
+                  </div>
+                  <div class="dsp-toggle-dot"></div>
+                </div>
+
+                <div class="dsp-toggle-capsule" data-dsp="volEnhance">
+                  <div class="dsp-capsule-text">
+                    <span class="dsp-capsule-title">+4.5dB Boost</span>
+                    <span class="dsp-capsule-sub">Pre-amp Gain</span>
+                  </div>
+                  <div class="dsp-toggle-dot"></div>
+                </div>
+              </div>
+
+              <!-- Live Packet Ticker -->
+              <div class="packet-ticker" id="packetTicker">
+                <span class="pulse"></span> [BLE] [0x01 0x01 0x32] 18ms ACK (ANC 50dB)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. Interactive "9 Hardware Form-Factors" Morphing Showcase
+       ======================================================================== -->
+  <section class="morph-section" id="form-factors">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-tag">
+          <span class="pulse-dot"></span>
+          <span>Zero "Question Mark" Icons</span>
+        </div>
+        <h2 class="section-title">9 Precision Silhouettes.<br>One Unified Control Surface.</h2>
+        <p class="section-desc">
+          OmniBuds dynamically detects the physical architecture of your connected audio device. From high-end planar magnetic open-backs to magnetic workout neckbands, the interface morphs its silhouettes, battery topologies, and hardware registers in real-time.
+        </p>
+      </div>
+
+      <!-- 9 Form-Factor Selector Pills -->
+      <div class="morph-pills-scroll" id="morphPillsScroll">
+        <!-- Rendered dynamically by form-factors.js -->
+      </div>
+
+      <!-- Morph Showcase Stage -->
+      <div class="morph-stage-bento">
+        <!-- Left: Precision Vector Graphic Stage -->
+        <div class="morph-visual-canvas">
+          <div class="morph-svg-container" id="morphSvgWrap">
+            <!-- Dynamic Vector SVG Silhouette Injected Here -->
+          </div>
+          <div class="morph-hardware-meta">
+            <span class="hardware-chip-badge" id="morphChipset">Silicon: BES2600YP</span>
+            <span style="color:#22E55E;font-size:0.75rem;">● Bi-Directional GATT</span>
+          </div>
+        </div>
+
+        <!-- Right: Dynamic Control Panel -->
+        <div class="morph-details-panel">
+          <div class="morph-category-pill" id="morphCategoryTag">Form-Factor 01 // TWS</div>
+          <h3 class="morph-model-title" id="morphTitle">Stem In-Ear</h3>
+          <div class="morph-model-examples" id="morphExamples">realme Buds T300 • AirPods Pro 2 • OnePlus Buds Pro 3</div>
+
+          <!-- Dynamic Battery Gauge Cluster (Swaps between 3-Ring, 2-Ring & 1-Ring) -->
+          <div class="morph-battery-layout" id="morphBatteryLayout">
+            <!-- Injected via form-factors.js -->
+          </div>
+
+          <!-- Tailored Hardware Feature Cards -->
+          <div class="morph-tailored-features" id="morphTailoredFeatures">
+            <!-- Injected via form-factors.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. Interactive "Solar System Orbital Radar" Discovery Demo
+       ======================================================================== -->
+  <section class="radar-section" id="orbital-radar">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-tag">
+          <span class="pulse-dot"></span>
+          <span>Astronomical RF Discovery</span>
+        </div>
+        <h2 class="section-title">Solar System Orbital Radar.<br>Instant Peripheral Lock.</h2>
+        <p class="section-desc">
+          Watch nearby audio hardware revolve in real-time orbits based on calibrated RSSI signal strength. Click any floating planet to lock the Fluorescent Yellow bonding tether and simulate the dual-mode BR/EDR + BLE createBond() pipeline.
+        </p>
+      </div>
+
+      <div class="radar-container-card">
+        <!-- Radar Astronomical Stage -->
+        <div class="radar-stage-wrapper" id="radarStage">
+          <!-- Canvas for 360° Conic Sweep Beam, Phosphor Trail & Fairy-Dust -->
+          <canvas id="radarCanvas" class="radar-canvas"></canvas>
+
+          <!-- Concentric Planetary RSSI Orbits -->
+          <div class="orbit-ring orbit-1">
+            <span class="orbit-tag">-40 dBm (Near Field &lt; 1m)</span>
+          </div>
+          <div class="orbit-ring orbit-2">
+            <span class="orbit-tag">-60 dBm (Room Range ~3m)</span>
+          </div>
+          <div class="orbit-ring orbit-3">
+            <span class="orbit-tag">-80 dBm (Far Field ~10m)</span>
+          </div>
+
+          <!-- Central OmniBuds Core Sun -->
+          <div class="radar-center-core" id="radarSunCore" title="OmniBuds Core Host Antenna">
+            <svg viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="13" stroke="#E6FF00" stroke-width="2"/>
+              <circle cx="16" cy="16" r="7" fill="#E6FF00"/>
+            </svg>
+          </div>
+
+          <!-- Floating Device Planets (Injected and positioned via radar-canvas.js) -->
+        </div>
+
+        <!-- Physical Pairing Mode Guide Card below radar -->
+        <div class="pairing-guide-card">
+          <div class="pairing-icon-box">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </div>
+          <div class="pairing-info">
+            <h4 id="pairingDeviceTitle">realme Buds T300 [ TWS Stem ]</h4>
+            <p id="pairingInstructions">Open charging case lid. Press and hold physical button on back of case for 3 seconds until front white LED pulses steadily.</p>
+          </div>
+          <div class="pairing-log-term" id="pairingLogTerminal">&gt; createBond() -&gt; BR/EDR + BLE Dual-Mode -&gt; BES2600 Linked</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. Interactive Bento Grid: Deep-Tech Features & Live Diagrams
+       ======================================================================== -->
+  <section class="bento-section" id="fidelity-bento">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-tag">
+          <span class="pulse-dot"></span>
+          <span>Under The Hood</span>
+        </div>
+        <h2 class="section-title">Deep-Tech Architecture.<br>Zero Black Boxes.</h2>
+        <p class="section-desc">
+          Every layer of OmniBuds was engineered to eliminate OEM compromise. Explore the interactive acoustic graphs, parametric DSP engines, protocol decoders, and latency sequencers below.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Bento Card 1: iOS CoreAudio Fidelity Restorer (Span 7) -->
+        <div class="bento-card bento-card-fidelity">
+          <div class="bento-card-header">
+            <div class="bento-card-tag">Acoustic Pipeline // Bento 01</div>
+            <h3 class="bento-card-title">iOS CoreAudio Fidelity Restorer</h3>
+            <p class="bento-card-desc">Standard Android Bluetooth stacks choke AAC streams with a harsh 14.5kHz low-pass filter and -12dB dynamic crush. OmniBuds bypasses the OS audio hal to unlock true 19.5kHz air-band headroom.</p>
+          </div>
+
+          <div class="fidelity-toggle-row">
+            <div class="fidelity-switch-group">
+              <button class="fidelity-mode-btn active" id="btnModeRestorer">OmniBuds Restorer</button>
+              <button class="fidelity-mode-btn" id="btnModeStock">Android Stock AAC</button>
+            </div>
+            <div id="fidelityStatusBadge" style="font-family:var(--font-mono);font-size:0.75rem;">
+              RESTORED: <span style="color:#E6FF00;">19.5kHz Air-Band • 0dBFS Absolute Volume Lock</span>
+            </div>
+          </div>
+
+          <!-- Interactive SVG Frequency Response Graph -->
+          <div class="fidelity-chart-container">
+            <svg class="fidelity-chart-svg" viewBox="0 0 500 200" id="fidelitySvg">
+              <defs>
+                <linearGradient id="restorerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#E6FF00" stop-opacity="0.35"/>
+                  <stop offset="100%" stop-color="#E6FF00" stop-opacity="0.0"/>
+                </linearGradient>
+                <linearGradient id="stockGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#FF4D4D" stop-opacity="0.35"/>
+                  <stop offset="100%" stop-color="#FF4D4D" stop-opacity="0.0"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Decibel Grid Lines -->
+              <line x1="20" y1="40" x2="490" y2="40" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3,3"/>
+              <line x1="20" y1="100" x2="490" y2="100" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3,3"/>
+              <line x1="20" y1="160" x2="490" y2="160" stroke="rgba(255,255,255,0.06)" stroke-dasharray="3,3"/>
+
+              <!-- Frequency Labels -->
+              <text x="30" y="195" fill="#5E616C" font-size="10" font-family="var(--font-mono)">20 Hz</text>
+              <text x="120" y="195" fill="#5E616C" font-size="10" font-family="var(--font-mono)">100 Hz</text>
+              <text x="230" y="195" fill="#5E616C" font-size="10" font-family="var(--font-mono)">1 kHz</text>
+              <text x="350" y="195" fill="#5E616C" font-size="10" font-family="var(--font-mono)">10 kHz</text>
+              <text x="450" y="195" fill="#5E616C" font-size="10" font-family="var(--font-mono)">20 kHz</text>
+
+              <!-- Area Fill & Curve Path -->
+              <path id="fidelityCurveFill" d="M 20 110 C 60 85, 120 100, 200 102 C 280 102, 360 98, 420 95 C 460 92, 485 100, 490 108 L 490 180 L 20 180 Z" fill="url(#restorerGrad)"/>
+              <path id="fidelityCurvePath" d="M 20 110 C 60 85, 120 100, 200 102 C 280 102, 360 98, 420 95 C 460 92, 485 100, 490 108" fill="none" stroke="#E6FF00" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <div class="fidelity-legend">
+            <span>24-bit PCM Dithering</span>
+            <span>Fletcher-Munson Psychoacoustic Curve</span>
+            <span>0.002% THD+N Floor</span>
+          </div>
+        </div>
+
+        <!-- Bento Card 2: 10-Band EQ, Dynamic BassWave (-5 to +5) & Dolby Atmos (Span 5) -->
+        <div class="bento-card bento-card-eq">
+          <div class="bento-card-header">
+            <div class="bento-card-tag">Sound Studio // Bento 02</div>
+            <h3 class="bento-card-title">10-Band Studio EQ, Dynamic BassWave &amp; Atmos</h3>
+            <p class="bento-card-desc">Drag individual frequency bands, sculpt sub-harmonics with Dynamic BassWave (-5 to +5), and morph the live 3D acoustic room mesh.</p>
+          </div>
+
+          <!-- Presets Row (Pure Bass, Clear Vocals, Nature Balance, Bass Boost+) -->
+          <div class="eq-presets-scroll">
+            <button class="eq-preset-btn" data-preset="purebass">Pure Bass</button>
+            <button class="eq-preset-btn" data-preset="vocals">Clear Vocals</button>
+            <button class="eq-preset-btn active" data-preset="nature">Nature Balance</button>
+            <button class="eq-preset-btn" data-preset="bassboost">Bass Boost+</button>
+          </div>
+
+          <!-- 10-Band Draggable Sliders Container -->
+          <div class="eq-sliders-wrapper" id="eqSlidersContainer">
+            <!-- Injected by bento-interactive.js -->
+          </div>
+
+          <!-- Dynamic BassWave (-5 to +5) Interactive Controller -->
+          <div class="basswave-controller">
+            <div class="basswave-header">
+              <div class="basswave-meta">
+                <span class="basswave-title">Dynamic BassWave</span>
+                <span class="basswave-sub">Algorithmic Sub-Harmonic Contouring</span>
+              </div>
+              <div class="basswave-val-pill" id="basswaveValueDisplay">+3.0 dB (Level +3)</div>
+            </div>
+            <div class="basswave-track-wrap">
+              <span class="basswave-limit">-5</span>
+              <input type="range" min="-5" max="5" value="3" step="1" id="basswaveSlider" class="basswave-range-input">
+              <span class="basswave-limit">+5</span>
+            </div>
+          </div>
+
+          <!-- Dolby Atmos 3D Acoustic Room Wireframe (Smart, Movie, Gaming, Music) -->
+          <div class="atmos-room-box">
+            <div class="atmos-header">
+              <span class="atmos-title">Dolby Atmos Acoustic Soundfield</span>
+              <div class="atmos-selector">
+                <button class="atmos-mode-btn active" data-atmos="smart">Smart</button>
+                <button class="atmos-mode-btn" data-atmos="movie">Movie</button>
+                <button class="atmos-mode-btn" data-atmos="gaming">Gaming</button>
+                <button class="atmos-mode-btn" data-atmos="music">Music</button>
+              </div>
+            </div>
+            <div class="atmos-3d-canvas-wrap">
+              <svg viewBox="0 0 400 90" fill="none" id="atmosRoomSvg">
+                <polygon id="atmosMeshPolygon" points="20,60 120,20 280,20 380,60 380,75 280,75 120,75 20,75" stroke="#E6FF00" stroke-width="1.2" fill="rgba(230,255,0,0.06)"/>
+                <path id="atmosRaysPath" d="M 200,60 L 50,45 M 200,60 L 350,45 M 200,60 L 150,25 M 200,60 L 250,25" stroke="#E6FF00" stroke-width="1" stroke-dasharray="3,3"/>
+                <!-- Central Listener Node -->
+                <circle cx="200" cy="65" r="4" fill="#F4F5F7"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Card 3: Universal 5-Silicon Protocol Router (Span 12) -->
+        <div class="bento-card bento-card-protocols" id="architecture">
+          <div class="bento-card-header">
+            <div class="bento-card-tag">Hardware Protocol Core // Bento 03</div>
+            <h3 class="bento-card-title">Universal 5-Silicon Protocol Router</h3>
+            <p class="bento-card-desc">Click any vendor architecture below to inspect the reverse-engineered opcode packet structure, circuit dispatch bus, and hardware register execution that OmniBuds executes directly.</p>
+          </div>
+
+          <!-- Glowing Animated Circuit / Node Bus Diagram -->
+          <div class="circuit-bus-diagram">
+            <svg class="circuit-bus-svg" viewBox="0 0 900 70" fill="none">
+              <!-- Central Dispatcher Hub -->
+              <circle cx="450" cy="15" r="10" fill="#0B0C10" stroke="#E6FF00" stroke-width="2"/>
+              <circle cx="450" cy="15" r="4" fill="#E6FF00"/>
+              <text x="450" y="38" fill="#E6FF00" font-size="9" font-family="var(--font-mono)" text-anchor="middle" font-weight="700">OMNIBUDS UNIVERSAL DISPATCHER</text>
+
+              <!-- Bus traces to 6 silicon protocol chips -->
+              <path d="M 440 15 L 75 15 L 75 55" stroke="rgba(230, 255, 0, 0.35)" stroke-width="1.5" stroke-dasharray="4,4"/>
+              <path d="M 442 15 L 225 15 L 225 55" stroke="rgba(230, 255, 0, 0.35)" stroke-width="1.5" stroke-dasharray="4,4"/>
+              <path d="M 445 15 L 375 15 L 375 55" stroke="rgba(230, 255, 0, 0.35)" stroke-width="1.5" stroke-dasharray="4,4"/>
+              <path d="M 455 15 L 525 15 L 525 55" stroke="rgba(230, 255, 0, 0.35)" stroke-width="1.5" stroke-dasharray="4,4"/>
+              <path d="M 458 15 L 675 15 L 675 55" stroke="rgba(230, 255, 0, 0.35)" stroke-width="1.5" stroke-dasharray="4,4"/>
+              <path d="M 460 15 L 825 15 L 825 55" stroke="rgba(230, 255, 0, 0.35)" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+              <!-- Animated Data Pulse Particle on active circuit trace -->
+              <circle id="circuitPulseDot" cx="75" cy="55" r="3.5" fill="#E6FF00">
+                <animate attributeName="opacity" values="1;0.3;1" dur="1.2s" repeatCount="indefinite"/>
+              </circle>
+            </svg>
+          </div>
+
+          <!-- 6 Protocol Chips Diagram -->
+          <div class="protocol-nodes-diagram">
+            <div class="protocol-chip-node active" data-protocol="bes">
+              <svg class="protocol-chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+              <div class="protocol-chip-name">BES / HeyMelody</div>
+              <div class="protocol-chip-target">realme • OnePlus • Oppo</div>
+            </div>
+
+            <div class="protocol-chip-node" data-protocol="airoha">
+              <svg class="protocol-chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+              <div class="protocol-chip-name">Airoha RACE</div>
+              <div class="protocol-chip-target">Sony • Xiaomi • EarFun</div>
+            </div>
+
+            <div class="protocol-chip-node" data-protocol="qualcomm">
+              <svg class="protocol-chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+              <div class="protocol-chip-name">Qualcomm QCC GAIA</div>
+              <div class="protocol-chip-target">Bose • Sennheiser</div>
+            </div>
+
+            <div class="protocol-chip-node" data-protocol="samsung">
+              <svg class="protocol-chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+              <div class="protocol-chip-name">Samsung SPP</div>
+              <div class="protocol-chip-target">Galaxy Buds Series</div>
+            </div>
+
+            <div class="protocol-chip-node" data-protocol="apple">
+              <svg class="protocol-chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+              <div class="protocol-chip-name">Apple L2CAP 0x1001</div>
+              <div class="protocol-chip-target">AirPods Pro • Max</div>
+            </div>
+
+            <div class="protocol-chip-node" data-protocol="fastpair">
+              <svg class="protocol-chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+              <div class="protocol-chip-name">Fast Pair 0xFE2C</div>
+              <div class="protocol-chip-target">Universal Dual-Mode</div>
+            </div>
+          </div>
+
+          <!-- Protocol Blueprint Live Inspector -->
+          <div class="protocol-inspector-card">
+            <div>
+              <div class="inspector-meta-title">Selected Protocol Engine</div>
+              <div style="font-size:1.1rem;font-weight:700;color:#F4F5F7;margin-bottom:0.8rem;" id="inspectorProtocolName">
+                BES / HeyMelody (Realme, OnePlus, Oppo)
+              </div>
+              <div class="inspector-meta-title">Target Chipset Family</div>
+              <div style="font-family:var(--font-mono);font-size:0.85rem;color:#E6FF00;margin-bottom:0.8rem;" id="inspectorTargetChips">
+                BES2500 / BES2600 / BES2700 Series
+              </div>
+              <div class="inspector-meta-title">Transport Channel &amp; UUID</div>
+              <div class="inspector-code-block" id="inspectorStack">
+                Custom BLE GATT UUID: 0000FD5B-0000-1000-8000-00805F9B34FB
+              </div>
+            </div>
+
+            <div>
+              <div class="inspector-meta-title">Hardware Command Frame</div>
+              <div class="inspector-code-block" id="inspectorFrame" style="margin-bottom:0.8rem;">
+                0x01 [CMD_ANC] 0x01 [OP_SET] 0x02 [VAL_30DB] 0x00 0x00 [CRC_BE]
+              </div>
+              <div class="inspector-meta-title">Battery Heartbeat &amp; Preemption</div>
+              <div class="inspector-code-block" id="inspectorPoll" style="margin-bottom:0.8rem;">
+                1.5s Adaptive Keep-Alive with Interactive Preempt
+              </div>
+              <div class="inspector-meta-title">Hardware Execution Latency</div>
+              <div style="font-family:var(--font-mono);font-size:0.85rem;color:#22E55E;" id="inspectorLatency">
+                18ms (WRITE_TYPE_NO_RESPONSE Direct HW Register)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Card 4: BleCommandSequencer & Pogo Pin Telemetry (Span 6) -->
+        <div class="bento-card bento-card-sequencer">
+          <div class="bento-card-header">
+            <div class="bento-card-tag">Low-Latency Execution // Bento 04</div>
+            <h3 class="bento-card-title">Zero-Lag BleCommandSequencer</h3>
+            <p class="bento-card-desc">OEM apps stack GATT operations in blocking queues causing 350ms delays and double-chime collisions. Our &lt;30ms WRITE_TYPE_NO_RESPONSE Latest-Wins Sequencer preempts the 1.5s battery polling heartbeat in real-time.</p>
+          </div>
+
+          <!-- Timing Track Comparison with Interactive Preemption Simulation -->
+          <div class="sequencer-timeline-box">
+            <div class="sequencer-lane">
+              <div class="lane-title">OEM APP QUEUE (350ms - 500ms Collision Lag)</div>
+              <div class="lane-track">
+                <div class="lane-bar-oem">350ms GATT Lockup • Double Chime</div>
+              </div>
+            </div>
+            <div class="sequencer-lane">
+              <div class="lane-title">OMNIBUDS SEQUENCER (&lt;30ms Preemptive Latest-Wins)</div>
+              <div class="lane-track" id="omniLaneTrack">
+                <div class="lane-bar-omni" id="omniTimingBar">18ms Direct HW Register • Preempts 1.5s Poll</div>
+              </div>
+            </div>
+            <div style="margin-top: 8px; display: flex; align-items: center; justify-content: space-between;">
+              <span id="sequencerStatusText" style="font-family:var(--font-mono);font-size:0.7rem;color:#22E55E;">● Heartbeat: 1.5s Polling (Standby)</span>
+              <button id="btnPreemptSim" style="padding:4px 10px;background:rgba(230,255,0,0.12);border:1px solid #E6FF00;border-radius:6px;color:#E6FF00;font-size:0.7rem;cursor:pointer;font-family:var(--font-mono);">
+                Test Rapid-Tap Preemption (&lt;30ms)
+              </button>
+            </div>
+          </div>
+
+          <!-- Pogo Pin Hardware Decoder Interactive with 0x80 / 0x7F Bitmask Decoding -->
+          <div class="pogo-decoder-interactive">
+            <svg class="pogo-pins-svg" viewBox="0 0 100 70" fill="none">
+              <!-- Two Gold Pogo Pins -->
+              <rect x="25" y="10" width="10" height="40" rx="3" fill="#E6FF00"/>
+              <rect x="65" y="10" width="10" height="40" rx="3" fill="#E6FF00"/>
+              <line x1="20" y1="50" x2="40" y2="50" stroke="#FFF" stroke-width="2"/>
+              <line x1="60" y1="50" x2="80" y2="50" stroke="#FFF" stroke-width="2"/>
+              <circle cx="30" cy="5" r="4" fill="#22E55E"/>
+              <circle cx="70" cy="5" r="4" fill="#22E55E"/>
+            </svg>
+            <div class="pogo-decoder-info">
+              <div style="font-family:var(--font-mono);font-size:0.75rem;color:#F4F5F7;font-weight:700;">
+                Pogo-Pin Byte: <span id="pogoRawByteDisplay" style="color:#E6FF00;">0xDA (11011010)</span>
+              </div>
+              <div style="font-family:var(--font-mono);font-size:0.68rem;" id="pogoBit7State">
+                <span style="color:#22E55E;">0x80 Mask [Bit 7 = 1] -> CHARGING VOLTAGE DETECTED</span>
+              </div>
+              <div style="font-family:var(--font-mono);font-size:0.68rem;color:#9C9EA8;" id="pogoBatteryValue">
+                0x7F Mask [Bits 0-6 = 0x5A] -> 90% State of Charge
+              </div>
+              <button id="btnSimulatePogoByte" style="margin-top:4px;padding:3px 8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:6px;color:#F4F5F7;font-size:0.65rem;cursor:pointer;width:fit-content;">
+                Simulate Pogo Pulse
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Card 5: Physical Sensor & Gesture Remapper Matrix (Span 6) -->
+        <div class="bento-card bento-card-gestures">
+          <div class="bento-card-header">
+            <div class="bento-card-tag">Physical Sensors // Bento 05</div>
+            <h3 class="bento-card-title">Hardware Gesture Remapper Matrix</h3>
+            <p class="bento-card-desc">Click any hardware sensor below to highlight its physical location on the earbud architecture, or squeeze the interactive stem diagram to dispatch commands.</p>
+          </div>
+
+          <div class="gesture-interactive-matrix">
+            <!-- Interactive Earbud Stem / Cup Diagram with 5 Highlightable Hotspots -->
+            <div class="stem-gesture-svg-wrap" id="stemInteractiveTouchZone" title="Click Stem to Trigger Squeeze">
+              <svg width="70" height="160" viewBox="0 0 70 160" fill="none" id="gestureStemSvg">
+                <!-- Outer Earbud Silhouette -->
+                <path d="M 22 25 C 22 10, 48 10, 48 25 C 56 30, 58 42, 50 50 L 46 140 C 46 146, 40 150, 35 150 C 30 150, 24 146, 24 140 L 20 50 C 12 42, 14 30, 22 25 Z" fill="#1C1D21" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+
+                <!-- 1. Capacitive Touch Head Surface (Top) -->
+                <ellipse cx="35" cy="20" rx="14" ry="9" id="sensorCapacitive" fill="rgba(230,255,0,0.15)" stroke="#5E616C" stroke-width="1.2"/>
+
+                <!-- 2. Edge Tap Accelerometer Rim (Outer edge) -->
+                <path d="M 17 32 C 14 38, 16 46, 22 50" id="sensorEdgeTap" stroke="#5E616C" stroke-width="2.5" stroke-linecap="round"/>
+
+                <!-- 3. IMU Gyro Internal Core (Mid-head) -->
+                <circle cx="35" cy="38" r="4.5" id="sensorImu" fill="#5E616C" stroke="#22E55E" stroke-width="1"/>
+
+                <!-- 4. Stem Volume Slide Bar (Long vertical stripe) -->
+                <rect x="27" y="58" width="4" height="42" rx="2" id="sensorVolumeSlide" fill="#5E616C"/>
+
+                <!-- 5. Force Sensor Pinch Indent (Mid-stem) -->
+                <rect x="33" y="66" width="10" height="26" rx="4" id="sensorForcePinch" fill="rgba(230,255,0,0.25)" stroke="#E6FF00" stroke-width="1.5"/>
+              </svg>
+            </div>
+
+            <!-- 5 Specific Hardware Gesture Categories -->
+            <div class="gesture-controls-list">
+              <div class="gesture-row-item active" data-sensor="pinch">
+                <span class="gesture-trigger-name">Force Pinch + Speed</span>
+                <span class="gesture-mapped-action">Toggle ANC (50dB ↔ Ambient)</span>
+              </div>
+              <div class="gesture-row-item" data-sensor="capacitive">
+                <span class="gesture-trigger-name">Capacitive Touch (1x/2x/3x/Hold)</span>
+                <span class="gesture-mapped-action">Play / Pause / Next Track</span>
+              </div>
+              <div class="gesture-row-item" data-sensor="volume">
+                <span class="gesture-trigger-name">Stem Volume Slide Bar</span>
+                <span class="gesture-mapped-action">Stepless Absolute Volume (0dBFS)</span>
+              </div>
+              <div class="gesture-row-item" data-sensor="edge">
+                <span class="gesture-trigger-name">Edge Tap</span>
+                <span class="gesture-mapped-action">Microphone Mute / Quick Voice</span>
+              </div>
+              <div class="gesture-row-item" data-sensor="imu">
+                <span class="gesture-trigger-name">IMU Head Nod / Shake</span>
+                <span class="gesture-mapped-action">Accept / Reject Incoming Call</span>
+              </div>
+              <div id="stemTriggerFeedback" style="font-family:var(--font-mono);font-size:0.68rem;color:#9C9EA8;margin-top:4px;">
+                Tip: Click any gesture row to inspect sensor hotspot &amp; remap actions!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. Ecosystem Lock-In Comparison Matrix & Final Launch CTA
+       ======================================================================== -->
+  <section class="comparison-section" id="comparison">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-tag">
+          <span class="pulse-dot"></span>
+          <span>The Sovereign Audio Stack</span>
+        </div>
+        <h2 class="section-title">Ecosystem Jailbreak.<br>Official Apps vs OmniBuds.</h2>
+        <p class="section-desc">
+          Compare the bloat of proprietary OEM companion apps with the pure, local-first performance of the OmniBuds Universal Engine.
+        </p>
+      </div>
+
+      <!-- Comparison Matrix Table -->
+      <div class="comparison-table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature &amp; Architectural Standard</th>
+              <th>OEM Apps (realme Link / HeyMelody / Galaxy Wearable)</th>
+              <th class="col-omnibuds">OmniBuds Universal Engine</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="feature-cell">Account Creation &amp; Cloud Login</td>
+              <td class="oem-cell">❌ Mandatory Email / Phone Sign-in</td>
+              <td class="col-omnibuds omni-cell">✅ Zero Accounts • 100% Plug &amp; Play</td>
+            </tr>
+            <tr>
+              <td class="feature-cell">Telemetry &amp; Background Internet Access</td>
+              <td class="oem-cell">❌ Constant background ad analytics &amp; cloud tracking</td>
+              <td class="col-omnibuds omni-cell">✅ 100% Offline • Zero Internet Permission</td>
+            </tr>
+            <tr>
+              <td class="feature-cell">Cross-Brand Support</td>
+              <td class="oem-cell">❌ Locked to single OEM; requires 4 separate apps</td>
+              <td class="col-omnibuds omni-cell">✅ Universal Multi-Silicon Protocol Router</td>
+            </tr>
+            <tr>
+              <td class="feature-cell">Android Notification Shade Quick Controls</td>
+              <td class="oem-cell">⚠️ Bulky, missing, or forcibly opens full app</td>
+              <td class="col-omnibuds omni-cell">✅ Instant 1-Tap Persistent Quick-Toggle Shade</td>
+            </tr>
+            <tr>
+              <td class="feature-cell">Hardware Command Latency</td>
+              <td class="oem-cell">⚠️ 150ms – 400ms (Heavy UI animation blocking)</td>
+              <td class="col-omnibuds omni-cell">✅ &lt; 18ms Direct Hardware GATT Execution</td>
+            </tr>
+            <tr>
+              <td class="feature-cell">Double-Chime &amp; Rapid-Tap Protection</td>
+              <td class="oem-cell">❌ Frequent packet spam causing ear chime collisions</td>
+              <td class="col-omnibuds omni-cell">✅ Preemptive Latest-Wins BleCommandSequencer</td>
+            </tr>
+            <tr>
+              <td class="feature-cell">Single-Bud Docking Telemetry</td>
+              <td class="oem-cell">⚠️ Often reports entire headset offline if 1 bud in case</td>
+              <td class="col-omnibuds omni-cell">✅ Independent Multi-Cell Bitwise Pogo Decoding</td>
+            </tr>
+            <tr>
+              <td class="feature-cell">Application Footprint</td>
+              <td class="oem-cell">❌ 120 MB – 280 MB (Ad SDKs, web views, bloat)</td>
+              <td class="col-omnibuds omni-cell">✅ Lean ~15 MB High-Performance Kotlin Core</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Final Launch CTA Bento Card -->
+      <div class="launch-cta-card" id="download">
+        <h2 class="cta-title">Break Free From Audio Ecosystems.</h2>
+        <p class="cta-subtitle">
+          Join thousands of audiophiles and power users reclaiming their wireless hardware. 100% open-source, local-first, and zero bloat.
+        </p>
+
+        <div class="cta-actions">
+          <a href="#" class="btn-primary-volt download-apk-trigger" style="font-size:1.15rem;padding:1.1rem 2.6rem;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            <span>Download APK (v1.8.4 Stable)</span>
+          </a>
+
+          <a href="https://github.com/omnibuds/omnibuds" target="_blank" class="btn-secondary-glass" style="font-size:1.05rem;padding:1.1rem 2.2rem;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+            <span>View Source on GitHub</span>
+          </a>
+        </div>
+
+        <div class="cta-specs-badge">
+          <span>Android 10+ (API 29+)</span>
+          <span>•</span>
+          <span>BLE 5.0+ / LE Audio Ready</span>
+          <span>•</span>
+          <span>Dual-Mode Fast Pair (0xFE2C)</span>
+          <span>•</span>
+          <span>SHA-256: 7f8a92...c31b</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="footer-section">
+    <div class="section-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.8rem;">
+            <svg width="26" height="26" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="14" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+              <circle cx="16" cy="16" r="8" stroke="#E6FF00" stroke-width="2"/>
+              <circle cx="16" cy="16" r="3.5" fill="#E6FF00"/>
+            </svg>
+            <h4 style="margin:0;">OmniBuds</h4>
+          </div>
+          <p>The universal, open-source wireless audio platform. Engineered with obsidian glass &amp; fluorescent volt precision. Zero accounts. Zero cloud telemetry. 100% local hardware control.</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Interactive Demos</h5>
+          <ul>
+            <li><a href="#simulator">Titanium Phone Simulator</a></li>
+            <li><a href="#form-factors">9 Form-Factor Morphing</a></li>
+            <li><a href="#orbital-radar">Solar System Radar</a></li>
+            <li><a href="#fidelity-bento">iOS CoreAudio Restorer</a></li>
+            <li><a href="#architecture">Protocol Router Diagram</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Architecture</h5>
+          <ul>
+            <li><a href="#architecture">BES2600 Driver</a></li>
+            <li><a href="#architecture">Airoha RACE Engine</a></li>
+            <li><a href="#architecture">Qualcomm QCC GAIA</a></li>
+            <li><a href="#architecture">Apple L2CAP 0x1001</a></li>
+            <li><a href="#architecture">BleCommandSequencer</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Project</h5>
+          <ul>
+            <li><a href="https://github.com/omnibuds/omnibuds" target="_blank">GitHub Repository</a></li>
+            <li><a href="LICENSE">Apache 2.0 License</a></li>
+            <li><a href="#download">Release Notes (v1.8.4)</a></li>
+            <li><a href="#comparison">OEM Matrix</a></li>
+            <li><a href="#">Privacy Manifesto</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 OmniBuds Open-Source Audio Project. Built for hardware sovereignty.</div>
+        <div style="color:#E6FF00;">FLUORESCENT VOLT // OBSIDIAN GLASS ENGINE</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/audio-controller.js"></script>
+  <script src="js/hero-canvas.js"></script>
+  <script src="js/iphone-simulator.js"></script>
+  <script src="js/form-factors.js"></script>
+  <script src="js/radar-canvas.js"></script>
+  <script src="js/bento-interactive.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
