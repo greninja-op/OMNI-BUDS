@@ -1,29 +1,13 @@
 /* ==========================================================================
    OmniBuds Flagship Launch Experience — Main Coordinator
-   Navigation, Audio Vibe Controller & Global Interactions
+   Navigation, Auto-Detect Simulator & Device Switcher Interactions
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initNavbarAudioVibe();
   initSmoothScroll();
   initDownloadCta();
+  initAutoDetectSimulator();
 });
-
-/* --------------------------------------------------------------------------
-   Audio Vibe Navigation Button
-   -------------------------------------------------------------------------- */
-function initNavbarAudioVibe() {
-  const btn = document.getElementById('navbarVibeToggle');
-  const label = document.getElementById('vibeStatusText');
-  if (!btn || !label) return;
-
-  btn.addEventListener('click', () => {
-    if (!window.audioVibe) return;
-    const isActive = window.audioVibe.toggle();
-    btn.classList.toggle('active', isActive);
-    label.textContent = isActive ? 'LIVE WAVE: ON' : 'LIVE WAVE: OFF';
-  });
-}
 
 /* --------------------------------------------------------------------------
    Smooth Anchor Scrolling
@@ -70,4 +54,77 @@ function initDownloadCta() {
       }, 3500);
     });
   });
+}
+
+/* --------------------------------------------------------------------------
+   Auto-Detection & Hardware Memory Interactive Simulator
+   -------------------------------------------------------------------------- */
+function initAutoDetectSimulator() {
+  const scanBtn = document.getElementById('btnTutorialScanSim');
+  const btnText = document.getElementById('tutorialBtnText');
+  const statusNote = document.getElementById('tutorialStatusNote');
+  const scanStatus = document.getElementById('demoScanStatusText');
+  const cards = document.querySelectorAll('.demo-device-card');
+
+  const devices = [
+    { name: 'realme Buds T300', sub: 'Auto-Connected • On-Chip Memory Locked' },
+    { name: 'Sony WF-1000XM5', sub: 'LDAC 990k • Tailored Control Surface' },
+    { name: 'AirPods Pro (2nd Gen)', sub: 'L2CAP Driver • Spatial Audio Ready' },
+    { name: 'Galaxy Buds2 Pro', sub: 'Dual-Mode • 24-bit Hi-Fi Control' }
+  ];
+
+  let currentIdx = 0;
+
+  const setActiveDevice = (index) => {
+    cards.forEach((card, idx) => {
+      const isCurrent = idx === index;
+      card.classList.toggle('connected', isCurrent);
+      const btn = card.querySelector('.demo-connect-btn');
+      if (btn) {
+        btn.classList.toggle('connected', isCurrent);
+        btn.textContent = isCurrent ? 'Active' : 'Switch';
+      }
+    });
+
+    const activeDev = devices[index];
+    if (scanStatus) {
+      scanStatus.textContent = `Locked: ${activeDev.name} • EEPROM Synced`;
+    }
+    if (statusNote) {
+      statusNote.textContent = `Auto-detected ${activeDev.name} — on-chip preferences locked`;
+    }
+
+    // Also update notification demo header name!
+    const notiDevName = document.getElementById('notiDeviceName');
+    if (notiDevName) notiDevName.textContent = activeDev.name;
+
+    if (window.audioVibe) {
+      window.audioVibe.playChime(800 + index * 100, 'triangle', 0.12, 0.03);
+    }
+  };
+
+  // Click card or switch button to change active device
+  cards.forEach((card, idx) => {
+    card.addEventListener('click', () => {
+      currentIdx = idx;
+      setActiveDevice(currentIdx);
+    });
+  });
+
+  // Cycle via the simulation button
+  if (scanBtn) {
+    scanBtn.addEventListener('click', () => {
+      if (btnText) btnText.textContent = 'Auto-Detecting...';
+      scanBtn.style.opacity = '0.7';
+
+      if (window.audioVibe) window.audioVibe.playChime(1050, 'sine', 0.1, 0.02);
+
+      setTimeout(() => {
+        currentIdx = (currentIdx + 1) % devices.length;
+        setActiveDevice(currentIdx);
+        if (btnText) btnText.textContent = 'Simulate Instant Auto-Detect';
+        scanBtn.style.opacity = '1';
+      }, 400);
+    });
+  }
 }
