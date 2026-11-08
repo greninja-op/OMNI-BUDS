@@ -79,16 +79,9 @@ body {
   overflow-x: hidden;
 }
 
-/* Micro-noise overlay */
+/* Micro-noise overlay removed for ultra-clean, flat Apple/Nothing dark matte aesthetic */
 .noise-overlay {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 99999;
-  opacity: 0.032;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  display: none !important;
 }
 
 /* Selection */
@@ -567,71 +560,27 @@ h1, h2, h3, h4, .display-font {
   display: flex;
   justify-content: center;
   position: relative;
-  perspective: 1200px;
 }
 
 .phone-bezel {
   position: relative;
   width: 375px;
-  height: 770px;
+  height: 800px;
   background: #08090C;
-  border-radius: 54px;
-  /* Titanium frame specular chamfer */
+  border-radius: 44px;
+  /* Ultra-thin titanium perimeter border matching iPhone 18 Pro Max */
   box-shadow: 
-    0 0 0 3px #181920,
-    0 0 0 6px #2C2D36,
-    0 0 0 7.5px #14151B,
-    0 25px 70px rgba(0, 0, 0, 0.85),
-    0 0 60px rgba(230, 255, 0, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 12px;
-  transform: rotateY(-3deg) rotateX(2deg);
-  transition: transform var(--transition-normal);
+    0 0 0 1.5px #25262E,
+    0 25px 70px rgba(0, 0, 0, 0.92),
+    0 0 50px rgba(230, 255, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 3px;
+  transform: none !important;
+  transition: none !important;
 }
 
 .phone-bezel:hover {
-  transform: rotateY(0deg) rotateX(0deg);
-}
-
-/* Physical Phone Side Buttons */
-.phone-btn-action {
-  position: absolute;
-  left: -10px;
-  top: 125px;
-  width: 4px;
-  height: 32px;
-  background: #3B3C45;
-  border-radius: 3px 0 0 3px;
-}
-
-.phone-btn-vol-up {
-  position: absolute;
-  left: -10px;
-  top: 175px;
-  width: 4px;
-  height: 52px;
-  background: #3B3C45;
-  border-radius: 3px 0 0 3px;
-}
-
-.phone-btn-vol-down {
-  position: absolute;
-  left: -10px;
-  top: 238px;
-  width: 4px;
-  height: 52px;
-  background: #3B3C45;
-  border-radius: 3px 0 0 3px;
-}
-
-.phone-btn-power {
-  position: absolute;
-  right: -10px;
-  top: 190px;
-  width: 4px;
-  height: 72px;
-  background: #3B3C45;
-  border-radius: 0 3px 3px 0;
+  transform: none !important;
 }
 
 /* Inside Phone Display Screen */
@@ -640,7 +589,7 @@ h1, h2, h3, h4, .display-font {
   width: 100%;
   height: 100%;
   background: #000000;
-  border-radius: 44px;
+  border-radius: 41px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -650,13 +599,13 @@ h1, h2, h3, h4, .display-font {
 /* Dynamic Island */
 .dynamic-island {
   position: absolute;
-  top: 10px;
+  top: 9px;
   left: 50%;
   transform: translateX(-50%);
-  width: 120px;
-  height: 32px;
+  width: 104px;
+  height: 25px;
   background: #000000;
-  border-radius: 20px;
+  border-radius: 13px;
   z-index: 100;
   display: flex;
   align-items: center;
@@ -869,224 +818,312 @@ h1, h2, h3, h4, .display-font {
   display: none;
 }
 
-.app-topbar {
+/* Floating Android Capsule Topbar (OmniBudsAppShell.kt) */
+.app-floating-topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
-}
-
-.app-device-title-wrap h3 {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--titanium-white);
-}
-
-.app-device-subtitle {
-  font-family: var(--font-mono);
-  font-size: 0.62rem;
-  color: var(--emerald-battery);
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.app-device-subtitle::before {
-  content: '';
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--emerald-battery);
-}
-
-/* Angled Two-Tone Vector Device Illustration */
-.app-device-hero {
+  padding: 6px 14px 4px 14px;
   position: relative;
+  z-index: 40;
+}
+
+.app-nav-circle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(32, 33, 38, 0.95);
+  border: 1px solid #32343A;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 145px;
-  margin: 6px 0 12px 0;
-  background: radial-gradient(circle at center, rgba(230, 255, 0, 0.08) 0%, transparent 70%);
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  transition: all var(--transition-fast);
 }
 
-.device-interactive-svg {
-  width: 150px;
-  height: 125px;
-  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.6));
-  transition: transform var(--transition-fast);
+.app-nav-circle-btn:hover {
+  border-color: var(--volt-primary);
+  background: #282A32;
 }
 
-/* 3-Ring Battery Cluster */
-.battery-rings-cluster {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  background: rgba(18, 19, 24, 0.7);
-  border: 1px solid var(--border-subtle);
+.app-nav-center-capsule {
+  height: 36px;
+  padding: 0 14px;
   border-radius: 18px;
-  padding: 10px 8px;
-  margin-bottom: 14px;
+  background: rgba(32, 33, 38, 0.95);
+  border: 1px solid #32343A;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
-.battery-item {
+.app-nav-brand-text {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+}
+
+/* App Viewport inside Phone (WorkspaceScreen.kt) */
+.phone-app-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 14px 18px 14px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+.phone-app-body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Device Identity Header */
+.app-device-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  margin-top: 4px;
+  margin-bottom: 12px;
 }
 
-.battery-ring-svg {
-  width: 44px;
-  height: 44px;
+.app-device-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.app-device-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(22, 23, 28, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 3px 12px;
+  margin-top: 5px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22E55E;
+  box-shadow: 0 0 6px #22E55E;
+}
+
+.status-text {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #22E55E;
+}
+
+/* Battery Section */
+.app-battery-section {
+  margin-bottom: 14px;
+}
+
+.app-section-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.app-section-title {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #8E929B;
+  letter-spacing: 0.02em;
+}
+
+.app-toggle-view-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--volt-primary);
+  cursor: pointer;
+  padding: 2px 4px;
+}
+
+.app-style-pill {
+  display: inline-block;
+  background: #181A20;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  color: #8E929B;
+  margin-bottom: 8px;
+}
+
+.adaptive-battery-rings {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(18, 19, 24, 0.7);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  padding: 12px 10px;
+}
+
+.battery-ring-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.battery-gauge-wrapper {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.battery-gauge-svg {
+  width: 60px;
+  height: 60px;
   transform: rotate(-90deg);
 }
 
-.ring-bg {
+.gauge-bg {
   fill: none;
-  stroke: rgba(255, 255, 255, 0.08);
-  stroke-width: 3.5;
+  stroke: #252831;
+  stroke-width: 4.5;
 }
 
-.ring-fill {
+.gauge-fill {
   fill: none;
   stroke: var(--emerald-battery);
-  stroke-width: 3.5;
+  stroke-width: 4.5;
   stroke-linecap: round;
   transition: stroke-dashoffset 0.8s ease;
 }
 
-.battery-percent-center {
-  position: relative;
+.gauge-center-icon {
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.battery-val-text {
-  position: absolute;
+.battery-gauge-pct {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--titanium-white);
 }
 
-.battery-subtext {
+.battery-gauge-label {
   font-family: var(--font-mono);
   font-size: 0.62rem;
   color: var(--text-muted);
+}
+
+/* Noise Control Section (NoiseControlCircles) */
+.app-noise-section {
+  margin-bottom: 14px;
+}
+
+.app-noise-title-row {
   display: flex;
   align-items: center;
-  gap: 2px;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 10px;
 }
 
-.battery-subtext .bolt {
-  color: var(--volt-primary);
-  font-size: 0.7rem;
+.app-noise-title {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #FFFFFF;
 }
 
-/* Raw Hex Telemetry Pill */
-.raw-hex-pill {
+.noise-control-circles {
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: space-between;
-  background: #000;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 4px 8px;
-  font-family: var(--font-mono);
-  font-size: 0.58rem;
-  color: var(--volt-primary);
-  margin-bottom: 12px;
-  cursor: pointer;
-}
-
-.raw-hex-pill:hover {
-  border-color: var(--volt-primary);
-}
-
-/* 3-Way ANC Segmented Control */
-.anc-control-card {
-  background: rgba(18, 19, 24, 0.9);
-  border: 1px solid var(--border-specular);
-  border-radius: 18px;
-  padding: 10px;
-  margin-bottom: 12px;
-}
-
-.anc-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.7rem;
   margin-bottom: 8px;
 }
 
-.anc-header-title {
-  font-weight: 700;
-  color: var(--titanium-white);
-}
-
-.anc-attenuation-db {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  color: var(--volt-primary);
-  background: rgba(230, 255, 0, 0.12);
-  padding: 2px 6px;
-  border-radius: 6px;
-}
-
-.anc-segmented-switch {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4px;
-  background: #09090C;
-  border-radius: 12px;
-  padding: 3px;
-  border: 1px solid var(--border-subtle);
-}
-
-.anc-btn {
-  background: transparent;
-  border: none;
-  color: var(--text-secondary);
-  font-family: var(--font-body);
-  font-size: 0.68rem;
-  font-weight: 600;
-  padding: 7px 4px;
-  border-radius: 9px;
-  cursor: pointer;
+.noise-circle-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
+  gap: 6px;
+}
+
+.noise-circle-btn {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #1B1D22;
+  border: 1px solid #2E313A;
+  color: #8E929B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   transition: all var(--transition-fast);
 }
 
-.anc-btn svg {
-  width: 14px;
-  height: 14px;
-  stroke: currentColor;
-}
-
-.anc-btn.active {
+.noise-circle-btn.active {
   background: var(--volt-primary);
-  color: #000;
-  box-shadow: 0 2px 8px rgba(230, 255, 0, 0.3);
+  border-color: var(--volt-primary);
+  color: #000000;
+  box-shadow: 0 4px 18px rgba(230, 255, 0, 0.42);
+  transform: scale(1.06);
 }
 
-.anc-btn.active svg {
-  stroke: #000;
+.noise-circle-label {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #8E929B;
+  transition: color var(--transition-fast);
 }
 
-/* Stepper under ANC */
+.noise-circle-label.active {
+  color: #FFFFFF;
+}
+
 .anc-depth-stepper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 8px;
-  padding-top: 6px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: #121318;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 4px 10px;
+  margin-top: 6px;
+}
+
+.stepper-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: #8E929B;
+}
+
+.stepper-options {
+  display: flex;
+  gap: 4px;
 }
 
 .stepper-btn {
@@ -1107,64 +1144,129 @@ h1, h2, h3, h4, .display-font {
   color: var(--volt-primary);
 }
 
-/* Quick DSP Feature Capsules */
-.dsp-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
+/* Sound & Features Card */
+.app-features-section {
   margin-bottom: 12px;
 }
 
-.dsp-toggle-capsule {
-  background: rgba(18, 19, 24, 0.7);
-  border: 1px solid var(--border-subtle);
-  border-radius: 14px;
-  padding: 8px 10px;
-  cursor: pointer;
+.features-surface-card {
+  background: #14151B;
+  border: 1px solid #252731;
+  border-radius: 18px;
+  padding: 4px 12px;
+}
+
+.feature-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all var(--transition-fast);
+  padding: 8px 0;
 }
 
-.dsp-toggle-capsule:hover {
-  background: rgba(25, 27, 34, 0.8);
-  border-color: rgba(255, 255, 255, 0.15);
+.feature-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.dsp-toggle-capsule.active {
-  border-color: var(--volt-primary);
+.feature-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
   background: rgba(230, 255, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.dsp-capsule-text {
+.feature-text {
   display: flex;
   flex-direction: column;
 }
 
-.dsp-capsule-title {
-  font-size: 0.68rem;
-  font-weight: 700;
-  color: var(--titanium-white);
+.feature-title {
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #FFFFFF;
 }
 
-.dsp-capsule-sub {
+.feature-subtitle {
   font-family: var(--font-mono);
-  font-size: 0.58rem;
-  color: var(--text-muted);
+  font-size: 0.6rem;
+  color: #8E929B;
 }
 
-.dsp-toggle-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #333;
+.feature-pill-btn {
+  background: #202229;
+  border: 1px solid #2F323D;
+  border-radius: 12px;
+  padding: 3px 8px;
+  font-family: var(--font-body);
+  font-size: 0.64rem;
+  font-weight: 600;
+  color: var(--volt-primary);
+  cursor: pointer;
   transition: all var(--transition-fast);
 }
 
-.dsp-toggle-capsule.active .dsp-toggle-dot {
-  background: var(--volt-primary);
-  box-shadow: 0 0 8px var(--volt-primary);
+.feature-pill-btn:hover {
+  background: #2C2F3A;
+}
+
+.feature-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.feature-switch {
+  width: 38px;
+  height: 22px;
+  border-radius: 11px;
+  background: #2B2C35;
+  position: relative;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.feature-switch.active {
+  background: #22E55E;
+}
+
+.switch-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  transition: transform var(--transition-spring);
+}
+
+.feature-switch.active .switch-knob {
+  transform: translateX(16px);
+}
+
+/* Raw Hex Telemetry Pill */
+.raw-hex-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 4px 8px;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--volt-primary);
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.raw-hex-pill:hover {
+  border-color: var(--volt-primary);
 }
 
 /* Packet Log Ticker */
