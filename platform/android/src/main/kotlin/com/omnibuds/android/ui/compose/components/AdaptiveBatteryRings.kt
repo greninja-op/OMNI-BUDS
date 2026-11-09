@@ -31,6 +31,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.omnibuds.android.hardware.capability.BrandSchema
 import com.omnibuds.android.ui.compose.model.AudioFormFactor
 import com.omnibuds.android.ui.compose.theme.OmniBrand
 
@@ -57,9 +58,12 @@ fun AdaptiveBatteryRings(
     lastKnown: Boolean,
     modifier: Modifier = Modifier,
     forceCombinedView: Boolean = false,
+    supportsCaseBatteryWhenUndocked: Boolean = false,
+    brandSchema: BrandSchema = BrandSchema.GENERIC,
     onChangeStyleClick: (() -> Unit)? = null,
     onToggleViewMode: (() -> Unit)? = null,
 ) {
+    val isRealme = brandSchema == BrandSchema.REALME_LINK
     val isSingleUnit = !formFactor.isBinauralSplit
     val isCombinedTws = forceCombinedView || (!isSingleUnit && leftPercent == null && rightPercent == null && devicePercent != null)
 
@@ -169,19 +173,19 @@ fun AdaptiveBatteryRings(
                                 side = GlyphSide.CASE,
                                 label = "Case",
                                 badgeText = "Case",
-                                subText = if (caseIsLive) null else "Keep 1 bud in case to sync",
+                                subText = if (caseIsLive || !isRealme) null else "Dock 1 bud in case to sync",
                                 percent = casePercent,
                                 charging = caseCharging,
                                 lastKnown = !caseIsLive || lastKnown,
                                 ringSize = 92.dp,
                             )
-                        } else {
+                        } else if (isRealme && supportsCaseBatteryWhenUndocked) {
                             UnavailableRingSlot(
                                 formFactor = formFactor,
                                 side = GlyphSide.CASE,
                                 label = "Case",
                                 badgeText = "Case",
-                                message = "Keep 1 bud in case",
+                                message = "Dock 1 bud in case to read",
                                 ringSize = 92.dp,
                             )
                         }
@@ -249,19 +253,19 @@ fun AdaptiveBatteryRings(
                                 side = GlyphSide.CASE,
                                 label = "Case",
                                 badgeText = "Case",
-                                subText = if (caseIsLive) null else "Keep 1 bud in case to sync",
+                                subText = if (caseIsLive || !isRealme) null else "Dock 1 bud in case to sync",
                                 percent = casePercent,
                                 charging = caseCharging,
                                 lastKnown = !caseIsLive || lastKnown,
                                 ringSize = 84.dp,
                             )
-                        } else {
+                        } else if (isRealme && supportsCaseBatteryWhenUndocked) {
                             UnavailableRingSlot(
                                 formFactor = formFactor,
                                 side = GlyphSide.CASE,
                                 label = "Case",
                                 badgeText = "Case",
-                                message = "Keep 1 bud in case",
+                                message = "Dock 1 bud in case to read",
                                 ringSize = 84.dp,
                             )
                         }

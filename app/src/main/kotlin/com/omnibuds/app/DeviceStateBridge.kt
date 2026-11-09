@@ -110,17 +110,24 @@ class DeviceStateBridge(
                 ),
             )
         }
-        val readyCaps = setOf(
-            "anc_mode",
-            "transparency_mode",
-            "eq_preset",
-            "spatial_audio",
-            "touch_controls",
-            "game_mode",
-            "volume_enhancer",
-            "wear_detection",
+        val profile = com.omnibuds.android.hardware.capability.StrictBrandProfileResolver.resolve(
+            device = null,
+            nameOverride = evidenceName,
+            addressOverride = id,
         )
-        if (firstRegistration) {
+        val readyCaps = buildSet {
+            add("anc_mode")
+            add("transparency_mode")
+            add("eq_preset")
+            add("touch_controls")
+            if (profile.hasSpatialAudio) add("spatial_audio")
+            if (profile.hasVolumeEnhancer) add("volume_enhancer")
+            if (profile.hasLowLagMode) add("game_mode")
+            if (profile.hasInEarDetection) add("wear_detection")
+            if (profile.hasDualConnection) add("multipoint")
+            if (profile.hasUltraBass) add("ultra_bass")
+        }
+        if (firstRegistration || identityChanged) {
             events += DeviceStateEvent.CapabilitiesUpdated(
                 deviceId = gid,
                 sessionId = null,
@@ -128,6 +135,8 @@ class DeviceStateBridge(
                 sourceId = "android-system",
                 capabilities = CapabilityState.Ready(readyCaps),
             )
+        }
+        if (firstRegistration) {
             lastConnection[id] = connected
             events += DeviceStateEvent.ConnectionChanged(
                 deviceId = gid,

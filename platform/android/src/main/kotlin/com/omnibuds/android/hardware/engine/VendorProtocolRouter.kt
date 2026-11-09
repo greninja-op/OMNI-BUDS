@@ -5,6 +5,7 @@ import android.bluetooth.BluetoothDevice
 import com.omnibuds.android.hardware.engine.drivers.GenericBleProberDriver
 import com.omnibuds.android.hardware.engine.drivers.IVendorDriver
 import com.omnibuds.android.hardware.engine.drivers.NothingEarbudsDriver
+import com.omnibuds.android.hardware.engine.drivers.NothingXProtocolDriver
 import com.omnibuds.android.hardware.engine.drivers.OnePlusHeyMelodyDriver
 import com.omnibuds.android.hardware.engine.drivers.SamsungGalaxyBudsDriver
 import com.omnibuds.android.hardware.engine.drivers.XiaomiAirohaRaceDriver
@@ -23,6 +24,7 @@ import java.util.concurrent.ConcurrentHashMap
 class VendorProtocolRouter {
 
     private val drivers: List<IVendorDriver> = listOf(
+        NothingXProtocolDriver(),
         OnePlusHeyMelodyDriver(),
         XiaomiAirohaRaceDriver(),
         NothingEarbudsDriver(),
@@ -140,6 +142,60 @@ class VendorProtocolRouter {
     fun buildBatteryQueryCommand(device: BluetoothDevice, serviceUuids: List<String> = emptyList()): ByteArray? {
         val driver = resolveDriver(device, serviceUuids)
         return driver.buildBatteryQueryCommand()
+    }
+
+    fun buildUltraBassCommand(device: BluetoothDevice, enabled: Boolean, level: Int): ByteArray? {
+        val driver = resolveDriver(device)
+        return if (driver is NothingXProtocolDriver) {
+            driver.buildUltraBassCommand(enabled, level)
+        } else {
+            null
+        }
+    }
+
+    fun buildCustom3BandEqCommand(device: BluetoothDevice, bass: Int, mid: Int, treble: Int): ByteArray? {
+        val driver = resolveDriver(device)
+        return if (driver is NothingXProtocolDriver) {
+            driver.buildCustom3BandEqCommand(bass, mid, treble)
+        } else {
+            null
+        }
+    }
+
+    fun buildInEarDetectionCommand(device: BluetoothDevice, enabled: Boolean): ByteArray? {
+        val driver = resolveDriver(device)
+        return if (driver is NothingXProtocolDriver) {
+            driver.buildInEarDetectionCommand(enabled)
+        } else {
+            null
+        }
+    }
+
+    fun buildDualConnectionCommand(device: BluetoothDevice, enabled: Boolean): ByteArray? {
+        val driver = resolveDriver(device)
+        return if (driver is NothingXProtocolDriver) {
+            driver.buildDualConnectionCommand(enabled)
+        } else {
+            null
+        }
+    }
+
+    fun buildFindMyBudsCommand(device: BluetoothDevice, bud: String, ring: Boolean): ByteArray? {
+        val driver = resolveDriver(device)
+        return if (driver is NothingXProtocolDriver) {
+            driver.buildFindMyBudsCommand(bud, ring)
+        } else {
+            null
+        }
+    }
+
+    fun buildTouchControlCommand(device: BluetoothDevice, bud: String, gesture: String, action: String): ByteArray? {
+        val driver = resolveDriver(device)
+        return if (driver is NothingXProtocolDriver) {
+            driver.buildTouchControlCommand(bud, gesture, action)
+        } else {
+            null
+        }
     }
 
     /**

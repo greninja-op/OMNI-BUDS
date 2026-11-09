@@ -97,6 +97,14 @@ import com.omnibuds.android.hardware.capability.PhysicalInputSensor
 import com.omnibuds.android.hardware.engine.BinauralCrossfeedMode
 import com.omnibuds.android.hardware.engine.NonTwsHardwareController
 import com.omnibuds.android.ui.compose.components.AdaptiveAudioGlyph
+import com.omnibuds.android.hardware.capability.StrictBrandProfile
+import com.omnibuds.android.hardware.capability.StrictBrandProfileResolver
+import com.omnibuds.android.hardware.capability.BrandSchema
+import com.omnibuds.android.ui.compose.components.NothingXNoiseControlCard
+import com.omnibuds.android.ui.compose.components.NothingXEqualizerCard
+import com.omnibuds.android.ui.compose.components.NothingXUltraBassCard
+import com.omnibuds.android.ui.compose.components.NothingXTouchControlsCard
+import com.omnibuds.android.ui.compose.components.NothingXDeviceSettingsCard
 import com.omnibuds.android.ui.compose.components.AdaptiveBatteryRings
 import com.omnibuds.android.ui.compose.components.AutoStandbyTimerCard
 import com.omnibuds.android.ui.compose.components.CollarVibrationCard
@@ -196,6 +204,37 @@ fun WorkspaceScreen(
             state.overview?.displayName,
             explicitFormFactor = formFactorOverride,
         )
+    }
+
+    val strictProfile = remember(state.deviceIdentifier, state.overview?.displayName) {
+        StrictBrandProfileResolver.resolve(
+            device = bluetoothDevice,
+            nameOverride = state.overview?.displayName,
+            addressOverride = state.deviceIdentifier,
+            discoveredGattUuids = deviceServices.map { it.uuid },
+        )
+    }
+
+    var nothingAncSubLevel by remember(state.deviceIdentifier) {
+        mutableStateOf("High (42dB)")
+    }
+    var nothingEqPreset by remember(state.deviceIdentifier) {
+        mutableStateOf(strictProfile.defaultEqPreset)
+    }
+    var ultraBassOn by remember(state.deviceIdentifier) {
+        mutableStateOf(true)
+    }
+    var ultraBassLevel by remember(state.deviceIdentifier) {
+        androidx.compose.runtime.mutableIntStateOf(3)
+    }
+    var inEarDetectionOn by remember(state.deviceIdentifier) {
+        mutableStateOf(true)
+    }
+    var lowLagModeOn by remember(state.deviceIdentifier) {
+        mutableStateOf(false)
+    }
+    var dualConnectionOn by remember(state.deviceIdentifier) {
+        mutableStateOf(true)
     }
 
     val nonTwsController = remember { NonTwsHardwareController() }
@@ -345,6 +384,8 @@ fun WorkspaceScreen(
                 deviceId = state.deviceIdentifier,
                 formFactor = manifest.formFactor,
                 forceCombinedView = forceCombinedView,
+                supportsCaseBatteryWhenUndocked = strictProfile.supportsCaseBatteryWhenUndocked,
+                brandSchema = strictProfile.brandSchema,
                 onChangeStyleClick = { showFormFactorPicker = true },
                 onToggleViewMode = {
                     val next = !forceCombinedView
@@ -357,7 +398,100 @@ fun WorkspaceScreen(
         // -- Noise control / Open-Acoustics Studio ------------------------------
         val ancControl = state.controls.firstOrNull { it.featureId == "anc_mode" }
         val knownFeatures = product.features
-        if (manifest.isOpenAcoustics) {
+
+        if (strictProfile.brandSchema == BrandSchema.NOTHING_X) {
+            // -- 1. Nothing X Noise Control Card --
+            item {
+                Spacer(modifier = Modifier.height(28.dp))
+                NothingXNoiseControlCard(
+                    currentMode = ancControl?.currentValue ?: "Active Noise Cancellation",
+                    currentSubLevel = nothingAncSubLevel,
+                    interactive = connected,
+                    onSelectMode = { mode ->
+                        viewModel.submitFeatureControl("anc_mode", mode)
+                    },
+                    onSelectSubLevel = { subLvl ->
+                        nothingAncSubLevel = subLvl
+                        viewModel.submitFeatureControl("pro_anc_level", subLvl)
+                    },
+                )
+            }
+
+            // -- 2. Nothing X Equalizer Card --
+            item {
+                Spacer(modifier = Modifier.height(16.dp))
+                NothingXEqualizerCard(
+                    currentPreset = nothingEqPreset,
+                    interactive = connected,
+                    onSelectPreset = { preset ->
+                        nothingEqPreset = preset
+                        viewModel.submitFeatureControl("eq_preset", preset)
+                    },
+                    on3BandGainsChanged = { b, m, t ->
+                        viewModel.submitFeatureControl("eq_3band", "$b,$m,$t")
+                    },
+                )
+            }
+
+            // -- 3. Ultra Bass Technology 2.0 Card --
+            if (strictProfile.hasUltraBass) {
+                item {
+                    Spacer(modifier = Modifier.height(16.dp))
+                    NothingXUltraBassCard(
+                        enabled = ultraBassOn,
+                        level = ultraBassLevel,
+                        interactive = connected,
+                        onToggle = { on ->
+                            ultraBassOn = on
+                            viewModel.submitFeatureControl("ultra_bass", "${if (on) "ON" else "OFF"}:$ultraBassLevel")
+                        },
+                        onLevelChange = { lvl ->
+                            ultraBassLevel = lvl
+                            viewModel.submitFeatureControl("ultra_bass", "ON:$lvl")
+                        },
+                    )
+                }
+            }
+
+            // -- 4. Touch Controls Card --
+            item {
+                Spacer(modifier = Modifier.height(16.dp))
+                NothingXTouchControlsCard(
+                    deviceId = state.deviceIdentifier,
+                    interactive = connected,
+                    onGestureChanged = { bud, gesture, action ->
+                        viewModel.submitFeatureControl("touch_controls", "$bud:$gesture:$action")
+                    },
+                )
+            }
+
+            // -- 5. Device Settings & System Toggles --
+            item {
+                Spacer(modifier = Modifier.height(16.dp))
+                NothingXDeviceSettingsCard(
+                    profile = strictProfile,
+                    inEarDetectionOn = inEarDetectionOn,
+                    lowLagModeOn = lowLagModeOn,
+                    dualConnectionOn = dualConnectionOn,
+                    interactive = connected,
+                    onInEarDetectionToggle = { on ->
+                        inEarDetectionOn = on
+                        viewModel.submitFeatureControl("in_ear_detection", if (on) "ON" else "OFF")
+                    },
+                    onLowLagModeToggle = { on ->
+                        lowLagModeOn = on
+                        viewModel.submitFeatureControl("low_lag_mode", if (on) "ON" else "OFF")
+                    },
+                    onDualConnectionToggle = { on ->
+                        dualConnectionOn = on
+                        viewModel.submitFeatureControl("dual_connection", if (on) "ON" else "OFF")
+                    },
+                    onRingEarbud = { bud, ring ->
+                        viewModel.submitFeatureControl("find_my_buds", "$bud:${if (ring) "ON" else "OFF"}")
+                    },
+                )
+            }
+        } else if (manifest.isOpenAcoustics) {
             item {
                 Spacer(modifier = Modifier.height(28.dp))
                 OpenAcousticsStudioCard(
@@ -433,162 +567,164 @@ fun WorkspaceScreen(
             }
         }
 
-        // -- Over-Ear Controls (Ambient & Pressure Optimizer, Speak-to-Chat, Standby Timer) ---
-        if (manifest.formFactor == AudioFormFactor.HEADSET_OVER_ON_EAR) {
-            item {
-                Spacer(modifier = Modifier.height(16.dp))
-                OverEarAmbientAndClampingCard(
-                    ambientLevel = ambientSoundLevel,
-                    voiceFocusOn = voiceFocusOn,
-                    interactive = connected,
-                    onAmbientLevelChange = { lvl ->
-                        ambientSoundLevel = lvl
-                        viewModel.submitFeatureControl("overear_ambient_lvl", "$lvl")
-                    },
-                    onVoiceFocusToggle = { on ->
-                        voiceFocusOn = on
-                        viewModel.submitFeatureControl("overear_voice_focus", if (on) "ON" else "OFF")
-                    },
-                    onRunClampingOptimizer = {
-                        scope.launch {
-                            optimizerRunning = true
-                            nonTwsController.runClampingOptimizer(
-                                onProgress = {},
-                                onComplete = { optimizerRunning = false },
+        if (strictProfile.brandSchema != BrandSchema.NOTHING_X) {
+            // -- Over-Ear Controls (Ambient & Pressure Optimizer, Speak-to-Chat, Standby Timer) ---
+            if (manifest.formFactor == AudioFormFactor.HEADSET_OVER_ON_EAR) {
+                item {
+                    Spacer(modifier = Modifier.height(16.dp))
+                    OverEarAmbientAndClampingCard(
+                        ambientLevel = ambientSoundLevel,
+                        voiceFocusOn = voiceFocusOn,
+                        interactive = connected,
+                        onAmbientLevelChange = { lvl ->
+                            ambientSoundLevel = lvl
+                            viewModel.submitFeatureControl("overear_ambient_lvl", "$lvl")
+                        },
+                        onVoiceFocusToggle = { on ->
+                            voiceFocusOn = on
+                            viewModel.submitFeatureControl("overear_voice_focus", if (on) "ON" else "OFF")
+                        },
+                        onRunClampingOptimizer = {
+                            scope.launch {
+                                optimizerRunning = true
+                                nonTwsController.runClampingOptimizer(
+                                    onProgress = {},
+                                    onComplete = { optimizerRunning = false },
+                                )
+                            }
+                        },
+                        optimizerRunning = optimizerRunning,
+                    )
+                    Spacer(modifier = Modifier.height(12.dp))
+                    SpeakToChatCard(
+                        enabled = speakToChatOn,
+                        sensitivity = speakToChatSensitivity,
+                        pauseTime = speakToChatPauseTime,
+                        interactive = connected,
+                        onToggle = { on ->
+                            speakToChatOn = on
+                            viewModel.submitFeatureControl("speak_to_chat", if (on) "ON" else "OFF")
+                        },
+                        onSensitivityChange = { s -> speakToChatSensitivity = s },
+                        onPauseTimeChange = { p -> speakToChatPauseTime = p },
+                    )
+                    Spacer(modifier = Modifier.height(12.dp))
+                    AutoStandbyTimerCard(
+                        currentTimer = autoStandbyTimer,
+                        interactive = connected,
+                        onTimerChange = { t -> autoStandbyTimer = t },
+                    )
+                }
+            }
+
+            // -- Device features (known capabilities or universal DSP, interactive when connected) ------------
+            val featureRows = state.controls.filter { control ->
+                control.featureId != "anc_mode" &&
+                    control.featureId != "transparency_mode" &&
+                    control.featureId != "touch_controls" &&
+                    ((knownFeatures != null && KnownDeviceFeatures.has(knownFeatures, control.featureId)) ||
+                     (connected && (control.featureId == "eq_preset" ||
+                                    control.featureId == "spatial_audio" ||
+                                    control.featureId == "game_mode" ||
+                                    control.featureId == "volume_enhancer")))
+            }
+            val codecRow = state.audio?.takeIf {
+                it.isCodecObservable && it.activeCodecName != null
+            }
+            if (featureRows.isNotEmpty() || codecRow != null) {
+                item {
+                    Spacer(modifier = Modifier.height(28.dp))
+                    SectionLabel("Sound & features")
+                    Spacer(modifier = Modifier.height(12.dp))
+                    Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                        featureRows.forEach { control ->
+                            FeatureInfoRow(
+                                control = control,
+                                connected = connected,
+                                onFeatureSelected = { fId, value ->
+                                    viewModel.submitFeatureControl(fId, value)
+                                },
                             )
                         }
-                    },
-                    optimizerRunning = optimizerRunning,
-                )
-                Spacer(modifier = Modifier.height(12.dp))
-                SpeakToChatCard(
-                    enabled = speakToChatOn,
-                    sensitivity = speakToChatSensitivity,
-                    pauseTime = speakToChatPauseTime,
-                    interactive = connected,
-                    onToggle = { on ->
-                        speakToChatOn = on
-                        viewModel.submitFeatureControl("speak_to_chat", if (on) "ON" else "OFF")
-                    },
-                    onSensitivityChange = { s -> speakToChatSensitivity = s },
-                    onPauseTimeChange = { p -> speakToChatPauseTime = p },
-                )
-                Spacer(modifier = Modifier.height(12.dp))
-                AutoStandbyTimerCard(
-                    currentTimer = autoStandbyTimer,
-                    interactive = connected,
-                    onTimerChange = { t -> autoStandbyTimer = t },
-                )
-            }
-        }
-
-        // -- Device features (known capabilities or universal DSP, interactive when connected) ------------
-        val featureRows = state.controls.filter { control ->
-            control.featureId != "anc_mode" &&
-                control.featureId != "transparency_mode" &&
-                control.featureId != "touch_controls" &&
-                ((knownFeatures != null && KnownDeviceFeatures.has(knownFeatures, control.featureId)) ||
-                 (connected && (control.featureId == "eq_preset" ||
-                                control.featureId == "spatial_audio" ||
-                                control.featureId == "game_mode" ||
-                                control.featureId == "volume_enhancer")))
-        }
-        val codecRow = state.audio?.takeIf {
-            it.isCodecObservable && it.activeCodecName != null
-        }
-        if (featureRows.isNotEmpty() || codecRow != null) {
-            item {
-                Spacer(modifier = Modifier.height(28.dp))
-                SectionLabel("Sound & features")
-                Spacer(modifier = Modifier.height(12.dp))
-                Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                    featureRows.forEach { control ->
-                        FeatureInfoRow(
-                            control = control,
-                            connected = connected,
-                            onFeatureSelected = { fId, value ->
-                                viewModel.submitFeatureControl(fId, value)
-                            },
-                        )
-                    }
-                    if (codecRow != null) {
-                        Surface(
-                            shape = RoundedCornerShape(24.dp),
-                            color = MaterialTheme.colorScheme.surfaceVariant,
-                            modifier = Modifier.fillMaxWidth(),
-                        ) {
-                            Row(
-                                verticalAlignment = Alignment.CenterVertically,
-                                modifier = Modifier.padding(horizontal = 20.dp, vertical = 16.dp),
+                        if (codecRow != null) {
+                            Surface(
+                                shape = RoundedCornerShape(24.dp),
+                                color = MaterialTheme.colorScheme.surfaceVariant,
+                                modifier = Modifier.fillMaxWidth(),
                             ) {
-                                Icon(
-                                    imageVector = OmniIcons.SoundWaves,
-                                    contentDescription = null,
-                                    tint = OmniBrand.Accent,
-                                    modifier = Modifier.size(24.dp),
-                                )
-                                Spacer(modifier = Modifier.size(16.dp))
-                                Column {
-                                    Text("Sound", style = MaterialTheme.typography.bodyLarge)
-                                    Text(
-                                        text = "Active codec: ${codecRow.activeCodecName}",
-                                        style = MaterialTheme.typography.bodySmall,
-                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                Row(
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    modifier = Modifier.padding(horizontal = 20.dp, vertical = 16.dp),
+                                ) {
+                                    Icon(
+                                        imageVector = OmniIcons.SoundWaves,
+                                        contentDescription = null,
+                                        tint = OmniBrand.Accent,
+                                        modifier = Modifier.size(24.dp),
                                     )
+                                    Spacer(modifier = Modifier.size(16.dp))
+                                    Column {
+                                        Text("Sound", style = MaterialTheme.typography.bodyLarge)
+                                        Text(
+                                            text = "Active codec: ${codecRow.activeCodecName}",
+                                            style = MaterialTheme.typography.bodySmall,
+                                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                        )
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
-        }
 
-        // -- Button & touch controls / Neckband Controller ---------------------
-        if (manifest.formFactor == AudioFormFactor.NECKBAND) {
-            item {
-                Spacer(modifier = Modifier.height(28.dp))
-                SectionLabel("Neckband Magnetic & Inline Button Controls")
-                Spacer(modifier = Modifier.height(12.dp))
-                Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                    MagneticHallSwitchCard(
-                        autoPlayOnSeparate = autoPlayOnSeparate,
-                        instantPauseOnClasp = instantPauseOnClasp,
-                        interactive = connected,
-                        onAutoPlayToggle = { on ->
-                            autoPlayOnSeparate = on
-                            nonTwsController.isAutoPlayOnSeparateEnabled = on
-                        },
-                        onInstantPauseToggle = { on ->
-                            instantPauseOnClasp = on
-                            nonTwsController.isInstantPauseOnClaspEnabled = on
-                        },
-                    )
-                    CollarVibrationCard(
-                        vibrationOn = collarVibrationOn,
-                        interactive = connected,
-                        onVibrationToggle = { on ->
-                            collarVibrationOn = on
-                            nonTwsController.isCollarVibrationEnabled = on
-                        },
-                        onTestPulse = {
-                            nonTwsController.triggerVibrationPulse(context)
-                        },
-                    )
-                    InlineRockerControllerCard()
+            // -- Button & touch controls / Neckband Controller ---------------------
+            if (manifest.formFactor == AudioFormFactor.NECKBAND) {
+                item {
+                    Spacer(modifier = Modifier.height(28.dp))
+                    SectionLabel("Neckband Magnetic & Inline Button Controls")
+                    Spacer(modifier = Modifier.height(12.dp))
+                    Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                        MagneticHallSwitchCard(
+                            autoPlayOnSeparate = autoPlayOnSeparate,
+                            instantPauseOnClasp = instantPauseOnClasp,
+                            interactive = connected,
+                            onAutoPlayToggle = { on ->
+                                autoPlayOnSeparate = on
+                                nonTwsController.isAutoPlayOnSeparateEnabled = on
+                            },
+                            onInstantPauseToggle = { on ->
+                                instantPauseOnClasp = on
+                                nonTwsController.isInstantPauseOnClaspEnabled = on
+                            },
+                        )
+                        CollarVibrationCard(
+                            vibrationOn = collarVibrationOn,
+                            interactive = connected,
+                            onVibrationToggle = { on ->
+                                collarVibrationOn = on
+                                nonTwsController.isCollarVibrationEnabled = on
+                            },
+                            onTestPulse = {
+                                nonTwsController.triggerVibrationPulse(context)
+                            },
+                        )
+                        InlineRockerControllerCard()
+                    }
                 }
-            }
-        } else if (product.category == ProductCatalog.Category.TWS || knownFeatures?.wearDetection == true || manifest.formFactor.isBinauralSplit) {
-            item {
-                Spacer(modifier = Modifier.height(28.dp))
-                SectionLabel("Button & touch controls")
-                Spacer(modifier = Modifier.height(12.dp))
-                TouchControlsCard(
-                    deviceId = state.deviceIdentifier,
-                    connected = connected,
-                    onGestureChanged = { bud, gesture, action ->
-                        viewModel.submitFeatureControl("touch_controls", "$bud:$gesture:$action")
-                    },
-                )
+            } else if (product.category == ProductCatalog.Category.TWS || knownFeatures?.wearDetection == true || manifest.formFactor.isBinauralSplit) {
+                item {
+                    Spacer(modifier = Modifier.height(28.dp))
+                    SectionLabel("Button & touch controls")
+                    Spacer(modifier = Modifier.height(12.dp))
+                    TouchControlsCard(
+                        deviceId = state.deviceIdentifier,
+                        connected = connected,
+                        onGestureChanged = { bud, gesture, action ->
+                            viewModel.submitFeatureControl("touch_controls", "$bud:$gesture:$action")
+                        },
+                    )
+                }
             }
         }
 
@@ -800,6 +936,8 @@ private fun BatterySection(
     deviceId: String,
     formFactor: AudioFormFactor,
     forceCombinedView: Boolean,
+    supportsCaseBatteryWhenUndocked: Boolean = false,
+    brandSchema: BrandSchema = BrandSchema.GENERIC,
     onChangeStyleClick: () -> Unit,
     onToggleViewMode: () -> Unit,
 ) {
@@ -888,6 +1026,8 @@ private fun BatterySection(
             caseIsLive = caseIsLive,
             lastKnown = lastKnown && liveReport == null,
             forceCombinedView = forceCombinedView,
+            supportsCaseBatteryWhenUndocked = supportsCaseBatteryWhenUndocked,
+            brandSchema = brandSchema,
             onChangeStyleClick = onChangeStyleClick,
             onToggleViewMode = onToggleViewMode,
         )

@@ -134,16 +134,36 @@ class MainActivity : ComponentActivity() {
         if (components != null && components.isNotEmpty()) {
             bridge.onBatteryComponents(address, components, aggregateLevel = level)
         } else if (level != null && level in 0..100) {
-            bridge.onBatteryLevel(address, level)
-            // Attempt deep RFCOMM query for real Left/Right/Case breakdown
-            appScope.launch {
-                com.omnibuds.app.hardware.TwsHardwareController.queryTwsBattery(device) { l, r, c, lChg, rChg, cChg ->
-                    val list = mutableListOf<com.omnibuds.core.globalstate.BatteryState.ComponentLevel>()
-                    if (l != null) list.add(com.omnibuds.core.globalstate.BatteryState.ComponentLevel(com.omnibuds.core.globalstate.BatteryState.Component.LEFT_EARBUD, l, lChg))
-                    if (r != null) list.add(com.omnibuds.core.globalstate.BatteryState.ComponentLevel(com.omnibuds.core.globalstate.BatteryState.Component.RIGHT_EARBUD, r, rChg))
-                    if (c != null) list.add(com.omnibuds.core.globalstate.BatteryState.ComponentLevel(com.omnibuds.core.globalstate.BatteryState.Component.CHARGING_CASE, c, cChg))
-                    if (list.isNotEmpty()) {
-                        bridge.onBatteryComponents(address, list, aggregateLevel = level)
+            val profile = com.omnibuds.android.hardware.capability.StrictBrandProfileResolver.resolve(device)
+            if (profile.brandSchema == com.omnibuds.android.hardware.capability.BrandSchema.NOTHING_X || profile.formFactor.isBinauralSplit) {
+                // Fallback Split Guarantee: Populate Left and Right rings immediately so binaural split is shown
+                val fallbackList = listOf(
+                    com.omnibuds.core.globalstate.BatteryState.ComponentLevel(
+                        com.omnibuds.core.globalstate.BatteryState.Component.LEFT_EARBUD,
+                        level,
+                        false,
+                    ),
+                    com.omnibuds.core.globalstate.BatteryState.ComponentLevel(
+                        com.omnibuds.core.globalstate.BatteryState.Component.RIGHT_EARBUD,
+                        level,
+                        false,
+                    ),
+                )
+                bridge.onBatteryComponents(address, fallbackList, aggregateLevel = level)
+                // Immediately trigger active Nothing Battery Read (0x07 C0) + Fast Pair scan
+                com.omnibuds.android.hardware.engine.UniversalTwsEngine.queryBattery(device)
+            } else {
+                bridge.onBatteryLevel(address, level)
+                // Attempt deep RFCOMM query for real Left/Right/Case breakdown
+                appScope.launch {
+                    com.omnibuds.app.hardware.TwsHardwareController.queryTwsBattery(device) { l, r, c, lChg, rChg, cChg ->
+                        val list = mutableListOf<com.omnibuds.core.globalstate.BatteryState.ComponentLevel>()
+                        if (l != null) list.add(com.omnibuds.core.globalstate.BatteryState.ComponentLevel(com.omnibuds.core.globalstate.BatteryState.Component.LEFT_EARBUD, l, lChg))
+                        if (r != null) list.add(com.omnibuds.core.globalstate.BatteryState.ComponentLevel(com.omnibuds.core.globalstate.BatteryState.Component.RIGHT_EARBUD, r, rChg))
+                        if (c != null && c in 1..100) list.add(com.omnibuds.core.globalstate.BatteryState.ComponentLevel(com.omnibuds.core.globalstate.BatteryState.Component.CHARGING_CASE, c, cChg))
+                        if (list.isNotEmpty()) {
+                            bridge.onBatteryComponents(address, list, aggregateLevel = level)
+                        }
                     }
                 }
             }
@@ -208,12 +228,19 @@ class MainActivity : ComponentActivity() {
     private fun syncDescribed(device: BluetoothDevice) {
         appScope.launch {
             try {
+                if (lastActiveDeviceAddress != device.address) {
+                    lastActiveDeviceAddress = device.address
+                    lastLeftBattery = null
+                    lastRightBattery = null
+                    lastCaseBattery = null
+                    lastKnownAncMode = "OFF"
+                }
                 updateBatteryFromDevice(device)
                 discoveryProvider.describe(device)?.let { described ->
                     bridge.syncDevice(described, described.connectionState)
                     resolveDeviceImageIfNeeded(described.address, described.displayName)
                     if (described.connectionState is ConnectionState.Connected) {
-                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.connect(applicationContext, device)
+                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.onDeviceChanged(applicationContext, device)
                         com.omnibuds.app.service.OmniBudsForegroundService.startForDevice(applicationContext, device)
                         updateQuickNotification(device)
                         if (::shell.isInitialized) {
@@ -481,37 +508,41 @@ class MainActivity : ComponentActivity() {
         appScope.launch {
             com.omnibuds.android.hardware.engine.UniversalTwsEngine.batteryReports.collect { (address, report) ->
                 val components = mutableListOf<com.omnibuds.core.globalstate.BatteryState.ComponentLevel>()
-                report.left?.let {
-                    lastLeftBattery = it
+                if (report.left != null) {
+                    lastLeftBattery = report.left
                     components.add(
                         com.omnibuds.core.globalstate.BatteryState.ComponentLevel(
                             com.omnibuds.core.globalstate.BatteryState.Component.LEFT_EARBUD,
-                            it,
+                            report.left,
                             report.leftCharging,
                         ),
                     )
+                } else {
+                    lastLeftBattery = null
                 }
-                report.right?.let {
-                    lastRightBattery = it
+                if (report.right != null) {
+                    lastRightBattery = report.right
                     components.add(
                         com.omnibuds.core.globalstate.BatteryState.ComponentLevel(
                             com.omnibuds.core.globalstate.BatteryState.Component.RIGHT_EARBUD,
-                            it,
+                            report.right,
                             report.rightCharging,
                         ),
                     )
+                } else {
+                    lastRightBattery = null
                 }
-                report.case?.let {
-                    if (it in 1..100) {
-                        lastCaseBattery = it
-                        components.add(
-                            com.omnibuds.core.globalstate.BatteryState.ComponentLevel(
-                                com.omnibuds.core.globalstate.BatteryState.Component.CHARGING_CASE,
-                                it,
-                                report.caseCharging,
-                            ),
-                        )
-                    }
+                if (report.case != null && report.case in 1..100) {
+                    lastCaseBattery = report.case
+                    components.add(
+                        com.omnibuds.core.globalstate.BatteryState.ComponentLevel(
+                            com.omnibuds.core.globalstate.BatteryState.Component.CHARGING_CASE,
+                            report.case,
+                            report.caseCharging,
+                        ),
+                    )
+                } else {
+                    lastCaseBattery = null
                 }
                 if (components.isNotEmpty()) {
                     bridge.onBatteryComponents(
@@ -659,7 +690,7 @@ class MainActivity : ComponentActivity() {
                     discoveryProvider.bondedDevice(described.address)?.let { device ->
                         updateBatteryFromDevice(device)
                         if (described.connectionState is ConnectionState.Connected) {
-                            com.omnibuds.android.hardware.engine.UniversalTwsEngine.connect(applicationContext, device)
+                            com.omnibuds.android.hardware.engine.UniversalTwsEngine.onDeviceChanged(applicationContext, device)
                             updateQuickNotification(device)
                             if (::shell.isInitialized) {
                                 shell.selectDevice(described.address)
@@ -808,6 +839,7 @@ class MainActivity : ComponentActivity() {
     private var lastLeftBattery: Int? = null
     private var lastRightBattery: Int? = null
     private var lastCaseBattery: Int? = null
+    private var lastActiveDeviceAddress: String? = null
 
     private fun updateQuickNotification(device: BluetoothDevice, overrideMode: String? = null) {
         if (::shell.isInitialized && !shell.settingsViewModel.state.value.notificationsEnabled) {
@@ -815,6 +847,13 @@ class MainActivity : ComponentActivity() {
             return
         }
         val address = try { device.address } catch (_: Exception) { null } ?: return
+        if (lastActiveDeviceAddress != address) {
+            lastActiveDeviceAddress = address
+            lastLeftBattery = null
+            lastRightBattery = null
+            lastCaseBattery = null
+            lastKnownAncMode = "OFF"
+        }
         val rawName = try {
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) {
                 device.alias?.takeIf { it.isNotBlank() } ?: device.name
@@ -887,7 +926,14 @@ class MainActivity : ComponentActivity() {
             "touch_controls" -> {
                 if (device != null) {
                     appScope.launch {
-                        if (value == "RESTORE_DEFAULT") {
+                        val profile = com.omnibuds.android.hardware.capability.StrictBrandProfileResolver.resolve(device)
+                        if (profile.brandSchema == com.omnibuds.android.hardware.capability.BrandSchema.NOTHING_X) {
+                            val parts = value.split(":")
+                            if (parts.size >= 3) {
+                                com.omnibuds.android.hardware.engine.UniversalTwsEngine.sendNothingTouchControl(device, parts[0], parts[1], parts[2])
+                            }
+                            toast("Touch gesture updated")
+                        } else if (value == "RESTORE_DEFAULT") {
                             com.omnibuds.android.hardware.protocol.EarbudProtocolManager.restoreDefaultTouchControls(device)
                             toast("Factory touch controls restored")
                         } else if (value.startsWith("MATRIX:")) {
@@ -911,6 +957,70 @@ class MainActivity : ComponentActivity() {
                             toast("Touch gesture updated")
                         }
                     }
+                }
+            }
+            "ultra_bass" -> {
+                val parts = value.split(":")
+                val enabled = parts[0].equals("ON", ignoreCase = true)
+                val level = parts.getOrNull(1)?.toIntOrNull() ?: 3
+                if (device != null) {
+                    appScope.launch {
+                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.setUltraBass(device, enabled, level)
+                    }
+                }
+                toast("Ultra Bass 2.0: ${if (enabled) "Level $level" else "Off"}")
+            }
+            "eq_3band" -> {
+                val parts = value.split(",").mapNotNull { it.trim().toIntOrNull() }
+                if (parts.size >= 3 && device != null) {
+                    appScope.launch {
+                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.set3BandEqualizer(device, parts[0], parts[1], parts[2])
+                    }
+                    toast("Custom 3-Band EQ applied")
+                }
+            }
+            "low_lag_mode" -> {
+                val enabled = value.equals("ON", ignoreCase = true)
+                if (device != null) {
+                    appScope.launch {
+                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.setGameMode(device, enabled)
+                    }
+                }
+                toast("Low Lag Mode: $value")
+            }
+            "dual_connection" -> {
+                if (device != null) {
+                    val on = value.equals("ON", ignoreCase = true)
+                    appScope.launch {
+                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.setNothingDualConnection(device, on)
+                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.setMultipoint(device, on)
+                    }
+                    toast("Dual Connection: $value")
+                }
+            }
+            "find_my_buds" -> {
+                val parts = value.split(":")
+                val bud = parts[0]
+                val ring = parts.getOrNull(1)?.equals("ON", ignoreCase = true) ?: true
+                if (device != null) {
+                    appScope.launch {
+                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.ringNothingEarbud(device, bud, ring)
+                    }
+                }
+                toast(if (ring) "Ringing $bud Earbud..." else "Ringing stopped")
+            }
+            "in_ear_detection", "wear_detection" -> {
+                if (device != null) {
+                    val on = value.equals("ON", ignoreCase = true)
+                    appScope.launch {
+                        val profile = com.omnibuds.android.hardware.capability.StrictBrandProfileResolver.resolve(device)
+                        if (profile.brandSchema == com.omnibuds.android.hardware.capability.BrandSchema.NOTHING_X) {
+                            com.omnibuds.android.hardware.engine.UniversalTwsEngine.setNothingInEarDetection(device, on)
+                        } else {
+                            com.omnibuds.android.hardware.engine.UniversalTwsEngine.setInEarDetection(device, on)
+                        }
+                    }
+                    toast("In-Ear Detection: $value")
                 }
             }
             "game_mode" -> {

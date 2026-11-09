@@ -162,7 +162,7 @@ object ProductCatalog {
         ),
         Entry(
             id = "cmf_buds",
-            matchKeys = listOf("cmf buds", "cmf by nothing buds"),
+            matchKeys = listOf("cmf buds", "cmf by nothing buds", "cmf buds 1", "cmf buds (b168)", "b168"),
             manufacturer = "CMF by Nothing", model = "Buds",
             category = Category.TWS, exact = true,
             imageAsset = "product_cmf_buds",

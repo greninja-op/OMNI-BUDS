@@ -14,6 +14,11 @@ import android.content.Context
 import android.os.Build
 import android.util.Log
 import com.omnibuds.android.hardware.engine.drivers.TransportPreference
+import com.omnibuds.android.hardware.engine.drivers.IVendorDriver
+import com.omnibuds.android.hardware.engine.drivers.NothingXProtocolDriver
+import com.omnibuds.android.hardware.capability.StrictBrandProfile
+import com.omnibuds.android.hardware.capability.StrictBrandProfileResolver
+import com.omnibuds.android.hardware.capability.BrandSchema
 import com.omnibuds.android.hardware.apple.AppleL2capDriver
 import com.omnibuds.android.hardware.audio.CodecDetails
 import com.omnibuds.android.hardware.audio.CodecManager
@@ -26,6 +31,7 @@ import com.omnibuds.android.hardware.audio.Soundscape
 import com.omnibuds.android.hardware.capability.DeviceCapabilityManifest
 import com.omnibuds.android.hardware.capability.HardwareCapabilityInspector
 import com.omnibuds.android.hardware.capability.PinchSpeed
+import com.omnibuds.android.hardware.capability.StrictBrandProfileDatabase
 import com.omnibuds.android.hardware.protocol.AncByteMapping
 import com.omnibuds.android.hardware.protocol.DiagnosticLogEntry
 import com.omnibuds.android.hardware.protocol.FastPairProtocolParser
@@ -121,6 +127,22 @@ object UniversalTwsEngine {
 
     private val _activeDrivers = MutableStateFlow<Map<String, String>>(emptyMap())
     val activeDrivers: StateFlow<Map<String, String>> = _activeDrivers.asStateFlow()
+
+    // Active session state and strict brand profile
+    var activeDevice: BluetoothDevice? = null
+        private set
+    var activeDriver: IVendorDriver? = null
+        private set
+    var activeProfile: StrictBrandProfile? = null
+        private set
+    var activeCapabilityManifest: DeviceCapabilityManifest? = null
+        private set
+    var leftBattery: Int? = null
+        private set
+    var rightBattery: Int? = null
+        private set
+    var caseBattery: Int? = null
+        private set
 
     private var appContext: Context? = null
     private var isInitialized = false
@@ -244,6 +266,18 @@ object UniversalTwsEngine {
     fun handleBatteryReport(address: String, incomingReport: TwsBatteryReport, source: String? = null) {
         val src = source ?: incomingReport.sourceProtocol
 
+        val dev = activeDevice?.takeIf { it.address == address }
+            ?: activeRfcommSockets[address]?.remoteDevice
+            ?: activeGatts[address]?.device
+        val devName = try { dev?.name } catch (_: Exception) { null }
+
+        val profile = activeProfile?.takeIf { activeDevice?.address == address }
+            ?: if (src.contains("Nothing", ignoreCase = true) || src.contains("CMF", ignoreCase = true) || src.contains("0x07 C0")) {
+                StrictBrandProfileDatabase.findProfileByKey("cmf_buds")!!
+            } else {
+                StrictBrandProfileResolver.resolve(dev, nameOverride = devName, addressOverride = address)
+            }
+
         // Smart Case Pogo-Pin State Machine
         var finalCase = incomingReport.case
         var finalCaseChg = incomingReport.caseCharging
@@ -259,15 +293,23 @@ object UniversalTwsEngine {
             caseIsLive = true
         } else {
             // Both buds are out of case or offline (0x00, 0x7F, 0xFF)
-            val cached = cachedCaseBattery[address]
-            if (cached != null) {
-                finalCase = cached.level
-                finalCaseChg = cached.isCharging
-                caseIsLive = false // Cached from earlier in this session
+            // For Nothing/CMF and any model where supportsCaseBatteryWhenUndocked == false:
+            // COMPLETELY HIDE the case battery! Never retain old case or show placeholder.
+            if (profile.supportsCaseBatteryWhenUndocked && profile.brandSchema == BrandSchema.REALME_LINK) {
+                val cached = cachedCaseBattery[address]
+                if (cached != null) {
+                    finalCase = cached.level
+                    finalCaseChg = cached.isCharging
+                    caseIsLive = false // Cached from earlier in this session
+                } else {
+                    finalCase = null
+                    finalCaseChg = false
+                    caseIsLive = false // Never docked during session
+                }
             } else {
                 finalCase = null
                 finalCaseChg = false
-                caseIsLive = false // Never docked during session
+                caseIsLive = false
             }
         }
 
@@ -280,6 +322,11 @@ object UniversalTwsEngine {
         )
 
         _latestBatteryReports.value = _latestBatteryReports.value + (address to enriched)
+        if (activeDevice == null || activeDevice?.address == address) {
+            leftBattery = enriched.left
+            rightBattery = enriched.right
+            caseBattery = enriched.case
+        }
         log(address, "Battery Telemetry [$src] -> L:${enriched.left}% R:${enriched.right}% Case:${enriched.case}% (LiveCase: $caseIsLive)", enriched.rawHex)
         scope.launch {
             _batteryReports.emit(address to enriched)
@@ -304,6 +351,93 @@ object UniversalTwsEngine {
     }
 
     // -- Connection Lifecycle -----------------------------------------------------------
+
+    /**
+     * Purges previous session state and telemetry to prevent state bleed across devices.
+     */
+    fun purgeSessionState(previousAddress: String? = null) {
+        val prevAddr = previousAddress ?: activeDevice?.address
+        if (prevAddr != null) {
+            disconnect(prevAddr)
+            cachedCaseBattery.remove(prevAddr)
+            _latestBatteryReports.value = _latestBatteryReports.value - prevAddr
+            _confirmedAncMode.value = _confirmedAncMode.value - prevAddr
+            _pendingAncMode.value = _pendingAncMode.value - prevAddr
+            _activeDrivers.value = _activeDrivers.value - prevAddr
+        }
+        activeDriver = null
+        activeProfile = null
+        activeCapabilityManifest = null
+        leftBattery = null
+        rightBattery = null
+        caseBattery = null
+        activeDevice = null
+    }
+
+    /**
+     * Mandatory State Purge & Re-Fingerprinting on Device Switch.
+     * The exact millisecond a new device connects or changes:
+     * 1. Purges previous session state (activeDriver, capabilityManifest, cachedCaseBattery, telemetry).
+     * 2. Runs StrictBrandProfileResolver to load exact brand profile.
+     * 3. Initializes transport and queries fresh battery telemetry.
+     */
+    @SuppressLint("MissingPermission")
+    fun onDeviceChanged(context: Context, newDevice: BluetoothDevice) {
+        val prev = activeDevice
+        val newAddress = newDevice.address
+        val newName = try { newDevice.name } catch (_: Exception) { null }
+
+        if (prev != null && (prev.address != newAddress || prev.name != newName)) {
+            val prevName = try { prev.name } catch (_: Exception) { null } ?: prev.address
+            log(prev.address, "Device switch detected: purging previous session state for $prevName")
+            purgeSessionState(prev.address)
+        } else if (prev == null) {
+            purgeSessionState(null)
+        }
+
+        activeDevice = newDevice
+        cachedCaseBattery.remove(newAddress)
+
+        val sdpUuids = try { newDevice.uuids?.map { it.uuid.toString() } ?: emptyList() } catch (_: Exception) { emptyList() }
+        val profile = StrictBrandProfileResolver.resolve(newDevice, discoveredRfcommUuids = sdpUuids)
+        activeProfile = profile
+        val driver = protocolRouter.resolveDriver(newDevice)
+        activeDriver = driver
+        val manifest = HardwareCapabilityInspector.inspect(newDevice, newAddress, newName)
+        activeCapabilityManifest = manifest
+
+        val devName = newName ?: newAddress
+        log(newAddress, "Strict Brand Profile Activated: [${profile.brandSchema.companionAppName}] for $devName via ${driver.driverName}")
+        connect(context, newDevice)
+        queryBattery(newDevice)
+    }
+
+    /**
+     * Dispatches active vendor-accurate battery query over RFCOMM socket and BLE GATT.
+     */
+    @SuppressLint("MissingPermission")
+    fun queryBattery(device: BluetoothDevice) {
+        val address = device.address
+        val query = protocolRouter.buildBatteryQueryCommand(device)
+        if (query != null) {
+            // Write to RFCOMM socket if connected
+            activeRfcommSockets[address]?.let { sock ->
+                if (sock.isConnected) {
+                    try {
+                        sock.outputStream.write(query)
+                        sock.outputStream.flush()
+                        log(address, "Dispatched vendor battery query via RFCOMM", HexUtils.formatHex(query))
+                    } catch (_: Exception) {}
+                }
+            }
+            // Write to GATT characteristic if connected
+            scope.launch {
+                writeGatt(device, query)
+            }
+        }
+        // Simultaneously activate Fast Pair scan
+        batteryScanner?.startScan()
+    }
 
     @SuppressLint("MissingPermission")
     fun connect(context: Context, device: BluetoothDevice) {
@@ -639,9 +773,14 @@ object UniversalTwsEngine {
 
     @SuppressLint("MissingPermission")
     suspend fun setProAncLevel(device: BluetoothDevice, level: String): Boolean {
-        val packet = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildProAncLevelCommand(level)
+        val driver = protocolRouter.resolveDriver(device)
+        val packet = if (driver is NothingXProtocolDriver) {
+            driver.buildAncCommand(level)
+        } else {
+            com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildProAncLevelCommand(level)
+        }
         val ok = sendPacket(device, packet)
-        log(device.address, "Sent Pro ANC Sub-mode ($level): $ok")
+        log(device.address, "Sent Pro ANC Sub-mode ($level) via ${driver.driverName}: $ok")
         return ok
     }
 
@@ -663,9 +802,14 @@ object UniversalTwsEngine {
 
     @SuppressLint("MissingPermission")
     suspend fun setInEarDetection(device: BluetoothDevice, enabled: Boolean): Boolean {
-        val packet = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildInEarDetectionCommand(enabled)
+        val driver = protocolRouter.resolveDriver(device)
+        val packet = if (driver is NothingXProtocolDriver) {
+            driver.buildInEarDetectionCommand(enabled)
+        } else {
+            com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildInEarDetectionCommand(enabled)
+        }
         val ok = sendPacket(device, packet)
-        log(device.address, "Sent In-Ear Detection ($enabled): $ok")
+        log(device.address, "Sent In-Ear Detection ($enabled) via ${driver.driverName}: $ok")
         return ok
     }
 
@@ -1060,17 +1204,6 @@ object UniversalTwsEngine {
     }
 
     /**
-     * Queries battery telemetry from the connected device.
-     */
-    @SuppressLint("MissingPermission")
-    suspend fun queryBattery(device: BluetoothDevice) {
-        val packet = protocolRouter.buildBatteryQueryCommand(device) ?: return
-        val driver = protocolRouter.resolveDriver(device)
-        log(device.address, "Querying battery telemetry via ${driver.driverName}", HexUtils.formatHex(packet))
-        sendPacket(device, packet)
-    }
-
-    /**
      * Directly writes a custom raw hex string (HCI analysis / reverse engineering).
      */
     @SuppressLint("MissingPermission")
@@ -1093,6 +1226,76 @@ object UniversalTwsEngine {
             sendPacket(device, frame)
             delay(150)
         }
+    }
+
+    @SuppressLint("MissingPermission")
+    suspend fun setUltraBass(device: BluetoothDevice, enabled: Boolean, level: Int): Boolean {
+        val pkt = protocolRouter.buildUltraBassCommand(device, enabled, level)
+        if (pkt != null) {
+            sendPacket(device, pkt)
+        }
+        dspController.setDynamicBass(enabled, level)
+        log(device.address, "Ultra Bass 2.0 -> ${if (enabled) "ON (Level $level)" else "OFF"}")
+        return true
+    }
+
+    @SuppressLint("MissingPermission")
+    suspend fun set3BandEqualizer(device: BluetoothDevice, bass: Int, mid: Int, treble: Int): Boolean {
+        val pkt = protocolRouter.buildCustom3BandEqCommand(device, bass, mid, treble)
+        if (pkt != null) {
+            sendPacket(device, pkt)
+        }
+        val b = bass.toFloat()
+        val m = mid.toFloat()
+        val t = treble.toFloat()
+        val gains = floatArrayOf(
+            b, b, b * 0.8f,
+            m * 0.9f, m, m, m * 0.9f,
+            t * 0.8f, t, t
+        )
+        set10BandEqualizer(gains)
+        log(device.address, "Nothing Custom 3-Band EQ -> Bass:$bass Mid:$mid Treble:$treble")
+        return true
+    }
+
+    @SuppressLint("MissingPermission")
+    suspend fun setNothingInEarDetection(device: BluetoothDevice, enabled: Boolean): Boolean {
+        val pkt = protocolRouter.buildInEarDetectionCommand(device, enabled)
+        if (pkt != null) {
+            sendPacket(device, pkt)
+        }
+        log(device.address, "Nothing In-Ear Detection -> $enabled")
+        return true
+    }
+
+    @SuppressLint("MissingPermission")
+    suspend fun setNothingDualConnection(device: BluetoothDevice, enabled: Boolean): Boolean {
+        val pkt = protocolRouter.buildDualConnectionCommand(device, enabled)
+        if (pkt != null) {
+            sendPacket(device, pkt)
+        }
+        log(device.address, "Nothing Dual Connection -> $enabled")
+        return true
+    }
+
+    @SuppressLint("MissingPermission")
+    suspend fun ringNothingEarbud(device: BluetoothDevice, bud: String, ring: Boolean): Boolean {
+        val pkt = protocolRouter.buildFindMyBudsCommand(device, bud, ring)
+        if (pkt != null) {
+            sendPacket(device, pkt)
+        }
+        log(device.address, "Nothing Find My Earbuds: Ring $bud -> $ring")
+        return true
+    }
+
+    @SuppressLint("MissingPermission")
+    suspend fun sendNothingTouchControl(device: BluetoothDevice, bud: String, gesture: String, action: String): Boolean {
+        val pkt = protocolRouter.buildTouchControlCommand(device, bud, gesture, action)
+        if (pkt != null) {
+            sendPacket(device, pkt)
+        }
+        log(device.address, "Nothing Touch Control: $bud $gesture -> $action")
+        return true
     }
 
     // -- Packet Transport ---------------------------------------------------------------
@@ -1222,6 +1425,21 @@ object UniversalTwsEngine {
                 _activeDrivers.value = _activeDrivers.value + (address to driver.driverName)
                 _connectionStatus.value = _connectionStatus.value + (address to "Ready: ${driver.driverName}")
                 log(address, "Discovered ${services.size} services. Active Driver: ${driver.driverName}")
+
+                if (activeDevice?.address == address) {
+                    val updatedProfile = StrictBrandProfileResolver.resolve(
+                        device = device,
+                        discoveredGattUuids = serviceUuidStrings,
+                    )
+                    activeProfile = updatedProfile
+                    activeDriver = driver
+                    activeCapabilityManifest = HardwareCapabilityInspector.inspect(
+                        device = device,
+                        address = address,
+                        deviceName = device.name,
+                        discoveredGattUuids = serviceUuidStrings,
+                    )
+                }
 
                 val diagList = mutableListOf<GattServiceDiagnostic>()
                 var candidateWriteChar: BluetoothGattCharacteristic? = null
@@ -1507,22 +1725,30 @@ object UniversalTwsEngine {
 
     @SuppressLint("MissingPermission")
     private fun connectRfcommSocket(device: BluetoothDevice): BluetoothSocket? {
+        val name = try { device.name ?: "" } catch (_: Exception) { "" }.lowercase()
+        val isNothingOrCmf = name.contains("nothing") || name.contains("cmf") || name.contains("b168")
+
+        // 1. For non-Nothing earbuds (e.g. Realme/Oppo), try proprietary UUID first
+        if (!isNothingOrCmf) {
+            try {
+                val sock = device.createInsecureRfcommSocketToServiceRecord(KnownUuids.REALME_RFCOMM_UUID)
+                sock.connect()
+                return sock
+            } catch (_: Exception) {}
+        }
+
+        // 2. Standard SPP UUID 00001101-0000-1000-8000-00805F9B34FB (Nothing / CMF and universal standard)
         try {
-            val sock = device.createInsecureRfcommSocketToServiceRecord(KnownUuids.REALME_RFCOMM_UUID)
+            val sock = device.createInsecureRfcommSocketToServiceRecord(KnownUuids.STANDARD_SPP_UUID)
             sock.connect()
             return sock
         } catch (_: Exception) {}
 
+        // 3. Fallback direct channel reflection
         try {
             val m = device.javaClass.getMethod("createRfcommSocket", Int::class.javaPrimitiveType)
             val sock = m.invoke(device, 12) as? BluetoothSocket
             sock?.connect()
-            return sock
-        } catch (_: Exception) {}
-
-        try {
-            val sock = device.createInsecureRfcommSocketToServiceRecord(KnownUuids.STANDARD_SPP_UUID)
-            sock.connect()
             return sock
         } catch (_: Exception) {}
 

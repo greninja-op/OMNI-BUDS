@@ -140,7 +140,7 @@ object HardwareCapabilityInspector {
     )
 
     private val CASE_DIAL_KEYWORDS = listOf(
-        "cmf buds pro 2", "buds pro 2 case", "cmf buds",
+        "cmf buds pro 2", "buds pro 2 case", "neckband pro",
     )
 
     private val APPLE_KEYWORDS = listOf(
@@ -227,37 +227,44 @@ object HardwareCapabilityInspector {
         val isOverEar = formFactor == AudioFormFactor.HEADSET_OVER_ON_EAR || formFactor == AudioFormFactor.HEADSET_OPEN_BACK
         val isBone = formFactor == AudioFormFactor.BONE_CONDUCTION
 
+        val strictProfile = StrictBrandProfileResolver.resolve(
+            device = device,
+            nameOverride = deviceName,
+            addressOverride = address,
+            discoveredGattUuids = discoveredGattUuids,
+        )
+
         return DeviceCapabilityManifest(
             deviceId = address,
             deviceName = deviceName ?: device?.name ?: "Bluetooth Device",
             tier = tier,
             supportedSensors = sensors,
             ancTier = ancTier,
-            hasPersonalizedAnc = isPro && !isOpenAcoustics,
-            hasWindNoiseReduction = isPro && !isOpenAcoustics,
+            hasPersonalizedAnc = (strictProfile.hasPersonalizedAnc || isPro) && !isOpenAcoustics && !isT300,
+            hasWindNoiseReduction = isPro && !isOpenAcoustics && !isT300,
             hasAmbientSlider = (isPro || profile?.has20LevelAmbient == true) && !isOpenAcoustics && !isT300,
             hasVocalEnhancement = isPro && !isOpenAcoustics && !isT300,
-            hasConversationalAwareness = isPro && !isOpenAcoustics && !isT300,
-            hasInEarDetection = isPro && !isT300 && !isNeckband && !isOverEar && !isOpenAcoustics,
-            hasStemSlideVolume = hasStemSlide,
-            hasPinchSpeedControl = sensors.contains(PhysicalInputSensor.FORCE_PINCH_SENSOR),
-            hasEdgeTapVolume = hasEdgeTap,
-            hasHeadGestures = hasImu,
-            hasCaseSmartDial = hasCaseDial,
-            hasMultipoint = (isPro || profile?.hasMultipoint == true) && !isT300,
-            hasHiResCodecSwitcher = (isPro || profile?.hasLdac == true) && !isT300,
-            hasGoldenSoundCalibration = true, // Universal DSP audiogram compensation
-            hasSpatialAudio360 = true, // Supported on T300 and all devices via Universal DSP
-            hasDolbyAtmos = true,
-            hasDynamicBass = true,
-            hasVolumeEnhancer = true,
-            hasGameMode50ms = true,
+            hasConversationalAwareness = (strictProfile.hasConversationalAwareness || isPro) && !isOpenAcoustics && !isT300,
+            hasInEarDetection = strictProfile.hasInEarDetection || (isPro && !isT300 && !isNeckband && !isOverEar && !isOpenAcoustics),
+            hasStemSlideVolume = hasStemSlide || strictProfile.hasStemSlide,
+            hasPinchSpeedControl = sensors.contains(PhysicalInputSensor.FORCE_PINCH_SENSOR) || strictProfile.hasPinchSpeed,
+            hasEdgeTapVolume = hasEdgeTap || strictProfile.hasEdgeTap,
+            hasHeadGestures = hasImu || strictProfile.hasHeadGestures,
+            hasCaseSmartDial = strictProfile.hasSmartDial || (hasCaseDial && !name.contains("cmf buds") && !name.contains("b168")),
+            hasMultipoint = strictProfile.hasDualConnection || ((isPro || profile?.hasMultipoint == true) && !isT300),
+            hasHiResCodecSwitcher = strictProfile.hasLdac || ((isPro || profile?.hasLdac == true) && !isT300),
+            hasGoldenSoundCalibration = strictProfile.hasGoldenSound || isT300 || (isPro && !name.contains("cmf buds") && !name.contains("b168")),
+            hasSpatialAudio360 = strictProfile.hasSpatialAudio || isT300 || (isPro && !name.contains("cmf buds") && !name.contains("b168")),
+            hasDolbyAtmos = strictProfile.hasDolbyAtmos || (isT300 && strictProfile.brandSchema == BrandSchema.REALME_LINK),
+            hasDynamicBass = strictProfile.hasDynamicBass || (isT300 && strictProfile.brandSchema == BrandSchema.REALME_LINK),
+            hasVolumeEnhancer = strictProfile.hasVolumeEnhancer || (isT300 && strictProfile.brandSchema == BrandSchema.REALME_LINK),
+            hasGameMode50ms = strictProfile.hasLowLagMode || isT300 || isPro,
             hasMonoAudio = true,
             hasChannelBalance = true,
             hasSplMeter = true,
             hasCameraShutter = !isOverEar,
-            hasMindRelax = true,
-            hasFitTest = isPro && !isT300 && !isNeckband && !isOverEar && !isOpenAcoustics,
+            hasMindRelax = strictProfile.hasMindRelax || (isT300 && strictProfile.brandSchema == BrandSchema.REALME_LINK),
+            hasFitTest = strictProfile.hasFitTest || (isPro && !isT300 && !isNeckband && !isOverEar && !isOpenAcoustics && !name.contains("cmf buds") && !name.contains("b168")),
             hasFindMyBuds = true,
             isAppleAirPods = isApple,
             // Non-TWS Capabilities

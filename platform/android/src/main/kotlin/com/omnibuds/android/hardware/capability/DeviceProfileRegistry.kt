@@ -44,6 +44,43 @@ object DeviceProfileRegistry {
     )
 
     private val PROFILES = listOf(
+        // === NOTHING / CMF BUDS (Gen 1 / B168) ===
+        Profile(
+            modelKey = "cmf buds",
+            manufacturer = "CMF by Nothing",
+            modelName = "CMF Buds",
+            formFactor = AudioFormFactor.STEM_IN_EAR,
+            hasAnc = true,
+            ancDb = 42,
+            hasSpatialAudio360 = false,
+            hasGameMode50ms = true,
+            hasMultipoint = true, // CMF Buds supports Dual Connection
+            hasLdac = false,
+        ),
+        Profile(
+            modelKey = "b168",
+            manufacturer = "CMF by Nothing",
+            modelName = "CMF Buds (B168)",
+            formFactor = AudioFormFactor.STEM_IN_EAR,
+            hasAnc = true,
+            ancDb = 42,
+            hasSpatialAudio360 = false,
+            hasGameMode50ms = true,
+            hasMultipoint = true,
+            hasLdac = false,
+        ),
+        Profile(
+            modelKey = "cmf buds pro 2",
+            manufacturer = "CMF by Nothing",
+            modelName = "CMF Buds Pro 2",
+            formFactor = AudioFormFactor.STEM_IN_EAR,
+            hasAnc = true,
+            ancDb = 50,
+            hasSpatialAudio360 = true,
+            hasGameMode50ms = true,
+            hasMultipoint = true,
+            hasLdac = true,
+        ),
         // === REALME BUDS T300 (Target Device) ===
         Profile(
             modelKey = "t300",
