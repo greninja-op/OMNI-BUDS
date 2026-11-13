@@ -1,0 +1,419 @@
+[
+  {
+    "company": "TCL",
+    "companySlug": "tcl",
+    "family": "TCL CrystalClip",
+    "model": "TCL CrystalClip",
+    "slug": "tcl-crystalclip",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "TCL HOME",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Spatial audio, bass enhancement and voice-assistant gesture require TCL HOME; smart translation requires a TCL phone with TCL UI 9.1+."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 36,
+      "chargingIndicators": "Case LED; USB-C; 15 min = 3 h.",
+      "notes": "Official: 8 h single charge, 36 h with case. No ANC, so the 8 h is the normal figure.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 36
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Dual-mic AI ENC for calls only; no ANC."
+    },
+    "features": [
+      {
+        "id": "audio.spatial",
+        "name": "3D spatial sound",
+        "availability": "official-app",
+        "notes": "Requires TCL HOME."
+      },
+      {
+        "id": "equalization.bass-enhancement",
+        "name": "Bass enhancement",
+        "availability": "official-app",
+        "notes": "Requires TCL HOME."
+      },
+      {
+        "id": "mic.enc",
+        "name": "Dual-mic AI ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device switching",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.google-fast-pair",
+        "name": "Google Fast Pair 3.1",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.tcl.smart-translation",
+        "name": "Smart translation",
+        "availability": "official-app",
+        "notes": "TCL phone with TCL UI 9.1+ required."
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "configurable tap",
+          "action": "voice assistant",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "configurable app gesture",
+          "action": "tap-to-translate",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Gesture remapping and voice-assistant activation are in TCL HOME."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "10.8 mm dual-magnetic dynamic driver; 5.5 g per bud; titanium-alloy bridge."
+    },
+    "appOnlyFeatures": [
+      "3D spatial audio",
+      "Bass enhancement",
+      "Voice assistant gesture",
+      "Smart translation",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "TCL's first open-ear clip",
+      "36 h total battery",
+      "Smart translation on TCL phones"
+    ],
+    "sources": [
+      {
+        "url": "https://www.tcl.com/global/en/headphones/crystalclip",
+        "type": "official-product",
+        "title": "TCL CrystalClip",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth version and codecs not published",
+      "Battery display layout unverified",
+      "Wear detection not stated",
+      "Spatial audio head tracking not stated"
+    ],
+    "notes": "Open-ear clip. The Swarovski edition is a cosmetic SKU and is not split into a separate record.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "TCL",
+    "companySlug": "tcl",
+    "family": "TCL MOVEAUDIO",
+    "model": "TCL MOVEAUDIO S180",
+    "slug": "tcl-moveaudio-s180",
+    "generation": "S180",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "No companion app documented",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "The S180 product page does not reference TCL HOME or any app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; USB-C.",
+      "notes": "Official: 6 h single charge, 30 h with case. ANC-on hours not published.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Feed-forward ANC plus transparency mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Feed-forward ANC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "mic.enc",
+        "name": "Call noise cancellation",
+        "availability": "device-only",
+        "notes": "Not detailed."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC / transparency",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": "Touch controls; no app remapping documented."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "10 mm driver; no codec list published."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "ANC at the S180 price point",
+      "6 h/30 h battery",
+      "IPX4"
+    ],
+    "sources": [
+      {
+        "url": "https://us.tcl.com/products/tcl-moveaudio-s180-white",
+        "type": "official-product",
+        "title": "TCL MOVEAUDIO S180",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC depth and ANC-on hours not published",
+      "Codec list not published",
+      "Battery display layout unverified",
+      "Multipoint and wear detection not stated",
+      "No app"
+    ],
+    "notes": "US-market MOVEAUDIO model; 6 h/30 h is competitive but ANC is undetailed.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "TCL",
+    "companySlug": "tcl",
+    "family": "TCL MOVEAUDIO",
+    "model": "TCL MOVEAUDIO S200",
+    "slug": "tcl-moveaudio-s200",
+    "generation": "S200",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "No companion app documented",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app referenced on the S200 product page."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 3.5,
+      "caseHours": 23,
+      "chargingIndicators": "Case LED; USB-C.",
+      "notes": "Official: 3.5 h single charge, 23 h with case. No ANC.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 23
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Echo Noise Cancellation for calls; no ANC."
+    },
+    "features": [
+      {
+        "id": "sensing.wear-detection",
+        "name": "Smart wear detection",
+        "availability": "device-only",
+        "notes": "Auto play/pause."
+      },
+      {
+        "id": "mic.enc",
+        "name": "Echo Noise Cancellation with 4 beamforming mics",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.tcl.one-tap-pair",
+        "name": "One-tap Bluetooth pairing",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": "Touch controls; no app remapping."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "12 mm moving-coil driver; 4 beamforming mics."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Wear detection",
+      "12 mm driver",
+      "23 h total battery"
+    ],
+    "sources": [
+      {
+        "url": "https://us.tcl.com/products/tcl-moveaudio-s200-white",
+        "type": "official-product",
+        "title": "TCL MOVEAUDIO S200",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "3.5 h per charge is very short",
+      "Codec list not published",
+      "Battery display layout unverified",
+      "No ANC, EQ or app"
+    ],
+    "notes": "Wear detection is the differentiator, but 3.5 h/23 h is weak for 2025.",
+    "researchedAt": "2026-11-10"
+  }
+]

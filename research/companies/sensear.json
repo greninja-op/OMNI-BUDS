@@ -1,0 +1,409 @@
+[
+  {
+    "company": "Sensear",
+    "companySlug": "sensear",
+    "family": "smartMuff",
+    "model": "Sensear SM1P",
+    "slug": "sensear-sm1p",
+    "generation": "SM1P",
+    "variant": null,
+    "releaseYear": 2018,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Sensear SmartHub",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Sensear's app is used to program the headset, including the default power-up mode and the 82 dB(A) volume limiter. The manual also refers to it as the Sensear app. It is a configuration tool, not a battery-percentage app."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 24,
+      "caseHours": null,
+      "chargingIndicators": "Indicator LEDs on each side of the headset: red blinking twice every 5 seconds = battery low (<1 hour left); red solid = charging; green solid = charge complete. No percentage steps.",
+      "notes": "One combined headset battery: 2650 mAh rechargeable lithium-ion polymer. 24 hours with a wired radio connection, 18 hours with Bluetooth and Short-Range active. 5-hour charge (7 hours in some manual revisions). No charging case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. Passive hearing protection plus SENS level-dependent 360° situational awareness. SENS amplifies safe ambient sound and suppresses hazardous noise; it is not noise cancellation."
+    },
+    "features": [
+      {
+        "id": "hearing-protection.passive",
+        "name": "Certified passive hearing protection",
+        "availability": "device-only",
+        "notes": "Up to 27 dB NRR depending on headband, behind-neck or helmet-mount style; EN 352-1/3/4/6."
+      },
+      {
+        "id": "hearing-protection.sens",
+        "name": "SENS 360° situational awareness",
+        "availability": "device-only",
+        "notes": "Quad SENS microphones reproduce surrounding sound and speech while suppressing noise."
+      },
+      {
+        "id": "hearing-protection.volume-limiter",
+        "name": "Programmable 82 dB(A) volume limiter",
+        "availability": "official-app",
+        "notes": "Limits in-ear exposure when the headset is powered on."
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth calls and audio streaming",
+        "availability": "device-only",
+        "notes": "Bluetooth 3.0, HFP (8/16 kHz), HSP and A2DP; up to 15 m."
+      },
+      {
+        "id": "connectivity.short-range",
+        "name": "Short-Range headset-to-headset radio",
+        "availability": "device-only",
+        "notes": "Half-duplex, up to 8 programmable FM channels, approximately 50 m (164 ft)."
+      },
+      {
+        "id": "comms.two-way-radio",
+        "name": "Two-way radio connection",
+        "availability": "device-only",
+        "notes": "6-pin Hirose cable; radio audio passes through the headset even without headset battery."
+      },
+      {
+        "id": "audio.fm-radio",
+        "name": "FM radio",
+        "availability": "device-only",
+        "notes": "Commercial FM stations; mutes during Bluetooth phone calls."
+      },
+      {
+        "id": "audio.boom-mic",
+        "name": "Noise-cancelling boom microphone",
+        "availability": "device-only",
+        "notes": "VOX-capable when used with a VOX-enabled radio; IP68 microphone."
+      },
+      {
+        "id": "controls.quiet-mode",
+        "name": "Quiet mode",
+        "availability": "device-only",
+        "notes": "Passes two-way radio communications only."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "device-only",
+        "notes": "Not documented; the manual pairs one device at a time."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button, short press",
+          "action": "Toggle Quiet mode",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Power button, long press",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume + / −",
+          "action": "Adjust audio level",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume + and − together, short press",
+          "action": "Toggle Short-Range on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume + and −, long press",
+          "action": "Change Short-Range preset channel bank",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Multi-function button (MFB), long press",
+          "action": "Bluetooth pairing",
+          "configurableInApp": false,
+          "notes": "Short-Range must be off; pairing times out after 2 minutes."
+        },
+        {
+          "gesture": "Multi-function button, short press",
+          "action": "Answer/end call, PTT in Short-Range",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume down + power, short press together",
+          "action": "Toggle VOX",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power, volume +/− and multi-function button on the cup; inline PTT on the radio cable.",
+      "configurableInApp": true,
+      "notes": "Default power-up mode and volume limiter are programmed in the app."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 3.0 with HFP, HSP and A2DP. Codec list is not published. No music EQ."
+    },
+    "appOnlyFeatures": [
+      "Default power-up mode programming",
+      "82 dB(A) volume limiter configuration",
+      "Headset settings/programming"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.sensear.com/products/headsets/sm1p",
+        "type": "official-product",
+        "title": "Sensear SM1P product page and technical specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.sensear.com/hubfs/2025%20Datasheets/SM1P%20Datasheet%202025%20%28English%29.pdf",
+        "type": "official-product",
+        "title": "Sensear SM1P datasheet 2025",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.sensear.com/hubfs/DOC00084%20%28Rev%2018%29%20SM1P%28B%29%20Series%20Manual%20%28English%29.pdf",
+        "type": "official-manual",
+        "title": "Sensear SM1P/B series instruction manual rev. 18",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Official app package ID and observed version are not captured.",
+      "The app does not document a battery percentage screen; only headset LEDs are documented.",
+      "Bluetooth codec list is not published.",
+      "Multipoint is not documented; manual describes pairing one device.",
+      "NRR/SNR varies by headband, behind-neck and helmet mount; one figure is not valid for all SKUs."
+    ],
+    "notes": "Record covers the non-intrinsically-safe SM1P electronics in headband, behind-neck and helmet-mount styles (SM1PB002 / SM1PE002 / SM1PH002). The IS/Ex version is a separate record because battery, charging and certification differ.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sensear",
+    "companySlug": "sensear",
+    "family": "smartMuff",
+    "model": "Sensear SM1P-IS/Ex",
+    "slug": "sensear-sm1p-is-ex",
+    "generation": "SM1P",
+    "variant": "IS/Ex (intrinsically safe)",
+    "releaseYear": 2019,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Sensear SmartHub",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Same Sensear configuration app. Battery state is not exposed as a percentage; the headset uses LEDs."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 24,
+      "caseHours": null,
+      "chargingIndicators": "Indicator LEDs: red blinking = battery low (<1 hour); red solid = charging; green solid = complete.",
+      "notes": "One combined headset battery: 2250 mAh rechargeable lithium-ion, 24 hours wired / 18 hours Bluetooth + Short-Range, 4-hour charge. The battery is not user-replaceable and the headset must be returned to Sensear for replacement. Charging is only permitted in a safe area.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. Passive protection plus SENS level-dependent awareness. Intrinsically safe design for hazardous locations."
+    },
+    "features": [
+      {
+        "id": "hearing-protection.passive",
+        "name": "Certified passive hearing protection",
+        "availability": "device-only",
+        "notes": "ATEX/IECEx/UL/CSA intrinsically safe variants; EN 352 and ANSI ratings by mounting style."
+      },
+      {
+        "id": "hearing-protection.sens",
+        "name": "SENS 360° situational awareness",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "hearing-protection.volume-limiter",
+        "name": "Programmable 82 dB(A) volume limiter",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth calls and audio streaming",
+        "availability": "device-only",
+        "notes": "Bluetooth 3.0, HFP/HSP/A2DP."
+      },
+      {
+        "id": "connectivity.short-range",
+        "name": "Short-Range headset-to-headset radio",
+        "availability": "device-only",
+        "notes": "Up to 8 channels, approximately 50 m."
+      },
+      {
+        "id": "comms.two-way-radio",
+        "name": "Two-way radio connection",
+        "availability": "device-only",
+        "notes": "6-pin Hirose cable; radio audio available without headset battery."
+      },
+      {
+        "id": "audio.fm-radio",
+        "name": "FM radio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.boom-mic",
+        "name": "Noise-cancelling boom microphone",
+        "availability": "device-only",
+        "notes": "VOX-capable with a compatible radio."
+      },
+      {
+        "id": "vendor.sensear.intrinsically-safe",
+        "name": "Intrinsically safe certification",
+        "availability": "device-only",
+        "notes": "ATEX/IECEx/UL/CSA; battery replacement and charging restricted to safe areas."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button, short press",
+          "action": "Toggle Quiet mode",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Power button, long press",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume + / −",
+          "action": "Adjust audio level",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume + and − together",
+          "action": "Toggle Short-Range on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Multi-function button, long press",
+          "action": "Bluetooth pairing",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Multi-function button, short press",
+          "action": "Answer/end call or Short-Range PTT",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power, volume +/− and multi-function button; inline PTT on radio cable.",
+      "configurableInApp": true,
+      "notes": "No charging in a hazardous area; the USB port is service-only."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 3.0 with HFP, HSP and A2DP. Codec list not published."
+    },
+    "appOnlyFeatures": [
+      "Default power-up mode programming",
+      "82 dB(A) volume limiter configuration"
+    ],
+    "featureDeltaFromPrevious": [
+      "Intrinsically safe ATEX/IECEx/UL/CSA certification.",
+      "Smaller 2250 mAh battery with 4-hour charge and non-user-replaceable cells.",
+      "Charging restricted to safe areas; USB service-only."
+    ],
+    "sources": [
+      {
+        "url": "https://www.sensear.com/products/headsets/sm1p",
+        "type": "official-product",
+        "title": "Sensear SM1P product page (IS model power specifications)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.sensear.com/hubfs/DOCUMENTS/2019/Instruction%20Cards/IECEx126%20SM1P%20Series%20Ex%20Manual%20-%202019%20%28English%29.pdf",
+        "type": "official-manual",
+        "title": "Sensear SM1P series Ex manual (IECEx126)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Exact ATEX/IECEx/UL/CSA certificate numbers per SKU are not captured.",
+      "App package ID and observed version are not captured.",
+      "No battery percentage display; LED-only.",
+      "Bluetooth codec list is not published.",
+      "NRR/SNR varies by mounting style."
+    ],
+    "notes": "SM1P-IS/Ex covers the intrinsically safe Bluetooth/Short-Range/two-way-radio headset. It is not the same product as the standard SM1P.",
+    "researchedAt": "2026-11-10"
+  }
+]

@@ -1,0 +1,639 @@
+[
+  {
+    "company": "Meizu",
+    "companySlug": "meizu",
+    "family": "lifeme Blus",
+    "model": "Meizu Blus 3",
+    "slug": "meizu-blus-3",
+    "generation": "3",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "lifeme",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Meizu's lifeme app exposes battery status, control remapping and sound settings; Flyme fast-pair pop-up is available on Meizu phones."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Case status LED; USB-C.",
+      "notes": "Official page claims 50 dB ANC and a 12 mm driver but does not publish playtime in the accessible product copy. Do not reuse Blus E's 26 h figure for this model.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": null,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "Official: -50 dB ANC, three ANC levels, dual-path four-microphone call noise cancellation and AI wind-noise reduction."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "50 dB active noise cancellation",
+        "availability": "both",
+        "notes": "Three levels."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "mic.enc",
+        "name": "Dual-path four-microphone call ENC",
+        "availability": "device-only",
+        "notes": "AI wind-noise reduction."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": "lifeme app."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.meizu.flyme-fast-pair",
+        "name": "Flyme fast pair pop-up",
+        "availability": "device-only",
+        "notes": "Meizu phones only."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "previous/next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC / transparency cycle",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "Reset button on the case.",
+      "configurableInApp": true,
+      "notes": "Gesture mapping is exposed in the lifeme app; exact defaults vary by firmware."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "12 mm frequency-divided dynamic driver per bud; semi-in-ear fit."
+    },
+    "appOnlyFeatures": [
+      "Battery status",
+      "Gesture remapping",
+      "EQ",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC depth raised to 50 dB versus Blus 2",
+      "Three-level ANC",
+      "12 mm frequency-divided driver"
+    ],
+    "sources": [
+      {
+        "url": "https://detail.meizu.com/item/mlblus3.html",
+        "type": "official-product",
+        "title": "魅蓝 Blus 3 主动降噪耳机",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.meizuworld.com/blog/meizu-blus-3-active-noise-cancelling-earphones-super-high-sound-quality-exclusive-quietness.html",
+        "type": "reputable-secondary",
+        "title": "Meizu Blus 3 review",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official playtime with/without ANC not published in accessible copy",
+      "Battery display split vs combined unverified",
+      "Case visibility and last-known behaviour unverified",
+      "Codec list not published",
+      "Wear detection not stated"
+    ],
+    "notes": "China-market lifeme model. The 50 dB claim is unusually high for its price band and is vendor-labelled.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Meizu",
+    "companySlug": "meizu",
+    "family": "lifeme Blus E",
+    "model": "Meizu Blus E",
+    "slug": "meizu-blus-e",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "lifeme",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Review UI shows battery status, button settings, music/game mode and EQ presets in the lifeme app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 26,
+      "chargingIndicators": "Crescent-shaped case LED; USB-C.",
+      "notes": "Official launch copy: 5 h continuous playback, 26 h total with case. No ANC, so no ANC figure.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 26
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "No ANC; transparency plus four-microphone AI call ENC and wind-noise detection."
+    },
+    "features": [
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "mic.enc",
+        "name": "Four-mic AI call ENC",
+        "availability": "device-only",
+        "notes": "Wind-noise detection."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": "Pop, rock, classical, vocal."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.meizu.game-mode",
+        "name": "Game mode / 50 ms latency",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.meizu.flyme-fast-pair",
+        "name": "Flyme fast pair",
+        "availability": "device-only",
+        "notes": "Meizu phones only."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "previous/next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "transparency / voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Button functions are configurable in lifeme."
+    },
+    "audio": {
+      "eqPresets": [
+        "pop",
+        "rock",
+        "classical",
+        "vocal"
+      ],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "12 mm dynamic driver with PU + titanium-plated composite diaphragm; 50 ms game mode."
+    },
+    "appOnlyFeatures": [
+      "Battery status",
+      "Gesture remapping",
+      "EQ presets",
+      "Game mode",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Entry-level Blus E introduced below Blus 3",
+      "50 ms game mode",
+      "Crescent-moon case and stem lighting"
+    ],
+    "sources": [
+      {
+        "url": "https://detail.meizu.com/item/mlbluse.html",
+        "type": "official-product",
+        "title": "lifeme 魅蓝 Blus E 真无线耳机",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.ithome.com/0/764/272.htm",
+        "type": "reputable-secondary",
+        "title": "魅蓝推出 Blus E / Pro 无线蓝牙耳机",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery display split vs combined unverified",
+      "Case visibility and last-known behaviour unverified",
+      "Custom EQ support not stated",
+      "Wear detection not stated"
+    ],
+    "notes": "No ANC; this is the value model below Blus E Pro.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Meizu",
+    "companySlug": "meizu",
+    "family": "lifeme Blus E",
+    "model": "Meizu Blus E Pro",
+    "slug": "meizu-blus-e-pro",
+    "generation": "1",
+    "variant": "Pro",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "lifeme",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Same lifeme app surface as Blus E, plus ANC control."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 26,
+      "chargingIndicators": "Crescent-shaped case LED; USB-C.",
+      "notes": "Official launch copy: 5 h continuous playback, 26 h total with case. ANC-on hours not published.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 26
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 30,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "-30 dB wide-frequency ANC; dual-path four-microphone design and AI call ENC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "30 dB wide-frequency ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "mic.enc",
+        "name": "Four-mic AI call ENC",
+        "availability": "device-only",
+        "notes": "Wind-noise detection."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.meizu.game-mode",
+        "name": "Game mode / 50 ms latency",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "previous/next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "ANC cycle and button functions configured in lifeme."
+    },
+    "audio": {
+      "eqPresets": [
+        "pop",
+        "rock",
+        "classical",
+        "vocal"
+      ],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "12 mm dynamic driver; same acoustic platform as Blus E with added ANC."
+    },
+    "appOnlyFeatures": [
+      "Battery status",
+      "ANC control",
+      "Gesture remapping",
+      "EQ presets",
+      "Game mode",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adds -30 dB ANC over Blus E",
+      "Adds ANC control in lifeme"
+    ],
+    "sources": [
+      {
+        "url": "https://detail.meizu.com/item/mlbluse.html",
+        "type": "official-product",
+        "title": "lifeme 魅蓝 Blus E 真无线耳机 (family page)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.ithome.com/0/764/272.htm",
+        "type": "reputable-secondary",
+        "title": "魅蓝推出 Blus E / Pro 无线蓝牙耳机",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.meizuworld.com/blog/meizu-blus-e-pro-earbuds-a-shining-new-star-in-the-earbuds-market.html",
+        "type": "reputable-secondary",
+        "title": "Meizu Blus E Pro review",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on playtime not published",
+      "Battery display split vs combined unverified",
+      "Case visibility and last-known behaviour unverified",
+      "Custom EQ support not stated"
+    ],
+    "notes": "Same 5 h/26 h battery as Blus E but with 30 dB ANC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Meizu",
+    "companySlug": "meizu",
+    "family": "lifeme OpenBlus",
+    "model": "Meizu OpenBlus 2",
+    "slug": "meizu-openblus-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "lifeme",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "lifeme app support is implied by the lifeme accessory ecosystem; the official OpenBlus 2 page emphasises on-device controls."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 36,
+      "chargingIndicators": "Case LED; USB-C.",
+      "notes": "Meizu advertises 36 h total with the charging case. Per-bud playtime not published in accessible copy.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 36
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Open-ear design; AI call noise cancellation only, no ANC."
+    },
+    "features": [
+      {
+        "id": "mic.enc",
+        "name": "AI call noise cancellation",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.meizu.open-ear-hook",
+        "name": "Aluminium open-ear hook",
+        "availability": "device-only",
+        "notes": "Shell-inspired case; 86 g total."
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "Splash resistance",
+        "availability": "device-only",
+        "notes": "Rating not confirmed on official page."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": "Open-ear hook with touch area on each stem."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "Open-ear directional sound; 86 g including case; Bluetooth 5.3."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Redesigned shell-inspired charging case",
+      "Aluminium alloy open-ear hooks",
+      "36 h total battery"
+    ],
+    "sources": [
+      {
+        "url": "https://detail.meizu.com/item/openblus2.html",
+        "type": "official-product",
+        "title": "lifeme 魅蓝 OpenBlus 2 开放式耳机",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.meizuworld.com/blog/meizu-blue-openblus-2-open-earphone-shell-design-powerful-sound-quality.html",
+        "type": "reputable-secondary",
+        "title": "Meizu OpenBlus 2 review",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Per-bud playtime not published",
+      "Battery display layout unverified",
+      "IP rating not confirmed",
+      "Codec list not published",
+      "App feature set unverified"
+    ],
+    "notes": "Open-ear hook, not a clip. China-market model.",
+    "researchedAt": "2026-11-10"
+  }
+]

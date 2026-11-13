@@ -1,0 +1,651 @@
+[
+  {
+    "company": "Oladance",
+    "companySlug": "oladance",
+    "family": "OWS",
+    "model": "Oladance Wearable Stereo (OWS 1)",
+    "slug": "ows-1",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "Oladance",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.orcbit.oladanceearphone"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/app/oladance/id1587548294",
+        "https://play.google.com/store/apps/details?id=com.orcbit.oladanceearphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "Official app link from oladanceshop.com. App shows the charge level of both earbuds and allows touch-control and EQ customization."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 16,
+      "caseHours": null,
+      "chargingIndicators": "LED on earbuds; app shows each earbud's charge; case LED",
+      "notes": "16 h per charge. The included OWS 1 charging case has no internal battery, so there is no case percentage to display; it only charges the earbuds while plugged in. A separate charging case was sold as an accessory.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC. ENC is for calls only."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets and basic EQ",
+        "availability": "official-app",
+        "notes": "Default, bass-enhanced and vocal presets; app EQ."
+      },
+      {
+        "id": "vendor.oladance.energy-lock",
+        "name": "Energy Lock power retention",
+        "availability": "device-only",
+        "notes": "Claimed charge retention for up to 3 years when powered off."
+      },
+      {
+        "id": "vendor.oladance.open-wearable-stereo",
+        "name": "Open Wearable Stereo air conduction",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next/previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "voice assistant",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "slide",
+          "action": "volume up/down",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls on the outer housing; app can reassign single/double/triple taps and slides."
+    },
+    "audio": {
+      "eqPresets": [
+        "default",
+        "surging-bass",
+        "pure-voice"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "16.5 mm dynamic driver, Bluetooth 5.2, IPX4, 12.7 g per earbud. No multipoint on OWS 1."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "eq-selection",
+      "custom-eq",
+      "touch-control-customization"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.oladanceshop.com/products/oladance-wearable-stereo",
+        "type": "official-product",
+        "title": "Oladance OWS 1",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.howtogeek.com/oladance-ows1-open-ear-headphones-review/",
+        "type": "reputable-secondary",
+        "title": "Oladance OWS1 review (case has no battery; app shows both earbuds)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Oladance app does not expose a case percentage because the OWS 1 case has no battery; exact UI layout not independently verified.",
+      "Custom-EQ band count for OWS 1 not published.",
+      "Case visibility timing is not applicable because the case has no battery."
+    ],
+    "notes": "The original OWS established the open-ear hook format. The case is a charging dock, not a battery case.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Oladance",
+    "companySlug": "oladance",
+    "family": "OWS",
+    "model": "Oladance OWS 2",
+    "slug": "ows-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "Oladance",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.orcbit.oladanceearphone"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/app/oladance/id1587548294",
+        "https://play.google.com/store/apps/details?id=com.orcbit.oladanceearphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "App shows independent earbud battery levels and provides an 8-band EQ and control customization."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 19,
+      "caseHours": 114,
+      "chargingIndicators": "LED on case; app shows each earbud's charge",
+      "notes": "19 h per charge, up to 114 h with the charging case; 15-min charge gives 5.5 h. The case has an internal battery. App evidence covers the two earbuds; a case percentage is not documented.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC. ENC for calls."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "8-band EQ with presets",
+        "availability": "official-app",
+        "notes": "Default, Surging Bass and Pure Voice presets plus custom EQ."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "MultiPoint pairing",
+        "availability": "official-app",
+        "notes": "Two devices; added on OWS 2."
+      },
+      {
+        "id": "vendor.oladance.energy-lock",
+        "name": "Energy Lock",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next/previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "voice assistant",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "slide",
+          "action": "volume up/down",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls with app customization."
+    },
+    "audio": {
+      "eqPresets": [
+        "default",
+        "surging-bass",
+        "pure-voice"
+      ],
+      "customEq": true,
+      "eqBands": 8,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "16.5 mm dynamic driver, Bluetooth 5.3, IPX4, 12.8 g per earbud."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "multipoint",
+      "eq-selection",
+      "custom-eq",
+      "touch-control-customization"
+    ],
+    "featureDeltaFromPrevious": [
+      "Battery life increased from 16 h to 19 h; case total up to 114 h",
+      "Bluetooth upgraded from 5.2 to 5.3",
+      "Added multipoint pairing",
+      "Added 8-band EQ",
+      "Charging case now includes a battery (OWS 1 case had none)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.oladanceshop.com/pages/oladance-ows2",
+        "type": "official-product",
+        "title": "Oladance OWS 2",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.oladanceshop.com/pages/support",
+        "type": "official-support",
+        "title": "Oladance support and app download",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Whether the Oladance app shows the charging case percentage separately is not documented.",
+      "Case visibility timing and live vs last-known case reading are unknown.",
+      "Exact case capacity in mAh not stated on the product page."
+    ],
+    "notes": "OWS 2 is the first OWS with a battery case and multipoint.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Oladance",
+    "companySlug": "oladance",
+    "family": "OWS",
+    "model": "Oladance OWS Pro",
+    "slug": "ows-pro",
+    "generation": "2023",
+    "variant": "Pro",
+    "releaseYear": 2023,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "Oladance",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.orcbit.oladanceearphone"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/app/oladance/id1587548294",
+        "https://play.google.com/store/apps/details?id=com.orcbit.oladanceearphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "App provides EQ, Focus mode, hearing protection, sound balance, touch controls and per-earpiece battery."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": 16,
+      "budsHoursNoAnc": 16,
+      "caseHours": 58,
+      "chargingIndicators": "Case LED; app shows each earpiece's charge",
+      "notes": "16 h per earbud, 58 h total with the 2550 mAh charging case; 15-min charge gives 6 h. Focus mode does not have a separate published runtime.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 58
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "focus"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Focus mode uses the microphones to screen mid/high-frequency noise; it is not full isolation because the ear remains open. ENC and wind-noise reduction for calls."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Focus mode",
+        "availability": "official-app",
+        "notes": "Oladance's targeted noise-screening mode."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "8-band EQ",
+        "availability": "official-app",
+        "notes": "Default, Surging Bass, Pure Voice plus custom."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "MultiPoint pairing",
+        "availability": "official-app",
+        "notes": "Two devices."
+      },
+      {
+        "id": "vendor.oladance.virtual-bass-2",
+        "name": "Virtual Bass 2nd generation",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.oladance.hearing-protection",
+        "name": "Super Smart Bone hearing protection",
+        "availability": "official-app",
+        "notes": "Dynamically limits accumulated sound energy."
+      },
+      {
+        "id": "vendor.oladance.focus-mode",
+        "name": "Fix Point Noise Screen",
+        "availability": "official-app",
+        "notes": "Part of Focus mode."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "squeeze",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "single squeeze",
+          "action": "play/pause; answer call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double squeeze",
+          "action": "previous/next track; hang up/reject call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple squeeze",
+          "action": "voice assistant",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "slide up/down",
+          "action": "volume up/down",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Hidden pressure sensor plus one-piece touch surface; app remaps gestures."
+    },
+    "audio": {
+      "eqPresets": [
+        "default",
+        "surging-bass",
+        "pure-voice"
+      ],
+      "customEq": true,
+      "eqBands": 8,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Dual 23x10 mm drivers per earbud, Bluetooth 5.3, IPX4, 13.8 g per earbud."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "multipoint",
+      "eq-selection",
+      "custom-eq",
+      "focus-mode",
+      "hearing-protection",
+      "touch-control-customization",
+      "sound-balance"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added Focus mode (targeted noise screening)",
+      "Added Super Smart Bone hearing protection",
+      "Dual 23x10 mm drivers per earbud replace the single 16.5 mm driver",
+      "Charging case capacity increased to 2550 mAh and 58 h total"
+    ],
+    "sources": [
+      {
+        "url": "https://www.oladanceshop.com/products/oladance-ows-pro",
+        "type": "official-product",
+        "title": "Oladance OWS Pro",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.headphonesty.com/2023/11/review-oladance-ows-pro",
+        "type": "reputable-secondary",
+        "title": "Oladance OWS Pro review (app shows each earpiece charge; 8-band EQ)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Whether the app shows the charging case percentage separately is not documented.",
+      "ANC dB rating and transparency dB rating are not published.",
+      "Case visibility timing and live vs last-known case reading are unknown."
+    ],
+    "notes": "Focus mode is the closest thing to ANC in the OWS line, but it is a targeted screen rather than sealed-canal ANC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Oladance",
+    "companySlug": "oladance",
+    "family": "OWS Sports",
+    "model": "Oladance OWS Sports",
+    "slug": "ows-sports",
+    "generation": "2024",
+    "variant": "Sports",
+    "releaseYear": 2024,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "Oladance",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.orcbit.oladanceearphone"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/app/oladance/id1587548294",
+        "https://play.google.com/store/apps/details?id=com.orcbit.oladanceearphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "App provides 4 EQ modes, multipoint, gesture customization, sound balance and battery status."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 15,
+      "caseHours": null,
+      "chargingIndicators": "LED; app battery status",
+      "notes": "15 h playback; 5-min charge gives 2 h (some regions state 15 min for 5 h). No charging case; a carry case is included and charging is via magnetic cable.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "No ANC. Physical wind-noise reduction and ENC for calls."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "4 EQ modes",
+        "availability": "official-app",
+        "notes": "Equalization, Subwoofer, Vocal and a fourth app mode; custom EQ available."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "MultiPoint pairing",
+        "availability": "official-app",
+        "notes": "Two devices."
+      },
+      {
+        "id": "vendor.oladance.ows-button",
+        "name": "OWS Button remote support",
+        "availability": "device-only",
+        "notes": "Optional Bluetooth controller for sports modes, music, calls and intercom."
+      },
+      {
+        "id": "vendor.oladance.ipx8",
+        "name": "IPX8 waterproof",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction single-click",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "multifunction double-click",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "multifunction triple-click",
+          "action": "previous track; voice assistant",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "volume + / -",
+          "action": "volume up/down; power on/off via volume+ long press",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Three physical buttons: multifunction on left; volume+/power and volume- on right",
+      "configurableInApp": true,
+      "notes": "App customizes single/double/triple press of the multifunction button."
+    },
+    "audio": {
+      "eqPresets": [
+        "equalization",
+        "subwoofer",
+        "vocal"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "aptX"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "23 mm dual-unit air-conduction system, Bluetooth 5.1, IPX8, 25.9 g. BGR reports a Qualcomm aptX chip; official spec lists Bluetooth 5.1."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "multipoint",
+      "eq-selection",
+      "custom-eq",
+      "button-customization",
+      "sound-balance"
+    ],
+    "featureDeltaFromPrevious": [
+      "Neckband form factor replaces the true-wireless ear hook",
+      "IPX8 waterproofing (vs IPX4 on OWS Pro/OWS 2)",
+      "Single 15 h battery; no charging case",
+      "Physical buttons replace touch/squeeze controls",
+      "Bluetooth 5.1 (below OWS 2/Pro 5.3)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.oladanceshop.com/products/oladance-ows-sports",
+        "type": "official-product",
+        "title": "Oladance OWS Sports",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://audioxpress.com/index.php/news/oladance-introduces-ows-sports-open-earphones-optimized-for-movement",
+        "type": "reputable-secondary",
+        "title": "Oladance OWS Sports announcement",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official battery figure conflicts across regions (15 h claimed; one regional article says 15 h with 5-min/2-h quick charge, another says 15 min/5 h).",
+      "Exact fourth EQ preset name not stated.",
+      "No charging case, so case battery semantics are not applicable."
+    ],
+    "notes": "Neckband open-ear sports model; the carry case does not charge the headphones.",
+    "researchedAt": "2026-11-10"
+  }
+]

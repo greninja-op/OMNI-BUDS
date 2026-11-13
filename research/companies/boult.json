@@ -1,0 +1,2014 @@
+[
+  {
+    "company": "Boult",
+    "companySlug": "boult",
+    "family": "Klarity",
+    "model": "Klarity 4",
+    "slug": "boult-klarity-4",
+    "generation": "4",
+    "variant": "Klarity",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Product FAQ says battery is checked from phone Bluetooth settings or case LEDs; no app is named and Klarity 4 is absent from the Boult Amp supported list."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 60,
+      "chargingIndicators": "LED indicators on the charging case.",
+      "notes": "60 h total, 35 h with ANC. Official FAQ directs users to the phone's Bluetooth battery readout, which is a single combined bud percentage, or to case LEDs; no in-app case percentage.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 60
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "35 dB ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "device-only",
+        "notes": "35 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual device connectivity",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.boult.enc",
+        "name": "Zen Quad Mic ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.boult.combat-mode",
+        "name": "Combat gaming mode",
+        "availability": "device-only",
+        "notes": "45 ms."
+      },
+      {
+        "id": "vendor.boult.blink-pair",
+        "name": "Blink & Pair",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "BT 5.4; IPX5."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "35 dB ANC at a lower price than Klarity 3",
+      "60 h total"
+    ],
+    "sources": [
+      {
+        "url": "https://goboult.co.in/products/klarity-4",
+        "type": "official-product",
+        "title": "Klarity 4",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Codecs",
+      "Control map",
+      "Case reading while buds are out",
+      "No app EQ/remapping"
+    ],
+    "notes": "An ANC model with no app at all — the opposite of the app-first assumption.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Boult",
+    "companySlug": "boult",
+    "family": "Klarity",
+    "model": "Klarity 3",
+    "slug": "boult-klarity-3",
+    "generation": "3",
+    "variant": "Klarity",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Boult Amp",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.HeylinkAudio.boult"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.HeylinkAudio.boult"
+      ],
+      "appVersionObserved": "3.3.6 (29 Oct 2026)",
+      "notes": "Klarity 3 is explicitly listed as supported. App offers EQ, touch remapping, rename, listening modes and an earbud cleaning feature."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": "Case LED.",
+      "notes": "50 h total per official/manual. Per-bud and ANC-specific hours not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "6-mic hybrid ANC up to 50 dB; wind-noise reduction via hex-mic ENC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "both",
+        "notes": "50 dB; long-press right earbud or app."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets and custom EQ",
+        "availability": "official-app",
+        "notes": "Natural, Rock, Pop, Classical, Jazz, Country, Custom."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial Audio",
+        "availability": "device-only",
+        "notes": "Quad-tap right earbud."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual device connectivity",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "control.touch-customization",
+        "name": "Touch remapping",
+        "availability": "official-app",
+        "notes": "Single/double/triple tap only; quad tap and long press fixed."
+      },
+      {
+        "id": "vendor.boult.combat-mode",
+        "name": "Combat gaming mode",
+        "availability": "device-only",
+        "notes": "45 ms."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause; answer call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap left",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap right",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap left",
+          "action": "volume down",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap right",
+          "action": "volume up",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "quad tap left",
+          "action": "game/music mode",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "quad tap right",
+          "action": "spatial audio",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC mode cycle",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Natural",
+        "Rock",
+        "Pop",
+        "Classical",
+        "Jazz",
+        "Country",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "13 mm BoomX drivers; BT 5.4; IPX5."
+    },
+    "appOnlyFeatures": [
+      "EQ presets",
+      "Custom EQ",
+      "Touch remapping",
+      "Rename",
+      "Listening mode",
+      "Earbud cleaning"
+    ],
+    "featureDeltaFromPrevious": [
+      "50 dB ANC",
+      "Spatial audio",
+      "App EQ and remapping"
+    ],
+    "sources": [
+      {
+        "url": "https://goboult.co.in/products/klarity1",
+        "type": "official-product",
+        "title": "Boult Klarity family page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.HeylinkAudio.boult",
+        "type": "official-app-store",
+        "title": "Boult Amp supported devices",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://manuals.plus/asin/B0D9M1BMZ8",
+        "type": "official-manual",
+        "title": "Boult Klarity 3 user manual",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "EQ band count",
+      "Case reading while buds are out"
+    ],
+    "notes": "Control map and EQ list are unusually well documented for a budget Indian TWS.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Boult",
+    "companySlug": "boult",
+    "family": "Klarity",
+    "model": "Klarity 1",
+    "slug": "boult-klarity-1",
+    "generation": "1",
+    "variant": "Klarity",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Klarity 1 is not in the Boult Amp supported list."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": "No verified playtime figure.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "vendor.boult.enc",
+        "name": "ENC calling",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://goboult.co.in/products/klarity1",
+        "type": "official-product",
+        "title": "Klarity 1",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.HeylinkAudio.boult",
+        "type": "official-app-store",
+        "title": "Boult Amp supported devices",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Playtime",
+      "ANC status",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Boult",
+    "companySlug": "boult",
+    "family": "Z40",
+    "model": "Z40 Pro v2.0",
+    "slug": "boult-z40-pro-v2-0",
+    "generation": "2.0",
+    "variant": "Z40 Pro",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Boult Amp",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.HeylinkAudio.boult"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.HeylinkAudio.boult"
+      ],
+      "appVersionObserved": "3.3.6 (Oct 2026)",
+      "notes": "Z40 Pro v2.0 is on the supported-device list."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": "No verified official playtime captured.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC confirmed by model naming and app support; dB not captured."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "control.touch-customization",
+        "name": "Touch remapping",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.boult.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Touch remapping"
+    ],
+    "featureDeltaFromPrevious": [
+      "v2.0 refresh of Z40 Pro",
+      "App EQ and remapping"
+    ],
+    "sources": [
+      {
+        "url": "https://goboult.co.in/products/z40-pro-v2-0-jungle-green",
+        "type": "official-product",
+        "title": "Z40 Pro v2.0",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.HeylinkAudio.boult",
+        "type": "official-app-store",
+        "title": "Boult Amp supported devices",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB",
+      "Playtime",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Boult",
+    "companySlug": "boult",
+    "family": "Z40",
+    "model": "Z40 Pro",
+    "slug": "boult-z40-pro",
+    "generation": "1",
+    "variant": "Z40 Pro",
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Boult Amp",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.HeylinkAudio.boult"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.HeylinkAudio.boult"
+      ],
+      "appVersionObserved": null,
+      "notes": "Z40 Pro launched alongside the app push; v2.0 is explicitly listed, the original is not. App support for the original is uncertain."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 100,
+      "chargingIndicators": null,
+      "notes": "Up to 100 h total claimed for the Z40 Pro family.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.boult.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://goboult.co.in/products/goboult-z40-pro",
+        "type": "official-product",
+        "title": "Z40 Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB",
+      "Battery display semantics",
+      "Codecs",
+      "Control map",
+      "App support"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Boult",
+    "companySlug": "boult",
+    "family": "Z40",
+    "model": "Z40 Ultra",
+    "slug": "boult-z40-ultra",
+    "generation": null,
+    "variant": "Z40 Ultra",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Boult Amp",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.HeylinkAudio.boult"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.HeylinkAudio.boult"
+      ],
+      "appVersionObserved": null,
+      "notes": "Z40 Ultra was the model that introduced Boult app support in early 2024; the current store list no longer names it."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 100,
+      "chargingIndicators": "Case LED; exact thresholds not captured.",
+      "notes": "Up to 100 h combined playtime without ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": 32,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Up to 32 dB ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "32 dB."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "3 EQ modes",
+        "availability": "both",
+        "notes": "Hi-Fi, Bass, Rock."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual pairing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.boult.enc",
+        "name": "Quad-mic AI-ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.boult.combat-mode",
+        "name": "Combat low-latency mode",
+        "availability": "device-only",
+        "notes": "45 ms."
+      },
+      {
+        "id": "vendor.boult.blink-pair",
+        "name": "Blink & Pair",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Hi-Fi",
+        "Bass",
+        "Rock"
+      ],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "10 mm BoomX drivers; BT 5.3; Dual Stream DSP."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Touch remapping"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adds app support to the Z40 family",
+      "100 h total",
+      "Dual pairing"
+    ],
+    "sources": [
+      {
+        "url": "http://web.archive.org/web/20240420103310/https://www.boultaudio.com/products/z40-ultra",
+        "type": "official-product",
+        "title": "Archived Boult Z40 Ultra product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fonearena.com/blog/416391/boult-z40-ultra-price-features.html",
+        "type": "reputable-secondary",
+        "title": "Boult Z40 Ultra launch",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://themobileindian.com/news/boult-audio-to-launch-an-app-for-all-tws-earbuds-old-and-new",
+        "type": "reputable-secondary",
+        "title": "Boult app support announcement",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official product page not captured",
+      "Buds-only hours",
+      "Battery display semantics",
+      "Transparency mode",
+      "App support in current build"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Boult",
+    "companySlug": "boult",
+    "family": "Z40",
+    "model": "Z40 v2.0",
+    "slug": "boult-z40-v2-0",
+    "generation": "2.0",
+    "variant": "Z40",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Z40 v2.0 is not on the Boult Amp supported list."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": null,
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "vendor.boult.enc",
+        "name": "ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "v2.0 refresh",
+      "New colourways"
+    ],
+    "sources": [
+      {
+        "url": "https://goboult.co.in/products/z40-v2-0-onyx-grey",
+        "type": "official-product",
+        "title": "Z40 v2.0",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Playtime",
+      "ANC status",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Boult",
+    "companySlug": "boult",
+    "family": "Z",
+    "model": "Z60",
+    "slug": "boult-z60",
+    "generation": null,
+    "variant": "Z60",
+    "releaseYear": 2026,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Not on the Boult Amp supported list."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 60,
+      "chargingIndicators": "Case LED; 10 min charge = 150 min playback.",
+      "notes": "60 h total; 13 mm BoomX drivers.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Zen Mode quad-mic ENC only; no ANC."
+    },
+    "features": [
+      {
+        "id": "vendor.boult.enc",
+        "name": "Zen Mode quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.boult.combat-mode",
+        "name": "Combat mode",
+        "availability": "device-only",
+        "notes": "45 ms."
+      },
+      {
+        "id": "vendor.boult.blink-pair",
+        "name": "Blink & Pair",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm BoomX drivers; BT 5.3; IPX5."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://goboult.co.in/products/goboult-z60",
+        "type": "official-product",
+        "title": "Z60",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://goboult.co.in/products/goboult-z60",
+        "type": "official-product",
+        "title": "Z60",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Control map"
+    ],
+    "notes": "Current 2026 listing; specs not published on the page captured.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Boult",
+    "companySlug": "boult",
+    "family": "X",
+    "model": "X70",
+    "slug": "boult-x70",
+    "generation": null,
+    "variant": "X70",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Boult Amp",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.HeylinkAudio.boult"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.HeylinkAudio.boult"
+      ],
+      "appVersionObserved": "3.3.6 (Oct 2026)",
+      "notes": "FAQ says touch controls can be customised with the GOBOULT Amp app, although X70 is not named in the current supported-device list."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 60,
+      "chargingIndicators": "Case LED; 10 min charge = 100 min playback.",
+      "notes": "60 h total; 10 mm BoomX drivers.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Official product title says ANC, but the specification table only lists Zen Mode quad-mic ENC. Recorded as ENC-only pending clarification."
+    },
+    "features": [
+      {
+        "id": "vendor.boult.enc",
+        "name": "Zen Mode quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "3 EQ modes",
+        "availability": "both",
+        "notes": "HiFi, Bass Boost, Rock; quad-tap right to cycle."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "HiFi",
+        "Bass Boost",
+        "Rock"
+      ],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "10 mm BoomX drivers; BT 5.3; IPX5."
+    },
+    "appOnlyFeatures": [
+      "Touch remapping"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://goboult.co.in/products/x70",
+        "type": "official-product",
+        "title": "X70",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://goboult.co.in/products/x70",
+        "type": "official-product",
+        "title": "X70",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Whether ANC hardware exists (title vs spec conflict)",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Boult",
+    "companySlug": "boult",
+    "family": "Y1",
+    "model": "Y1 Pro",
+    "slug": "boult-y1-pro",
+    "generation": null,
+    "variant": "Y1 Pro",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Y1 Pro is not listed in Boult Amp; Y1 v2.0 and Y1 ANC are."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": null,
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://goboult.co.in/products/y1-pro",
+        "type": "official-product",
+        "title": "Y1 Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Playtime",
+      "ANC status",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Boult",
+    "companySlug": "boult",
+    "family": "K",
+    "model": "K60",
+    "slug": "boult-k60",
+    "generation": null,
+    "variant": "K60",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": null,
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://goboult.co.in/products/k60",
+        "type": "official-product",
+        "title": "K60",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "All technical specifications",
+      "Battery display semantics"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Boult",
+    "companySlug": "boult",
+    "family": "W",
+    "model": "W60",
+    "slug": "boult-w60",
+    "generation": null,
+    "variant": "W60",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": null,
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://goboult.co.in/products/w60",
+        "type": "official-product",
+        "title": "W60",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "All technical specifications",
+      "Battery display semantics"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Boult",
+    "companySlug": "boult",
+    "family": "Vortex",
+    "model": "Vortex",
+    "slug": "boult-vortex",
+    "generation": null,
+    "variant": "Vortex",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Vortex is not on the Boult Amp supported list; a Play Store review specifically complains that the app could not detect Vortex."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": null,
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://goboult.co.in/products/goboult-vortex",
+        "type": "official-product",
+        "title": "Vortex",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.HeylinkAudio.boult",
+        "type": "official-app-store",
+        "title": "Boult Amp supported devices",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "All technical specifications",
+      "Battery display semantics",
+      "App support"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Boult",
+    "companySlug": "boult",
+    "family": "Astra",
+    "model": "Astra",
+    "slug": "boult-astra",
+    "generation": null,
+    "variant": "Astra",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Boult Amp",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.HeylinkAudio.boult"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.HeylinkAudio.boult"
+      ],
+      "appVersionObserved": "3.3.6 (Oct 2026)",
+      "notes": "Astra is explicitly listed as supported."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": null,
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "control.touch-customization",
+        "name": "Touch remapping",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Touch remapping"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://goboult.co.in/products/astra",
+        "type": "official-product",
+        "title": "Astra",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.HeylinkAudio.boult",
+        "type": "official-app-store",
+        "title": "Boult Amp supported devices",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB",
+      "Playtime",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Boult",
+    "companySlug": "boult",
+    "family": "Earl",
+    "model": "Earl",
+    "slug": "boult-earl",
+    "generation": null,
+    "variant": "Earl",
+    "releaseYear": 2026,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Boult Amp",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.HeylinkAudio.boult"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.HeylinkAudio.boult"
+      ],
+      "appVersionObserved": "3.3.6 (Oct 2026)",
+      "notes": "Earl is explicitly listed as supported."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": null,
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "control.touch-customization",
+        "name": "Touch remapping",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Touch remapping"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://goboult.co.in/products/earl-obsidian-black",
+        "type": "official-product",
+        "title": "Earl",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.HeylinkAudio.boult",
+        "type": "official-app-store",
+        "title": "Boult Amp supported devices",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB",
+      "Playtime",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Boult",
+    "companySlug": "boult",
+    "family": "Mustang",
+    "model": "Mustang Sprint",
+    "slug": "boult-mustang-sprint",
+    "generation": null,
+    "variant": "Sprint",
+    "releaseYear": 2026,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Boult Amp",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.HeylinkAudio.boult"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.HeylinkAudio.boult"
+      ],
+      "appVersionObserved": "3.3.6 (Oct 2026)",
+      "notes": "Mustang Sprint is explicitly listed as supported."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": null,
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.boult.combat-mode",
+        "name": "Combat gaming mode",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "control.touch-customization",
+        "name": "Touch remapping",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Touch remapping"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://goboult.co.in/products/mustang-sprint-nitro-green",
+        "type": "official-product",
+        "title": "Mustang Sprint",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.HeylinkAudio.boult",
+        "type": "official-app-store",
+        "title": "Boult Amp supported devices",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB",
+      "Playtime",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Boult",
+    "companySlug": "boult",
+    "family": "Omega",
+    "model": "Omega",
+    "slug": "boult-omega",
+    "generation": null,
+    "variant": "Omega",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Not on the Boult Amp supported list."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 32,
+      "chargingIndicators": "Charging indicator yes.",
+      "notes": "32 h total; 10 min = 100 min.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": 30,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "30 dB ANC; Zen mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "device-only",
+        "notes": "30 dB."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ modes",
+        "availability": "device-only",
+        "notes": "HiFi, Rock, Bass Boost."
+      },
+      {
+        "id": "vendor.boult.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.boult.combat-mode",
+        "name": "Combat mode",
+        "availability": "device-only",
+        "notes": "45 ms."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "HiFi",
+        "Rock",
+        "Bass Boost"
+      ],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "BT 5.2; IPX5."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "http://web.archive.org/web/20240622225131/https://www.boultaudio.com/products/omega",
+        "type": "official-product",
+        "title": "Archived Boult Omega product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

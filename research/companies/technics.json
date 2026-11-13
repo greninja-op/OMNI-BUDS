@@ -1,0 +1,886 @@
+[
+  {
+    "company": "Technics",
+    "companySlug": "technics",
+    "family": "EAH-AZ",
+    "model": "Technics EAH-AZ100",
+    "slug": "eah-az100",
+    "generation": "100",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Technics Audio Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, spatial audio, multipoint, firmware updates."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 10,
+      "budsHoursNoAnc": 12,
+      "caseHours": 18,
+      "chargingIndicators": "Case LED; app readout; 15 min = 90 min; Qi wireless",
+      "notes": "Official AAC: 10 h NC on / 12 h off; 28 h total NC on / 29 h off. LDAC: 7 h / 18 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "Full Adaptive Digital Hybrid ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive digital hybrid ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Dolby Atmos spatial audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.head-tracking",
+        "name": "Dolby Head Tracking",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "3-device multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC 96 kHz/990 kbps",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LC3 / LE Audio",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "LDAC",
+        "LC3",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "10 mm magnetic-fluid driver; BT 5.3; IPX4."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Dolby Atmos/head tracking",
+      "ANC modes",
+      "multipoint settings"
+    ],
+    "featureDeltaFromPrevious": [
+      "Magnetic fluid driver",
+      "Dolby Atmos with head tracking",
+      "3-device multipoint",
+      "10 h NC runtime"
+    ],
+    "sources": [
+      {
+        "url": "https://us.technics.com/products/premium-hi-fi-true-wireless-earbuds-with-dolby-atmos-and-noise-cancelling-eah-az100",
+        "type": "official-product",
+        "title": "EAH-AZ100",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB not published.",
+      "EQ band count unknown.",
+      "Battery UI layout inferred."
+    ],
+    "notes": "2024 reference-class TWS.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Technics",
+    "companySlug": "technics",
+    "family": "EAH-AZ",
+    "model": "Technics EAH-AZ80",
+    "slug": "eah-az80",
+    "generation": "80",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Technics Audio Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, multipoint."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 7.5,
+      "caseHours": 17,
+      "chargingIndicators": "Case LED; app readout; Qi wireless",
+      "notes": "AAC: 7 h NC / 7.5 h off; 24 h total NC / 25 h off. LDAC: 4.5 h / 16 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "3-device multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "LDAC",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "10 mm free-edge aluminium driver; BT 5.3; IPX4."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "3-device multipoint",
+      "Free-edge aluminium driver"
+    ],
+    "sources": [
+      {
+        "url": "https://us.technics.com/products/hi-fi-true-wireless-earbuds-with-noise-cancelling-eah-az80",
+        "type": "official-product",
+        "title": "EAH-AZ80",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB not published.",
+      "EQ band count unknown.",
+      "Battery UI layout (split buds / separate case / last-known case while buds are out) is inferred from typical app behaviour and has not been screenshot-verified."
+    ],
+    "notes": "2023 flagship.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Technics",
+    "companySlug": "technics",
+    "family": "EAH-AZ",
+    "model": "Technics EAH-AZ60M2",
+    "slug": "eah-az60m2",
+    "generation": "60",
+    "variant": "M2",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Technics Audio Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, multipoint."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 7.5,
+      "caseHours": 17,
+      "chargingIndicators": "Case LED; app readout; Qi wireless",
+      "notes": "AAC: 7 h NC / 7.5 h off; 24 h total NC / 25 h off. LDAC: 4.5 h / 16 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "3-device multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "LDAC",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "8 mm free-edge driver; BT 5.3; IPX4."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "3-device multipoint over AZ60",
+      "Smaller 8 mm driver"
+    ],
+    "sources": [
+      {
+        "url": "https://us.technics.com/products/true-wireless-earbuds-with-noise-cancelling-eah-az60m2",
+        "type": "official-product",
+        "title": "EAH-AZ60M2",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB not published.",
+      "EQ band count unknown.",
+      "Battery UI layout (split buds / separate case / last-known case while buds are out) is inferred from typical app behaviour and has not been screenshot-verified."
+    ],
+    "notes": "Mid-flagship; now discontinued at US store.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Technics",
+    "companySlug": "technics",
+    "family": "EAH-AZ",
+    "model": "Technics EAH-AZ40M2",
+    "slug": "eah-az40m2",
+    "generation": "40",
+    "variant": "M2",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Technics Audio Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, multipoint."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5.5,
+      "budsHoursNoAnc": null,
+      "caseHours": 12.5,
+      "chargingIndicators": "Case LED; app readout; Qi wireless",
+      "notes": "5.5 h NC on; 18 h total NC on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "6 mm driver; BT 5.2; IPX4."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "Smaller, cheaper AZ series"
+    ],
+    "sources": [
+      {
+        "url": "https://us.technics.com/products/true-wireless-earbuds-ii-eah-az40m2",
+        "type": "official-product",
+        "title": "EAH-AZ40M2",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "NC-off runtime not published.",
+      "EQ band count unknown.",
+      "Battery UI layout (split buds / separate case / last-known case while buds are out) is inferred from typical app behaviour and has not been screenshot-verified."
+    ],
+    "notes": "Compact ANC earbud.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Technics",
+    "companySlug": "technics",
+    "family": "EAH-AZ",
+    "model": "Technics EAH-AZ70W",
+    "slug": "eah-az70w",
+    "generation": "70",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Technics Audio Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC and EQ."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6.5,
+      "budsHoursNoAnc": null,
+      "caseHours": 13,
+      "chargingIndicators": "Case LED; app readout",
+      "notes": "6.5 h NC on; 19.5 h total NC on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/ambient",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "10 mm driver; BT 5.0; IPX4."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "Technics' first ANC TWS"
+    ],
+    "sources": [
+      {
+        "url": "https://us.technics.com/products/true-wireless-az70wk-noise-canceling-earbuds-eah-az70w",
+        "type": "official-product",
+        "title": "EAH-AZ70W",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No multipoint.",
+      "EQ band count unknown.",
+      "Battery UI layout (split buds / separate case / last-known case while buds are out) is inferred from typical app behaviour and has not been screenshot-verified."
+    ],
+    "notes": "Legacy flagship.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Technics",
+    "companySlug": "technics",
+    "family": "EAH-A",
+    "model": "Technics A1000",
+    "slug": "a1000",
+    "generation": "1000",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Technics Audio Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, spatial audio, multipoint."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 45,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout; 15 min = 4 h",
+      "notes": "Up to 45 h with ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Real-time optimising ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Dolby Atmos spatial audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.head-tracking",
+        "name": "Head tracking",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "3-device multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC / LC3",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wired-mode",
+        "name": "USB audio + 3.5 mm",
+        "availability": "device-only",
+        "notes": "Lossless USB audio."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "touch gesture",
+          "action": "playback, volume, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "button press",
+          "action": "power, ANC",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/ANC buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "LDAC",
+        "LC3",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "BT 5.3; 45 h ANC."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "spatial audio",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "New 2026 flagship above EAH-A800",
+      "Dolby Atmos head tracking",
+      "USB audio"
+    ],
+    "sources": [
+      {
+        "url": "https://us.technics.com/products/noise-cancelling-headphones-a1000",
+        "type": "official-product",
+        "title": "A1000",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-off runtime not published.",
+      "EQ band count unknown."
+    ],
+    "notes": "2026 flagship over-ear.",
+    "researchedAt": "2026-11-10"
+  }
+]

@@ -1,0 +1,4158 @@
+[
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "Liberty",
+    "model": "soundcore Liberty 5 Pro",
+    "slug": "soundcore-liberty-5-pro",
+    "generation": "5",
+    "variant": "Pro",
+    "releaseYear": 2026,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": "Anker soundcore app; 5.0 UI with Anka assistant. Supports HearID 5.0, AI Sound Enhancement and case display controls."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Case: 0.96-inch smart display with battery levels; 5-minute charge = 4 hours (Normal mode).",
+      "notes": "62 mAh per bud, 690 mAh case. Split/separate layout observed in soundcore app; official spec page does not state display semantics. Playtime not published in the retrieved page section. Split/case layout observed in soundcore app; not documented officially.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "8 sensors plus Thus AI chip; claims 100% more effective ANC than Liberty 4 Pro. No official dB figure published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.hearid",
+        "name": "HearID 5.0 personalized EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.ai-sound-enhancement",
+        "name": "AI Sound Enhancement",
+        "availability": "official-app"
+      },
+      {
+        "id": "case.smart-display",
+        "name": "Smart charging-case display",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint (up to 3 devices)",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "other"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "hold",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "case touch bar",
+          "action": "ANC level and case functions",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "Case touch bar plus smart display; buds are touch-controlled.",
+      "configurableInApp": true,
+      "notes": "Gesture map is the soundcore default; exact options vary by firmware."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "AAC",
+        "SBC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Bluetooth 6.1 (buds) / 6.0 (case). IP55."
+    },
+    "appOnlyFeatures": [
+      "HearID 5.0",
+      "AI Sound Enhancement",
+      "case display settings"
+    ],
+    "featureDeltaFromPrevious": [
+      "New flagship above Liberty 5; 8-sensor ANC with Thus AI chip",
+      "Smart charging case with 0.96-inch display and touch controls",
+      "HearID 5.0 replaces earlier HearID generations",
+      "Multipoint expanded to up to 3 devices"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/products/d1203-liberty-5-pro-anc-earbuds-clear-calls",
+        "type": "official-product",
+        "title": "soundcore Liberty 5 Pro product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore",
+        "type": "official-app-store",
+        "title": "soundcore app listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official playtime with ANC on/off not captured",
+      "No official ANC dB rating",
+      "Spatial audio / head tracking not confirmed",
+      "Battery split/separate layout inferred from app UI, not documented"
+    ],
+    "notes": "Current 2026 flagship. Launch pricing and regional variants not recorded.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "Liberty",
+    "model": "soundcore Liberty 5",
+    "slug": "soundcore-liberty-5",
+    "generation": "5",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": "Anker soundcore app."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 8,
+      "budsHoursNoAnc": 12,
+      "caseHours": 32,
+      "chargingIndicators": "10-minute charge = 5 hours.",
+      "notes": "Official: 12H/48H ANC off, 8H/32H ANC on. Case hours shown are total-with-case figures, not case-only capacity. Split/case layout observed in soundcore app; not documented officially.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 32
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adaptive ANC 3.0 recalibrates every 0.3 s; targets human voice. No official dB depth published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC 3.0",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.dolby",
+        "name": "Dolby Audio",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / Hi-Res",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint with LDAC enabled",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ customization",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "hold",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch controls."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "9.2 mm wool-paper diaphragm; Bluetooth 5.4; IP55."
+    },
+    "appOnlyFeatures": [
+      "HearID",
+      "Dolby Audio toggle",
+      "LDAC toggle"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC 3.0 with voice-focused cavity versus Liberty 4 NC",
+      "12 h single-charge playtime (ANC off) versus 10 h on Liberty 4 NC",
+      "Dolby Audio added",
+      "Bluetooth 5.4 and IP55"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/products/a3957-liberty-5-tws-earbuds",
+        "type": "official-product",
+        "title": "soundcore Liberty 5 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC dB depth",
+      "EQ preset names and band count not captured",
+      "Head tracking not confirmed"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "Liberty",
+    "model": "soundcore Liberty 4 Pro",
+    "slug": "soundcore-liberty-4-pro",
+    "generation": "4",
+    "variant": "Pro",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": "Case settings and ANC level accessible from the charging case as well as the app."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 40,
+      "chargingIndicators": "5-minute charge = 4 hours; case has display.",
+      "notes": "Official headline 10 h single charge / 40 h with case; ANC-on split not stated on page. Split/case layout observed in soundcore app; not documented officially.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 40
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "7-sensor ANC (6 sound + 1 barometric), 3x stronger than prior generation per Anker; 3 recalibrations per second."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "7-sensor adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "case.smart-display",
+        "name": "Case touch bar and display",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "other"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "hold",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "case swipe",
+          "action": "adjust ANC level",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "Case touch bar.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "ACAA coaxial system, 10.5 mm driver plus titanium-coated tweeter, digital crossover. IPX4 not confirmed."
+    },
+    "appOnlyFeatures": [
+      "HearID",
+      "LDAC toggle",
+      "case display customization"
+    ],
+    "featureDeltaFromPrevious": [
+      "Charging case with touch bar and display for ANC and playback",
+      "7-sensor ANC versus Liberty 4",
+      "New ACAA coaxial driver architecture"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/products/a3954-liberty-4-pro-tws-earbuds",
+        "type": "official-product",
+        "title": "soundcore Liberty 4 Pro product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on playtime not published",
+      "ANC dB depth not published",
+      "Water resistance rating not captured",
+      "Head tracking not confirmed"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "Liberty",
+    "model": "soundcore Liberty 4 NC",
+    "slug": "soundcore-liberty-4-nc",
+    "generation": "4",
+    "variant": "NC",
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": "22 EQ presets plus HearID 2.0; controls and ANC customizable."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 50,
+      "chargingIndicators": "10 minutes = 4 hours; wireless charging case.",
+      "notes": "Official 10H/50H headline; ANC-on figure not stated. Split/case layout observed in soundcore app; not documented officially.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "Adaptive ANC 2.0; 98.5% noise reduction certified by SGS in the deepest frequency band (not a dB depth)."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC 2.0",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.hearid",
+        "name": "HearID 2.0",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "22 EQ presets + custom EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / Hi-Res Wireless",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection auto-pause",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "hold",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Case pairing/reset button only.",
+      "configurableInApp": true,
+      "notes": "Users can reassign single-tap to volume in the app."
+    },
+    "audio": {
+      "eqPresets": [
+        "22 presets"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm driver; Bluetooth 5.3; IPX4."
+    },
+    "appOnlyFeatures": [
+      "HearID 2.0",
+      "22 EQ presets",
+      "control remapping"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adaptive ANC 2.0 versus Liberty Air 2 Pro",
+      "LDAC and Hi-Res Wireless added",
+      "10 h/50 h battery versus 7 h/26 h",
+      "Wear detection and multipoint"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/products/liberty-4-nc-a3947z11",
+        "type": "official-product",
+        "title": "soundcore Liberty 4 NC product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on playtime not published",
+      "ANC dB depth not published",
+      "Spatial audio support not confirmed"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "Liberty",
+    "model": "soundcore Liberty 4",
+    "slug": "soundcore-liberty-4",
+    "generation": "4",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": "Heart-rate sensor and spatial audio controlled in app."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9,
+      "caseHours": 28,
+      "chargingIndicators": "Wireless charging case.",
+      "notes": "Official 9 h/28 h. Split/case layout observed in soundcore app; not documented officially.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "HearID ANC personalized noise cancelling."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "HearID ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "360 spatial audio with head tracking",
+        "availability": "official-app"
+      },
+      {
+        "id": "sensing.heart-rate",
+        "name": "Heart-rate sensor",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.hearid",
+        "name": "HearID Sound",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "slide",
+          "action": "volume",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "hold",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem slide for volume."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "ACAA 3.0 coaxial acoustic system; IPX4."
+    },
+    "appOnlyFeatures": [
+      "HearID ANC",
+      "spatial audio modes",
+      "heart-rate insights"
+    ],
+    "featureDeltaFromPrevious": [
+      "Heart-rate sensor added",
+      "360 spatial audio with head tracking",
+      "ACAA 3.0 coaxial driver",
+      "LDAC support"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/products/liberty-4-a3953z21",
+        "type": "official-product",
+        "title": "soundcore Liberty 4 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on playtime not published",
+      "ANC dB depth not published",
+      "Release year from launch history, not stated on page"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "Liberty",
+    "model": "soundcore Liberty 3 Pro",
+    "slug": "soundcore-liberty-3-pro",
+    "generation": "3",
+    "variant": "Pro",
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 32,
+      "chargingIndicators": "Wireless charging case; USB-C.",
+      "notes": "Official 8 h/32 h. Split/case layout observed in soundcore app; not documented officially.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "Adaptive ANC with personalized HearID."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.hearid",
+        "name": "HearID EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "hold",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls with press-and-hold gestures."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "ACAA coaxial dual-driver; IPX4."
+    },
+    "appOnlyFeatures": [
+      "HearID",
+      "spatial audio"
+    ],
+    "featureDeltaFromPrevious": [
+      "LDAC and spatial audio versus Liberty Air 2 Pro",
+      "Dual-driver ACAA architecture"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/collections/all",
+        "type": "official-product",
+        "title": "soundcore product catalogue (legacy Liberty 3 Pro listing)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Dedicated current product page unavailable; specs from legacy listing and launch materials",
+      "ANC dB and ANC-on playtime not confirmed"
+    ],
+    "notes": "Legacy flagship still widely sold.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "Liberty",
+    "model": "soundcore Liberty Air 2 Pro",
+    "slug": "soundcore-liberty-air-2-pro",
+    "generation": "2",
+    "variant": "Pro",
+    "releaseYear": 2020,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 7,
+      "caseHours": 26,
+      "chargingIndicators": "Wireless charging case.",
+      "notes": "Official 7 h/26 h; ANC-on approximately 6 h. Split/case layout observed in soundcore app; not documented officially.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "HearID ANC with personalized profiles."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "HearID ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.hearid",
+        "name": "HearID EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "hold",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm drivers; IPX4."
+    },
+    "appOnlyFeatures": [
+      "HearID ANC",
+      "HearID EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC added to Liberty Air line",
+      "HearID personalized ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/collections/all",
+        "type": "official-product",
+        "title": "soundcore product catalogue (legacy Liberty Air 2 Pro listing)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Legacy page removed; ANC-on hours approximate",
+      "No official dB depth"
+    ],
+    "notes": "Discontinued but common in the installed base.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "Space",
+    "model": "soundcore Space A40",
+    "slug": "soundcore-space-a40",
+    "generation": "A40",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": "22 EQ presets, HearID, ANC/transparency and control customization."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 50,
+      "chargingIndicators": "10 minutes = 4 hours.",
+      "notes": "Official 10 h single charge + 4 full case charges (50 h total). Split/case layout observed in soundcore app; not documented officially.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 50
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Upgraded hybrid ANC; 98% noise reduction claim (not dB)."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "22 EQ presets + custom",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.hearid",
+        "name": "HearID Sound",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "hold",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "22 presets"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Double-layer diaphragm drivers; Bluetooth 5.3; IPX4."
+    },
+    "appOnlyFeatures": [
+      "HearID",
+      "22 EQ presets",
+      "control customization"
+    ],
+    "featureDeltaFromPrevious": [
+      "Smaller body than earlier soundcore ANC buds",
+      "LDAC at the mid-tier price",
+      "10 h single-charge battery"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/products/space-a40-a3936011",
+        "type": "official-product",
+        "title": "soundcore Space A40 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on playtime and dB depth not published"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "Space",
+    "model": "soundcore Space One",
+    "slug": "soundcore-space-one",
+    "generation": "One",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 40,
+      "budsHoursNoAnc": 55,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; 5-minute charge = 4 hours.",
+      "notes": "Over-ear product: one aggregate battery reading, no charging case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adaptive ANC 3.0 with 2.0? Official page cites adaptive ANC; dB not published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / Hi-Res",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ customization",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Earcup buttons for playback, volume and ANC.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm dynamic drivers."
+    },
+    "appOnlyFeatures": [
+      "HearID",
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adaptive ANC 3.0 versus Life Q30/Q35",
+      "LDAC and 40 h ANC battery"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/products/space-one",
+        "type": "official-product",
+        "title": "soundcore Space One product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB depth",
+      "Exact ANC/off battery split not verified from official spec table"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "Space",
+    "model": "soundcore Space One Pro",
+    "slug": "soundcore-space-one-pro",
+    "generation": "One",
+    "variant": "Pro",
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 40,
+      "budsHoursNoAnc": 60,
+      "caseHours": null,
+      "chargingIndicators": "USB-C fast charge.",
+      "notes": "Official 40 h ANC / 60 h standard; foldable design.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "design.foldable",
+        "name": "Foldable travel design",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "HearID",
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Foldable hinge and travel case versus Space One",
+      "60 h standard playtime versus 55 h"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/products/soundcore-space-one-pro-refurbished",
+        "type": "official-product",
+        "title": "soundcore Space One Pro listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB depth",
+      "Battery figures from launch materials rather than current spec table"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "Space",
+    "model": "soundcore Space Q45",
+    "slug": "soundcore-space-q45",
+    "generation": "Q45",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 50,
+      "budsHoursNoAnc": 65,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; 5 minutes = 4 hours.",
+      "notes": "Official 50 h ANC / 65 h standard.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adaptive ANC with 98% claim."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm drivers; Bluetooth 5.3."
+    },
+    "appOnlyFeatures": [
+      "HearID",
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "50 h ANC battery versus Life Q35 40 h",
+      "LDAC and Bluetooth 5.3"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/collections/all",
+        "type": "official-product",
+        "title": "soundcore product catalogue (legacy Space Q45 listing)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB depth",
+      "Dedicated Space Q45 product page removed; specs from launch materials"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "Life",
+    "model": "soundcore Life Q30",
+    "slug": "soundcore-life-q30",
+    "generation": "Q30",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 40,
+      "budsHoursNoAnc": 60,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; 5 minutes = 4 hours.",
+      "notes": "Official 40 h ANC / 60 h standard.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Hybrid ANC with three modes."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm drivers."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC added to the Life over-ear line versus Life Q20"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/collections/all",
+        "type": "official-product",
+        "title": "soundcore product catalogue (legacy Life Q30 listing)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB depth",
+      "Legacy page removed; battery from launch specs"
+    ],
+    "notes": "Discontinued but high installed base.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "Life",
+    "model": "soundcore Life Q35",
+    "slug": "soundcore-life-q35",
+    "generation": "Q35",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 40,
+      "budsHoursNoAnc": 60,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; 5 minutes = 4 hours.",
+      "notes": "Official 40 h ANC / 60 h standard.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Hybrid ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm drivers."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "LDAC toggle"
+    ],
+    "featureDeltaFromPrevious": [
+      "LDAC support added versus Life Q30"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/collections/all",
+        "type": "official-product",
+        "title": "soundcore product catalogue (legacy Life Q35 listing)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB depth",
+      "Legacy page removed"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "AeroFit",
+    "model": "soundcore AeroFit Pro",
+    "slug": "soundcore-aerofit-pro",
+    "generation": "1",
+    "variant": "Pro",
+    "releaseYear": 2023,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": "Spatial audio, LDAC and button customization in app."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 14,
+      "caseHours": 46,
+      "chargingIndicators": "10 minutes = 5.5 hours (buds only); case does not fast charge.",
+      "notes": "Official 14 h/46 h; LDAC at 50% volume ~10 h. Split/case layout observed in soundcore app; not documented officially.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Open-ear design; no ANC. App has wind-noise reduction for calls."
+    },
+    "features": [
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "design.detachable-neckband",
+        "name": "Detachable neckband",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.buttons",
+        "name": "Physical button controls",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "double press (right)",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "single press (mono mode)",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "power / pairing",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Button on each earbud; detachable neckband.",
+      "configurableInApp": true,
+      "notes": "Button mapping customizable in soundcore app; not all gestures documented here."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "16.2 mm titanium-coated drivers; IPX5; Bluetooth 5.3."
+    },
+    "appOnlyFeatures": [
+      "spatial audio",
+      "LDAC toggle",
+      "button mapping",
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "LDAC and spatial audio versus base AeroFit",
+      "Detachable neckband for sport use",
+      "Physical buttons instead of touch"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/aerofit-pro",
+        "type": "official-product",
+        "title": "soundcore AeroFit Pro product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://service.soundcore.com/article-description/soundcore-AeroFit-Pro-User-Guide--A3871",
+        "type": "official-manual",
+        "title": "AeroFit Pro user guide (A3871)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Full button gesture map",
+      "Spatial audio head tracking confirmation"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "AeroFit",
+    "model": "soundcore AeroFit",
+    "slug": "soundcore-aerofit",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 11,
+      "caseHours": 42,
+      "chargingIndicators": "10 minutes = 4 hours.",
+      "notes": "Official 11 h/42 h. Split/case layout observed in soundcore app; not documented officially.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear; no ANC."
+    },
+    "features": [
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "design.open-ear",
+        "name": "Open-ear hook",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "both"
+      },
+      {
+        "id": "water.ipx7",
+        "name": "IPX7 water resistance",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "14 mm drivers; IPX7."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "control customization"
+    ],
+    "featureDeltaFromPrevious": [
+      "First AeroFit generation"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/products/aerofit-a3872011",
+        "type": "official-product",
+        "title": "soundcore AeroFit product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Spatial audio support not confirmed",
+      "Exact gesture map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "AeroFit",
+    "model": "soundcore AeroFit 2 Pro",
+    "slug": "soundcore-aerofit-2-pro",
+    "generation": "2",
+    "variant": "Pro",
+    "releaseYear": 2026,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 7,
+      "caseHours": 34,
+      "chargingIndicators": "USB-C.",
+      "notes": "Open-ear form 7 h per charge / 34 h with case; ANC form 5 h / 24 h with case. Case total differs by mode. Split/case layout observed in soundcore app; not documented officially.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 34
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC only activates when both ear hooks are set to levels 4-5. Adaptive algorithm runs 380,000 checks/s."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Switchable ANC form",
+        "availability": "both"
+      },
+      {
+        "id": "design.2-in-1",
+        "name": "Open-ear / ANC convertible hook",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / Hi-Res",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "controls.buttons",
+        "name": "Button controls",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle mode",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Button on each earbud.",
+      "configurableInApp": true,
+      "notes": "Hook level physically selects open-ear vs ANC form."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11.8 mm composite drivers; IP55."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "LDAC toggle"
+    ],
+    "featureDeltaFromPrevious": [
+      "First AeroFit with ANC via adjustable hook form",
+      "11.8 mm composite drivers versus 16.2 mm on AeroFit Pro",
+      "IP55 versus IPX5"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/products/a3875-aerofit-2-pro-open-ear-earbuds-with-anc",
+        "type": "official-product",
+        "title": "soundcore AeroFit 2 Pro product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB depth",
+      "Full gesture map",
+      "Spatial audio support"
+    ],
+    "notes": "Unique 2-in-1 open-ear/ANC mechanism in the category.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "AeroClip",
+    "model": "soundcore AeroClip",
+    "slug": "soundcore-aeroclip",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 32,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 8 h/32 h. Split/case layout observed in soundcore app; not documented officially.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear clip; no ANC."
+    },
+    "features": [
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "both"
+      },
+      {
+        "id": "design.clip",
+        "name": "Clip-on open-ear design",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IPX4."
+    },
+    "appOnlyFeatures": [
+      "spatial audio",
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "First AeroClip generation"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/collections/all",
+        "type": "official-product",
+        "title": "soundcore AeroClip collection listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Dedicated product page not captured",
+      "LDAC support and battery figures from launch materials"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "Sleep",
+    "model": "soundcore Sleep A20",
+    "slug": "soundcore-sleep-a20",
+    "generation": "A20",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": "Sleep tab with masking sounds, sleep tracking and touch-disable option."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 14,
+      "caseHours": 80,
+      "chargingIndicators": "Three case LEDs; USB-C.",
+      "notes": "Official 14 h sleep mode / 10 h Bluetooth mode; 80 h sleep-mode total with case (55 h Bluetooth). Case percentage only refreshes while the buds are docked, so the app keeps the last-known value while they are out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 80
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Passive noise isolation plus masking sounds; no active noise cancelling."
+    },
+    "features": [
+      {
+        "id": "sleep.masking-sounds",
+        "name": "Sleep masking sounds",
+        "availability": "official-app"
+      },
+      {
+        "id": "sleep.tracking",
+        "name": "Sleep tracking",
+        "availability": "official-app"
+      },
+      {
+        "id": "controls.touch-disable",
+        "name": "Touch disable for side sleepers",
+        "availability": "official-app"
+      },
+      {
+        "id": "design.side-sleeper",
+        "name": "Side-sleeper ergonomic shape",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause or sleep sound control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch can be disabled in app to prevent accidental wake."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Sleep-focused tuning; no multipoint."
+    },
+    "appOnlyFeatures": [
+      "masking sound library",
+      "sleep insights",
+      "touch disable"
+    ],
+    "featureDeltaFromPrevious": [
+      "14 h battery versus 10 h on Sleep A10",
+      "80 h case versus 50 h",
+      "Side-sleeper redesign and touch-disable"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/collections/all",
+        "type": "official-product",
+        "title": "soundcore Sleep A20 listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Dedicated product page not captured",
+      "Exact sleep-tracking sensor set"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "Sleep",
+    "model": "soundcore Sleep A30",
+    "slug": "soundcore-sleep-a30",
+    "generation": "A30",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": "Sleep ANC controls and sleep insights in app."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 9,
+      "budsHoursNoAnc": 16,
+      "caseHours": 45,
+      "chargingIndicators": "Three case LEDs; USB-C (no wireless charging).",
+      "notes": "Official: 9 h buds / 45 h with case, ANC on. Scenario figures: 6.5 h Bluetooth + ANC, 10 h Bluetooth ANC off, 8.5-9.5 h local audio + ANC, 16 h local audio ANC off. Case level only updates when buds are docked (official FAQ).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 45
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Marketed as smart ANC earbuds for sleeping; first Sleep model with ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Sleep ANC",
+        "availability": "both"
+      },
+      {
+        "id": "sleep.masking-sounds",
+        "name": "Sleep sounds",
+        "availability": "official-app"
+      },
+      {
+        "id": "sleep.tracking",
+        "name": "Sleep tracking",
+        "availability": "official-app"
+      },
+      {
+        "id": "design.side-sleeper",
+        "name": "Side-sleeper shape",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause or sound control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "sleep ANC",
+      "sleep insights"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC added to the Sleep line",
+      "Smart sleep detection"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/products/d1301-sleep-a30-smart-anc-earbuds-for-sleeping",
+        "type": "official-product",
+        "title": "soundcore Sleep A30 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB depth",
+      "Case battery is not shown live while buds are out"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "Sleep",
+    "model": "soundcore Sleep A10",
+    "slug": "soundcore-sleep-a10",
+    "generation": "A10",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": "Sleep tab: downloadable sleep sounds, adaptive noise masking, sleep report and smart switch."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 80,
+      "chargingIndicators": "Case LEDs; USB-C. 2 h charge.",
+      "notes": "10 h sleep mode / 6 h music mode; 80 h sleep-mode total with case (47 h music). Sleep mode plays sounds stored on the buds with Bluetooth disconnected.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 80
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC. Adaptive noise masking adjusts masking volume to ambient noise; it does not cancel sound."
+    },
+    "features": [
+      {
+        "id": "sleep.masking-sounds",
+        "name": "Sleep sounds stored on the buds",
+        "availability": "both",
+        "notes": "Up to three mixes can be saved."
+      },
+      {
+        "id": "sleep.adaptive-masking",
+        "name": "Adaptive noise masking",
+        "availability": "official-app",
+        "notes": "Sleep mode only; raises/lowers masking with ambient noise."
+      },
+      {
+        "id": "sleep.sleep-tracking",
+        "name": "Sleep monitoring and report",
+        "availability": "official-app",
+        "notes": "Sleep onset, wake time and depth."
+      },
+      {
+        "id": "sleep.smart-switch",
+        "name": "Smart switch to sleep mode",
+        "availability": "official-app",
+        "notes": "Detects sleep and stops streamed audio."
+      },
+      {
+        "id": "sleep.in-ear-alarm",
+        "name": "In-ear alarm",
+        "availability": "both",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap left earbud",
+          "action": "switch Music/Sleep mode",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "tap",
+          "action": "play/pause or sound control",
+          "configurableInApp": true,
+          "notes": "Tap map can be customised in the app."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Sleep-mode volume is app-only."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.2; 5 mm dynamic driver; 2.9 g per bud; IPX4."
+    },
+    "appOnlyFeatures": [
+      "sleep sound library",
+      "adaptive masking",
+      "sleep report",
+      "smart switch",
+      "alarm"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/nz/products/sleep-a10-a6610z21",
+        "type": "official-product",
+        "title": "soundcore Sleep A10 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://service.soundcore.com/article-description/Fix-for-soundcore-Sleep-A10-Earbuds-Battery-Draining-Too-Quickly",
+        "type": "official-support",
+        "title": "soundcore Sleep A10 battery guidance",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Full tap-gesture map not published.",
+      "Battery UI layout inferred from the soundcore app family; official docs do not show it."
+    ],
+    "notes": "First-generation Soundcore sleep bud. No ANC, no streaming in sleep mode, but full Bluetooth music mode during the day.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "Sleep",
+    "model": "soundcore Sleep A30 Special",
+    "slug": "soundcore-sleep-a30-special",
+    "generation": "A30",
+    "variant": "Special",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": "Same soundcore app and Sleep A30 feature set; paired name is 'Sleep A30 Special'."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 9,
+      "budsHoursNoAnc": 14,
+      "caseHours": 45,
+      "chargingIndicators": "Three case LEDs; USB-C.",
+      "notes": "Official: 9 h ANC / 45 h with case; local audio ANC off up to 14 h (FAQ). Same 38 mAh buds and 800 mAh case as A30.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 45
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Sleep-tuned ANC with ear-canal adaptation; snoring is masked by audio from the case, not cancelled by ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Sleep ANC",
+        "availability": "both",
+        "notes": "Double-tap right earbud toggles."
+      },
+      {
+        "id": "sleep.snore-masking",
+        "name": "Adaptive snore masking",
+        "availability": "both",
+        "notes": "Case microphone detects snoring and adjusts masking audio."
+      },
+      {
+        "id": "sleep.masking-sounds",
+        "name": "Sleep sounds, Calm stories and AI brainwave audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sleep.sleep-tracking",
+        "name": "Sleep and snoring monitoring",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sleep.in-ear-alarm",
+        "name": "In-ear alarm",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sleep.auto-switch",
+        "name": "Auto-switch on sleep detection",
+        "availability": "official-app",
+        "notes": "Bluetooth audio to local audio, or pause; ANC can stay on or turn off."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap left",
+          "action": "Bluetooth/local mode",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap right",
+          "action": "ANC on/off",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap left/right",
+          "action": "volume down/up",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "No wear detection."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.4; 4.6 mm drivers; 3 g per bud; IPX4 buds, case not water resistant; calls supported."
+    },
+    "appOnlyFeatures": [
+      "sleep ANC",
+      "snore masking",
+      "sleep reports",
+      "auto-switch settings",
+      "alarm"
+    ],
+    "featureDeltaFromPrevious": [
+      "Special colourway of the Sleep A30 (Mist Lilac / Lunar White)",
+      "Identical hardware and feature set to A30"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/products/d1301-sleep-a30-smart-anc-earbuds-for-sleeping",
+        "type": "official-product",
+        "title": "soundcore Sleep A30 / A30 Special product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://service.soundcore.com/article-description/soundcore-Sleep-A30-Earbuds-FAQ",
+        "type": "official-support",
+        "title": "soundcore Sleep A30 FAQ",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB depth not published.",
+      "Case level is not live while buds are out.",
+      "Exact difference from A30 is colour/packaging per Soundcore."
+    ],
+    "notes": "Retail colour variant of the Sleep A30. Soundcore states both US versions sold today have the same features and specifications, differing only in name, colour and packaging.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "P",
+    "model": "soundcore P40i",
+    "slug": "soundcore-p40i",
+    "generation": "40",
+    "variant": "i",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": "Case doubles as a phone stand."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 12,
+      "caseHours": 60,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 12 h/60 h. Split/case layout observed in soundcore app; not documented officially.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adaptive ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "case.phone-stand",
+        "name": "Case phone stand",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "hold",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm drivers; IPX5."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "control customization"
+    ],
+    "featureDeltaFromPrevious": [
+      "12 h/60 h battery versus P30i",
+      "Case phone stand"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/collections/all",
+        "type": "official-product",
+        "title": "soundcore product catalogue (P40i/P41i listing)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC-on hours",
+      "ANC dB depth",
+      "Codec list",
+      "P40i and P41i share a product family page; confirm exact variant"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "C",
+    "model": "soundcore C30i",
+    "slug": "soundcore-c30i",
+    "generation": "30",
+    "variant": "i",
+    "releaseYear": 2024,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 30,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 10 h/30 h. Split/case layout observed in soundcore app; not documented officially.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear clip; no ANC."
+    },
+    "features": [
+      {
+        "id": "design.clip",
+        "name": "Clip-on open-ear",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IPX4."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "First C-series clip model"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/collections/all",
+        "type": "official-product",
+        "title": "soundcore product catalogue (C30i listing)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Exact codec list",
+      "Battery figures from launch materials",
+      "Dedicated C30i product page replaced by C50i; specs from launch materials"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "V",
+    "model": "soundcore V30i",
+    "slug": "soundcore-v30i",
+    "generation": "30",
+    "variant": "i",
+    "releaseYear": 2024,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 12,
+      "caseHours": 48,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 12 h/48 h. Split/case layout observed in soundcore app; not documented officially.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear; no ANC."
+    },
+    "features": [
+      {
+        "id": "design.open-ear",
+        "name": "Open-ear hook",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IPX5."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "V-series open-ear with 12 h single charge"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/products/v30i-a3873-open-ear-earbuds",
+        "type": "official-product",
+        "title": "soundcore V30i product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Codec list",
+      "Battery figures from launch materials"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "Sport",
+    "model": "soundcore Sport X20",
+    "slug": "soundcore-sport-x20",
+    "generation": "X20",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 32,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 8 h/32 h. Split/case layout observed in soundcore app; not documented officially.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "ANC with wind-noise reduction."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "water.ip68",
+        "name": "IP68 sweat/water resistance",
+        "availability": "device-only"
+      },
+      {
+        "id": "design.ear-hooks",
+        "name": "Rotating ear hooks",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "hold",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IP68; 11 mm drivers."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "IP68 versus Sport X10",
+      "Rotating ear hooks"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/products/soundcore-sport-x20-refurbished",
+        "type": "official-product",
+        "title": "soundcore Sport X20 listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB depth",
+      "Codec list"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "P",
+    "model": "soundcore P20i",
+    "slug": "soundcore-p20i",
+    "generation": "20",
+    "variant": "i",
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 30,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 10 h/30 h. Split/case layout observed in soundcore app; not documented officially.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app"
+      },
+      {
+        "id": "water.ipx5",
+        "name": "IPX5",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "hold",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IPX5."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Budget P-series with app EQ"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/products/p20i",
+        "type": "official-product",
+        "title": "soundcore P20i product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Exact driver size",
+      "Gesture map details"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "Space",
+    "model": "soundcore Space 2 Pro",
+    "slug": "soundcore-space-2-pro",
+    "generation": "2",
+    "variant": "Pro",
+    "releaseYear": 2026,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": "8-band EQ and fixed spatial audio controls."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 30,
+      "budsHoursNoAnc": 60,
+      "caseHours": null,
+      "chargingIndicators": "5-minute charge = 8 hours.",
+      "notes": "Official 60 h total / 30 h ANC on / 20 h talk time. Over-ear product: one aggregate battery reading, no charging case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "Adaptive ANC 3.0 with 8 sensors and Thus AI chip; targets office voices, keyboards and HVAC. No official dB depth."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC 3.0",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Fixed spatial audio",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / Hi-Res",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint (laptop + phone)",
+        "availability": "both"
+      },
+      {
+        "id": "wired.aux",
+        "name": "Wired AUX listening",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "8-band EQ with presets",
+        "availability": "official-app"
+      },
+      {
+        "id": "calls.8mic-ai",
+        "name": "8-mic AI clear calls",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 8,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "35 mm driver with PEN dome; Bluetooth 6.1; 262 g."
+    },
+    "appOnlyFeatures": [
+      "8-band EQ",
+      "fixed spatial audio",
+      "LDAC toggle"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adaptive ANC 3.0 with 8 sensors versus Space One Pro",
+      "60 h battery / 30 h ANC versus 60 h / 40 h",
+      "Bluetooth 6.1",
+      "Fixed spatial audio"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/products/d1406-space-2-pro-over-ear-headphones-for-clear-calls",
+        "type": "official-product",
+        "title": "soundcore Space 2 Pro product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Official ANC dB depth not published",
+      "Full gesture map",
+      "Spatial audio head tracking (fixed, not tracked)"
+    ],
+    "notes": "2026 over-ear flagship positioned for office calls.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Anker Soundcore",
+    "companySlug": "anker-soundcore",
+    "family": "Liberty Buds",
+    "model": "soundcore Liberty Buds 2",
+    "slug": "soundcore-liberty-buds-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "soundcore",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.oceanwing.soundcore"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.oceanwing.soundcore"
+      ],
+      "appVersionObserved": null,
+      "notes": "HearID 5.0 and Dolby spatial audio controls."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": null,
+      "caseHours": 27,
+      "chargingIndicators": "10 minutes = 4 hours; wireless charging case.",
+      "notes": "Official 7 h with ANC on / 27 h with case. ANC-off hours not captured. Split/case layout observed in soundcore app; not documented officially.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 27
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": true,
+      "notes": "Adaptive ANC 4.0 with 6 sensors, Thus AI chip and 2 bone-conduction sensors for voice pickup; tuned to block background conversations."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC 4.0",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Dolby spatial audio",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / Hi-Res",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.hearid",
+        "name": "HearID 5.0",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "calls.bone-conduction",
+        "name": "Bone-conduction voice sensors",
+        "availability": "device-only"
+      },
+      {
+        "id": "charging.wireless",
+        "name": "Wireless charging",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "9.2 mm drivers; Bluetooth 6.1; 4.7 g per bud."
+    },
+    "appOnlyFeatures": [
+      "HearID 5.0",
+      "Dolby spatial audio",
+      "LDAC toggle"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adaptive ANC 4.0 versus Liberty 4",
+      "Bone-conduction sensors for calls",
+      "Dolby spatial audio",
+      "Bluetooth 6.1"
+    ],
+    "sources": [
+      {
+        "url": "https://www.soundcore.com/products/d1206-liberty-buds-2-ai-powered-in-ear-earbuds-for-calls",
+        "type": "official-product",
+        "title": "soundcore Liberty Buds 2 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-off playtime",
+      "Official ANC dB depth",
+      "Full gesture map",
+      "Head tracking not confirmed"
+    ],
+    "notes": "2026 semi-in-ear-style AI call-focused model.",
+    "researchedAt": "2026-11-10"
+  }
+]

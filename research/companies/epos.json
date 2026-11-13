@@ -1,0 +1,848 @@
+[
+  {
+    "company": "EPOS",
+    "companySlug": "epos",
+    "family": "ADAPT",
+    "model": "EPOS ADAPT 600",
+    "slug": "epos-adapt-600",
+    "generation": "600",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "EPOS Connect",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "EPOS Connect for EQ, ANC and firmware; EPOS Manager for fleet management."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 30,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; battery status in app/OS.",
+      "notes": "30 h with adaptive ANC; ANC-off runtime not separately published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "4-mic adaptive ANC system tuned by EPOS AI; transparency for surroundings."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC (4 mics)",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EPOS Connect EQ and sound profiles",
+        "availability": "official-app"
+      },
+      {
+        "id": "mic.enc",
+        "name": "EPOS AI voice pickup",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.epos.teams-button",
+        "name": "Dedicated Microsoft Teams button",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "ANC button",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Volume buttons",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Teams button",
+          "action": "Launch Microsoft Teams",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "On-earcup ANC, volume, mute, Teams and power buttons.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Over-ear UC headset; stereo sound with customizable profiles."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC tuning",
+      "Sound profiles",
+      "Firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adaptive ANC",
+      "EPOS AI voice pickup",
+      "Teams button"
+    ],
+    "sources": [
+      {
+        "url": "https://www.eposaudio.com/en-us/epos-products/adapt-600/",
+        "type": "official-product",
+        "title": "EPOS ADAPT 600",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-off battery hours not published",
+      "Bluetooth codec list not published",
+      "EQ band count not published",
+      "ANC dB not published"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "EPOS",
+    "companySlug": "epos",
+    "family": "ADAPT",
+    "model": "EPOS ADAPT 500",
+    "slug": "epos-adapt-500",
+    "generation": "500",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "on-ear",
+    "officialApp": {
+      "name": "EPOS Connect",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "EQ, ANC and firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 46,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Up to 46 h; ANC-on figure not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Adaptive ANC with EPOS Voice pass-through."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "EPOS Voice / surroundings",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint Bluetooth (two devices)",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EPOS Connect EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "mic.enc",
+        "name": "UC-certified noise-cancelling mic",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "ANC button",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Volume buttons",
+          "action": "Volume",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "On-earcup ANC, volume, mute and power.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "On-ear UC headset; plush ear pads."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC tuning",
+      "Firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "On-ear sibling of ADAPT 600",
+      "46 h battery",
+      "Multipoint"
+    ],
+    "sources": [
+      {
+        "url": "https://www.eposaudio.com/en-us/epos-products/adapt-500/",
+        "type": "official-product",
+        "title": "EPOS ADAPT 500",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on battery hours not published",
+      "Bluetooth codec list not published",
+      "EQ band count not published"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "EPOS",
+    "companySlug": "epos",
+    "family": "ADAPT",
+    "model": "EPOS ADAPT E1",
+    "slug": "epos-adapt-e1",
+    "generation": "E1",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "EPOS Connect",
+      "platforms": [
+        "windows",
+        "macos",
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "EQ, ANC and firmware; UC device management via EPOS Manager."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 14,
+      "caseHours": 36,
+      "chargingIndicators": "Wireless charging case; USB-C.",
+      "notes": "14 h listening + 36 h case = 50 h total; 6 h talk time. ANC-on listening time not published.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 36
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "Hybrid ANC with semi-open acoustics and EPOS algorithms; IntelligentFit."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EPOS Connect EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "power.wireless-charging",
+        "name": "Wireless case charging",
+        "availability": "device-only"
+      },
+      {
+        "id": "vendor.epos.intelligentfit",
+        "name": "EPOS IntelligentFit",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Long press",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "None; touch controls.",
+      "configurableInApp": true,
+      "notes": "Gesture map not fully documented on the product page."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Semi-open acoustic design; UC certified."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC tuning",
+      "Firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "EPOS' first business TWS",
+      "Hybrid ANC",
+      "Wireless charging case",
+      "50 h total"
+    ],
+    "sources": [
+      {
+        "url": "https://www.eposaudio.com/en-us/epos-products/adapt-e1/",
+        "type": "official-product",
+        "title": "EPOS ADAPT E1",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on listening time not published",
+      "Bluetooth codec list not published",
+      "EQ band count not published",
+      "App battery layout not visually verified"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "EPOS",
+    "companySlug": "epos",
+    "family": "IMPACT",
+    "model": "EPOS IMPACT 1000",
+    "slug": "epos-impact-1000",
+    "generation": "1000",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "EPOS Connect",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "EQ, ANC and firmware; EPOS Manager for UC fleets."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official page does not publish a battery-hour figure in the visible copy.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "Hybrid adaptive ANC; EPOS AI voice pickup."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Native Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only"
+      },
+      {
+        "id": "mic.enc",
+        "name": "EPOS AI noise-cancelling mic",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EPOS Connect EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "ANC button",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Volume buttons",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Call button",
+          "action": "Answer/end call",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "On-earcup call, volume, mute, ANC and power.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "UC headset with native Bluetooth; stereo."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC tuning",
+      "Firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "Hybrid adaptive ANC",
+      "EPOS AI voice pickup",
+      "Native Bluetooth"
+    ],
+    "sources": [
+      {
+        "url": "https://www.eposaudio.com/en-us/epos-products/impact-1000/",
+        "type": "official-product",
+        "title": "EPOS IMPACT 1000",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery hours not published on product page",
+      "Bluetooth codec list not published",
+      "EQ band count not published"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "EPOS",
+    "companySlug": "epos",
+    "family": "H3",
+    "model": "EPOS H3PRO Hybrid",
+    "slug": "epos-h3pro-hybrid",
+    "generation": "H3",
+    "variant": "PRO Hybrid",
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "EPOS Gaming Suite",
+      "platforms": [
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "EQ, 7.1 surround, ANC and firmware on PC."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 30,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Up to 30 h Bluetooth; 2.4 GHz and ANC-on figures not published in the current support material.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Active noise cancellation with transparency."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz dongle",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth + 2.4 GHz + 3.5 mm",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "7.1 surround (PC)",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EPOS Gaming Suite EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "ANC button",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Volume wheel",
+          "action": "Volume",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup volume wheel, ANC, mute and power.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Closed acoustic gaming headset; 7.1 on PC."
+    },
+    "appOnlyFeatures": [
+      "7.1 surround",
+      "EQ",
+      "ANC tuning"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC added to H3 platform",
+      "2.4 GHz + Bluetooth + 3.5 mm",
+      "7.1 surround"
+    ],
+    "sources": [
+      {
+        "url": "https://www.eposaudio.com/en-us/support",
+        "type": "official-support",
+        "title": "EPOS support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official product page retired",
+      "2.4 GHz and ANC-on battery hours not published",
+      "Bluetooth codecs not published",
+      "EQ band count not published"
+    ],
+    "notes": "Discontinued gaming flagship retained for recent coverage.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "EPOS",
+    "companySlug": "epos",
+    "family": "GTW 270",
+    "model": "EPOS GTW 270 Hybrid",
+    "slug": "epos-gtw-270-hybrid",
+    "generation": "270",
+    "variant": "Hybrid",
+    "releaseYear": 2020,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "EPOS Gaming Suite",
+      "platforms": [
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Limited app support; firmware and EQ via PC suite where available."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C charging case.",
+      "notes": "Official material quotes up to 20 h total; buds/case split not stated.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC; passive isolation."
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz USB-C dongle",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Dual microphones with noise reduction",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Pairing / voice assistant",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "None; touch controls.",
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": false,
+      "wearDetection": null,
+      "notes": "Low-latency 2.4 GHz dongle for gaming; Bluetooth for mobile."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "2.4 GHz dongle in a TWS",
+      "Low-latency gaming mode"
+    ],
+    "sources": [
+      {
+        "url": "https://www.eposaudio.com/en-us/support",
+        "type": "official-support",
+        "title": "EPOS support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official product page retired",
+      "Battery split not published",
+      "Bluetooth codecs not published",
+      "Gesture map not documented"
+    ],
+    "notes": "Discontinued; EPOS' first gaming TWS.",
+    "researchedAt": "2026-11-10"
+  }
+]

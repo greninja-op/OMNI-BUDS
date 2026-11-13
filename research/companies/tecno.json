@@ -1,0 +1,789 @@
+[
+  {
+    "company": "TECNO",
+    "companySlug": "tecno",
+    "family": "TECNO Buds",
+    "model": "TECNO Buds 3",
+    "slug": "tecno-buds-3",
+    "generation": "3",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "WeLife",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "TECNO's WeLife app is referenced across the Buds/Sonic/True families for EQ and controls."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 35,
+      "chargingIndicators": "Case LED; USB-C.",
+      "notes": "Official: up to 35 h total with case. Per-bud playtime not published on the accessible page.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 35
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Environmental noise cancellation for calls only; no ANC."
+    },
+    "features": [
+      {
+        "id": "mic.enc",
+        "name": "Omni-Noise cancellation for calls",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "device-only",
+        "notes": "Two devices."
+      },
+      {
+        "id": "durability.ipx5",
+        "name": "IPX5 water resistance",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.tecno.bass-boost",
+        "name": "Bass boost",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": "Touch controls; exact mapping not published on the global page."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "Deep-bass tuning; driver size not published."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Third-generation Buds",
+      "35 h total battery",
+      "Bluetooth 5.3 and dual connection"
+    ],
+    "sources": [
+      {
+        "url": "https://www.tecno-mobile.com/accessories/product-detail/product/buds-3/",
+        "type": "official-product",
+        "title": "TECNO Buds 3",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Per-bud playtime not published",
+      "Driver size and codecs not published",
+      "Battery display layout unverified",
+      "ANC absent"
+    ],
+    "notes": "35 h is the case-inclusive figure.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "TECNO",
+    "companySlug": "tecno",
+    "family": "TECNO Buds",
+    "model": "TECNO Buds 4",
+    "slug": "tecno-buds-4",
+    "generation": "4",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "WeLife",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "WeLife provides EQ, game mode, gesture remapping and connection pop-up skins."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 28,
+      "chargingIndicators": "Case LED; transparent lid; USB-C.",
+      "notes": "Official: 5 h per charge, 28 h with case. ANC-on hours not published; 37 mAh per bud, 500 mAh case.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 28
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 25,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Up to 25 dB ANC; dual-mic ENC for calls."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "25 dB ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "mic.enc",
+        "name": "Dual-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ effects",
+        "availability": "official-app",
+        "notes": "Bass, treble, vocal boosters."
+      },
+      {
+        "id": "vendor.tecno.game-mode",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": "Auto game mode on HiOS 13.0.3+."
+      },
+      {
+        "id": "vendor.tecno.popup-skins",
+        "name": "Customisable connection pop-up",
+        "availability": "official-app",
+        "notes": "Most Android brands."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "volume up/down",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous/next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Single tap volume differs by bud; mapping configurable in WeLife."
+    },
+    "audio": {
+      "eqPresets": [
+        "bass",
+        "treble",
+        "vocal"
+      ],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "10 mm dynamic driver; Bluetooth 5.4; 3.7 g per bud."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Game mode",
+      "Gesture remapping",
+      "Pop-up skins",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adds 25 dB ANC over Buds 3",
+      "Bluetooth 5.4",
+      "Transparent case lid"
+    ],
+    "sources": [
+      {
+        "url": "https://www.tecno-mobile.com/accessories/product-detail/product/buds-4/",
+        "type": "official-product",
+        "title": "TECNO Buds 4",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.tecno-mobile.com/accessories/tech-specs/techspecs/buds-4/",
+        "type": "official-product",
+        "title": "TECNO Buds 4 specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on playtime not published",
+      "Battery display layout unverified",
+      "Codec list not published",
+      "Multipoint and wear detection not stated"
+    ],
+    "notes": "5 h/28 h is modest for 2025; ANC is only 25 dB.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "TECNO",
+    "companySlug": "tecno",
+    "family": "TECNO Buds",
+    "model": "TECNO Buds 4 Air",
+    "slug": "tecno-buds-4-air",
+    "generation": "4",
+    "variant": "Air",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "WeLife",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "WeLife app; Buds 4 Air is the lightweight non-ANC sibling."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Case LED; USB-C.",
+      "notes": "Official spec page publishes only capacity (35 mAh per bud, 320 mAh case) and Bluetooth 5.4, not playtime.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "mic.enc",
+        "name": "Call ENC",
+        "availability": "device-only",
+        "notes": "Not detailed on the spec page."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "WeLife EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.tecno.lightweight",
+        "name": "3.3 g per bud",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": "Touch controls; mapping not published."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "10 mm speaker; Bluetooth 5.4; 29 g total."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Lightweight 3.3 g bud",
+      "No ANC",
+      "10 mm driver"
+    ],
+    "sources": [
+      {
+        "url": "https://www.tecno-mobile.com/accessories/product-detail/product/buds-4-air/",
+        "type": "official-product",
+        "title": "TECNO Buds 4 Air",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.tecno-mobile.com/accessories/tech-specs/techspecs/buds-4-air/",
+        "type": "official-product",
+        "title": "TECNO Buds 4 Air specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Playtime not published",
+      "ANC absent",
+      "Battery display layout unverified",
+      "Codec list not published"
+    ],
+    "notes": "Positioned below Buds 4; the missing playtime claim is unusual for TECNO.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "TECNO",
+    "companySlug": "tecno",
+    "family": "TECNO Sonic",
+    "model": "TECNO Sonic 2",
+    "slug": "tecno-sonic-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "WeLife",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "WeLife for EQ, game mode and controls."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 45,
+      "chargingIndicators": "Case LED; USB-C.",
+      "notes": "Official launch claim: 45 h total with case. Per-bud and ANC-on hours not published.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 45
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "35 dB hybrid ANC with feedforward + feedback mics; transparency mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "35 dB hybrid ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "mic.enc",
+        "name": "6-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Multi-EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.tecno.game-mode",
+        "name": "Low-latency game mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls; full mapping in WeLife."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "10 mm dynamic driver; Bluetooth 5.4; 45 h total."
+    },
+    "appOnlyFeatures": [
+      "Multi-EQ",
+      "Game mode",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "35 dB hybrid ANC",
+      "45 h total battery",
+      "6-mic ENC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.tecno-mobile.com/accessories/product-detail/product/sonic-2/",
+        "type": "official-product",
+        "title": "TECNO Sonic 2",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.tecno-mobile.com/accessories/tech-specs/techspecs/sonic-2/",
+        "type": "official-product",
+        "title": "TECNO Sonic 2 specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Per-bud and ANC-on hours not published",
+      "Battery display layout unverified",
+      "Multipoint and wear detection not stated",
+      "Codec list limited to AAC in retailer copy"
+    ],
+    "notes": "45 h total is the headline; per-bud figure is missing from official copy.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "TECNO",
+    "companySlug": "tecno",
+    "family": "TECNO True",
+    "model": "TECNO True 2",
+    "slug": "tecno-true-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "WeLife",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "WeLife for EQ, ANC modes and controls; TECNO AI Ella integration on TECNO phones."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 10,
+      "caseHours": null,
+      "chargingIndicators": "Case LED; USB-C; 46 mAh per bud, 520 mAh case.",
+      "notes": "Official/launch: 10 h ANC off, 7 h ANC on at 50% volume. Total with case not stated.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "adaptive",
+        "anc",
+        "transparency",
+        "balance",
+        "deep",
+        "mild"
+      ],
+      "adaptive": true,
+      "ancDb": 45,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "45 dB hybrid ANC with adaptive mode and transparency; presets Adaptive, Balance, Deep, Mild, Transparency."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "45 dB hybrid ANC",
+        "availability": "both",
+        "notes": "Adaptive mode."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "3D Spatial Sound",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "mic.enc",
+        "name": "6-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "WeLife EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "durability.ip54",
+        "name": "IP54",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.tecno.ai-ella",
+        "name": "TECNO AI Ella",
+        "availability": "device-only",
+        "notes": "TECNO phones only."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "voice assistant / AI",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls with AI assistant integration."
+    },
+    "audio": {
+      "eqPresets": [
+        "adaptive",
+        "balance",
+        "deep",
+        "mild",
+        "transparency"
+      ],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "Dual drivers 11 mm + 10 mm; Bluetooth 5.4; 3D spatial sound."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "45 dB ANC with adaptive mode",
+      "Dual-driver 11 mm + 10 mm",
+      "3D Spatial Sound",
+      "IP54"
+    ],
+    "sources": [
+      {
+        "url": "https://www.tecno-mobile.com/accessories/product-detail/product/true-2/",
+        "type": "official-product",
+        "title": "TECNO True 2",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.tecno-mobile.com/accessories/tech-specs/techspecs/true-2/",
+        "type": "official-product",
+        "title": "TECNO True 2 specs",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.yugatech.com/news/computex-2025-tecno-true-2-announced/",
+        "type": "reputable-secondary",
+        "title": "TECNO True 2 announced at COMPUTEX 2025",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Total battery with case not stated",
+      "Battery display layout unverified",
+      "Wear detection not stated",
+      "Head tracking not stated for spatial audio"
+    ],
+    "notes": "True 2 has the strongest ANC and the only dual-driver setup in this TECNO set.",
+    "researchedAt": "2026-11-10"
+  }
+]

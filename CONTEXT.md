@@ -208,3 +208,53 @@ key throughout, so every build installs over the previous).
 ---
 
 *Last updated: 2026-11-04 (v1.10 delivered; Iteration 3 complete, on-device confirmation pending).*
+
+## 13. Engine reliability pass (2026-11-13, uncommitted)
+
+Scope: `platform/android/.../hardware/engine/UniversalTwsEngine.kt` only. No protocol opcodes were added or guessed.
+
+Fixed (code-proven):
+- **Stale CCCD busy flag:** `disconnect()` and the GATT `STATE_DISCONNECTED` callback now reset the CCCD queue, in-flight descriptor, and busy flag (`resetDescriptorState`). Before, a descriptor write that was in flight during a drop blocked all later notification subscriptions for that address until app restart.
+- **Failed CCCD writes:** `onDescriptorWrite` checks status and requeues the write up to 3 attempts (`MAX_DESCRIPTOR_ATTEMPTS`). The `writeDescriptor` failure path requeues the same way.
+- **Stale GATT callbacks:** the disconnect callback removes and closes only its own GATT (`activeGatts.remove(address, gatt)`), so a late callback cannot evict a live session. The GATT is now closed, which stops one client leak per drop.
+- **BLE-first RFCOMM retry:** `connect()` checks GATT and RFCOMM separately. RFCOMM is retried even when a GATT session is alive.
+- **Silent RFCOMM failure:** the worker logs when all RFCOMM channels fail.
+- **ACK gating:** an ACK confirms a mode only when a command is pending. With nothing pending, the frame is decoded as device state. Before, Nothing `0x0F` frames were always treated as ACKs and never decoded.
+
+Not changed (needs a device capture first):
+- `handleTouchInterception` still sends `setNoiseControl(next)` after a stem press. Whether this double-switches the hardware is unverified.
+- Nothing `0x0F` ACK vs. state reply formats are unknown. The ACK-with-pending path still confirms the requested mode.
+- `app/src/main/AndroidManifest.xml` declares `RECORD_AUDIO`. Code never uses it, and this file's standing constraint forbids it. Removal needs owner approval.
+
+Verification: `.\gradlew.bat test assembleDebug` passed. 479 platform unit tests, 0 failures, 0 skipped, no compiler warnings. No device was connected, so on-device checks are still pending.
+
+## 14. realme Buds T300: measured noise-control table (2026-11-13)
+
+FINAL (build 1.1.7-t300-effect, confirmed by the owner): the app follows the EFFECT the user hears, not the activation sound. Build 1.1.6 swapped ANC and Ambient to make the sounds match, and the owner confirmed the effects were then wrong. Build 1.1.5 (same table as now) had the right effects. Do not swap these bytes again.
+
+Why the sounds look wrong: on this unit the firmware plays the ANC activation sound for byte 0x08 (Ambient effect) and the ambient sound for 0x01 (ANC effect). It does this on a stem press too, with no app involved, so the cause is in the buds. One byte sets both the sound and the effect, so the app cannot correct the sound without breaking the effect.
+
+Verified on a real T300 by the buds' own mode reports, two blind loudness trials, and the owner's confirmation of the effect.
+
+- Mode write byte, payload `01 01 <byte>` on command 0x0404: **ANC = 0x01, Transparency = 0x02, Ambient/Off = 0x08**. Writing 0x04 or 0x00 changes nothing.
+- The buds report the same values: read with `0x010C 01 01` (reply `00 01 01 <mask>`), polled every 1.5 s. A stem press changes the value without any app command, so the app follows it (`UniversalTwsEngine.applyReportedMode`). The earbuds do not push mode changes after subscribing; polling is what works.
+- The stem press-and-hold cycle (`0x010C 02 01`) reads `0x0A` = 0x02 + 0x08, so by effect it cycles Transparency and Ambient. The ANC effect (0x01) is not in the stem cycle. Changing it would be a write of `0x0404 02 01 <mask>` (untested on this unit; read back after writing).
+- Profile: `AncByteMapping.PROFILE_G`, used only for names containing "t300". Other realme/OPPO/OnePlus models are NOT verified and keep their old profiles.
+- Tapping the active ANC or Transparency button switches to Ambient, only where `hasVerifiedModeReadback` is true (T300 for now). Other devices keep one-tap-one-mode because their real state is not read back.
+- ACK `00` on a write means "accepted", not "applied". Never treat it as confirmation.
+
+Lessons (testing method):
+- Ears alone cannot separate Ambient from ANC in a quiet room. Use a steady low rumble and a blind A/B.
+- The screen and notification show the mode, so keep the phone face-down during blind tests.
+- The activation sound is not proof of the mode. On this T300 it disagrees with the effect. Name modes by the effect the owner confirms.
+- A landscape phone makes coordinate taps miss; check the screenshot size first.
+- A table taken from public notes for a different model was wrong for the T300. Always verify on the device.
+
+Source note: protocol facts came from public notes and were re-implemented and tested here. No third-party source code or text was copied, and none is in this repo.
+
+Other fixes this session (all in `UniversalTwsEngine.kt` unless noted): reset of the CCCD busy flag on disconnect, bounded retry of failed CCCD writes, independent BLE/RFCOMM connect guards, GATT close on disconnect, ACK only confirms a pending command, state sync limited to once per 10 s (it was looping about every 0.6 s).
+
+Still open:
+- Touch and hold settings are not read from the buds. The app writes frames the buds do not use (0x0408) and shows "saved" without a check. The buds hold a table at `0x0108` (reply `0x8108`, entries `<dev> <button> <act> <fn>`) that is written whole with `0x0401`. Rebuild as read, change one entry, write the table, read back, show saved only on a match.
+- Brands other than realme/OPPO/OnePlus and Nothing/CMF have no verified mode write. Do not mark them working without a device test.
+- `RECORD_AUDIO` is declared in `app/src/main/AndroidManifest.xml` and is not used by any code. Removal needs the owner's decision.

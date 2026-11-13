@@ -1,0 +1,368 @@
+[
+  {
+    "company": "Sordin",
+    "companySlug": "sordin",
+    "family": "Supreme",
+    "model": "Sordin Supreme X2 BT",
+    "slug": "sordin-supreme-x2-bt",
+    "generation": "X2",
+    "variant": "BT",
+    "releaseYear": 2025,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "None documented",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Sordin does not document a companion app for the Supreme X2 BT. Settings and Bluetooth pairing are handled with the cup keypad. Sordin's configuration app (Sordin Share) is documented for the Sharp, not for the X2 BT."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Low-battery warning; Sordin does not publish percentage steps or LED thresholds for this model.",
+      "notes": "One combined headset battery: a single AA cell. No charging case. Sordin positions this as a 'single-battery solution' with four-hour auto shutdown, but the product page captured does not state runtime hours.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. Passive hearing protection (SNR 29 / NRR 23) plus level-dependent ambient amplification limited to 82 dB(A). This is an electronic shooting/hunting protector, not an ANC headset."
+    },
+    "features": [
+      {
+        "id": "hearing-protection.passive",
+        "name": "Passive hearing protection (SNR 29 / NRR 23)",
+        "availability": "device-only",
+        "notes": "Compact cup design; waterproof construction."
+      },
+      {
+        "id": "hearing-protection.level-dependent",
+        "name": "Level-dependent ambient sound",
+        "availability": "device-only",
+        "notes": "SordinHEAR2 audio system; ambient output limited to 82 dB(A)."
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth calls and streaming",
+        "availability": "device-only",
+        "notes": "Bluetooth enabled; profiles and version are not published."
+      },
+      {
+        "id": "audio.aux-input",
+        "name": "3.5 mm AUX input",
+        "availability": "device-only",
+        "notes": "For communication radio or external audio source."
+      },
+      {
+        "id": "audio.boom-mic",
+        "name": "Optional X2 Flex Com BT boom microphone",
+        "availability": "device-only",
+        "notes": "Boom mic is an accessory, not included."
+      },
+      {
+        "id": "hearing-protection.earplug-mode",
+        "name": "Certified dual protection (earplug mode)",
+        "availability": "device-only",
+        "notes": "Can be worn with earplugs for extra attenuation."
+      },
+      {
+        "id": "power.auto-shutoff",
+        "name": "Four-hour auto shutdown",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "battery.aa",
+        "name": "Single AA battery",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume + / −",
+          "action": "Adjust ambient/audio volume",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Bluetooth button",
+          "action": "Pair/connect and call control",
+          "configurableInApp": false,
+          "notes": "Exact press timing is not documented in the captured page."
+        }
+      ],
+      "physicalButtons": "Cup keypad with power, volume and Bluetooth controls.",
+      "configurableInApp": false,
+      "notes": "Designed for gloved use."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "SordinHEAR2 audio system. Bluetooth version, codec list and multipoint support are not published. 3.5 mm AUX input."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Bluetooth connectivity added to the Supreme hunting/shooting platform.",
+      "Single AA battery instead of two AAA cells.",
+      "Optional X2 Flex Com BT boom microphone.",
+      "Waterproof construction with a single-battery solution."
+    ],
+    "sources": [
+      {
+        "url": "https://sordin.com/products/sordin-supreme-x2-bt",
+        "type": "official-product",
+        "title": "Sordin Supreme X2 BT product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://sordin.com/collections/active-with-comms",
+        "type": "official-product",
+        "title": "Sordin active protection with communication range page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery runtime in hours is not published on the captured product page.",
+      "Bluetooth version, codec list and multipoint support are not published.",
+      "Whether Sordin Share supports the X2 BT is not documented.",
+      "No battery percentage display; LED/voice warning only.",
+      "Exact SordinHEAR2 profile set for the X2 BT is not stated.",
+      "Boom microphone is an optional accessory, so calls need it for best results."
+    ],
+    "notes": "Supreme X2 BT is a hunting/shooting hearing protector with Bluetooth, not an ANC communication headset. The wired Supreme T2 CC is a different, non-Bluetooth product.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sordin",
+    "companySlug": "sordin",
+    "family": "Sharp",
+    "model": "Sordin Sharp",
+    "slug": "sordin-sharp",
+    "generation": "Sharp",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Sordin Share",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Sordin Share is the configuration app for Sordin Sharp: users can change several headset settings, and managers can predefine user settings across an organisation. It is not a battery-percentage app. Sordin also lists a Sordin Share manual alongside the Sharp manual."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 36,
+      "caseHours": null,
+      "chargingIndicators": "Low-battery warning/voice feedback; no percentage steps published.",
+      "notes": "One combined headset battery: built-in 2000 mAh rechargeable lithium-ion. Approximately 36 hours. USB-C charging; a 60-minute charge gives at least 8 hours. No charging case. Automatic power-off prevents accidental drain.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. Passive protection (SNR 28–29 depending on cushion) plus level-dependent Ambient Sound and Push-to-Listen. The level-dependent output is limited for hearing protection."
+    },
+    "features": [
+      {
+        "id": "hearing-protection.passive",
+        "name": "Passive hearing protection (SNR 28–29)",
+        "availability": "device-only",
+        "notes": "Headband or helmet-mounted; foam or gel sealing rings; IP44."
+      },
+      {
+        "id": "hearing-protection.level-dependent",
+        "name": "Ambient Sound and Push-to-Listen",
+        "availability": "device-only",
+        "notes": "Level-limited ambient reproduction for face-to-face communication."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "device-only",
+        "notes": "Bluetooth 5; connect two phones, or one phone and one two-way radio."
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth calls and streaming",
+        "availability": "device-only",
+        "notes": "A2DP streaming and HSP/HFP headset profiles."
+      },
+      {
+        "id": "audio.fm-radio",
+        "name": "FM radio",
+        "availability": "device-only",
+        "notes": "Built-in FM radio with digital scan and stored favourite channels."
+      },
+      {
+        "id": "audio.boom-mic",
+        "name": "Optional noise-cancelling boom microphone",
+        "availability": "device-only",
+        "notes": "Accessory 60126-S; IP67."
+      },
+      {
+        "id": "controls.voice-feedback",
+        "name": "Voice feedback",
+        "availability": "device-only",
+        "notes": "Spoken confirmation for mode and setting changes."
+      },
+      {
+        "id": "power.auto-shutoff",
+        "name": "Power saver / auto power-off",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "battery.li-ion",
+        "name": "Built-in 2000 mAh Li-ion battery",
+        "availability": "device-only",
+        "notes": "USB-C; 60 min gives at least 8 hours."
+      },
+      {
+        "id": "vendor.sordin.config-profiles",
+        "name": "Organisation configuration profiles",
+        "availability": "official-app",
+        "notes": "Sordin Share lets managers predefine user settings."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Multi-function [O] button, 1 s",
+          "action": "Cycle FM Radio / Headset / Ambient mode",
+          "configurableInApp": false,
+          "notes": "Voice feedback announces RADIO, HEADSET or AMBIENT."
+        },
+        {
+          "gesture": "[O] + [>] buttons, 2 s",
+          "action": "Bluetooth pairing",
+          "configurableInApp": false,
+          "notes": "Pairing name 'Sordin Sharp'; PIN 0000 if asked."
+        },
+        {
+          "gesture": "[.. ] button",
+          "action": "Answer/end phone call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "[O] button, 1 s",
+          "action": "Reject call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume buttons",
+          "action": "Adjust volume; store/scan FM stations",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Four-button cup keypad: multifunction [O], [<], [>] and call [..] buttons.",
+      "configurableInApp": true,
+      "notes": "Settings and default behaviour can be preconfigured through Sordin Share."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bluetooth 5 certified, A2DP streaming and HSP/HFP. Codec list is not published. Built-in FM radio. Optional boom mic for noisy environments."
+    },
+    "appOnlyFeatures": [
+      "Headset settings configuration",
+      "Organisation-wide user-setting templates"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 5 multipoint targeted at professional users.",
+      "Built-in 2000 mAh rechargeable battery with USB-C fast charge.",
+      "FM radio with stored favourites.",
+      "Sordin Share configuration app and organisation profiles.",
+      "Headband and helmet-mounted versions with foam or gel seals."
+    ],
+    "sources": [
+      {
+        "url": "https://sordin.com/products/sordin-sharp",
+        "type": "official-product",
+        "title": "Sordin Sharp product page and specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.talkingsafety.global/product/sordin-sharp-bluetooth-headset-headband-helmet-mount/",
+        "type": "reputable-secondary",
+        "title": "Sordin Sharp technical information (distributor)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.talkingheadsets.co.uk/wp-content/uploads/2023/01/Sordin-Sharp-Manual.pdf",
+        "type": "official-manual",
+        "title": "Sordin Sharp user manual",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Sordin Share package ID and observed version are not captured.",
+      "The app does not document a battery percentage screen.",
+      "Bluetooth codec list is not published.",
+      "Exact SNR depends on headband/helmet mount and foam/gel cushions (28 or 29 dB).",
+      "No ANC (by design)."
+    ],
+    "notes": "Sharp is Sordin's professional Bluetooth/FM/ambient hearing protector. Headband and helmet versions share electronics; the boom mic is optional.",
+    "researchedAt": "2026-11-10"
+  }
+]

@@ -1,0 +1,1168 @@
+[
+  {
+    "company": "Philips",
+    "companySlug": "philips",
+    "family": "Fidelio",
+    "model": "Philips Fidelio T2",
+    "slug": "fidelio-t2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Philips Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.tpvison.headphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.tpvison.headphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "Adaptive noise control, EQ, controls, firmware updates."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 10,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; app readout; Qi wireless charging",
+      "notes": "Official totals: 36 h with ANC on, 40 h with ANC off (6/10 h buds + 30 h case).",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "Noise Cancelling Pro+ with adaptive mode and dedicated voice mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Noise Cancelling Pro+",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Awareness mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC / LC3",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.philips.wireless-charging",
+        "name": "Qi wireless charging",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/awareness",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "LDAC",
+        "LC3",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "BT 5.3; 12.2 mm drivers? (not confirmed); IPX4."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes",
+      "control customisation",
+      "firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "Noise Cancelling Pro+",
+      "LDAC/LC3",
+      "Wireless charging",
+      "Multipoint"
+    ],
+    "sources": [
+      {
+        "url": "https://www.usa.philips.com/c-m-so/headphones",
+        "type": "official-product",
+        "title": "Philips true wireless headphones",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.tpvison.headphone",
+        "type": "official-app-store",
+        "title": "Philips Headphones app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Buds ANC/no-ANC split inferred from official total and typical case capacity; not stated as separate figures on captured page.",
+      "EQ band count unknown.",
+      "Battery UI layout inferred."
+    ],
+    "notes": "Fidelio flagship TWS with 36 h ANC total.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Philips",
+    "companySlug": "philips",
+    "family": "Fidelio",
+    "model": "Philips Fidelio T1",
+    "slug": "fidelio-t1",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Philips Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.tpvison.headphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.tpvison.headphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, controls."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 9,
+      "caseHours": 24,
+      "chargingIndicators": "Case LED; app readout; Qi wireless charging",
+      "notes": "Up to 30 h total; 6 h ANC / 9 h no ANC in buds.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Hybrid ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Awareness",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/awareness",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "LDAC",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Balanced armature + dynamic driver; BT 5.2; IPX4."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes",
+      "controls"
+    ],
+    "featureDeltaFromPrevious": [
+      "First Fidelio TWS"
+    ],
+    "sources": [
+      {
+        "url": "https://www.usa.philips.com/c-m-so/headphones",
+        "type": "official-product",
+        "title": "Philips true wireless headphones",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery values from launch documentation; current page not captured.",
+      "EQ band count unknown.",
+      "Battery UI layout inferred."
+    ],
+    "notes": "Hybrid-driver Fidelio TWS.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Philips",
+    "companySlug": "philips",
+    "family": "Fidelio",
+    "model": "Philips Fidelio L4",
+    "slug": "fidelio-l4",
+    "generation": "4",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Philips Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.tpvison.headphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.tpvison.headphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "Adaptive ANC, EQ, controls."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 40,
+      "budsHoursNoAnc": 60,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout; USB-C",
+      "notes": "Up to 40 h with ANC, up to 60 h without.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "Adaptive ANC with awareness mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Awareness mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wired-mode",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "touch gesture",
+          "action": "playback, volume, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "button press",
+          "action": "power, ANC",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/ANC buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "LDAC",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm drivers; BT 5.3."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes",
+      "controls"
+    ],
+    "featureDeltaFromPrevious": [
+      "Longer battery than L3",
+      "LDAC",
+      "Multipoint"
+    ],
+    "sources": [
+      {
+        "url": "https://www.usa.philips.com/c-m-so/headphones",
+        "type": "official-product",
+        "title": "Philips headphones",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official current page not captured; battery from launch materials.",
+      "EQ band count unknown."
+    ],
+    "notes": "Fidelio over-ear ANC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Philips",
+    "companySlug": "philips",
+    "family": "Fidelio",
+    "model": "Philips Fidelio L3",
+    "slug": "fidelio-l3",
+    "generation": "3",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Philips Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.tpvison.headphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.tpvison.headphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "ANC and EQ control."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 30,
+      "budsHoursNoAnc": 40,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout",
+      "notes": "Up to 30 h with ANC, 40 h without.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Awareness",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "touch gesture",
+          "action": "playback, volume",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "button press",
+          "action": "ANC, power",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/ANC buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "LDAC",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm drivers."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "First Fidelio over-ear ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.usa.philips.com/c-m-so/headphones",
+        "type": "official-product",
+        "title": "Philips headphones",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Current official page not captured.",
+      "EQ band count unknown."
+    ],
+    "notes": "Predecessor of L4.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Philips",
+    "companySlug": "philips",
+    "family": "TAT 8000",
+    "model": "Philips TAT8506",
+    "slug": "tat8506",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Philips Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.tpvison.headphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.tpvison.headphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, controls."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 8,
+      "caseHours": 16,
+      "chargingIndicators": "Case LED; app readout",
+      "notes": "Up to 24 h total; 6 h with ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Noise Cancelling Pro."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Noise Cancelling Pro",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Awareness",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/awareness",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "LDAC",
+        "LC3",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "BT 5.2; IPX4."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes",
+      "controls"
+    ],
+    "featureDeltaFromPrevious": [
+      "LDAC/LE Audio in the 8000 series"
+    ],
+    "sources": [
+      {
+        "url": "https://www.usa.philips.com/c-m-so/headphones",
+        "type": "official-product",
+        "title": "True Wireless Headphones TAT8506BK/00",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC-off bud runtime inferred from total; official split not captured.",
+      "EQ band count unknown.",
+      "Battery UI layout inferred."
+    ],
+    "notes": "Upper-mid TWS with LDAC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Philips",
+    "companySlug": "philips",
+    "family": "TAH 8000",
+    "model": "Philips TAH8506",
+    "slug": "tah8506",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Philips Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.tpvison.headphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.tpvison.headphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, controls."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 40,
+      "budsHoursNoAnc": 45,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout",
+      "notes": "Up to 40 h ANC / 45 h no ANC (launch figures).",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Noise Cancelling Pro."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Awareness",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wired-mode",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "touch gesture",
+          "action": "playback, volume",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "button press",
+          "action": "power, ANC",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/ANC buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm drivers; BT 5.2."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "40 h ANC in mid-tier over-ear"
+    ],
+    "sources": [
+      {
+        "url": "https://www.usa.philips.com/c-m-so/headphones",
+        "type": "official-product",
+        "title": "Philips headphones",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official current page not captured.",
+      "EQ band count unknown."
+    ],
+    "notes": "Mid-tier ANC over-ear.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Philips",
+    "companySlug": "philips",
+    "family": "TAA 6000",
+    "model": "Philips TAA6708",
+    "slug": "taa6708",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Philips Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.tpvison.headphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.tpvison.headphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "EQ and controls for sports models."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 18,
+      "chargingIndicators": "Case LED",
+      "notes": "6 h buds + 18 h case = 24 h total; no ANC.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 18
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Sports model; no ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.philips.ear-hooks",
+        "name": "Secure ear hooks",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, track skip",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "IPX5 sports design."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "controls"
+    ],
+    "featureDeltaFromPrevious": [
+      "Sports ear-hook design"
+    ],
+    "sources": [
+      {
+        "url": "https://www.usa.philips.com/c-m-so/headphones",
+        "type": "official-product",
+        "title": "Philips headphones",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery/codec figures from retail documentation; official page not captured.",
+      "Battery UI layout inferred."
+    ],
+    "notes": "Sports TWS, no ANC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Philips",
+    "companySlug": "philips",
+    "family": "Performance",
+    "model": "Philips PH805",
+    "slug": "ph805",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2019,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Philips Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.tpvison.headphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.tpvison.headphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "ANC and EQ control where supported."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 25,
+      "budsHoursNoAnc": 30,
+      "caseHours": null,
+      "chargingIndicators": "LED",
+      "notes": "Up to 25 h ANC / 30 h no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No transparency mode documented."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wired-mode",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "touch gesture",
+          "action": "playback, volume",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "button press",
+          "action": "ANC, power",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "ANC/power buttons",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "40 mm drivers; BT 5.0."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Early Philips over-ear ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.usa.philips.com/c-m-so/headphones",
+        "type": "official-product",
+        "title": "Philips headphones",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Legacy/discontinued; official page not captured.",
+      "Multipoint support unknown.",
+      "App support uncertain."
+    ],
+    "notes": "Legacy ANC over-ear.",
+    "researchedAt": "2026-11-10"
+  }
+]

@@ -90,7 +90,7 @@ class DeviceWorkspaceTest {
     }
 
     @Test
-    fun `feature operation flow transitions through pending and observed states without false optimism`() = runTest {
+    fun `feature operation flow stays pending then reports ambiguous without confirmation`() = runTest {
         val repo = createRepositoryWithDevice("dev-2", readyCapabilities = setOf("anc_mode"))
         val vm = DeviceWorkspaceViewModel(
             deviceIdentifier = "dev-2",
@@ -103,8 +103,10 @@ class DeviceWorkspaceTest {
         testScope.testScheduler.advanceUntilIdle()
 
         val updatedCtrl = vm.state.value.controls.first { it.featureId == "anc_mode" }
-        assertEquals(ControlExecutionStatus.SUCCEEDED, updatedCtrl.executionStatus)
-        assertEquals("ANC", updatedCtrl.currentValue)
+        assertEquals(ControlExecutionStatus.AMBIGUOUS, updatedCtrl.executionStatus)
+        // The requested value is not presented as the observed value.
+        assertNull(updatedCtrl.currentValue)
+        assertEquals("ANC", updatedCtrl.desiredValue)
     }
 
     @Test

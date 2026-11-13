@@ -1,0 +1,1177 @@
+[
+  {
+    "company": "Google",
+    "companySlug": "google",
+    "family": "Pixel Buds",
+    "model": "Google Pixel Buds (2020)",
+    "slug": "pixel-buds-2020",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Google Pixel Buds",
+      "platforms": [
+        "android"
+      ],
+      "packageIds": [
+        "com.google.android.apps.wearables.maestro.companion"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.google.android.apps.wearables.maestro.companion"
+      ],
+      "appVersionObserved": null,
+      "notes": "On Pixel phones with Android 10+ the Pixel Buds settings are integrated into Settings > Connected devices. Other Android devices use the Pixel Buds app. No iOS app; iPhone control is Bluetooth-only."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 24,
+      "chargingIndicators": "Case LED: white when charged, orange when charging; a separate case light indicates case charge. Wireless Qi charging supported.",
+      "notes": "Pixel Buds app shows each earbud separately; the case is a separate reading. Case has no independent radio, so its level is last-known once both buds are out.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC or Transparency. Adaptive Sound adjusts volume, not noise cancellation."
+    },
+    "features": [
+      {
+        "id": "audio.adaptive-sound",
+        "name": "Adaptive Sound",
+        "availability": "both",
+        "notes": "Adjusts volume to the environment; not ANC."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Bass boost",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.google",
+        "name": "Google Assistant hands-free",
+        "availability": "both"
+      },
+      {
+        "id": "translation.live-translate",
+        "name": "Real-time translation",
+        "availability": "official-app"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Fast Pair",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-my-device",
+        "name": "Find My Device",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.google.battery-widget",
+        "name": "Battery widget",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.google.notification-battery",
+        "name": "Case-open battery notification",
+        "availability": "official-app"
+      },
+      {
+        "id": "firmware.update",
+        "name": "Firmware update",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "Play/pause or answer call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-tap",
+          "action": "Next track / end or reject call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "Previous track / repeat",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "press and hold",
+          "action": "Google Assistant / read notifications",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Touch surface on each bud; no swipe volume gesture."
+    },
+    "audio": {
+      "eqPresets": [
+        "Bass boost"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "No spatial audio, no multipoint, no 5-band EQ. Bass boost is the only user sound adjustment."
+    },
+    "appOnlyFeatures": [
+      "Bass boost",
+      "Adaptive Sound toggle",
+      "Spoken notifications",
+      "Google Assistant configuration",
+      "Find My Device",
+      "Firmware update",
+      "Battery widget"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://support.google.com/googlepixelbuds/answer/7556060?hl=en",
+        "type": "official-support",
+        "title": "Charge your Google Pixel Buds & charging case",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.google.com/googlepixelbuds/answer/7685360?hl=en",
+        "type": "official-support",
+        "title": "Change your Google Pixel Buds settings",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.google.com/googlepixelbuds/answer/12045780?hl=en",
+        "type": "official-support",
+        "title": "Customize EQ with Google Pixel Buds",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Google no longer hosts a 2020 product/spec page; values come from the current support matrix and battery article.",
+      "Case battery freshness when buds are out is not documented.",
+      "No ANC, so no ANC/Transparency dB."
+    ],
+    "notes": "Battery display: split buds + separate case; case card is normally shown when the case is opened.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Google",
+    "companySlug": "google",
+    "family": "Pixel Buds",
+    "model": "Pixel Buds A-Series",
+    "slug": "pixel-buds-a-series",
+    "generation": "A",
+    "variant": "A-Series",
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Google Pixel Buds",
+      "platforms": [
+        "android"
+      ],
+      "packageIds": [
+        "com.google.android.apps.wearables.maestro.companion"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.google.android.apps.wearables.maestro.companion"
+      ],
+      "appVersionObserved": null,
+      "notes": "Pixel-integrated Settings on Android 10+; standalone Pixel Buds app on other Android devices; no iOS app."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 24,
+      "chargingIndicators": "Case LED orange/white; USB-C only, no wireless charging.",
+      "notes": "Each bud is shown separately; case is a separate reading. Case level is last-known once both buds are out.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC. Adaptive Sound adjusts volume; it is not noise cancellation."
+    },
+    "features": [
+      {
+        "id": "audio.adaptive-sound",
+        "name": "Adaptive Sound",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Bass slider",
+        "availability": "official-app",
+        "notes": "Custom bass level only, not a multi-band EQ."
+      },
+      {
+        "id": "assistant.google",
+        "name": "Google Assistant hands-free",
+        "availability": "both"
+      },
+      {
+        "id": "translation.live-translate",
+        "name": "Real-time translation",
+        "availability": "official-app"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Fast Pair",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.audio-switch",
+        "name": "Audio switch",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-my-device",
+        "name": "Find My Device",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.google.battery-widget",
+        "name": "Battery widget",
+        "availability": "official-app"
+      },
+      {
+        "id": "firmware.update",
+        "name": "Firmware update",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "Play/pause or answer call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-tap",
+          "action": "Next track / end or reject call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "Previous track / repeat",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "press and hold",
+          "action": "Google Assistant / read notifications",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Gestures are fixed on A-Series; only Pixel Buds 2a/Pro/Pro 2 allow remapping."
+    },
+    "audio": {
+      "eqPresets": [
+        "Default",
+        "Bass boost"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "No spatial audio, no multipoint, no custom EQ. Bass slider only."
+    },
+    "appOnlyFeatures": [
+      "Bass slider",
+      "Adaptive Sound toggle",
+      "Spoken notifications",
+      "Find My Device",
+      "Firmware update",
+      "Battery widget"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adds Adaptive Sound and IPX4 water resistance",
+      "Removes wireless charging from the case",
+      "Removes the 2020 model's wireless charging and touch-surface gesture customization",
+      "Same 5 h buds / 24 h case and no ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://support.google.com/googlepixelbuds/answer/7556060?hl=en",
+        "type": "official-support",
+        "title": "Charge your Google Pixel Buds & charging case",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.google.com/googlepixelbuds/answer/7685360?hl=en",
+        "type": "official-support",
+        "title": "Change your Google Pixel Buds settings",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.google.com/googlepixelbuds/answer/12045780?hl=en",
+        "type": "official-support",
+        "title": "Customize EQ with Google Pixel Buds",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No current product/spec page; values come from the support matrix and battery article.",
+      "Case battery freshness when buds are out is not documented.",
+      "No ANC, so no ANC/Transparency dB."
+    ],
+    "notes": "Battery display: split buds + separate case, last-known case once buds are out.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Google",
+    "companySlug": "google",
+    "family": "Pixel Buds",
+    "model": "Pixel Buds Pro",
+    "slug": "pixel-buds-pro",
+    "generation": "Pro",
+    "variant": "Pro",
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Google Pixel Buds",
+      "platforms": [
+        "android"
+      ],
+      "packageIds": [
+        "com.google.android.apps.wearables.maestro.companion"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.google.android.apps.wearables.maestro.companion"
+      ],
+      "appVersionObserved": null,
+      "notes": "Pixel-integrated Settings on Android 10+; standalone Pixel Buds app on other Android devices; no iOS app."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 11,
+      "caseHours": 20,
+      "chargingIndicators": "Case LED orange/white; USB-C and Qi wireless charging.",
+      "notes": "ANC on: 7 h buds / 20 h total. ANC off: 11 h buds / 31 h total. caseHours stores the with-ANC total. Each bud is shown separately; case is last-known once both buds are out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 20
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Conversation Detection switches to Transparency and pauses media when you speak. Wind-blocking mesh covers. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancellation",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.google.conversation-detection",
+        "name": "Conversation Detection",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band Custom EQ with presets",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.volume-eq",
+        "name": "Volume EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "Spatial Audio",
+        "availability": "both"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "Head tracking",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.audio-switch",
+        "name": "Audio switch",
+        "availability": "official-app"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "hearing.hearing-wellness",
+        "name": "Hearing Wellness",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.google.eartip-seal-check",
+        "name": "Eartip Seal Check",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.google",
+        "name": "Google Assistant / Gemini",
+        "availability": "both"
+      },
+      {
+        "id": "find.find-my-device",
+        "name": "Find My Device",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.google.battery-widget",
+        "name": "Battery widget",
+        "availability": "official-app"
+      },
+      {
+        "id": "firmware.update",
+        "name": "Firmware update",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "Play/pause or answer call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double-tap",
+          "action": "Next track / end or reject call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "Previous track / repeat",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "swipe forward/back",
+          "action": "Volume up/down",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "Google Assistant / read notifications",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls can be remapped in the Pixel Buds app."
+    },
+    "audio": {
+      "eqPresets": [
+        "Default",
+        "Light bass",
+        "Heavy bass",
+        "Balanced",
+        "Vocal boost",
+        "Clarity",
+        "Last saved"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "5-band custom EQ with presets. Head tracking works with Pixel 6/6 Pro and most newer Pixel phones. No LE Audio."
+    },
+    "appOnlyFeatures": [
+      "5-band Custom EQ",
+      "Volume EQ",
+      "Conversation Detection",
+      "Multipoint",
+      "Eartip Seal Check",
+      "Hearing Wellness",
+      "Touch-control remap",
+      "Find My Device",
+      "Battery widget"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adds ANC and Transparency to the Pixel Buds line",
+      "Adds Spatial Audio with head tracking",
+      "Adds multipoint and a 5-band custom EQ",
+      "11 h no-ANC / 7 h ANC and 31 h/20 h total",
+      "Adds wireless charging and Eartip Seal Check"
+    ],
+    "sources": [
+      {
+        "url": "https://support.google.com/googlepixelbuds/answer/7556060?hl=en",
+        "type": "official-support",
+        "title": "Charge your Google Pixel Buds & charging case",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.google.com/googlepixelbuds/answer/7685360?hl=en",
+        "type": "official-support",
+        "title": "Change your Google Pixel Buds settings",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.google.com/googlepixelbuds/answer/12045780?hl=en",
+        "type": "official-support",
+        "title": "Customize EQ with Google Pixel Buds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.google.android.apps.wearables.maestro.companion",
+        "type": "official-app-store",
+        "title": "Google Pixel Buds app listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No current product/spec page for Pro; values come from the support battery matrix and settings comparison.",
+      "No absolute ANC/Transparency dB published.",
+      "Case battery freshness when buds are out is not documented."
+    ],
+    "notes": "Battery display: split buds + separate case; case level is last-known once buds are out.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Google",
+    "companySlug": "google",
+    "family": "Pixel Buds",
+    "model": "Pixel Buds Pro 2",
+    "slug": "pixel-buds-pro-2",
+    "generation": "Pro 2",
+    "variant": "Pro",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Google Pixel Buds",
+      "platforms": [
+        "android"
+      ],
+      "packageIds": [
+        "com.google.android.apps.wearables.maestro.companion"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.google.android.apps.wearables.maestro.companion"
+      ],
+      "appVersionObserved": null,
+      "notes": "Pixel-integrated Settings on Android 10+; standalone Pixel Buds app on other Android devices; no iOS app."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 8,
+      "budsHoursNoAnc": 12,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED breathing white; USB-C and Qi wireless charging; case speaker for Find Hub and case sounds.",
+      "notes": "ANC on: 8 h buds / 30 h total. ANC off: 12 h buds / 48 h total. caseHours stores the with-ANC total. Google says the Battery widget always shows battery info for Pro 2 when Bluetooth is on and buds are near, even when disconnected; the case reading is still last-known because the case has no independent radio.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "adaptive",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Silent Seal 2.0, Adaptive Audio, Conversation Detection, Loud Noise Protection. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancellation with Silent Seal 2.0",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive Audio",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.google.conversation-detection",
+        "name": "Conversation Detection",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.google.loud-noise-protection",
+        "name": "Loud Noise Protection",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band Custom EQ with presets",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.volume-eq",
+        "name": "Volume EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "Spatial Audio",
+        "availability": "both"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "Head tracking",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.audio-switch",
+        "name": "Audio switch",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.bluetooth-super-wideband",
+        "name": "Bluetooth Super Wideband",
+        "availability": "device-only"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "hearing.hearing-wellness",
+        "name": "Hearing Wellness",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.google.eartip-seal-check",
+        "name": "Eartip Seal Check",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.google.case-sounds",
+        "name": "Case sounds",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.gemini",
+        "name": "Gemini hands-free",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.google.audio-sharing",
+        "name": "Audio Sharing",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.google.bedtime-mode",
+        "name": "Pixel Watch bedtime mode",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.google.low-latency-gaming",
+        "name": "Low-latency gaming mode",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-hub",
+        "name": "Find Hub with case speaker",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.google.battery-widget",
+        "name": "Battery widget",
+        "availability": "official-app"
+      },
+      {
+        "id": "firmware.update",
+        "name": "Firmware update",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "Play/pause or answer call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double-tap",
+          "action": "Next track / end or reject call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "Previous track / repeat",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "swipe forward/back",
+          "action": "Volume up/down",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC/Transparency/Adaptive Audio or digital assistant (configurable)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Capacitive touch with swipe. Press-and-hold defaults to noise control."
+    },
+    "audio": {
+      "eqPresets": [
+        "Default",
+        "Light bass",
+        "Heavy bass",
+        "Balanced",
+        "Vocal boost",
+        "Clarity",
+        "Last saved"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LC3"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "5-band custom EQ. LE Audio/LC3 supported. No hi-res codec. Spatial Audio with head tracking."
+    },
+    "appOnlyFeatures": [
+      "5-band Custom EQ",
+      "Volume EQ",
+      "Adaptive Audio",
+      "Conversation Detection",
+      "Loud Noise Protection",
+      "Multipoint",
+      "Eartip Seal Check",
+      "Hearing Wellness",
+      "Case sounds",
+      "Bedtime mode",
+      "Low-latency gaming",
+      "Find Hub"
+    ],
+    "featureDeltaFromPrevious": [
+      "Google Tensor A1 chip replaces the Pro's platform",
+      "Adds Adaptive Audio, Silent Seal 2.0 and Conversation Detection",
+      "Adds Loud Noise Protection, case speaker/case sounds, Find Hub",
+      "12 h no-ANC / 8 h ANC and 48 h/30 h total",
+      "Adds twist-to-adjust stabilizer, IP54, Bluetooth 5.4 and LE Audio",
+      "Smaller case with wireless charging"
+    ],
+    "sources": [
+      {
+        "url": "https://store.google.com/us/product/pixel_buds_pro_2_specs",
+        "type": "official-product",
+        "title": "Pixel Buds Pro 2 tech specs",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.google.com/googlepixelbuds/answer/7556060?hl=en",
+        "type": "official-support",
+        "title": "Charge your Google Pixel Buds & charging case",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.google.com/googlepixelbuds/answer/7685360?hl=en",
+        "type": "official-support",
+        "title": "Change your Google Pixel Buds settings",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.google.com/googlepixelbuds/answer/12045780?hl=en",
+        "type": "official-support",
+        "title": "Customize EQ with Google Pixel Buds",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No absolute ANC/Transparency dB published.",
+      "Case reading is inherently last-known when both buds are out, even though the widget remains visible.",
+      "Google does not publish per-bud display text; support explicitly says each earbud is shown on the main screen."
+    ],
+    "notes": "Battery display: split buds + separate case; widget stays visible when disconnected, but case value is last-known.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Google",
+    "companySlug": "google",
+    "family": "Pixel Buds",
+    "model": "Pixel Buds 2a",
+    "slug": "pixel-buds-2a",
+    "generation": "2a",
+    "variant": "A",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Google Pixel Buds",
+      "platforms": [
+        "android"
+      ],
+      "packageIds": [
+        "com.google.android.apps.wearables.maestro.companion"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.google.android.apps.wearables.maestro.companion"
+      ],
+      "appVersionObserved": null,
+      "notes": "Pixel-integrated Settings on Android 10+; standalone Pixel Buds app on other Android devices; no iOS app."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 10,
+      "caseHours": 20,
+      "chargingIndicators": "Case LED breathing white; USB-C only, no wireless charging.",
+      "notes": "ANC on: 7 h buds / 20 h total. ANC off: 10 h buds / 27 h total. caseHours stores the with-ANC total. Google says the Battery widget always shows battery info for 2a when Bluetooth is on and buds are near; case value is last-known with buds out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 20
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Silent Seal 1.5, ANC and Transparency; no Adaptive Audio or Conversation Detection. Wind-blocking mesh covers. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancellation with Silent Seal 1.5",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band Custom EQ with presets",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.volume-eq",
+        "name": "Volume EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "Spatial Audio (stereo)",
+        "availability": "both",
+        "notes": "No head tracking on 2a."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.audio-switch",
+        "name": "Audio switch",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.bluetooth-super-wideband",
+        "name": "Bluetooth Super Wideband",
+        "availability": "device-only"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "hearing.hearing-wellness",
+        "name": "Hearing Wellness",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.google.eartip-seal-check",
+        "name": "Eartip Seal Check",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.gemini",
+        "name": "Gemini hands-free",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.google.audio-sharing",
+        "name": "Audio Sharing",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.google.bedtime-mode",
+        "name": "Pixel Watch bedtime mode",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-hub",
+        "name": "Find Hub",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.google.battery-widget",
+        "name": "Battery widget",
+        "availability": "official-app"
+      },
+      {
+        "id": "firmware.update",
+        "name": "Firmware update",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "Play/pause or answer call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double-tap",
+          "action": "Next track / end or reject call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "Previous track / repeat",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "Digital assistant / read notifications",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Capacitive tap only; no swipe volume gesture on 2a."
+    },
+    "audio": {
+      "eqPresets": [
+        "Default",
+        "Light bass",
+        "Heavy bass",
+        "Balanced",
+        "Vocal boost",
+        "Clarity",
+        "Last saved"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LC3"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "5-band custom EQ, Volume EQ, LE Audio/LC3. Spatial Audio is stereo only; no head tracking."
+    },
+    "appOnlyFeatures": [
+      "5-band Custom EQ",
+      "Volume EQ",
+      "Multipoint",
+      "Eartip Seal Check",
+      "Hearing Wellness",
+      "Audio Sharing",
+      "Bedtime mode",
+      "Find Hub",
+      "Battery widget"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adds ANC, Transparency, Tensor A1 and multipoint versus A-Series",
+      "10 h no-ANC / 7 h ANC and 27 h/20 h total",
+      "Adds 5-band custom EQ, Hearing Wellness and Eartip Seal Check",
+      "Adds stereo Spatial Audio but not head tracking",
+      "No wireless charging and no swipe volume",
+      "IP54, Bluetooth 5.4"
+    ],
+    "sources": [
+      {
+        "url": "https://store.google.com/us/product/pixel_buds_2a_specs",
+        "type": "official-product",
+        "title": "Pixel Buds 2a tech specs",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.google.com/googlepixelbuds/answer/7556060?hl=en",
+        "type": "official-support",
+        "title": "Charge your Google Pixel Buds & charging case",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.google.com/googlepixelbuds/answer/7685360?hl=en",
+        "type": "official-support",
+        "title": "Change your Google Pixel Buds settings",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.google.com/googlepixelbuds/answer/12045780?hl=en",
+        "type": "official-support",
+        "title": "Customize EQ with Google Pixel Buds",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No absolute ANC/Transparency dB published.",
+      "No head-tracking claim for 2a, so headTracking is false.",
+      "Case battery freshness when buds are out is not documented."
+    ],
+    "notes": "Battery display: split buds + separate case; widget always visible when buds are near, case value is last-known once buds are out.",
+    "researchedAt": "2026-11-10"
+  }
+]

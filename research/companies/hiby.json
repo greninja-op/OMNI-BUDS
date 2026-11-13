@@ -1,0 +1,166 @@
+[
+  {
+    "company": "HiBy",
+    "companySlug": "hiby",
+    "family": "W",
+    "model": "W3 II",
+    "slug": "hiby-w3-ii",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "HiByBlue",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "HiByBlue reads sample rate, Bluetooth codec and battery level, and provides EQ and firmware updates."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10.5,
+      "caseHours": null,
+      "chargingIndicators": "Four-colour status LED (red/blue/green/white); no numeric display.",
+      "notes": "320 mAh, 10.5 h AAC playback, 100 h standby. 19.8 g clip-on; no case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC; cVc call noise reduction only."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "HiByBlue EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.usb-dac",
+        "name": "USB DAC dongle mode",
+        "availability": "device-only",
+        "notes": "Driverless up to 16-bit/48 kHz."
+      },
+      {
+        "id": "connectivity.nfc",
+        "name": "NFC pairing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.uat",
+        "name": "UAT 192 kHz codec",
+        "availability": "device-only",
+        "notes": "HiBy proprietary, up to 192 kHz / 1.2 Mbps on Android sources."
+      },
+      {
+        "id": "vendor.hiby.clip",
+        "name": "Integrated shirt clip",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button, single press",
+          "action": "Play/pause; answer call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Power button, long press",
+          "action": "Power/pairing",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Track buttons",
+          "action": "Previous/next",
+          "configurableInApp": false,
+          "notes": "No dedicated volume buttons."
+        }
+      ],
+      "physicalButtons": "Power/multifunction and track buttons.",
+      "configurableInApp": false,
+      "notes": "Voice prompts for power/connection state."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX HD",
+        "LDAC",
+        "UAT"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "QCC5125, CS43131, 3.5 mm only; BT 5.1 in the official spec table (some store copy says 5.2)."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Battery readout",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "USB DAC dongle mode added",
+      "UAT 192 kHz support",
+      "10.5 h battery versus the original W3"
+    ],
+    "sources": [
+      {
+        "url": "https://store.hiby.com/products/hiby-w3-ii",
+        "type": "official-product",
+        "title": "HiBy W3 II",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://store.hiby.com/pages/w3-ii-user-guide",
+        "type": "official-manual",
+        "title": "HiBy W3 II user guide",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth version is inconsistent across official copy (5.1 vs 5.2); 5.1 recorded from the specification table.",
+      "EQ band count and preset names are not published.",
+      "Multipoint is not claimed; assumed absent.",
+      "Package ID not verified."
+    ],
+    "notes": "Clip-on Bluetooth receiver/DAC for wired IEMs; no case, so the battery contract is a single combined value.",
+    "researchedAt": "2026-11-10"
+  }
+]

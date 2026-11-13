@@ -1,0 +1,631 @@
+[
+  {
+    "company": "Panasonic",
+    "companySlug": "panasonic",
+    "family": "RB",
+    "model": "Panasonic RB-F10",
+    "slug": "rb-f10",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-open",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app mentioned on the product page; controls are on-device only."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 18,
+      "chargingIndicators": "Case LED",
+      "notes": "Official: 7 h buds + 18 h cradle = 25 h total (AAC); no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Open-ear design; no ANC."
+    },
+    "features": [
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": "BT 5.4."
+      },
+      {
+        "id": "vendor.panasonic.open-ear",
+        "name": "Open-ear fit with ear grips",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, calls, volume, track skip",
+          "configurableInApp": null,
+          "notes": "Touch sensors on both sides."
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "17 x 12 mm drivers; IPX4; BT 5.4."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Panasonic's current open-ear TWS"
+    ],
+    "sources": [
+      {
+        "url": "https://shop.panasonic.com/products/true-wireless-open-earphones-rb-f10",
+        "type": "official-product",
+        "title": "True Wireless Open Earphones RB-F10",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official app, so no in-app battery layout exists.",
+      "No custom EQ."
+    ],
+    "notes": "Open-ear sports TWS; the only current Panasonic earbud on the US store.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Panasonic",
+    "companySlug": "panasonic",
+    "family": "RZ-S",
+    "model": "Panasonic RZ-S500W",
+    "slug": "rz-s500w",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Panasonic Audio Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ and control settings."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": null,
+      "caseHours": 18,
+      "chargingIndicators": "Case LED; app readout",
+      "notes": "Up to 6 h with ANC; 18 h additional in case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Dual hybrid ANC with ambient mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Dual hybrid ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, track skip, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/ambient",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "8 mm drivers; IPX4."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "Panasonic's first dual-hybrid ANC TWS"
+    ],
+    "sources": [
+      {
+        "url": "https://shop.panasonic.com/collections/headphones",
+        "type": "official-product",
+        "title": "Panasonic headphones",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Discontinued; current official model page not captured.",
+      "ANC-off runtime not published.",
+      "EQ band count unknown.",
+      "Battery UI layout (split buds / separate case / last-known case while buds are out) is inferred from typical app behaviour and has not been screenshot-verified."
+    ],
+    "notes": "First-generation ANC TWS.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Panasonic",
+    "companySlug": "panasonic",
+    "family": "RZ-S",
+    "model": "Panasonic RZ-S300W",
+    "slug": "rz-s300w",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Panasonic Audio Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ and control settings."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7.5,
+      "caseHours": 16.5,
+      "chargingIndicators": "Case LED; app readout",
+      "notes": "7.5 h buds + 16.5 h case = 24 h total; no ANC.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 16.5
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, track skip, calls",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "IPX4."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Non-ANC sibling of RZ-S500W"
+    ],
+    "sources": [
+      {
+        "url": "https://shop.panasonic.com/collections/headphones",
+        "type": "official-product",
+        "title": "Panasonic headphones",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Discontinued; official page not captured.",
+      "EQ band count unknown.",
+      "Battery UI layout (split buds / separate case / last-known case while buds are out) is inferred from typical app behaviour and has not been screenshot-verified."
+    ],
+    "notes": "Non-ANC version of the S500W.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Panasonic",
+    "companySlug": "panasonic",
+    "family": "RZ-B",
+    "model": "Panasonic RZ-B310W",
+    "slug": "rz-b310w",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Panasonic Audio Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC and EQ control."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": null,
+      "caseHours": 17,
+      "chargingIndicators": "Case LED; app readout",
+      "notes": "Up to 24 h total with ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/ambient",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "IPX4."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "Budget ANC TWS"
+    ],
+    "sources": [
+      {
+        "url": "https://shop.panasonic.com/collections/headphones",
+        "type": "official-product",
+        "title": "Panasonic headphones",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Discontinued/regional; official page not captured.",
+      "Multipoint support unknown.",
+      "Battery values from retail documentation.",
+      "Battery UI layout (split buds / separate case / last-known case while buds are out) is inferred from typical app behaviour and has not been screenshot-verified."
+    ],
+    "notes": "Entry ANC TWS.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Panasonic",
+    "companySlug": "panasonic",
+    "family": "EAH-A",
+    "model": "Technics EAH-A800",
+    "slug": "eah-a800",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Technics Audio Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, multipoint and firmware settings."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 50,
+      "budsHoursNoAnc": 60,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout; 15 min = 10 h",
+      "notes": "Official AAC: 50 h ANC / 60 h no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Dual hybrid ANC with ambient mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wearing sensor auto shut-off",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wired-mode",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "touch gesture",
+          "action": "playback, volume, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "button press",
+          "action": "power, ANC",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/ANC buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "LDAC",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm drivers; BT 5.2."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes",
+      "multipoint settings"
+    ],
+    "featureDeltaFromPrevious": [
+      "50 h ANC over-ear flagship"
+    ],
+    "sources": [
+      {
+        "url": "https://us.technics.com/products/technics-noise-cancelling-over-ear-headphones-eah-a800",
+        "type": "official-product",
+        "title": "EAH-A800",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "EQ band count unknown.",
+      "Panasonic-branded version shares hardware with Technics EAH-A800."
+    ],
+    "notes": "Technics is Panasonic's audio brand. Record kept in the Panasonic file because the scope groups Panasonic Technics EAH models here; identical hardware to the Technics-branded EAH-A800.",
+    "researchedAt": "2026-11-10"
+  }
+]

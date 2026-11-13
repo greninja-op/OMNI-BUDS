@@ -12,6 +12,7 @@ import com.omnibuds.core.globalstate.IdentityState
 import com.omnibuds.core.globalstate.ObservationProvenance
 import com.omnibuds.core.globalstate.ObservedValue
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.launch
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.atomic.AtomicLong
@@ -41,25 +42,44 @@ class DeviceStateBridge(
     private val repository: GlobalDeviceStateRepository,
     private val scope: CoroutineScope,
 ) {
-    private val sequences = ConcurrentHashMap<String, AtomicLong>()
     private val registered = ConcurrentHashMap.newKeySet<String>()
     private val lastIdentityEvidence = ConcurrentHashMap<String, String>()
     private val lastConnection = ConcurrentHashMap<String, Boolean>()
     private val lastBattery = ConcurrentHashMap<String, Int>()
     private val lastComponents = ConcurrentHashMap<String, List<BatteryState.ComponentLevel>>()
+    private val generations = ConcurrentHashMap<String, AtomicLong>()
 
-    private fun nextSeq(deviceId: String): Long =
-        sequences.computeIfAbsent(deviceId) { AtomicLong(0L) }.incrementAndGet()
+    /**
+     * One ordered ingest pipeline. Events are allocated a sequence in call
+     * order and delivered through this channel, so asynchronous ingestion
+     * cannot reorder them and make the aggregator reject a newer event as
+     * stale.
+     */
+    private val ingestQueue = Channel<DeviceStateEvent>(Channel.UNLIMITED)
 
-    private fun provenance(sessionId: String?): ObservationProvenance {
+    init {
+        scope.launch {
+            for (event in ingestQueue) {
+                repository.ingest(event)
+            }
+        }
+    }
+
+    private fun nextGeneration(deviceId: String): Long =
+        generations.computeIfAbsent(deviceId) { AtomicLong(0L) }.incrementAndGet()
+
+    private fun generationFor(deviceId: String): Long =
+        generations.computeIfAbsent(deviceId) { AtomicLong(0L) }.get()
+
+    private fun provenance(sessionId: String?, generation: Long): ObservationProvenance {
         val now = System.currentTimeMillis()
         return ObservationProvenance(
             sourceId = "android-system",
             observedAtMillis = now,
             receivedAtMillis = now,
             sessionId = sessionId,
-            connectionGeneration = 1L,
-            protocolVersion = "1.0",
+            connectionGeneration = generation,
+            protocolVersion = null,
         )
     }
 
@@ -96,7 +116,7 @@ class DeviceStateBridge(
             events += DeviceStateEvent.IdentityUpdated(
                 deviceId = gid,
                 sessionId = null,
-                sequence = nextSeq(id),
+                sequence = repository.nextSequence(id),
                 sourceId = "android-system",
                 identity = IdentityState.Identified(
                     manufacturerId = verifiedInfo?.manufacturer ?: "Unknown",
@@ -115,11 +135,31 @@ class DeviceStateBridge(
             nameOverride = evidenceName,
             addressOverride = id,
         )
-        val readyCaps = buildSet {
-            add("anc_mode")
-            add("transparency_mode")
-            add("eq_preset")
-            add("touch_controls")
+        val verified = com.omnibuds.android.hardware.capability.VerifiedDeviceCatalog.resolve(
+            evidenceName,
+            id,
+        )
+        val readyCaps = verified?.writableCapabilityIds
+            ?.let(com.omnibuds.android.hardware.capability.VerifiedControlCatalog::actionable)
+            ?.takeIf { it.isNotEmpty() }
+            ?: buildSet {
+            if (profile.hasAnc) {
+                add("anc_mode")
+                if (profile.ancModes.any { it.contains("transparen", ignoreCase = true) }) {
+                    add("transparency_mode")
+                }
+            }
+            if (profile.eqPresets.isNotEmpty() ||
+                profile.hasCustom3BandEq ||
+                profile.hasParametric8BandEq ||
+                profile.hasClearBass ||
+                profile.hasBassWave ||
+                profile.hasUltraBass ||
+                profile.hasDynamicBass
+            ) {
+                add("eq_preset")
+            }
+            if (profile.gestures.isNotEmpty()) add("touch_controls")
             if (profile.hasSpatialAudio) add("spatial_audio")
             if (profile.hasVolumeEnhancer) add("volume_enhancer")
             if (profile.hasLowLagMode) add("game_mode")
@@ -127,13 +167,19 @@ class DeviceStateBridge(
             if (profile.hasDualConnection) add("multipoint")
             if (profile.hasUltraBass) add("ultra_bass")
         }
+        val connectionChanged = firstRegistration || lastConnection[id] != connected
+        val generation = if (connectionChanged) nextGeneration(id) else generationFor(id)
         if (firstRegistration || identityChanged) {
             events += DeviceStateEvent.CapabilitiesUpdated(
                 deviceId = gid,
                 sessionId = null,
-                sequence = nextSeq(id),
+                sequence = repository.nextSequence(id),
                 sourceId = "android-system",
-                capabilities = CapabilityState.Ready(readyCaps),
+                capabilities = if (readyCaps.isEmpty()) {
+                    CapabilityState.Discovering("no verified vendor schema for this device")
+                } else {
+                    CapabilityState.Ready(readyCaps)
+                },
             )
         }
         if (firstRegistration) {
@@ -141,10 +187,10 @@ class DeviceStateBridge(
             events += DeviceStateEvent.ConnectionChanged(
                 deviceId = gid,
                 sessionId = null,
-                sequence = nextSeq(id),
+                sequence = repository.nextSequence(id),
                 sourceId = "android-system",
                 connection = connection,
-                generation = 1L,
+                generation = generation,
             )
         } else if (lastConnection[id] != connected) {
             lastConnection[id] = connected
@@ -152,38 +198,36 @@ class DeviceStateBridge(
                 // Forget the dedupe cache: after a reconnect, the same
                 // level must be re-ingested so its provenance timestamp
                 // refreshes instead of the pre-disconnect reading
-                // silently ageing in place. The retained state itself is
-                // kept — the presentation layer marks it last-known
-                // while the device is disconnected.
+                // silently ageing in place. The published battery is
+                // deliberately retained: the presentation layer marks it
+                // last-known/stale while disconnected, and core rules say
+                // battery is never zeroed on disconnect.
                 lastBattery.remove(id)
                 lastComponents.remove(id)
-                events += DeviceStateEvent.BatteryUpdated(
-                    deviceId = gid,
-                    sessionId = null,
-                    sequence = nextSeq(id),
-                    sourceId = "android-system",
-                    battery = BatteryState.Unknown,
-                )
             } else {
                 events += DeviceStateEvent.CapabilitiesUpdated(
                     deviceId = gid,
                     sessionId = null,
-                    sequence = nextSeq(id),
+                    sequence = repository.nextSequence(id),
                     sourceId = "android-system",
-                    capabilities = CapabilityState.Ready(readyCaps),
+                    capabilities = if (readyCaps.isEmpty()) {
+                    CapabilityState.Discovering("no verified vendor schema for this device")
+                } else {
+                    CapabilityState.Ready(readyCaps)
+                },
                 )
             }
             events += DeviceStateEvent.ConnectionChanged(
                 deviceId = gid,
                 sessionId = null,
-                sequence = nextSeq(id),
+                sequence = repository.nextSequence(id),
                 sourceId = "android-system",
                 connection = connection,
-                generation = 1L,
+                generation = generation,
             )
         }
         if (events.isNotEmpty()) {
-            scope.launch { events.forEach { repository.ingest(it) } }
+            events.forEach { ingestQueue.trySend(it) }
         }
     }
 
@@ -211,16 +255,16 @@ class DeviceStateBridge(
         val event = DeviceStateEvent.BatteryUpdated(
             deviceId = GlobalDeviceId(address),
             sessionId = null,
-            sequence = nextSeq(address),
+            sequence = repository.nextSequence(address),
             sourceId = "android-system",
             battery = BatteryState.Known(
                 levelPercent = aggregateLevel ?: lastBattery[address],
                 charging = null,
-                observation = ObservedValue(Unit, provenance(null)),
+                observation = ObservedValue(Unit, provenance(null, generationFor(address))),
                 components = valid,
             ),
         )
-        scope.launch { repository.ingest(event) }
+        ingestQueue.trySend(event)
     }
 
     /** A real battery level broadcast by Android for a device (0–100). */
@@ -228,18 +272,23 @@ class DeviceStateBridge(
         if (level !in 0..100) return
         if (lastBattery[address] == level) return
         lastBattery[address] = level
+        // An aggregate reading must never erase per-component telemetry that
+        // arrived from a vendor protocol. Preserve the last known components
+        // and only replace the aggregate slot.
+        val components = lastComponents[address].orEmpty()
         val event = DeviceStateEvent.BatteryUpdated(
             deviceId = GlobalDeviceId(address),
             sessionId = null,
-            sequence = nextSeq(address),
+            sequence = repository.nextSequence(address),
             sourceId = "android-system",
             battery = BatteryState.Known(
                 levelPercent = level,
                 charging = null,
-                observation = ObservedValue(Unit, provenance(null)),
+                observation = ObservedValue(Unit, provenance(null, generationFor(address))),
+                components = components,
             ),
         )
-        scope.launch { repository.ingest(event) }
+        ingestQueue.trySend(event)
     }
 
     /** Clears all battery telemetry when a device disconnects or Bluetooth is disabled. */
@@ -249,10 +298,10 @@ class DeviceStateBridge(
         val event = DeviceStateEvent.BatteryUpdated(
             deviceId = GlobalDeviceId(address),
             sessionId = null,
-            sequence = nextSeq(address),
+            sequence = repository.nextSequence(address),
             sourceId = "android-system",
             battery = BatteryState.Unknown,
         )
-        scope.launch { repository.ingest(event) }
+        ingestQueue.trySend(event)
     }
 }

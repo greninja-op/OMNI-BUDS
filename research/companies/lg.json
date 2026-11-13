@@ -1,0 +1,882 @@
+[
+  {
+    "company": "LG",
+    "companySlug": "lg",
+    "family": "xboom Buds",
+    "model": "LG xboom Buds Plus by will.i.am",
+    "slug": "xboom-buds-plus",
+    "generation": "1",
+    "variant": "Plus",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "LG xboom Buds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Adaptive EQ, multipoint/multi-pairing, controls, firmware updates."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7.5,
+      "budsHoursNoAnc": 10,
+      "caseHours": 20,
+      "chargingIndicators": "Case LED; app readout; USB-C; wireless charging",
+      "notes": "Official: 10 h no ANC / 7.5 h ANC in buds; up to 30 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adaptive ANC; ambient mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Adaptive EQ",
+        "availability": "official-app",
+        "notes": "Fit/wearing-condition based."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multi-point / multi-pairing",
+        "availability": "official-app",
+        "notes": "Up to 4 devices."
+      },
+      {
+        "id": "connectivity.dongle",
+        "name": "Bluetooth transmitter dongle",
+        "availability": "device-only",
+        "notes": "Plug into USB-C/3.5 mm sources."
+      },
+      {
+        "id": "vendor.lg.stabilizing-fins",
+        "name": "Stabilizing fins",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, track skip, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/ambient",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IPX4; BT 5.4 class; xboom Signature Sound."
+    },
+    "appOnlyFeatures": [
+      "adaptive EQ",
+      "multi-point",
+      "controls",
+      "firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "New will.i.am xboom line replacing TONE Free at US retail",
+      "Bluetooth transmitter dongle"
+    ],
+    "sources": [
+      {
+        "url": "https://www.lg.com/us/wireless-earbuds/lg-xboom-buds-plus-black-earbuds",
+        "type": "official-product",
+        "title": "LG xboom Buds Plus",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery UI layout inferred.",
+      "Codec list beyond SBC/AAC not stated.",
+      "EQ band count unknown."
+    ],
+    "notes": "Current LG flagship earbud; 30 h total.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "LG",
+    "companySlug": "lg",
+    "family": "xboom Buds",
+    "model": "LG xboom Buds Lite by will.i.am",
+    "slug": "xboom-buds-lite",
+    "generation": "1",
+    "variant": "Lite",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "LG xboom Buds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Adaptive EQ, multipoint, controls."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 8.5,
+      "budsHoursNoAnc": 11.5,
+      "caseHours": 23.5,
+      "chargingIndicators": "Case LED; app readout",
+      "notes": "Official: 11.5 h no ANC / 8.5 h ANC; 35 h total no ANC, 27 h ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC with ambient mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Adaptive EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multi-point",
+        "availability": "official-app",
+        "notes": "Up to 4 devices."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, track skip, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/ambient",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "IPX4."
+    },
+    "appOnlyFeatures": [
+      "adaptive EQ",
+      "multi-point",
+      "controls"
+    ],
+    "featureDeltaFromPrevious": [
+      "Longer battery than xboom Buds Plus, fewer premium features"
+    ],
+    "sources": [
+      {
+        "url": "https://www.lg.com/us/wireless-earbuds/lg-xboom-buds-lite-black-earbuds",
+        "type": "official-product",
+        "title": "LG xboom Buds Lite",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery UI layout inferred.",
+      "EQ band count unknown.",
+      "Wear detection not documented."
+    ],
+    "notes": "Value model of the xboom line.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "LG",
+    "companySlug": "lg",
+    "family": "TONE Free",
+    "model": "LG TONE Free T90S",
+    "slug": "tone-free-t90s",
+    "generation": "T90",
+    "variant": "S",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "LG TONE Free",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ, ANC, spatial audio, find-my-earbuds, firmware updates."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 9,
+      "budsHoursNoAnc": null,
+      "caseHours": 27,
+      "chargingIndicators": "Case LED; app readout; USB-C; wireless charging",
+      "notes": "Up to 9 h with ANC and 36 h total with case.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 27
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adaptive ANC with ambient mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio with head tracking",
+        "availability": "official-app",
+        "notes": "Dolby Head Tracking."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.lg.uvnano",
+        "name": "UVnano case sterilisation",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.plug-and-wireless",
+        "name": "Plug & Wireless case",
+        "availability": "device-only",
+        "notes": "Case can act as USB-C/3.5 mm transmitter."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, track skip, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/ambient",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "BT 5.3; Dolby Atmos/head tracking."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "spatial audio",
+      "ANC modes",
+      "find my earbuds"
+    ],
+    "featureDeltaFromPrevious": [
+      "Dolby Head Tracking",
+      "Plug & Wireless case",
+      "9 h ANC runtime"
+    ],
+    "sources": [
+      {
+        "url": "https://www.lg.com/us/wireless-earbuds",
+        "type": "official-product",
+        "title": "LG wireless earbuds",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Current LG US page focuses on xboom; TONE Free T90S page not captured.",
+      "ANC-off bud runtime not published.",
+      "EQ band count unknown.",
+      "Battery UI layout (split buds / separate case / last-known case while buds are out) is inferred from typical app behaviour and has not been screenshot-verified."
+    ],
+    "notes": "Last TONE Free flagship sold before LG's xboom rebrand.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "LG",
+    "companySlug": "lg",
+    "family": "TONE Free",
+    "model": "LG TONE Free T80",
+    "slug": "tone-free-t80",
+    "generation": "T80",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "LG TONE Free",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ, ANC, spatial audio."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 9,
+      "budsHoursNoAnc": null,
+      "caseHours": 26,
+      "chargingIndicators": "Case LED; app readout",
+      "notes": "Up to 9 h ANC and 35 h total with case.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 26
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.lg.uvnano",
+        "name": "UVnano case",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/ambient",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "BT 5.3."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "spatial audio",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "Spatial audio",
+      "9 h ANC runtime"
+    ],
+    "sources": [
+      {
+        "url": "https://www.lg.com/us/wireless-earbuds",
+        "type": "official-product",
+        "title": "LG wireless earbuds",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official model page not captured.",
+      "ANC-off runtime not published.",
+      "Head-tracking support unknown.",
+      "Battery UI layout (split buds / separate case / last-known case while buds are out) is inferred from typical app behaviour and has not been screenshot-verified."
+    ],
+    "notes": "T90S sibling with fewer premium features.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "LG",
+    "companySlug": "lg",
+    "family": "TONE Free",
+    "model": "LG TONE Free UT90Q",
+    "slug": "tone-free-ut90q",
+    "generation": "UT90",
+    "variant": "Q",
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "LG TONE Free",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, spatial audio."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 9,
+      "budsHoursNoAnc": null,
+      "caseHours": 20,
+      "chargingIndicators": "Case LED; app readout",
+      "notes": "Up to 9 h ANC and 29 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.lg.uvnano",
+        "name": "UVnano case",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/ambient",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "BT 5.2."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "spatial audio",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "UT90Q flagship for 2022",
+      "Snapdragon Sound? not confirmed"
+    ],
+    "sources": [
+      {
+        "url": "https://www.lg.com/us/wireless-earbuds",
+        "type": "official-product",
+        "title": "LG wireless earbuds",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official model page not captured.",
+      "ANC-off runtime and codecs beyond AAC/SBC unknown.",
+      "Battery UI layout (split buds / separate case / last-known case while buds are out) is inferred from typical app behaviour and has not been screenshot-verified."
+    ],
+    "notes": "2022 TONE Free flagship.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "LG",
+    "companySlug": "lg",
+    "family": "TONE Free",
+    "model": "LG TONE Free FN9",
+    "slug": "tone-free-fn9",
+    "generation": "FN9",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "LG TONE Free",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC and EQ."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": null,
+      "caseHours": 18,
+      "chargingIndicators": "Case LED; app readout",
+      "notes": "Up to 6 h ANC and 24 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.lg.uvnano",
+        "name": "UVnano case",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/ambient",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "BT 5.2; Meridian-tuned."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "Meridian tuning",
+      "UVnano case"
+    ],
+    "sources": [
+      {
+        "url": "https://www.lg.com/us/wireless-earbuds",
+        "type": "official-product",
+        "title": "LG wireless earbuds",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Discontinued; official page not captured.",
+      "Multipoint support unknown.",
+      "ANC-off runtime not published.",
+      "Battery UI layout (split buds / separate case / last-known case while buds are out) is inferred from typical app behaviour and has not been screenshot-verified."
+    ],
+    "notes": "2021 TONE Free ANC model.",
+    "researchedAt": "2026-11-10"
+  }
+]

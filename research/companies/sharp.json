@@ -1,0 +1,126 @@
+[
+  {
+    "company": "Sharp",
+    "companySlug": "sharp",
+    "family": "Sharp Wireless Earbuds",
+    "model": "Sharp HP-TW45",
+    "slug": "sharp-hp-tw45",
+    "generation": "45",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-open",
+    "officialApp": {
+      "name": "No companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Sharp Singapore documents touch control and auto pairing only; no app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 15,
+      "caseHours": null,
+      "chargingIndicators": "Case LED; USB-C; 2 h charge; 180 h standby.",
+      "notes": "Official 'Playtime: 15Hrs' is not broken down into per-bud vs case. No ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC. Two built-in mics for calls."
+    },
+    "features": [
+      {
+        "id": "vendor.sharp.open-ear",
+        "name": "Open-ear true wireless",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "mic.enc",
+        "name": "Call mic",
+        "availability": "device-only",
+        "notes": "2 pcs."
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.sharp.auto-pair",
+        "name": "Auto pair",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Touch control; mapping not detailed on the official page."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "Open-ear TWS; driver size and codecs not published. 37.3 g including case."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Open-ear design",
+      "15 h playtime",
+      "IPX4"
+    ],
+    "sources": [
+      {
+        "url": "https://sg.sharp/products/tvav/wireless-earbuds-hp-tw45",
+        "type": "official-product",
+        "title": "Sharp Wireless Earbuds HP-TW45",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "15 h is not split between buds and case",
+      "Driver size and codecs not published",
+      "Battery display layout unverified",
+      "No app, ANC or multipoint claim"
+    ],
+    "notes": "Sharp's Singapore-market open-ear TWS. Regional availability is limited.",
+    "researchedAt": "2026-11-10"
+  }
+]

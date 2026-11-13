@@ -1,0 +1,657 @@
+[
+  {
+    "company": "Noble Audio",
+    "companySlug": "noble-audio",
+    "family": "FoKus",
+    "model": "FoKus H-ANC",
+    "slug": "noble-audio-fokus-h-anc",
+    "generation": "1",
+    "variant": "H-ANC",
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Noble FoKus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.cca.app_noble"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.cca.app_noble"
+      ],
+      "appVersionObserved": null,
+      "notes": "Noble FoKus app adds ANC/ambient control, 10-band EQ, touch remapping and battery monitoring. The store listing says it monitors each earbud's battery level."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": 8.5,
+      "budsHoursNoAnc": 12,
+      "caseHours": 21.5,
+      "chargingIndicators": "Buds and case LEDs; no numeric display on the case.",
+      "notes": "Official/review figures: 8.5 h with ANC, 12 h without, about 30 h total with the case (21.5 h additional). USB-C only, no wireless charging.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 21.5
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "ANC",
+        "Ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "ANC plus ambient mode; dB not published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "official-app",
+        "notes": "Toggle in Noble FoKus app."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "10-band EQ",
+        "availability": "official-app",
+        "notes": "Presets plus custom."
+      },
+      {
+        "id": "controls.customizable",
+        "name": "Touch remapping",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.noble.anc-entry",
+        "name": "Noble's first ANC TWS",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause; answer call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "ANC / ambient",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Airoha 1562A, Bluetooth 5.2, 10 mm titanium dynamic plus Knowles BA. No aptX or LDAC."
+    },
+    "appOnlyFeatures": [
+      "ANC toggle",
+      "Ambient mode",
+      "10-band EQ",
+      "Touch remapping"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://headfonics.com/noble-audio-fokus-mystique-review/3/",
+        "type": "reputable-secondary",
+        "title": "FoKus H-ANC specifications and comparison",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.cca.app_noble",
+        "type": "official-app-store",
+        "title": "Noble FoKus app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No current official product page; specs come from review coverage and the app listing.",
+      "Case battery display in the app is undocumented.",
+      "ANC attenuation in dB is not published.",
+      "Multipoint is not stated; assumed absent."
+    ],
+    "notes": "Noble's only ANC TWS until the Rex5. The app is the only place to see per-bud percentages.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Noble Audio",
+    "companySlug": "noble-audio",
+    "family": "FoKus",
+    "model": "FoKus Mystique",
+    "slug": "noble-audio-fokus-mystique",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Noble FoKus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.cca.app_noble"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.cca.app_noble"
+      ],
+      "appVersionObserved": null,
+      "notes": "10-band EQ with hearing-test personalisation, touch remapping, firmware update and per-earbud battery monitoring."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7.5,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; no numeric display, no wireless charging.",
+      "notes": "7.5 h at 50% volume; 500 mAh case delivers four extra charges, about 30 h total. No ANC.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "Ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC; ambient mode only."
+    },
+    "features": [
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "10-band EQ",
+        "availability": "official-app",
+        "notes": "Includes hearing-test personalisation."
+      },
+      {
+        "id": "controls.customizable",
+        "name": "Touch remapping",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause; answer call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Triple tap",
+          "action": "Volume",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Ambient mode; voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "QCC3040, Bluetooth 5.2; 8.2 mm dynamic plus two Knowles BA. No LDAC, no ANC, no wear detection."
+    },
+    "appOnlyFeatures": [
+      "10-band EQ",
+      "Hearing test",
+      "Touch remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bass tuning revised from the FoKus Pro",
+      "Microphones moved to the faceplate for calls",
+      "Ambient mode added"
+    ],
+    "sources": [
+      {
+        "url": "https://headfonics.com/noble-audio-fokus-mystique-review/",
+        "type": "reputable-secondary",
+        "title": "FoKus Mystique review and specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://addictedtoaudio.com.au/products/noble-audio-fokus-mystique-true-wireless-in-ear-earphones",
+        "type": "reputable-secondary",
+        "title": "FoKus Mystique specification sheet",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Case battery row in the app is undocumented; only the buds are confirmed split.",
+      "No ANC; not a gap.",
+      "Multipoint is not claimed; assumed absent."
+    ],
+    "notes": "The Mystique is the tuning/ambient upgrade of the FoKus Pro. No ANC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Noble Audio",
+    "companySlug": "noble-audio",
+    "family": "FoKus",
+    "model": "FoKus Prestige",
+    "slug": "noble-audio-fokus-prestige",
+    "generation": "3",
+    "variant": "Prestige",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Noble FoKus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.cca.app_noble"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.cca.app_noble"
+      ],
+      "appVersionObserved": null,
+      "notes": "Battery check, touch settings, EQ and firmware. App requires location services on Android DAPs."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; no wireless charging. 15 min gives about 70 min playback.",
+      "notes": "10 h per charge; 500 mAh case gives four extra charges (about 30 h additional, 40 h total). No ANC.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "Listen-through"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. Transparency ('Listen through') can only be toggled by touch, not in the app."
+    },
+    "features": [
+      {
+        "id": "noise-control.transparency",
+        "name": "Listen-through mode",
+        "availability": "device-only",
+        "notes": "Touch only."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "10-band EQ",
+        "availability": "official-app",
+        "notes": "Hearing-test personalisation."
+      },
+      {
+        "id": "controls.customizable",
+        "name": "Touch remapping",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.noble.wood",
+        "name": "CNC-machined wooden body and case",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause; answer call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Listen-through",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "No ear detection."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "8.2 mm dynamic plus two Knowles BA; wooden shells; improved PCB over Mystique. Bluetooth version not published."
+    },
+    "appOnlyFeatures": [
+      "10-band EQ",
+      "Hearing test",
+      "Touch remapping",
+      "Battery check",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Battery raised from 7.5 h to 10 h",
+      "Wooden body and case",
+      "Improved PCB/connectivity",
+      "No ANC still"
+    ],
+    "sources": [
+      {
+        "url": "https://bloomaudio.com/blogs/articles/beauty-thats-more-than-skin-deep-noble-fokus-prestige-tws-review",
+        "type": "reputable-secondary",
+        "title": "FoKus Prestige review (app, no ANC, no wear detection)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://bloomaudio.com/products/noble-audio-fokus-prestige-tws",
+        "type": "reputable-secondary",
+        "title": "FoKus Prestige specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Noble no longer hosts a Prestige product page; specifications come from retail/review sources.",
+      "Bluetooth version and chipset are not published.",
+      "Case battery row in the app is undocumented.",
+      "No ANC and no wear detection."
+    ],
+    "notes": "Mystique hardware in a wooden shell with a bigger battery. The app is still the only numeric battery readout.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Noble Audio",
+    "companySlug": "noble-audio",
+    "family": "FoKus",
+    "model": "FoKus Triumph",
+    "slug": "noble-audio-fokus-triumph",
+    "generation": "4",
+    "variant": "Triumph",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Noble FoKus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.cca.app_noble"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.cca.app_noble"
+      ],
+      "appVersionObserved": null,
+      "notes": "10-band EQ with presets and custom profiles, touch remapping and per-earbud battery."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7.5,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; Alcantara-wrapped case with 500 mAh and wireless charging.",
+      "notes": "7.5 h at 50% volume, 500 mAh case with four extra charges (about 30 h additional, 37.5 h total). No ANC.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "Transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Transparency mode is supported; no ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "10-band EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": "Multi-pairing and multi-connection."
+      },
+      {
+        "id": "vendor.noble.xmems",
+        "name": "xMEMS + dynamic hybrid",
+        "availability": "device-only",
+        "notes": "6.5 mm dynamic plus Cowell xMEMS."
+      },
+      {
+        "id": "controls.customizable",
+        "name": "Touch remapping",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause; answer call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Transparency / voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "QCC3071, Bluetooth 5.3, Snapdragon Sound; 3D-printed semi-custom shell; stainless-steel nozzle."
+    },
+    "appOnlyFeatures": [
+      "10-band EQ",
+      "Touch remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "xMEMS tweeter added",
+      "LDAC and Snapdragon Sound added",
+      "Multipoint added",
+      "Wireless charging added",
+      "No ANC still"
+    ],
+    "sources": [
+      {
+        "url": "https://nobleaudio.com/products/fokus-triumph",
+        "type": "official-product",
+        "title": "Noble FoKus Triumph",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.cca.app_noble",
+        "type": "official-app-store",
+        "title": "Noble FoKus app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Case battery in the app is undocumented.",
+      "Official page does not state ANC dB (no ANC).",
+      "EQ preset names are not published."
+    ],
+    "notes": "Noble's xMEMS TWS. No ANC, but LDAC and multipoint.",
+    "researchedAt": "2026-11-10"
+  }
+]

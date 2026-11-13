@@ -17,6 +17,48 @@ enum class BrandSchema(val companionAppName: String) {
 }
 
 /**
+ * How the official app presents battery information for a model.
+ *
+ * These values are transcribed from the manufacturer's own app/UI, not from
+ * what the Bluetooth stack happens to expose. They are deliberately separate
+ * from [StrictBrandProfile.supportsCaseBatteryWhenUndocked], which only says
+ * whether a case can be cached while the buds are out.
+ */
+enum class BatteryBudsDisplay {
+    SPLIT,
+    COMBINED,
+    UNKNOWN,
+}
+
+enum class BatteryCaseDisplay {
+    SEPARATE,
+    HIDDEN,
+    UNKNOWN,
+}
+
+enum class BatteryCaseVisibility {
+    ALWAYS,
+    ONLY_WHEN_DOCKED,
+    ONLY_WHEN_CASE_OPEN,
+    ONLY_WHEN_CHARGING,
+    UNKNOWN,
+}
+
+enum class BatteryCaseWhileBudsOut {
+    LIVE,
+    LAST_KNOWN,
+    HIDDEN,
+    UNKNOWN,
+}
+
+data class BatteryDisplayContract(
+    val budsDisplay: BatteryBudsDisplay = BatteryBudsDisplay.UNKNOWN,
+    val caseDisplay: BatteryCaseDisplay = BatteryCaseDisplay.UNKNOWN,
+    val caseVisibility: BatteryCaseVisibility = BatteryCaseVisibility.UNKNOWN,
+    val caseWhileBudsOut: BatteryCaseWhileBudsOut = BatteryCaseWhileBudsOut.UNKNOWN,
+)
+
+/**
  * Definition of an official gesture supported by an earbud model.
  */
 data class GestureDefinition(
@@ -36,6 +78,8 @@ data class StrictBrandProfile(
     val modelName: String,
     val formFactor: AudioFormFactor,
     val supportsCaseBatteryWhenUndocked: Boolean = false,
+    /** Battery presentation contract from the official app, when verified. */
+    val batteryContract: BatteryDisplayContract = BatteryDisplayContract(),
     val companionAppName: String = brandSchema.companionAppName,
     // Noise Control
     val hasAnc: Boolean = true,
@@ -82,6 +126,29 @@ data class StrictBrandProfile(
     val hasHeadphoneAccommodations: Boolean = false,
     val hasPinchSpeed: Boolean = false,
 ) {
+    val siliconFamily: SiliconFamily
+        get() = SiliconFamilyMap.resolve(manufacturer, modelName)
+    val physicalControlSchema: PhysicalControlSchema
+        get() = SiliconFamilyMap.controlSchema(manufacturer, modelName, formFactor)
+    val batteryTopology: BatteryTopologyMode
+        get() = BatteryTopologyResolver.resolve(manufacturer, modelName, formFactor)
+
+    val hasCaseSuperMic: Boolean
+        get() = modelName.contains("Nothing Ear (3)", ignoreCase = true)
+    val hasCaseTransmitter: Boolean
+        get() = listOf(
+            "JBL Tour Pro 3", "JBL Live Buds 3", "JBL Live Beam 3", "JBL Live Flex 3",
+            "LG TONE Free T90S", "LG TONE Free T80", "LG TONE Free UT90Q",
+            "LG TONE Free FN9", "AKG N5 Hybrid", "AKG N9 Hybrid",
+        ).any { modelName.contains(it, ignoreCase = true) }
+    val hasOnboardRecorder: Boolean
+        get() = modelName.contains("Xiaomi Buds 5 Pro", ignoreCase = true)
+    val hasBiometrics: Boolean
+        get() = listOf("MOMENTUM Sport", "AirPods Pro 3", "Powerbeats Pro 2")
+            .any { modelName.contains(it, ignoreCase = true) }
+    val hasSwimMp3: Boolean
+        get() = listOf("OpenSwim", "Suunto Aqua")
+            .any { modelName.contains(it, ignoreCase = true) }
     val schema: BrandSchema get() = brandSchema
     val ultraBassMaxLevel: Int get() = ultraBassLevels
     val hasNoiseControl: Boolean get() = hasAnc
@@ -240,6 +307,14 @@ object StrictBrandProfileDatabase {
             modelName = "CMF Buds",
             formFactor = AudioFormFactor.STEM_IN_EAR,
             supportsCaseBatteryWhenUndocked = false, // HIDE case battery ring/card unless valid byte 1..100
+            // Nothing X shows L / C / R as three separate readings; the case
+            // tile requires the case to be open.
+            batteryContract = BatteryDisplayContract(
+                budsDisplay = BatteryBudsDisplay.SPLIT,
+                caseDisplay = BatteryCaseDisplay.SEPARATE,
+                caseVisibility = BatteryCaseVisibility.ONLY_WHEN_CASE_OPEN,
+                caseWhileBudsOut = BatteryCaseWhileBudsOut.HIDDEN,
+            ),
             hasAnc = true,
             ancModes = listOf("Active Noise Cancellation", "Transparency Mode", "Off"),
             ancSubLevels = listOf("High (42dB)", "Mid", "Low", "Adaptive"),
@@ -414,6 +489,15 @@ object StrictBrandProfileDatabase {
             modelName = "realme Buds T300",
             formFactor = AudioFormFactor.STEM_IN_EAR,
             supportsCaseBatteryWhenUndocked = true, // Supports 3-ring pogo-pin dock reading
+            // realme Link hides the case tile, but the user-facing contract is
+            // that the case percentage appears whenever at least one bud is
+            // docked. The engine reports caseIsLive for that condition.
+            batteryContract = BatteryDisplayContract(
+                budsDisplay = BatteryBudsDisplay.SPLIT,
+                caseDisplay = BatteryCaseDisplay.SEPARATE,
+                caseVisibility = BatteryCaseVisibility.ONLY_WHEN_DOCKED,
+                caseWhileBudsOut = BatteryCaseWhileBudsOut.HIDDEN,
+            ),
             hasAnc = true,
             ancModes = listOf("ANC", "Transparency", "Normal"),
             ancSubLevels = listOf("30dB"),
@@ -569,6 +653,58 @@ object StrictBrandProfileDatabase {
         ),
     )
 
+    /**
+     * Neutral profile for devices with no verified companion-app schema.
+     *
+     * It deliberately claims no vendor feature: no ANC, no EQ presets, no
+     * gestures, no battery-split behavior. UIs may still show standard
+     * media/battery/codec information because that comes from Android, not
+     * from this profile.
+     */
+    val GENERIC_AUDIO: StrictBrandProfile = StrictBrandProfile(
+        modelKey = "generic_audio",
+        brandSchema = BrandSchema.GENERIC,
+        manufacturer = "",
+        modelName = "Bluetooth Audio Device",
+        formFactor = AudioFormFactor.STEM_IN_EAR,
+        supportsCaseBatteryWhenUndocked = false,
+        hasAnc = false,
+        ancModes = emptyList(),
+        ancSubLevels = emptyList(),
+        eqPresets = emptyList(),
+        hasCustom3BandEq = false,
+        hasParametric8BandEq = false,
+        hasClearBass = false,
+        hasBassWave = false,
+        hasUltraBass = false,
+        hasDynamicBass = false,
+        gestures = emptyList(),
+        hasInEarDetection = false,
+        hasLowLagMode = false,
+        hasDualConnection = false,
+        hasFindMyBuds = false,
+        hasSmartDial = false,
+        hasLdac = false,
+        hasSpatialAudio = false,
+        hasDolbyAtmos = false,
+        hasVolumeEnhancer = false,
+        hasMindRelax = false,
+        hasGoldenSound = false,
+        hasPersonalizedAnc = false,
+        hasFitTest = false,
+        hasStemSlide = false,
+        hasEdgeTap = false,
+        hasHeadGestures = false,
+        hasSpeakToChat = false,
+        hasDsee = false,
+        hasZenModeAir = false,
+        hasVoiceDetect = false,
+        hasConversationalAwareness = false,
+        hasPersonalizedVolume = false,
+        hasHeadphoneAccommodations = false,
+        hasPinchSpeed = false,
+    )
+
     fun getAllProfiles(): List<StrictBrandProfile> = PROFILES
 
     fun findProfileByKey(key: String): StrictBrandProfile? =
@@ -598,6 +734,10 @@ object StrictBrandProfileResolver {
         val gattUuids = (discoveredGattUuids.map { it.lowercase() } + sdpUuids).distinct()
         val rfcommUuids = (discoveredRfcommUuids.map { it.lowercase() } + sdpUuids).distinct()
 
+        fun profile(key: String): StrictBrandProfile =
+            StrictBrandProfileDatabase.findProfileByKey(key)
+                ?: StrictBrandProfileDatabase.GENERIC_AUDIO
+
         // 1. Nothing / CMF Earbuds (Nothing X)
         val isNothingOrCmf = name.contains("cmf") || name.contains("nothing") ||
             name.contains("b168") || name.contains("ear (1)") || name.contains("ear (2)") ||
@@ -606,20 +746,13 @@ object StrictBrandProfileResolver {
 
         if (isNothingOrCmf) {
             when {
-                name.contains("buds pro 2") ->
-                    return StrictBrandProfileDatabase.findProfileByKey("cmf_buds_pro_2")!!
-                name.contains("neckband") ->
-                    return StrictBrandProfileDatabase.findProfileByKey("cmf_neckband_pro")!!
-                name.contains("ear (a)") ->
-                    return StrictBrandProfileDatabase.findProfileByKey("nothing_ear_a")!!
-                name.contains("ear (2)") ->
-                    return StrictBrandProfileDatabase.findProfileByKey("nothing_ear_2")!!
-                name.contains("nothing ear") ->
-                    return StrictBrandProfileDatabase.findProfileByKey("nothing_ear")!!
-                else -> {
-                    // Default CMF Buds (CMF Buds 1 / Model B168)
-                    return StrictBrandProfileDatabase.findProfileByKey("cmf_buds")!!
-                }
+                name.contains("buds pro 2") -> return profile("cmf_buds_pro_2")
+                name.contains("neckband") -> return profile("cmf_neckband_pro")
+                name.contains("ear (a)") -> return profile("nothing_ear_a")
+                name.contains("ear (2)") -> return profile("nothing_ear_2")
+                name.contains("nothing ear") -> return profile("nothing_ear")
+                // Default CMF Buds (CMF Buds 1 / Model B168)
+                else -> return profile("cmf_buds")
             }
         }
 
@@ -630,31 +763,32 @@ object StrictBrandProfileResolver {
 
         if (isRealme) {
             if (name.contains("air 5 pro") || name.contains("air 6 pro") || name.contains("air 7 pro") || name.contains("air5 pro") || name.contains("air6 pro")) {
-                return StrictBrandProfileDatabase.findProfileByKey("realme_buds_air_pro")!!
+                return profile("realme_buds_air_pro")
             }
-            return StrictBrandProfileDatabase.findProfileByKey("t300")!!
+            return profile("t300")
         }
 
         // 3. OnePlus & Oppo (HeyMelody)
-        val isOnePlusOrOppo = name.contains("oneplus") || name.contains("oppo") || name.contains("bullets") ||
-            (name.contains("buds pro") && !name.contains("galaxy") && !name.contains("cmf"))
+        // Only explicit brand/model evidence. A bare "Buds Pro" from another
+        // manufacturer must not inherit the OnePlus profile.
+        val isOnePlusOrOppo = name.contains("oneplus") || name.contains("oppo") || name.contains("bullets")
 
         if (isOnePlusOrOppo) {
-            return StrictBrandProfileDatabase.findProfileByKey("oneplus_buds_pro")!!
+            return profile("oneplus_buds_pro")
         }
 
         // 4. Samsung Galaxy Buds (Galaxy Wearable)
         val isSamsung = name.contains("galaxy buds") || name.contains("buds2") || name.contains("buds3") || name.contains("buds live")
 
         if (isSamsung) {
-            return StrictBrandProfileDatabase.findProfileByKey("galaxy_buds")!!
+            return profile("galaxy_buds")
         }
 
         // 5. Sony (Sony Sound Connect)
         val isSony = name.contains("sony") || name.contains("wf-1000") || name.contains("wh-1000") || name.contains("linkbuds")
 
         if (isSony) {
-            return StrictBrandProfileDatabase.findProfileByKey("sony_1000x")!!
+            return profile("sony_1000x")
         }
 
         // 6. Apple & Beats (iOS Settings)
@@ -662,15 +796,16 @@ object StrictBrandProfileResolver {
             address.startsWith("F0:D2:F1") || address.startsWith("70:66:1B")
 
         if (isApple) {
-            return StrictBrandProfileDatabase.findProfileByKey("airpods_pro")!!
+            return profile("airpods_pro")
         }
 
-        // Fallback: check if T300 keyword is present
+        // Fallback: explicit T300 keyword, otherwise a neutral profile that
+        // claims no vendor feature. Unknown devices must not inherit another
+        // model's capabilities.
         if (name.contains("t300")) {
-            return StrictBrandProfileDatabase.findProfileByKey("t300")!!
+            return profile("t300")
         }
 
-        // Generic fallback profile: returns CMF Buds if "b168" or "buds"
-        return StrictBrandProfileDatabase.findProfileByKey("t300")!!
+        return StrictBrandProfileDatabase.GENERIC_AUDIO
     }
 }

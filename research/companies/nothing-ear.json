@@ -1,0 +1,486 @@
+[
+  {
+    "company": "Nothing Ear (legacy)",
+    "companySlug": "nothing-ear",
+    "family": "Ear",
+    "model": "Nothing Ear (1)",
+    "slug": "nothing-ear-1",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Nothing X",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.nothing.smartcenter"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.nothing.smartcenter"
+      ],
+      "appVersionObserved": null,
+      "notes": "Nothing X for ANC, EQ, gesture customisation and firmware."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 4,
+      "budsHoursNoAnc": 5.7,
+      "caseHours": 18.3,
+      "chargingIndicators": "Case LED; USB-C and Qi wireless charging.",
+      "notes": "4 h ANC on / 5.7 h ANC off; up to 24 h total with case (case adds ~18.3 h).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 18.3
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "ANC with transparency mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Nothing X EQ presets",
+        "availability": "official-app"
+      },
+      {
+        "id": "control.remap",
+        "name": "Gesture customisation",
+        "availability": "official-app"
+      },
+      {
+        "id": "power.wireless-charging",
+        "name": "Qi wireless charging case",
+        "availability": "device-only"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection / auto-pause",
+        "availability": "device-only"
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4 (buds)",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Triple tap",
+          "action": "Previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Tap and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "None; touch controls.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "balanced",
+        "more bass",
+        "more treble"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": null,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "11.6 mm drivers; no multipoint."
+    },
+    "appOnlyFeatures": [
+      "EQ presets",
+      "Gesture customisation",
+      "ANC control",
+      "Firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "Nothing's first product",
+      "Transparent design",
+      "ANC at a low price"
+    ],
+    "sources": [
+      {
+        "url": "https://nothing.tech/pages/support",
+        "type": "official-support",
+        "title": "Nothing support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official Ear (1) product page retired",
+      "Battery layout in Nothing X not visually verified for this generation",
+      "ANC dB not published",
+      "EQ band count not published"
+    ],
+    "notes": "Legacy Nothing product, distinct from the current Nothing Ear line.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Nothing Ear (legacy)",
+    "companySlug": "nothing-ear",
+    "family": "Ear",
+    "model": "Nothing Ear (stick)",
+    "slug": "nothing-ear-stick",
+    "generation": "stick",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Nothing X",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.nothing.smartcenter"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.nothing.smartcenter"
+      ],
+      "appVersionObserved": null,
+      "notes": "Nothing X for EQ and gesture customisation."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 22,
+      "chargingIndicators": "USB-C; no wireless charging.",
+      "notes": "7 h buds + 22 h case = 29 h total; no ANC.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 22
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.2",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Nothing X EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "control.remap",
+        "name": "Press gesture customisation",
+        "availability": "official-app"
+      },
+      {
+        "id": "durability.ip54",
+        "name": "IP54",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "pinch",
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single press",
+          "action": "Play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Double press",
+          "action": "Next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Triple press",
+          "action": "Previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Press and hold",
+          "action": "Volume / voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "None; press controls on the stem.",
+      "configurableInApp": true,
+      "notes": "Stem press controls rather than touch surface."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": null,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "12.6 mm drivers; no ANC, no in-ear detection."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Gesture customisation"
+    ],
+    "featureDeltaFromPrevious": [
+      "No ANC",
+      "Stem press controls",
+      "Lower price than Ear (1)"
+    ],
+    "sources": [
+      {
+        "url": "https://nothing.tech/products/ear-stick",
+        "type": "official-product",
+        "title": "Nothing Ear (stick)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "EQ band count not published",
+      "Battery layout in Nothing X not visually verified"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Nothing Ear (legacy)",
+    "companySlug": "nothing-ear",
+    "family": "Ear",
+    "model": "Nothing Ear (2)",
+    "slug": "nothing-ear-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Nothing X",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.nothing.smartcenter"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.nothing.smartcenter"
+      ],
+      "appVersionObserved": null,
+      "notes": "Nothing X for personalized ANC, EQ, gesture customisation and dual connection."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 4,
+      "budsHoursNoAnc": 6.3,
+      "caseHours": 29.7,
+      "chargingIndicators": "Case LED; USB-C and Qi wireless charging.",
+      "notes": "4 h ANC on / 6.3 h ANC off; 36 h total with case (case adds ~29.7 h).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 29.7
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "Personalized ANC that adapts to the ear canal; transparency mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Personalized ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LHDC 5.0 Hi-Res",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Nothing X Advanced EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "control.remap",
+        "name": "Gesture customisation",
+        "availability": "official-app"
+      },
+      {
+        "id": "power.wireless-charging",
+        "name": "Qi wireless charging case",
+        "availability": "device-only"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "pinch",
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single press",
+          "action": "Play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Double press",
+          "action": "Next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Triple press",
+          "action": "Previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Press and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Slide",
+          "action": "Volume",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "None; pinch/slide on stem.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 8,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC 5.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm drivers; LHDC 5.0 hi-res; 8-band Advanced EQ (app)."
+    },
+    "appOnlyFeatures": [
+      "Personalized ANC",
+      "Advanced EQ",
+      "Gesture customisation",
+      "Dual connection"
+    ],
+    "featureDeltaFromPrevious": [
+      "Personalized ANC",
+      "LHDC 5.0 Hi-Res",
+      "Multipoint",
+      "8-band EQ",
+      "36 h total"
+    ],
+    "sources": [
+      {
+        "url": "https://nothing.tech/products/ear-2",
+        "type": "official-product",
+        "title": "Nothing Ear (2)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB not published",
+      "Battery layout in Nothing X not visually verified for this generation"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

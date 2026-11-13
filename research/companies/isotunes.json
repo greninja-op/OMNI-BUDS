@@ -1,0 +1,1296 @@
+[
+  {
+    "company": "ISOtunes",
+    "companySlug": "isotunes",
+    "family": "PRO",
+    "model": "ISOtunes PRO 3.0",
+    "slug": "isotunes-pro-3-0",
+    "generation": "3.0",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ISOtunes does not offer a companion app. Pairing, volume, Aware/ambient level and playback are controlled on the inline controller or earbuds. Battery state is surfaced by the phone's Bluetooth battery indicator on iOS, not by an app."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 20,
+      "caseHours": null,
+      "chargingIndicators": "Inline controller LED/voice low-battery prompt; no percentage steps published. iOS can show a Bluetooth battery indicator.",
+      "notes": "One combined product battery in the inline controller: up to 20 hours, USB-C. No charging case. A 10-minute charge gives about 2 hours, 15 minutes gives about 4 hours. No ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. Certified passive hearing protection (SNR 36 dB, NRR depends on eartip) with SafeMax 82 dB output limiting. This is hearing protection, not noise cancellation."
+    },
+    "features": [
+      {
+        "id": "hearing-protection.passive",
+        "name": "Certified passive hearing protection (SNR 36 dB)",
+        "availability": "device-only",
+        "notes": "EN 352 certified; NRR depends on foam vs silicone tips."
+      },
+      {
+        "id": "hearing-protection.safemax",
+        "name": "SafeMax 82 dB volume limit",
+        "availability": "device-only",
+        "notes": "Caps output to protect hearing."
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.4 with LE and Auracast",
+        "availability": "device-only",
+        "notes": "Dual pairing supported; Auracast public-broadcast reception."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual device pairing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.boom-mic",
+        "name": "Noise-isolating microphone",
+        "availability": "device-only",
+        "notes": "For calls in loud environments."
+      },
+      {
+        "id": "controls.voice-assistant",
+        "name": "Siri/Google voice assistant",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "comms.two-way-radio",
+        "name": "Two-way radio compatibility",
+        "availability": "device-only",
+        "notes": "Compatible out of the box with 2-way radios."
+      },
+      {
+        "id": "durability.ip67",
+        "name": "IP67 dust/water protection",
+        "availability": "device-only",
+        "notes": "Meets military drop-test specifications."
+      },
+      {
+        "id": "battery.usb-c",
+        "name": "USB-C charging with short-charge",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Multifunction button, single press",
+          "action": "Play/pause or answer/end call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Multifunction button, double press",
+          "action": "Next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Multifunction button, triple press",
+          "action": "Previous track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume + / −",
+          "action": "Adjust volume",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume long press",
+          "action": "Voice assistant",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Inline controller with volume and multifunction buttons.",
+      "configurableInApp": false,
+      "notes": "No app configuration."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Custom-tuned full-range dynamic drivers. Bluetooth 5.4 with LE and Auracast; codec list is not published."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 5.4 with LE and Auracast (PRO 2.0 is Bluetooth 5.x without Auracast).",
+      "20-hour battery with USB-C short-charge (10 min ≈ 2 h, 15 min ≈ 4 h).",
+      "Military drop-test and solvent/heat-resistant construction.",
+      "Dual device pairing."
+    ],
+    "sources": [
+      {
+        "url": "https://isotunes.co.uk/products/pro-3-0",
+        "type": "official-product",
+        "title": "ISOtunes PRO 3.0 product page and tech specs",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://isotunes.com/collections/hearing-protection",
+        "type": "official-product",
+        "title": "ISOtunes hearing protection range",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No app, so no app battery contract.",
+      "Battery readout on Android is undocumented; iOS indicator is claimed at brand level but not per model.",
+      "Bluetooth codec list is not published.",
+      "NRR varies by eartip; only the SNR 36 dB figure is captured.",
+      "No ANC (by design)."
+    ],
+    "notes": "PRO 3.0 is an inline-controller earbud, not a true-wireless pair. 'Aware Technology' is absent on this model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "ISOtunes",
+    "companySlug": "isotunes",
+    "family": "PRO Aware",
+    "model": "ISOtunes PRO Aware 2.0",
+    "slug": "isotunes-pro-aware-2-0",
+    "generation": "2.0",
+    "variant": "Aware",
+    "releaseYear": 2024,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app. Aware level, volume and playback are controlled by the inline controller. iOS may show a Bluetooth battery indicator; Android has no documented battery UI."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 15,
+      "caseHours": null,
+      "chargingIndicators": "Inline controller LED/voice low-battery prompt; no percentage steps published.",
+      "notes": "One combined product battery: 15 hours with Aware + Bluetooth, or 24 hours with Aware only. USB-C; 15-minute charge gives 2–4 hours. No charging case. No ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. Passive protection (SNR 33 dB) plus Aware Technology level-dependent ambient listening, which is the opposite of noise cancellation: it deliberately passes safe outside sound."
+    },
+    "features": [
+      {
+        "id": "hearing-protection.passive",
+        "name": "Certified passive hearing protection (SNR 33 dB)",
+        "availability": "device-only",
+        "notes": "EN 352."
+      },
+      {
+        "id": "hearing-protection.aware",
+        "name": "Aware Technology level-dependent listening",
+        "availability": "device-only",
+        "notes": "Omnidirectional mics amplify speech and warning signals; 2 ms reaction."
+      },
+      {
+        "id": "hearing-protection.safemax",
+        "name": "SafeMax 82 dB volume limit",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.4 with LE and Auracast",
+        "availability": "device-only",
+        "notes": "Dual pairing; 2-way radio compatible."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual device pairing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.boom-mic",
+        "name": "Noise-isolating microphone",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "controls.voice-assistant",
+        "name": "Siri/Google voice assistant",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "durability.ip67",
+        "name": "IP67 dust/water protection",
+        "availability": "device-only",
+        "notes": "Military drop-test certified."
+      },
+      {
+        "id": "battery.usb-c",
+        "name": "USB-C short-charge",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "controls.magnetic",
+        "name": "Magnetic earbuds for neck storage",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Multifunction button",
+          "action": "Play/pause, next/previous, answer/end call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume + / −",
+          "action": "Adjust volume",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Aware volume buttons",
+          "action": "Adjust ambient amplification level",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume long press",
+          "action": "Voice assistant",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Inline controller with playback, volume and Aware level controls.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Custom-tuned full-range dynamic drivers. Bluetooth 5.4 with LE and Auracast; codec list not published."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 5.4 with LE and Auracast.",
+      "15 h with Aware + Bluetooth and 24 h Aware-only.",
+      "IP67 and military drop-test durability.",
+      "15-minute short charge for 2–4 hours."
+    ],
+    "sources": [
+      {
+        "url": "https://isotunes.co.uk/products/pro-aware-2-0",
+        "type": "official-product",
+        "title": "ISOtunes PRO Aware 2.0 product page and tech specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No app; no app battery contract.",
+      "Android battery display is undocumented.",
+      "Bluetooth codec list is not published.",
+      "No ANC (by design).",
+      "NRR varies by eartip; only SNR 33 dB captured."
+    ],
+    "notes": "PRO Aware 2.0 combines passive protection with level-dependent Aware listening. Do not model it as an ANC product.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "ISOtunes",
+    "companySlug": "isotunes",
+    "family": "XTRA",
+    "model": "ISOtunes XTRA 2.0",
+    "slug": "isotunes-xtra-2-0",
+    "generation": "2.0",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app. Playback, volume and calls are controlled from the inline controller. iOS may show a Bluetooth battery indicator."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 11,
+      "caseHours": null,
+      "chargingIndicators": "Inline controller LED/voice low-battery prompt; no percentage steps published.",
+      "notes": "One combined product battery: up to 11 hours. Micro-USB charging. No charging case. No ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. Passive protection (SNR 36 dB) with SafeMax 82 dB limiting. No level-dependent Aware mode on this model."
+    },
+    "features": [
+      {
+        "id": "hearing-protection.passive",
+        "name": "Certified passive hearing protection (SNR 36 dB)",
+        "availability": "device-only",
+        "notes": "EN 352."
+      },
+      {
+        "id": "hearing-protection.safemax",
+        "name": "SafeMax 82 dB volume limit",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.0 calls and streaming",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.boom-mic",
+        "name": "Noise-isolating microphone",
+        "availability": "device-only",
+        "notes": "Built into the inline controller."
+      },
+      {
+        "id": "controls.voice-assistant",
+        "name": "Siri/Google voice assistant",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "durability.ip67",
+        "name": "IP67 sweat/water resistance",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "controls.magnetic",
+        "name": "Magnetic eartips and neckband",
+        "availability": "device-only",
+        "notes": "Eartips magnetically clip together."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Multifunction button",
+          "action": "Play/pause, next/previous, answer/end call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume + / −",
+          "action": "Adjust volume",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume long press",
+          "action": "Voice assistant",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Inline controller with larger tactile buttons.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.0. Codec list not published. No multipoint claim."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "11-hour battery (up from the original XTRA).",
+      "Redesigned controller with larger tactile buttons.",
+      "Redesigned microphone.",
+      "Enhanced durability."
+    ],
+    "sources": [
+      {
+        "url": "https://isotunes.co.uk/products/isotunes-xtra-2-en352",
+        "type": "official-product",
+        "title": "ISOtunes XTRA 2.0 product page and tech specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No app and no app battery contract.",
+      "Android battery display is undocumented.",
+      "Bluetooth codec list and version details are not published beyond Bluetooth 5.0.",
+      "No ANC (by design)."
+    ],
+    "notes": "XTRA 2.0 is a neckband-style earbud with a combined battery in the controller.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "ISOtunes",
+    "companySlug": "isotunes",
+    "family": "FREE",
+    "model": "ISOtunes FREE 2.0",
+    "slug": "isotunes-free-2-0",
+    "generation": "2.0",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app. ISOtunes explicitly supports the iOS battery-life indicator instead of a companion app; a customer review on the product page asks for an app. Android battery UI is not documented."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": null,
+      "chargingIndicators": "Case LED and iOS Bluetooth battery indicator; exact LED colours/steps are not documented. Case capacity is not published.",
+      "notes": "True-wireless earbuds with charging case. 7 hours per charge. Case provides additional charges, but ISOtunes does not publish total case hours or case mAh. No ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. Passive protection: SNR 31 dB (EU) / NRR 25 dB with foam tips, NRR 22 dB with double-flange silicone. SafeMax 82 dB output limit."
+    },
+    "features": [
+      {
+        "id": "hearing-protection.passive",
+        "name": "Certified passive hearing protection (SNR 31 dB / NRR 25 dB)",
+        "availability": "device-only",
+        "notes": "NRR 25 with foam tips; 22 with double-flange silicone."
+      },
+      {
+        "id": "hearing-protection.safemax",
+        "name": "SafeMax 82 dB volume limit",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.2 calls and streaming",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.boom-mic",
+        "name": "Noise-isolating microphone with echo cancellation",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "controls.voice-assistant",
+        "name": "Siri/Google voice assistant",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "battery.case",
+        "name": "Protective rechargeable charging case",
+        "availability": "device-only",
+        "notes": "USB-C; case capacity/hours not published."
+      },
+      {
+        "id": "controls.independent",
+        "name": "Independent earbud use",
+        "availability": "device-only",
+        "notes": "Either earbud can be used alone."
+      },
+      {
+        "id": "durability.ip67",
+        "name": "IP67 water/dust resistance",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Earbud button, single press",
+          "action": "Play/pause or answer/end call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Earbud button, double press",
+          "action": "Next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Earbud button, triple press",
+          "action": "Previous track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Earbud button, long press",
+          "action": "Voice assistant",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Button on each earbud.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.2. Codec list not published. No multipoint claim."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 5.2 (original FREE is older Bluetooth).",
+      "SNR increased to 31 dB.",
+      "Improved call quality with echo cancellation.",
+      "Improved background-noise isolation."
+    ],
+    "sources": [
+      {
+        "url": "https://isotunes.co.uk/products/isotunes-free-2-0-en352",
+        "type": "official-product",
+        "title": "ISOtunes FREE 2.0 EN 352 product page and tech specs",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://isotunes.com/pages/manuals-free-2-0",
+        "type": "official-support",
+        "title": "ISOtunes FREE 2.0 manuals and FAQ",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Case battery capacity and total case hours are not published.",
+      "Case LED behaviour and whether the case stays visible when buds are out are not documented.",
+      "Bluetooth codec list is not published.",
+      "Android battery display is undocumented.",
+      "No ANC (by design)."
+    ],
+    "notes": "FREE 2.0 is the true-wireless model with a charging case. Battery semantics are inferred from the presence of a case LED plus iOS indicator; ISOtunes does not publish the UI contract.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "ISOtunes",
+    "companySlug": "isotunes",
+    "family": "FREE Aware",
+    "model": "ISOtunes FREE Aware",
+    "slug": "isotunes-free-aware",
+    "generation": "Aware",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app. Aware level, volume and calls are controlled on the earbuds. iOS battery indicator is claimed at brand level; Android is undocumented."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 13,
+      "caseHours": null,
+      "chargingIndicators": "Case LED and iOS Bluetooth battery indicator; exact LED steps not documented. Case capacity not published.",
+      "notes": "True-wireless earbuds with portable charging case. Up to 13 hours. No ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. Passive protection (SNR 32 dB) plus Aware level-dependent ambient listening with adjustable amplification; SafeMax 82 dB limit."
+    },
+    "features": [
+      {
+        "id": "hearing-protection.passive",
+        "name": "Certified passive hearing protection (SNR 32 dB)",
+        "availability": "device-only",
+        "notes": "EN 352; IP67."
+      },
+      {
+        "id": "hearing-protection.aware",
+        "name": "Aware Technology level-dependent listening",
+        "availability": "device-only",
+        "notes": "Omnidirectional mics amplify outside sound; user-selectable amplification."
+      },
+      {
+        "id": "hearing-protection.safemax",
+        "name": "SafeMax 82 dB volume limit",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.2 calls and streaming",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.boom-mic",
+        "name": "Noise-isolating microphone",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "controls.voice-assistant",
+        "name": "Siri/Google voice assistant",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "battery.case",
+        "name": "Portable charging case",
+        "availability": "device-only",
+        "notes": "USB-C."
+      },
+      {
+        "id": "durability.ip67",
+        "name": "IP67 water/dust resistance",
+        "availability": "device-only",
+        "notes": "Completely waterproof and cord-free."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Earbud multifunction button",
+          "action": "Play/pause, next/previous, answer/end call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Earbud button, long press",
+          "action": "Voice assistant",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Aware volume controls",
+          "action": "Adjust ambient amplification",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Button on each earbud.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.2. Codec list not published. No multipoint claim."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Aware level-dependent listening added.",
+      "13-hour battery versus FREE 2.0's 7 hours.",
+      "IP67 rating."
+    ],
+    "sources": [
+      {
+        "url": "https://isotunes.co.uk/products/isotunes-free-aware-en352",
+        "type": "official-product",
+        "title": "ISOtunes FREE Aware product page and tech specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Case capacity and total case hours are not published.",
+      "Case LED behaviour is not documented.",
+      "Bluetooth codec list is not published.",
+      "Android battery display is undocumented.",
+      "No ANC (by design)."
+    ],
+    "notes": "FREE Aware is the true-wireless Aware model. Its level-dependent mode is the opposite of ANC and is a core product feature.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "ISOtunes",
+    "companySlug": "isotunes",
+    "family": "LINK",
+    "model": "ISOtunes LINK 2.0",
+    "slug": "isotunes-link-2-0",
+    "generation": "2.0",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app. Controls are on the earcup. Battery state is reported by an on-headset indicator; there is no app or documented system percentage UI."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 50,
+      "caseHours": null,
+      "chargingIndicators": "On-headset battery indicator/LED; exact colours and steps are not published.",
+      "notes": "One combined headset battery: lithium-ion, up to 50 hours, Micro-USB charging. No charging case. Optional boom microphone accessory. No ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. Passive ear-defender protection (SNR 30 dB) with SafeMax 82 dB output limiting and a noise-isolating microphone."
+    },
+    "features": [
+      {
+        "id": "hearing-protection.passive",
+        "name": "Certified passive hearing protection (SNR 30 dB)",
+        "availability": "device-only",
+        "notes": "EN 352 ear defenders."
+      },
+      {
+        "id": "hearing-protection.safemax",
+        "name": "SafeMax 82 dB volume limit",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.0 calls and streaming",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.boom-mic",
+        "name": "Optional boom microphone",
+        "availability": "device-only",
+        "notes": "Boom mic sold separately; the built-in mic is in the cup."
+      },
+      {
+        "id": "audio.noise-isolating-mic",
+        "name": "Noise-isolating microphone",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "battery.li-ion",
+        "name": "Rechargeable lithium-ion battery",
+        "availability": "device-only",
+        "notes": "Up to 50 hours; Micro-USB."
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4 sweat/water resistance",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Multifunction button",
+          "action": "Play/pause, next/previous, answer/end call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume + / −",
+          "action": "Adjust volume",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons for power, playback/calls and volume.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.0. Codec list not published. No multipoint claim."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Up to 50 hours battery life.",
+      "New boom-microphone accessory support.",
+      "Padded headband cushion.",
+      "Bluetooth 5.0."
+    ],
+    "sources": [
+      {
+        "url": "https://isotunes.co.uk/products/isotunes-link-2-0-en352",
+        "type": "official-product",
+        "title": "ISOtunes LINK 2.0 product page and tech specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No app; no app battery contract.",
+      "On-headset battery indicator behaviour is not documented.",
+      "Whether the OS shows a battery percentage for this headset is undocumented.",
+      "Bluetooth codec list is not published.",
+      "Boom microphone is an optional accessory.",
+      "No ANC (by design)."
+    ],
+    "notes": "LINK 2.0 is an over-ear Bluetooth ear defender, not an ANC headphone.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "ISOtunes",
+    "companySlug": "isotunes",
+    "family": "LINK Aware",
+    "model": "ISOtunes LINK Aware",
+    "slug": "isotunes-link-aware",
+    "generation": "Aware",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app. Aware level and volume are adjusted from the earcup. Battery state is on-headset only."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 23,
+      "caseHours": null,
+      "chargingIndicators": "On-headset battery indicator; exact colours and steps are not published.",
+      "notes": "One combined headset battery: lithium-ion, up to 23 hours, USB-C charging. No charging case. No ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. Passive protection (SNR 30 dB) plus Aware level-dependent listening with adjustable amplification; SafeMax 82 dB limit."
+    },
+    "features": [
+      {
+        "id": "hearing-protection.passive",
+        "name": "Certified passive hearing protection (SNR 30 dB)",
+        "availability": "device-only",
+        "notes": "IPX4; memory-foam ear cushions."
+      },
+      {
+        "id": "hearing-protection.aware",
+        "name": "Aware Technology level-dependent listening",
+        "availability": "device-only",
+        "notes": "Omnidirectional mics amplify speech and warning signals; Aware volume buttons."
+      },
+      {
+        "id": "hearing-protection.safemax",
+        "name": "SafeMax 82 dB volume limit",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.0 calls and streaming",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.noise-isolating-mic",
+        "name": "Noise-isolating microphone",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "controls.voice-assistant",
+        "name": "Siri/Google voice assistant",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "battery.li-ion",
+        "name": "Rechargeable lithium-ion battery",
+        "availability": "device-only",
+        "notes": "23 hours; USB-C."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Multifunction button",
+          "action": "Play/pause, next/previous, answer/end call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume + / −",
+          "action": "Adjust volume",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Aware volume buttons",
+          "action": "Adjust ambient amplification",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons for power, playback/calls, volume and Aware level.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.0. Codec list not published. No multipoint claim."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Aware level-dependent listening added to the LINK platform.",
+      "23-hour battery with USB-C (LINK 2.0 is 50 hours with Micro-USB).",
+      "Memory-foam ear cushions and IPX4."
+    ],
+    "sources": [
+      {
+        "url": "https://isotunes.co.uk/products/link-aware",
+        "type": "official-product",
+        "title": "ISOtunes LINK Aware product page and tech specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No app; no app battery contract.",
+      "On-headset battery indicator behaviour is not documented.",
+      "Bluetooth codec list is not published.",
+      "No ANC (by design)."
+    ],
+    "notes": "LINK Aware trades battery life for Aware level-dependent listening compared with LINK 2.0.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "ISOtunes",
+    "companySlug": "isotunes",
+    "family": "LINK",
+    "model": "ISOtunes LINK 2.0 Helmet Mount",
+    "slug": "isotunes-link-2-0-helmet-mount",
+    "generation": "2.0",
+    "variant": "Helmet Mount",
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app. Same electronics as LINK 2.0 in a helmet-mount frame."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 50,
+      "caseHours": null,
+      "chargingIndicators": "On-headset battery indicator; exact behaviour not published.",
+      "notes": "One combined headset battery: lithium-ion, up to 50 hours (same platform as LINK 2.0). Helmet-mount frame; no charging case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. Passive ear-defender protection plus SafeMax 82 dB limiting."
+    },
+    "features": [
+      {
+        "id": "hearing-protection.passive",
+        "name": "Certified passive hearing protection",
+        "availability": "device-only",
+        "notes": "Helmet-mounted ear defenders; SNR depends on mounting/cushion."
+      },
+      {
+        "id": "hearing-protection.safemax",
+        "name": "SafeMax 82 dB volume limit",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.0 calls and streaming",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.noise-isolating-mic",
+        "name": "Noise-isolating microphone",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "mount.helmet",
+        "name": "Helmet-mount attachment",
+        "availability": "device-only",
+        "notes": "For hard hats/helmet systems."
+      },
+      {
+        "id": "battery.li-ion",
+        "name": "Rechargeable lithium-ion battery",
+        "availability": "device-only",
+        "notes": "Up to 50 hours."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Multifunction button",
+          "action": "Play/pause, next/previous, answer/end call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume + / −",
+          "action": "Adjust volume",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons; same control layout as LINK 2.0.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.0; codec list not published."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Helmet-mount frame instead of a headband.",
+      "Same 50-hour Bluetooth platform as LINK 2.0."
+    ],
+    "sources": [
+      {
+        "url": "https://isotunes.co.uk/products/link-2-0-helmet-mount",
+        "type": "official-product",
+        "title": "ISOtunes LINK 2.0 Helmet Mount product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://isotunes.co.uk/products/isotunes-link-2-0-en352",
+        "type": "official-product",
+        "title": "ISOtunes LINK 2.0 platform tech specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Helmet-mount attenuation rating is not captured per mounting system.",
+      "Battery indicator behaviour is not documented.",
+      "Bluetooth codec list is not published.",
+      "No ANC (by design)."
+    ],
+    "notes": "Helmet-mount SKU of LINK 2.0. Recorded separately because the mounting system and attenuation rating differ from the headband version.",
+    "researchedAt": "2026-11-10"
+  }
+]

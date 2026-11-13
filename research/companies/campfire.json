@@ -1,0 +1,176 @@
+[
+  {
+    "company": "Campfire Audio",
+    "companySlug": "campfire",
+    "family": "Orbit",
+    "model": "Orbit",
+    "slug": "campfire-orbit",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Campfire Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.gemo.campfire"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.gemo.campfire"
+      ],
+      "appVersionObserved": "2023-08-23 listing update",
+      "notes": "App provides EQ, touch-control customisation and firmware updates. No ANC or ambient features."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 30,
+      "chargingIndicators": "Case has a four-LED battery indicator (25/50/75/100%) that lights when the lid opens or the case button is pressed. Phone shows the earphone battery and Bluetooth connection.",
+      "notes": "8 h buds, 30 h additional in case = 38 h total. Case battery is not shown as a percentage in the app or phone.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC or ambient mode."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "App equalizer",
+        "availability": "official-app",
+        "notes": "Campfire Audio app EQ."
+      },
+      {
+        "id": "controls.customizable",
+        "name": "Customisable touch controls",
+        "availability": "official-app",
+        "notes": "Gesture functions can be reassigned in the app."
+      },
+      {
+        "id": "vendor.campfire.no-dsp",
+        "name": "No DSP tuning",
+        "availability": "device-only",
+        "notes": "Campfire deliberately avoids DSP for the acoustic profile."
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap (either bud)",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap (left)",
+          "action": "Previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap (right)",
+          "action": "Next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Triple tap",
+          "action": "Voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Long press (left)",
+          "action": "Volume down",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Long press (right)",
+          "action": "Volume up",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch gestures are reassignable in the Campfire Audio app. Some reviews criticise the app's usability."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX HD"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Single 10 mm dynamic driver. No ANC, no multipoint, no wear detection, no spatial audio. IPX4."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Touch-control reassignment",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.campfireaudio.com/products/orbit",
+        "type": "official-product",
+        "title": "Campfire Audio Orbit",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.gemo.campfire",
+        "type": "official-app-store",
+        "title": "Campfire Audio app",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.digitaltrends.com/home-theater/campfire-audio-orbit-review/",
+        "type": "reputable-secondary",
+        "title": "Orbit review: tap mapping",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official product page does not state Bluetooth version or multipoint support; multipoint assumed absent.",
+      "EQ band count and preset names are not published.",
+      "No official statement on wear detection; assumed absent.",
+      "Some reviewers report aptX Adaptive while Campfire lists aptX HD only; official list used."
+    ],
+    "notes": "Campfire Audio's only Bluetooth product to date. Out of stock at research time but still the current Orbit page.",
+    "researchedAt": "2026-11-10"
+  }
+]

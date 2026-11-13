@@ -1,0 +1,1662 @@
+[
+  {
+    "company": "Razer",
+    "companySlug": "razer",
+    "family": "Hammerhead",
+    "model": "Razer Hammerhead V3 HyperSpeed",
+    "slug": "razer-hammerhead-v3-hyperspeed",
+    "generation": "V3",
+    "variant": "HyperSpeed",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Razer Audio",
+      "platforms": [
+        "android",
+        "ios",
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Razer Audio (mobile) for EQ, ANC, remapping and battery; Razer Synapse 4 on PC for THX Spatial 7.1."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 30,
+      "chargingIndicators": "On-case LED bar for charging, pairing and alerts; no percentage display on case.",
+      "notes": "Razer claims up to 10 h per charge + 30 h from the case (40 h total) without stating the ANC split. Split/separate app layout inferred from Razer Audio; not confirmed for this generation.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Hybrid ANC with ambient/Quick Attention; ANC level adjustable in the Razer Audio app."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid Active Noise Cancellation",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient / Quick Attention mode",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "Razer HyperSpeed 2.4 GHz via case dongle",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Razer SmartSwitch dual wireless (2.4 GHz + Bluetooth)",
+        "availability": "both"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "THX Spatial 7.1 (PC)",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.razer.chroma-rgb",
+        "name": "Razer Chroma RGB",
+        "availability": "both"
+      },
+      {
+        "id": "control.touch",
+        "name": "Touch controls with remapping",
+        "availability": "both"
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4 water resistance",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "App equalizer",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause or accept/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Triple tap",
+          "action": "Switch between 2.4 GHz and Bluetooth",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Tap and hold 2 s",
+          "action": "Cycle ANC / ambient",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Triple tap, hold last tap 2 s",
+          "action": "Toggle gaming/low-latency mode",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Tap and hold 4 s",
+          "action": "Bluetooth pairing",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Backlit function button on each earbud (power/pairing).",
+      "configurableInApp": true,
+      "notes": "Gesture set follows the Hammerhead Pro HyperSpeed manual; V3 firmware may differ."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "10 mm drivers. THX Spatial 7.1 only on PC via Synapse. Bluetooth codecs not published; wear detection inferred from auto-pause behaviour."
+    },
+    "appOnlyFeatures": [
+      "THX Spatial 7.1 on PC",
+      "Chroma RGB lighting customisation",
+      "ANC level adjustment",
+      "Touch remapping"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 6.0 (up from 5.3)",
+      "Hybrid ANC with adjustable level",
+      "Removable compact dongle stored in the case",
+      "40 h total battery (up from 35 h)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.razer.com/mobile-earphones/razer-hammerhead-v3-hyperspeed",
+        "type": "official-product",
+        "title": "Razer Hammerhead V3 HyperSpeed",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC-on battery hours not published",
+      "Bluetooth codec list not published",
+      "ANC attenuation in dB not published",
+      "EQ band count not published",
+      "App battery layout not visually verified"
+    ],
+    "notes": "2026 flagship Hammerhead with 2.4 GHz case-dongle and Bluetooth 6.0.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Razer",
+    "companySlug": "razer",
+    "family": "Hammerhead",
+    "model": "Razer Hammerhead V3 X HyperSpeed",
+    "slug": "razer-hammerhead-v3-x-hyperspeed",
+    "generation": "V3",
+    "variant": "X HyperSpeed",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Razer Audio",
+      "platforms": [
+        "android",
+        "ios",
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Razer Audio for EQ and remapping; Synapse 4 for THX Spatial on PC."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 25,
+      "chargingIndicators": "On-case LED bar.",
+      "notes": "Up to 10 h + 25 h = 35 h total. No ANC, so no ANC-hours figure.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "Razer HyperSpeed 2.4 GHz via case dongle",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Razer SmartSwitch dual wireless",
+        "availability": "both"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "THX Spatial 7.1 (PC)",
+        "availability": "official-app"
+      },
+      {
+        "id": "control.touch",
+        "name": "Touch controls",
+        "availability": "device-only"
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4 water resistance",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "App equalizer",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Triple tap",
+          "action": "Switch audio source",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Tap and hold",
+          "action": "Voice assistant / pairing (model-dependent)",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "Function button on each earbud.",
+      "configurableInApp": true,
+      "notes": "Razer advertises intuitive touch controls; exact gesture map should be confirmed in the Razer Audio app."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "THX Spatial 7.1 on PC; codecs not published."
+    },
+    "appOnlyFeatures": [
+      "THX Spatial 7.1 on PC",
+      "EQ",
+      "Touch remapping"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 5.3",
+      "35 h total battery",
+      "Lower-cost model without ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.razer.com/mobile-earphones/razer-hammerhead-v3-x-hyperspeed",
+        "type": "official-product",
+        "title": "Razer Hammerhead V3 X HyperSpeed",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth codec list not published",
+      "EQ band count not published",
+      "Wear detection not stated",
+      "App battery layout not visually verified"
+    ],
+    "notes": "No-ANC sibling of the V3 HyperSpeed.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Razer",
+    "companySlug": "razer",
+    "family": "Hammerhead",
+    "model": "Razer Hammerhead Pro HyperSpeed",
+    "slug": "razer-hammerhead-pro-hyperspeed",
+    "generation": "Pro",
+    "variant": "HyperSpeed",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Razer Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Requires iOS 14 / Android 10 or newer. Remaps touch, toggles Do Not Disturb, EQ and Chroma RGB."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Case LED: static green = full, static orange = low, blinking red = critical. Shows case battery only, not earbud percentages.",
+      "notes": "Official manual documents only the case LED; total playtime is not stated in the manual. Qi wireless charging case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "App-adjustable hybrid ANC plus Quick Attention mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "App-adjustable hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Quick Attention mode",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz via USB-C dongle",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Razer SmartSwitch dual wireless",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.razer.chroma-rgb",
+        "name": "Razer Chroma RGB",
+        "availability": "both"
+      },
+      {
+        "id": "control.remap",
+        "name": "Remappable touch controls",
+        "availability": "official-app"
+      },
+      {
+        "id": "sensing.auto-pause",
+        "name": "Auto pause",
+        "availability": "device-only"
+      },
+      {
+        "id": "power.wireless-charging",
+        "name": "Qi wireless charging case",
+        "availability": "device-only"
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause; accept/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track; accept/switch call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Tap and hold 2 s",
+          "action": "ANC / ANC off / Quick Attention cycle",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Tap and hold 4 s",
+          "action": "Bluetooth pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Double tap, hold last tap 2 s",
+          "action": "Volume down (left) / up (right)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Triple tap",
+          "action": "Switch Bluetooth / USB-C dongle source",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Triple tap, hold last tap 2 s",
+          "action": "Gaming mode",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Backlit function button on each earbud; power on/off and case controls.",
+      "configurableInApp": true,
+      "notes": "Full default map taken from the official master guide."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "10 mm drivers, 20 Hz-20 kHz, 16 ohm, THX certified. Manual lists auto-pause; no codec list."
+    },
+    "appOnlyFeatures": [
+      "ANC level",
+      "Chroma RGB",
+      "Touch remapping",
+      "Do Not Disturb",
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "2.4 GHz dongle added",
+      "Wireless charging case",
+      "Chroma RGB",
+      "App-adjustable hybrid ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://dl.razerzone.com/master-guides/HammerheadProHyperSpeed/HammerheadProHyperSpeed-en.pdf",
+        "type": "official-manual",
+        "title": "Razer Hammerhead Pro HyperSpeed Master Guide",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery hours not stated in manual",
+      "Bluetooth codec list not published",
+      "ANC attenuation in dB not published",
+      "EQ band count not published",
+      "App battery layout not documented"
+    ],
+    "notes": "Manual confirms case LED semantics and full gesture map; playtime must be sourced elsewhere.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Razer",
+    "companySlug": "razer",
+    "family": "Barracuda",
+    "model": "Razer Barracuda V2 Pro",
+    "slug": "razer-barracuda-v2-pro",
+    "generation": "V2",
+    "variant": "Pro",
+    "releaseYear": 2026,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Razer Audio",
+      "platforms": [
+        "android",
+        "ios",
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Razer Audio for EQ/Do Not Disturb/battery; Synapse for PC features."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 50,
+      "budsHoursNoAnc": 70,
+      "caseHours": null,
+      "chargingIndicators": "USB-C charging; battery percentage in app/OS.",
+      "notes": "Razer states 70 h total with ANC off and up to 50 h with ANC on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Hybrid ANC with one-tap ambient mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "Razer HyperSpeed 2.4 GHz",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Simultaneous 2.4 GHz + Bluetooth 6.0",
+        "availability": "both"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "THX Spatial Audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Detachable HyperClear full-band mic + hidden beamforming mics",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "sensing.auto-pause",
+        "name": "Auto pause",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button short press",
+          "action": "Play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "Power button double press",
+          "action": "Next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "Power button triple press",
+          "action": "Switch 2.4 GHz / Bluetooth",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "Volume dial",
+          "action": "Volume",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup buttons and volume dial; ANC/ambient button.",
+      "configurableInApp": null,
+      "notes": "Button map not fully documented on the product page."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm TriForce bio-cellulose drivers; 285 g; fold-flat with dongle storage."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Do Not Disturb",
+      "THX Spatial"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 6.0",
+      "70 h battery (up from 40 h)",
+      "50 h with ANC on",
+      "40 mm bio-cellulose drivers",
+      "285 g"
+    ],
+    "sources": [
+      {
+        "url": "https://www.razer.com/gaming-headsets/razer-barracuda-v2-pro",
+        "type": "official-product",
+        "title": "Razer Barracuda V2 Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth codecs not published",
+      "ANC dB not published",
+      "EQ bands not published",
+      "Case/charging UI not applicable"
+    ],
+    "notes": "2026 refresh of the Barracuda Pro with much longer battery life.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Razer",
+    "companySlug": "razer",
+    "family": "Barracuda",
+    "model": "Razer Barracuda Pro",
+    "slug": "razer-barracuda-pro",
+    "generation": "1",
+    "variant": "Pro",
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Razer Audio",
+      "platforms": [
+        "android",
+        "ios",
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Razer Audio for EQ, ANC and battery; Synapse/THX on PC."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 40,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; battery status in app.",
+      "notes": "Razer claims up to 40 h; ANC-on figure not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Hybrid ANC with ambient mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "Razer HyperSpeed 2.4 GHz",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Razer SmartSwitch dual wireless",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.razer.thx-aaa",
+        "name": "THX Achromatic Audio Amplifier",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "THX Spatial Audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Integrated beamforming noise-cancelling mics",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button short press",
+          "action": "Play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "Power button double press",
+          "action": "Next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "Power button triple press",
+          "action": "Switch 2.4 GHz / Bluetooth",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "Earcup controls with dedicated source-switch button.",
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "50 mm TriForce bio-cellulose drivers; THX AAA amplifier."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "THX Spatial"
+    ],
+    "featureDeltaFromPrevious": [
+      "First Barracuda with hybrid ANC",
+      "THX AAA amplifier",
+      "50 mm bio-cellulose drivers"
+    ],
+    "sources": [
+      {
+        "url": "https://www.razer.com/gaming-headsets/razer-barracuda-pro",
+        "type": "official-product",
+        "title": "Razer Barracuda Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on hours not published",
+      "Bluetooth codecs not published",
+      "ANC dB not published",
+      "EQ bands not published"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Razer",
+    "companySlug": "razer",
+    "family": "Barracuda",
+    "model": "Razer Barracuda",
+    "slug": "razer-barracuda",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Razer Audio",
+      "platforms": [
+        "android",
+        "ios",
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 40,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; app battery status.",
+      "notes": "Up to 40 h; no ANC on this model.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "Razer HyperSpeed 2.4 GHz",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Razer SmartSwitch dual wireless",
+        "availability": "both"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "THX Spatial Audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Detachable HyperClear cardioid mic",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button single press",
+          "action": "Play/pause or accept call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "Double press",
+          "action": "Next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "Triple press",
+          "action": "Switch 2.4 GHz / Bluetooth",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons; detachable mic.",
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "TriForce 40 mm drivers."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "THX Spatial"
+    ],
+    "featureDeltaFromPrevious": [
+      "Non-Pro Barracuda introduced alongside Pro",
+      "40 h battery",
+      "SmartSwitch dual wireless"
+    ],
+    "sources": [
+      {
+        "url": "https://www.razer.com/gaming-headsets/razer-barracuda",
+        "type": "official-product",
+        "title": "Razer Barracuda",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth codecs not published",
+      "EQ bands not published"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Razer",
+    "companySlug": "razer",
+    "family": "Barracuda",
+    "model": "Razer Barracuda X",
+    "slug": "razer-barracuda-x",
+    "generation": "1",
+    "variant": "X",
+    "releaseYear": 2021,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Razer Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Check battery, EQ and Do Not Disturb."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 50,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; app battery status.",
+      "notes": "Up to 50 h; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "Razer HyperSpeed 2.4 GHz",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Razer SmartSwitch dual wireless",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Razer Audio EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.razer.do-not-disturb",
+        "name": "Do Not Disturb mode",
+        "availability": "official-app"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Detachable HyperClear cardioid mic",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single press",
+          "action": "Play/pause; accept/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "Double press",
+          "action": "Skip track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "Triple press",
+          "action": "Toggle HyperSpeed / Bluetooth",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "Buttons under the earcups plus dedicated source-switch button.",
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "250 g; TriForce 40 mm drivers; no spatial audio."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Do Not Disturb"
+    ],
+    "featureDeltaFromPrevious": [
+      "Lightweight 250 g build",
+      "50 h battery",
+      "SmartSwitch dual wireless"
+    ],
+    "sources": [
+      {
+        "url": "https://www.razer.com/gaming-headsets/razer-barracuda-x",
+        "type": "official-product",
+        "title": "Razer Barracuda X",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth codecs not published",
+      "EQ bands not published"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Razer",
+    "companySlug": "razer",
+    "family": "Barracuda",
+    "model": "Razer Barracuda X Chroma",
+    "slug": "razer-barracuda-x-chroma",
+    "generation": "1",
+    "variant": "X Chroma",
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Razer Audio",
+      "platforms": [
+        "android",
+        "ios",
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Razer Audio for EQ/Do Not Disturb; Synapse/Chroma for lighting on PC."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 70,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; 15 min charge gives up to 6 h.",
+      "notes": "70 h with lighting off; RGB reduces runtime (Razer does not publish the RGB-on figure on the product page).",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "Razer HyperSpeed 2.4 GHz",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Razer SmartSwitch dual wireless",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.razer.chroma-rgb",
+        "name": "Razer Chroma RGB earcups",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Razer Audio EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "power.quick-charge",
+        "name": "15 min = 6 h",
+        "availability": "device-only"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Detachable HyperClear cardioid mic",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single press",
+          "action": "Play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "Double press",
+          "action": "Skip track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "Triple press",
+          "action": "Switch source",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons; RGB on/off shortcut.",
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "TriForce 40 mm drivers."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Chroma RGB"
+    ],
+    "featureDeltaFromPrevious": [
+      "70 h battery (+40% vs Barracuda X)",
+      "Chroma RGB earcups",
+      "15 min quick charge for 6 h"
+    ],
+    "sources": [
+      {
+        "url": "https://www.razer.com/gaming-headsets/razer-barracuda-x-chroma",
+        "type": "official-product",
+        "title": "Razer Barracuda X Chroma",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "RGB-on battery hours not published",
+      "Bluetooth codecs not published",
+      "EQ bands not published"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Razer",
+    "companySlug": "razer",
+    "family": "BlackShark",
+    "model": "Razer BlackShark V3 Pro",
+    "slug": "razer-blackshark-v3-pro",
+    "generation": "V3",
+    "variant": "Pro",
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Razer Synapse",
+      "platforms": [
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "THX Spatial, EQ and firmware via Synapse; no mobile companion documented for this model."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 70,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; 15 min gives 6 h.",
+      "notes": "Up to 70 h; ANC-on figure not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Hybrid ANC; no transparency mode documented."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "HyperSpeed Wireless Gen-2",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Simultaneous 2.4 GHz + Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.usb-c-dongle",
+        "name": "USB and 3.5 mm wired modes",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "THX Spatial 7.1.4",
+        "availability": "official-app"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Detachable HyperClear mic",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Synapse EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "power.quick-charge",
+        "name": "15 min = 6 h",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power / pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume wheel",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mic mute button",
+          "action": "Mute",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup volume wheel, mute and source controls.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "4 modes of connectivity: 2.4 GHz, Bluetooth, USB, 3.5 mm. THX 7.1.4 on PC."
+    },
+    "appOnlyFeatures": [
+      "THX Spatial 7.1.4",
+      "EQ",
+      "Firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 5.3 added",
+      "4 connectivity modes",
+      "THX 7.1.4",
+      "70 h battery"
+    ],
+    "sources": [
+      {
+        "url": "https://www.razer.com/gaming-headsets/razer-blackshark-v3-pro",
+        "type": "official-product",
+        "title": "Razer BlackShark V3 Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on hours not published",
+      "Bluetooth codecs not published",
+      "ANC dB not published",
+      "Transparency mode not listed"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Razer",
+    "companySlug": "razer",
+    "family": "Kraken",
+    "model": "Razer Kraken V4 Pro",
+    "slug": "razer-kraken-v4-pro",
+    "generation": "V4",
+    "variant": "Pro",
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Razer Synapse",
+      "platforms": [
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "OLED Control Hub plus Synapse for EQ, haptics and lighting."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 50,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; battery shown on OLED hub.",
+      "notes": "Up to 50 h (2.4 GHz, haptics/lighting off); 45 h with 2.4 GHz + Bluetooth; 13 h with haptics and lighting on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC; passive isolation plus Sensa HD haptics."
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "HyperSpeed 2.4 GHz",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Simultaneous 2.4 GHz + Bluetooth 5.3",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.usb-c-dongle",
+        "name": "USB wired and 3.5 mm modes",
+        "availability": "device-only"
+      },
+      {
+        "id": "vendor.razer.sensa-hd",
+        "name": "Razer Sensa HD Haptics",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.razer.oled-control-hub",
+        "name": "OLED Control Hub",
+        "availability": "device-only"
+      },
+      {
+        "id": "vendor.razer.chroma-rgb",
+        "name": "Chroma RGB",
+        "availability": "both"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "THX Spatial Audio",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "OLED hub knob",
+          "action": "Volume / menu navigation",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Mode button",
+          "action": "Cycle hub settings",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Headset buttons",
+          "action": "Power, mute, source",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Dedicated OLED Control Hub with clickable knob and mode button.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "game",
+        "movie",
+        "music",
+        "custom"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "4 EQ profiles on the hub: Game, Movie, Music, Custom."
+    },
+    "appOnlyFeatures": [
+      "THX Spatial",
+      "Sensa HD haptic profiles",
+      "OLED customisation",
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Sensa HD haptics",
+      "OLED Control Hub",
+      "4 connectivity modes",
+      "Bluetooth 5.3"
+    ],
+    "sources": [
+      {
+        "url": "https://www.razer.com/gaming-headsets/razer-kraken-v4-pro",
+        "type": "official-product",
+        "title": "Razer Kraken V4 Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth codecs not published",
+      "EQ band count not published",
+      "ANC not offered"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Razer",
+    "companySlug": "razer",
+    "family": "Kraken Kitty",
+    "model": "Razer Kraken Kitty V2 BT",
+    "slug": "razer-kraken-kitty-v2-bt",
+    "generation": "V2",
+    "variant": "BT",
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Razer Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "No app-specific feature page on the product listing; Chroma lighting and EQ are controlled through Razer Audio where supported."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 40,
+      "caseHours": null,
+      "chargingIndicators": "USB-C charging; LED status.",
+      "notes": "Up to 40 h with Chroma off, 30 h with Chroma on (per official FAQ).",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC; beamforming mics with noise suppression only."
+    },
+    "features": [
+      {
+        "id": "vendor.razer.chroma-rgb",
+        "name": "Chroma RGB kitty ears and earcups",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.2 with Gaming Mode",
+        "availability": "device-only"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Integrated beamforming noise-cancelling mics",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Razer Audio EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button long press 5 s",
+          "action": "Bluetooth pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Power button short press",
+          "action": "Play/pause",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume buttons",
+          "action": "Volume",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Power, volume and mic mute buttons on earcup.",
+      "configurableInApp": false,
+      "notes": "Gaming Mode activated by long-press per official FAQ."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "TriForce 40 mm drivers; 325 g; Bluetooth only."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Chroma lighting"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 5.2",
+      "40 h battery (60 h RGB off claim conflicts with FAQ 40/30 h)",
+      "Detachable-free integrated mics"
+    ],
+    "sources": [
+      {
+        "url": "https://www.razer.com/mobile-headsets/razer-kraken-kitty-v2-bt",
+        "type": "official-product",
+        "title": "Razer Kraken Kitty V2 BT",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official page claims 40 h and FAQ says 30 h RGB on / 60 h RGB off; conflicting battery copy",
+      "Bluetooth codecs not published",
+      "Multipoint not stated",
+      "App support for this model not confirmed"
+    ],
+    "notes": "Battery copy on the page is internally inconsistent; both official figures are recorded.",
+    "researchedAt": "2026-11-10"
+  }
+]

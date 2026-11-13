@@ -1,0 +1,2326 @@
+[
+  {
+    "company": "SoundPEATS",
+    "companySlug": "soundpeats",
+    "family": "Air",
+    "model": "SoundPEATS Air5 Pro",
+    "slug": "soundpeats-air5-pro",
+    "generation": "5",
+    "variant": "Pro",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "SOUNDPEATS (PeatsAudio)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thirtydays.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thirtydays.headset"
+      ],
+      "appVersionObserved": null,
+      "notes": "PeatsAudio app; Adaptive EQ test, fit test, codec switches, find earbuds."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7.5,
+      "caseHours": 37,
+      "chargingIndicators": "10-minute charge = 2 hours.",
+      "notes": "Official 7.5 h / 37 h total; ANC-on split not stated. 35 mAh per bud, 520 mAh case. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 37
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 55,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "AI adaptive ANC up to -55 dB; 6 mics with cVc 8.0."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "AI adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / aptX Lossless",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.adaptive-eq",
+        "name": "Adaptive EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "Game mode",
+        "availability": "official-app"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "official-app"
+      },
+      {
+        "id": "find-my-earbuds",
+        "name": "Find earbuds",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Customizable touch controls in PeatsAudio."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LC3",
+        "LDAC",
+        "aptX",
+        "aptX Adaptive",
+        "aptX Lossless"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "10 mm PU+PEEK composite driver; Bluetooth 5.4; IPX5."
+    },
+    "appOnlyFeatures": [
+      "Adaptive EQ",
+      "fit test",
+      "codec switches",
+      "find earbuds",
+      "game mode"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC depth raised to 55 dB versus Air4 Pro",
+      "aptX Lossless and LE Audio added",
+      "Bluetooth 5.4",
+      "Adaptive EQ and fit test"
+    ],
+    "sources": [
+      {
+        "url": "https://soundpeats.com/products/soundpeats-air5-pro",
+        "type": "official-product",
+        "title": "SoundPEATS Air5 Pro product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on playtime",
+      "Spatial audio support",
+      "EQ preset names",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SoundPEATS",
+    "companySlug": "soundpeats",
+    "family": "Air",
+    "model": "SoundPEATS Air5 Pro Plus",
+    "slug": "soundpeats-air5-pro-plus",
+    "generation": "5",
+    "variant": "Pro Plus",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "SOUNDPEATS (PeatsAudio)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thirtydays.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thirtydays.headset"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": "Playtime not captured. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC expected to match Air5 Pro; dB not captured."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.xmems",
+        "name": "XMEMS tweeter + 10 mm dynamic driver",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / aptX Lossless",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LC3",
+        "LDAC",
+        "aptX",
+        "aptX Adaptive",
+        "aptX Lossless"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "XMEMS solid-state tweeter plus 10 mm dynamic driver."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "codec switches"
+    ],
+    "featureDeltaFromPrevious": [
+      "XMEMS tweeter added versus Air5 Pro"
+    ],
+    "sources": [
+      {
+        "url": "https://soundpeats.com/products/air5-pro-plus-tws-earbuds-xmems-10mm-drivers-hi-res-audio-ldac-aptx-lossless",
+        "type": "official-product",
+        "title": "SoundPEATS Air5 Pro Plus product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery hours",
+      "ANC dB",
+      "Full spec table not captured",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": "Newest Air variant; many specs unavailable in retrieved content.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SoundPEATS",
+    "companySlug": "soundpeats",
+    "family": "H",
+    "model": "SoundPEATS H3",
+    "slug": "soundpeats-h3",
+    "generation": "3",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "SOUNDPEATS (PeatsAudio)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thirtydays.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thirtydays.headset"
+      ],
+      "appVersionObserved": null,
+      "notes": "LDAC disabled by default; enable in PeatsAudio."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 37,
+      "chargingIndicators": "10-minute charge = 2 hours.",
+      "notes": "Official 37 h total; 35 mAh per bud, 400 mAh case. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 37
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC support implied by H-series positioning; depth not captured."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / aptX Lossless",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "aptX",
+        "aptX Adaptive",
+        "aptX Lossless"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "QCC3091; Bluetooth 5.4; IPX5."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "LDAC toggle"
+    ],
+    "featureDeltaFromPrevious": [
+      "LDAC and aptX Lossless at lower price than Air5 Pro"
+    ],
+    "sources": [
+      {
+        "url": "https://soundpeats.com/products/soundpeats-h3",
+        "type": "official-product",
+        "title": "SoundPEATS H3 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB depth",
+      "Per-bud battery hours",
+      "ANC-on hours",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SoundPEATS",
+    "companySlug": "soundpeats",
+    "family": "Air",
+    "model": "SoundPEATS Air4 Pro",
+    "slug": "soundpeats-air4-pro",
+    "generation": "4",
+    "variant": "Pro",
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "SOUNDPEATS (PeatsAudio)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thirtydays.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thirtydays.headset"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9,
+      "caseHours": 30,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 9 h/30 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 45,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "Adaptive ANC up to 45 dB, 6 mics."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "13 mm driver; IPX5."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "LDAC toggle"
+    ],
+    "featureDeltaFromPrevious": [
+      "LDAC and 45 dB ANC versus Air3 Pro"
+    ],
+    "sources": [
+      {
+        "url": "https://soundpeats.com/collections/all",
+        "type": "official-product",
+        "title": "SoundPEATS product catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery values approximate",
+      "Dedicated page removed from current catalogue",
+      "ANC dB from launch materials",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SoundPEATS",
+    "companySlug": "soundpeats",
+    "family": "Air",
+    "model": "SoundPEATS Air4 Lite",
+    "slug": "soundpeats-air4-lite",
+    "generation": "4",
+    "variant": "Lite",
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "SOUNDPEATS (PeatsAudio)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thirtydays.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thirtydays.headset"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 30,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 8 h/30 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC up to 35 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IPX5."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Lower-cost variant of Air4 Pro; no LDAC"
+    ],
+    "sources": [
+      {
+        "url": "https://soundpeats.com/collections/all",
+        "type": "official-product",
+        "title": "SoundPEATS product catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery values approximate",
+      "No current product page",
+      "Codec list uncertain",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SoundPEATS",
+    "companySlug": "soundpeats",
+    "family": "Air",
+    "model": "SoundPEATS Air3 Pro",
+    "slug": "soundpeats-air3-pro",
+    "generation": "3",
+    "variant": "Pro",
+    "releaseYear": 2022,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "SOUNDPEATS (PeatsAudio)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thirtydays.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thirtydays.headset"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 24,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 6 h/24 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC up to 35 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "audio.aptx-adaptive",
+        "name": "aptX Adaptive",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IPX4."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "aptX Adaptive and ANC versus Air3"
+    ],
+    "sources": [
+      {
+        "url": "https://soundpeats.com/collections/all",
+        "type": "official-product",
+        "title": "SoundPEATS product catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery values approximate",
+      "No current product page",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SoundPEATS",
+    "companySlug": "soundpeats",
+    "family": "Capsule",
+    "model": "SoundPEATS Capsule3 Pro",
+    "slug": "soundpeats-capsule3-pro",
+    "generation": "3",
+    "variant": "Pro",
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "SOUNDPEATS (PeatsAudio)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thirtydays.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thirtydays.headset"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 52,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 8 h/52 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 43,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC up to 43 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12 mm driver; IPX4."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "LDAC toggle"
+    ],
+    "featureDeltaFromPrevious": [
+      "LDAC and 52 h case battery versus Capsule2"
+    ],
+    "sources": [
+      {
+        "url": "https://soundpeats.com/collections/all",
+        "type": "official-product",
+        "title": "SoundPEATS product catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery values approximate",
+      "No current product page",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SoundPEATS",
+    "companySlug": "soundpeats",
+    "family": "Capsule",
+    "model": "SoundPEATS Capsule3 Pro+",
+    "slug": "soundpeats-capsule3-pro-plus",
+    "generation": "3",
+    "variant": "Pro Plus",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "SOUNDPEATS (PeatsAudio)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thirtydays.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thirtydays.headset"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 52,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 8 h/52 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 46,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC up to 46 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "calls.6mic",
+        "name": "6-mic call noise reduction",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12 mm driver; IPX4."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "LDAC toggle"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC depth 46 dB versus 43 dB",
+      "6-mic call array"
+    ],
+    "sources": [
+      {
+        "url": "https://soundpeats.com/collections/all",
+        "type": "official-product",
+        "title": "SoundPEATS product catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery values approximate",
+      "No current product page",
+      "ANC dB from launch materials",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SoundPEATS",
+    "companySlug": "soundpeats",
+    "family": "Mini",
+    "model": "SoundPEATS Mini Pro",
+    "slug": "soundpeats-mini-pro",
+    "generation": "Mini",
+    "variant": "Pro",
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "SOUNDPEATS (PeatsAudio)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thirtydays.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thirtydays.headset"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 6,
+      "caseHours": 18,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 5 h ANC / 6 h off, 18 h case. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC up to 35 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "design.compact",
+        "name": "Compact body",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "IPX5."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC added to Mini line"
+    ],
+    "sources": [
+      {
+        "url": "https://soundpeats.com/collections/all",
+        "type": "official-product",
+        "title": "SoundPEATS product catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery values approximate",
+      "Multipoint",
+      "No current product page",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SoundPEATS",
+    "companySlug": "soundpeats",
+    "family": "Opera",
+    "model": "SoundPEATS Opera05",
+    "slug": "soundpeats-opera05",
+    "generation": "05",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "SOUNDPEATS (PeatsAudio)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thirtydays.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thirtydays.headset"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 42,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 8 h/42 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 45,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC up to 45 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.dual-driver",
+        "name": "Dual dynamic drivers",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Dual drivers; IPX4."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "LDAC toggle"
+    ],
+    "featureDeltaFromPrevious": [
+      "Dual-driver Opera series"
+    ],
+    "sources": [
+      {
+        "url": "https://soundpeats.com/collections/all",
+        "type": "official-product",
+        "title": "SoundPEATS product catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery values approximate",
+      "No current product page",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SoundPEATS",
+    "companySlug": "soundpeats",
+    "family": "Space",
+    "model": "SoundPEATS Space Pro",
+    "slug": "soundpeats-space-pro",
+    "generation": "Pro",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "SOUNDPEATS (PeatsAudio)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thirtydays.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thirtydays.headset"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 151,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; 2.5 h charge.",
+      "notes": "Official 151 h playtime (ANC off); ANC-on hours not captured.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 56,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "56 dB adaptive ANC per product title; modes not fully captured."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "56 dB adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "controls.buttons",
+        "name": "Physical buttons",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Bluetooth 5.4; 282 g."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "151 h battery; new flagship over-ear"
+    ],
+    "sources": [
+      {
+        "url": "https://soundpeats.com/products/soundpeats-space-pro-over-ear-anc-headphones-with-long-battery-life",
+        "type": "official-product",
+        "title": "SoundPEATS Space Pro product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC-on playtime",
+      "Full ANC mode list",
+      "EQ preset names"
+    ],
+    "notes": "Battery claim of 151 h is unusually high and should be verified against app behaviour.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SoundPEATS",
+    "companySlug": "soundpeats",
+    "family": "Cove",
+    "model": "SoundPEATS Cove Pro",
+    "slug": "soundpeats-cove-pro",
+    "generation": "Pro",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "SOUNDPEATS (PeatsAudio)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thirtydays.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thirtydays.headset"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 58,
+      "budsHoursNoAnc": 95,
+      "caseHours": null,
+      "chargingIndicators": "10 minutes = 11 hours; 2.1 h full charge.",
+      "notes": "Official 95 h ANC off / 58 h ANC on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 56,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "56 dB adaptive ANC; 7-mic AI ENC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "56 dB adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "water.ipx4",
+        "name": "IPX4",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.buttons",
+        "name": "Physical buttons",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Bluetooth 6.0; 251 g; 750 mAh."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 6.0 versus Space Pro 5.4",
+      "58 h ANC-on battery"
+    ],
+    "sources": [
+      {
+        "url": "https://soundpeats.com/products/cove-pro-over-ear-headphones-56db-adaptive-anc-headphones-with-95h-playtime-7-mic-ai-enc",
+        "type": "official-product",
+        "title": "SoundPEATS Cove Pro product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Full ANC mode list",
+      "EQ presets"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SoundPEATS",
+    "companySlug": "soundpeats",
+    "family": "Clip",
+    "model": "SoundPEATS Clip1",
+    "slug": "soundpeats-clip1",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "SOUNDPEATS (PeatsAudio)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thirtydays.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thirtydays.headset"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 30,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 30 h total; 45 mAh per bud, 450 mAh case. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear clip; no ANC."
+    },
+    "features": [
+      {
+        "id": "design.clip",
+        "name": "Open-ear clip",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "water.ipx5",
+        "name": "IPX5",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Bluetooth 5.4; IPX5."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "LDAC in a budget clip design"
+    ],
+    "sources": [
+      {
+        "url": "https://soundpeats.com/products/clip1",
+        "type": "official-product",
+        "title": "SoundPEATS Clip1 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Per-bud battery hours",
+      "EQ presets",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SoundPEATS",
+    "companySlug": "soundpeats",
+    "family": "PearlClip",
+    "model": "SoundPEATS PearlClip Pro",
+    "slug": "soundpeats-pearlclip-pro",
+    "generation": "Pro",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "SOUNDPEATS (PeatsAudio)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thirtydays.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thirtydays.headset"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 24,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 24 h total; 35 mAh per bud, 350 mAh case. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 24
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear clip; no ANC."
+    },
+    "features": [
+      {
+        "id": "design.clip",
+        "name": "Pearl-style open-ear clip",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "water.ipx5",
+        "name": "IPX5",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Bluetooth 5.4; IPX5; 5.85 g per bud."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Fashion-focused clip variant; no LDAC"
+    ],
+    "sources": [
+      {
+        "url": "https://soundpeats.com/products/soundpeats-pearlclip-pro",
+        "type": "official-product",
+        "title": "SoundPEATS PearlClip Pro product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Per-bud battery hours",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SoundPEATS",
+    "companySlug": "soundpeats",
+    "family": "UU",
+    "model": "SoundPEATS UU2 (POP Clip2)",
+    "slug": "soundpeats-uu2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "SOUNDPEATS (PeatsAudio)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thirtydays.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thirtydays.headset"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 42,
+      "chargingIndicators": "10 minutes = 2 hours.",
+      "notes": "Official 42 h total; 50 mAh per bud, 500 mAh case. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 42
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear clip; no ANC."
+    },
+    "features": [
+      {
+        "id": "design.clip",
+        "name": "Open-ear clip",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "water.ipx5",
+        "name": "IPX5",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.buttons",
+        "name": "Physical buttons",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Button on each clip.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Bluetooth 6.0; IPX5; ~5 g per bud."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 6.0 and 42 h battery versus earlier UU"
+    ],
+    "sources": [
+      {
+        "url": "https://soundpeats.com/products/uu2-clip-on-earbuds",
+        "type": "official-product",
+        "title": "SoundPEATS UU2 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Per-bud battery hours",
+      "EQ presets",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": "Sold as POP Clip2 in some markets.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SoundPEATS",
+    "companySlug": "soundpeats",
+    "family": "Q",
+    "model": "SoundPEATS Q40 HD",
+    "slug": "soundpeats-q40-hd",
+    "generation": "40",
+    "variant": "HD",
+    "releaseYear": 2025,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "SOUNDPEATS (PeatsAudio)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thirtydays.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thirtydays.headset"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "1.5 h charge; 100 h standby.",
+      "notes": "Playtime not published on retrieved page; 110 mAh battery.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC; neckband sports design."
+    },
+    "features": [
+      {
+        "id": "design.neckband",
+        "name": "Neckband",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "water.ip67",
+        "name": "IP67",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.buttons",
+        "name": "Physical controls",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "power/pairing",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Neckband multi-function button.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "Bluetooth 5.4; IP67; 110 mAh."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "LDAC and IP67 in a neckband"
+    ],
+    "sources": [
+      {
+        "url": "https://soundpeats.com/products/soundpeats-q40-hd-neckband-sports-bluetooth-earphone",
+        "type": "official-product",
+        "title": "SoundPEATS Q40 HD product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Playtime",
+      "Multipoint",
+      "EQ presets"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

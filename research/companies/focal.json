@@ -1,0 +1,394 @@
+[
+  {
+    "company": "Focal",
+    "companySlug": "focal",
+    "family": "Bathys",
+    "model": "Bathys",
+    "slug": "focal-bathys",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Focal & Naim",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://www.focal.com/focal-naim-app"
+      ],
+      "appVersionObserved": null,
+      "notes": "App controls ANC mode, 5-band EQ, Mimi hearing personalisation, voice assistant selection, LED brightness and firmware. App works in Bluetooth mode only."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 30,
+      "budsHoursNoAnc": 30,
+      "caseHours": null,
+      "chargingIndicators": "Earcup LED; app shows remaining battery capacity.",
+      "notes": "Single headphone battery, no case. 30 h Bluetooth with ANC, 35 h jack, 42 h USB-DAC. 15 min gives 5 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "Silent",
+        "Soft",
+        "Transparent"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Three selectable ANC modes. No adaptive/auto mode or wind-specific mode documented."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancelling",
+        "availability": "both",
+        "notes": "Silent, Soft, Transparent."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparent mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band graphical EQ",
+        "availability": "official-app",
+        "notes": "Home and Loudness presets plus custom settings stored on the headphones."
+      },
+      {
+        "id": "vendor.focal.mimi",
+        "name": "Mimi Hearing Test personalisation",
+        "availability": "official-app",
+        "notes": "Hearing profile stored on the headphones and applied in all modes."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "both",
+        "notes": "Two devices; up to eight paired."
+      },
+      {
+        "id": "connectivity.usb-dac",
+        "name": "USB-DAC mode",
+        "availability": "device-only",
+        "notes": "24-bit/192 kHz PCM; 176.4 kHz unsupported."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Proximity sensor",
+        "availability": "device-only",
+        "notes": "Auto pause/resume; disabled in USB-DAC mode."
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "Hi-Res USB",
+        "availability": "device-only",
+        "notes": "24-bit/192 kHz over USB-C."
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Multifunction button, single press",
+          "action": "Play/pause; answer call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Multifunction button, long press 2 s",
+          "action": "Reject call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Bluetooth button, long press",
+          "action": "Pairing mode",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "ANC button",
+          "action": "Cycle Silent / Soft / Transparent",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Voice assistant button",
+          "action": "Launch selected assistant",
+          "configurableInApp": true,
+          "notes": "Assistant chosen in the app (Google Assistant, Amazon Alexa or Siri)."
+        }
+      ],
+      "physicalButtons": "Bluetooth/power, multifunction, ANC and voice-assistant buttons plus volume controls on the earcup.",
+      "configurableInApp": false,
+      "notes": "No touch surface."
+    },
+    "audio": {
+      "eqPresets": [
+        "Home",
+        "Loudness"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm aluminium/magnesium M-shaped dome. 15 Hz–22 kHz. No spatial audio or head tracking."
+    },
+    "appOnlyFeatures": [
+      "ANC mode selection",
+      "5-band EQ and presets",
+      "Mimi hearing personalisation",
+      "Voice assistant selection",
+      "LED brightness",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.focal.com/products/bathys",
+        "type": "official-product",
+        "title": "Focal Bathys",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.focal.com/focal-naim-app",
+        "type": "official-support",
+        "title": "Focal & Naim app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC attenuation in dB is not published.",
+      "Focal & Naim app package ID was not confirmed.",
+      "Exact button remapping options beyond the voice assistant are not documented."
+    ],
+    "notes": "Bathys is Focal's first ANC wireless headphone. USB-DAC mode disables the app, proximity sensor, voice prompts and some mic functions.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Focal",
+    "companySlug": "focal",
+    "family": "Bathys",
+    "model": "Bathys MG",
+    "slug": "focal-bathys-mg",
+    "generation": "2",
+    "variant": "MG",
+    "releaseYear": 2025,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Focal & Naim",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://www.focal.com/focal-naim-app"
+      ],
+      "appVersionObserved": null,
+      "notes": "Same app feature set as Bathys; adds LED control and the same Mimi hearing personalisation."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 30,
+      "budsHoursNoAnc": 30,
+      "caseHours": null,
+      "chargingIndicators": "Earcup LED; app shows remaining battery capacity.",
+      "notes": "30 h Bluetooth ANC, 35 h jack, 42 h USB-DAC. 15 min gives 5 h. 1060 mAh.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "Silent",
+        "Soft",
+        "Transparent"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Three modes; optimised microphones versus Bathys. No adaptive mode documented."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancelling",
+        "availability": "both",
+        "notes": "Silent, Soft, Transparent."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparent mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band graphical EQ",
+        "availability": "official-app",
+        "notes": "Home/Loudness presets plus custom."
+      },
+      {
+        "id": "vendor.focal.mimi",
+        "name": "Mimi Hearing Test personalisation",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "both",
+        "notes": "Two devices."
+      },
+      {
+        "id": "connectivity.usb-dac",
+        "name": "USB-DAC mode",
+        "availability": "device-only",
+        "notes": "24-bit/192 kHz."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Proximity sensor",
+        "availability": "device-only",
+        "notes": "Auto pause/resume; unavailable in DAC mode."
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Multifunction button, single press",
+          "action": "Play/pause; answer call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Multifunction button, long press 2 s",
+          "action": "Reject call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "ANC button",
+          "action": "Cycle Silent / Soft / Transparent",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Voice assistant button",
+          "action": "Launch selected assistant",
+          "configurableInApp": true,
+          "notes": "Google Assistant, Amazon Alexa or Siri."
+        }
+      ],
+      "physicalButtons": "Bluetooth/power, multifunction, ANC and voice-assistant buttons plus volume on the earcup.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Home",
+        "Loudness"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm magnesium M-profile dome. 10 Hz–22 kHz. No spatial audio."
+    },
+    "appOnlyFeatures": [
+      "ANC mode selection",
+      "5-band EQ",
+      "Mimi hearing personalisation",
+      "Voice assistant selection",
+      "LED brightness",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Magnesium M-profile drivers replace aluminium/magnesium domes",
+      "Bluetooth 5.2 instead of 5.1",
+      "Optimised microphones for improved ANC and voice isolation",
+      "Frequency response extended to 10 Hz–22 kHz",
+      "New Chestnut and Graphen Grey finishes"
+    ],
+    "sources": [
+      {
+        "url": "https://www.focal.com/products/bathys-mg",
+        "type": "official-product",
+        "title": "Focal Bathys MG",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.focal.com/focal-naim-app",
+        "type": "official-support",
+        "title": "Focal & Naim app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC attenuation in dB is not published.",
+      "Focal & Naim app package ID was not confirmed.",
+      "One FAQ answer lists 40 h USB-DAC while the spec table says 42 h; the spec table is used."
+    ],
+    "notes": "Bathys MG is a distinct generation, not just a finish. Same battery and EQ as Bathys.",
+    "researchedAt": "2026-11-10"
+  }
+]

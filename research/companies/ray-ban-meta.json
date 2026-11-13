@@ -1,0 +1,1151 @@
+[
+  {
+    "company": "Ray-Ban Meta",
+    "companySlug": "ray-ban-meta",
+    "family": "Ray-Ban Meta",
+    "model": "Ray-Ban Meta Smart Glasses (Gen 1)",
+    "slug": "ray-ban-meta-gen-1",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Meta AI (formerly Meta View)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.facebook.stella"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.facebook.stella"
+      ],
+      "appVersionObserved": null,
+      "notes": "Meta View was renamed Meta AI. The app is required for setup, battery status, capture import and settings."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 4,
+      "caseHours": 32,
+      "chargingIndicators": "Case front LED (green/orange/red) and Meta AI app. While glasses are docked the LED reports glasses charge; when empty it reports case charge.",
+      "notes": "Up to 4 h moderate use, about 3.5 h continuous audio or 4 h calls. Meta Help says the case adds 32 h; a Ray-Ban comparison page says 48 h, an official inconsistency. The app shows the case only while the glasses are docked; the case value disappears when the glasses are removed.",
+      "hoursBasis": "case-only",
+      "caseOnlyHours": 32,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC; open-ear by design. Wind-noise reduction applies to the microphone array and calls, not to noise cancellation."
+    },
+    "features": [
+      {
+        "id": "audio.open-ear",
+        "name": "Open-ear speakers",
+        "availability": "device-only",
+        "notes": "Two custom-built speakers in the temples."
+      },
+      {
+        "id": "camera.photo",
+        "name": "12 MP ultra-wide camera",
+        "availability": "device-only",
+        "notes": "3024 x 4032 px stills."
+      },
+      {
+        "id": "camera.video",
+        "name": "1080p video capture",
+        "availability": "device-only",
+        "notes": "Up to 1080p 60 fps; 32 GB storage."
+      },
+      {
+        "id": "assistant.meta-ai",
+        "name": "Meta AI",
+        "availability": "both",
+        "notes": "Wake word 'Hey Meta' and touchpad invocation."
+      },
+      {
+        "id": "translation.live",
+        "name": "Live translation",
+        "availability": "both",
+        "notes": "Requires phone connectivity and supported language."
+      },
+      {
+        "id": "controls.touch",
+        "name": "Temple touchpad",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "controls.capture-button",
+        "name": "Capture button",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.3",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wifi",
+        "name": "Wi-Fi 6 media transfer",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto on-off",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "app.battery-status",
+        "name": "Battery status in app",
+        "availability": "official-app",
+        "notes": "Shows glasses, and case while docked."
+      },
+      {
+        "id": "app.battery-saver",
+        "name": "Battery saver",
+        "availability": "official-app",
+        "notes": "Available on all Ray-Ban Meta glasses per Meta Help."
+      },
+      {
+        "id": "app.media-import",
+        "name": "Photo and video import",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap touchpad",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap touchpad",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "swipe forward/back",
+          "action": "volume up/down",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold touchpad",
+          "action": "invoke Meta AI",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "capture button",
+          "action": "take photo / start-stop video",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "power slider",
+          "action": "power on/off",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "voice",
+          "action": "'Hey Meta' wake word",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Capture button and power slider on the right temple",
+      "configurableInApp": true,
+      "notes": "Frame styles Wayfarer, Headliner and Skyler are style variants of this generation, not separate hardware records."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "Open-ear, 5-mic array, Bluetooth 5.3 and Wi-Fi 6. Meta does not publish a codec list or an EQ contract for Gen 1; no multipoint claim."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "battery-saver",
+      "media-import",
+      "firmware-update",
+      "meta-ai-settings"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://india.ray-ban.com/discover/discover-ray-ban.html",
+        "type": "official-regional",
+        "title": "Discover Ray-Ban Meta: Gen 1 and Gen 2 specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.meta.com/help/ai-glasses/303057485648146/",
+        "type": "official-support",
+        "title": "Battery life on AI glasses",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.meta.com/help/ai-glasses/844064497339059/",
+        "type": "official-support",
+        "title": "How to charge AI glasses",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.facebook.stella",
+        "type": "official-app-store",
+        "title": "Meta AI app listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official codec list; SBC/AAC assumed but unverified.",
+      "Continuous-audio figure varies between 3 h and 3.5 h across official Ray-Ban pages.",
+      "Case-hour figure conflicts: Meta Help says 32 h, Ray-Ban comparison page says 48 h.",
+      "No multipoint claim; not documented.",
+      "App EQ/bass controls not documented for Gen 1."
+    ],
+    "notes": "First Meta-branded Ray-Ban generation. Frame styles and lens choices are commercial variants of the same electronics.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Ray-Ban Meta",
+    "companySlug": "ray-ban-meta",
+    "family": "Ray-Ban Meta",
+    "model": "Ray-Ban Meta Smart Glasses (Gen 2)",
+    "slug": "ray-ban-meta-gen-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Meta AI",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.facebook.stella"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.facebook.stella"
+      ],
+      "appVersionObserved": null,
+      "notes": "Required for setup, battery, media import and settings."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 48,
+      "chargingIndicators": "Case front LED and Meta AI app; 50% charge in 20 minutes.",
+      "notes": "Up to 8 h typical use, 5 h continuous audio and 5.5 h continuous calls. Case adds 48 h. App shows glasses and case separately only while the glasses are docked.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. The 5-mic array improves call pickup and immersive recording; it is not noise cancellation."
+    },
+    "features": [
+      {
+        "id": "audio.open-ear",
+        "name": "Open-ear speakers",
+        "availability": "device-only",
+        "notes": "Two open-ear speakers with higher maximum volume and more bass than Gen 1."
+      },
+      {
+        "id": "camera.photo",
+        "name": "12 MP ultra-wide camera",
+        "availability": "device-only",
+        "notes": "3024 x 4032 px stills."
+      },
+      {
+        "id": "camera.video",
+        "name": "3K Ultra HD video",
+        "availability": "device-only",
+        "notes": "Up to 3K 30 fps; 1080p 60 fps; 32 GB storage."
+      },
+      {
+        "id": "assistant.meta-ai",
+        "name": "Meta AI",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "translation.live",
+        "name": "Live translation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "controls.touch",
+        "name": "Temple touchpad",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "controls.capture-button",
+        "name": "Capture button",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.3",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wifi",
+        "name": "Wi-Fi 6 media transfer",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto on-off",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "app.battery-status",
+        "name": "Battery status in app",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.battery-saver",
+        "name": "Battery saver",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.media-import",
+        "name": "Photo and video import",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap touchpad",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap touchpad",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "swipe forward/back",
+          "action": "volume up/down",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold touchpad",
+          "action": "invoke Meta AI",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "capture button",
+          "action": "take photo / start-stop video",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "power slider",
+          "action": "power on/off",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "voice",
+          "action": "'Hey Meta' wake word",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Capture button and power slider on the right temple",
+      "configurableInApp": true,
+      "notes": "Wayfarer, Headliner and Skyler are frame styles. Gen 2 Optics (Blayzer/Scriber) uses the same electronics in prescription-oriented frames and is not a separate hardware record."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "Open-ear, 5-mic array, Bluetooth 5.3 and Wi-Fi 6. No published codec list, EQ contract or multipoint claim."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "battery-saver",
+      "media-import",
+      "firmware-update",
+      "meta-ai-settings"
+    ],
+    "featureDeltaFromPrevious": [
+      "Battery life doubled from 4 h to 8 h typical use",
+      "3K Ultra HD video capture added",
+      "Five-mic immersive audio recording with reduced background noise",
+      "Charging case capacity increased from 32 h to 48 h",
+      "Faster phone transfer and expanded frame/lens combinations"
+    ],
+    "sources": [
+      {
+        "url": "https://india.ray-ban.com/meta-gen-2-collection-page",
+        "type": "official-regional",
+        "title": "Ray-Ban Meta Gen 2 collection and specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://india.ray-ban.com/discover/discover-ray-ban.html",
+        "type": "official-regional",
+        "title": "Discover Ray-Ban Meta: Gen 1 vs Gen 2 table",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.meta.com/help/ai-glasses/303057485648146/",
+        "type": "official-support",
+        "title": "Battery life on AI glasses",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.facebook.stella",
+        "type": "official-app-store",
+        "title": "Meta AI app listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official codec list.",
+      "No multipoint claim; not documented.",
+      "App EQ/bass controls not documented.",
+      "The Gen 2 collection page contains a copy-paste '36% smaller camera vs Gen 2' line that cannot be correct for Gen 2 itself; ignored."
+    ],
+    "notes": "Second generation; the main changes are battery, 3K video and the five-mic array. Frame styles and Gen 2 Optics are style variants of the same electronics.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Ray-Ban Meta",
+    "companySlug": "ray-ban-meta",
+    "family": "Ray-Ban Meta",
+    "model": "Ray-Ban Meta Smart Glasses (Gen 3)",
+    "slug": "ray-ban-meta-gen-3",
+    "generation": "3",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Meta AI",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.facebook.stella"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.facebook.stella"
+      ],
+      "appVersionObserved": null,
+      "notes": "Required for setup, action-button mapping, battery, media import and settings."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9,
+      "caseHours": 50,
+      "chargingIndicators": "Case front LED and Meta AI app; case fully charges in 3.5 h over USB-C.",
+      "notes": "Up to 9 h mixed use and 50 h from the case. Continuous-audio time is not published for Gen 3. Case appears in the app only while the glasses are docked.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. Six microphones with advanced wind-noise reduction for calls and immersive recording."
+    },
+    "features": [
+      {
+        "id": "audio.open-ear",
+        "name": "Open-ear speakers",
+        "availability": "device-only",
+        "notes": "Two open-ear speakers; six-mic array."
+      },
+      {
+        "id": "camera.photo",
+        "name": "12 MP ultra-wide camera",
+        "availability": "device-only",
+        "notes": "36% smaller camera and LED opening than Gen 2."
+      },
+      {
+        "id": "camera.video",
+        "name": "3K Ultra HD video",
+        "availability": "device-only",
+        "notes": "3K 30 fps, 1080p 60 fps, 720p 120 fps; hyperlapse, slow motion, autocapture."
+      },
+      {
+        "id": "assistant.meta-ai",
+        "name": "Meta AI",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "translation.live",
+        "name": "Live translation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "controls.touch",
+        "name": "Temple touchpad",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "controls.capture-button",
+        "name": "Capture button",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.meta.action-button",
+        "name": "Configurable action button",
+        "availability": "both",
+        "notes": "Assignable in the Meta AI app."
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.3",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wifi",
+        "name": "Wi-Fi 6 media transfer",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto on-off",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "app.battery-status",
+        "name": "Battery status in app",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.battery-saver",
+        "name": "Battery saver",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.media-import",
+        "name": "Photo and video import",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap touchpad",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap touchpad",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "swipe forward/back",
+          "action": "volume up/down",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold touchpad",
+          "action": "invoke Meta AI",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "capture button",
+          "action": "take photo / start-stop video",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "action button",
+          "action": "assignable shortcut (Meta AI or favorite feature)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "power slider",
+          "action": "power on/off",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "voice",
+          "action": "'Hey Meta' wake word",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Capture button, action button and power slider on the right temple",
+      "configurableInApp": true,
+      "notes": "Action button configured under Settings > Customize controls > Action button. Aviator and Zena join Wayfarer as frame styles."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "Open-ear, six-mic array with immersive audio recording and advanced wind-noise reduction; Bluetooth 5.3 and Wi-Fi 6. No published codec list, EQ contract or multipoint claim."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "battery-saver",
+      "media-import",
+      "action-button-mapping",
+      "firmware-update",
+      "meta-ai-settings"
+    ],
+    "featureDeltaFromPrevious": [
+      "Battery life increased from 8 h to 9 h typical use",
+      "Six-microphone array replaces the five-mic array",
+      "Configurable action button added",
+      "Camera and capture LED opening reduced 36%",
+      "Case capacity increased from 48 h to 50 h",
+      "Aviator and Zena frame styles added"
+    ],
+    "sources": [
+      {
+        "url": "https://india.ray-ban.com/ray-ban-meta-gen-3-wayfarer-0rw40116019a.html",
+        "type": "official-regional",
+        "title": "Ray-Ban Meta Gen 3 Wayfarer product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://india.ray-ban.com/rayban-meta-glasses-gen-3",
+        "type": "official-regional",
+        "title": "Ray-Ban Meta Gen 3 collection",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.meta.com/help/ai-glasses/303057485648146/",
+        "type": "official-support",
+        "title": "Battery life on AI glasses",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.facebook.stella",
+        "type": "official-app-store",
+        "title": "Meta AI app listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Continuous-audio runtime not published; 9 h is mixed use.",
+      "No official codec list.",
+      "No multipoint claim; not documented.",
+      "App EQ/bass controls not documented.",
+      "The 133 g figure on the Ray-Ban page appears to be shipping/package weight, not device weight; device weight not used."
+    ],
+    "notes": "Third generation. Frame styles and lens choices are commercial variants of the same electronics.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Ray-Ban Meta",
+    "companySlug": "ray-ban-meta",
+    "family": "Ray-Ban Meta",
+    "model": "Ray-Ban Meta Audio",
+    "slug": "ray-ban-meta-audio",
+    "generation": "1",
+    "variant": "Audio",
+    "releaseYear": 2026,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Meta AI",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.facebook.stella"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.facebook.stella"
+      ],
+      "appVersionObserved": null,
+      "notes": "Required companion app; no camera or capture import."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 12,
+      "caseHours": 48,
+      "chargingIndicators": "Case front LED and Meta AI app.",
+      "notes": "Up to 12 h use and 48 h from the case. Secondary coverage reports 6 h of nonstop music; Meta's headline 12 h is mixed use. Same docked-only case display behavior as other Ray-Ban Meta glasses.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC; camera-free open-ear model. Six microphones with wind-noise reduction for calls."
+    },
+    "features": [
+      {
+        "id": "audio.open-ear",
+        "name": "Open-ear speakers",
+        "availability": "device-only",
+        "notes": "Six-mic array; no camera."
+      },
+      {
+        "id": "assistant.meta-ai",
+        "name": "Meta AI",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "translation.live",
+        "name": "Live translation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "controls.touch",
+        "name": "Temple touch controls",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.3",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wifi",
+        "name": "Wi-Fi 6 media transfer",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto on-off",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "app.battery-status",
+        "name": "Battery status in app",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.battery-saver",
+        "name": "Battery saver",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap touchpad",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap touchpad",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "swipe forward/back",
+          "action": "volume up/down",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold touchpad",
+          "action": "invoke Meta AI",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "voice",
+          "action": "'Hey Meta' wake word",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "No camera, so no capture button. Clubmaster and Burbank are frame styles."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "Open-ear, six-mic array, Bluetooth 5.3 and Wi-Fi 6. No published codec list or EQ contract; no multipoint claim."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "battery-saver",
+      "firmware-update",
+      "meta-ai-settings"
+    ],
+    "featureDeltaFromPrevious": [
+      "Camera removed; no photo or video capture",
+      "Battery life increased to 12 h",
+      "Weight reduced to 43 g",
+      "Case capacity stays at 48 h",
+      "New Clubmaster and Burbank frame styles"
+    ],
+    "sources": [
+      {
+        "url": "https://www.meta.com/ai-glasses/ray-ban-meta-audio/",
+        "type": "official-product",
+        "title": "Ray-Ban Meta Audio",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.ray-ban.com/usa/ray-ban-meta-ai-glasses/audio",
+        "type": "official-regional",
+        "title": "Ray-Ban Meta Audio AI Glasses",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.meta.com/help/ai-glasses/303057485648146/",
+        "type": "official-support",
+        "title": "Battery life on AI glasses",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.facebook.stella",
+        "type": "official-app-store",
+        "title": "Meta AI app listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Official continuous-music runtime not isolated; 12 h is mixed use.",
+      "No official codec list.",
+      "No multipoint claim; not documented.",
+      "App EQ/bass controls not documented."
+    ],
+    "notes": "Camera-free Ray-Ban Meta model, included because it is a Bluetooth open-ear audio wearable with the same Meta AI app contract.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Ray-Ban Meta",
+    "companySlug": "ray-ban-meta",
+    "family": "Ray-Ban Meta",
+    "model": "Meta Ray-Ban Display",
+    "slug": "meta-ray-ban-display",
+    "generation": "1",
+    "variant": "Display",
+    "releaseYear": 2025,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Meta AI",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.facebook.stella"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.facebook.stella"
+      ],
+      "appVersionObserved": null,
+      "notes": "Required companion app; the Neural Band is paired and managed separately in the same app."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 24,
+      "chargingIndicators": "Two case LEDs: inner LED for glasses, outer LED for case; Meta AI app. Glasses LED thresholds 95%/20%; case LED thresholds 75%/20%.",
+      "notes": "Up to 6 h mixed use and 24 h from the case. Neural Band has its own 18 h battery and charges separately; it is not included in caseHours. The two case LEDs use different percentage thresholds, which is easy to misread.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC; open-ear audio with an in-lens display."
+    },
+    "features": [
+      {
+        "id": "vendor.meta.display",
+        "name": "600 x 600 in-lens display",
+        "availability": "device-only",
+        "notes": "20-degree field of view, right lens only, 5,000 nits."
+      },
+      {
+        "id": "vendor.meta.neural-band",
+        "name": "Meta Neural Band gesture control",
+        "availability": "both",
+        "notes": "EMG wristband; 18 h own battery."
+      },
+      {
+        "id": "audio.open-ear",
+        "name": "Open-ear speakers",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "camera.photo",
+        "name": "12 MP camera with 3x zoom",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "camera.video",
+        "name": "Video capture",
+        "availability": "device-only",
+        "notes": "Up to 1440 x 1920 per official specs."
+      },
+      {
+        "id": "assistant.meta-ai",
+        "name": "Meta AI",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "translation.live",
+        "name": "Live translation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "controls.touch",
+        "name": "Temple touchpad",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "controls.head-gesture",
+        "name": "Neural Band pinch and gesture input",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto on-off",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "app.battery-status",
+        "name": "Battery status in app",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button",
+        "head-gesture",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "Neural Band pinch",
+          "action": "select / confirm",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "Neural Band swipe",
+          "action": "navigate display",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "temple touchpad",
+          "action": "play/pause; calls; Meta AI",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "capture button",
+          "action": "photo/video",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "voice",
+          "action": "'Hey Meta' wake word",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Capture button and power slider; Neural Band on wrist",
+      "configurableInApp": true,
+      "notes": "Neural Band adds EMG gesture input; it is a separate battery-powered device."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "Open-ear audio; Meta does not publish codec or EQ details. Display and camera increase drain versus camera-only glasses."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "display-settings",
+      "neural-band-settings",
+      "media-import",
+      "firmware-update",
+      "meta-ai-settings"
+    ],
+    "featureDeltaFromPrevious": [
+      "In-lens 600 x 600 display added",
+      "Meta Neural Band gesture control added",
+      "Battery reduced to 6 h and case to 24 h versus camera-only Ray-Ban Meta",
+      "12 MP camera with 3x zoom and 1440 x 1920 video",
+      "Weight rises to 69 g"
+    ],
+    "sources": [
+      {
+        "url": "https://www.meta.com/ai-glasses/meta-ray-ban-display-glasses-and-neural-band-black/",
+        "type": "official-product",
+        "title": "Meta Ray-Ban Display glasses and Neural Band",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.meta.com/help/ai-glasses/1116302600085081/",
+        "type": "official-support",
+        "title": "Battery life on Meta Ray-Ban Display and Meta Neural Band",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.meta.com/help/ai-glasses/1092014862992659/",
+        "type": "official-support",
+        "title": "How to charge Meta Ray-Ban Display",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.facebook.stella",
+        "type": "official-app-store",
+        "title": "Meta AI app listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official codec list or EQ contract.",
+      "Display refresh rate and exact panel details not in the retrieved official page.",
+      "Neural Band battery is separate and not part of the glasses/case battery contract.",
+      "Case display behavior when glasses are out is inferred from the same Meta AI app pattern; official text only documents docked case level."
+    ],
+    "notes": "Display-equipped AR glasses that retain open-ear audio; included because the scope excludes only AR headsets with no audio. Neural Band is a separate device with its own battery.",
+    "researchedAt": "2026-11-10"
+  }
+]

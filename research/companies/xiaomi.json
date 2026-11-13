@@ -1,0 +1,1250 @@
+[
+  {
+    "company": "Xiaomi",
+    "companySlug": "xiaomi",
+    "family": "Xiaomi Buds",
+    "model": "Xiaomi Buds 4 Pro",
+    "slug": "xiaomi-buds-4-pro",
+    "generation": "4",
+    "variant": "Pro",
+    "releaseYear": 2022,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "App required for ANC mode details, EQ and dimensional audio; some gesture settings are also exposed through HyperOS/MIUI Bluetooth settings."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9,
+      "caseHours": 38,
+      "chargingIndicators": "Case LED; Qi wireless charging supported",
+      "notes": "Official 9 h / 38 h figures are ANC-off. ANC-on hours are not published. Split/separate display is the Xiaomi Earbuds app pattern; case reading is refreshed when buds are docked.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "deep",
+        "balanced",
+        "light",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": 48,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "48 dB is a point-depth claim, not simultaneous across the band. Three transparency modes incl. enhance voice and enhance ambient."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "Pinch-and-hold toggles ANC/transparency; detailed modes in app."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": "Regular, enhance voice, enhance ambient."
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive noise cancellation",
+        "availability": "official-app",
+        "notes": "Automatically switches between three ANC depths."
+      },
+      {
+        "id": "audio.dimensional",
+        "name": "Built-in dimensional audio",
+        "availability": "official-app",
+        "notes": "On-earbud 6-axis head tracking; works across devices."
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC Hi-Res Audio Wireless",
+        "availability": "device-only",
+        "notes": "990 kbps LDAC; mutually exclusive with dimensional audio."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": "Off by default."
+      },
+      {
+        "id": "vendor.xiaomi.wireless-charging",
+        "name": "Qi wireless charging case",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "pinch"
+      ],
+      "gestures": [
+        {
+          "gesture": "pinch once",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "pinch twice",
+          "action": "next track; decline call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "pinch three times",
+          "action": "previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "pinch and hold",
+          "action": "switch ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Force-sensor stem. Volume is not a documented gesture on this model."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "11 mm dual-magnet driver; 360-degree head tracking."
+    },
+    "appOnlyFeatures": [
+      "ANC mode selection",
+      "Dimensional audio enable/test",
+      "Dual-device toggle",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added 48 dB ANC and three transparency modes vs Xiaomi Buds 3 Pro (official-product)",
+      "Added built-in dimensional audio with 6-axis head tracking (official-product)",
+      "Added LDAC 990 kbps Hi-Res Audio Wireless (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/xiaomi-buds-4-pro/",
+        "type": "official-product",
+        "title": "Xiaomi Buds 4 Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on battery hours not published",
+      "EQ preset count and custom-EQ bands not stated on product page",
+      "Wear detection not documented",
+      "Battery split/separate app layout inferred from Xiaomi Earbuds app pattern, not captured from a live app"
+    ],
+    "notes": "2022 flagship; battery figures are music playback at 50% volume, AAC, ANC off.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Xiaomi",
+    "companySlug": "xiaomi",
+    "family": "Xiaomi Buds",
+    "model": "Xiaomi Buds 5",
+    "slug": "xiaomi-buds-5",
+    "generation": "5",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "Semi-in-ear model; ANC and EQ settings are app-controlled."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6.5,
+      "caseHours": 39,
+      "chargingIndicators": "Case LED",
+      "notes": "Official 6.5 h / 39 h are ANC-off, dimensional audio off, multipoint off. ANC-on hours are not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Semi-in-ear broadband ANC; no official dB depth. Call wind noise resistance 12 m/s."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "Semi-in-ear ANC."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": "Five presets incl. Harman AudioEFX."
+      },
+      {
+        "id": "equalization.custom-eq",
+        "name": "Custom EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Built-in dimensional audio",
+        "availability": "official-app",
+        "notes": "Head tracking from built-in sensor."
+      },
+      {
+        "id": "audio.lossless",
+        "name": "aptX Lossless",
+        "availability": "device-only",
+        "notes": "Up to 1.2 Mbps on supported Qualcomm phones."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.xiaomi.recording",
+        "name": "Built-in audio recording",
+        "availability": "official-app",
+        "notes": "Up to 3 h combined; stored on earbuds."
+      }
+    ],
+    "controls": {
+      "types": [
+        "pinch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "pinch once",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "pinch twice",
+          "action": "next track; decline call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "pinch three times",
+          "action": "previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "pinch and hold",
+          "action": "ANC on/off",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "slide up/down",
+          "action": "volume",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Squeeze/pinch stem plus swipe."
+    },
+    "audio": {
+      "eqPresets": [
+        "Harman AudioEFX",
+        "Enhance voice",
+        "Enhance treble",
+        "Decrease bass",
+        "Classic"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX Adaptive",
+        "aptX Lossless"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "11 mm dual-magnet driver; 16-40 kHz claim."
+    },
+    "appOnlyFeatures": [
+      "EQ presets/custom EQ",
+      "Dimensional audio toggle",
+      "Recording export",
+      "Gesture remap",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added semi-in-ear ANC vs Xiaomi Buds 4 (non-Pro) (official-product)",
+      "Added aptX Lossless 1.2 Mbps (official-product)",
+      "Added built-in dimensional audio and recording (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/xiaomi-buds-5/",
+        "type": "official-product",
+        "title": "Xiaomi Buds 5",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on battery hours not published",
+      "Custom EQ band count not stated",
+      "Wear detection not documented",
+      "Battery display layout inferred, not captured from app"
+    ],
+    "notes": "Semi-in-ear design with ANC; 2024 global launch.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Xiaomi",
+    "companySlug": "xiaomi",
+    "family": "Xiaomi Buds",
+    "model": "Xiaomi Buds 5 Pro",
+    "slug": "xiaomi-buds-5-pro",
+    "generation": "5",
+    "variant": "Pro",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "Multi-level ANC, EQ, personalised dimensional audio and recording are app features."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED; Qi wireless charging",
+      "notes": "Bluetooth variant. Official 8 h / 40 h ANC-off. Wi-Fi variant is a separate record with 10 h single-charge.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "deep",
+        "balanced",
+        "light",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": 55,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "55 dB point-depth, 5 kHz band; multi-level manual plus adaptive."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "Multi-level plus adaptive."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive ANC",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Six EQ profiles",
+        "availability": "official-app",
+        "notes": "Includes two Harman profiles."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Personalised dimensional audio",
+        "availability": "official-app",
+        "notes": "3-5 minute ear/head personalisation test."
+      },
+      {
+        "id": "audio.head-tracking",
+        "name": "Head tracking",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.lossless",
+        "name": "aptX Lossless 2.1 Mbps",
+        "availability": "device-only",
+        "notes": "Requires LE Audio and supported Xiaomi phones."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": "Not available with LE Audio."
+      },
+      {
+        "id": "vendor.xiaomi.recording",
+        "name": "Built-in recording and AI transcription/translation",
+        "availability": "official-app",
+        "notes": "Up to 4 h recording; AI transcription on select Xiaomi phones."
+      }
+    ],
+    "controls": {
+      "types": [
+        "pinch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "pinch once",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "pinch twice",
+          "action": "next track; decline call; record",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "pinch three times",
+          "action": "previous track; record",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "pinch and hold",
+          "action": "ANC control; record",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "slide up/down",
+          "action": "volume",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Case button: triple-press starts/stops recording",
+      "configurableInApp": true,
+      "notes": "Pinch/squeeze stem and swipe."
+    },
+    "audio": {
+      "eqPresets": [
+        "Harman AudioEFX",
+        "Harman Master",
+        "Balanced",
+        "Enhance voice",
+        "Enhance treble",
+        "Soothing bass",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX Adaptive",
+        "aptX Lossless",
+        "LC3"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "Dual-amplifier coaxial triple drivers (11 mm dynamic, ceramic tweeter, planar)."
+    },
+    "appOnlyFeatures": [
+      "Personalised dimensional audio test",
+      "Multi-level ANC",
+      "EQ profiles",
+      "Recording export",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Raised ANC depth from 48 dB to 55 dB vs Xiaomi Buds 4 Pro (official-product)",
+      "Added dual-amplifier coaxial triple-driver system (official-product)",
+      "Added personalised dimensional audio (official-product)",
+      "Added built-in 4-hour recording with AI transcription/translation (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/xiaomi-buds-5-pro/",
+        "type": "official-product",
+        "title": "Xiaomi Buds 5 Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on battery hours not published",
+      "Custom EQ band count not stated",
+      "Wear detection not documented",
+      "App battery layout inferred"
+    ],
+    "notes": "Bluetooth-only variant. A Wi-Fi/XPAN variant is recorded separately because its single-charge rating differs.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Xiaomi",
+    "companySlug": "xiaomi",
+    "family": "Xiaomi Buds",
+    "model": "Xiaomi Buds 5 Pro (Wi-Fi)",
+    "slug": "xiaomi-buds-5-pro-wifi",
+    "generation": "5",
+    "variant": "Pro Wi-Fi",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "Wi-Fi/XPAN transmission is enabled from phone Bluetooth settings; app handles ANC, EQ and dimensional audio."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED; Qi wireless charging",
+      "notes": "Same 40 h case as the Bluetooth variant but 10 h single-charge vs 8 h. Official figures are ANC-off; Wi-Fi transmission off by default.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "deep",
+        "balanced",
+        "light",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": 55,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Same ANC platform as Buds 5 Pro; Wi-Fi must be off for dimensional audio and multipoint."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "55 dB point-depth."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.lossless",
+        "name": "Wi-Fi lossless audio up to 4.2 Mbps",
+        "availability": "device-only",
+        "notes": "96 kHz/24-bit with Xiaomi 15 Ultra via Qualcomm XPAN."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Personalised dimensional audio",
+        "availability": "official-app",
+        "notes": "Wi-Fi must be disabled."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": "Not available while Wi-Fi is on."
+      },
+      {
+        "id": "vendor.xiaomi.wifi-audio",
+        "name": "Wi-Fi earbud transmission",
+        "availability": "device-only",
+        "notes": "XPAN; only Xiaomi 15 Ultra at launch."
+      },
+      {
+        "id": "vendor.xiaomi.recording",
+        "name": "Built-in recording",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "pinch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "pinch once",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "pinch twice",
+          "action": "next track; decline call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "pinch three times",
+          "action": "previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "pinch and hold",
+          "action": "ANC control",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "slide up/down",
+          "action": "volume",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Case button: triple-press recording",
+      "configurableInApp": true,
+      "notes": "Identical control surface to Bluetooth Buds 5 Pro."
+    },
+    "audio": {
+      "eqPresets": [
+        "Harman AudioEFX",
+        "Harman Master",
+        "Balanced",
+        "Enhance voice",
+        "Enhance treble",
+        "Soothing bass",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX Adaptive",
+        "aptX Lossless",
+        "LC3"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "Wi-Fi adds 96 kHz/24-bit 4.2 Mbps XPAN lossless on Xiaomi 15 Ultra."
+    },
+    "appOnlyFeatures": [
+      "Wi-Fi/XPAN setup guidance",
+      "Personalised dimensional audio",
+      "EQ",
+      "Recording export"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added Wi-Fi/XPAN lossless transmission up to 4.2 Mbps vs Bluetooth Buds 5 Pro (official-product)",
+      "Single-charge battery increased from 8 h to 10 h (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/xiaomi-buds-5-pro/",
+        "type": "official-product",
+        "title": "Xiaomi Buds 5 Pro (Wi-Fi section)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on battery hours not published",
+      "Wi-Fi battery impact not published",
+      "App battery layout inferred"
+    ],
+    "notes": "Distinct SKU: translucent black case and Wi-Fi/XPAN. Not just a colour variant.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Xiaomi",
+    "companySlug": "xiaomi",
+    "family": "Xiaomi Buds",
+    "model": "Xiaomi Buds 6",
+    "slug": "xiaomi-buds-6",
+    "generation": "6",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "Requires Android 7+/iOS 14+; gesture customization, recording and dimensional audio are app features."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 35,
+      "chargingIndicators": "Case LED; triple-press case button for recording",
+      "notes": "6 h / 35 h are ANC-off at 50% volume, AAC. ANC-on not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Semi-in-ear ANC with 3-mic AI call noise cancellation; 12 m/s call wind resistance. No official ANC dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "Semi-in-ear ANC."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "aptX Lossless 2.1 Mbps",
+        "availability": "device-only",
+        "notes": "24-bit/48 kHz; requires LE Audio and supported phones."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Independent dimensional audio",
+        "availability": "official-app",
+        "notes": "360-degree head tracking without phone processing."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Sound modes",
+        "availability": "official-app",
+        "notes": "Enhance voice, enhance treble, soothing bass, balanced, custom."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": "Not available in LE Audio mode."
+      },
+      {
+        "id": "vendor.xiaomi.recording",
+        "name": "Built-in audio recording",
+        "availability": "official-app",
+        "notes": "Triple-press earbud or case; works with lid closed."
+      },
+      {
+        "id": "vendor.xiaomi.ai-subtitles",
+        "name": "AI Subtitles",
+        "availability": "official-app",
+        "notes": "Gesture-assigned; compatible Xiaomi HyperOS phones."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "press once",
+          "action": "answer call; play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "reject call; next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple press",
+          "action": "previous track; start/stop recording",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC on/off; AI Subtitles; camera",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "volume",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Case button: triple-press recording",
+      "configurableInApp": true,
+      "notes": "Press/swipe gestures; some actions require HyperOS."
+    },
+    "audio": {
+      "eqPresets": [
+        "Harman AudioEFX",
+        "Harman Master",
+        "Enhance voice",
+        "Enhance treble",
+        "Soothing bass",
+        "Balanced",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX Adaptive",
+        "aptX Lossless",
+        "LC3"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "11 mm triple-magnet gold-plated driver; 16-40 kHz claim; Harman tuning."
+    },
+    "appOnlyFeatures": [
+      "AI Subtitles assignment",
+      "Camera control assignment",
+      "Recording export",
+      "Dimensional audio",
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "New semi-in-ear generation with aptX Lossless 2.1 Mbps vs Buds 5 (official-product)",
+      "Added AI Subtitles and remote camera gestures (official-product)",
+      "Battery reduced from 6.5 h/39 h to 6 h/35 h vs Buds 5 (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/xiaomi-buds-6/",
+        "type": "official-product",
+        "title": "Xiaomi Buds 6",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on battery hours not published",
+      "Custom EQ band count not stated",
+      "Wear detection not documented",
+      "App battery layout inferred"
+    ],
+    "notes": "2026 global semi-in-ear flagship; not a Pro replacement.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Xiaomi",
+    "companySlug": "xiaomi",
+    "family": "Xiaomi OpenWear",
+    "model": "Xiaomi OpenWear Stereo",
+    "slug": "xiaomi-openwear-stereo",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "Touch control customization is app-only."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7.5,
+      "caseHours": 38.5,
+      "chargingIndicators": "Case LED",
+      "notes": "No ANC. 7.5 h / 38.5 h at AAC 50% volume, defaults.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Open-ear design; no ANC. Dual-mic AI call noise reduction only."
+    },
+    "features": [
+      {
+        "id": "audio.open-ear",
+        "name": "Open-ear acoustic design",
+        "availability": "device-only",
+        "notes": "17x12 mm driver plus 10 mm sound-leakage reduction driver."
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LHDC Hi-Res Audio Wireless",
+        "availability": "device-only",
+        "notes": "Up to 96 kHz on supported Xiaomi phones."
+      },
+      {
+        "id": "vendor.xiaomi.sound-leakage-reduction",
+        "name": "Active sound leakage reduction",
+        "availability": "device-only",
+        "notes": "Effective during calls to 25 cm."
+      },
+      {
+        "id": "connectivity.audio-sharing",
+        "name": "Audio sharing",
+        "availability": "device-only",
+        "notes": "Two pairs to one Xiaomi device."
+      },
+      {
+        "id": "control.gesture-customization",
+        "name": "Custom touch controls",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track; reject call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "voice assistant; camera (assignable)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Single/double/triple tap and hold; volume not documented."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC"
+      ],
+      "hiRes": true,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "Open-ear hook, 9.6 g per bud."
+    },
+    "appOnlyFeatures": [
+      "Touch control remap",
+      "Firmware update",
+      "Find earbuds"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/xiaomi-openwear-stereo/",
+        "type": "official-product",
+        "title": "Xiaomi OpenWear Stereo",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Multipoint not stated",
+      "EQ presets/custom EQ not stated",
+      "Spatial audio not stated",
+      "App battery layout inferred"
+    ],
+    "notes": "Xiaomi's first open-ear hook style; no ANC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Xiaomi",
+    "companySlug": "xiaomi",
+    "family": "Xiaomi OpenWear",
+    "model": "Xiaomi OpenWear Stereo Pro",
+    "slug": "xiaomi-openwear-stereo-pro",
+    "generation": "1",
+    "variant": "Pro",
+    "releaseYear": 2025,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "App required for EQ profiles, recording export and gesture remap."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8.5,
+      "caseHours": 45,
+      "chargingIndicators": "Case LED; 10-minute fast charge = 2 h",
+      "notes": "No ANC. 8.5 h / 45 h at AAC 50% volume, defaults.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Open-ear; no ANC. Active sound-leakage reduction instead."
+    },
+    "features": [
+      {
+        "id": "audio.open-ear",
+        "name": "Open-ear hybrid multi-driver design",
+        "availability": "device-only",
+        "notes": "18x13 mm dynamic, dual balanced armatures, piezoelectric tweeter."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Dimensional audio with head tracking",
+        "availability": "official-app",
+        "notes": "360-degree head-tracked surround."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Harman AudioEFX profiles",
+        "availability": "official-app",
+        "notes": "Two dedicated profiles plus sound modes."
+      },
+      {
+        "id": "vendor.xiaomi.sound-leakage-reduction",
+        "name": "Active sound leakage reduction",
+        "availability": "device-only",
+        "notes": "Available in Balanced Sound mode."
+      },
+      {
+        "id": "vendor.xiaomi.recording",
+        "name": "Independent recording with case closed",
+        "availability": "official-app",
+        "notes": "Triple-tap case button."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next/previous track (assignable)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "AI Subtitles / voice assistant (assignable)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Case button: triple-press recording on/off",
+      "configurableInApp": true,
+      "notes": "Default only double-tap play/pause is documented; more actions via app."
+    },
+    "audio": {
+      "eqPresets": [
+        "Harman AudioEFX",
+        "Harman Master"
+      ],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC"
+      ],
+      "hiRes": true,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "Open-ear hook; 8.5 h single charge."
+    },
+    "appOnlyFeatures": [
+      "EQ profiles",
+      "Gesture remap",
+      "Recording export",
+      "Dimensional audio"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added dual balanced armatures and piezoelectric tweeter vs OpenWear Stereo (official-product)",
+      "Added dimensional audio with head tracking (official-product)",
+      "Battery increased from 7.5 h/38.5 h to 8.5 h/45 h (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/xiaomi-openwear-stereo-pro/",
+        "type": "official-product",
+        "title": "Xiaomi OpenWear Stereo Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Multipoint not stated",
+      "Custom EQ not stated",
+      "Wear detection not documented",
+      "App battery layout inferred"
+    ],
+    "notes": "Open-ear flagship; no ANC by design.",
+    "researchedAt": "2026-11-10"
+  }
+]

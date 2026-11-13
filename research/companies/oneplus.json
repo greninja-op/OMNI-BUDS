@@ -1,0 +1,2969 @@
+[
+  {
+    "company": "OnePlus",
+    "companySlug": "oneplus",
+    "family": "OnePlus Buds",
+    "model": "OnePlus Buds",
+    "slug": "oneplus-buds",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": "OnePlus phones expose most settings through the system 'Earbuds function'; HeyMelody is the cross-brand app."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody / system settings.",
+      "notes": "No ANC. 30 h total with case. HeyMelody documents earbud and charging-case battery levels; split L/R plus case is the expected layout.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": "OnePlus phone game mode."
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap",
+          "action": "play/pause or answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "next/previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap-and-hold",
+          "action": "voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Bass",
+        "Treble"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "13.4 mm driver; no ANC."
+    },
+    "appOnlyFeatures": [
+      "EQ presets",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.oneplus.com/us/oneplus-buds",
+        "type": "official-product",
+        "title": "OnePlus Buds product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://apps.apple.com/us/app/heymelody/id1564626893",
+        "type": "official-app-store",
+        "title": "HeyMelody on the App Store",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Exact case-battery visibility rules are not documented; only-when-docked is inferred from HeyMelody behaviour.",
+      "Custom EQ is not documented for the original Buds.",
+      "Split L/R plus case layout is inferred from HeyMelody's documented battery screen."
+    ],
+    "notes": "First OnePlus TWS; no ANC, no multipoint.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OnePlus",
+    "companySlug": "oneplus",
+    "family": "OnePlus Buds",
+    "model": "OnePlus Buds Z",
+    "slug": "oneplus-buds-z",
+    "generation": "Z",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 20,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody.",
+      "notes": "No ANC. 20 h total with case.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 20
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap",
+          "action": "play/pause or answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "next/previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap-and-hold",
+          "action": "voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Bass",
+        "Treble"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "10 mm driver; no ANC."
+    },
+    "appOnlyFeatures": [
+      "EQ presets",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Lower-cost Buds variant with smaller drivers and case.",
+      "Reduced total battery from 30 h to 20 h."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oneplus.com/us/oneplus-buds-z",
+        "type": "official-product",
+        "title": "OnePlus Buds Z product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official page copy for exact battery and codec details is thin; figures come from launch material.",
+      "Case-battery visibility rules are inferred from HeyMelody.",
+      "Custom EQ support is not documented."
+    ],
+    "notes": "Budget first-generation Buds Z; no ANC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OnePlus",
+    "companySlug": "oneplus",
+    "family": "OnePlus Buds",
+    "model": "OnePlus Buds Pro",
+    "slug": "oneplus-buds-pro",
+    "generation": "1",
+    "variant": "Pro",
+    "releaseYear": 2021,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 7,
+      "caseHours": 38,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody.",
+      "notes": "38 h total with case (ANC off); about 28 h with ANC on.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 38
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 40,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "40 dB ANC with transparency; no adaptive levels."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "40 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Find My Buds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.oneplus.zen-mode-air",
+        "name": "Zen Mode Air",
+        "availability": "official-app",
+        "notes": "Built-in calming soundscapes."
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap",
+          "action": "play/pause or answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "next/previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap-and-hold",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Bass",
+        "Treble"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC 4.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm driver; LHDC on supported OnePlus phones; no spatial audio."
+    },
+    "appOnlyFeatures": [
+      "EQ presets",
+      "Zen Mode Air",
+      "Find My Buds",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added 40 dB ANC and transparency.",
+      "Added LHDC Hi-Res audio.",
+      "Added dual-device connection.",
+      "Added wireless charging case."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oneplus.com/us/oneplus-buds-pro",
+        "type": "official-product",
+        "title": "OnePlus Buds Pro product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Exact LHDC version support varies by phone region; LHDC 4.0 is the commonly documented baseline.",
+      "Case-battery visibility rules are inferred from HeyMelody.",
+      "Transparency dB is not published."
+    ],
+    "notes": "First OnePlus ANC flagship; split L/R plus separate case in HeyMelody.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OnePlus",
+    "companySlug": "oneplus",
+    "family": "OnePlus Buds",
+    "model": "OnePlus Buds Z2",
+    "slug": "oneplus-buds-z2",
+    "generation": "Z2",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 7,
+      "caseHours": 38,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody.",
+      "notes": "38 h total with case (ANC off); about 28 h with ANC on.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 38
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 40,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "40 dB ANC with transparency."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "40 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap",
+          "action": "play/pause or answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "next/previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap-and-hold",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Bass",
+        "Treble"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "No LHDC on Z2."
+    },
+    "appOnlyFeatures": [
+      "EQ presets",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added ANC to the Z line.",
+      "Battery increased from 20 h to 38 h total."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oneplus.com/us/oneplus-buds-z2",
+        "type": "official-product",
+        "title": "OnePlus Buds Z2 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Case-battery visibility rules are inferred from HeyMelody.",
+      "Transparency dB is not published.",
+      "Custom EQ is not documented."
+    ],
+    "notes": "ANC version of Buds Z; no LHDC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OnePlus",
+    "companySlug": "oneplus",
+    "family": "OnePlus Buds",
+    "model": "OnePlus Buds Pro 2",
+    "slug": "oneplus-buds-pro-2",
+    "generation": "2",
+    "variant": "Pro",
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 9,
+      "caseHours": 39,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody.",
+      "notes": "39 h total with case (ANC off); about 25 h with ANC on.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 39
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc-faint",
+        "anc-smart",
+        "anc-extreme",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 48,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "48 dB max; three modes: Faint, Smart (adaptive), Extreme."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Smart Adaptive ANC",
+        "availability": "both",
+        "notes": "48 dB max; Faint/Smart/Extreme."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets and custom EQ."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "Spatial audio",
+        "availability": "both",
+        "notes": "With head tracking."
+      },
+      {
+        "id": "audio.head-tracking",
+        "name": "Head tracking",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Find My Buds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.oneplus.zen-mode-air",
+        "name": "Zen Mode Air",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "press once",
+          "action": "play/pause or answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "press twice",
+          "action": "next track or reject call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "press triple",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press (1 s)",
+          "action": "switch noise-control mode",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press (3 s)",
+          "action": "earbud focus",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem press/touch controls; no volume slide on Buds Pro 2."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Bass",
+        "Treble",
+        "Dynaudio"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC 5.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm + 6 mm dual drivers; LHDC 5.0; spatial audio with head tracking."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Spatial audio",
+      "Zen Mode Air",
+      "Find My Buds",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added dual drivers and LHDC 5.0.",
+      "Added spatial audio with head tracking.",
+      "ANC increased from 40 dB to 48 dB.",
+      "Press/touch controls only; no volume slide on this generation."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oneplus.com/us/oneplus-buds-pro-2",
+        "type": "official-product",
+        "title": "OnePlus Buds Pro 2 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Exact custom-EQ band count is not confirmed on the fetched official copy.",
+      "Case-battery visibility rules are inferred from HeyMelody.",
+      "Transparency dB is not published."
+    ],
+    "notes": "Flagship with head-tracked spatial audio; split L/R plus separate case.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OnePlus",
+    "companySlug": "oneplus",
+    "family": "OnePlus Buds",
+    "model": "OnePlus Buds 3",
+    "slug": "oneplus-buds-3",
+    "generation": "3",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6.5,
+      "budsHoursNoAnc": 10,
+      "caseHours": 44,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody.",
+      "notes": "44 h total with case (ANC off); 28 h total with ANC on.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 44
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc-mild",
+        "anc-moderate",
+        "anc-max",
+        "adaptive",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 49,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "49 dB adaptive ANC with Smart Scene levels Mild/Moderate/Max."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": "49 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Sound Master EQ",
+        "availability": "official-app",
+        "notes": "Presets plus custom EQ."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "3D Audio",
+        "availability": "both",
+        "notes": "No head tracking."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": "94 ms."
+      },
+      {
+        "id": "vendor.oneplus.audio-id",
+        "name": "OnePlus Audio ID 2.0",
+        "availability": "official-app",
+        "notes": "Personalised hearing profile."
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "slide",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap-and-hold",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch plus volume swipe."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Serenade",
+        "Bass Mode"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC 5.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "10.4 mm woofer + 6 mm tweeter; LHDC 5.0; 3D audio without head tracking."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "3D Audio",
+      "Audio ID 2.0",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "49 dB ANC versus 48 dB on Buds Pro 2.",
+      "New 10.4 mm + 6 mm driver setup.",
+      "3D Audio without head tracking.",
+      "Battery increased to 44 h total."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oneplus.com/us/oneplus-buds-3",
+        "type": "official-product",
+        "title": "OnePlus Buds 3 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Case-battery visibility rules are inferred from HeyMelody.",
+      "Transparency dB is not published.",
+      "Head tracking is explicitly not supported."
+    ],
+    "notes": "Official page confirms split-level battery claims and the 6-band custom EQ. No head tracking.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OnePlus",
+    "companySlug": "oneplus",
+    "family": "OnePlus Buds",
+    "model": "OnePlus Buds Pro 3",
+    "slug": "oneplus-buds-pro-3",
+    "generation": "3",
+    "variant": "Pro",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 10,
+      "caseHours": 43,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody.",
+      "notes": "43 h total with case (ANC off); 25 h total with ANC on.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 43
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "adaptive",
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "50 dB real-time adaptive ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": "50 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Dynaudio EQ",
+        "availability": "official-app",
+        "notes": "Presets plus custom EQ."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "Spatial audio",
+        "availability": "both",
+        "notes": "With head tracking."
+      },
+      {
+        "id": "audio.head-tracking",
+        "name": "Head tracking",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Find My Earbuds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": "94 ms with select OnePlus phones."
+      },
+      {
+        "id": "vendor.oneplus.neck-health",
+        "name": "Neck Health",
+        "availability": "official-app",
+        "notes": "IMU-based posture reminders."
+      },
+      {
+        "id": "vendor.oneplus.zen-mode-air",
+        "name": "Zen Mode Air",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "squeeze",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "single squeeze",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double squeeze",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple squeeze",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "squeeze-and-hold",
+          "action": "toggle adaptive ANC",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "slide",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem squeeze plus swipe."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Bass",
+        "Treble",
+        "Dynaudio"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC 5.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm woofer + 6 mm tweeter, dual DACs; LHDC 5.0; wireless charging case."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Spatial audio with head tracking",
+      "Neck Health",
+      "Zen Mode Air",
+      "Find My Earbuds",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC increased from 48 dB to 50 dB.",
+      "Added head-tracked spatial audio on any Android/iOS device.",
+      "Added Neck Health IMU features.",
+      "Added wireless charging."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oneplus.com/us/oneplus-buds-pro-3",
+        "type": "official-product",
+        "title": "OnePlus Buds Pro 3 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Case-battery visibility rules are inferred from HeyMelody.",
+      "Transparency dB is not published.",
+      "Custom-EQ band count is not explicitly stated in the fetched official copy."
+    ],
+    "notes": "Flagship with head tracking and on-device spatial rendering.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OnePlus",
+    "companySlug": "oneplus",
+    "family": "OnePlus Buds",
+    "model": "OnePlus Buds 4",
+    "slug": "oneplus-buds-4",
+    "generation": "4",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 11,
+      "caseHours": 45,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody.",
+      "notes": "45 h total with case (AAC, ANC off); 24 h total with ANC on. LHDC ANC-on total is 22 h.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 45
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "adaptive",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 55,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "55 dB real-time adaptive ANC; 5,500 Hz range."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Real-time adaptive ANC",
+        "availability": "both",
+        "notes": "55 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Sound Master EQ",
+        "availability": "official-app",
+        "notes": "Three presets plus 6-band custom EQ and BassWave 2.0."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "OnePlus 3D Audio",
+        "availability": "both",
+        "notes": "No head tracking."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Find My Earbuds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": "47 ms."
+      },
+      {
+        "id": "vendor.oneplus.golden-sound",
+        "name": "Golden Sound",
+        "availability": "official-app",
+        "notes": "Ear-scan personalised audio profile."
+      },
+      {
+        "id": "vendor.oneplus.ai-translation",
+        "name": "AI Translation",
+        "availability": "official-app",
+        "notes": "Select OnePlus phones."
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": "Single tap is opt-in."
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "slide",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem slide plus touch."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Serenade",
+        "Bass Mode"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC 5.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm woofer + 6 mm tweeter with dual DACs; LHDC 5.0 up to 24-bit/192 kHz; 3D Audio without head tracking."
+    },
+    "appOnlyFeatures": [
+      "6-band custom EQ",
+      "BassWave 2.0",
+      "3D Audio",
+      "Golden Sound",
+      "AI Translation",
+      "Find My Earbuds",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC increased from 49 dB to 55 dB.",
+      "Added dual DACs.",
+      "LHDC 5.0 raised to 24-bit/192 kHz.",
+      "Battery increased to 45 h total.",
+      "Added Golden Sound and AI Translation."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oneplus.com/us/oneplus-buds-4",
+        "type": "official-product",
+        "title": "OnePlus Buds 4 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Case-battery visibility rules are inferred from HeyMelody.",
+      "Transparency dB is not published.",
+      "Head tracking is not claimed for OnePlus 3D Audio."
+    ],
+    "notes": "2026 mainstream flagship; 55 dB ANC and 6-band EQ are official.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OnePlus",
+    "companySlug": "oneplus",
+    "family": "OnePlus Nord Buds",
+    "model": "OnePlus Nord Buds",
+    "slug": "oneplus-nord-buds",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody.",
+      "notes": "No ANC. 30 h total with case.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap",
+          "action": "play/pause or answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "next/previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap-and-hold",
+          "action": "voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Bass",
+        "Treble"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "12.4 mm driver; no ANC."
+    },
+    "appOnlyFeatures": [
+      "EQ presets",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.oneplus.com/us/oneplus-nord-buds",
+        "type": "official-product",
+        "title": "OnePlus Nord Buds product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Case-battery visibility rules are inferred from HeyMelody.",
+      "App support depth for the original Nord Buds is not fully documented.",
+      "Custom EQ is not documented."
+    ],
+    "notes": "First Nord Buds; no ANC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OnePlus",
+    "companySlug": "oneplus",
+    "family": "OnePlus Nord Buds",
+    "model": "OnePlus Nord Buds 2",
+    "slug": "oneplus-nord-buds-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 7,
+      "caseHours": 36,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody.",
+      "notes": "36 h total with case (ANC off).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 36
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 25,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "25 dB ANC; no adaptive levels."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "25 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap",
+          "action": "play/pause or answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "next/previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap-and-hold",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Bass",
+        "Treble"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12.4 mm driver; no spatial audio."
+    },
+    "appOnlyFeatures": [
+      "EQ presets",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added 25 dB ANC and transparency.",
+      "Battery increased from 30 h to 36 h.",
+      "Added dual-device connection."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oneplus.com/us/oneplus-nord-buds-2",
+        "type": "official-product",
+        "title": "OnePlus Nord Buds 2 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Case-battery visibility rules are inferred from HeyMelody.",
+      "Transparency dB is not published.",
+      "Custom EQ is not documented."
+    ],
+    "notes": "Entry ANC model; 25 dB is modest compared with Nord Buds 3 Pro/4 Pro.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OnePlus",
+    "companySlug": "oneplus",
+    "family": "OnePlus Nord Buds",
+    "model": "OnePlus Nord Buds 3 Pro",
+    "slug": "oneplus-nord-buds-3-pro",
+    "generation": "3",
+    "variant": "Pro",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 11,
+      "caseHours": 44,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody.",
+      "notes": "44 h total with case (ANC off); 29 h total with ANC on.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 44
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "adaptive",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 49,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "49 dB real-time dynamic ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Real-time dynamic ANC",
+        "availability": "both",
+        "notes": "49 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Sound Master EQ",
+        "availability": "official-app",
+        "notes": "Presets plus custom EQ."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "Spatial audio",
+        "availability": "both",
+        "notes": "OnePlus phones only."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.oneplus.ai-translation",
+        "name": "AI Translation",
+        "availability": "official-app",
+        "notes": "Select OnePlus phones."
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls; no volume swipe."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Serenade",
+        "Bass Mode"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC 5.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12.4 mm driver; LHDC 5.0; spatial audio on OnePlus phones."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Spatial audio",
+      "AI Translation",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC increased from 25 dB to 49 dB.",
+      "Added LHDC 5.0 Hi-Res audio.",
+      "Added spatial audio.",
+      "Battery increased to 44 h total."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oneplus.com/us/oneplus-nord-buds-3-pro",
+        "type": "official-product",
+        "title": "OnePlus Nord Buds 3 Pro product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.oneplus.com/global/oneplus-nord-buds-4-pro",
+        "type": "official-product",
+        "title": "Nord Buds 4 Pro comparison table",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Case-battery visibility rules are inferred from HeyMelody.",
+      "Transparency dB is not published.",
+      "Spatial audio is limited to OnePlus phones."
+    ],
+    "notes": "2024 Nord flagship; split L/R plus separate case.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OnePlus",
+    "companySlug": "oneplus",
+    "family": "OnePlus Nord Buds",
+    "model": "OnePlus Nord Buds 4",
+    "slug": "oneplus-nord-buds-4",
+    "generation": "4",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6.5,
+      "budsHoursNoAnc": 13,
+      "caseHours": 54,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody.",
+      "notes": "54 h total with case (ANC off); 27 h total with ANC on.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 54
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "adaptive",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 52,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "52 dB real-time dynamic ANC; 5,000 Hz range."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Real-time dynamic ANC",
+        "availability": "both",
+        "notes": "52 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Sound Master EQ",
+        "availability": "official-app",
+        "notes": "Three presets plus 6-band custom EQ and BassWave."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "Spatial audio",
+        "availability": "both",
+        "notes": "OnePlus phones only."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": "47 ms."
+      },
+      {
+        "id": "vendor.oneplus.ai-translation",
+        "name": "AI Translation",
+        "availability": "official-app",
+        "notes": "Select OnePlus phones."
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls; no volume swipe."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Serenade",
+        "Bass Mode"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12 mm titanium-coated driver; Bluetooth 6.1; no LHDC claimed on the official page."
+    },
+    "appOnlyFeatures": [
+      "6-band custom EQ",
+      "Spatial audio",
+      "AI Translation",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC increased from 49 dB to 52 dB.",
+      "Battery increased to 54 h total.",
+      "Bluetooth 6.1 and 47 ms latency.",
+      "No LHDC on this model."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oneplus.com/global/oneplus-nord-buds-4",
+        "type": "official-product",
+        "title": "OnePlus Nord Buds 4 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Case-battery visibility rules are inferred from HeyMelody.",
+      "Transparency dB is not published.",
+      "Codec support is listed as SBC/AAC because the official page does not claim LHDC."
+    ],
+    "notes": "2026 Nord model; 52 dB ANC and 54 h total, but no LHDC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OnePlus",
+    "companySlug": "oneplus",
+    "family": "OnePlus Nord Buds",
+    "model": "OnePlus Nord Buds 4 Pro",
+    "slug": "oneplus-nord-buds-4-pro",
+    "generation": "4",
+    "variant": "Pro",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 13,
+      "caseHours": 54,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody.",
+      "notes": "54 h total with case (AAC, ANC off); 29 h total with ANC on; LHDC ANC-on total is 26 h.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 54
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc-light",
+        "anc-moderate",
+        "anc-max",
+        "adaptive",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 55,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "55 dB real-time dynamic ANC with Light/Moderate/Max levels."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Real-time dynamic ANC",
+        "availability": "both",
+        "notes": "55 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Sound Master EQ",
+        "availability": "official-app",
+        "notes": "Presets plus custom EQ."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "3D Spatial Audio",
+        "availability": "both",
+        "notes": "Works across phone brands."
+      },
+      {
+        "id": "audio.game-spatial",
+        "name": "Game Sound Spatial Audio",
+        "availability": "both",
+        "notes": "BGMI, FreeFire, Call of Duty."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": "Acoustic sensors monitor wearing status."
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.oneplus.ai-translation",
+        "name": "AI Translation",
+        "availability": "official-app",
+        "notes": "Select OnePlus phones."
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": "Disabled by default."
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track or camera shutter",
+          "configurableInApp": true,
+          "notes": "Tap 2 Take on OnePlus phones."
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "slide",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Volume swipe plus touch."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Serenade",
+        "Bass Mode"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC 5.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12 mm titanium-coated driver; LHDC 5.0; 3D and game spatial audio."
+    },
+    "appOnlyFeatures": [
+      "6-band custom EQ",
+      "3D Spatial Audio",
+      "Game Sound Spatial Audio",
+      "AI Translation",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC increased from 49 dB to 55 dB.",
+      "Added LHDC 5.0 Hi-Res audio.",
+      "Added game spatial audio and AI translation.",
+      "Battery increased to 54 h total."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oneplus.com/global/oneplus-nord-buds-4-pro",
+        "type": "official-product",
+        "title": "OnePlus Nord Buds 4 Pro product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Case-battery visibility rules are inferred from HeyMelody.",
+      "Transparency dB is not published.",
+      "Custom-EQ band count is not explicitly stated in the fetched official copy."
+    ],
+    "notes": "2026 Nord flagship; 55 dB ANC, LHDC 5.0, spatial audio across brands.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OnePlus",
+    "companySlug": "oneplus",
+    "family": "OnePlus Bullets Wireless",
+    "model": "OnePlus Bullets Wireless Z2",
+    "slug": "oneplus-bullets-wireless-z2",
+    "generation": "Z2",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 30,
+      "caseHours": null,
+      "chargingIndicators": "Single battery reading; no case.",
+      "notes": "Neckband: one combined battery level, no case tile. 30 h playback; 10 min charge gives about 10 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "sensing.wear-detection",
+        "name": "Magnetic wear detection",
+        "availability": "device-only",
+        "notes": "Auto play/pause when buds attach."
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "play/pause button",
+          "action": "play/pause",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "volume buttons",
+          "action": "volume up/down",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Inline neckband buttons.",
+      "configurableInApp": false,
+      "notes": "No touch controls."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "12.4 mm driver; neckband."
+    },
+    "appOnlyFeatures": [
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.oneplus.com/global/oneplus-bullets-wireless-z2",
+        "type": "official-product",
+        "title": "OnePlus Bullets Wireless Z2 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "HeyMelody feature depth for the neckband is limited; EQ support is not documented.",
+      "Exact button remapping options are not documented."
+    ],
+    "notes": "Single-battery neckband; do not render L/R.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OnePlus",
+    "companySlug": "oneplus",
+    "family": "OnePlus Bullets Wireless",
+    "model": "OnePlus Bullets Wireless Z2 ANC",
+    "slug": "oneplus-bullets-wireless-z2-anc",
+    "generation": "Z2",
+    "variant": "ANC",
+    "releaseYear": 2023,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 20,
+      "budsHoursNoAnc": 30,
+      "caseHours": null,
+      "chargingIndicators": "Single battery reading; no case.",
+      "notes": "Neckband: one combined battery level. 30 h without ANC, about 20 h with ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 20,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "20 dB ANC; modest compared with TWS flagships."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "20 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Magnetic wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "play/pause button",
+          "action": "play/pause",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "volume buttons",
+          "action": "volume up/down",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "ANC button",
+          "action": "cycle ANC / Transparency",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Inline neckband buttons including ANC.",
+      "configurableInApp": false,
+      "notes": "No touch controls."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "12.4 mm driver; neckband."
+    },
+    "appOnlyFeatures": [
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added 20 dB ANC and transparency to the Z2 neckband.",
+      "ANC-on battery drops to about 20 h."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oneplus.com/in/oneplus-bullets-wireless-z2-anc",
+        "type": "official-product",
+        "title": "OnePlus Bullets Wireless Z2 ANC product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Exact ANC dB is inconsistently reported; 20 dB is the commonly cited figure.",
+      "Transparency dB is not published.",
+      "EQ support in HeyMelody is not documented for this neckband."
+    ],
+    "notes": "Single-battery ANC neckband; do not render L/R or a case.",
+    "researchedAt": "2026-11-10"
+  }
+]

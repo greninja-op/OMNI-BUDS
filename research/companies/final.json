@@ -1,0 +1,852 @@
+[
+  {
+    "company": "Final",
+    "companySlug": "final",
+    "family": "ZE",
+    "model": "ZE8000 MK2",
+    "slug": "final-ze8000-mk2",
+    "generation": "2",
+    "variant": "MK2",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "final CONNECT",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.snext_final.final_connect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.snext_final.final_connect"
+      ],
+      "appVersionObserved": "1.7.10 (listing observed 2026-11-10)",
+      "notes": "App controls noise modes, PRO Equalizer, Volume Step Optimizer, multipoint, 8K SOUND+, touch-disable mode, voice guidance and firmware."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 5,
+      "caseHours": 10,
+      "chargingIndicators": "Case LED; earbud LEDs during pairing/charging. App shows left/right earbud battery.",
+      "notes": "Official: 5 h earbuds, 15 h including case (10 h case reserve). 5 min fast charge gives 45 min. 8K SOUND+ reduces playback by about 30–60 min.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "Noise Canceling",
+        "Wind-Cut",
+        "Ambient Sound",
+        "Voice Through",
+        "Noise Control OFF"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Four active noise-control modes plus OFF. No official dB rating. No adaptive/auto mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancelling",
+        "availability": "both",
+        "notes": "Noise Canceling mode, 32% more reduction than ZE8000 per Final."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Sound / Voice Through",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.wind",
+        "name": "Wind-Cut mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "PRO Equalizer",
+        "availability": "official-app",
+        "notes": "Parametric EQ with musically fixed centre frequencies and ±3 dB, 25 steps."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "official-app",
+        "notes": "Two devices."
+      },
+      {
+        "id": "vendor.final.8k-sound",
+        "name": "8K SOUND",
+        "availability": "device-only",
+        "notes": "Final's time-domain DSP tuning."
+      },
+      {
+        "id": "vendor.final.8k-sound-plus",
+        "name": "8K SOUND+",
+        "availability": "official-app",
+        "notes": "Maximum DSP mode; reduces battery by 30–60 min."
+      },
+      {
+        "id": "vendor.final.volume-step",
+        "name": "Volume Step Optimizer",
+        "availability": "official-app",
+        "notes": "Fine volume steps around a reference level."
+      },
+      {
+        "id": "controls.touch-disable",
+        "name": "Touch operation disable",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "Hi-Res wireless",
+        "availability": "device-only",
+        "notes": "aptX Adaptive up to 24-bit/96 kHz; Snapdragon Sound."
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap (either earbud)",
+          "action": "Play/pause",
+          "configurableInApp": false,
+          "notes": "Touch can be disabled in final CONNECT but not freely remapped."
+        },
+        {
+          "gesture": "Double tap (right)",
+          "action": "Next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Triple tap (right)",
+          "action": "Previous track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Cycle noise-control modes",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap (left)",
+          "action": "Voice assistant",
+          "configurableInApp": false,
+          "notes": "Gesture mapping varies by firmware; verify in app."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Touch panel on the faceplate. App exposes a touch-disable toggle, not full gesture remapping."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "f-CORE for 8K SOUND driver, Class-AB amp, PML CAP. IPX4. No spatial audio or wear detection."
+    },
+    "appOnlyFeatures": [
+      "Noise mode switching",
+      "PRO Equalizer",
+      "Volume Step Optimizer",
+      "Multipoint",
+      "8K SOUND+",
+      "Touch disable",
+      "Voice guidance language",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "32% higher noise reduction than ZE8000",
+      "New Shield Fin ear tips",
+      "Optimised ANC algorithm",
+      "Maximum volume increased by 5 dB",
+      "Noise Control OFF mode added",
+      "Refined 8K SOUND DSP"
+    ],
+    "sources": [
+      {
+        "url": "https://snext-final.com/en/products/detail/ZE8000MK2",
+        "type": "official-product",
+        "title": "final ZE8000 MK2",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.snext_final.final_connect",
+        "type": "official-app-store",
+        "title": "final CONNECT",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Official ANC attenuation in dB is not published.",
+      "Exact touch gesture map is not spelled out on the English product page; some gestures are firmware-dependent.",
+      "PRO Equalizer band count is not stated."
+    ],
+    "notes": "Battery split display is supported by the final CONNECT device screen showing separate L/R earbud status.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Final",
+    "companySlug": "final",
+    "family": "ZE",
+    "model": "ZE8000",
+    "slug": "final-ze8000",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "final CONNECT",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.snext_final.final_connect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.snext_final.final_connect"
+      ],
+      "appVersionObserved": "1.7.10",
+      "notes": "Same app as MK2; adds Noise Control OFF via firmware on some units."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 5,
+      "caseHours": 10,
+      "chargingIndicators": "Case LED; app left/right earbud battery.",
+      "notes": "5 h earbuds, 15 h total with case (10 h case reserve). 5 min gives 45 min.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 10
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "Noise Canceling",
+        "Wind-Cut",
+        "Ambient Sound",
+        "Voice Through"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Four noise-control modes. Noise Control OFF was added to MK2 and may be available on later firmware."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Sound / Voice Through",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.wind",
+        "name": "Wind-Cut mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "PRO Equalizer",
+        "availability": "official-app",
+        "notes": "Parametric EQ."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.final.8k-sound",
+        "name": "8K SOUND",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.final.8k-sound-plus",
+        "name": "8K SOUND+",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.final.volume-step",
+        "name": "Volume Step Optimizer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "Hi-Res wireless",
+        "availability": "device-only",
+        "notes": "aptX Adaptive, Snapdragon Sound."
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap (either earbud)",
+          "action": "Play/pause",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap (right)",
+          "action": "Next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Triple tap (right)",
+          "action": "Previous track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Cycle noise-control modes",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Touch-disable option in app; no free remapping."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "IPX4. Class-AB amp and PML CAP. 8K SOUND."
+    },
+    "appOnlyFeatures": [
+      "Noise mode switching",
+      "PRO Equalizer",
+      "Volume Step Optimizer",
+      "Multipoint",
+      "8K SOUND+",
+      "Touch disable",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://snext-final.com/en/products/detail/ZE8000",
+        "type": "official-product",
+        "title": "final ZE8000",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.snext_final.final_connect",
+        "type": "official-app-store",
+        "title": "final CONNECT",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Official ANC dB is not published.",
+      "Whether current firmware adds Noise Control OFF is not confirmed for all units."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Final",
+    "companySlug": "final",
+    "family": "ZE",
+    "model": "ZE3000",
+    "slug": "final-ze3000",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "No official companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "final CONNECT does not support ZE3000. EQ is applied in the source device if desired."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 28,
+      "chargingIndicators": "Case/earbud LEDs; no app battery screen.",
+      "notes": "7 h earbuds, 35 h total with case (28 h case reserve). No ANC, so no ANC-hours figure.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 28
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Passive isolation via TYPE E tips; no noise control."
+    },
+    "features": [
+      {
+        "id": "audio.aptx-adaptive",
+        "name": "aptX Adaptive",
+        "availability": "device-only",
+        "notes": "24-bit/48 kHz."
+      },
+      {
+        "id": "vendor.final.f-core",
+        "name": "f-Core for Wireless driver",
+        "availability": "device-only",
+        "notes": "6 mm ultra-low-distortion dynamic driver."
+      },
+      {
+        "id": "vendor.final.flink",
+        "name": "f-LINK Damping System",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch media control",
+        "availability": "device-only",
+        "notes": "Play/pause, volume, tracks, calls."
+      },
+      {
+        "id": "vendor.final.single-ear",
+        "name": "Single Ear Mode",
+        "availability": "device-only",
+        "notes": "Mono playback when one bud is in the case; SBC/AAC only."
+      },
+      {
+        "id": "vendor.final.auto-pairing",
+        "name": "Auto pairing on case open",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Triple tap",
+          "action": "Previous track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Volume up/down (side-dependent)",
+          "configurableInApp": false,
+          "notes": "Exact long-press side mapping not stated on the English page."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Fixed touch controls."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "IPX4. No app EQ, no multipoint, no wear detection."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://snext-final.com/en/products/detail/ZE3000",
+        "type": "official-product",
+        "title": "final ZE3000",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery display layout on iOS/Android is not documented because there is no app.",
+      "Exact touch gesture mapping is only partly described on the product page."
+    ],
+    "notes": "Audiophile TWS with no ANC and no app. 35 h total is official.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Final",
+    "companySlug": "final",
+    "family": "ZE",
+    "model": "ZE2000",
+    "slug": "final-ze2000",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "No official companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No final CONNECT support."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 28,
+      "chargingIndicators": "Case/earbud LEDs; no app battery screen.",
+      "notes": "7 h earbuds, 35 h total with case (28 h case reserve).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 28
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC or ambient mode; Final explicitly omits these to preserve tuning."
+    },
+    "features": [
+      {
+        "id": "audio.aptx-adaptive",
+        "name": "aptX Adaptive",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.final.f-core",
+        "name": "f-Core for Wireless driver",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.final.flink",
+        "name": "f-LINK Damping System",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch media control",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.final.single-ear",
+        "name": "Single Ear Mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Triple tap",
+          "action": "Previous track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Volume up/down",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "IPX4. Retuned toward closer, more intimate vocals than ZE3000."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Retuned sound signature versus ZE3000 (closer vocals/instruments)",
+      "Same driver, battery and connectivity platform",
+      "No ANC/ambient, by design"
+    ],
+    "sources": [
+      {
+        "url": "https://snext-final.com/en/products/detail/ZE2000",
+        "type": "official-product",
+        "title": "final ZE2000",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No app means battery display is OS-dependent and undocumented.",
+      "Exact touch mapping is not fully specified."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Final",
+    "companySlug": "final",
+    "family": "UX",
+    "model": "UX3000",
+    "slug": "final-ux3000",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "No official companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app; ANC and playback are hardware buttons."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 25,
+      "budsHoursNoAnc": 35,
+      "caseHours": null,
+      "chargingIndicators": "LED status indicator; USB-C charging.",
+      "notes": "Official: 25 h ANC on, 35 h ANC off. 700 mAh battery; 2.5 h charge. No case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "ANC on",
+        "ANC off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Hybrid ANC, on/off only. No transparency mode. ANC can run without audio as an earmuff."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "device-only",
+        "notes": "Two mics per cup; no app control."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "device-only",
+        "notes": "Two devices."
+      },
+      {
+        "id": "connectivity.wired",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only",
+        "notes": "Passive cable included."
+      },
+      {
+        "id": "audio.aptx-ll",
+        "name": "aptX Low Latency",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power, long press 3 s",
+          "action": "Power on and enter pairing",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Power, long press 5 s",
+          "action": "Power off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "ANC button, long press 2 s",
+          "action": "Toggle ANC on/off",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power, ANC and playback/volume buttons on the earcup.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Low Latency"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm dynamic driver, 20 Hz–20 kHz. No app EQ, no spatial audio, no wear detection."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://snext-final.com/en/products/detail/UX3000",
+        "type": "official-product",
+        "title": "final UX3000",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC attenuation in dB is not published.",
+      "No app battery display; OS battery reporting is combined and undocumented by Final."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

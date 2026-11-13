@@ -1,0 +1,1229 @@
+[
+  {
+    "company": "vivo",
+    "companySlug": "vivo",
+    "family": "vivo Buds",
+    "model": "vivo Buds",
+    "slug": "vivo-buds",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "vivo Earphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Required for multipoint switching and advanced features on non-vivo Android devices; vivo/iQOO phones expose settings natively."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 12,
+      "caseHours": 50,
+      "chargingIndicators": "Case LED; 10-minute charge = 3 h",
+      "notes": "No ANC. Official 12 h / 50 h music, 6 h calls.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC; AI call noise reduction only."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "DeepX 3.0 sound effects",
+        "availability": "official-app",
+        "notes": "Four styles: audiobook, mega bass, clear voice, clear high pitch."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "official-app",
+        "notes": "Two devices."
+      },
+      {
+        "id": "vendor.vivo.find-my",
+        "name": "Find My vivo Buds",
+        "availability": "official-app",
+        "notes": "Requires compatible vivo/iQOO phone."
+      },
+      {
+        "id": "vendor.vivo.remote-camera",
+        "name": "Remote camera control",
+        "availability": "device-only",
+        "notes": "Double-tap."
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call; previous/next; voice assistant",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "reject incoming call",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Double-tap action is assignable on compatible phones/app."
+    },
+    "audio": {
+      "eqPresets": [
+        "Audiobook",
+        "Mega Bass",
+        "Clear Voice",
+        "Clear High Pitch"
+      ],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "10 mm driver; 20 Hz-20 kHz; BT 5.4; IP54."
+    },
+    "appOnlyFeatures": [
+      "DeepX 3.0",
+      "Multipoint",
+      "Find My vivo Buds",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.vivo.com/en/products/buds",
+        "type": "official-product",
+        "title": "vivo Buds",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No ANC",
+      "Custom EQ not stated",
+      "Wear detection not stated",
+      "App package ID not confirmed",
+      "Battery layout inferred"
+    ],
+    "notes": "Global 2025 entry model with unusually long 50 h total.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "vivo",
+    "companySlug": "vivo",
+    "family": "vivo TWS",
+    "model": "vivo TWS 3e",
+    "slug": "vivo-tws-3e",
+    "generation": "3",
+    "variant": "e",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "vivo Earphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Required for non-vivo Android devices; vivo phones use native Bluetooth settings."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 8.5,
+      "budsHoursNoAnc": 10.5,
+      "caseHours": 42,
+      "chargingIndicators": "Case LED; 10-minute charge = 3 h",
+      "notes": "Official 10.5 h / 42 h ANC-off; 8.5 h / 36 h ANC-on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Intelligent ANC; no dB claim. AI call noise reduction with cross-through air duct."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Intelligent ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "DeepX 3.0 sound effects",
+        "availability": "official-app",
+        "notes": "Super bass, enhanced vocals, enhanced trebles."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": "Auto pause/resume."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": "BT 5.3."
+      },
+      {
+        "id": "vendor.vivo.find-my",
+        "name": "Find My Earphones",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; accept/reject call; previous/next; voice assistant",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency; reject call",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Double-tap action configurable."
+    },
+    "audio": {
+      "eqPresets": [
+        "Super Bass",
+        "Enhanced Vocals",
+        "Enhanced Trebles"
+      ],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm driver; bionic composite cashmere biofiber diaphragm; IP54."
+    },
+    "appOnlyFeatures": [
+      "DeepX 3.0",
+      "Gesture remap",
+      "Find earphones",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added ANC and wear detection vs vivo TWS Air series (official-product)",
+      "Battery: 8.5 h ANC / 10.5 h ANC-off, 36 h/42 h with case (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.vivo.com/en/products/tws-3e",
+        "type": "official-product",
+        "title": "vivo TWS 3e",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB not published",
+      "Custom EQ not stated",
+      "App package ID not confirmed",
+      "Battery layout inferred"
+    ],
+    "notes": "Global 2024 ANC model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "vivo",
+    "companySlug": "vivo",
+    "family": "vivo TWS",
+    "model": "vivo TWS 3",
+    "slug": "vivo-tws-3",
+    "generation": "3",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "vivo Earphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "China-first model; global app support limited."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED; USB-C",
+      "notes": "Approximate: 10 h / 40 h ANC-off. ANC-on not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 48,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "48 dB ANC claim; no band context."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "48 dB ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "DeepX sound effects",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm driver; aptX Lossless not confirmed for non-Pro."
+    },
+    "appOnlyFeatures": [
+      "DeepX",
+      "Gesture remap",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added 48 dB ANC vs vivo TWS 2 (official-product)",
+      "Added LDAC Hi-Res and multipoint (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.vivo.com.cn/vivo/vivotws3",
+        "type": "official-product",
+        "title": "vivo TWS 3 (China)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.vivo.com.cn/vivo/param/vivotws3",
+        "type": "official-product",
+        "title": "vivo TWS 3 specifications (China)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery/dB/codec details not verified against a live official page in this pass",
+      "Custom EQ unknown",
+      "Battery layout inferred"
+    ],
+    "notes": "China-first 2023 model; verify before shipping exact values.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "vivo",
+    "companySlug": "vivo",
+    "family": "vivo TWS",
+    "model": "vivo TWS 3 Pro",
+    "slug": "vivo-tws-3-pro",
+    "generation": "3",
+    "variant": "Pro",
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "vivo Earphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "China-first model; spatial audio and aptX Lossless need compatible vivo phones."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED; USB-C; wireless charging",
+      "notes": "Approximate: 10 h / 40 h ANC-off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 49,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "49 dB ANC claim; adaptive mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "49 dB ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "device-only",
+        "notes": "Head tracking not confirmed."
+      },
+      {
+        "id": "audio.lossless",
+        "name": "aptX Lossless",
+        "availability": "device-only",
+        "notes": "Snapdragon Sound."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "aptX Adaptive",
+        "aptX Lossless"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Dual driver; Hi-Fi DAC not confirmed."
+    },
+    "appOnlyFeatures": [
+      "Spatial audio",
+      "DeepX",
+      "Gesture remap",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added spatial audio and aptX Lossless vs vivo TWS 3 (official-product)",
+      "Raised ANC from 48 dB to 49 dB (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.vivo.com.cn/vivo/vivotws3pro",
+        "type": "official-product",
+        "title": "vivo TWS 3 Pro (China)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.vivo.com.cn/vivo/param/vivotws3pro",
+        "type": "official-product",
+        "title": "vivo TWS 3 Pro specifications (China)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery/dB/head-tracking details not verified against a live official page in this pass",
+      "Custom EQ unknown",
+      "Battery layout inferred"
+    ],
+    "notes": "2023 China flagship.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "vivo",
+    "companySlug": "vivo",
+    "family": "vivo TWS",
+    "model": "vivo TWS 4",
+    "slug": "vivo-tws-4",
+    "generation": "4",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "vivo Earphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Spatial audio and DeepX require compatible vivo phones; other Android uses vivo Earphones."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 11,
+      "caseHours": 45,
+      "chargingIndicators": "Case LED; USB-C",
+      "notes": "Official 11 h / 45 h ANC-off; 6 h / 26 h ANC-on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 55,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "55 dB ANC claim; adaptive."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "55 dB ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.lossless",
+        "name": "aptX Lossless / LDAC",
+        "availability": "device-only",
+        "notes": "Snapdragon Sound on compatible phones."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "aptX Adaptive",
+        "LC3"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12.2 mm ultra-wideband driver; BT 5.4; 44 ms low latency; 3 mics; IP54."
+    },
+    "appOnlyFeatures": [
+      "Spatial audio",
+      "DeepX",
+      "Gesture remap",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Raised ANC from 49 dB to 55 dB vs TWS 3 Pro (official-product)",
+      "Battery increased to 11 h/45 h, 6 h/26 h with ANC (official-product)",
+      "Added LDAC and aptX Adaptive on the second-gen Snapdragon S3 platform (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.vivo.com.cn/vivo/param/vivotws4",
+        "type": "official-product",
+        "title": "vivo TWS 4 specifications (China)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.vivo.com.cn/vivo/vivotws4",
+        "type": "official-product",
+        "title": "vivo TWS 4 (China)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official battery/ANC page not captured live",
+      "Custom EQ unknown",
+      "Head tracking not stated",
+      "Battery layout inferred"
+    ],
+    "notes": "2024 flagship; a separate Hi-Fi variant exists.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "vivo",
+    "companySlug": "vivo",
+    "family": "vivo TWS",
+    "model": "vivo TWS 4 Hi-Fi",
+    "slug": "vivo-tws-4-hi-fi",
+    "generation": "4",
+    "variant": "Hi-Fi",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "vivo Earphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "aptX Lossless requires Snapdragon Sound phone; app for EQ/gestures."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 11,
+      "caseHours": 45,
+      "chargingIndicators": "Case LED; USB-C",
+      "notes": "Same chassis/battery as TWS 4; 11 h / 45 h ANC-off, 6 h / 26 h ANC-on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 55,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "55 dB ANC; Hi-Fi variant emphasises codec/DAC path."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "55 dB ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.lossless",
+        "name": "aptX Lossless",
+        "availability": "device-only",
+        "notes": "Snapdragon Sound certified."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "aptX Adaptive",
+        "aptX Lossless"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Hi-Fi tuning; aptX Lossless headline."
+    },
+    "appOnlyFeatures": [
+      "Spatial audio",
+      "EQ",
+      "Gesture remap"
+    ],
+    "featureDeltaFromPrevious": [
+      "aptX Lossless/Hi-Fi tuning emphasis vs TWS 3 Pro (official-product)",
+      "ANC raised to 55 dB (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.vivo.com.cn/vivo/param/vivotws4hifi",
+        "type": "official-product",
+        "title": "vivo TWS 4 Hi-Fi specifications (China)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.vivo.com.cn/vivo/vivotws4hifi",
+        "type": "official-product",
+        "title": "vivo TWS 4 Hi-Fi (China)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Only aptX/industry listing captured; official vivo spec page not fetched",
+      "Custom EQ unknown",
+      "Battery layout inferred"
+    ],
+    "notes": "Variant record; do not merge with TWS 4 because the codec/tuning positioning differs.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "vivo",
+    "companySlug": "vivo",
+    "family": "vivo TWS",
+    "model": "vivo TWS 5",
+    "slug": "vivo-tws-5",
+    "generation": "5",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "vivo Earphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "China-first; DeepX/spatial require vivo/iQOO phones."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 12,
+      "caseHours": 48,
+      "chargingIndicators": "Case LED; USB-C",
+      "notes": "Official 12 h / 48 h ANC-off; 6 h single-charge ANC-on. The 50 h figure in some coverage is not the official Chinese spec.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 60,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "60 dB ANC claim from China launch material; band context not captured."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "60 dB ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC/LHDC Hi-Res",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "LC3"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm dynamic driver; 16 Hz-48 kHz; BT 5.4 with three-device connection; 42 ms latency; dual transparency; custom EQ; IP54."
+    },
+    "appOnlyFeatures": [
+      "Spatial audio",
+      "DeepX 4.0",
+      "Custom EQ",
+      "AI translation",
+      "Gesture remap"
+    ],
+    "featureDeltaFromPrevious": [
+      "Raised ANC from 55 dB to 60 dB and widened band to 5500 Hz vs TWS 4 (official-product)",
+      "Battery increased to 12 h/48 h, 6 h ANC single-charge (official-product)",
+      "Added three-device connection and 42 ms latency (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.vivo.com.cn/vivo/param/vivotws5",
+        "type": "official-product",
+        "title": "vivo TWS 5 specifications (China)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.vivo.com.cn/vivo/vivotws5",
+        "type": "official-product",
+        "title": "vivo TWS 5 (China)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official spec page not captured live",
+      "ANC-on hours not published",
+      "Custom EQ unknown",
+      "Battery layout inferred"
+    ],
+    "notes": "2025 China flagship.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "vivo",
+    "companySlug": "vivo",
+    "family": "vivo TWS",
+    "model": "vivo TWS 5 Pro",
+    "slug": "vivo-tws-5-pro",
+    "generation": "5",
+    "variant": "Pro",
+    "releaseYear": 2026,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "vivo Earphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Wi-Fi lossless and Hi-Fi DAC features require compatible vivo phones; app for EQ/gestures."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 11,
+      "caseHours": 50,
+      "chargingIndicators": "Case LED; USB-C; wireless charging",
+      "notes": "Official 50 h total; 11 h ANC-off and 6 h ANC-on single-charge. Wi-Fi playback is 5 h (4 h with ANC).",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 60,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "60 dB ANC claim; hybrid system."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "60 dB ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.lossless",
+        "name": "Wi-Fi lossless up to 4.6 Mbps",
+        "availability": "device-only",
+        "notes": "Requires compatible vivo phone."
+      },
+      {
+        "id": "audio.hi-fi-dac",
+        "name": "Independent Hi-Fi DAC",
+        "availability": "device-only",
+        "notes": "Cirrus Logic DAC, 113 dB dynamic range."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "LC3"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Hybrid 11 mm dynamic + Knowles balanced-armature driver; independent DAC; Wi-Fi PCM lossless; BT 5.4 three-device connection; 42 ms; 16 Hz-60 kHz."
+    },
+    "appOnlyFeatures": [
+      "Wi-Fi lossless setup",
+      "Spatial audio",
+      "EQ",
+      "AI translation",
+      "Gesture remap"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added independent Hi-Fi DAC and Wi-Fi lossless up to 4.6 Mbps vs TWS 5 (official-product)",
+      "Retained 60 dB ANC and 50 h case (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.vivo.com.cn/vivo/param/vivotws5pro",
+        "type": "official-product",
+        "title": "vivo TWS 5 Pro specifications (China)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.vivo.com.cn/vivo/vivotws5pro/",
+        "type": "official-product",
+        "title": "vivo TWS 5 Pro (China)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery single-charge/ANC-on not captured",
+      "Only secondary coverage used; official vivo page not fetched",
+      "Custom EQ unknown",
+      "Battery layout inferred"
+    ],
+    "notes": "2026 China flagship; Wi-Fi lossless and DAC are the differentiators.",
+    "researchedAt": "2026-11-10"
+  }
+]

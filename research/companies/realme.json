@@ -1,0 +1,2551 @@
+[
+  {
+    "company": "realme",
+    "companySlug": "realme",
+    "family": "realme Buds T",
+    "model": "realme Buds T300",
+    "slug": "realme-buds-t300",
+    "generation": "T300",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "realme Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.realme.link"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.realme.link",
+        "https://apps.apple.com/us/app/realme-link/id1536584786"
+      ],
+      "appVersionObserved": "5.8.811.2814 (APK mirror listing, 2026-11-10); the review screenshot predates this and its version was not shown",
+      "notes": "realme Link is the official companion app; some features also appear in realme phone Bluetooth settings."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 4.5,
+      "budsHoursNoAnc": 8,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED; numeric L/R levels in realme Link.",
+      "notes": "DIRECT EVIDENCE: the realme Link device page for Buds T300 shows two separate readings, L 100% and R 100%, and no case tile at all. This matches the user's report of split L/R on a T300. The official 40 h figure is buds + case with ANC off; the app does not surface the case percentage. Contrast with CMF Buds 1, whose Nothing X page shows L/C/R including a case tile.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 30,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "30 dB ANC with transparency; no adaptive levels."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "30 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Four presets plus a 6-band custom EQ."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "360-degree spatial audio",
+        "availability": "both",
+        "notes": "No head tracking."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": "50 ms."
+      },
+      {
+        "id": "vendor.realme.volume-enhancer",
+        "name": "Volume enhancer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.realme.dolby-atmos",
+        "name": "Dolby Atmos toggle",
+        "availability": "official-app",
+        "notes": "App-visible toggle on supported phones."
+      },
+      {
+        "id": "find-my-phone",
+        "name": "Find my phone",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Button settings",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": "Left and right can be assigned separately."
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "touch and hold",
+          "action": "switch noise-control modes",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "realme Link 'Button settings' lets L and R be configured independently."
+    },
+    "audio": {
+      "eqPresets": [
+        "Clear Vocals",
+        "Nature Balance",
+        "Clear Bass",
+        "Bass Boost"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12.4 mm dynamic bass driver; 6-band EQ at 62/250/1k/4k/8k/16k Hz in the realme Link screenshot."
+    },
+    "appOnlyFeatures": [
+      "6-band custom EQ",
+      "Dolby Atmos toggle",
+      "Volume enhancer",
+      "Game mode",
+      "Find my phone",
+      "Button settings",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.realme.com/in/realme-buds-t300",
+        "type": "official-product",
+        "title": "realme Buds T300 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.mobigyaan.com/realme-buds-t300-review",
+        "type": "reputable-secondary",
+        "title": "realme Buds T300 review with realme Link screenshots",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.mobigyaan.com/wp-content/uploads/2023/09/realme-Buds-T300-Review-Features-realme-Link-1.jpg",
+        "type": "other",
+        "title": "realme Link T300 screenshot: L 100% / R 100%, no case tile",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.realme.link",
+        "type": "official-app-store",
+        "title": "realme Link on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Case battery is not shown in realme Link; whether it is never reported or only hidden is not documented.",
+      "Transparency dB is not published.",
+      "ANC-on total with case is not clearly published; bud-only ANC runtime is an estimate from review testing."
+    ],
+    "notes": "KEY RECORD for the reported T300 behaviour. Split L/R is correct for T300; case is absent from the official app UI. Do not add a case tile just because the product has a charging case.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "realme",
+    "companySlug": "realme",
+    "family": "realme Buds Air",
+    "model": "realme Buds Air 5 Pro",
+    "slug": "realme-buds-air-5-pro",
+    "generation": "5",
+    "variant": "Pro",
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "realme Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.realme.link"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.realme.link",
+        "https://apps.apple.com/us/app/realme-link/id1536584786"
+      ],
+      "appVersionObserved": "5.8.811.2814 (APK mirror listing, 2026-11-10)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 8,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED; numeric levels in realme Link.",
+      "notes": "40 h total with case (ANC off). Air-series realme Link UI is expected to include a case tile; the T300 exception is recorded separately.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 40
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "50 dB ANC with adaptive noise control."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "50 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets plus 6-band custom EQ."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "360-degree spatial audio",
+        "availability": "both",
+        "notes": "No head tracking."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.realme.volume-enhancer",
+        "name": "Volume enhancer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "find-my-phone",
+        "name": "Find my phone",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Button settings",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "touch and hold",
+          "action": "switch noise-control modes",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch; L/R separately configurable."
+    },
+    "audio": {
+      "eqPresets": [
+        "Clear Vocals",
+        "Nature Balance",
+        "Clear Bass",
+        "Bass Boost"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm + 6 mm dual drivers; LDAC Hi-Res; spatial audio without head tracking."
+    },
+    "appOnlyFeatures": [
+      "6-band custom EQ",
+      "Spatial audio",
+      "Volume enhancer",
+      "Game mode",
+      "Find my phone",
+      "Button settings",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "50 dB ANC.",
+      "LDAC Hi-Res audio.",
+      "11 mm + 6 mm dual drivers.",
+      "360-degree spatial audio."
+    ],
+    "sources": [
+      {
+        "url": "https://buy.realme.com/in/goods/632",
+        "type": "official-product",
+        "title": "realme Buds Air 5 Pro official store page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.realme.link",
+        "type": "official-app-store",
+        "title": "realme Link on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official page copy is JavaScript-heavy; exact battery hours come from launch/review material.",
+      "Case tile visibility rules are inferred from realme Link Air-series behaviour.",
+      "Transparency dB is not published."
+    ],
+    "notes": "Air 5 Pro is the first Air Pro with LDAC and dual drivers.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "realme",
+    "companySlug": "realme",
+    "family": "realme Buds Air",
+    "model": "realme Buds Air 6 Pro",
+    "slug": "realme-buds-air-6-pro",
+    "generation": "6",
+    "variant": "Pro",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "realme Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.realme.link"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.realme.link",
+        "https://apps.apple.com/us/app/realme-link/id1536584786"
+      ],
+      "appVersionObserved": "5.8.811.2814 (APK mirror listing, 2026-11-10)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 10,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED; numeric levels in realme Link.",
+      "notes": "40 h total with case (ANC off).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 40
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "50 dB ANC with adaptive mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "50 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets plus 6-band custom EQ."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "360-degree spatial audio",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.realme.volume-enhancer",
+        "name": "Volume enhancer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "find-my-phone",
+        "name": "Find my phone",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Button settings",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "touch and hold",
+          "action": "switch noise-control modes",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch."
+    },
+    "audio": {
+      "eqPresets": [
+        "Clear Vocals",
+        "Nature Balance",
+        "Clear Bass",
+        "Bass Boost"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Dual drivers; LDAC; spatial audio."
+    },
+    "appOnlyFeatures": [
+      "6-band custom EQ",
+      "Spatial audio",
+      "Volume enhancer",
+      "Game mode",
+      "Find my phone",
+      "Button settings",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Battery increased to 10 h per bud / 40 h total.",
+      "Refined dual-driver acoustic system.",
+      "LDAC retained."
+    ],
+    "sources": [
+      {
+        "url": "https://www.realme.com/in/more-products/realme-buds-air-6-pro",
+        "type": "official-product",
+        "title": "realme Buds Air 6 Pro product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.realme.link",
+        "type": "official-app-store",
+        "title": "realme Link on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official page copy is JavaScript-heavy; exact battery hours come from launch/review material.",
+      "Case tile visibility rules are inferred.",
+      "Transparency dB is not published."
+    ],
+    "notes": "Air 6 Pro is a battery/driver refresh of the Air 5 Pro formula.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "realme",
+    "companySlug": "realme",
+    "family": "realme Buds Air",
+    "model": "realme Buds Air 7 Pro",
+    "slug": "realme-buds-air-7-pro",
+    "generation": "7",
+    "variant": "Pro",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "realme Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.realme.link"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.realme.link",
+        "https://apps.apple.com/us/app/realme-link/id1536584786"
+      ],
+      "appVersionObserved": "5.8.811.2814 (APK mirror listing, 2026-11-10)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 12,
+      "caseHours": 48,
+      "chargingIndicators": "Case LED; numeric levels in realme Link.",
+      "notes": "48 h total with case (ANC off).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 48
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 53,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "53 dB ANC (some regional pages say 52 dB) with adaptive mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "53 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets plus 6-band custom EQ."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "360-degree spatial audio",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.realme.ai-translation",
+        "name": "AI Live Translation",
+        "availability": "official-app",
+        "notes": "34 languages."
+      },
+      {
+        "id": "low-latency",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.realme.volume-enhancer",
+        "name": "Volume enhancer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "find-my-phone",
+        "name": "Find my phone",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Button settings",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "touch and hold",
+          "action": "switch noise-control modes",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch."
+    },
+    "audio": {
+      "eqPresets": [
+        "Clear Vocals",
+        "Nature Balance",
+        "Clear Bass",
+        "Bass Boost"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm + 6 mm dual drivers with dual DACs; LDAC; 360 spatial audio."
+    },
+    "appOnlyFeatures": [
+      "6-band custom EQ",
+      "Spatial audio",
+      "AI Live Translation",
+      "Volume enhancer",
+      "Game mode",
+      "Find my phone",
+      "Button settings",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC increased to 53 dB.",
+      "Battery increased to 48 h total.",
+      "Added AI Live Translation.",
+      "Dual DACs added."
+    ],
+    "sources": [
+      {
+        "url": "https://buy.realme.com/in/goods/755",
+        "type": "official-product",
+        "title": "realme Buds Air 7 Pro official store page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.gadgets360.com/audio/news/realme-buds-air-7-pro-price-launch-specification-features-8236674",
+        "type": "reputable-secondary",
+        "title": "Air 7 Pro launch specs",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.realme.link",
+        "type": "official-app-store",
+        "title": "realme Link on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB is reported as 52 or 53 depending on region.",
+      "Case tile visibility rules are inferred.",
+      "LDAC support should be confirmed against the exact regional SKU.",
+      "Transparency dB is not published."
+    ],
+    "notes": "Air 7 Pro adds AI translation and a higher ANC rating.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "realme",
+    "companySlug": "realme",
+    "family": "realme Buds Air",
+    "model": "realme Buds Air8 Pro",
+    "slug": "realme-buds-air8-pro",
+    "generation": "8",
+    "variant": "Pro",
+    "releaseYear": 2026,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "realme Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.realme.link"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.realme.link",
+        "https://apps.apple.com/us/app/realme-link/id1536584786"
+      ],
+      "appVersionObserved": "5.8.811.2814 (APK mirror listing, 2026-11-10)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 12,
+      "caseHours": 50,
+      "chargingIndicators": "Case LED; numeric levels in realme Link.",
+      "notes": "50 h total with case (ANC off).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 50
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 55,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "55 dB adaptive ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": "55 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets plus 6-band custom EQ."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "Spatial audio",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.realme.ai-translation",
+        "name": "AI Live Translation",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": "45 ms."
+      },
+      {
+        "id": "vendor.realme.volume-enhancer",
+        "name": "Volume enhancer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "find-my-phone",
+        "name": "Find my phone",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Button settings",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "touch and hold",
+          "action": "switch noise-control modes",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch."
+    },
+    "audio": {
+      "eqPresets": [
+        "Clear Vocals",
+        "Nature Balance",
+        "Clear Bass",
+        "Bass Boost"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC 5.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm + 6 mm coaxial drivers with dual DACs; LHDC 5.0."
+    },
+    "appOnlyFeatures": [
+      "6-band custom EQ",
+      "Spatial audio",
+      "AI Live Translation",
+      "Volume enhancer",
+      "Game mode",
+      "Find my phone",
+      "Button settings",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC increased to 55 dB.",
+      "Battery increased to 50 h total.",
+      "LHDC 5.0 replaces LDAC.",
+      "Dual DAC coaxial driver system."
+    ],
+    "sources": [
+      {
+        "url": "https://www.realme.com/in/more-products/realme-buds-air-8-pro",
+        "type": "official-product",
+        "title": "realme Buds Air8 Pro product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.gadgets360.com/realme-buds-air-8-pro-price-in-india-136562",
+        "type": "reputable-secondary",
+        "title": "Air8 Pro specs and price",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.realme.link",
+        "type": "official-app-store",
+        "title": "realme Link on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official page is JavaScript-heavy; exact per-bud ANC runtime is from launch material.",
+      "Case tile visibility rules are inferred.",
+      "Transparency dB is not published."
+    ],
+    "notes": "2026 Air flagship; LHDC 5.0 and 55 dB ANC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "realme",
+    "companySlug": "realme",
+    "family": "realme Buds Air",
+    "model": "realme Buds Air 5",
+    "slug": "realme-buds-air-5",
+    "generation": "5",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "realme Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.realme.link"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.realme.link",
+        "https://apps.apple.com/us/app/realme-link/id1536584786"
+      ],
+      "appVersionObserved": "5.8.811.2814 (APK mirror listing, 2026-11-10)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 8,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED; numeric levels in realme Link.",
+      "notes": "40 h total with case (ANC off).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 40
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "50 dB ANC; no adaptive levels."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "50 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets plus 6-band custom EQ."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "360-degree spatial audio",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.realme.volume-enhancer",
+        "name": "Volume enhancer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "find-my-phone",
+        "name": "Find my phone",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Button settings",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "touch and hold",
+          "action": "switch noise-control modes",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch."
+    },
+    "audio": {
+      "eqPresets": [
+        "Clear Vocals",
+        "Nature Balance",
+        "Clear Bass",
+        "Bass Boost"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "10 mm driver; no LDAC."
+    },
+    "appOnlyFeatures": [
+      "6-band custom EQ",
+      "Spatial audio",
+      "Volume enhancer",
+      "Game mode",
+      "Find my phone",
+      "Button settings",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "50 dB ANC.",
+      "360-degree spatial audio.",
+      "Dual-device connection."
+    ],
+    "sources": [
+      {
+        "url": "https://www.realme.com/in/search?keyword=buds",
+        "type": "official-regional",
+        "title": "realme India Buds lineup (Buds Air 5)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.realme.link",
+        "type": "official-app-store",
+        "title": "realme Link on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official page copy is JavaScript-heavy; battery and driver figures come from secondary listings.",
+      "Case tile visibility rules are inferred.",
+      "Transparency dB is not published.",
+      "LDAC is not claimed for this model."
+    ],
+    "notes": "Non-Pro Air 5; no LDAC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "realme",
+    "companySlug": "realme",
+    "family": "realme Buds Air",
+    "model": "realme Buds Air 6",
+    "slug": "realme-buds-air-6",
+    "generation": "6",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "realme Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.realme.link"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.realme.link",
+        "https://apps.apple.com/us/app/realme-link/id1536584786"
+      ],
+      "appVersionObserved": "5.8.811.2814 (APK mirror listing, 2026-11-10)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 10,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED; numeric levels in realme Link.",
+      "notes": "40 h total with case (ANC off).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 40
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "50 dB ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "50 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets plus 6-band custom EQ."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "360-degree spatial audio",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.realme.volume-enhancer",
+        "name": "Volume enhancer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "find-my-phone",
+        "name": "Find my phone",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Button settings",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "touch and hold",
+          "action": "switch noise-control modes",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch."
+    },
+    "audio": {
+      "eqPresets": [
+        "Clear Vocals",
+        "Nature Balance",
+        "Clear Bass",
+        "Bass Boost"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "No LDAC."
+    },
+    "appOnlyFeatures": [
+      "6-band custom EQ",
+      "Spatial audio",
+      "Volume enhancer",
+      "Game mode",
+      "Find my phone",
+      "Button settings",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Battery increased to 10 h per bud / 40 h total.",
+      "Refined 50 dB ANC."
+    ],
+    "sources": [
+      {
+        "url": "https://www.realme.com/in/search?keyword=buds",
+        "type": "official-regional",
+        "title": "realme India Buds lineup (Buds Air 6)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.realme.link",
+        "type": "official-app-store",
+        "title": "realme Link on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official page copy is JavaScript-heavy; battery figures come from secondary listings.",
+      "Case tile visibility rules are inferred.",
+      "Transparency dB is not published."
+    ],
+    "notes": "Non-Pro Air 6; no LDAC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "realme",
+    "companySlug": "realme",
+    "family": "realme Buds Air",
+    "model": "realme Buds Air 7",
+    "slug": "realme-buds-air-7",
+    "generation": "7",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "realme Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.realme.link"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.realme.link",
+        "https://apps.apple.com/us/app/realme-link/id1536584786"
+      ],
+      "appVersionObserved": "5.8.811.2814 (APK mirror listing, 2026-11-10)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 12,
+      "caseHours": 48,
+      "chargingIndicators": "Case LED; numeric levels in realme Link.",
+      "notes": "48 h total with case (ANC off).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 48
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 52,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "52 dB ANC with adaptive mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "52 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets plus 6-band custom EQ."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "360-degree spatial audio",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.realme.volume-enhancer",
+        "name": "Volume enhancer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "find-my-phone",
+        "name": "Find my phone",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Button settings",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "touch and hold",
+          "action": "switch noise-control modes",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch."
+    },
+    "audio": {
+      "eqPresets": [
+        "Clear Vocals",
+        "Nature Balance",
+        "Clear Bass",
+        "Bass Boost"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "No LDAC on the non-Pro Air 7."
+    },
+    "appOnlyFeatures": [
+      "6-band custom EQ",
+      "Spatial audio",
+      "Volume enhancer",
+      "Game mode",
+      "Find my phone",
+      "Button settings",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC increased to 52 dB.",
+      "Battery increased to 48 h total."
+    ],
+    "sources": [
+      {
+        "url": "https://www.realme.com/in/more-products/realme-buds-air-7",
+        "type": "official-product",
+        "title": "realme Buds Air 7 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.realme.link",
+        "type": "official-app-store",
+        "title": "realme Link on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official page copy is JavaScript-heavy; battery figures come from secondary listings.",
+      "Case tile visibility rules are inferred.",
+      "Transparency dB is not published.",
+      "LDAC is not claimed for this model."
+    ],
+    "notes": "Non-Pro Air 7; no LDAC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "realme",
+    "companySlug": "realme",
+    "family": "realme Buds T",
+    "model": "realme Buds T500 Pro",
+    "slug": "realme-buds-t500-pro",
+    "generation": "T500",
+    "variant": "Pro",
+    "releaseYear": 2026,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "realme Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.realme.link"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.realme.link",
+        "https://apps.apple.com/us/app/realme-link/id1536584786"
+      ],
+      "appVersionObserved": "5.8.811.2814 (APK mirror listing, 2026-11-10)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 12,
+      "caseHours": 56,
+      "chargingIndicators": "Case LED; numeric levels in realme Link.",
+      "notes": "56 h total with case (ANC off). T500 Pro is the T300 successor.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 56
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "50 dB ANC with adaptive mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "50 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets plus 6-band custom EQ."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "360-degree spatial audio",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.realme.ai-translation",
+        "name": "AI Live Translation",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.realme.volume-enhancer",
+        "name": "Volume enhancer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "find-my-phone",
+        "name": "Find my phone",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Button settings",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "touch and hold",
+          "action": "switch noise-control modes",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch."
+    },
+    "audio": {
+      "eqPresets": [
+        "Clear Vocals",
+        "Nature Balance",
+        "Clear Bass",
+        "Bass Boost"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC 5.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12.4 mm driver; LHDC 5.0; Bluetooth 6.1."
+    },
+    "appOnlyFeatures": [
+      "6-band custom EQ",
+      "Spatial audio",
+      "AI Live Translation",
+      "Volume enhancer",
+      "Game mode",
+      "Find my phone",
+      "Button settings",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC increased from 30 dB to 50 dB.",
+      "Added LHDC 5.0 and spatial audio.",
+      "Battery increased to 56 h total.",
+      "Added AI translation."
+    ],
+    "sources": [
+      {
+        "url": "https://www.realme.com/in/more-products/realme-buds-t500-pro",
+        "type": "official-product",
+        "title": "realme Buds T500 Pro product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.gizmochina.com/2026/04/09/realme-buds-t500-pro-launch-specs-features/",
+        "type": "reputable-secondary",
+        "title": "Buds T500 Pro launch specs",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.realme.link",
+        "type": "official-app-store",
+        "title": "realme Link on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Case battery display for T500 Pro is not confirmed by a model-specific screenshot; split/separate is inferred from the Air/T Pro family.",
+      "Transparency dB is not published.",
+      "Exact per-bud ANC runtime is from launch material."
+    ],
+    "notes": "T300 successor. Do not assume the T300 case-hidden behaviour carries over without a screenshot.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "realme",
+    "companySlug": "realme",
+    "family": "realme Buds Wireless",
+    "model": "realme Buds Wireless 3",
+    "slug": "realme-buds-wireless-3",
+    "generation": "3",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "realme Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.realme.link"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.realme.link",
+        "https://apps.apple.com/us/app/realme-link/id1536584786"
+      ],
+      "appVersionObserved": "5.8.811.2814 (APK mirror listing, 2026-11-10)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 30,
+      "caseHours": null,
+      "chargingIndicators": "Single battery reading; no case.",
+      "notes": "Neckband: one combined battery level. 30 h playback; 10 min charge gives about 10 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Magnetic wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "play/pause button",
+          "action": "play/pause",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "volume buttons",
+          "action": "volume up/down",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Inline neckband buttons.",
+      "configurableInApp": false,
+      "notes": "No touch controls."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Bass",
+        "Treble"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "11.2 mm driver; neckband; no ANC."
+    },
+    "appOnlyFeatures": [
+      "EQ presets",
+      "Game mode",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "30 h battery and 11.2 mm driver.",
+      "Magnetic wear detection."
+    ],
+    "sources": [
+      {
+        "url": "https://buy.realme.com/in/goods/636",
+        "type": "official-product",
+        "title": "realme Buds Wireless 3 official store page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.realme.link",
+        "type": "official-app-store",
+        "title": "realme Link on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official page copy is JavaScript-heavy; exact playback figure comes from launch material.",
+      "EQ support in realme Link for this neckband is not independently verified.",
+      "No case, so only a single battery level should be shown."
+    ],
+    "notes": "Single-battery neckband; do not render L/R or a case.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "realme",
+    "companySlug": "realme",
+    "family": "realme Buds Wireless",
+    "model": "realme Buds Wireless 5 ANC",
+    "slug": "realme-buds-wireless-5-anc",
+    "generation": "5",
+    "variant": "ANC",
+    "releaseYear": 2025,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "realme Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.realme.link"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.realme.link",
+        "https://apps.apple.com/us/app/realme-link/id1536584786"
+      ],
+      "appVersionObserved": "5.8.811.2814 (APK mirror listing, 2026-11-10)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Single battery reading; no case.",
+      "notes": "Neckband: one combined battery level. Official runtime and ANC dB were not available in the fetched material.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "ANC confirmed by the product name and listing; exact dB not verified."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Magnetic wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "play/pause button",
+          "action": "play/pause",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "volume buttons",
+          "action": "volume up/down",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "ANC button",
+          "action": "cycle ANC / Transparency",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Inline neckband buttons.",
+      "configurableInApp": false,
+      "notes": "No touch controls."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Bass",
+        "Treble"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "Neckband; exact driver and spatial-audio support not verified."
+    },
+    "appOnlyFeatures": [
+      "EQ presets",
+      "Game mode",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added ANC to the Wireless 5 line.",
+      "Updated neckband design."
+    ],
+    "sources": [
+      {
+        "url": "https://www.realme.com/in/more-products/realme-buds-wireless-5-anc",
+        "type": "official-product",
+        "title": "realme Buds Wireless 5 ANC product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.realme.link",
+        "type": "official-app-store",
+        "title": "realme Link on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "ANC dB is not verified.",
+      "Battery runtime with and without ANC is not verified.",
+      "Driver size, codecs, and multipoint support are not verified.",
+      "Single-battery display is inferred from the neckband form factor."
+    ],
+    "notes": "Low-confidence record; confirm against the retail box/manual before shipping feature flags.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "realme",
+    "companySlug": "realme",
+    "family": "realme Buds Wireless",
+    "model": "realme Buds Wireless 6 Neo",
+    "slug": "realme-buds-wireless-6-neo",
+    "generation": "6",
+    "variant": "Neo",
+    "releaseYear": 2026,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "realme Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.realme.link"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.realme.link",
+        "https://apps.apple.com/us/app/realme-link/id1536584786"
+      ],
+      "appVersionObserved": "5.8.811.2814 (APK mirror listing, 2026-11-10)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Single battery reading; no case.",
+      "notes": "Neckband: one combined battery level. Official runtime was not available in the fetched material.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Neo variant appears to be non-ANC; confirm against the retail listing."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Magnetic wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "play/pause button",
+          "action": "play/pause",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "volume buttons",
+          "action": "volume up/down",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Inline neckband buttons.",
+      "configurableInApp": false,
+      "notes": "No touch controls."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Bass",
+        "Treble"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "Neckband; exact driver details not verified."
+    },
+    "appOnlyFeatures": [
+      "EQ presets",
+      "Game mode",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "2026 Neo neckband refresh.",
+      "Positioned below the Wireless 5 ANC."
+    ],
+    "sources": [
+      {
+        "url": "https://www.realme.com/in/more-products/realme-buds-wireless-6-neo",
+        "type": "official-product",
+        "title": "realme Buds Wireless 6 Neo product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.realme.link",
+        "type": "official-app-store",
+        "title": "realme Link on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery runtime is not verified.",
+      "ANC absence is inferred from the Neo positioning; confirm.",
+      "Driver size, codecs, and multipoint support are not verified.",
+      "Single-battery display is inferred from the neckband form factor."
+    ],
+    "notes": "Low-confidence record; do not inherit Wireless 5 ANC features.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "realme",
+    "companySlug": "realme",
+    "family": "realme Buds Clip",
+    "model": "realme Buds Clip",
+    "slug": "realme-buds-clip",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "realme Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.realme.link"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.realme.link",
+        "https://apps.apple.com/us/app/realme-link/id1536584786"
+      ],
+      "appVersionObserved": "5.8.811.2814 (APK mirror listing, 2026-11-10)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": "Open-ear clip. Official battery hours and app battery layout were not available in the fetched material.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear clip; no ANC is documented."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Button settings",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "touch and hold",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls on the clip; exact gesture map not documented in the fetched material."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Open-ear clip; codec and driver details not available in the fetched official copy."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Game mode",
+      "Button settings",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "realme's first open-ear clip model.",
+      "No ANC; open-ear design."
+    ],
+    "sources": [
+      {
+        "url": "https://www.realme.com/in/more-products/realme-buds-clip",
+        "type": "official-product",
+        "title": "realme Buds Clip product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.realme.link",
+        "type": "official-app-store",
+        "title": "realme Link on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery hours and battery display layout are not verified.",
+      "Codecs, driver size, and exact gesture map are not verified.",
+      "ANC absence is inferred from the open-ear clip design.",
+      "Do not render a case tile until official evidence is found."
+    ],
+    "notes": "Low-confidence open-ear record; needs a model-specific manual or app screenshot.",
+    "researchedAt": "2026-11-10"
+  }
+]

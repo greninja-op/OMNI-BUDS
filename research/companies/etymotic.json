@@ -1,0 +1,160 @@
+[
+  {
+    "company": "Etymotic",
+    "companySlug": "etymotic",
+    "family": "Etymotion",
+    "model": "Etymotion BT Cable (MMCX)",
+    "slug": "etymotic-etymotion-bt-cable-mmcx",
+    "generation": null,
+    "variant": "MMCX",
+    "releaseYear": 2020,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "No official companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app. All control is through the inline microphone pod."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": null,
+      "chargingIndicators": "LED on the inline control pod; micro-USB charging.",
+      "notes": "Single battery in the cable pod, up to 8 h; about 2 h charge. No case. Headfonia measured roughly 7–7.5 h with aptX HD.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC; relies on the earphone's passive isolation."
+    },
+    "features": [
+      {
+        "id": "connectivity.wireless-cable",
+        "name": "Bluetooth MMCX cable",
+        "availability": "device-only",
+        "notes": "Works with Etymotic ER series and other MMCX earphones."
+      },
+      {
+        "id": "vendor.etymotic.akm-dac",
+        "name": "AKM AK4331 Velvet Sound DAC/amp",
+        "availability": "device-only",
+        "notes": "Dedicated DAC and amplifier in the cable pod."
+      },
+      {
+        "id": "audio.aptx-hd",
+        "name": "aptX HD",
+        "availability": "device-only",
+        "notes": "24-bit/48 kHz claim."
+      },
+      {
+        "id": "controls.inline",
+        "name": "Inline remote",
+        "availability": "device-only",
+        "notes": "Volume, playback, tracks, calls and Google Assistant/Siri."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Play/pause button, single press",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Play/pause button, long press",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Play/pause button, double press",
+          "action": "Voice assistant",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume +",
+          "action": "Volume up; long press next track",
+          "configurableInApp": false,
+          "notes": "Long-press track skip is documented in reviews rather than the product page."
+        },
+        {
+          "gesture": "Volume −",
+          "action": "Volume down; long press previous track",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Inline pod with volume rocker and multifunction button.",
+      "configurableInApp": false,
+      "notes": "Fixed controls; no app remapping."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "aptX",
+        "aptX HD"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "No DSP, EQ or app. Sound character comes from the attached ER-series earphone."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "MMCX version of the Etymotion cable for ER2/ER3/ER4 and EVO",
+      "Dedicated AKM DAC/amp instead of a codec-integrated output"
+    ],
+    "sources": [
+      {
+        "url": "https://etymotic.com/products/etymotion-bt-cable-mmcx-connectors",
+        "type": "official-product",
+        "title": "Etymotion BT Cable | MMCX Connectors",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://etymotic.com/pages/manuals",
+        "type": "official-support",
+        "title": "Etymotic manuals page (Etymotion Wireless Bluetooth Manual)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.headfonia.com/etymotic-etymotion-wireless-adapter-review/2/",
+        "type": "reputable-secondary",
+        "title": "Etymotion review: 8+ h claim and measured 7–7.5 h",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Etymotic's current page omits battery hours and Bluetooth version; 8 h comes from the manual-era spec and secondary reviews.",
+      "Exact inline gesture map is not in the current product description.",
+      "No multipoint support is documented; assumed absent."
+    ],
+    "notes": "Etymotic EVO and ERX are wired-only. No official Bluetooth EVO/ERX bundle was found, so they are excluded per the scope rule. This cable is the current Etymotic Bluetooth product.",
+    "researchedAt": "2026-11-10"
+  }
+]

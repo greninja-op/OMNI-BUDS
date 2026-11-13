@@ -1,0 +1,527 @@
+[
+  {
+    "company": "David Clark",
+    "companySlug": "david-clark",
+    "family": "DC ONE-X",
+    "model": "DC ONE-X",
+    "slug": "david-clark-dc-one-x",
+    "generation": "ONE-X",
+    "variant": null,
+    "releaseYear": 2016,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "David Clark does not offer a companion app for the DC ONE-X. Bluetooth is configured entirely from the control module."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 50,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Battery status is shown on the compact in-line control module; David Clark does not publish the LED colour steps or low-battery thresholds.",
+      "notes": "One combined headset battery: two AA batteries (3 VDC), up to 50 hours. No charging case. The aircraft-powered DC ONE-XP variant can run from 11–30 VDC aircraft power.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "ENC on"
+      ],
+      "adaptive": false,
+      "ancDb": 30,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Hybrid Electronic Noise Cancellation with feed-forward and feed-back microphones. Official peak attenuation is 30 dB at 150 Hz over a 20 Hz–1 kHz range. This is aviation ENC, not consumer ANC, and there is no transparency mode. Fail-safe design keeps communications working if ENC power is lost."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid Electronic Noise Cancellation",
+        "availability": "device-only",
+        "notes": "Feed-forward plus feed-back; 30 dB peak at 150 Hz."
+      },
+      {
+        "id": "noise-control.passive",
+        "name": "Passive attenuation and fail-safe communications",
+        "availability": "device-only",
+        "notes": "Communications continue if the ENC system or battery fails."
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth calls and audio",
+        "availability": "device-only",
+        "notes": "Connects to phones, tablets, music players and other Bluetooth devices."
+      },
+      {
+        "id": "audio.dsp",
+        "name": "Digital signal processing",
+        "availability": "device-only",
+        "notes": "High-fidelity communications and music audio."
+      },
+      {
+        "id": "audio.mute",
+        "name": "Audio mute",
+        "availability": "device-only",
+        "notes": "Reduces auxiliary audio volume so radio/intercom calls are not missed."
+      },
+      {
+        "id": "audio.stereo-mono",
+        "name": "Stereo/mono selection",
+        "availability": "device-only",
+        "notes": "Switch for compatibility with different aircraft audio panels."
+      },
+      {
+        "id": "comms.aviation-intercom",
+        "name": "Aircraft intercom and radio communications",
+        "availability": "device-only",
+        "notes": "Dual GA plugs; TSO-C139a approved."
+      },
+      {
+        "id": "controls.side-swappable-mic",
+        "name": "Reversible boom microphone",
+        "availability": "device-only",
+        "notes": "M-55 electret noise-cancelling microphone; boom can be worn on either side."
+      },
+      {
+        "id": "battery.aa",
+        "name": "Two AA batteries",
+        "availability": "device-only",
+        "notes": "Up to 50 hours."
+      },
+      {
+        "id": "power.auto-shutoff",
+        "name": "Auto shutoff",
+        "availability": "device-only",
+        "notes": "Ships with Auto Shutoff off; can be enabled."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Bluetooth button",
+          "action": "Pair/connect and call control",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume + / −",
+          "action": "Adjust audio volume",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Auto-shutoff switch (inside control module)",
+          "action": "Enable/disable automatic power-off",
+          "configurableInApp": false,
+          "notes": "Factory default is off."
+        }
+      ],
+      "physicalButtons": "Compact in-line control module with backlit touch-key controls for on/off, Bluetooth and volume.",
+      "configurableInApp": false,
+      "notes": "No touch surface and no app."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Dynamic ear transducer, 12 Hz–15 kHz, 150 Ω mono / 300 Ω stereo per ear. Bluetooth codec list and version are not published. No multipoint claim."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.davidclarkcompany.com/files/literature/DC%20ONE-X%20Data%20Sheet.pdf",
+        "type": "official-product",
+        "title": "DC ONE-X data sheet (43102G-01)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.davidclarkcompany.com/files/literature/230-35480-DC%20ONE-X%20Quick%20Ref%20Guide%202-21.pdf",
+        "type": "official-manual",
+        "title": "DC ONE-X quick reference guide",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://store.davidclark.com/dc-one-x-43102g-01",
+        "type": "official-product",
+        "title": "David Clark store: DC ONE-X",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth version and codec list are not published.",
+      "Multipoint support is not stated.",
+      "Battery indicator LED colours and thresholds are not documented.",
+      "ENC attenuation above 1 kHz and below 20 Hz is not published.",
+      "No app, so no app battery display."
+    ],
+    "notes": "Record covers the standard dual-GA-plug DC ONE-X. The XP (panel power) and XH (helicopter U-174) are separate records because power source and connector differ.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "David Clark",
+    "companySlug": "david-clark",
+    "family": "DC ONE-X",
+    "model": "DC ONE-XP",
+    "slug": "david-clark-dc-one-xp",
+    "generation": "ONE-X",
+    "variant": "XP (panel power)",
+    "releaseYear": 2016,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No David Clark companion app."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 50,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Control-module battery indicator; exact LED thresholds are not published.",
+      "notes": "Panel-powered variant: operates from 11–30 VDC aircraft power. The two AA batteries are required only when the headset is disconnected from the aircraft panel. Up to 50 hours on AA cells.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "ENC on"
+      ],
+      "adaptive": false,
+      "ancDb": 30,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Same hybrid ENC as the DC ONE-X: 30 dB peak at 150 Hz, 20 Hz–1 kHz. Aviation ENC, not consumer ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid Electronic Noise Cancellation",
+        "availability": "device-only",
+        "notes": "30 dB peak at 150 Hz."
+      },
+      {
+        "id": "noise-control.passive",
+        "name": "Passive attenuation and fail-safe communications",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth calls and audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.dsp",
+        "name": "Digital signal processing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.mute",
+        "name": "Audio mute",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.stereo-mono",
+        "name": "Stereo/mono selection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "comms.aviation-intercom",
+        "name": "Aircraft intercom and radio communications",
+        "availability": "device-only",
+        "notes": "Panel-powered installation; TSO-C139a."
+      },
+      {
+        "id": "controls.side-swappable-mic",
+        "name": "Reversible boom microphone",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "power.aircraft",
+        "name": "Aircraft panel power",
+        "availability": "device-only",
+        "notes": "11–30 VDC; AA batteries only for off-panel use."
+      },
+      {
+        "id": "battery.aa",
+        "name": "Two AA batteries for off-panel use",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Bluetooth button",
+          "action": "Pair/connect and call control",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume + / −",
+          "action": "Adjust audio volume",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Compact in-line control module with backlit touch keys.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Dynamic ear transducer, 12 Hz–15 kHz. Bluetooth codec list not published."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Panel-powered operation from 11–30 VDC aircraft power; AA batteries are backup only."
+    ],
+    "sources": [
+      {
+        "url": "https://www.davidclarkcompany.com/files/literature/DC%20ONE-X%20Data%20Sheet.pdf",
+        "type": "official-product",
+        "title": "DC ONE-X data sheet",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.davidclarkcompany.com/files/literature/230-35480-DC%20ONE-X%20Quick%20Ref%20Guide%202-21.pdf",
+        "type": "official-manual",
+        "title": "DC ONE-X quick reference guide (XP power section)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth version and codec list are not published.",
+      "Multipoint support is not stated.",
+      "Battery LED thresholds are not documented."
+    ],
+    "notes": "The XP is the panel-powered DC ONE-X. Kept separate from the standard DC ONE-X because the power contract differs.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "David Clark",
+    "companySlug": "david-clark",
+    "family": "DC ONE-X",
+    "model": "DC ONE-XH",
+    "slug": "david-clark-dc-one-xh",
+    "generation": "ONE-X",
+    "variant": "XH (helicopter)",
+    "releaseYear": 2016,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No David Clark companion app."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 50,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Control-module battery indicator; thresholds not published.",
+      "notes": "Two AA batteries, up to 50 hours. Single U-174/U plug and 5 ft extended coil cord for helicopters. No charging case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "ENC on"
+      ],
+      "adaptive": false,
+      "ancDb": 30,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Hybrid ENC, 30 dB peak at 150 Hz, 20 Hz–1 kHz. Aviation ENC for high-impedance helicopter intercom systems."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid Electronic Noise Cancellation",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "noise-control.passive",
+        "name": "Passive attenuation and fail-safe communications",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth calls and audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.dsp",
+        "name": "Digital signal processing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.mute",
+        "name": "Audio mute",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.stereo-mono",
+        "name": "Stereo/mono selection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "comms.aviation-intercom",
+        "name": "Helicopter intercom and radio communications",
+        "availability": "device-only",
+        "notes": "Single U-174/U plug; designed for high-impedance civilian rotorcraft intercoms."
+      },
+      {
+        "id": "controls.side-swappable-mic",
+        "name": "Reversible boom microphone",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "battery.aa",
+        "name": "Two AA batteries",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Bluetooth button",
+          "action": "Pair/connect and call control",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume + / −",
+          "action": "Adjust audio volume",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Compact in-line control module with backlit touch keys.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Dynamic ear transducer, 12 Hz–15 kHz. Bluetooth codec list not published."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Helicopter configuration: single U-174/U plug and 5 ft extended coil cord."
+    ],
+    "sources": [
+      {
+        "url": "https://www.davidclarkcompany.com/files/literature/230-35480-DC%20ONE-X%20Quick%20Ref%20Guide%202-21.pdf",
+        "type": "official-manual",
+        "title": "DC ONE-X quick reference guide (DC ONE-XH section)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.davidclarkcompany.com/files/literature/DC%20ONE-X%20Data%20Sheet.pdf",
+        "type": "official-product",
+        "title": "DC ONE-X data sheet",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth version and codec list are not published.",
+      "Multipoint support is not stated.",
+      "Battery LED thresholds are not documented."
+    ],
+    "notes": "The XH is the helicopter DC ONE-X (part 43102G-06). Kept separate because the connector and intercom impedance target differ.",
+    "researchedAt": "2026-11-10"
+  }
+]

@@ -173,6 +173,13 @@ object TileStateMapper {
 
     private fun batterySubtitle(state: GlobalDeviceState): String? {
         val battery = state.battery as? BatteryState.Known ?: return null
+        val observation = battery.observation
+        if (observation != null) {
+            val freshness = observation.freshness
+            if (freshness == Freshness.STALE || freshness == Freshness.EXPIRED) {
+                return null // Stale readings are never shown as current.
+            }
+        }
         val level = battery.levelPercent ?: return null
         // Never interpret missing battery as zero — null level means unknown.
         return "Battery $level%"

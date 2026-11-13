@@ -31,6 +31,8 @@ class OnePlusHeyMelodyDriver : IVendorDriver {
         "00000200-3c17-d293-8e48-14fe2e4da212",
         "0000fdab-0000-1000-8000-00805f9b34fb",
         "0000079a-d102-11e1-9b23-00025b00a5a5",
+        "0100079a-d102-11e1-9b23-00025b00a5a5",
+        "0200079a-d102-11e1-9b23-00025b00a5a5",
     )
 
     override fun matches(
@@ -96,6 +98,33 @@ class OnePlusHeyMelodyDriver : IVendorDriver {
 
     override fun buildBatteryQueryCommand(): ByteArray {
         return RealmeProtocolParser.buildBatteryQuery()
+    }
+
+    override fun buildBatchStatusQuery(): ByteArray {
+        return RealmeProtocolParser.buildBatchStatusQuery()
+    }
+
+    override fun buildModePollCommand(): ByteArray = RealmeProtocolParser.buildAncModeRead()
+
+    override fun buildStateQueryCommands(): List<ByteArray> = listOf(
+        // Documented init: handshake, list the event codes the buds offer, subscribe to
+        // 01 02 03 (03 = noise-mode changes made on the buds), then read the real mode.
+        RealmeProtocolParser.buildHandshake(),
+        RealmeProtocolParser.buildBroadcastCodesQuery(),
+        RealmeProtocolParser.buildEventSubscribe(byteArrayOf(0x01, 0x02, 0x03)),
+        RealmeProtocolParser.buildAncModeRead(),
+        RealmeProtocolParser.buildHoldCycleRead(),
+        RealmeProtocolParser.buildBatchStatusQuery(),
+        RealmeProtocolParser.buildTouchGestureQuery(0x01),
+        RealmeProtocolParser.buildTouchGestureQuery(0x02),
+    )
+
+    override fun parseGameModeState(bytes: ByteArray): Boolean? {
+        return RealmeProtocolParser.parseGameModeFromBatchStatus(bytes)
+    }
+
+    override fun parseBatchStatus(bytes: ByteArray): RealmeProtocolParser.BatchStatus? {
+        return RealmeProtocolParser.parseBatchStatus(bytes)
     }
 
     override fun parseBatteryReport(bytes: ByteArray): TwsBatteryReport? {

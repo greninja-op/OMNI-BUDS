@@ -1,0 +1,2786 @@
+﻿[
+    {
+        "company":  "Apple",
+        "companySlug":  "apple",
+        "family":  "AirPods Pro",
+        "model":  "AirPods Pro 2 (USB-C)",
+        "slug":  "airpods-pro-2-usb-c",
+        "generation":  "2",
+        "variant":  "Pro, USB-C Charging Case",
+        "releaseYear":  2023,
+        "formFactor":  "tws-bud",
+        "officialApp":  {
+                            "name":  "Settings (AirPods settings)",
+                            "platforms":  [
+                                              "ios",
+                                              "macos"
+                                          ],
+                            "packageIds":  [
+
+                                           ],
+                            "appStoreUrls":  [
+
+                                             ],
+                            "appVersionObserved":  "iOS 27 / macOS 27 Settings",
+                            "notes":  "System Settings, Control Center and Batteries widget."
+                        },
+        "battery":  {
+                        "budsDisplay":  "combined",
+                        "caseDisplay":  "separate",
+                        "caseVisibility":  "only-when-case-open",
+                        "caseWhileBudsOut":  "last-known",
+                        "budsHoursAnc":  6,
+                        "budsHoursNoAnc":  7,
+                        "caseHours":  30,
+                        "chargingIndicators":  "USB-C, MagSafe, Apple Watch charger or Qi; speaker and lanyard loop. Status light green/amber.",
+                        "notes":  "One combined bud percentage plus separate case percentage. Case reading is last-known when both buds are out."
+                    },
+        "anc":  {
+                    "supported":  true,
+                    "modes":  [
+                                  "anc",
+                                  "transparency",
+                                  "adaptive",
+                                  "off"
+                              ],
+                    "adaptive":  true,
+                    "ancDb":  null,
+                    "transparencyDb":  null,
+                    "personalized":  false,
+                    "windNoise":  null,
+                    "notes":  "Same ANC/Adaptive Audio platform as the Lightning variant. No absolute dB published."
+                },
+        "features":  [
+                         {
+                             "id":  "noise-control.anc",
+                             "name":  "Active Noise Cancellation",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "noise-control.transparency",
+                             "name":  "Transparency mode",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "noise-control.adaptive",
+                             "name":  "Adaptive Audio",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "vendor.apple.conversation-awareness",
+                             "name":  "Conversation Awareness",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "vendor.apple.personalized-volume",
+                             "name":  "Personalized Volume",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "vendor.apple.voice-isolation",
+                             "name":  "Voice Isolation",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "audio.adaptive-eq",
+                             "name":  "Adaptive EQ",
+                             "availability":  "device-only"
+                         },
+                         {
+                             "id":  "equalization.custom-eq",
+                             "name":  "3-band Custom EQ",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "spatial.audio",
+                             "name":  "Personalized Spatial Audio",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "spatial.head-tracking",
+                             "name":  "Dynamic head tracking",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "sensing.wear-detection",
+                             "name":  "Skin-detect sensor",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "connectivity.auto-switch",
+                             "name":  "Automatic Switching",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "assistant.siri",
+                             "name":  "Hey Siri / Siri Interactions",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "vendor.apple.head-gesture",
+                             "name":  "Head gestures for Siri",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "vendor.apple.camera-remote",
+                             "name":  "Camera Remote",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "vendor.apple.pause-when-asleep",
+                             "name":  "Pause media when falling asleep",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "hearing.hearing-test",
+                             "name":  "Hearing Test",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "hearing.hearing-aid",
+                             "name":  "Hearing Aid",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "hearing.hearing-protection",
+                             "name":  "Hearing Protection",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "vendor.apple.ear-tip-fit-test",
+                             "name":  "Ear Tip Fit Test",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "app.case-sounds",
+                             "name":  "Charging case sounds",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "find.find-my",
+                             "name":  "Find My with case speaker",
+                             "availability":  "official-app"
+                         }
+                     ],
+        "controls":  {
+                         "types":  [
+                                       "squeeze",
+                                       "slide",
+                                       "head-gesture",
+                                       "voice"
+                                   ],
+                         "gestures":  [
+                                          {
+                                              "gesture":  "press stem",
+                                              "action":  "Play/pause, answer call, mute/unmute",
+                                              "configurableInApp":  false
+                                          },
+                                          {
+                                              "gesture":  "double-press stem",
+                                              "action":  "Next track / end call",
+                                              "configurableInApp":  false
+                                          },
+                                          {
+                                              "gesture":  "triple-press stem",
+                                              "action":  "Previous track",
+                                              "configurableInApp":  false
+                                          },
+                                          {
+                                              "gesture":  "swipe up/down on stem",
+                                              "action":  "Volume up/down",
+                                              "configurableInApp":  false
+                                          },
+                                          {
+                                              "gesture":  "press and hold stem",
+                                              "action":  "Cycle ANC / Transparency / Adaptive Audio, or Siri (per-side choice)",
+                                              "configurableInApp":  true
+                                          },
+                                          {
+                                              "gesture":  "nod / shake head",
+                                              "action":  "Accept or decline calls/notifications via Siri",
+                                              "configurableInApp":  true
+                                          }
+                                      ],
+                         "physicalButtons":  null,
+                         "configurableInApp":  true,
+                         "notes":  "Force sensor with volume swipe."
+                     },
+        "audio":  {
+                      "eqPresets":  [
+                                        "Recommended"
+                                    ],
+                      "customEq":  true,
+                      "eqBands":  3,
+                      "spatialAudio":  true,
+                      "headTracking":  true,
+                      "codecs":  [
+                                     "AAC",
+                                     "SBC"
+                                 ],
+                      "hiRes":  false,
+                      "multipoint":  false,
+                      "wearDetection":  true,
+                      "notes":  "No Bluetooth hi-res codec. No multipoint; Automatic Switching only."
+                  },
+        "appOnlyFeatures":  [
+                                "Adaptive Audio blend slider",
+                                "Conversation Awareness toggle",
+                                "Personalized Volume",
+                                "3-band Custom EQ",
+                                "Ear Tip Fit Test",
+                                "Hearing Test/Aid/Protection",
+                                "Case sounds",
+                                "Charging notifications"
+                            ],
+        "featureDeltaFromPrevious":  [
+                                         "USB-C charging replaces Lightning and adds Apple Watch charger support",
+                                         "USB-C case enables Lossless Audio with Apple Vision Pro",
+                                         "Same ANC, drivers and 6 h/30 h battery as the Lightning variant"
+                                     ],
+        "sources":  [
+                        {
+                            "url":  "https://www.apple.com/airpods/compare/",
+                            "type":  "official-product",
+                            "title":  "Compare AirPods models",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://support.apple.com/en-al/guide/airpods/devde25a4bbe/web",
+                            "type":  "official-support",
+                            "title":  "Charge AirPods, AirPods Pro, or AirPods Max",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://support.apple.com/en-al/guide/airpods/te819024i19r/web",
+                            "type":  "official-support",
+                            "title":  "Customize EQ on AirPods",
+                            "accessed":  "2026-11-10"
+                        }
+                    ],
+        "confidence":  "high",
+        "gaps":  [
+                     "No absolute ANC/Transparency dB published.",
+                     "Lossless-with-Vision-Pro is documented but not listed as hi-res Bluetooth; recorded as hiRes false with note."
+                 ],
+        "notes":  null,
+        "researchedAt":  "2026-11-10"
+    },
+    {
+        "company":  "Bose",
+        "companySlug":  "bose",
+        "family":  "QuietComfort Ultra",
+        "model":  "QuietComfort Ultra Earbuds",
+        "slug":  "bose-quietcomfort-ultra-earbuds",
+        "generation":  "1",
+        "variant":  "Ultra",
+        "releaseYear":  2023,
+        "formFactor":  "tws-bud",
+        "officialApp":  {
+                            "name":  "Bose app",
+                            "platforms":  [
+                                              "android",
+                                              "ios"
+                                          ],
+                            "packageIds":  [
+                                               "com.bose.bosemusic"
+                                           ],
+                            "appStoreUrls":  [
+                                                 "https://play.google.com/store/apps/details?id=com.bose.bosemusic"
+                                             ],
+                            "appVersionObserved":  "unlisted (Google Play listing updated 2026-10-22)",
+                            "notes":  "Formerly Bose Music."
+                        },
+        "battery":  {
+                        "budsDisplay":  "combined",
+                        "caseDisplay":  "separate",
+                        "caseVisibility":  "always",
+                        "caseWhileBudsOut":  "last-known",
+                        "budsHoursAnc":  6,
+                        "budsHoursNoAnc":  null,
+                        "caseHours":  18,
+                        "chargingIndicators":  "Earbud status light inside case; case front LED.",
+                        "notes":  "6 h Immersive off / 4 h Immersive on; 18 h case. Wireless charging only via optional case cover."
+                    },
+        "anc":  {
+                    "supported":  true,
+                    "modes":  [
+                                  "quiet",
+                                  "aware",
+                                  "immersion",
+                                  "off"
+                              ],
+                    "adaptive":  false,
+                    "ancDb":  null,
+                    "transparencyDb":  null,
+                    "personalized":  true,
+                    "windNoise":  true,
+                    "notes":  "CustomTune; ActiveSense; Wind Block. Bose does not market adaptive ANC on this model; ActiveSense (where present) adapts transparency, not Quiet-mode ANC."
+                },
+        "features":  [
+                         {
+                             "id":  "noise-control.anc",
+                             "name":  "Adjustable Quiet mode ANC",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "noise-control.transparency",
+                             "name":  "Aware mode with ActiveSense",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "noise-control.custom-modes",
+                             "name":  "Custom listening modes",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "noise-control.wind-block",
+                             "name":  "Wind Block",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "audio.immersive",
+                             "name":  "Bose Immersive Audio (Still/Motion)",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "audio.customtune",
+                             "name":  "CustomTune ear calibration",
+                             "availability":  "device-only",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "equalization.equalizer",
+                             "name":  "3-band adjustable EQ",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "connectivity.multipoint",
+                             "name":  "Bluetooth multipoint",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "sensing.wear-detection",
+                             "name":  "Wear detection / auto play-pause",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "app.shortcuts",
+                             "name":  "Customizable touch shortcuts",
+                             "availability":  "official-app",
+                             "notes":  null
+                         }
+                     ],
+        "controls":  {
+                         "types":  [
+                                       "touch"
+                                   ],
+                         "gestures":  [
+                                          {
+                                              "gesture":  "single tap",
+                                              "action":  "play/pause",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          },
+                                          {
+                                              "gesture":  "double tap",
+                                              "action":  "next track",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          },
+                                          {
+                                              "gesture":  "swipe up/down",
+                                              "action":  "volume",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          },
+                                          {
+                                              "gesture":  "press and hold",
+                                              "action":  "cycle listening modes / shortcut",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          }
+                                      ],
+                         "physicalButtons":  null,
+                         "configurableInApp":  true,
+                         "notes":  null
+                     },
+        "audio":  {
+                      "eqPresets":  [
+
+                                    ],
+                      "customEq":  true,
+                      "eqBands":  3,
+                      "spatialAudio":  true,
+                      "headTracking":  true,
+                      "codecs":  [
+                                     "SBC",
+                                     "AAC",
+                                     "aptX Adaptive"
+                                 ],
+                      "hiRes":  true,
+                      "multipoint":  true,
+                      "wearDetection":  true,
+                      "notes":  "IPX4; Snapdragon Sound; aptX Adaptive."
+                  },
+        "appOnlyFeatures":  [
+                                "custom-modes",
+                                "wind-block",
+                                "shortcuts",
+                                "immersive-audio-still-motion",
+                                "equalizer"
+                            ],
+        "featureDeltaFromPrevious":  [
+                                         "Replaced the QuietComfort Earbuds II.",
+                                         "Immersive Audio and CustomTune added versus QC Earbuds II.",
+                                         "Six microphones total (three per bud)."
+                                     ],
+        "sources":  [
+                        {
+                            "url":  "https://www.bose.com/pressroom/bose-announces-new-quietcomfort-ultra-headphones-and-earbuds",
+                            "type":  "official-product",
+                            "title":  "Bose announcement - QuietComfort Ultra Earbuds",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://support.bose.com/article/quietcomfort-ultra-earbuds-specifications",
+                            "type":  "official-product",
+                            "title":  "QuietComfort Ultra Earbuds specifications",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://play.google.com/store/apps/details?id=com.bose.bosemusic",
+                            "type":  "official-app-store",
+                            "title":  "Bose app on Google Play",
+                            "accessed":  "2026-11-10"
+                        }
+                    ],
+        "confidence":  "high",
+        "gaps":  [
+                     "No official ANC/transparency dB figures.",
+                     "Case wireless charging requires an optional cover; accessory SKU not recorded.",
+                     "App version number not displayed.",
+                     "No official ANC-off runtime published; the quoted bud hours are the ANC-on figure.",
+                     "Case last-known behaviour is explicitly documented for Ultra Open Earbuds (2nd Gen); it is inferred for this model from Bose\u0027s shared app behaviour."
+                 ],
+        "notes":  null,
+        "researchedAt":  "2026-11-10"
+    },
+    {
+        "company":  "CMF by Nothing",
+        "companySlug":  "cmf",
+        "family":  "CMF Buds",
+        "model":  "CMF Buds",
+        "slug":  "cmf-buds",
+        "generation":  "1",
+        "variant":  null,
+        "releaseYear":  2024,
+        "formFactor":  "tws-stem",
+        "officialApp":  {
+                            "name":  "Nothing X",
+                            "platforms":  [
+                                              "android",
+                                              "ios"
+                                          ],
+                            "packageIds":  [
+                                               "com.nothing.smartcenter"
+                                           ],
+                            "appStoreUrls":  [
+                                                 "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+                                                 "https://apps.apple.com/us/app/nothing-x/id1568033706"
+                                             ],
+                            "appVersionObserved":  "2.4.9 (SoundGuys review, Aug 2024, firmware 1.0.5.49); current Play listing updated 2026-11-03",
+                            "notes":  "CMF Buds use the Nothing X app, not a separate CMF app."
+                        },
+        "battery":  {
+                        "budsDisplay":  "split",
+                        "caseDisplay":  "separate",
+                        "caseVisibility":  "only-when-case-open",
+                        "caseWhileBudsOut":  "hidden",
+                        "budsHoursAnc":  5.5,
+                        "budsHoursNoAnc":  8,
+                        "caseHours":  35.5,
+                        "chargingIndicators":  "Case LED; numeric L/C/R levels in Nothing X.",
+                        "notes":  "DIRECT EVIDENCE: the Nothing X home screen for CMF Buds (1st gen) shows three separate readings, 100% L / 80% C / 100% R, in SoundGuys\u0027 review screenshot taken with Nothing X 2.4.9 and firmware 1.0.5.49. Buds are split L/R and the case is a separate tile. The case reading requires the case to be open; Nothing\u0027s support article says the app must be active and the case open. This model is therefore NOT a combined-battery device in the official app. If OmniBuds shows one combined bud percentage for CMF Buds 1, that is an OmniBuds parsing/rendering defect, not the official behaviour."
+                    },
+        "anc":  {
+                    "supported":  true,
+                    "modes":  [
+                                  "anc",
+                                  "transparency"
+                              ],
+                    "adaptive":  false,
+                    "ancDb":  42,
+                    "transparencyDb":  null,
+                    "personalized":  false,
+                    "windNoise":  false,
+                    "notes":  "42 dB hybrid ANC; no adaptive or personalised ANC."
+                },
+        "features":  [
+                         {
+                             "id":  "noise-control.anc",
+                             "name":  "Active noise cancellation",
+                             "availability":  "both",
+                             "notes":  "42 dB."
+                         },
+                         {
+                             "id":  "noise-control.transparency",
+                             "name":  "Transparency mode",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "equalization.equalizer",
+                             "name":  "Equalizer",
+                             "availability":  "official-app",
+                             "notes":  "Dirac-tuned presets plus 3-band custom EQ."
+                         },
+                         {
+                             "id":  "vendor.cmf.ultra-bass",
+                             "name":  "Ultra Bass",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "connectivity.multipoint",
+                             "name":  "Dual-device connection",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "sensing.wear-detection",
+                             "name":  "In-ear detection",
+                             "availability":  "device-only",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "connectivity.fast-pair",
+                             "name":  "Google Fast Pair",
+                             "availability":  "device-only",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "find-my-buds",
+                             "name":  "Find My Buds",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "low-latency",
+                             "name":  "Low latency mode",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "firmware-update",
+                             "name":  "Firmware update",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "gesture-customization",
+                             "name":  "Gesture customization",
+                             "availability":  "official-app",
+                             "notes":  null
+                         }
+                     ],
+        "controls":  {
+                         "types":  [
+                                       "touch"
+                                   ],
+                         "gestures":  [
+                                          {
+                                              "gesture":  "double-tap",
+                                              "action":  "skip forward or answer/end call",
+                                              "configurableInApp":  true,
+                                              "notes":  "No single-tap action."
+                                          },
+                                          {
+                                              "gesture":  "triple-tap",
+                                              "action":  "skip back or reject call",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          },
+                                          {
+                                              "gesture":  "tap-and-hold",
+                                              "action":  "switch ANC / Transparency",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          },
+                                          {
+                                              "gesture":  "double-tap-and-hold",
+                                              "action":  "volume or voice assistant",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          }
+                                      ],
+                         "physicalButtons":  null,
+                         "configurableInApp":  true,
+                         "notes":  "Touch area at the top of the stem. No single tap."
+                     },
+        "audio":  {
+                      "eqPresets":  [
+                                        "Balanced",
+                                        "More Bass",
+                                        "More Treble",
+                                        "Voice",
+                                        "Dirac tuned"
+                                    ],
+                      "customEq":  true,
+                      "eqBands":  3,
+                      "spatialAudio":  false,
+                      "headTracking":  false,
+                      "codecs":  [
+                                     "SBC",
+                                     "AAC"
+                                 ],
+                      "hiRes":  false,
+                      "multipoint":  true,
+                      "wearDetection":  true,
+                      "notes":  "Dirac-tuned; 3-band custom EQ; no spatial audio."
+                  },
+        "appOnlyFeatures":  [
+                                "Custom EQ",
+                                "Ultra Bass",
+                                "Find My Buds",
+                                "Gesture remapping",
+                                "Firmware update"
+                            ],
+        "featureDeltaFromPrevious":  [
+
+                                     ],
+        "sources":  [
+                        {
+                            "url":  "https://us.nothing.tech/products/cmf-buds",
+                            "type":  "official-product",
+                            "title":  "CMF Buds product page",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://www.soundguys.com/cmf-buds-by-nothing-review-120996/",
+                            "type":  "reputable-secondary",
+                            "title":  "CMF Buds review with Nothing X battery screenshot",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://www.soundguys.com/wp-content/uploads/2024/08/nothing-x-app-cmf-buds-homepage.jpg",
+                            "type":  "other",
+                            "title":  "Nothing X CMF Buds screenshot: 100% L / 80% C / 100% R",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://support.nothing.tech/hc/en-us/articles/7455053910545-How-can-I-check-the-battery-level",
+                            "type":  "official-support",
+                            "title":  "How can I check the battery level?",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+                            "type":  "official-app-store",
+                            "title":  "Nothing X on Google Play",
+                            "accessed":  "2026-11-10"
+                        }
+                    ],
+        "confidence":  "high",
+        "gaps":  [
+                     "Case tile behaviour when both buds are out and the case is closed is not independently verified.",
+                     "Transparency dB is not published.",
+                     "The exact five preset names are not all visible in the official material."
+                 ],
+        "notes":  "KEY RECORD for the reported CMF Buds 1 vs realme Buds T300 discrepancy. Official Nothing X shows split L/R plus separate case for CMF Buds 1; it does not combine the two buds.",
+        "researchedAt":  "2026-11-10"
+    },
+    {
+        "company":  "Samsung",
+        "companySlug":  "samsung",
+        "family":  "Galaxy Buds",
+        "model":  "Galaxy Buds3 Pro",
+        "slug":  "galaxy-buds3-pro",
+        "generation":  "3",
+        "variant":  "Pro",
+        "releaseYear":  2024,
+        "formFactor":  "tws-bud",
+        "officialApp":  {
+                            "name":  "Galaxy Wearable",
+                            "platforms":  [
+                                              "android",
+                                              "windows"
+                                          ],
+                            "packageIds":  [
+                                               "com.samsung.android.app.watchmanager"
+                                           ],
+                            "appStoreUrls":  [
+                                                 "https://play.google.com/store/apps/details?id=com.samsung.android.app.watchmanager"
+                                             ],
+                            "appVersionObserved":  "Galaxy Wearable listing updated 2026-10-06; version string not shown",
+                            "notes":  "One UI 8.0+ exposes many controls in Quick Panel/device settings; Galaxy Wearable remains for detailed settings."
+                        },
+        "battery":  {
+                        "budsDisplay":  "split",
+                        "caseDisplay":  "separate",
+                        "caseVisibility":  "always",
+                        "caseWhileBudsOut":  "last-known",
+                        "budsHoursAnc":  6,
+                        "budsHoursNoAnc":  7,
+                        "caseHours":  26,
+                        "chargingIndicators":  "Case LED; blade lights; USB-C only, no wireless charging.",
+                        "notes":  "ANC on: 6 h buds / 26 h total. ANC off: 7 h buds / 30 h total. caseHours stores the with-ANC total. Case value is last-known once buds are out."
+                    },
+        "anc":  {
+                    "supported":  true,
+                    "modes":  [
+                                  "anc",
+                                  "ambient"
+                              ],
+                    "adaptive":  true,
+                    "ancDb":  null,
+                    "transparencyDb":  null,
+                    "personalized":  false,
+                    "windNoise":  null,
+                    "notes":  "Adaptive Noise Control, Voice Detect and Siren Detect. No absolute dB published."
+                },
+        "features":  [
+                         {
+                             "id":  "noise-control.anc",
+                             "name":  "Active Noise Cancelling",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "noise-control.ambient",
+                             "name":  "Ambient Sound",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "noise-control.adaptive",
+                             "name":  "Adaptive Noise Control",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "noise-control.voice-detect",
+                             "name":  "Voice Detect",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "noise-control.siren-detect",
+                             "name":  "Siren Detect",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "equalization.equalizer",
+                             "name":  "Equalizer",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "equalization.adaptive-eq",
+                             "name":  "Adaptive EQ",
+                             "availability":  "device-only"
+                         },
+                         {
+                             "id":  "spatial.audio",
+                             "name":  "360 Audio",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "spatial.head-tracking",
+                             "name":  "360 Audio with head tracking",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "sensing.wear-detection",
+                             "name":  "Automatic ear detection",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "connectivity.auto-switch",
+                             "name":  "Auto Switch",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "connectivity.le-audio",
+                             "name":  "LE Audio",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "connectivity.auracast",
+                             "name":  "Auracast",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "vendor.samsung.galaxy-ai",
+                             "name":  "Galaxy AI (Gemini/Bixby, interpreter)",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "vendor.samsung.quick-voice-memo",
+                             "name":  "Quick Voice Memo",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "vendor.samsung.360-audio-recording",
+                             "name":  "360 Audio Recording",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "vendor.samsung.gaming-mode",
+                             "name":  "Game mode (Labs)",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "vendor.samsung.find-my-earbuds",
+                             "name":  "Find My Earbuds / Lost Mode",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "app.battery-widget",
+                             "name":  "Battery Info widget",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "firmware.update",
+                             "name":  "Earbud software update",
+                             "availability":  "official-app"
+                         }
+                     ],
+        "controls":  {
+                         "types":  [
+                                       "touch",
+                                       "pinch",
+                                       "slide"
+                                   ],
+                         "gestures":  [
+                                          {
+                                              "gesture":  "single pinch",
+                                              "action":  "Play/pause, answer/end call",
+                                              "configurableInApp":  false
+                                          },
+                                          {
+                                              "gesture":  "double pinch",
+                                              "action":  "Next track",
+                                              "configurableInApp":  false
+                                          },
+                                          {
+                                              "gesture":  "triple pinch",
+                                              "action":  "Previous track",
+                                              "configurableInApp":  false
+                                          },
+                                          {
+                                              "gesture":  "pinch and hold",
+                                              "action":  "ANC/Ambient or preset action (customizable)",
+                                              "configurableInApp":  true
+                                          },
+                                          {
+                                              "gesture":  "swipe up/down",
+                                              "action":  "Volume up/down",
+                                              "configurableInApp":  true
+                                          }
+                                      ],
+                         "physicalButtons":  null,
+                         "configurableInApp":  true,
+                         "notes":  "Blade pinch/swipe controls; no head gestures on Buds3 Pro."
+                     },
+        "audio":  {
+                      "eqPresets":  [
+
+                                    ],
+                      "customEq":  false,
+                      "eqBands":  null,
+                      "spatialAudio":  true,
+                      "headTracking":  true,
+                      "codecs":  [
+                                     "SBC",
+                                     "AAC",
+                                     "Samsung Scalable Codec",
+                                     "SSC-UHQ",
+                                     "LC3"
+                                 ],
+                      "hiRes":  true,
+                      "multipoint":  false,
+                      "wearDetection":  true,
+                      "notes":  "2-way speaker, 24-bit/96 kHz SSC-UHQ. No Bluetooth multipoint; Auto Switch only."
+                  },
+        "appOnlyFeatures":  [
+                                "Adaptive Noise Control",
+                                "Voice Detect",
+                                "Siren Detect",
+                                "360 Audio",
+                                "Equalizer",
+                                "Galaxy AI",
+                                "Quick Voice Memo",
+                                "Game mode",
+                                "Battery Info widget"
+                            ],
+        "featureDeltaFromPrevious":  [
+                                         "2-way speaker with dual amplifiers",
+                                         "Adaptive Noise Control, Voice Detect and Siren Detect",
+                                         "24-bit/96 kHz SSC-UHQ",
+                                         "Blade pinch/swipe controls and blade lights",
+                                         "IP57, 6 h ANC / 7 h off, 26 h/30 h total"
+                                     ],
+        "sources":  [
+                        {
+                            "url":  "https://www.samsung.com/us/mobile-audio/galaxy-buds/compare/",
+                            "type":  "official-product",
+                            "title":  "Compare Galaxy Buds",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://www.samsung.com/us/support/answer/ANS10003393/",
+                            "type":  "official-support",
+                            "title":  "All about the Galaxy Buds3, Buds3 Pro, and Buds3 FE",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://www.samsung.com/us/support/answer/ANS10003422/",
+                            "type":  "official-support",
+                            "title":  "Add earbud widgets to your Galaxy phone",
+                            "accessed":  "2026-11-10"
+                        }
+                    ],
+        "confidence":  "high",
+        "gaps":  [
+                     "No absolute ANC/Transparency dB published.",
+                     "Exact equalizer preset labels are not listed on the US compare page.",
+                     "Case battery freshness when buds are out is undocumented."
+                 ],
+        "notes":  "Battery display: split buds + separate case, last-known case once buds are out.",
+        "researchedAt":  "2026-11-10"
+    },
+    {
+        "company":  "JBL",
+        "companySlug":  "jbl",
+        "family":  "Live",
+        "model":  "Live Beam 3",
+        "slug":  "jbl-live-beam-3",
+        "generation":  "3",
+        "variant":  "Beam",
+        "releaseYear":  2024,
+        "formFactor":  "tws-stem",
+        "officialApp":  {
+                            "name":  "JBL Headphones",
+                            "platforms":  [
+                                              "android",
+                                              "ios"
+                                          ],
+                            "packageIds":  [
+                                               "jbl.stc.com"
+                                           ],
+                            "appStoreUrls":  [
+                                                 "https://play.google.com/store/apps/details?id=jbl.stc.com"
+                                             ],
+                            "appVersionObserved":  "unlisted (Google Play listing updated 2026-10-15)",
+                            "notes":  null
+                        },
+        "battery":  {
+                        "budsDisplay":  "split",
+                        "caseDisplay":  "separate",
+                        "caseVisibility":  "only-when-docked",
+                        "caseWhileBudsOut":  "last-known",
+                        "budsHoursAnc":  7,
+                        "budsHoursNoAnc":  10,
+                        "caseHours":  40,
+                        "chargingIndicators":  "Case LED; app L/R/case percentages.",
+                        "notes":  "JBL comparison table lists 40 h case capacity and 48 h total; the arithmetic does not reconcile, so the case figure is recorded as published."
+                    },
+        "anc":  {
+                    "supported":  true,
+                    "modes":  [
+                                  "true-adaptive-anc",
+                                  "anc",
+                                  "ambient-aware",
+                                  "talkthru",
+                                  "off"
+                              ],
+                    "adaptive":  true,
+                    "ancDb":  null,
+                    "transparencyDb":  null,
+                    "personalized":  false,
+                    "windNoise":  null,
+                    "notes":  "True Adaptive ANC; Personi-Fi 3.0."
+                },
+        "features":  [
+                         {
+                             "id":  "noise-control.anc",
+                             "name":  "True Adaptive ANC",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "noise-control.transparency",
+                             "name":  "Ambient Aware",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "noise-control.talkthru",
+                             "name":  "TalkThru",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "audio.spatial",
+                             "name":  "JBL Spatial Sound",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "audio.personi-fi",
+                             "name":  "Personi-Fi 3.0",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "equalization.equalizer",
+                             "name":  "EQ presets and custom EQ",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "connectivity.multipoint",
+                             "name":  "Multipoint connection",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "sensing.wear-detection",
+                             "name":  "Auto play/pause",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "app.smart-case",
+                             "name":  "Smart Charging Case screen controls",
+                             "availability":  "device-only",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "app.find-my-buds",
+                             "name":  "Find My Buds",
+                             "availability":  "official-app",
+                             "notes":  null
+                         }
+                     ],
+        "controls":  {
+                         "types":  [
+                                       "touch"
+                                   ],
+                         "gestures":  [
+                                          {
+                                              "gesture":  "single tap",
+                                              "action":  "play/pause",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          },
+                                          {
+                                              "gesture":  "double tap",
+                                              "action":  "next track",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          },
+                                          {
+                                              "gesture":  "triple tap",
+                                              "action":  "previous track",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          },
+                                          {
+                                              "gesture":  "tap and hold",
+                                              "action":  "ANC/ambient / voice assistant",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          }
+                                      ],
+                         "physicalButtons":  null,
+                         "configurableInApp":  true,
+                         "notes":  "Stem design."
+                     },
+        "audio":  {
+                      "eqPresets":  [
+                                        "Jazz",
+                                        "Bass",
+                                        "Vocal",
+                                        "Club",
+                                        "Studio"
+                                    ],
+                      "customEq":  true,
+                      "eqBands":  null,
+                      "spatialAudio":  true,
+                      "headTracking":  false,
+                      "codecs":  [
+                                     "SBC",
+                                     "AAC"
+                                 ],
+                      "hiRes":  false,
+                      "multipoint":  true,
+                      "wearDetection":  true,
+                      "notes":  "10 mm driver; IP54; Smart Charging Case."
+                  },
+        "appOnlyFeatures":  [
+                                "personi-fi",
+                                "find-my-buds",
+                                "fit-test",
+                                "gesture-customization",
+                                "smart-case"
+                            ],
+        "featureDeltaFromPrevious":  [
+                                         "Smart Charging Case added versus Live Free 2.",
+                                         "Battery 48 h total.",
+                                         "Spatial sound and Personi-Fi 3.0 added."
+                                     ],
+        "sources":  [
+                        {
+                            "url":  "https://www.jbl.com/wireless-earbuds/LIVE-BEAM-3.html",
+                            "type":  "official-product",
+                            "title":  "JBL Live Beam 3 product page",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://www.jbl.com/app.html",
+                            "type":  "official-support",
+                            "title":  "JBL Headphones app FAQ",
+                            "accessed":  "2026-11-10"
+                        }
+                    ],
+        "confidence":  "medium",
+        "gaps":  [
+                     "Official spec page not directly captured; battery from JBL Live 3 comparison table.",
+                     "No official ANC/transparency dB figures.",
+                     "App version number not displayed."
+                 ],
+        "notes":  null,
+        "researchedAt":  "2026-11-10"
+    },
+    {
+        "company":  "Nothing",
+        "companySlug":  "nothing",
+        "family":  "Ear",
+        "model":  "Nothing Ear (a)",
+        "slug":  "nothing-ear-a",
+        "generation":  "a",
+        "variant":  null,
+        "releaseYear":  2024,
+        "formFactor":  "tws-bud",
+        "officialApp":  {
+                            "name":  "Nothing X",
+                            "platforms":  [
+                                              "android",
+                                              "ios"
+                                          ],
+                            "packageIds":  [
+                                               "com.nothing.smartcenter"
+                                           ],
+                            "appStoreUrls":  [
+                                                 "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+                                                 "https://apps.apple.com/us/app/nothing-x/id1568033706"
+                                             ],
+                            "appVersionObserved":  "2.4.9 (SoundGuys review, Aug 2024); current Play listing updated 2026-11-03, version not exposed",
+                            "notes":  null
+                        },
+        "battery":  {
+                        "budsDisplay":  "split",
+                        "caseDisplay":  "separate",
+                        "caseVisibility":  "only-when-case-open",
+                        "caseWhileBudsOut":  "hidden",
+                        "budsHoursAnc":  5.5,
+                        "budsHoursNoAnc":  9.5,
+                        "caseHours":  42.5,
+                        "chargingIndicators":  "Case LED; numeric levels in Nothing X.",
+                        "notes":  "42.5 h total with ANC off. Nothing X shows L/C/R; case open required."
+                    },
+        "anc":  {
+                    "supported":  true,
+                    "modes":  [
+                                  "anc-low",
+                                  "anc-mid",
+                                  "anc-high",
+                                  "adaptive",
+                                  "transparency"
+                              ],
+                    "adaptive":  true,
+                    "ancDb":  45,
+                    "transparencyDb":  null,
+                    "personalized":  false,
+                    "windNoise":  null,
+                    "notes":  "Adaptive ANC with three manual levels; no personalised ANC profile."
+                },
+        "features":  [
+                         {
+                             "id":  "noise-control.anc",
+                             "name":  "Active noise cancellation",
+                             "availability":  "both",
+                             "notes":  "45 dB adaptive ANC."
+                         },
+                         {
+                             "id":  "noise-control.transparency",
+                             "name":  "Transparency mode",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "equalization.equalizer",
+                             "name":  "Equalizer",
+                             "availability":  "official-app",
+                             "notes":  "Presets and 3-band custom EQ."
+                         },
+                         {
+                             "id":  "connectivity.multipoint",
+                             "name":  "Dual connection",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "sensing.wear-detection",
+                             "name":  "In-ear detection",
+                             "availability":  "device-only",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "connectivity.fast-pair",
+                             "name":  "Google Fast Pair",
+                             "availability":  "device-only",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "find-my-buds",
+                             "name":  "Find My Earbuds",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "low-latency",
+                             "name":  "Low latency mode",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "voice-assistant.chatgpt",
+                             "name":  "ChatGPT voice shortcut",
+                             "availability":  "official-app",
+                             "notes":  "Nothing X integration."
+                         },
+                         {
+                             "id":  "firmware-update",
+                             "name":  "Firmware update",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "gesture-customization",
+                             "name":  "Gesture customization",
+                             "availability":  "official-app",
+                             "notes":  null
+                         }
+                     ],
+        "controls":  {
+                         "types":  [
+                                       "pinch"
+                                   ],
+                         "gestures":  [
+                                          {
+                                              "gesture":  "single press",
+                                              "action":  "play/pause",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          },
+                                          {
+                                              "gesture":  "double press",
+                                              "action":  "next track",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          },
+                                          {
+                                              "gesture":  "triple press",
+                                              "action":  "previous track",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          },
+                                          {
+                                              "gesture":  "press-and-hold",
+                                              "action":  "cycle ANC / Transparency",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          }
+                                      ],
+                         "physicalButtons":  null,
+                         "configurableInApp":  true,
+                         "notes":  "Pinch controls."
+                     },
+        "audio":  {
+                      "eqPresets":  [
+                                        "Balanced",
+                                        "More Bass",
+                                        "More Treble",
+                                        "Voice"
+                                    ],
+                      "customEq":  true,
+                      "eqBands":  3,
+                      "spatialAudio":  false,
+                      "headTracking":  false,
+                      "codecs":  [
+                                     "SBC",
+                                     "AAC",
+                                     "LDAC"
+                                 ],
+                      "hiRes":  true,
+                      "multipoint":  true,
+                      "wearDetection":  true,
+                      "notes":  "LDAC Hi-Res; no spatial audio."
+                  },
+        "appOnlyFeatures":  [
+                                "Custom EQ",
+                                "ChatGPT shortcut",
+                                "Find My Earbuds",
+                                "Gesture remapping",
+                                "Firmware update"
+                            ],
+        "featureDeltaFromPrevious":  [
+                                         "Added LDAC Hi-Res audio.",
+                                         "ANC increased to 45 dB.",
+                                         "Added ChatGPT voice shortcut.",
+                                         "Moved to a bud-style (non-stem) design."
+                                     ],
+        "sources":  [
+                        {
+                            "url":  "https://us.nothing.tech/products/ear-a",
+                            "type":  "official-product",
+                            "title":  "Nothing Ear (a) product page",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://www.gsmarena.com/nothing_ear_and_ear_a_review-news-62893.php",
+                            "type":  "reputable-secondary",
+                            "title":  "Nothing Ear and Ear (a) review",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+                            "type":  "official-app-store",
+                            "title":  "Nothing X on Google Play",
+                            "accessed":  "2026-11-10"
+                        }
+                    ],
+        "confidence":  "high",
+        "gaps":  [
+                     "Transparency dB is not published.",
+                     "Wind-noise reduction is not explicitly documented.",
+                     "Case tile behaviour with buds out and case closed is not independently verified."
+                 ],
+        "notes":  "Split L/R plus separate case; it does not have personalised ANC or spatial audio.",
+        "researchedAt":  "2026-11-10"
+    },
+    {
+        "company":  "OnePlus",
+        "companySlug":  "oneplus",
+        "family":  "OnePlus Buds",
+        "model":  "OnePlus Buds Pro 3",
+        "slug":  "oneplus-buds-pro-3",
+        "generation":  "3",
+        "variant":  "Pro",
+        "releaseYear":  2024,
+        "formFactor":  "tws-stem",
+        "officialApp":  {
+                            "name":  "HeyMelody",
+                            "platforms":  [
+                                              "android",
+                                              "ios"
+                                          ],
+                            "packageIds":  [
+                                               "com.heytap.headset"
+                                           ],
+                            "appStoreUrls":  [
+                                                 "https://play.google.com/store/apps/details?id=com.heytap.headset",
+                                                 "https://apps.apple.com/us/app/heymelody/id1564626893"
+                                             ],
+                            "appVersionObserved":  null,
+                            "notes":  null
+                        },
+        "battery":  {
+                        "budsDisplay":  "split",
+                        "caseDisplay":  "separate",
+                        "caseVisibility":  "only-when-docked",
+                        "caseWhileBudsOut":  "last-known",
+                        "budsHoursAnc":  6,
+                        "budsHoursNoAnc":  10,
+                        "caseHours":  43,
+                        "chargingIndicators":  "Case LED; numeric levels in HeyMelody.",
+                        "notes":  "43 h total with case (ANC off); 25 h total with ANC on."
+                    },
+        "anc":  {
+                    "supported":  true,
+                    "modes":  [
+                                  "adaptive",
+                                  "anc",
+                                  "transparency"
+                              ],
+                    "adaptive":  true,
+                    "ancDb":  50,
+                    "transparencyDb":  null,
+                    "personalized":  false,
+                    "windNoise":  true,
+                    "notes":  "50 dB real-time adaptive ANC."
+                },
+        "features":  [
+                         {
+                             "id":  "noise-control.anc",
+                             "name":  "Adaptive ANC",
+                             "availability":  "both",
+                             "notes":  "50 dB."
+                         },
+                         {
+                             "id":  "noise-control.transparency",
+                             "name":  "Transparency mode",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "equalization.equalizer",
+                             "name":  "Dynaudio EQ",
+                             "availability":  "official-app",
+                             "notes":  "Presets plus custom EQ."
+                         },
+                         {
+                             "id":  "audio.spatial-audio",
+                             "name":  "Spatial audio",
+                             "availability":  "both",
+                             "notes":  "With head tracking."
+                         },
+                         {
+                             "id":  "audio.head-tracking",
+                             "name":  "Head tracking",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "connectivity.multipoint",
+                             "name":  "Dual connection",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "sensing.wear-detection",
+                             "name":  "Wear detection",
+                             "availability":  "device-only",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "connectivity.fast-pair",
+                             "name":  "Google Fast Pair",
+                             "availability":  "device-only",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "find-my-buds",
+                             "name":  "Find My Earbuds",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "low-latency",
+                             "name":  "Game mode",
+                             "availability":  "official-app",
+                             "notes":  "94 ms with select OnePlus phones."
+                         },
+                         {
+                             "id":  "vendor.oneplus.neck-health",
+                             "name":  "Neck Health",
+                             "availability":  "official-app",
+                             "notes":  "IMU-based posture reminders."
+                         },
+                         {
+                             "id":  "vendor.oneplus.zen-mode-air",
+                             "name":  "Zen Mode Air",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "firmware-update",
+                             "name":  "Firmware update",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "gesture-customization",
+                             "name":  "Gesture customization",
+                             "availability":  "official-app",
+                             "notes":  null
+                         }
+                     ],
+        "controls":  {
+                         "types":  [
+                                       "touch",
+                                       "squeeze",
+                                       "slide"
+                                   ],
+                         "gestures":  [
+                                          {
+                                              "gesture":  "single squeeze",
+                                              "action":  "play/pause",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          },
+                                          {
+                                              "gesture":  "double squeeze",
+                                              "action":  "next track",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          },
+                                          {
+                                              "gesture":  "triple squeeze",
+                                              "action":  "previous track",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          },
+                                          {
+                                              "gesture":  "squeeze-and-hold",
+                                              "action":  "toggle adaptive ANC",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          },
+                                          {
+                                              "gesture":  "slide",
+                                              "action":  "volume",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          }
+                                      ],
+                         "physicalButtons":  null,
+                         "configurableInApp":  true,
+                         "notes":  "Stem squeeze plus swipe."
+                     },
+        "audio":  {
+                      "eqPresets":  [
+                                        "Balanced",
+                                        "Bass",
+                                        "Treble",
+                                        "Dynaudio"
+                                    ],
+                      "customEq":  true,
+                      "eqBands":  6,
+                      "spatialAudio":  true,
+                      "headTracking":  true,
+                      "codecs":  [
+                                     "SBC",
+                                     "AAC",
+                                     "LHDC 5.0"
+                                 ],
+                      "hiRes":  true,
+                      "multipoint":  true,
+                      "wearDetection":  true,
+                      "notes":  "11 mm woofer + 6 mm tweeter, dual DACs; LHDC 5.0; wireless charging case."
+                  },
+        "appOnlyFeatures":  [
+                                "Custom EQ",
+                                "Spatial audio with head tracking",
+                                "Neck Health",
+                                "Zen Mode Air",
+                                "Find My Earbuds",
+                                "Gesture remapping",
+                                "Firmware update"
+                            ],
+        "featureDeltaFromPrevious":  [
+                                         "ANC increased from 48 dB to 50 dB.",
+                                         "Added head-tracked spatial audio on any Android/iOS device.",
+                                         "Added Neck Health IMU features.",
+                                         "Added wireless charging."
+                                     ],
+        "sources":  [
+                        {
+                            "url":  "https://www.oneplus.com/us/oneplus-buds-pro-3",
+                            "type":  "official-product",
+                            "title":  "OnePlus Buds Pro 3 product page",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://play.google.com/store/apps/details?id=com.heytap.headset",
+                            "type":  "official-app-store",
+                            "title":  "HeyMelody on Google Play",
+                            "accessed":  "2026-11-10"
+                        }
+                    ],
+        "confidence":  "high",
+        "gaps":  [
+                     "Case-battery visibility rules are inferred from HeyMelody.",
+                     "Transparency dB is not published.",
+                     "Custom-EQ band count is not explicitly stated in the fetched official copy."
+                 ],
+        "notes":  "Flagship with head tracking and on-device spatial rendering.",
+        "researchedAt":  "2026-11-10"
+    },
+    {
+        "company":  "Google",
+        "companySlug":  "google",
+        "family":  "Pixel Buds",
+        "model":  "Pixel Buds Pro 2",
+        "slug":  "pixel-buds-pro-2",
+        "generation":  "Pro 2",
+        "variant":  "Pro",
+        "releaseYear":  2024,
+        "formFactor":  "tws-bud",
+        "officialApp":  {
+                            "name":  "Google Pixel Buds",
+                            "platforms":  [
+                                              "android"
+                                          ],
+                            "packageIds":  [
+                                               "com.google.android.apps.wearables.maestro.companion"
+                                           ],
+                            "appStoreUrls":  [
+                                                 "https://play.google.com/store/apps/details?id=com.google.android.apps.wearables.maestro.companion"
+                                             ],
+                            "appVersionObserved":  null,
+                            "notes":  "Pixel-integrated Settings on Android 10+; standalone Pixel Buds app on other Android devices; no iOS app."
+                        },
+        "battery":  {
+                        "budsDisplay":  "split",
+                        "caseDisplay":  "separate",
+                        "caseVisibility":  "always",
+                        "caseWhileBudsOut":  "last-known",
+                        "budsHoursAnc":  8,
+                        "budsHoursNoAnc":  12,
+                        "caseHours":  30,
+                        "chargingIndicators":  "Case LED breathing white; USB-C and Qi wireless charging; case speaker for Find Hub and case sounds.",
+                        "notes":  "ANC on: 8 h buds / 30 h total. ANC off: 12 h buds / 48 h total. caseHours stores the with-ANC total. Google says the Battery widget always shows battery info for Pro 2 when Bluetooth is on and buds are near, even when disconnected; the case reading is still last-known because the case has no independent radio."
+                    },
+        "anc":  {
+                    "supported":  true,
+                    "modes":  [
+                                  "anc",
+                                  "transparency",
+                                  "adaptive",
+                                  "off"
+                              ],
+                    "adaptive":  true,
+                    "ancDb":  null,
+                    "transparencyDb":  null,
+                    "personalized":  false,
+                    "windNoise":  true,
+                    "notes":  "Silent Seal 2.0, Adaptive Audio, Conversation Detection, Loud Noise Protection. No absolute dB published."
+                },
+        "features":  [
+                         {
+                             "id":  "noise-control.anc",
+                             "name":  "Active Noise Cancellation with Silent Seal 2.0",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "noise-control.transparency",
+                             "name":  "Transparency mode",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "noise-control.adaptive",
+                             "name":  "Adaptive Audio",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "vendor.google.conversation-detection",
+                             "name":  "Conversation Detection",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "vendor.google.loud-noise-protection",
+                             "name":  "Loud Noise Protection",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "equalization.equalizer",
+                             "name":  "5-band Custom EQ with presets",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "equalization.volume-eq",
+                             "name":  "Volume EQ",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "spatial.audio",
+                             "name":  "Spatial Audio",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "spatial.head-tracking",
+                             "name":  "Head tracking",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "connectivity.multipoint",
+                             "name":  "Multipoint",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "connectivity.audio-switch",
+                             "name":  "Audio switch",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "connectivity.le-audio",
+                             "name":  "LE Audio",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "connectivity.bluetooth-super-wideband",
+                             "name":  "Bluetooth Super Wideband",
+                             "availability":  "device-only"
+                         },
+                         {
+                             "id":  "sensing.wear-detection",
+                             "name":  "In-ear detection",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "hearing.hearing-wellness",
+                             "name":  "Hearing Wellness",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "vendor.google.eartip-seal-check",
+                             "name":  "Eartip Seal Check",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "vendor.google.case-sounds",
+                             "name":  "Case sounds",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "assistant.gemini",
+                             "name":  "Gemini hands-free",
+                             "availability":  "both"
+                         },
+                         {
+                             "id":  "vendor.google.audio-sharing",
+                             "name":  "Audio Sharing",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "vendor.google.bedtime-mode",
+                             "name":  "Pixel Watch bedtime mode",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "vendor.google.low-latency-gaming",
+                             "name":  "Low-latency gaming mode",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "find.find-hub",
+                             "name":  "Find Hub with case speaker",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "vendor.google.battery-widget",
+                             "name":  "Battery widget",
+                             "availability":  "official-app"
+                         },
+                         {
+                             "id":  "firmware.update",
+                             "name":  "Firmware update",
+                             "availability":  "official-app"
+                         }
+                     ],
+        "controls":  {
+                         "types":  [
+                                       "touch",
+                                       "slide",
+                                       "voice"
+                                   ],
+                         "gestures":  [
+                                          {
+                                              "gesture":  "tap",
+                                              "action":  "Play/pause or answer call",
+                                              "configurableInApp":  true
+                                          },
+                                          {
+                                              "gesture":  "double-tap",
+                                              "action":  "Next track / end or reject call",
+                                              "configurableInApp":  true
+                                          },
+                                          {
+                                              "gesture":  "triple-tap",
+                                              "action":  "Previous track / repeat",
+                                              "configurableInApp":  true
+                                          },
+                                          {
+                                              "gesture":  "swipe forward/back",
+                                              "action":  "Volume up/down",
+                                              "configurableInApp":  true
+                                          },
+                                          {
+                                              "gesture":  "press and hold",
+                                              "action":  "ANC/Transparency/Adaptive Audio or digital assistant (configurable)",
+                                              "configurableInApp":  true
+                                          }
+                                      ],
+                         "physicalButtons":  null,
+                         "configurableInApp":  true,
+                         "notes":  "Capacitive touch with swipe. Press-and-hold defaults to noise control."
+                     },
+        "audio":  {
+                      "eqPresets":  [
+                                        "Default",
+                                        "Light bass",
+                                        "Heavy bass",
+                                        "Balanced",
+                                        "Vocal boost",
+                                        "Clarity",
+                                        "Last saved"
+                                    ],
+                      "customEq":  true,
+                      "eqBands":  5,
+                      "spatialAudio":  true,
+                      "headTracking":  true,
+                      "codecs":  [
+                                     "SBC",
+                                     "AAC",
+                                     "LC3"
+                                 ],
+                      "hiRes":  false,
+                      "multipoint":  true,
+                      "wearDetection":  true,
+                      "notes":  "5-band custom EQ. LE Audio/LC3 supported. No hi-res codec. Spatial Audio with head tracking."
+                  },
+        "appOnlyFeatures":  [
+                                "5-band Custom EQ",
+                                "Volume EQ",
+                                "Adaptive Audio",
+                                "Conversation Detection",
+                                "Loud Noise Protection",
+                                "Multipoint",
+                                "Eartip Seal Check",
+                                "Hearing Wellness",
+                                "Case sounds",
+                                "Bedtime mode",
+                                "Low-latency gaming",
+                                "Find Hub"
+                            ],
+        "featureDeltaFromPrevious":  [
+                                         "Google Tensor A1 chip replaces the Pro\u0027s platform",
+                                         "Adds Adaptive Audio, Silent Seal 2.0 and Conversation Detection",
+                                         "Adds Loud Noise Protection, case speaker/case sounds, Find Hub",
+                                         "12 h no-ANC / 8 h ANC and 48 h/30 h total",
+                                         "Adds twist-to-adjust stabilizer, IP54, Bluetooth 5.4 and LE Audio",
+                                         "Smaller case with wireless charging"
+                                     ],
+        "sources":  [
+                        {
+                            "url":  "https://store.google.com/us/product/pixel_buds_pro_2_specs",
+                            "type":  "official-product",
+                            "title":  "Pixel Buds Pro 2 tech specs",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://support.google.com/googlepixelbuds/answer/7556060?hl=en",
+                            "type":  "official-support",
+                            "title":  "Charge your Google Pixel Buds \u0026 charging case",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://support.google.com/googlepixelbuds/answer/7685360?hl=en",
+                            "type":  "official-support",
+                            "title":  "Change your Google Pixel Buds settings",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://support.google.com/googlepixelbuds/answer/12045780?hl=en",
+                            "type":  "official-support",
+                            "title":  "Customize EQ with Google Pixel Buds",
+                            "accessed":  "2026-11-10"
+                        }
+                    ],
+        "confidence":  "high",
+        "gaps":  [
+                     "No absolute ANC/Transparency dB published.",
+                     "Case reading is inherently last-known when both buds are out, even though the widget remains visible.",
+                     "Google does not publish per-bud display text; support explicitly says each earbud is shown on the main screen."
+                 ],
+        "notes":  "Battery display: split buds + separate case; widget stays visible when disconnected, but case value is last-known.",
+        "researchedAt":  "2026-11-10"
+    },
+    {
+        "company":  "realme",
+        "companySlug":  "realme",
+        "family":  "realme Buds T",
+        "model":  "realme Buds T300",
+        "slug":  "realme-buds-t300",
+        "generation":  "T300",
+        "variant":  null,
+        "releaseYear":  2023,
+        "formFactor":  "tws-stem",
+        "officialApp":  {
+                            "name":  "realme Link",
+                            "platforms":  [
+                                              "android",
+                                              "ios"
+                                          ],
+                            "packageIds":  [
+                                               "com.realme.link"
+                                           ],
+                            "appStoreUrls":  [
+                                                 "https://play.google.com/store/apps/details?id=com.realme.link",
+                                                 "https://apps.apple.com/us/app/realme-link/id1536584786"
+                                             ],
+                            "appVersionObserved":  "5.8.811.2814 (APK mirror listing, 2026-11-10); the review screenshot predates this and its version was not shown",
+                            "notes":  "realme Link is the official companion app; some features also appear in realme phone Bluetooth settings."
+                        },
+        "battery":  {
+                        "budsDisplay":  "split",
+                        "caseDisplay":  "hidden",
+                        "caseVisibility":  "unknown",
+                        "caseWhileBudsOut":  "hidden",
+                        "budsHoursAnc":  4.5,
+                        "budsHoursNoAnc":  8,
+                        "caseHours":  40,
+                        "chargingIndicators":  "Case LED; numeric L/R levels in realme Link.",
+                        "notes":  "DIRECT EVIDENCE: the realme Link device page for Buds T300 shows two separate readings, L 100% and R 100%, and no case tile at all. This matches the user\u0027s report of split L/R on a T300. The official 40 h figure is buds + case with ANC off; the app does not surface the case percentage. Contrast with CMF Buds 1, whose Nothing X page shows L/C/R including a case tile."
+                    },
+        "anc":  {
+                    "supported":  true,
+                    "modes":  [
+                                  "anc",
+                                  "transparency"
+                              ],
+                    "adaptive":  false,
+                    "ancDb":  30,
+                    "transparencyDb":  null,
+                    "personalized":  false,
+                    "windNoise":  true,
+                    "notes":  "30 dB ANC with transparency; no adaptive levels."
+                },
+        "features":  [
+                         {
+                             "id":  "noise-control.anc",
+                             "name":  "Active noise cancellation",
+                             "availability":  "both",
+                             "notes":  "30 dB."
+                         },
+                         {
+                             "id":  "noise-control.transparency",
+                             "name":  "Transparency mode",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "equalization.equalizer",
+                             "name":  "Equalizer",
+                             "availability":  "official-app",
+                             "notes":  "Four presets plus a 6-band custom EQ."
+                         },
+                         {
+                             "id":  "audio.spatial-audio",
+                             "name":  "360-degree spatial audio",
+                             "availability":  "both",
+                             "notes":  "No head tracking."
+                         },
+                         {
+                             "id":  "connectivity.multipoint",
+                             "name":  "Dual-device connection",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "sensing.wear-detection",
+                             "name":  "Wear detection",
+                             "availability":  "device-only",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "low-latency",
+                             "name":  "Game mode",
+                             "availability":  "official-app",
+                             "notes":  "50 ms."
+                         },
+                         {
+                             "id":  "vendor.realme.volume-enhancer",
+                             "name":  "Volume enhancer",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "vendor.realme.dolby-atmos",
+                             "name":  "Dolby Atmos toggle",
+                             "availability":  "official-app",
+                             "notes":  "App-visible toggle on supported phones."
+                         },
+                         {
+                             "id":  "find-my-phone",
+                             "name":  "Find my phone",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "firmware-update",
+                             "name":  "Firmware update",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "gesture-customization",
+                             "name":  "Button settings",
+                             "availability":  "official-app",
+                             "notes":  null
+                         }
+                     ],
+        "controls":  {
+                         "types":  [
+                                       "touch"
+                                   ],
+                         "gestures":  [
+                                          {
+                                              "gesture":  "double tap",
+                                              "action":  "play/pause",
+                                              "configurableInApp":  true,
+                                              "notes":  "Left and right can be assigned separately."
+                                          },
+                                          {
+                                              "gesture":  "triple tap",
+                                              "action":  "next track",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          },
+                                          {
+                                              "gesture":  "touch and hold",
+                                              "action":  "switch noise-control modes",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          }
+                                      ],
+                         "physicalButtons":  null,
+                         "configurableInApp":  true,
+                         "notes":  "realme Link \u0027Button settings\u0027 lets L and R be configured independently."
+                     },
+        "audio":  {
+                      "eqPresets":  [
+                                        "Clear Vocals",
+                                        "Nature Balance",
+                                        "Clear Bass",
+                                        "Bass Boost"
+                                    ],
+                      "customEq":  true,
+                      "eqBands":  6,
+                      "spatialAudio":  true,
+                      "headTracking":  false,
+                      "codecs":  [
+                                     "SBC",
+                                     "AAC"
+                                 ],
+                      "hiRes":  false,
+                      "multipoint":  true,
+                      "wearDetection":  true,
+                      "notes":  "12.4 mm dynamic bass driver; 6-band EQ at 62/250/1k/4k/8k/16k Hz in the realme Link screenshot."
+                  },
+        "appOnlyFeatures":  [
+                                "6-band custom EQ",
+                                "Dolby Atmos toggle",
+                                "Volume enhancer",
+                                "Game mode",
+                                "Find my phone",
+                                "Button settings",
+                                "Firmware update"
+                            ],
+        "featureDeltaFromPrevious":  [
+
+                                     ],
+        "sources":  [
+                        {
+                            "url":  "https://www.realme.com/in/realme-buds-t300",
+                            "type":  "official-product",
+                            "title":  "realme Buds T300 product page",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://www.mobigyaan.com/realme-buds-t300-review",
+                            "type":  "reputable-secondary",
+                            "title":  "realme Buds T300 review with realme Link screenshots",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://www.mobigyaan.com/wp-content/uploads/2023/09/realme-Buds-T300-Review-Features-realme-Link-1.jpg",
+                            "type":  "other",
+                            "title":  "realme Link T300 screenshot: L 100% / R 100%, no case tile",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://play.google.com/store/apps/details?id=com.realme.link",
+                            "type":  "official-app-store",
+                            "title":  "realme Link on Google Play",
+                            "accessed":  "2026-11-10"
+                        }
+                    ],
+        "confidence":  "high",
+        "gaps":  [
+                     "Case battery is not shown in realme Link; whether it is never reported or only hidden is not documented.",
+                     "Transparency dB is not published.",
+                     "ANC-on total with case is not clearly published; bud-only ANC runtime is an estimate from review testing."
+                 ],
+        "notes":  "KEY RECORD for the reported T300 behaviour. Split L/R is correct for T300; case is absent from the official app UI. Do not add a case tile just because the product has a charging case.",
+        "researchedAt":  "2026-11-10"
+    },
+    {
+        "company":  "Sennheiser",
+        "companySlug":  "sennheiser",
+        "family":  "MOMENTUM True Wireless",
+        "model":  "MOMENTUM True Wireless 4",
+        "slug":  "sennheiser-momentum-true-wireless-4",
+        "generation":  "4",
+        "variant":  null,
+        "releaseYear":  2024,
+        "formFactor":  "tws-bud",
+        "officialApp":  {
+                            "name":  "Sennheiser Smart Control Plus",
+                            "platforms":  [
+                                              "android",
+                                              "ios"
+                                          ],
+                            "packageIds":  [
+                                               "com.sonova.chb.control"
+                                           ],
+                            "appStoreUrls":  [
+                                                 "https://play.google.com/store/apps/details?id=com.sonova.chb.control"
+                                             ],
+                            "appVersionObserved":  "unlisted (Google Play listing updated 2026-09-15)",
+                            "notes":  "Sennheiser recommends Smart Control Plus for this model; the older Smart Control app still connects but is being superseded."
+                        },
+        "battery":  {
+                        "budsDisplay":  "combined",
+                        "caseDisplay":  "separate",
+                        "caseVisibility":  "always",
+                        "caseWhileBudsOut":  "last-known",
+                        "budsHoursAnc":  7,
+                        "budsHoursNoAnc":  7.5,
+                        "caseHours":  22.5,
+                        "chargingIndicators":  "Case LED; voice prompt; app percentage in 10% steps.",
+                        "notes":  "Sennheiser\u0027s FAQ confirms the app shows ONE battery level for both earbuds, always the lower-charging side (e.g. 50% and 80% shows 50%). 30 h total; 8 minutes charge = 1 h."
+                    },
+        "anc":  {
+                    "supported":  true,
+                    "modes":  [
+                                  "anc",
+                                  "transparency",
+                                  "anti-wind",
+                                  "off"
+                              ],
+                    "adaptive":  true,
+                    "ancDb":  null,
+                    "transparencyDb":  null,
+                    "personalized":  false,
+                    "windNoise":  true,
+                    "notes":  "Hybrid adaptive ANC; anti-wind mode; 3 mics per bud."
+                },
+        "features":  [
+                         {
+                             "id":  "noise-control.anc",
+                             "name":  "Adaptive hybrid ANC",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "noise-control.transparency",
+                             "name":  "Transparency mode",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "noise-control.anti-wind",
+                             "name":  "Anti-wind mode",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "equalization.equalizer",
+                             "name":  "5-band equalizer",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "equalization.presets",
+                             "name":  "EQ presets",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "audio.sound-personalization",
+                             "name":  "Sound Personalization",
+                             "availability":  "official-app",
+                             "notes":  "Guided hearing-profile calibration."
+                         },
+                         {
+                             "id":  "audio.sound-check",
+                             "name":  "Sound Check",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "audio.sound-zones",
+                             "name":  "Sound Zones",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "audio.lossless",
+                             "name":  "aptX Adaptive Lossless",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "audio.auracast",
+                             "name":  "Auracast assistant",
+                             "availability":  "official-app",
+                             "notes":  "Available via firmware update."
+                         },
+                         {
+                             "id":  "connectivity.multipoint",
+                             "name":  "Multipoint connection",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "connectivity.le-audio",
+                             "name":  "LE Audio / LC3",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "sensing.wear-detection",
+                             "name":  "Wear detection / auto play-pause",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "app.fit-test",
+                             "name":  "Fit test",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "app.find-headphones",
+                             "name":  "Find Headphones",
+                             "availability":  "official-app",
+                             "notes":  null
+                         }
+                     ],
+        "controls":  {
+                         "types":  [
+                                       "touch"
+                                   ],
+                         "gestures":  [
+                                          {
+                                              "gesture":  "single tap",
+                                              "action":  "play/pause",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          },
+                                          {
+                                              "gesture":  "double tap",
+                                              "action":  "next track",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          },
+                                          {
+                                              "gesture":  "triple tap",
+                                              "action":  "previous track",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          },
+                                          {
+                                              "gesture":  "tap and hold",
+                                              "action":  "ANC/transparency",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          }
+                                      ],
+                         "physicalButtons":  null,
+                         "configurableInApp":  true,
+                         "notes":  "Touch controls can be disabled in app."
+                     },
+        "audio":  {
+                      "eqPresets":  [
+                                        "Neutral",
+                                        "Bass Boost",
+                                        "Podcast",
+                                        "Rock",
+                                        "Pop",
+                                        "Custom"
+                                    ],
+                      "customEq":  true,
+                      "eqBands":  5,
+                      "spatialAudio":  false,
+                      "headTracking":  false,
+                      "codecs":  [
+                                     "SBC",
+                                     "AAC",
+                                     "aptX",
+                                     "aptX Adaptive",
+                                     "LC3"
+                                 ],
+                      "hiRes":  true,
+                      "multipoint":  true,
+                      "wearDetection":  true,
+                      "notes":  "TrueResponse 7 mm driver; IP54; Bluetooth 5.4; Qi wireless charging; 30 h total."
+                  },
+        "appOnlyFeatures":  [
+                                "sound-personalization",
+                                "sound-check",
+                                "sound-zones",
+                                "fit-test",
+                                "find-headphones",
+                                "auracast-assistant",
+                                "anti-wind",
+                                "touch-disable"
+                            ],
+        "featureDeltaFromPrevious":  [
+                                         "Bluetooth 5.4 and LC3/LE Audio added versus MTW3.",
+                                         "aptX Adaptive Lossless and Auracast support added.",
+                                         "Battery increased to 7.5 h / 30 h total.",
+                                         "New battery supplier and reliability program after MTW3 battery issues."
+                                     ],
+        "sources":  [
+                        {
+                            "url":  "https://support.sennheiser-hearing.com/hc/en-ch/articles/37818069144221-MOMENTUM-True-Wireless-4-Specifications",
+                            "type":  "official-product",
+                            "title":  "MOMENTUM True Wireless 4 specifications",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://us.sennheiser-hearing.com/pages/mtw4-faq",
+                            "type":  "official-support",
+                            "title":  "MOMENTUM True Wireless 4 FAQ - one battery level for both earbuds",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://play.google.com/store/apps/details?id=com.sonova.chb.control",
+                            "type":  "official-app-store",
+                            "title":  "Sennheiser Smart Control Plus on Google Play",
+                            "accessed":  "2026-11-10"
+                        }
+                    ],
+        "confidence":  "high",
+        "gaps":  [
+                     "No official ANC/transparency dB figures.",
+                     "Full EQ preset list not published on the spec page.",
+                     "App version number not displayed on the Play listing.",
+                     "Case battery visibility in Smart Control Plus is inferred; only the combined single-bud-level rule is officially documented."
+                 ],
+        "notes":  null,
+        "researchedAt":  "2026-11-10"
+    },
+    {
+        "company":  "Sony",
+        "companySlug":  "sony",
+        "family":  "WF-1000X",
+        "model":  "WF-1000XM5",
+        "slug":  "sony-wf-1000xm5",
+        "generation":  "5",
+        "variant":  null,
+        "releaseYear":  2023,
+        "formFactor":  "tws-bud",
+        "officialApp":  {
+                            "name":  "Sony | Sound Connect",
+                            "platforms":  [
+                                              "android",
+                                              "ios"
+                                          ],
+                            "packageIds":  [
+                                               "com.sony.songpal.mdr"
+                                           ],
+                            "appStoreUrls":  [
+                                                 "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr"
+                                             ],
+                            "appVersionObserved":  "12.x (Google Play listing updated 2026-11-06)",
+                            "notes":  "Formerly Sony | Headphones Connect."
+                        },
+        "battery":  {
+                        "budsDisplay":  "split",
+                        "caseDisplay":  "separate",
+                        "caseVisibility":  "always",
+                        "caseWhileBudsOut":  "last-known",
+                        "budsHoursAnc":  8,
+                        "budsHoursNoAnc":  12,
+                        "caseHours":  16,
+                        "chargingIndicators":  "Case LED; voice guidance reports remaining charge.",
+                        "notes":  "24 h total (8 h buds + 16 h case). App shows L/R separately; system status uses the lower bud."
+                    },
+        "anc":  {
+                    "supported":  true,
+                    "modes":  [
+                                  "noise-cancelling",
+                                  "ambient-sound",
+                                  "off"
+                              ],
+                    "adaptive":  true,
+                    "ancDb":  null,
+                    "transparencyDb":  null,
+                    "personalized":  true,
+                    "windNoise":  null,
+                    "notes":  "Auto NC Optimizer; Adaptive Sound Control switches by activity/location."
+                },
+        "features":  [
+                         {
+                             "id":  "noise-control.anc",
+                             "name":  "Active noise cancelling",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "noise-control.transparency",
+                             "name":  "Ambient Sound Mode",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "noise-control.adaptive",
+                             "name":  "Adaptive Sound Control",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "noise-control.quick-attention",
+                             "name":  "Quick Attention",
+                             "availability":  "device-only",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "noise-control.speak-to-chat",
+                             "name":  "Speak-to-Chat",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "audio.dsee-extreme",
+                             "name":  "DSEE Extreme",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "equalization.equalizer",
+                             "name":  "5-band equalizer with Clear Bass",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "audio.360-reality-audio",
+                             "name":  "360 Reality Audio",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "connectivity.multipoint",
+                             "name":  "Multipoint connection",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "sensing.wear-detection",
+                             "name":  "Wear detection / auto play-pause",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "power.battery-care",
+                             "name":  "Battery Care charge limit",
+                             "availability":  "official-app",
+                             "notes":  null
+                         }
+                     ],
+        "controls":  {
+                         "types":  [
+                                       "touch"
+                                   ],
+                         "gestures":  [
+                                          {
+                                              "gesture":  "single tap",
+                                              "action":  "play/pause",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          },
+                                          {
+                                              "gesture":  "double tap",
+                                              "action":  "next track",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          },
+                                          {
+                                              "gesture":  "triple tap",
+                                              "action":  "previous track",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          },
+                                          {
+                                              "gesture":  "tap and hold",
+                                              "action":  "noise mode / Quick Attention",
+                                              "configurableInApp":  true,
+                                              "notes":  null
+                                          }
+                                      ],
+                         "physicalButtons":  null,
+                         "configurableInApp":  true,
+                         "notes":  null
+                     },
+        "audio":  {
+                      "eqPresets":  [
+                                        "Off",
+                                        "Bright",
+                                        "Excited",
+                                        "Mellow",
+                                        "Relaxed",
+                                        "Vocal",
+                                        "Treble Boost",
+                                        "Bass Boost",
+                                        "Custom"
+                                    ],
+                      "customEq":  true,
+                      "eqBands":  5,
+                      "spatialAudio":  true,
+                      "headTracking":  false,
+                      "codecs":  [
+                                     "SBC",
+                                     "AAC",
+                                     "LDAC",
+                                     "LC3"
+                                 ],
+                      "hiRes":  true,
+                      "multipoint":  true,
+                      "wearDetection":  true,
+                      "notes":  "IPX4; Qi wireless charging case."
+                  },
+        "appOnlyFeatures":  [
+                                "adaptive-sound-control",
+                                "speak-to-chat",
+                                "dsee-extreme",
+                                "battery-care",
+                                "360-reality-audio",
+                                "voice-guidance-language"
+                            ],
+        "featureDeltaFromPrevious":  [
+
+                                     ],
+        "sources":  [
+                        {
+                            "url":  "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wf-1000xm5/specifications",
+                            "type":  "official-product",
+                            "title":  "WF-1000XM5 specifications",
+                            "accessed":  "2026-11-10"
+                        },
+                        {
+                            "url":  "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr",
+                            "type":  "official-app-store",
+                            "title":  "Sony | Sound Connect on Google Play",
+                            "accessed":  "2026-11-10"
+                        }
+                    ],
+        "confidence":  "high",
+        "gaps":  [
+                     "No official ANC/transparency dB figures.",
+                     "App battery split confirmed by Sony support language, not by a screenshot in this pass.",
+                     "Case-hours figure inferred from Sony\u0027s 24 h total claim.",
+                     "Case visibility and last-known case reading are inferred from the Sound Connect feature list; no screenshot verification in this pass."
+                 ],
+        "notes":  null,
+        "researchedAt":  "2026-11-10"
+    },
+    {
+        "company":  "Xiaomi",
+        "companySlug":  "xiaomi",
+        "family":  "Xiaomi Buds",
+        "model":  "Xiaomi Buds 5 Pro",
+        "slug":  "xiaomi-buds-5-pro",
+        "generation":  "5",
+        "variant":  "Pro",
+        "releaseYear":  2025,
+        "formFactor":  "tws-stem",
+        "officialApp":  {
+                            "name":  "Xiaomi Earbuds",
+                            "platforms":  [
+                                              "android",
+                                              "ios"
+                                          ],
+                            "packageIds":  [
+                                               "com.mi.earphone"
+                                           ],
+                            "appStoreUrls":  [
+                                                 "https://play.google.com/store/apps/details?id=com.mi.earphone"
+                                             ],
+                            "appVersionObserved":  null,
+                            "notes":  "Multi-level ANC, EQ, personalised dimensional audio and recording are app features."
+                        },
+        "battery":  {
+                        "budsDisplay":  "split",
+                        "caseDisplay":  "separate",
+                        "caseVisibility":  "only-when-docked",
+                        "caseWhileBudsOut":  "last-known",
+                        "budsHoursAnc":  null,
+                        "budsHoursNoAnc":  8,
+                        "caseHours":  40,
+                        "chargingIndicators":  "Case LED; Qi wireless charging",
+                        "notes":  "Bluetooth variant. Official 8 h / 40 h ANC-off. Wi-Fi variant is a separate record with 10 h single-charge."
+                    },
+        "anc":  {
+                    "supported":  true,
+                    "modes":  [
+                                  "deep",
+                                  "balanced",
+                                  "light",
+                                  "adaptive"
+                              ],
+                    "adaptive":  true,
+                    "ancDb":  55,
+                    "transparencyDb":  null,
+                    "personalized":  false,
+                    "windNoise":  true,
+                    "notes":  "55 dB point-depth, 5 kHz band; multi-level manual plus adaptive."
+                },
+        "features":  [
+                         {
+                             "id":  "noise-control.anc",
+                             "name":  "Active noise cancellation",
+                             "availability":  "both",
+                             "notes":  "Multi-level plus adaptive."
+                         },
+                         {
+                             "id":  "noise-control.transparency",
+                             "name":  "Transparency mode",
+                             "availability":  "both",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "noise-control.adaptive",
+                             "name":  "Adaptive ANC",
+                             "availability":  "official-app",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "equalization.equalizer",
+                             "name":  "Six EQ profiles",
+                             "availability":  "official-app",
+                             "notes":  "Includes two Harman profiles."
+                         },
+                         {
+                             "id":  "audio.spatial",
+                             "name":  "Personalised dimensional audio",
+                             "availability":  "official-app",
+                             "notes":  "3-5 minute ear/head personalisation test."
+                         },
+                         {
+                             "id":  "audio.head-tracking",
+                             "name":  "Head tracking",
+                             "availability":  "device-only",
+                             "notes":  null
+                         },
+                         {
+                             "id":  "audio.lossless",
+                             "name":  "aptX Lossless 2.1 Mbps",
+                             "availability":  "device-only",
+                             "notes":  "Requires LE Audio and supported Xiaomi phones."
+                         },
+                         {
+                             "id":  "connectivity.multipoint",
+                             "name":  "Dual-device connection",
+                             "availability":  "official-app",
+                             "notes":  "Not available with LE Audio."
+                         },
+                         {
+                             "id":  "vendor.xiaomi.recording",
+                             "name":  "Built-in recording and AI transcription/translation",
+                             "availability":  "official-app",
+                             "notes":  "Up to 4 h recording; AI transcription on select Xiaomi phones."
+                         }
+                     ],
+        "controls":  {
+                         "types":  [
+                                       "pinch",
+                                       "slide"
+                                   ],
+                         "gestures":  [
+                                          {
+                                              "gesture":  "pinch once",
+                                              "action":  "play/pause; answer/end call",
+                                              "configurableInApp":  true
+                                          },
+                                          {
+                                              "gesture":  "pinch twice",
+                                              "action":  "next track; decline call; record",
+                                              "configurableInApp":  true
+                                          },
+                                          {
+                                              "gesture":  "pinch three times",
+                                              "action":  "previous track; record",
+                                              "configurableInApp":  true
+                                          },
+                                          {
+                                              "gesture":  "pinch and hold",
+                                              "action":  "ANC control; record",
+                                              "configurableInApp":  true
+                                          },
+                                          {
+                                              "gesture":  "slide up/down",
+                                              "action":  "volume",
+                                              "configurableInApp":  true
+                                          }
+                                      ],
+                         "physicalButtons":  "Case button: triple-press starts/stops recording",
+                         "configurableInApp":  true,
+                         "notes":  "Pinch/squeeze stem and swipe."
+                     },
+        "audio":  {
+                      "eqPresets":  [
+                                        "Harman AudioEFX",
+                                        "Harman Master",
+                                        "Balanced",
+                                        "Enhance voice",
+                                        "Enhance treble",
+                                        "Soothing bass",
+                                        "Custom"
+                                    ],
+                      "customEq":  true,
+                      "eqBands":  null,
+                      "spatialAudio":  true,
+                      "headTracking":  true,
+                      "codecs":  [
+                                     "SBC",
+                                     "AAC",
+                                     "aptX Adaptive",
+                                     "aptX Lossless",
+                                     "LC3"
+                                 ],
+                      "hiRes":  true,
+                      "multipoint":  true,
+                      "wearDetection":  null,
+                      "notes":  "Dual-amplifier coaxial triple drivers (11 mm dynamic, ceramic tweeter, planar)."
+                  },
+        "appOnlyFeatures":  [
+                                "Personalised dimensional audio test",
+                                "Multi-level ANC",
+                                "EQ profiles",
+                                "Recording export",
+                                "Firmware update"
+                            ],
+        "featureDeltaFromPrevious":  [
+                                         "Raised ANC depth from 48 dB to 55 dB vs Xiaomi Buds 4 Pro (official-product)",
+                                         "Added dual-amplifier coaxial triple-driver system (official-product)",
+                                         "Added personalised dimensional audio (official-product)",
+                                         "Added built-in 4-hour recording with AI transcription/translation (official-product)"
+                                     ],
+        "sources":  [
+                        {
+                            "url":  "https://www.mi.com/global/product/xiaomi-buds-5-pro/",
+                            "type":  "official-product",
+                            "title":  "Xiaomi Buds 5 Pro",
+                            "accessed":  "2026-11-10"
+                        }
+                    ],
+        "confidence":  "high",
+        "gaps":  [
+                     "ANC-on battery hours not published",
+                     "Custom EQ band count not stated",
+                     "Wear detection not documented",
+                     "App battery layout inferred"
+                 ],
+        "notes":  "Bluetooth-only variant. A Wi-Fi/XPAN variant is recorded separately because its single-charge rating differs.",
+        "researchedAt":  "2026-11-10"
+    }
+]

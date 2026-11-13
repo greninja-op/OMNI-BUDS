@@ -1,0 +1,876 @@
+[
+  {
+    "company": "Sanag",
+    "companySlug": "sanag",
+    "family": "A Series",
+    "model": "Sanag A30S Pro",
+    "slug": "a30s-pro",
+    "generation": "A30S",
+    "variant": "Pro",
+    "releaseYear": 2025,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "Sanag",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.dido.sanag.internationalization"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/be/app/sanag%E5%A1%9E%E9%82%A3/id6444365473"
+      ],
+      "appVersionObserved": "3.2.0 (Android listing, Aug 2026); 2.1.0 (iOS listing, 2026)",
+      "notes": "Sanag app supports device connection, EQ, gesture customization, game mode, battery status and firmware. A30S Pro app compatibility is not explicitly stated on its product page. Android Google Play listing was removed around Aug 2026; package ID retained but no live Android store URL cited."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9,
+      "caseHours": null,
+      "chargingIndicators": "LED; app battery status (if supported)",
+      "notes": "9 h playback, over 10 days standby; no charging case; 22-25 g back-hook design.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": false,
+      "notes": "No ANC. Two-way acoustic noise cancellation is for calls."
+    },
+    "features": [
+      {
+        "id": "vendor.sanag.dt3-directional-audio",
+        "name": "DT3.0 directional sound",
+        "availability": "device-only",
+        "notes": "Claims 86% leakage reduction."
+      },
+      {
+        "id": "vendor.sanag.acs-panoramic",
+        "name": "360-degree ACS panoramic sound",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.sanag.ipx7",
+        "name": "IPX7 waterproof",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction button",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "volume + / -",
+          "action": "volume up/down; track skip",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "Physical buttons on the back hook",
+      "configurableInApp": null,
+      "notes": "Exact button map not published on the product page."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "Air-conduction back hook, Bluetooth 5.3, IPX7, 22-25 g, 10 m range."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://sanag.com.sg/products/a30s-pro-back-hook-open-ear-bluetooth",
+        "type": "official-product",
+        "title": "Sanag A30S Pro",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://sj.qq.com/appdetail/com.dido.sanag",
+        "type": "official-app-store",
+        "title": "Sanag app (Tencent MyApp)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "App compatibility and EQ/gesture controls not stated for A30S Pro.",
+      "Battery display layout not documented.",
+      "Exact button gesture map not published.",
+      "Multipoint support not stated."
+    ],
+    "notes": "Back-hook air-conduction model, not bone conduction.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sanag",
+    "companySlug": "sanag",
+    "family": "B Series",
+    "model": "Sanag B60S",
+    "slug": "b60s",
+    "generation": "B60S",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "bone-conduction",
+    "officialApp": {
+      "name": "Sanag",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.dido.sanag.internationalization"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/be/app/sanag%E5%A1%9E%E9%82%A3/id6444365473"
+      ],
+      "appVersionObserved": null,
+      "notes": "App support is not stated on the B60S product page; Sanag app is the company-level companion app. Android Google Play listing was removed around Aug 2026; package ID retained but no live Android store URL cited."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": null,
+      "chargingIndicators": "LED; voice/app battery status",
+      "notes": "10 h continuous playback, 15 h talk time, 18 h standby; 64 GB storage; no case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "vendor.sanag.mp3-mode",
+        "name": "64 GB built-in storage",
+        "availability": "device-only",
+        "notes": "Phone-free playback for swimming."
+      },
+      {
+        "id": "vendor.sanag.ipx8",
+        "name": "IPX8 swim waterproofing",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction button",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "volume + / -",
+          "action": "volume up/down; track skip",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "Physical buttons on the back hook",
+      "configurableInApp": null,
+      "notes": "Designed for wet-hand operation."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "Bone conduction, IPX8, 64 GB storage, 10 h. Bluetooth version and codecs not stated on the product page."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://sanag.com.sg/products/b60s-open-ear-swimming-earphones",
+        "type": "official-product",
+        "title": "Sanag B60S",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Bluetooth version, codec list and app support not stated.",
+      "Battery display layout and MP3 file format support not documented.",
+      "Multipoint support not stated."
+    ],
+    "notes": "Swimming-focused bone-conduction model with 64 GB local storage.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sanag",
+    "companySlug": "sanag",
+    "family": "G Series",
+    "model": "Sanag G6S",
+    "slug": "g6s",
+    "generation": "G6S",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "Sanag",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.dido.sanag.internationalization"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/be/app/sanag%E5%A1%9E%E9%82%A3/id6444365473"
+      ],
+      "appVersionObserved": null,
+      "notes": "App provides EQ presets, game mode and anti-lost/find features. Android Google Play listing was removed around Aug 2026; package ID retained but no live Android store URL cited."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 48,
+      "chargingIndicators": "Case LED; app battery status",
+      "notes": "Up to 48 h total with the charging case; per-charge endurance is not stated consistently (some sources say about 6 h). 10-min charge gives about 3 h. TWS, so split L/R is possible but app layout is undocumented.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 48
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "No ANC. CVC4.0 AI call noise cancellation and DN4.0."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets in Sanag app",
+        "availability": "official-app",
+        "notes": "Presets only per retailer FAQ."
+      },
+      {
+        "id": "vendor.sanag.dt6-directional-audio",
+        "name": "TUV-certified DT6.0 directional sound",
+        "availability": "device-only",
+        "notes": "Reduces leakage."
+      },
+      {
+        "id": "vendor.sanag.anti-lost",
+        "name": "Anti-lost app feature",
+        "availability": "official-app",
+        "notes": "Track earbuds and case via app."
+      },
+      {
+        "id": "vendor.sanag.game-mode",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction button",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double-click",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple-click",
+          "action": "previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Touch/button area under the Sanag logo on each earbud",
+      "configurableInApp": true,
+      "notes": "Product page calls it touch control; some retailer copy calls it a button. App customizes double/triple taps."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "Air-conduction ear hook, Bluetooth 5.3, IPX4, 5.6 g per earbud, 12 mm composite diaphragm. 'Real spatial audio' claimed by a retailer spec sheet, not confirmed by Sanag."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "eq-selection",
+      "button-customization",
+      "game-mode",
+      "anti-lost"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://sanag.com.sg/products/g6s-open-ear-hook-bluetooth",
+        "type": "official-product",
+        "title": "Sanag G6S",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://us.smartprix.com/mobile_headphones/sanag-g6s-open-true-wireless-earbuds-ppd10zb9ptd6",
+        "type": "reputable-secondary",
+        "title": "Sanag G6S specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Per-charge battery life not stated consistently; 48 h is total with case, not a per-bud figure.",
+      "App battery layout (split L/R and case) is not documented.",
+      "Multipoint and wear detection not confirmed.",
+      "Spatial audio claim is secondary only."
+    ],
+    "notes": "Open-ear ear-hook TWS. The product page omits battery hours; the 48 h total comes from retailer/manual data.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sanag",
+    "companySlug": "sanag",
+    "family": "S6S",
+    "model": "Sanag S6S Pro",
+    "slug": "s6s-pro",
+    "generation": "S6S",
+    "variant": "Pro",
+    "releaseYear": 2025,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "Sanag",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.dido.sanag.internationalization"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/be/app/sanag%E5%A1%9E%E9%82%A3/id6444365473"
+      ],
+      "appVersionObserved": null,
+      "notes": "App provides EQ, game mode, anti-lost location and firmware. Android Google Play listing was removed around Aug 2026; package ID retained but no live Android store URL cited."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7.5,
+      "caseHours": 38,
+      "chargingIndicators": "Case LED; app battery status",
+      "notes": "7.5 h per charge, 38 h total with case; 40 mAh per earbud, 400 mAh case; USB-C. TWS, split L/R likely but app layout undocumented.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 38
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "No ANC. AI call noise reduction only."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "official-app",
+        "notes": "Supported per review; not stated on the Sanag product page."
+      },
+      {
+        "id": "vendor.sanag.ai-call-noise-reduction",
+        "name": "AI call noise reduction",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.sanag.anti-lost",
+        "name": "Anti-lost location",
+        "availability": "official-app",
+        "notes": "App location and ringing."
+      },
+      {
+        "id": "vendor.sanag.dt7-directional-audio",
+        "name": "7th-generation directional audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.sanag.game-mode",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple-tap left",
+          "action": "previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple-tap right",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls; app customizes gestures."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "Open-ear clip, Bluetooth 6.0, IPX4, 3.5 g per earbud. Dolby spatial sound claimed in manual/marketing."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "eq-selection",
+      "custom-eq",
+      "button-customization",
+      "game-mode",
+      "anti-lost"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://sanag.com.sg/products/s6s-pro-open-ear-clip-bluetooth",
+        "type": "official-product",
+        "title": "Sanag S6S Pro",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.productpro.com.hk/products/sanag-s6s-ear-clip-wireless-bluetooth-smart-air-conduction-headphones",
+        "type": "other",
+        "title": "Sanag S6S Pro specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Bluetooth version conflicts: 6.0 on the retailer page vs 5.4 in a review of the same model.",
+      "App battery layout (split L/R and case) is not documented.",
+      "Spatial audio is marketing language; no head tracking.",
+      "Wear detection not documented."
+    ],
+    "notes": "Jewelry-style clip-on with a removable gem accessory; Bluetooth version needs official confirmation.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sanag",
+    "companySlug": "sanag",
+    "family": "S6S",
+    "model": "Sanag S6S Nova",
+    "slug": "s6s-nova",
+    "generation": "S6S",
+    "variant": "Nova",
+    "releaseYear": 2026,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "Sanag",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.dido.sanag.internationalization"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/be/app/sanag%E5%A1%9E%E9%82%A3/id6444365473"
+      ],
+      "appVersionObserved": null,
+      "notes": "App controls game/music mode, EQ and firmware. Android Google Play listing was removed around Aug 2026; package ID retained but no live Android store URL cited."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Case LED: ice-blue blinking while charging, solid when full; low-battery flash",
+      "notes": "40 mAh per earbud, 400 mAh case, Bluetooth 6.0. Per-charge and total hours are not stated in the available official manual; do not reuse S6S Pro figures.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.sanag.game-mode",
+        "name": "Game/music mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.sanag.bluetooth-6",
+        "name": "Bluetooth 6.0",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple-tap left",
+          "action": "previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple-tap right",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press 3 s",
+          "action": "voice assistant",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press 2 s",
+          "action": "reject call",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch button on each earbud."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "Open-ear clip, Bluetooth 6.0, 40 mAh buds / 400 mAh case. Codec list and IP rating not stated in the available manual."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "eq-selection",
+      "button-customization",
+      "game-mode"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://sanag.com.sg/products/s6s-nova-open-ear-bling-earphones",
+        "type": "official-product",
+        "title": "Sanag S6S Nova",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://manuals.plus/sanag/s6s-nova-true-wireless-stereo-headphones-manual",
+        "type": "other",
+        "title": "Sanag S6S Nova user guide",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery hours per charge and with case are not published in the available manual.",
+      "IP rating, codec list and multipoint are not stated.",
+      "App battery layout (split L/R and case) is not documented.",
+      "Official product page not retrieved; model may be regional."
+    ],
+    "notes": "Bling/jewelry clip variant. Battery endurance is a genuine gap, not the S6S Pro's 7.5 h/38 h.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sanag",
+    "companySlug": "sanag",
+    "family": "S6S",
+    "model": "Sanag S6S Ultra",
+    "slug": "s6s-ultra",
+    "generation": "S6S",
+    "variant": "Ultra",
+    "releaseYear": 2026,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "Sanag",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.dido.sanag.internationalization"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/be/app/sanag%E5%A1%9E%E9%82%A3/id6444365473"
+      ],
+      "appVersionObserved": null,
+      "notes": "App adds EQ/custom sound, sleep assistant, translation and AI features on top of device management. Android Google Play listing was removed around Aug 2026; package ID retained but no live Android store URL cited."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 42,
+      "chargingIndicators": "Case LED; app battery status",
+      "notes": "About 7 h per charge, up to 42 h total with case; 10-min charge gives 2 h. TWS, split L/R likely but app layout undocumented.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 42
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "No ANC. Dual-mic ENC for calls."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ and custom sound profiles",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.sanag.ai-features",
+        "name": "AI translation and assistant",
+        "availability": "official-app",
+        "notes": "App-level AI features, not audio processing."
+      },
+      {
+        "id": "vendor.sanag.sleep-assistant",
+        "name": "Sleep assistant",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.sanag.ip67",
+        "name": "IP67 water resistance",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple-tap left",
+          "action": "previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple-tap right",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls; default map can be customized in Sanag app."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "Open-ear clip, IP67, 7 h/42 h. Bluetooth version and codec list not stated in the available manual."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "eq-selection",
+      "custom-eq",
+      "button-customization",
+      "sleep-assistant",
+      "translation",
+      "ai-features"
+    ],
+    "featureDeltaFromPrevious": [
+      "Up to 42 h total with case (vs 38 h on S6S Pro)",
+      "IP67 (vs IPX4 on S6S Pro)",
+      "App AI translation and sleep assistant",
+      "7 h per charge and 10-min/2-h quick charge"
+    ],
+    "sources": [
+      {
+        "url": "https://manuals.plus/asin/B0GMNRGGZP",
+        "type": "other",
+        "title": "Sanag S6S Ultra instruction manual",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://apps.apple.com/be/app/sanag%E5%A1%9E%E9%82%A3/id6444365473",
+        "type": "official-app-store",
+        "title": "Sanag app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "No official Sanag product page retrieved; specs come from a converted manual.",
+      "Bluetooth version, codec list and multipoint not stated.",
+      "App battery layout (split L/R and case) is not documented.",
+      "Some app AI features are service-level and may be region-gated."
+    ],
+    "notes": "Highest-spec S6S clip variant with IP67 and AI app features.",
+    "researchedAt": "2026-11-10"
+  }
+]

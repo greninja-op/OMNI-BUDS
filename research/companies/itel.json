@@ -1,0 +1,777 @@
+[
+  {
+    "company": "itel",
+    "companySlug": "itel",
+    "family": "itel Buds",
+    "model": "itel Buds 5",
+    "slug": "itel-buds-5",
+    "generation": "5",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "No official companion app documented",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "itel's global product pages do not document a companion app for Buds 5; settings appear to be on-device."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 32,
+      "chargingIndicators": "Case LED; USB-C.",
+      "notes": "itel Nigeria: 5 h per charge, 32 h total. ANC-on hours not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 32,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Advertised 32 dB ANC; 4-mic ENC for calls; transparency mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "32 dB ANC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "mic.enc",
+        "name": "4-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "durability.ip54",
+        "name": "IP54",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.itel.low-latency",
+        "name": "Low-latency mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC / transparency",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": "Touch controls; no app remapping documented."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm dynamic driver; Bluetooth 6.0; dual-tone finish."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "32 dB ANC",
+      "Bluetooth 6.0",
+      "IP54"
+    ],
+    "sources": [
+      {
+        "url": "https://www.itel-life.com/audio/earbuds/buds-5",
+        "type": "official-product",
+        "title": "itel Buds 5",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://itel.com.ng/index.php?route=product/product&language=en-gb&product_id=124",
+        "type": "official-regional",
+        "title": "itel Buds 5 ANC (Nigeria)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC-on playtime not published",
+      "Battery display layout unverified",
+      "Codec list not published",
+      "Multipoint and wear detection not stated",
+      "Official app support unverified"
+    ],
+    "notes": "32 dB ANC at a very low price; the 5 h per-charge figure is the weak point.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "itel",
+    "companySlug": "itel",
+    "family": "itel BudsFit",
+    "model": "itel BudsFit 5",
+    "slug": "itel-budsfit-5",
+    "generation": "5",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "No official companion app documented",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No companion app documented on itel's product page; controls are on-device."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 32,
+      "chargingIndicators": "Case LED; USB-C; 10 min = 3 h.",
+      "notes": "Retail listings agree on 32 h total; some say 32-35 h. Per-bud playtime not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear clip; AI call noise cancellation only, no ANC."
+    },
+    "features": [
+      {
+        "id": "mic.enc",
+        "name": "Dual AI mic call noise cancellation",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.itel.c-bridge",
+        "name": "C-Bridge comfort clip",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "durability.ipx5",
+        "name": "IPX5",
+        "availability": "device-only",
+        "notes": "Listings vary between IP54 and IPX5."
+      },
+      {
+        "id": "vendor.itel.low-latency",
+        "name": "Low-latency mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": "Touch area on the clip."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "12 mm dynamic driver per official Pakistan listing; some retailers say 10 mm. Bluetooth 5.4."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "itel's open-ear clip entry",
+      "32 h total battery",
+      "IPX5"
+    ],
+    "sources": [
+      {
+        "url": "https://www.itel-life.com/audio/earbuds/budsfit-5",
+        "type": "official-product",
+        "title": "itel BudsFit 5",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://itel-pk.com/products/buds-fit5",
+        "type": "official-regional",
+        "title": "itel Buds Fit5 (Pakistan)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Per-bud playtime not published",
+      "Driver size conflicts (10 mm vs 12 mm)",
+      "IP rating conflicts (IP54 vs IPX5)",
+      "Battery display layout unverified",
+      "Bluetooth version conflicts (5.3 vs 5.4)"
+    ],
+    "notes": "Open-ear clip with a C-bridge; not an in-ear ANC product.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "itel",
+    "companySlug": "itel",
+    "family": "itel BudsAir",
+    "model": "itel BudsAir 5e",
+    "slug": "itel-budsair-5e",
+    "generation": "5",
+    "variant": "e",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "No official companion app documented",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app support documented; on-device controls only."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7.5,
+      "caseHours": 39,
+      "chargingIndicators": "Case LED; USB-C.",
+      "notes": "Retail spec: 7.5 h single charge, 39 h total; 50 mAh per bud, 500 mAh case. No ANC.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 39
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC; call ENC only."
+    },
+    "features": [
+      {
+        "id": "mic.enc",
+        "name": "Call ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "durability.ip54",
+        "name": "IP54",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.itel.low-latency",
+        "name": "Low-latency mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": "Touch controls."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "Bluetooth 5.4; driver size not published."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "39 h total battery",
+      "IP54",
+      "Bluetooth 5.4"
+    ],
+    "sources": [
+      {
+        "url": "https://www.itel-life.com/audio/earbuds/budsair-5e",
+        "type": "official-product",
+        "title": "itel BudsAir 5e",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://mersons.co.ke/product/itel-budsair-5e/",
+        "type": "reputable-secondary",
+        "title": "itel BudsAir 5e retailer specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Driver size not published",
+      "Codec list not published",
+      "Battery display layout unverified",
+      "Multipoint and wear detection not stated",
+      "No ANC"
+    ],
+    "notes": "Long battery, no ANC. 39 h is the case-inclusive figure.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "itel",
+    "companySlug": "itel",
+    "family": "itel BudsNeo",
+    "model": "itel BudsNeo 3",
+    "slug": "itel-budsneo-3",
+    "generation": "3",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "No official companion app documented",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app support documented."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 100,
+      "chargingIndicators": "Case LED; USB-C.",
+      "notes": "itel markets '100 Hours Long Playtime' for BudsNeo 3. This is a case-inclusive marketing figure; per-bud playtime is not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC claim."
+    },
+    "features": [
+      {
+        "id": "mic.enc",
+        "name": "Call ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.itel.mega-battery",
+        "name": "100 h total playtime",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.itel.low-latency",
+        "name": "Low-latency mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": "Touch controls."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "Driver size and Bluetooth version not confirmed. Marketing focuses on battery."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "100 h total playtime",
+      "Battery-first positioning"
+    ],
+    "sources": [
+      {
+        "url": "https://www.itel-life.com/audio/earbuds/budsneo-3",
+        "type": "official-product",
+        "title": "itel BudsNeo 3",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Per-bud playtime not published",
+      "Driver size, codecs and Bluetooth version not confirmed",
+      "Battery display layout unverified",
+      "ANC absent",
+      "100 h claim is not broken down by ANC/volume"
+    ],
+    "notes": "The 100 h figure is the standout battery-contract risk: it is total with case, not per charge.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "itel",
+    "companySlug": "itel",
+    "family": "itel BudsAce",
+    "model": "itel BudsAce ANC",
+    "slug": "itel-budsace-anc",
+    "generation": "1",
+    "variant": "ANC",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "No official companion app documented",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app support documented; controls are on-device."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": "Case LED; USB-C; 10 min = 3 h.",
+      "notes": "Launch: 50 h total with case; 40 mAh per bud, 500 mAh case. Per-bud and ANC-on hours not published.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 50
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc"
+      ],
+      "adaptive": false,
+      "ancDb": 25,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Up to 25 dB ANC; dual-mic AI ENC for calls."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "25 dB ANC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "mic.enc",
+        "name": "Dual-mic AI ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "durability.ipx5",
+        "name": "IPX5",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.itel.low-latency",
+        "name": "40 ms low latency",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": "Touch controls."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "10 mm driver; Bluetooth 5.3."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Adds 25 dB ANC over Buds Ace 2",
+      "50 h total battery",
+      "40 ms low latency"
+    ],
+    "sources": [
+      {
+        "url": "https://www.itel-life.com/audio/earbuds/budsace",
+        "type": "official-product",
+        "title": "itel BudsAce family",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fonearena.com/blog/430797/itel-buds-ace-anc-price-features.html",
+        "type": "reputable-secondary",
+        "title": "itel Buds Ace ANC launched",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Per-bud and ANC-on hours not published",
+      "Battery display layout unverified",
+      "Codec list not published",
+      "Multipoint and transparency not stated"
+    ],
+    "notes": "ANC version of BudsAce 2; 50 h is total with case.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "itel",
+    "companySlug": "itel",
+    "family": "itel Buds Open",
+    "model": "itel Buds Open 100",
+    "slug": "itel-buds-open-100",
+    "generation": "100",
+    "variant": "Open",
+    "releaseYear": 2025,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "No official companion app documented",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app support documented."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED; USB-C.",
+      "notes": "Retail listing: 40 h total with case. Per-bud playtime not published.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 40
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear; no ANC."
+    },
+    "features": [
+      {
+        "id": "vendor.itel.open-ear",
+        "name": "Open-ear hook",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "mic.enc",
+        "name": "Call ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "Sweat resistance",
+        "availability": "device-only",
+        "notes": "Rating not confirmed."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": "Touch controls."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "16 mm driver; Bluetooth 5.3; open-ear."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "itel's budget open-ear model",
+      "16 mm driver",
+      "40 h total"
+    ],
+    "sources": [
+      {
+        "url": "https://www.smartprix.com/mobile_headphones/itel-brand/tws_earbuds-type",
+        "type": "reputable-secondary",
+        "title": "itel Buds Open 100 listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "No official itel product page found",
+      "Per-bud playtime not published",
+      "IP rating not confirmed",
+      "Codec list not published",
+      "Battery display layout unverified"
+    ],
+    "notes": "Open-ear hook, not a clip. Specs are retailer-sourced.",
+    "researchedAt": "2026-11-10"
+  }
+]

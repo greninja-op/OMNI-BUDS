@@ -1,0 +1,952 @@
+[
+  {
+    "company": "Audeze",
+    "companySlug": "audeze",
+    "family": "Maxwell",
+    "model": "Maxwell",
+    "slug": "audeze-maxwell",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Audeze HQ",
+      "platforms": [
+        "windows",
+        "macos",
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://www.audeze.com/pages/audeze-hq-software"
+      ],
+      "appVersionObserved": null,
+      "notes": "HQ handles EQ profiles, firmware and device settings. Maxwell 2 moves to the newer Audeze app."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 80,
+      "caseHours": null,
+      "chargingIndicators": "USB-C charging; battery status in HQ/app and on-screen.",
+      "notes": "Over 80 h wireless at 80 dBA. 1800 mAh; 20 min gives 25% (about 24 h). No case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. Closed dual-chamber earcups provide passive isolation. AI noise filtering applies to the microphone, not playback."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Multi-band EQ",
+        "availability": "official-app",
+        "notes": "Four user profiles; presets for footsteps, competitive, immersive, bass and treble."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Dolby Atmos / Tempest 3D",
+        "availability": "device-only",
+        "notes": "Xbox version includes Dolby Atmos licence; PlayStation uses Tempest 3D."
+      },
+      {
+        "id": "audio.head-tracking",
+        "name": "Head tracking for Atmos Renderer",
+        "availability": "official-app",
+        "notes": "Production-oriented integration, not a general music spatial mode."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "both",
+        "notes": "Dongle and Bluetooth cannot play simultaneously; USB/aux plus Bluetooth can."
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / LC3plus / LE Audio",
+        "availability": "device-only",
+        "notes": "Bluetooth 5.3."
+      },
+      {
+        "id": "vendor.audeze.filter",
+        "name": "FILTER AI microphone noise reduction",
+        "availability": "device-only",
+        "notes": "Outgoing voice only."
+      },
+      {
+        "id": "connectivity.usb-audio",
+        "name": "USB-C dual audio endpoints",
+        "availability": "device-only",
+        "notes": "Game/chat mix on PC/Mac."
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power on/off and pairing",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume wheel",
+          "action": "Master volume",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Chat/game wheel",
+          "action": "Game/chat balance",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Mic mute switch",
+          "action": "Mute/unmute microphone",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power button, volume wheel, game/chat wheel and mic mute switch.",
+      "configurableInApp": false,
+      "notes": "No touch surface, no ANC button."
+    },
+    "audio": {
+      "eqPresets": [
+        "Footsteps",
+        "Competitive",
+        "Immersive",
+        "Bass Boost",
+        "Treble Boost"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "LC3",
+        "LC3plus"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "90 mm planar magnetic drivers, 10 Hz–50 kHz, 490 g. Bluetooth 5.3 with LE Audio. No ANC."
+    },
+    "appOnlyFeatures": [
+      "EQ profiles",
+      "Spatial/head-tracking setup",
+      "Firmware update",
+      "Game/chat routing"
+    ],
+    "featureDeltaFromPrevious": [
+      "Replaces Penrose with 90 mm drivers and dual-chamber cups",
+      "Battery increased to 80+ h",
+      "Bluetooth 5.3 with LE Audio, LC3plus and LDAC",
+      "USB-C dual audio endpoints and game/chat mix",
+      "Dolby Atmos licence on Xbox version"
+    ],
+    "sources": [
+      {
+        "url": "https://www.audeze.com/products/maxwell",
+        "type": "official-product",
+        "title": "Audeze Maxwell",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.audeze.com/pages/audeze-hq-software",
+        "type": "official-support",
+        "title": "Audeze HQ software",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "HQ package ID was not confirmed.",
+      "EQ band count is not published.",
+      "Battery-percentage display layout is not documented, though HQ reports battery status.",
+      "Head tracking is limited to the Atmos Renderer workflow; not a general head-tracked music mode."
+    ],
+    "notes": "Legacy status as of 2026; replaced by Maxwell 2. Still widely sold. Xbox and PlayStation versions differ mainly in dongle/Atmos licence.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Audeze",
+    "companySlug": "audeze",
+    "family": "Maxwell",
+    "model": "Maxwell 2",
+    "slug": "audeze-maxwell-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Audeze",
+      "platforms": [
+        "windows",
+        "macos",
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.audeze.audeze"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.audeze.audeze"
+      ],
+      "appVersionObserved": null,
+      "notes": "New app designed for Maxwell 2; EQ, device controls and firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 80,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; app/on-screen battery status.",
+      "notes": "Over 80 h at 80 dBA. 1800 mAh; 20 min gives 25% (about 24 h). No case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC on the standard Maxwell 2; ANC is a separate Maxwell 2 ANC variant."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Multi-band EQ",
+        "availability": "official-app",
+        "notes": "Custom profiles in the new Audeze app."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Dolby Atmos / Tempest 3D",
+        "availability": "device-only",
+        "notes": "Xbox version includes Atmos licence."
+      },
+      {
+        "id": "audio.head-tracking",
+        "name": "Head tracking",
+        "availability": "official-app",
+        "notes": "Advanced head tracking in supported applications."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / LE Audio / Auracast",
+        "availability": "device-only",
+        "notes": "Bluetooth 5.3."
+      },
+      {
+        "id": "vendor.audeze.slam",
+        "name": "SLAM acoustic management",
+        "availability": "device-only",
+        "notes": "Patent-pending bass/spatial technology."
+      },
+      {
+        "id": "vendor.audeze.filter",
+        "name": "FILTER AI microphone noise removal",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.usb-audio",
+        "name": "USB-C dual audio endpoints",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power on/off and pairing",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume wheel",
+          "action": "Master volume",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Chat/game wheel",
+          "action": "Game/chat balance",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Mic mute switch",
+          "action": "Mute/unmute microphone",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power button, volume wheel, game/chat wheel, mic mute switch.",
+      "configurableInApp": false,
+      "notes": "No touch surface."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "LC3",
+        "LC3plus"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "90 mm planar drivers, 10 Hz–50 kHz, 560 g. Bluetooth 5.3 with Auracast and LE Audio. No ANC."
+    },
+    "appOnlyFeatures": [
+      "EQ profiles",
+      "Spatial/head-tracking setup",
+      "Firmware update",
+      "Device controls"
+    ],
+    "featureDeltaFromPrevious": [
+      "New SLAM acoustic management and 90 mm driver tuning",
+      "560 g chassis with wider ventilated head strap and revised earpads",
+      "Bluetooth 5.3 Auracast and LE Audio",
+      "New Audeze app",
+      "Improved FILTER AI microphone processing"
+    ],
+    "sources": [
+      {
+        "url": "https://www.audeze.com/products/maxwell-2-wireless-gaming-headset",
+        "type": "official-product",
+        "title": "Audeze Maxwell 2",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.audeze.audeze",
+        "type": "official-app-store",
+        "title": "Audeze app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "EQ band count is not published.",
+      "Battery-display layout is not documented.",
+      "Head tracking is application-dependent."
+    ],
+    "notes": "Standard Maxwell 2 has no ANC; the ANC model is a separate record and a separate purchase.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Audeze",
+    "companySlug": "audeze",
+    "family": "Maxwell",
+    "model": "Maxwell 2 ANC",
+    "slug": "audeze-maxwell-2-anc",
+    "generation": "2",
+    "variant": "ANC",
+    "releaseYear": 2026,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Audeze",
+      "platforms": [
+        "windows",
+        "macos",
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.audeze.audeze"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.audeze.audeze"
+      ],
+      "appVersionObserved": null,
+      "notes": "Same app as Maxwell 2; adds ANC mode controls and automatic ANC adjustment."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 35,
+      "budsHoursNoAnc": 40,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; app/on-screen battery status.",
+      "notes": "About 35 h with ANC on, 40 h with ANC off. 20 min gives 25%. No case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "ANC",
+        "Transparency",
+        "Off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Adaptive hybrid ANC with automatic adjustment and a transparency mode. Audeze calls it aviation-grade; no dB figure published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive hybrid ANC",
+        "availability": "both",
+        "notes": "Automatically adjusts to the environment."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Multi-band EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Dolby Atmos / Tempest 3D",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.head-tracking",
+        "name": "Head tracking",
+        "availability": "official-app",
+        "notes": "Supported applications."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / LE Audio",
+        "availability": "device-only",
+        "notes": "Bluetooth 5.3."
+      },
+      {
+        "id": "vendor.audeze.slam",
+        "name": "SLAM acoustic management",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.audeze.filter",
+        "name": "FILTER AI microphone noise removal",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "ANC mode button",
+          "action": "Cycle ANC / Transparency / Off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Power button",
+          "action": "Power on/off and pairing",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume wheel",
+          "action": "Master volume",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Chat/game wheel",
+          "action": "Game/chat balance",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Mic mute switch",
+          "action": "Mute/unmute microphone",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "ANC mode button, power button, volume wheel, game/chat wheel and mic mute switch.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "LC3",
+        "LC3plus"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "90 mm planar drivers, 10 Hz–50 kHz, 560 g. Bluetooth 5.3. ANC reduces battery versus standard Maxwell 2."
+    },
+    "appOnlyFeatures": [
+      "ANC mode/automatic ANC",
+      "EQ profiles",
+      "Spatial/head-tracking setup",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adds adaptive hybrid ANC and transparency to Maxwell 2",
+      "Battery drops from 80 h to about 35 h ANC / 40 h off",
+      "New ANC mode button on the earcup",
+      "Price increases to $429/$449"
+    ],
+    "sources": [
+      {
+        "url": "https://www.audeze.com/products/maxwell-2-anc-wireless-gaming-headset",
+        "type": "official-product",
+        "title": "Audeze Maxwell 2 ANC",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.t3.com/tech/gaming-accessories/audeze-maxwell-2-anc-review",
+        "type": "reputable-secondary",
+        "title": "Maxwell 2 ANC review (35 h ANC / 40 h off)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.soundguys.com/audeze-maxwell-2-with-anc-160231/",
+        "type": "reputable-secondary",
+        "title": "Launch coverage: adaptive hybrid ANC, transparency",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Audeze's product page was rate-limited; battery hours are from a hands-on review, not the official spec table.",
+      "ANC attenuation in dB is not published.",
+      "Exact adaptive-ANC customisation options in the app are not documented."
+    ],
+    "notes": "Distinct variant, not a firmware upgrade. Same chassis and drivers as Maxwell 2 with added ANC hardware.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Audeze",
+    "companySlug": "audeze",
+    "family": "Mobius",
+    "model": "Mobius",
+    "slug": "audeze-mobius",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2019,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Audeze HQ",
+      "platforms": [
+        "windows",
+        "macos",
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://www.audeze.com/pages/audeze-hq-software"
+      ],
+      "appVersionObserved": null,
+      "notes": "HQ configures HRTF, room emulation, head-gesture keybindings and firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": null,
+      "chargingIndicators": "LED on left earcup; USB-C charging.",
+      "notes": "About 10 h with 3D/head tracking, longer with spatial off. 3 h charge. No case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC; closed-back passive isolation."
+    },
+    "features": [
+      {
+        "id": "audio.spatial",
+        "name": "Waves NX 3D audio",
+        "availability": "device-only",
+        "notes": "5.1/7.1 surround over wired USB, with room emulation."
+      },
+      {
+        "id": "audio.head-tracking",
+        "name": "Integrated head tracking",
+        "availability": "both",
+        "notes": "1000 Hz tracking; head-gesture macros in HQ."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ profiles",
+        "availability": "official-app",
+        "notes": "HQ sound profiles and HRTF personalisation."
+      },
+      {
+        "id": "connectivity.usb-audio",
+        "name": "USB-C / USB-A audio",
+        "availability": "device-only",
+        "notes": "8-channel surround over USB."
+      },
+      {
+        "id": "connectivity.wired",
+        "name": "3.5 mm analog",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "device-only",
+        "notes": "Bluetooth SBC/AAC/LDAC."
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "head-gesture"
+      ],
+      "gestures": [
+        {
+          "gesture": "3D button",
+          "action": "Toggle 3D/room emulation",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Head gesture (pitch/yaw)",
+          "action": "Up to six programmable macros",
+          "configurableInApp": true,
+          "notes": "Configured in Audeze HQ."
+        },
+        {
+          "gesture": "Volume wheel",
+          "action": "Volume",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Mic mute",
+          "action": "Mute microphone",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power, 3D, volume wheel, mic mute and playback controls.",
+      "configurableInApp": true,
+      "notes": "Head-gesture keybindings are a distinctive app-only control layer."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "100 mm planar magnetic, 10 Hz–50 kHz, 350 g. Bluetooth is stereo only; 3D processing requires wired USB."
+    },
+    "appOnlyFeatures": [
+      "HRTF personalisation",
+      "Room emulation",
+      "Head-gesture keybindings",
+      "EQ profiles",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.audeze.com/products/mobius",
+        "type": "official-product",
+        "title": "Audeze Mobius",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.audeze.com/pages/audeze-hq-software",
+        "type": "official-support",
+        "title": "Audeze HQ software",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official page does not state battery hours; 10 h is from reviews and retailer listings.",
+      "HQ package ID is not confirmed.",
+      "Battery-display layout is undocumented.",
+      "Multipoint is not documented; assumed absent."
+    ],
+    "notes": "Legacy product but important as Audeze's first head-tracking gaming headset. Bluetooth is stereo only; spatial requires USB.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Audeze",
+    "companySlug": "audeze",
+    "family": "Penrose",
+    "model": "Penrose",
+    "slug": "audeze-penrose",
+    "generation": "1",
+    "variant": "Penrose / Penrose X",
+    "releaseYear": 2020,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Audeze HQ",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://www.audeze.com/pages/audeze-hq-software"
+      ],
+      "appVersionObserved": null,
+      "notes": "HQ handles EQ presets, firmware and device settings."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 15,
+      "caseHours": null,
+      "chargingIndicators": "USB-C charging; HQ/app battery readout.",
+      "notes": "Rated about 15 h; real-world reports are lower. No case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC; closed-back passive isolation."
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz low-latency wireless",
+        "availability": "device-only",
+        "notes": "USB dongle; Penrose X for Xbox, Penrose for PlayStation."
+      },
+      {
+        "id": "connectivity.simultaneous",
+        "name": "2.4 GHz + Bluetooth simultaneous audio",
+        "availability": "device-only",
+        "notes": "Can mix game audio and a Bluetooth call."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": "HQ presets and custom EQ."
+      },
+      {
+        "id": "connectivity.usb-audio",
+        "name": "USB-C audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wired",
+        "name": "3.5 mm analog",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power on/off and pairing",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume wheel",
+          "action": "Volume",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Mic wheel",
+          "action": "Mic gain; press to switch to game/chat balance",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Mic mute",
+          "action": "Mute microphone",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power, volume wheel, mic wheel and mute switch.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "100 mm planar magnetic, 10 Hz–50 kHz. No Waves NX or head tracking. Bluetooth 5.0. 2.4 GHz and Bluetooth can run simultaneously."
+    },
+    "appOnlyFeatures": [
+      "EQ presets",
+      "Firmware update",
+      "Device settings"
+    ],
+    "featureDeltaFromPrevious": [
+      "Replaces Mobius with 2.4 GHz low-latency dongle and simultaneous Bluetooth",
+      "Drops Waves NX 3D and head tracking",
+      "Penrose X adds Xbox wireless compatibility",
+      "Longer battery than Mobius (about 15 h)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.audeze.com/products/penrose-wireless-planar-magnetic-headset",
+        "type": "official-product",
+        "title": "Audeze Penrose / Penrose X",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.audeze.com/hc/en-us/articles/360050183932-Connecting-Penrose-to-Bluetooth",
+        "type": "official-support",
+        "title": "Penrose Bluetooth support article",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official page does not expose a text battery figure; 15 h is from Audeze support/reviews.",
+      "HQ package ID is not confirmed.",
+      "Bluetooth codec list beyond SBC/AAC is not documented.",
+      "Battery-display layout is undocumented."
+    ],
+    "notes": "One record covers Penrose (PlayStation/PC) and Penrose X (Xbox/PC); they share app features and differ mainly in dongle/platform certification.",
+    "researchedAt": "2026-11-10"
+  }
+]

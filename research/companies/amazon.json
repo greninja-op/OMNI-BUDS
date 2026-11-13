@@ -1,0 +1,1176 @@
+[
+  {
+    "company": "Amazon",
+    "companySlug": "amazon",
+    "family": "Echo Buds",
+    "model": "Echo Buds (1st Gen)",
+    "slug": "echo-buds-1",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2019,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Amazon Alexa",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.amazon.dee.app"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.amazon.dee.app",
+        "https://apps.apple.com/us/app/amazon-alexa/id944011620"
+      ],
+      "appVersionObserved": null,
+      "notes": "Alexa app is required for setup, EQ, tap-gesture settings and battery status."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 5,
+      "caseHours": 20,
+      "chargingIndicators": "Case LED; Alexa app shows left, right and case charge",
+      "notes": "Up to 5 h music / 4 h call; up to 20 h total with three full case charges; 15-min quick charge gives 2 h. Micro-USB case. No ANC-off battery benefit published.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 20
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anr",
+        "passthrough"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Bose Active Noise Reduction, not Amazon's later ANC. Passthrough mode lets ambient sound in."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Bose Active Noise Reduction",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Passthrough mode",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Alexa app EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Proximity wear detection / auto-pause",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.amazon.alexa",
+        "name": "Hands-free Alexa",
+        "availability": "both",
+        "notes": "Wake word and tap invocation."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap either earbud",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "tap-and-hold either earbud",
+          "action": "toggle ANR/passthrough",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "voice",
+          "action": "Alexa wake word",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Case pairing button only",
+      "configurableInApp": null,
+      "notes": "Limited 1st-gen gesture set; per-earbud remapping is a 2nd-gen feature."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "Sealed in-ear design, Bluetooth 5.0, IPX4 (earbuds only). No spatial audio."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "eq-selection",
+      "custom-eq",
+      "tap-gesture-settings",
+      "alexa-settings"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GMCH6TQBWT4483WD",
+        "type": "official-support",
+        "title": "Use the Alexa App to Check Battery Status on Echo Buds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.pcmag.com/reviews/amazon-echo-buds",
+        "type": "reputable-secondary",
+        "title": "Amazon Echo Buds (1st Gen) review",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://electronics.woot.com/offers/echo-buds-1st-gen-anr-true-wireless-earbuds-0",
+        "type": "other",
+        "title": "Echo Buds 1st Gen ANR specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official Amazon product page for the 1st gen is no longer live; battery and ANR specs cross-checked from archived retailer/review sources.",
+      "Case visibility timing and whether the app case reading is live when buds are out are not documented.",
+      "Multipoint support not confirmed.",
+      "EQ band count not published."
+    ],
+    "notes": "First-generation Echo Buds with Bose ANR and micro-USB case. The case LED reports the bud with the lowest charge, while the app shows split L/R plus case.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Amazon",
+    "companySlug": "amazon",
+    "family": "Echo Buds",
+    "model": "Echo Buds (2nd Gen, wired charging case)",
+    "slug": "echo-buds-2-wired",
+    "generation": "2",
+    "variant": "wired charging case",
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Amazon Alexa",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.amazon.dee.app"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.amazon.dee.app",
+        "https://apps.apple.com/us/app/amazon-alexa/id944011620"
+      ],
+      "appVersionObserved": null,
+      "notes": "Alexa app is required for setup, ANC/passthrough, EQ, per-earbud tap gestures and battery status."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 6.5,
+      "caseHours": 19.5,
+      "chargingIndicators": "Case LED (lowest bud); Alexa app shows left, right and case charge",
+      "notes": "5 h with ANC + hands-free Alexa; 6.5 h with both off; 15 h total with ANC on, 19.5 h with both off; 15-min quick charge gives 2 h. USB-C wired case.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 19.5
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "passthrough"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Amazon's own ANC, claimed twice as effective as the 1st-gen Bose ANR. Passthrough is adjustable."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Passthrough mode",
+        "availability": "both",
+        "notes": "Adjustable in Alexa app."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Alexa app EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Proximity wear detection / auto-pause",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": "Two devices."
+      },
+      {
+        "id": "vendor.amazon.alexa",
+        "name": "Hands-free Alexa",
+        "availability": "both",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause; answer/end call (configurable)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next/previous track; ANC/passthrough (configurable)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "volume; voice assistant; mute (configurable)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/passthrough; voice assistant; mute (configurable)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Case pairing button only",
+      "configurableInApp": true,
+      "notes": "Each earbud can be assigned a different single/double/triple/long-press action in the Alexa app."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "5.7 mm dynamic driver, Bluetooth 5.0, IPX4, 3 mics per earbud. No spatial audio."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "anc-control",
+      "eq-selection",
+      "custom-eq",
+      "tap-gesture-settings",
+      "alexa-settings",
+      "power-save"
+    ],
+    "featureDeltaFromPrevious": [
+      "Amazon-designed ANC replaces Bose ANR, claimed 2x more effective",
+      "Earbuds 20% smaller and case 40% smaller",
+      "Battery with ANC off improves to 6.5 h (vs 5 h on 1st gen)",
+      "Charging changed from micro-USB to USB-C",
+      "Per-earbud tap-gesture customization added",
+      "Multipoint added"
+    ],
+    "sources": [
+      {
+        "url": "https://www.amazon.com/All-new-Echo-Buds/dp/B085WV7635",
+        "type": "official-product",
+        "title": "Echo Buds (2nd Gen, wired charging case)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GMCH6TQBWT4483WD",
+        "type": "official-support",
+        "title": "Alexa app battery status",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Case visibility timing and whether the app case reading is live when buds are out are not documented.",
+      "ANC dB rating not published.",
+      "EQ band count not published."
+    ],
+    "notes": "Wired USB-C case variant. The wireless charging case is a separate record.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Amazon",
+    "companySlug": "amazon",
+    "family": "Echo Buds",
+    "model": "Echo Buds (2nd Gen, wireless charging case)",
+    "slug": "echo-buds-2-wireless",
+    "generation": "2",
+    "variant": "wireless charging case",
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Amazon Alexa",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.amazon.dee.app"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.amazon.dee.app",
+        "https://apps.apple.com/us/app/amazon-alexa/id944011620"
+      ],
+      "appVersionObserved": null,
+      "notes": "Same Alexa app feature set as the wired-case variant."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 6.5,
+      "caseHours": 19.5,
+      "chargingIndicators": "Case LED; Alexa app shows left, right and case charge; Qi charging",
+      "notes": "Identical battery to the wired variant; 5 h ANC / 6.5 h ANC off, 15 h / 19.5 h with case. Case supports USB-C and Qi wireless charging.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 19.5
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "passthrough"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Same Amazon ANC as the wired-case variant."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Passthrough mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Alexa app EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Proximity wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.amazon.qi-charging",
+        "name": "Qi wireless charging case",
+        "availability": "device-only",
+        "notes": "Also charges over USB-C."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause; answer/end call (configurable)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next/previous track; ANC/passthrough (configurable)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "volume; voice assistant; mute (configurable)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/passthrough; voice assistant; mute (configurable)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Case pairing button only",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "5.7 mm dynamic driver, Bluetooth 5.0, IPX4. Same acoustics as wired-case variant."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "anc-control",
+      "eq-selection",
+      "custom-eq",
+      "tap-gesture-settings",
+      "alexa-settings",
+      "power-save"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adds Qi wireless charging to the 2nd-gen case"
+    ],
+    "sources": [
+      {
+        "url": "https://www.amazon.com/All-new-Echo-Buds-Wireless-Charging-Case/dp/B085WTY1HQ",
+        "type": "official-product",
+        "title": "Echo Buds (2nd Gen, wireless charging case)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.theverge.com/2021/4/14/22381820/amazon-echo-buds-2-features-price-release-date",
+        "type": "reputable-secondary",
+        "title": "Echo Buds 2 pricing: $119.99 wired / $139.99 wireless",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Case visibility timing and whether the app case reading is live when buds are out are not documented.",
+      "ANC dB rating not published.",
+      "EQ band count not published."
+    ],
+    "notes": "Commercial variant with a Qi-capable case; the earbuds themselves are identical to the wired-case record.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Amazon",
+    "companySlug": "amazon",
+    "family": "Echo Buds",
+    "model": "Echo Buds (2023)",
+    "slug": "echo-buds-2023",
+    "generation": "2023",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Amazon Alexa",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.amazon.dee.app"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.amazon.dee.app",
+        "https://apps.apple.com/us/app/amazon-alexa/id944011620"
+      ],
+      "appVersionObserved": null,
+      "notes": "Alexa app handles setup, tap controls, EQ, multipoint, VIP filter and battery status."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 20,
+      "chargingIndicators": "Case LED; Alexa app shows left, right and case charge",
+      "notes": "5 h with hands-free Alexa, 6 h with wake word off, 20 h total with case; 15-min charge gives 2 h. USB-C.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 20
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "No ANC. Amazon explicitly states the 2023 Echo Buds do not support active noise cancellation."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Alexa app EQ",
+        "availability": "official-app",
+        "notes": "Preset-based EQ."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": "Two devices with auto switching."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Auto-pause wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.amazon.alexa",
+        "name": "Hands-free Alexa",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "vendor.amazon.vip-filter",
+        "name": "VIP Filter notifications",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.amazon.audio-personalization",
+        "name": "Audio personalization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause; answer/end call (configurable per bud)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next/previous track (configurable)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "volume / voice assistant (configurable)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant / mute (configurable)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Case pairing button only",
+      "configurableInApp": true,
+      "notes": "Customizable tap controls for each individual earbud."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12 mm dynamic driver, Bluetooth 5.2, IPX2, semi-in-ear with removable silicone covers. No ANC. Some secondary sources report aptX support; Amazon does not list it."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "eq-selection",
+      "custom-eq",
+      "tap-gesture-settings",
+      "multipoint",
+      "vip-filter",
+      "audio-personalization"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC removed (2nd Gen had ANC; 2023 model explicitly does not)",
+      "Semi-in-ear open-fit design with 12 mm drivers replaces sealed in-ear design",
+      "Bluetooth upgraded from 5.0 to 5.2",
+      "Water resistance reduced from IPX4 to IPX2",
+      "Battery 5 h with Alexa / 6 h without, 20 h with case"
+    ],
+    "sources": [
+      {
+        "url": "https://www.amazon.com/All-new-Echo-Buds-2023-Release-True-Wireless-Earbuds/dp/B09JVG3TWX",
+        "type": "official-product",
+        "title": "Echo Buds (2023 release)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GMCH6TQBWT4483WD",
+        "type": "official-support",
+        "title": "Alexa app battery status",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Case visibility timing and whether the app case reading is live when buds are out are not documented.",
+      "EQ band count not published.",
+      "aptX support is secondary-only and not confirmed by Amazon."
+    ],
+    "notes": "Budget semi-in-ear model, not a sealed ANC earbud. It is the third Echo Buds generation but Amazon's naming omits '3rd Gen'.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Amazon",
+    "companySlug": "amazon",
+    "family": "Echo Frames",
+    "model": "Echo Frames (1st Gen)",
+    "slug": "echo-frames-1",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2019,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Amazon Alexa",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.amazon.dee.app"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.amazon.dee.app",
+        "https://apps.apple.com/us/app/amazon-alexa/id944011620"
+      ],
+      "appVersionObserved": null,
+      "notes": "Day 1 Editions launch; Android only at launch, iOS support added later."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 3,
+      "caseHours": null,
+      "chargingIndicators": "LED on frames; Alexa app battery status",
+      "notes": "About 3 h continuous audio at 60% volume; about 14 h with intermittent mixed use (40 Alexa interactions, 45 min audio, 20 min calls, 90 notifications). Proprietary magnetic charging cable; no case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": false,
+      "notes": "No ANC; open-ear directional speakers."
+    },
+    "features": [
+      {
+        "id": "vendor.amazon.alexa",
+        "name": "Alexa on glasses",
+        "availability": "both",
+        "notes": "No camera or display."
+      },
+      {
+        "id": "vendor.amazon.vip-filter",
+        "name": "VIP Filter notifications",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.amazon.open-ear-speakers",
+        "name": "Open-ear directional speakers",
+        "availability": "device-only",
+        "notes": "Two speakers per stem."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "touch panel",
+          "action": "play/pause; track control",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "action button",
+          "action": "Alexa invoke / call control",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "volume buttons",
+          "action": "volume up/down",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "voice",
+          "action": "Alexa wake word",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Action button and volume controls on the right temple",
+      "configurableInApp": null,
+      "notes": "Hidden buttons under the temple."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Open-ear smart glasses, Bluetooth 5.0, splash resistant (IPX4-class), no display or camera. No wear sensor."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "vip-filter",
+      "alexa-settings"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.aboutamazon.com/news/devices/amazon-devices-event-september-2019",
+        "type": "official-product",
+        "title": "Amazon Devices Event, September 2019: Echo Frames",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.cnet.com/tech/mobile/amazon-echo-frames-heres-what-you-didnt-know-about-amazons-new-smart-glasses/",
+        "type": "reputable-secondary",
+        "title": "Echo Frames 1st Gen battery and features",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.pcworld.com/article/398117/amazon-echo-frames-first-impressions.html",
+        "type": "reputable-secondary",
+        "title": "Echo Frames first impressions",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "No live official Amazon product page; specs rely on contemporary reputable coverage.",
+      "Bluetooth version and codec list not officially confirmed.",
+      "Case visibility is not applicable (no case; magnetic cable).",
+      "EQ support not documented."
+    ],
+    "notes": "Day 1 Editions audio-only smart glasses. Included for open-ear completeness, not because it is an earbud.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Amazon",
+    "companySlug": "amazon",
+    "family": "Echo Frames",
+    "model": "Echo Frames (2nd Gen)",
+    "slug": "echo-frames-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Amazon Alexa",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.amazon.dee.app"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.amazon.dee.app",
+        "https://apps.apple.com/us/app/amazon-alexa/id944011620"
+      ],
+      "appVersionObserved": null,
+      "notes": "Alexa app manages VIP Filter, notifications, calls and firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 4,
+      "caseHours": null,
+      "chargingIndicators": "LED on frames; Alexa app battery status",
+      "notes": "4 h continuous audio or 3.5 h continuous talk at 80%; about 2 h of mixed talk/Alexa/media over a 14-hour day; 1 h 45 min full charge via magnetic cable. No case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "vendor.amazon.alexa",
+        "name": "Alexa on glasses",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "vendor.amazon.vip-filter",
+        "name": "VIP Filter notifications",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.amazon.auto-volume",
+        "name": "Environment-aware auto volume",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.amazon.auto-off",
+        "name": "Auto-off when placed upside down 3 s",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "touch panel",
+          "action": "play/pause; track control",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "action button",
+          "action": "Alexa invoke / call control",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "volume buttons",
+          "action": "volume up/down",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "voice",
+          "action": "Alexa wake word",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Action button and volume controls on the right temple",
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Open-ear smart glasses, Bluetooth 5.0, IPX4 splash resistance. Improved audio vs 1st gen; no multipoint (added on 3rd gen)."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "vip-filter",
+      "alexa-settings",
+      "auto-volume"
+    ],
+    "featureDeltaFromPrevious": [
+      "Battery life increased about 40% for continuous playback",
+      "Auto volume adjusts to ambient noise",
+      "Auto-off when placed upside down for 3 s",
+      "Improved audio quality and new colors",
+      "Added iOS support"
+    ],
+    "sources": [
+      {
+        "url": "https://www.aboutamazon.com/news/devices/echo-frames-are-now-available-to-everyone",
+        "type": "official-product",
+        "title": "Echo Frames (2nd Gen) announcement",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GSVK3ZY3G43K435E",
+        "type": "official-support",
+        "title": "Echo Frames battery life and testing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth version and codec list not stated on the official page.",
+      "EQ support not documented.",
+      "Case visibility is not applicable (no case; magnetic cable)."
+    ],
+    "notes": "Second-generation audio-only smart glasses; no display or camera.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Amazon",
+    "companySlug": "amazon",
+    "family": "Echo Frames",
+    "model": "Echo Frames (3rd Gen)",
+    "slug": "echo-frames-3",
+    "generation": "3",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Amazon Alexa",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.amazon.dee.app"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.amazon.dee.app",
+        "https://apps.apple.com/us/app/amazon-alexa/id944011620"
+      ],
+      "appVersionObserved": null,
+      "notes": "Alexa app manages setup, notifications, calls, multipoint and firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": null,
+      "chargingIndicators": "Charging stand LED: orange charging, green full; Alexa app status",
+      "notes": "6 h continuous media/talk at 80%, or up to 14 h moderate use; 2.5 h full charge on the charging stand. No battery case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": false,
+      "notes": "No ANC; open-air speakers with improved directionality and bass."
+    },
+    "features": [
+      {
+        "id": "vendor.amazon.alexa",
+        "name": "Alexa on glasses",
+        "availability": "both",
+        "notes": "Alexa+ early access on newer listings."
+      },
+      {
+        "id": "vendor.amazon.vip-filter",
+        "name": "VIP Filter notifications",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": "Two audio sources."
+      },
+      {
+        "id": "vendor.amazon.auto-volume",
+        "name": "Auto volume",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.amazon.auto-off",
+        "name": "Fold-to-off",
+        "availability": "device-only",
+        "notes": "Folding the frames turns them off."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "touch panel",
+          "action": "play/pause; track control",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "action button single-press",
+          "action": "Alexa invoke / call control",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "action button double-press",
+          "action": "recommended playlist",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "action button double-press and hold",
+          "action": "mute microphones",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "volume buttons",
+          "action": "volume up/down",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "Action button and volume controls on the right temple",
+      "configurableInApp": null,
+      "notes": "Double-press action button starts a recommended playlist; double-press-and-hold mutes mics."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Open-ear smart glasses, Bluetooth 5.2, IPX4, 41.7 g. 3x bass vs 2nd gen, four beamforming mics."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "vip-filter",
+      "alexa-settings",
+      "auto-volume",
+      "multipoint"
+    ],
+    "featureDeltaFromPrevious": [
+      "Continuous playback increased from 4 h to 6 h",
+      "Moderate-use rating up to 14 h (2.5 h media, 1 h talk, 20 Alexa interactions, 90 notifications)",
+      "Bluetooth upgraded to 5.2 with multipoint",
+      "Temples 15% slimmer; speakers redesigned for 3x bass and less leakage",
+      "New charging stand replaces magnetic cable; 2.5 h full charge",
+      "Wake-word detection improved 10x"
+    ],
+    "sources": [
+      {
+        "url": "https://us.amazon.com/Echo-Frames-3rd-Gen-Smart-audio-glasses-with-Alexa--Rectangle-frames-in-classic-black--with-blue-light-filtering-lenses/dp/B09SVDWTYC",
+        "type": "official-product",
+        "title": "Echo Frames (3rd Gen)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GSVK3ZY3G43K435E",
+        "type": "official-support",
+        "title": "Echo Frames battery life and testing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Codec list not published.",
+      "EQ support not documented.",
+      "Case visibility is not applicable (charging stand, no battery case)."
+    ],
+    "notes": "Third-generation audio-only smart glasses with multipoint and a charging stand.",
+    "researchedAt": "2026-11-10"
+  }
+]

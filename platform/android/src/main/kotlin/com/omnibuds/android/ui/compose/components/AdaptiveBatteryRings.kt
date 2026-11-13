@@ -31,6 +31,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import com.omnibuds.android.hardware.capability.BatteryBudsDisplay
+import com.omnibuds.android.hardware.capability.BatteryCaseDisplay
+import com.omnibuds.android.hardware.capability.BatteryCaseVisibility
+import com.omnibuds.android.hardware.capability.BatteryCaseWhileBudsOut
 import com.omnibuds.android.hardware.capability.BrandSchema
 import com.omnibuds.android.ui.compose.model.AudioFormFactor
 import com.omnibuds.android.ui.compose.theme.OmniBrand
@@ -60,12 +64,41 @@ fun AdaptiveBatteryRings(
     forceCombinedView: Boolean = false,
     supportsCaseBatteryWhenUndocked: Boolean = false,
     brandSchema: BrandSchema = BrandSchema.GENERIC,
+    budsDisplay: BatteryBudsDisplay = BatteryBudsDisplay.UNKNOWN,
+    caseDisplay: BatteryCaseDisplay = BatteryCaseDisplay.UNKNOWN,
+    caseVisibility: BatteryCaseVisibility = BatteryCaseVisibility.UNKNOWN,
+    caseWhileBudsOut: BatteryCaseWhileBudsOut = BatteryCaseWhileBudsOut.UNKNOWN,
+    batteryTopology: com.omnibuds.android.hardware.capability.BatteryTopologyMode =
+        com.omnibuds.android.hardware.capability.BatteryTopologyMode.DYNAMIC_COMBINED_FALLBACK,
     onChangeStyleClick: (() -> Unit)? = null,
     onToggleViewMode: (() -> Unit)? = null,
 ) {
     val isRealme = brandSchema == BrandSchema.REALME_LINK
     val isSingleUnit = !formFactor.isBinauralSplit
-    val isCombinedTws = forceCombinedView || (!isSingleUnit && leftPercent == null && rightPercent == null && devicePercent != null)
+    val contractSaysSplit = budsDisplay == BatteryBudsDisplay.SPLIT
+    val contractSaysCombined = budsDisplay == BatteryBudsDisplay.COMBINED
+    val isCombinedTws = forceCombinedView || contractSaysCombined ||
+        (!isSingleUnit && !contractSaysSplit && leftPercent == null && rightPercent == null && devicePercent != null)
+
+    // The verified app contract decides whether a case slot exists and when it
+    // is allowed to appear. Unknown contracts fall back to the old behaviour.
+    val caseVisibleNow = formFactor.hasCase && when (batteryTopology) {
+        com.omnibuds.android.hardware.capability.BatteryTopologyMode.SPLIT_LR_NO_CASE,
+        com.omnibuds.android.hardware.capability.BatteryTopologyMode.SINGLE_UNIT_HEADSET -> false
+        com.omnibuds.android.hardware.capability.BatteryTopologyMode.ALWAYS_LIVE_3_WAY -> true
+        com.omnibuds.android.hardware.capability.BatteryTopologyMode.POGO_PIN_CACHED_CASE ->
+            caseIsLive || caseWhileBudsOut != BatteryCaseWhileBudsOut.HIDDEN
+        com.omnibuds.android.hardware.capability.BatteryTopologyMode.DYNAMIC_COMBINED_FALLBACK ->
+            caseDisplay != BatteryCaseDisplay.HIDDEN &&
+                when (caseVisibility) {
+                    BatteryCaseVisibility.ONLY_WHEN_CASE_OPEN,
+                    BatteryCaseVisibility.ONLY_WHEN_DOCKED -> caseIsLive
+                    BatteryCaseVisibility.ONLY_WHEN_CHARGING -> caseCharging
+                    BatteryCaseVisibility.ALWAYS,
+                    BatteryCaseVisibility.UNKNOWN -> true
+                } &&
+                (caseWhileBudsOut != BatteryCaseWhileBudsOut.HIDDEN || caseIsLive)
+    }
 
     Column(
         modifier = modifier.fillMaxWidth(),
@@ -166,7 +199,7 @@ fun AdaptiveBatteryRings(
                     )
 
                     // Case Ring (if hasCase)
-                    if (formFactor.hasCase) {
+                    if (caseVisibleNow) {
                         if (casePercent != null && casePercent in 1..100) {
                             SingleBatteryRing(
                                 formFactor = formFactor,
@@ -246,7 +279,7 @@ fun AdaptiveBatteryRings(
                     }
 
                     // CHARGING CASE
-                    if (formFactor.hasCase) {
+                    if (caseVisibleNow) {
                         if (casePercent != null && casePercent in 1..100) {
                             SingleBatteryRing(
                                 formFactor = formFactor,
@@ -294,12 +327,13 @@ private fun SingleBatteryRing(
         label = "batteryProgress",
     )
 
-    val ringColor = when {
+    val statusColor = when {
         lastKnown -> OmniBrand.Disabled
-        percent <= 10 -> OmniBrand.Error
-        percent <= 20 -> OmniBrand.Warning
-        else -> Color(0xFF22E55E) // Crisp Apple green
+        percent > 50 -> Color(0xFF22E55E) // 100–51% green
+        percent > 20 -> Color(0xFFFF9800) // 50–21% orange
+        else -> Color(0xFFFF2222) // 20–0% red
     }
+    val ringColor = statusColor
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -372,7 +406,7 @@ private fun SingleBatteryRing(
         Text(
             text = "$percent%",
             style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.SemiBold),
-            color = MaterialTheme.colorScheme.onSurface,
+            color = statusColor,
         )
 
         if (charging) {

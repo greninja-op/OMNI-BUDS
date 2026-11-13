@@ -1,0 +1,342 @@
+[
+  {
+    "company": "Kokoon",
+    "companySlug": "kokoon",
+    "family": "Relax",
+    "model": "Kokoon Relax",
+    "slug": "kokoon-relax",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2018,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Kokoon",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "io.kokoon.app.v2"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=io.kokoon.app.v2"
+      ],
+      "appVersionObserved": "2025-09-18 update",
+      "notes": "MyKokoon: sleep audio library, audio fade-out into coloured noise, EEG-based sleep insights and coaching. Subscription after trial."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 11,
+      "caseHours": null,
+      "chargingIndicators": "LED above the power button: green >75%, amber <75%, red low; charging LED green; micro-USB.",
+      "notes": "Single 500 mAh battery in the headband, so one combined reading. No charging case; 11 h is the figure given by Kokoon's CEO and reviews, not a spec-table number. Later units/reviews report around 13 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Active noise cancellation plus passive isolation and active white noise. No transparency mode documented."
+    },
+    "features": [
+      {
+        "id": "sleep.eeg-tracking",
+        "name": "Ear-cup EEG sleep and relaxation tracking",
+        "availability": "both",
+        "notes": "EEG electrodes in both ear cups plus an accelerometer."
+      },
+      {
+        "id": "sleep.audio-fade-out",
+        "name": "Sleep detection with audio fade-out",
+        "availability": "both",
+        "notes": "Fades the current audio and introduces coloured noise when sleep is detected."
+      },
+      {
+        "id": "sleep.noise-masking",
+        "name": "Coloured-noise masking",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "device-only",
+        "notes": "Toggled with the power button; LED turns purple when on."
+      },
+      {
+        "id": "app.sleep-coaching",
+        "name": "Sleep coaching and personalised audio",
+        "availability": "official-app",
+        "notes": "CBT-I-derived exercises, soundscapes and recommendations."
+      },
+      {
+        "id": "audio.wired-input",
+        "name": "3.5 mm wired input",
+        "availability": "device-only",
+        "notes": "Passive/ANC listening with the included cable."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "power button (short press)",
+          "action": "power on and ANC toggle",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "action button (short press)",
+          "action": "play/pause",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "action button (long press 3 s)",
+          "action": "Bluetooth pairing",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/ANC button above left ear cup; multi-function action button on the right",
+      "configurableInApp": false,
+      "notes": "No touch controls."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "40 mm 32 Ω dynamic drivers. Bluetooth 4.0 Low Energy; 3.5 mm cable included. Reconnects to the two most recent devices but does not stream two at once."
+    },
+    "appOnlyFeatures": [
+      "audio library",
+      "sleep coaching",
+      "EEG history and insights",
+      "audio fade-out settings",
+      "coloured-noise selection"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://get.kokoon.io/relax-limitedtimeoffer/",
+        "type": "official-product",
+        "title": "Kokoon Relax headphones",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=io.kokoon.app.v2",
+        "type": "official-app-store",
+        "title": "Kokoon app on Google Play",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://sleepgadgets.io/kokoon-headphones-review/",
+        "type": "reputable-secondary",
+        "title": "Kokoon Relax EEG headphones review (specs)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official current spec page no longer lists battery, Bluetooth version or weight.",
+      "ANC depth and transparency support not published.",
+      "Exact EQ/custom audio controls in the app not documented.",
+      "Whether current production still uses micro-USB is not stated on the official page."
+    ],
+    "notes": "Over-ear sleep headphone with EEG. The current Kokoon shop page focuses on sleep/relaxation and does not publish a full spec sheet; hardware details come from launch-era documentation and reviews.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Kokoon",
+    "companySlug": "kokoon",
+    "family": "Nightbuds",
+    "model": "Kokoon Nightbuds",
+    "slug": "kokoon-nightbuds",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "Kokoon",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "io.kokoon.app.v2"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=io.kokoon.app.v2"
+      ],
+      "appVersionObserved": "2025-09-18 update",
+      "notes": "Sleep sensing, audio fade-out, sound library, sleep score and coaching."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": null,
+      "chargingIndicators": "LED on the neck control unit; USB-C charging.",
+      "notes": "One 100 mAh battery in the neck control unit, so a single combined reading. No charging case; official/retail spec is 10+ h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC. Passive silicone-tip isolation plus dynamic noise masking with coloured noise."
+    },
+    "features": [
+      {
+        "id": "sleep.sleep-sensing",
+        "name": "Sleep sensing with auto pause/fade-out",
+        "availability": "both",
+        "notes": "In-ear optical heart-rate/HRV sensor plus motion sensing; fades audio into coloured noise."
+      },
+      {
+        "id": "sleep.noise-masking",
+        "name": "Dynamic noise masking",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sleep.sleep-insights",
+        "name": "Sleep efficiency score and insights",
+        "availability": "official-app",
+        "notes": "Light/deep/REM/awake breakdown plus coaching."
+      },
+      {
+        "id": "audio.streaming",
+        "name": "Bluetooth streaming from any app",
+        "availability": "both",
+        "notes": "Spotify, Audible, YouTube, Calm, etc."
+      },
+      {
+        "id": "telephony.calls",
+        "name": "Voice-call microphone",
+        "availability": "device-only",
+        "notes": "Control-unit microphone; call handling via the multi-function button."
+      },
+      {
+        "id": "app.battery-saver",
+        "name": "Battery-saving auto power-off",
+        "availability": "official-app",
+        "notes": "Pauses audio and powers off when removed."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "MFB single press",
+          "action": "play/pause or answer/end call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "MFB long press",
+          "action": "power on/off; reject call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "+ / - single press",
+          "action": "volume; double press skips track",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "MFB, volume + and volume - on the neck control unit",
+      "configurableInApp": false,
+      "notes": "Wired buds to a behind-neck control module; not true wireless."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Balanced-armature drivers; Bluetooth 5.0, HFP/A2DP/AVRCP; IPX2. 100 mAh battery, USB-C."
+    },
+    "appOnlyFeatures": [
+      "sound library",
+      "sleep coaching",
+      "sleep score",
+      "battery-saving mode"
+    ],
+    "featureDeltaFromPrevious": [
+      "In-ear sleep-sensing buds instead of over-ear EEG",
+      "Heart-rate/HRV sensing",
+      "No ANC (Relax has ANC)"
+    ],
+    "sources": [
+      {
+        "url": "https://get.kokoon.io/nightbuds/",
+        "type": "official-product",
+        "title": "Kokoon Nightbuds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=io.kokoon.app.v2",
+        "type": "official-app-store",
+        "title": "Kokoon app on Google Play",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.bestbuy.ca/en-ca/product/kokoon-nightbuds-sleep-aid-bluetooth-headphones-grey-english/16235678",
+        "type": "reputable-secondary",
+        "title": "Kokoon Nightbuds retail spec listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Kokoon does not publish a current battery/charging spec table.",
+      "Codec list limited to SBC by retail documentation.",
+      "Multipoint not documented.",
+      "Whether the app subscription is still required for sleep insights is not stated on the product page."
+    ],
+    "notes": "In-ear sleep headphones on a neck cable, launched 2022. Positioned below the Relax and without ANC.",
+    "researchedAt": "2026-11-10"
+  }
+]

@@ -48,7 +48,6 @@ class DeviceWorkspaceViewModel(
     val state: StateFlow<WorkspaceScreenState> = _state.asStateFlow()
 
     private var observationJob: Job? = null
-    private var sequenceNumber = 10_000L
     private var lastObservedSnapshot: GlobalDeviceState? = null
     private val inFlightOperations = mutableMapOf<String, ControlExecutionStatus>()
     private val failureReasons = mutableMapOf<String, String>()
@@ -270,14 +269,14 @@ class DeviceWorkspaceViewModel(
             failureReasons.remove(featureId)
 
             val activeSessionId = (lastObservedSnapshot?.connection as? ConnectionState.Connected)?.sessionId
-            val seq = sequenceNumber++
+            val seq = stateRepository.nextSequence(globalDeviceId.value)
             val provenance = com.omnibuds.core.globalstate.ObservationProvenance(
                 sourceId = "desktop-ui",
                 observedAtMillis = System.currentTimeMillis(),
                 receivedAtMillis = System.currentTimeMillis(),
                 sessionId = activeSessionId,
-                connectionGeneration = 1L,
-                protocolVersion = "1.0",
+                connectionGeneration = (lastObservedSnapshot?.connection as? ConnectionState.Connected)?.generation,
+                protocolVersion = (lastObservedSnapshot?.protocol as? com.omnibuds.core.globalstate.ProtocolState.Resolved)?.protocolVersion,
             )
             stateRepository.ingest(
                 DeviceStateEvent.FeatureDesiredChanged(
@@ -293,7 +292,7 @@ class DeviceWorkspaceViewModel(
                 DeviceStateEvent.FeatureOperationChanged(
                     deviceId = globalDeviceId,
                     sessionId = activeSessionId,
-                    sequence = sequenceNumber++,
+                    sequence = stateRepository.nextSequence(globalDeviceId.value),
                     sourceId = "desktop-ui",
                     featureId = featureId,
                     status = OperationStatus.Pending(System.currentTimeMillis()),
@@ -306,7 +305,7 @@ class DeviceWorkspaceViewModel(
                 DeviceStateEvent.FeatureObserved(
                     deviceId = globalDeviceId,
                     sessionId = activeSessionId,
-                    sequence = sequenceNumber++,
+                    sequence = stateRepository.nextSequence(globalDeviceId.value),
                     sourceId = "desktop-ui",
                     featureId = featureId,
                     value = ObservedValue(targetValue, provenance),
@@ -316,7 +315,7 @@ class DeviceWorkspaceViewModel(
                 DeviceStateEvent.FeatureOperationChanged(
                     deviceId = globalDeviceId,
                     sessionId = activeSessionId,
-                    sequence = sequenceNumber++,
+                    sequence = stateRepository.nextSequence(globalDeviceId.value),
                     sourceId = "desktop-ui",
                     featureId = featureId,
                     status = OperationStatus.Succeeded(System.currentTimeMillis()),
@@ -341,7 +340,7 @@ class DeviceWorkspaceViewModel(
                 DeviceStateEvent.FeatureOperationChanged(
                     deviceId = globalDeviceId,
                     sessionId = null,
-                    sequence = sequenceNumber++,
+                    sequence = stateRepository.nextSequence(globalDeviceId.value),
                     sourceId = "desktop-ui",
                     featureId = featureId,
                     status = OperationStatus.Failed(reason),

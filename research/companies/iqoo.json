@@ -1,0 +1,652 @@
+[
+  {
+    "company": "iQOO",
+    "companySlug": "iqoo",
+    "family": "iQOO TWS",
+    "model": "iQOO TWS 1",
+    "slug": "iqoo-tws-1",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "vEarphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Non-vivo/iQOO Android devices need the vEarphones app; iQOO phones expose settings natively."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 42,
+      "chargingIndicators": "Case LED; USB-C",
+      "notes": "Official-class 10 h / 42 h ANC-off. ANC-on not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 49,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "49 dB intelligent ultra-wideband ANC; no band context."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "49 dB ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.lossless",
+        "name": "aptX Lossless",
+        "availability": "device-only",
+        "notes": "Snapdragon Sound."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "device-only",
+        "notes": "Compatible iQOO/vivo phones."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.iqoo.gaming-latency",
+        "name": "28 ms low latency",
+        "availability": "device-only",
+        "notes": "Compatible iQOO phones."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "aptX Adaptive",
+        "aptX Lossless"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Dual driver; Snapdragon Sound; 28 ms gaming latency."
+    },
+    "appOnlyFeatures": [
+      "Spatial audio",
+      "EQ",
+      "Gesture remap",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.aptx.com/products/iqoo-tws-1",
+        "type": "other",
+        "title": "iQOO TWS 1 aptX product listing",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fonearena.com/blog/397991/iqoo-tws-1-price-features.html",
+        "type": "reputable-secondary",
+        "title": "iQOO TWS 1 launch coverage",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery/dB figures not from a live iQOO spec page",
+      "Custom EQ unknown",
+      "Head tracking not stated",
+      "Battery layout inferred"
+    ],
+    "notes": "2023 flagship iQOO TWS.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "iQOO",
+    "companySlug": "iqoo",
+    "family": "iQOO TWS",
+    "model": "iQOO TWS 1e",
+    "slug": "iqoo-tws-1e",
+    "generation": "1",
+    "variant": "e",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "vEarphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Non-vivo/iQOO Android devices need the vEarphones app."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 8.5,
+      "budsHoursNoAnc": 10.5,
+      "caseHours": 42,
+      "chargingIndicators": "Case LED; 10-minute charge = 3 h",
+      "notes": "Official 10.5 h / 42 h ANC-off; 8.5 h single-charge ANC-on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 30,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "30 dB intelligent ANC; weaker than TWS 1 (49 dB)."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "30 dB intelligent ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "DeepX 3.0 stereo",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual pairing",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.iqoo.gaming-latency",
+        "name": "88 ms gaming latency",
+        "availability": "device-only",
+        "notes": "Official latency figure for this model."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm driver; BT 5.3; IP54."
+    },
+    "appOnlyFeatures": [
+      "DeepX 3.0",
+      "Gesture remap",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Reduced ANC from 49 dB to 30 dB vs iQOO TWS 1 (official-product)",
+      "Removed aptX Lossless and spatial audio (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.iqoo.com/my/products/tws-1e",
+        "type": "official-product",
+        "title": "iQOO TWS 1e",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Custom EQ unknown",
+      "No spatial audio",
+      "Battery layout inferred"
+    ],
+    "notes": "Budget sibling of TWS 1.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "iQOO",
+    "companySlug": "iqoo",
+    "family": "iQOO TWS",
+    "model": "iQOO TWS 2",
+    "slug": "iqoo-tws-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "vEarphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Non-vivo/iQOO Android devices need the vEarphones app."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 11,
+      "caseHours": 45,
+      "chargingIndicators": "Case LED; 10-minute charge = 5 h",
+      "notes": "Official 11 h / 45 h ANC-off; 6 h / 26 h ANC-on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 55,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "55 dB / 5000 Hz ultra-wideband ANC with commute presets; CAIA A+ certification; 3-mic AI call noise reduction."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "55 dB ANC",
+        "availability": "both",
+        "notes": "Deep/regular/light plus airplane/train/bus commute modes."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": "Dual transparency."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "3D panoramic audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC / aptX Adaptive Hi-Res",
+        "availability": "device-only",
+        "notes": "Hi-Res Wireless and Snapdragon Sound certified."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": "BT 5.4."
+      },
+      {
+        "id": "vendor.iqoo.gaming-latency",
+        "name": "44 ms low latency",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "pinch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "pinch once",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "pinch twice",
+          "action": "next track; decline call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "pinch three times",
+          "action": "previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "pinch and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "slide up/down",
+          "action": "volume",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Pressure-sensing stem plus slide; official spec sheet describes 捏一下/捏两下/捏三下/长按."
+    },
+    "audio": {
+      "eqPresets": [
+        "Standard",
+        "Clear voice",
+        "Mega bass",
+        "Clear treble",
+        "Audiobook",
+        "Monster Sound"
+      ],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "aptX Adaptive",
+        "LC3"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "12.2 mm ceramic-tungsten diaphragm driver; Snapdragon S3 Gen 2; BT 5.4; 44 ms; IP54; no wear detection."
+    },
+    "appOnlyFeatures": [
+      "Spatial audio",
+      "EQ/DeepX",
+      "Gesture remap"
+    ],
+    "featureDeltaFromPrevious": [
+      "Raised ANC from 49 dB to 55 dB and widened band to 5000 Hz vs iQOO TWS 1 (official-product)",
+      "Battery increased to 11 h/45 h ANC-off, 6 h/26 h ANC-on (official-product)",
+      "Added 12.2 mm ceramic-tungsten driver and Bluetooth 5.4 (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.vivo.com.cn/vivo/iqootws2",
+        "type": "official-product",
+        "title": "iQOO TWS 2 (China)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Custom EQ not stated",
+      "No wear detection",
+      "Head tracking not stated",
+      "Battery layout inferred"
+    ],
+    "notes": "2024 flagship iQOO TWS.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "iQOO",
+    "companySlug": "iqoo",
+    "family": "iQOO Buds",
+    "model": "iQOO Buds",
+    "slug": "iqoo-buds",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "vEarphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Non-vivo/iQOO Android devices need vEarphones; iQOO phones expose DeepX and spatial audio natively."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 12,
+      "caseHours": 50,
+      "chargingIndicators": "Case LED; 10-minute charge = 4 h",
+      "notes": "No ANC. Official 12 h / 50 h music; 7 h calls.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC; AI call noise reduction with cross-flow duct and wind chamber."
+    },
+    "features": [
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "device-only",
+        "notes": "Theater, concert hall, studio, concert modes on compatible phones."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "DeepX 4.0 sound effects",
+        "availability": "official-app",
+        "notes": "Five styles."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth 6.1 multipoint",
+        "availability": "device-only",
+        "notes": "Two devices."
+      },
+      {
+        "id": "vendor.iqoo.gaming-latency",
+        "name": "42 ms gaming latency",
+        "availability": "device-only",
+        "notes": "Snapdragon 8 Gen 2/7 Gen 3 or Dimensity 9200+."
+      },
+      {
+        "id": "vendor.iqoo.find-my",
+        "name": "Find My iQOO Buds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.iqoo.remote-camera",
+        "name": "Remote camera control",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/hang up; camera (assignable)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "touch and hold",
+          "action": "reject call",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch area on bud."
+    },
+    "audio": {
+      "eqPresets": [
+        "Immersive Audiobooks",
+        "Mega Bass",
+        "Clear Voice",
+        "Crisp High Pitch"
+      ],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "10 mm driver; PU+PEEK diaphragm; 3.8 g per bud; BT 6.1; IP54."
+    },
+    "appOnlyFeatures": [
+      "DeepX 4.0",
+      "Spatial audio",
+      "Gesture remap",
+      "Find buds"
+    ],
+    "featureDeltaFromPrevious": [
+      "No ANC vs iQOO TWS 2 (official-product)",
+      "Battery increased to 12 h/50 h (official-product)",
+      "Added Bluetooth 6.1 multipoint and 42 ms latency (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.iqoo.com/in/activity/iqoo-buds",
+        "type": "official-product",
+        "title": "iQOO Buds",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No ANC",
+      "Custom EQ not stated",
+      "Wear detection not stated",
+      "Battery layout inferred"
+    ],
+    "notes": "2026 budget gaming TWS; no ANC despite the 'Buds' name.",
+    "researchedAt": "2026-11-10"
+  }
+]

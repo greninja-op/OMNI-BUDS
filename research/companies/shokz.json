@@ -1,0 +1,2405 @@
+[
+  {
+    "company": "Shokz",
+    "companySlug": "shokz",
+    "family": "OpenRun",
+    "model": "OpenRun",
+    "slug": "openrun",
+    "generation": "2021",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "bone-conduction",
+    "officialApp": {
+      "name": "Shokz",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "cn.com.aftershokz.app"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/sg/app/shokz/id1596854072",
+        "https://play.google.com/store/apps/details?id=cn.com.aftershokz.app"
+      ],
+      "appVersionObserved": null,
+      "notes": "Same Shokz app used across the current lineup; OpenRun is the 2021 rename of Aeropex."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": null,
+      "chargingIndicators": "LED on headphones; spoken battery level via button; Shokz app battery status",
+      "notes": "Single-unit bone-conduction headband, so there is no L/R split and no charging case. 8 h claimed; 10-min quick charge gives 1.5 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Open-ear design; no ANC or transparency mode."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ modes",
+        "availability": "official-app",
+        "notes": "Shokz app EQ support; exact preset count for OpenRun not stated on the product page."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "MultiPoint pairing",
+        "availability": "official-app",
+        "notes": "Not stated on the OpenRun product page; verify per firmware."
+      },
+      {
+        "id": "vendor.shokz.find-my-headphones",
+        "name": "Find My Headphones",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction single-click",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "multifunction double-click",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "multifunction triple-click",
+          "action": "previous track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "volume + / -",
+          "action": "volume up/down",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Multifunction button plus volume buttons on the right side",
+      "configurableInApp": null,
+      "notes": "Tactile buttons, usable with gloves. App button remapping not documented for OpenRun."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "8th-generation bone conduction, PremiumPitch 2.0+. No in-ear wear sensor."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "eq-selection"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://shokz.com/pages/openrun",
+        "type": "official-product",
+        "title": "Shokz OpenRun",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://apps.apple.com/sg/app/shokz/id1596854072",
+        "type": "official-app-store",
+        "title": "Shokz app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Shokz app battery widget layout for OpenRun (single percentage vs any accessory view) not documented.",
+      "Multipoint and app button remapping support for OpenRun not confirmed on the official product page.",
+      "EQ preset names/count for OpenRun not stated."
+    ],
+    "notes": "Also sold as OpenRun Mini with a 0.83-inch shorter band; Mini is a fit variant, not a separate feature record.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shokz",
+    "companySlug": "shokz",
+    "family": "OpenRun",
+    "model": "OpenRun Pro",
+    "slug": "openrun-pro",
+    "generation": "2022",
+    "variant": "Pro",
+    "releaseYear": 2022,
+    "formFactor": "bone-conduction",
+    "officialApp": {
+      "name": "Shokz",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "cn.com.aftershokz.app"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/sg/app/shokz/id1596854072",
+        "https://play.google.com/store/apps/details?id=cn.com.aftershokz.app"
+      ],
+      "appVersionObserved": null,
+      "notes": "App supports EQ, multipoint and user tips."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": null,
+      "chargingIndicators": "LED on headphones; Shokz app battery status",
+      "notes": "Single headband. 10 h music/calls; 5-min quick charge gives 1.5 h. 140 mAh.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC; dual noise-canceling microphones are for calls only."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ modes (Standard, Vocal)",
+        "availability": "official-app",
+        "notes": "Two EQ settings."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "MultiPoint pairing",
+        "availability": "official-app",
+        "notes": "Two devices."
+      },
+      {
+        "id": "vendor.shokz.turbopitch",
+        "name": "TurboPitch bass enhancement",
+        "availability": "device-only",
+        "notes": "9th-generation bone conduction with two bass enhancers."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction single-click",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "multifunction double-click",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "multifunction triple-click",
+          "action": "previous track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "volume + / -",
+          "action": "volume up/down",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Multifunction button and volume buttons",
+      "configurableInApp": null,
+      "notes": "No touch controls."
+    },
+    "audio": {
+      "eqPresets": [
+        "standard",
+        "vocal"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Full titanium band, 29 g. No spatial audio."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "multipoint",
+      "eq-selection"
+    ],
+    "featureDeltaFromPrevious": [
+      "TurboPitch 9th-generation bone conduction with two bass enhancers (vs OpenRun PremiumPitch 2.0+)",
+      "Battery life increased from 8 h to 10 h",
+      "Added MultiPoint pairing",
+      "Water resistance reduced from IP67 to IP55"
+    ],
+    "sources": [
+      {
+        "url": "https://shokz.com/pages/openrunpro",
+        "type": "official-product",
+        "title": "Shokz OpenRun Pro",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://help.shokz.com/s/article/S810-S811-OpenRun-Pro-Spec-Sheet",
+        "type": "official-support",
+        "title": "S810/S811 OpenRun Pro spec sheet",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Shokz app battery layout for OpenRun Pro not documented.",
+      "App button remapping not documented."
+    ],
+    "notes": "Standard and Mini sizes; Mini is a fit variant.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shokz",
+    "companySlug": "shokz",
+    "family": "OpenRun",
+    "model": "OpenRun Pro 2",
+    "slug": "openrun-pro-2",
+    "generation": "2024",
+    "variant": "Pro 2",
+    "releaseYear": 2024,
+    "formFactor": "bone-conduction",
+    "officialApp": {
+      "name": "Shokz",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "cn.com.aftershokz.app"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/sg/app/shokz/id1596854072",
+        "https://play.google.com/store/apps/details?id=cn.com.aftershokz.app"
+      ],
+      "appVersionObserved": null,
+      "notes": "App exposes 6 preset EQ modes, 2 custom EQ profiles and multipoint."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 12,
+      "caseHours": null,
+      "chargingIndicators": "LED on headphones; Shokz app battery status",
+      "notes": "12 h music playback; 5-min quick charge gives 2.5 h; USB-C charging. Single headband, no case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC; AI noise reduction is for calls, with claimed wind resistance up to 25 km/h."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "6 preset + 2 custom EQ",
+        "availability": "official-app",
+        "notes": "Standard, Vocal, Classic, Bass Boost, Treble Boost, Volume Boost; two customizable profiles."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "MultiPoint pairing",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.shokz.dualpitch",
+        "name": "DualPitch dual-driver system",
+        "availability": "device-only",
+        "notes": "Bone-conduction driver for mids/highs plus 18x11 mm air-conduction driver for bass."
+      },
+      {
+        "id": "vendor.shokz.3d-audio",
+        "name": "3D audio algorithm",
+        "availability": "device-only",
+        "notes": "Distributes sound elements across the two drivers."
+      },
+      {
+        "id": "vendor.shokz.directpitch",
+        "name": "DirectPitch leakage control",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction single-click",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "multifunction double-click",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "multifunction triple-click",
+          "action": "previous track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "volume + / -",
+          "action": "volume up/down",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Multifunction button and volume buttons",
+      "configurableInApp": null,
+      "notes": "No touch controls."
+    },
+    "audio": {
+      "eqPresets": [
+        "standard",
+        "vocal",
+        "classic",
+        "bass-boost",
+        "treble-boost",
+        "volume-boost"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "3D audio is a Shokz algorithm, not head-tracked spatial audio. Bluetooth 5.3, 10 m."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "multipoint",
+      "eq-selection",
+      "custom-eq"
+    ],
+    "featureDeltaFromPrevious": [
+      "DualPitch adds a dedicated 18x11 mm air-conduction bass driver to the bone-conduction driver",
+      "Battery life increased from 10 h to 12 h",
+      "Bluetooth upgraded from 5.1 to 5.3",
+      "EQ expanded from 2 modes to 6 presets plus 2 custom profiles",
+      "Added 3D audio algorithm",
+      "Charging changed to USB-C"
+    ],
+    "sources": [
+      {
+        "url": "https://shokz.com/pages/openrunpro2",
+        "type": "official-product",
+        "title": "Shokz OpenRun Pro 2",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://help.shokz.com/s/article/S820-S821-OpenRun-Pro-2-Spec-Sheet",
+        "type": "official-support",
+        "title": "S820/S821 OpenRun Pro 2 spec sheet",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Shokz app battery layout for OpenRun Pro 2 not documented.",
+      "App button remapping not documented."
+    ],
+    "notes": "Standard and Mini sizes.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shokz",
+    "companySlug": "shokz",
+    "family": "OpenRun",
+    "model": "OpenRun Air 2",
+    "slug": "openrun-air-2",
+    "generation": "2026",
+    "variant": "Air 2",
+    "releaseYear": 2026,
+    "formFactor": "bone-conduction",
+    "officialApp": {
+      "name": "Shokz",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "cn.com.aftershokz.app"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/sg/app/shokz/id1596854072",
+        "https://play.google.com/store/apps/details?id=cn.com.aftershokz.app"
+      ],
+      "appVersionObserved": null,
+      "notes": "App supports EQ, multipoint, button customization, Find My Headphones and prompt-volume settings."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": null,
+      "chargingIndicators": "LED; voice battery announcement (high/medium/low/charge); Shokz app status",
+      "notes": "10 h playback; 5-min charge gives 2 h; 137 mAh; USB-C; 60-min full charge.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC; dual-mic AI noise reduction for calls and wind noise."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "4 preset + 2 custom EQ",
+        "availability": "official-app",
+        "notes": "Standard, Vocal, Volume Boost, Private plus 2 custom."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "MultiPoint pairing",
+        "availability": "official-app",
+        "notes": "Two devices."
+      },
+      {
+        "id": "vendor.shokz.premiumpitch-3",
+        "name": "PremiumPitch 3.0",
+        "availability": "device-only",
+        "notes": "All-metal dual-coil, dual-reed bone-conduction driver."
+      },
+      {
+        "id": "vendor.shokz.find-my-headphones",
+        "name": "Find My Headphones",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.shokz.button-customization",
+        "name": "Button customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction single-click",
+          "action": "play/pause; answer call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "multifunction double-click",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "multifunction triple-click",
+          "action": "previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "multifunction long-press 2 s",
+          "action": "voice assistant",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "volume + / -",
+          "action": "volume up/down",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Power/volume+ button, volume- button, multifunction button",
+      "configurableInApp": true,
+      "notes": "Physical buttons; app can remap media/voice-assistant actions."
+    },
+    "audio": {
+      "eqPresets": [
+        "standard",
+        "vocal",
+        "volume-boost",
+        "private"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bluetooth 6.0, 10 m, IP67, 26.4 g standard / 25.9 g mini. No spatial audio."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "multipoint",
+      "eq-selection",
+      "custom-eq",
+      "button-customization",
+      "find-my-headphones"
+    ],
+    "featureDeltaFromPrevious": [
+      "PremiumPitch 2.0+ replaced by PremiumPitch 3.0 with dual-coil, dual-reed driver",
+      "Battery life increased from 8 h to 10 h",
+      "Bluetooth upgraded from 5.1 to 6.0",
+      "EQ expanded to 4 presets plus 2 custom profiles",
+      "Added app button customization and Find My Headphones"
+    ],
+    "sources": [
+      {
+        "url": "https://shokz.com/pages/openrun-air-2",
+        "type": "official-product",
+        "title": "Shokz OpenRun Air 2",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://jp.shokz.com/products/openrun-air-2",
+        "type": "official-regional",
+        "title": "OpenRun Air 2 full specifications (Japan)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Shokz app battery layout for OpenRun Air 2 not documented.",
+      "Exact custom-EQ band count not published."
+    ],
+    "notes": "No charging case. Standard and Mini sizes.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shokz",
+    "companySlug": "shokz",
+    "family": "OpenSwim",
+    "model": "OpenSwim",
+    "slug": "openswim",
+    "generation": "2019",
+    "variant": null,
+    "releaseYear": 2019,
+    "formFactor": "bone-conduction",
+    "officialApp": {
+      "name": "No companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "MP3-only swim model; no Bluetooth and no companion app. Music is loaded as USB mass storage."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": null,
+      "chargingIndicators": "LED on headphones",
+      "notes": "Up to 8 h MP3 playback; 4 GB storage; IP68; no case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "vendor.shokz.mp3-mode",
+        "name": "4 GB MP3 player",
+        "availability": "device-only",
+        "notes": "No Bluetooth; files transferred over the charging cable."
+      },
+      {
+        "id": "vendor.shokz.ip68-swim",
+        "name": "IP68 swimming design",
+        "availability": "device-only",
+        "notes": "Rated for submersion; not a Bluetooth headset."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "power button",
+          "action": "power on/off",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "volume + / -",
+          "action": "volume; track skip via long press",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "multifunction button",
+          "action": "play/pause; mode/playlist control",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "Power, volume and multifunction buttons",
+      "configurableInApp": null,
+      "notes": "Designed for wet-hand operation."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bone conduction; MP3/WAV files; no Bluetooth codec."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://shokz.com/pages/openswim",
+        "type": "official-product",
+        "title": "Shokz OpenSwim",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Exact supported audio formats and playlist limits for the original OpenSwim are not listed on the current product page.",
+      "Battery indicator semantics (percentage vs voice prompt) undocumented."
+    ],
+    "notes": "MP3-only predecessor to OpenSwim Pro; no app, no calls, no Bluetooth.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shokz",
+    "companySlug": "shokz",
+    "family": "OpenSwim",
+    "model": "OpenSwim Pro",
+    "slug": "openswim-pro",
+    "generation": "2024",
+    "variant": "Pro",
+    "releaseYear": 2024,
+    "formFactor": "bone-conduction",
+    "officialApp": {
+      "name": "Shokz",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "cn.com.aftershokz.app"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/sg/app/shokz/id1596854072",
+        "https://play.google.com/store/apps/details?id=cn.com.aftershokz.app"
+      ],
+      "appVersionObserved": "5.6.0 or later required for MP3 playlist features",
+      "notes": "App switches Bluetooth/MP3 mode, manages playlists, EQ, multipoint, battery and firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9,
+      "caseHours": null,
+      "chargingIndicators": "LED; Shokz app real-time battery",
+      "notes": "9 h Bluetooth mode, 6 h MP3 mode; 10-min charge gives 3 h. IP68 to 2 m; no case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC. ENC/DNS for calls only."
+    },
+    "features": [
+      {
+        "id": "vendor.shokz.mp3-mode",
+        "name": "32 GB MP3 mode",
+        "availability": "both",
+        "notes": "Bluetooth 5.4 on land, MP3 underwater; app and button switching."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ incl. Swimming mode",
+        "availability": "official-app",
+        "notes": "Swimming EQ optimized for underwater listening with earplugs."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "MultiPoint pairing",
+        "availability": "both",
+        "notes": "Two devices; app or button switching."
+      },
+      {
+        "id": "vendor.shokz.playlist-management",
+        "name": "Playlist management",
+        "availability": "official-app",
+        "notes": "Requires app 5.6.0+ and current firmware."
+      },
+      {
+        "id": "vendor.shokz.ip68-swim",
+        "name": "IP68 swim rating",
+        "availability": "device-only",
+        "notes": "2 m fresh water; soak after salt water."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction single-click",
+          "action": "play/pause; call answer/end; mode switch",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "volume + / -",
+          "action": "volume; long-press both for Bluetooth/MP3 switch",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "multifunction + volume- long-press 2 s",
+          "action": "switch playlist (MP3 mode)",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "Multifunction, volume+ and volume- buttons",
+      "configurableInApp": null,
+      "notes": "Sports-optimized physical buttons for wet hands."
+    },
+    "audio": {
+      "eqPresets": [
+        "standard",
+        "swimming"
+      ],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.4; PremiumPitch 2.0+; 32 GB storage; MP3/FLAC/WAV/AAC/M4A/APE/WMA."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "multipoint",
+      "eq-selection",
+      "mp3-playlist-management",
+      "mode-switch"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added Bluetooth 5.4 alongside MP3 playback (original OpenSwim was MP3-only)",
+      "Storage increased from 4 GB to 32 GB",
+      "Added Shokz app support, playlist management and Swimming EQ",
+      "Added multipoint pairing and call microphone with ENC/DNS",
+      "Battery changed to 9 h Bluetooth / 6 h MP3 (vs 8 h MP3-only)"
+    ],
+    "sources": [
+      {
+        "url": "https://shokz.com/pages/openswimpro",
+        "type": "official-product",
+        "title": "Shokz OpenSwim Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Shokz app battery layout for OpenSwim Pro not documented.",
+      "Exact custom-EQ support not stated."
+    ],
+    "notes": "No charging case. Underwater use is MP3-only because Bluetooth does not propagate in water.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shokz",
+    "companySlug": "shokz",
+    "family": "OpenComm",
+    "model": "OpenComm",
+    "slug": "opencomm",
+    "generation": "2020",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "bone-conduction",
+    "officialApp": {
+      "name": "No companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Original OpenComm predates app support; controls and firmware are on-device."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": null,
+      "chargingIndicators": "LED; battery-check button/voice prompt",
+      "notes": "16 h talk time, 8 h music playback; 5-min charge gives 2 h talk; 170 mAh; no case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC; DSP noise-canceling boom microphone for calls."
+    },
+    "features": [
+      {
+        "id": "vendor.shokz.boom-mic",
+        "name": "Adjustable noise-canceling boom mic",
+        "availability": "device-only",
+        "notes": "Rotates away when not in use."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "MultiPoint pairing",
+        "availability": "device-only",
+        "notes": "Two devices."
+      },
+      {
+        "id": "vendor.shokz.mute-button",
+        "name": "Mute button",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction single-click",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "multifunction double-click",
+          "action": "next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "volume + / -",
+          "action": "volume up/down",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "mute button",
+          "action": "mute/unmute microphone",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Multifunction, volume and mute buttons, all on the right side",
+      "configurableInApp": false,
+      "notes": "One-handed operation; glove-friendly."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "7th-generation bone conduction, PremiumPitch 2.0; Bluetooth 5.1; 33 g; IP55."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://asia.shokz.com/products/opencomm",
+        "type": "official-product",
+        "title": "Shokz OpenComm",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://help.shokz.com/s/article/Discontinued-OpenComm-Spec-Sheet",
+        "type": "official-support",
+        "title": "Discontinued OpenComm spec sheet",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery display layout in any app is not applicable because the original OpenComm has no app.",
+      "Exact voice-prompt battery steps not documented."
+    ],
+    "notes": "Communication headset with boom mic; not a sports headphone. No charging case.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shokz",
+    "companySlug": "shokz",
+    "family": "OpenComm",
+    "model": "OpenComm2",
+    "slug": "opencomm-2",
+    "generation": "2023",
+    "variant": "2",
+    "releaseYear": 2023,
+    "formFactor": "bone-conduction",
+    "officialApp": {
+      "name": "Shokz",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "cn.com.aftershokz.app"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=cn.com.aftershokz.app"
+      ],
+      "appVersionObserved": null,
+      "notes": "App shows headset status and supports firmware updates."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": null,
+      "chargingIndicators": "LED; app status; battery-check button",
+      "notes": "16 h talk time, 8 h listening; 5-min charge gives 2 h talk; 60-min full charge; magnetic charging; 183 mAh.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC; DSP/cVc noise-canceling boom mic."
+    },
+    "features": [
+      {
+        "id": "vendor.shokz.boom-mic",
+        "name": "Rotating boom mic",
+        "availability": "device-only",
+        "notes": "DSP noise-canceling, water-resistant acoustic mesh."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "MultiPoint pairing",
+        "availability": "device-only",
+        "notes": "Two devices."
+      },
+      {
+        "id": "vendor.shokz.mute-button",
+        "name": "Independent mute button",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction single-click",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "multifunction double-click",
+          "action": "next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "volume + / -",
+          "action": "volume up/down",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "mute button",
+          "action": "mute/unmute microphone",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Power/volume+, volume-, multifunction and mute buttons",
+      "configurableInApp": false,
+      "notes": "Physical controls designed for mobile work."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "7th-generation bone conduction, PremiumPitch 2.0; Bluetooth 5.1; 35 g; IP55; 30 m range."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added independent mute button",
+      "Bluetooth range increased from 10 m to 30 m",
+      "Weight increased from 33 g to 35 g",
+      "Added Shokz app status/firmware support"
+    ],
+    "sources": [
+      {
+        "url": "https://asia.shokz.com/products/opencomm2",
+        "type": "official-product",
+        "title": "Shokz OpenComm2",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://shokz.com/pages/opencomm2-2025-upgrade",
+        "type": "official-product",
+        "title": "OpenComm2 2025 Upgrade (successor)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Shokz app battery widget layout for OpenComm2 not documented.",
+      "Official launch year for the original OpenComm2 not stated on the support page; 2023 inferred from product-page references."
+    ],
+    "notes": "Magnetic-charging version. The 2025 Upgrade moves to USB-C.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shokz",
+    "companySlug": "shokz",
+    "family": "OpenComm",
+    "model": "OpenComm2 2025 Upgrade",
+    "slug": "opencomm-2-2025-upgrade",
+    "generation": "2025",
+    "variant": "2 2025 Upgrade",
+    "releaseYear": 2025,
+    "formFactor": "bone-conduction",
+    "officialApp": {
+      "name": "Shokz",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "cn.com.aftershokz.app"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=cn.com.aftershokz.app"
+      ],
+      "appVersionObserved": null,
+      "notes": "App shows headset status and supports firmware updates."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": null,
+      "chargingIndicators": "LED; app status; battery-check button",
+      "notes": "16 h talk, 8 h listening; 5-min charge gives 2 h talk; 60-min full charge; USB-C; 35 g.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC; DSP/cVc boom mic."
+    },
+    "features": [
+      {
+        "id": "vendor.shokz.boom-mic",
+        "name": "Rotating boom mic",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "MultiPoint pairing",
+        "availability": "device-only",
+        "notes": "Two devices."
+      },
+      {
+        "id": "vendor.shokz.mute-button",
+        "name": "Independent mute button",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction single-click",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "multifunction double-click",
+          "action": "next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "volume + / -",
+          "action": "volume up/down",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "mute button",
+          "action": "mute/unmute microphone",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Power/volume+, volume-, multifunction and mute buttons",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "7th-generation bone conduction, PremiumPitch 2.0; 35 g; IP55."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Charging port changed from magnetic induction to USB-C"
+    ],
+    "sources": [
+      {
+        "url": "https://shokz.com/pages/opencomm2-2025-upgrade",
+        "type": "official-product",
+        "title": "OpenComm2 2025 Upgrade",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Shokz app battery widget layout for OpenComm2 2025 Upgrade not documented.",
+      "Bluetooth version not stated on the 2025 Upgrade page; inherited 5.1 from OpenComm2 likely but unconfirmed."
+    ],
+    "notes": "Successor to OpenComm2; same 16 h talk / 8 h listening endurance and IP55, now USB-C.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shokz",
+    "companySlug": "shokz",
+    "family": "OpenFit",
+    "model": "OpenFit",
+    "slug": "openfit",
+    "generation": "2023",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "Shokz",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "cn.com.aftershokz.app"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/sg/app/shokz/id1596854072",
+        "https://play.google.com/store/apps/details?id=cn.com.aftershokz.app"
+      ],
+      "appVersionObserved": null,
+      "notes": "Official page documents L/R earbud and charging-case battery levels in the app."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 28,
+      "chargingIndicators": "Case LED; Shokz app shows left, right and case charge",
+      "notes": "7 h single charge, 28 h total; 5-min charge gives 1 h. Official Shokz app guide: battery levels of left and right earbuds and charging case are displayed at the top of the interface.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 28
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC; AI call noise cancellation only."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Personalized EQ",
+        "availability": "official-app",
+        "notes": "App EQ; exact preset count not stated for the original OpenFit."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "MultiPoint pairing",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.shokz.directpitch",
+        "name": "DirectPitch",
+        "availability": "device-only",
+        "notes": "Reduces sound leakage by directing sound pressure toward the ear."
+      },
+      {
+        "id": "vendor.shokz.openbass",
+        "name": "OpenBass",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap either earbud",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "tap-and-hold left earbud 3 s",
+          "action": "previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "tap-and-hold right earbud 3 s",
+          "action": "next track",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touchpads; app customizes double-tap and press-and-hold actions."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "18x11 mm dynamic driver, Bluetooth 5.2, IP54, 8.3 g per earbud. No wear-detection claim found."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "multipoint",
+      "eq-selection",
+      "custom-eq",
+      "button-customization"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://shokz.com/pages/openfit",
+        "type": "official-product",
+        "title": "Shokz OpenFit",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Exact EQ preset count/names for the original OpenFit not stated.",
+      "Case visibility timing and whether the case percentage is live or last-known when buds are out are not documented.",
+      "Wear detection not documented."
+    ],
+    "notes": "Discontinued at shokz.com but still a distinct record. The official app guide explicitly confirms split L/R plus separate case display.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shokz",
+    "companySlug": "shokz",
+    "family": "OpenFit",
+    "model": "OpenFit 2",
+    "slug": "openfit-2",
+    "generation": "2025",
+    "variant": "2",
+    "releaseYear": 2025,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "Shokz",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "cn.com.aftershokz.app"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/sg/app/shokz/id1596854072",
+        "https://play.google.com/store/apps/details?id=cn.com.aftershokz.app"
+      ],
+      "appVersionObserved": null,
+      "notes": "App controls EQ, physical-button actions, multipoint, Find My Earbuds, Dolby (2+ only) and battery status."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 11,
+      "caseHours": 48,
+      "chargingIndicators": "Case LED; Shokz app battery status",
+      "notes": "11 h single charge, 48 h total; 10-min charge gives 2 h. USB-C case; wireless charging is 2+ only.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 48
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC. Open-ear with AI call noise cancellation."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "4 preset + 2 custom EQ",
+        "availability": "official-app",
+        "notes": "Standard, Vocal, Treble Boost, Bass Boost plus 2 custom."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "MultiPoint pairing",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.shokz.dualboost",
+        "name": "DualBoost dual-driver system",
+        "availability": "device-only",
+        "notes": "Independent high-frequency unit plus 17.3 mm low-frequency driver."
+      },
+      {
+        "id": "vendor.shokz.directpitch-2",
+        "name": "DirectPitch 2.0",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.shokz.find-my-earbuds",
+        "name": "Find My Earbuds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.shokz.button-customization",
+        "name": "Physical-button customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "physical button single-click",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "physical button double-click",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "physical button triple-click",
+          "action": "previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "physical button press-and-hold",
+          "action": "volume or voice assistant (configurable)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "touchpad tap",
+          "action": "voice assistant (disabled by default)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Multifunction physical buttons on each earbud",
+      "configurableInApp": true,
+      "notes": "Touchpad is limited to voice assistant and is off by default; media controls are physical."
+    },
+    "audio": {
+      "eqPresets": [
+        "standard",
+        "vocal",
+        "treble-boost",
+        "bass-boost"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "Bluetooth 5.4, IP55, 9.4 g per earbud. Dolby Audio is OpenFit 2+ only, not OpenFit 2. Codecs not published on the official page."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "multipoint",
+      "eq-selection",
+      "custom-eq",
+      "button-customization",
+      "find-my-earbuds"
+    ],
+    "featureDeltaFromPrevious": [
+      "DualBoost two-driver system replaces the single 18x11 mm driver",
+      "Battery life increased from 7 h to 11 h, case total from 28 h to 48 h",
+      "Bluetooth upgraded from 5.2 to 5.4",
+      "Controls changed from touch to physical buttons (touchpad retained for voice assistant only)",
+      "Water resistance increased from IP54 to IP55",
+      "Added Find My Earbuds and app button customization"
+    ],
+    "sources": [
+      {
+        "url": "https://shokz.com/pages/openfit2",
+        "type": "official-product",
+        "title": "Shokz OpenFit 2 Series",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Case visibility timing and live vs last-known case percentage when buds are out are not documented.",
+      "Codec list not published.",
+      "Wear detection not documented.",
+      "Custom-EQ band count not published."
+    ],
+    "notes": "OpenFit 2+ is a separate record because it adds Dolby Audio and Qi wireless charging.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shokz",
+    "companySlug": "shokz",
+    "family": "OpenFit",
+    "model": "OpenFit 2+",
+    "slug": "openfit-2-plus",
+    "generation": "2025",
+    "variant": "2+",
+    "releaseYear": 2025,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "Shokz",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "cn.com.aftershokz.app"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/sg/app/shokz/id1596854072",
+        "https://play.google.com/store/apps/details?id=cn.com.aftershokz.app"
+      ],
+      "appVersionObserved": null,
+      "notes": "App activates Dolby Audio, EQ, button customization, multipoint and Find My Earbuds."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 11,
+      "caseHours": 48,
+      "chargingIndicators": "Case LED; Shokz app status; Qi wireless charging",
+      "notes": "11 h single charge, 48 h total; 10-min charge gives 2 h; USB-C and Qi wireless charging. Wireless full charge about 3 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC; AI call noise cancellation."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "4 preset + 2 custom EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "MultiPoint pairing",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.shokz.dualboost",
+        "name": "DualBoost dual-driver system",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.shokz.dolby-audio",
+        "name": "Dolby Audio",
+        "availability": "official-app",
+        "notes": "Activated in the Shokz app; 2+ only."
+      },
+      {
+        "id": "vendor.shokz.wireless-charging",
+        "name": "Qi wireless charging case",
+        "availability": "device-only",
+        "notes": "2+ only."
+      },
+      {
+        "id": "vendor.shokz.find-my-earbuds",
+        "name": "Find My Earbuds",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "physical button single-click",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "physical button double-click",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "physical button triple-click",
+          "action": "previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "physical button press-and-hold",
+          "action": "volume or voice assistant (configurable)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "touchpad tap",
+          "action": "voice assistant (disabled by default)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Multifunction physical buttons on each earbud",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "standard",
+        "vocal",
+        "treble-boost",
+        "bass-boost"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "Dolby Audio creates a wider soundstage but head tracking is not claimed. Bluetooth 5.4, IP55, 9.4 g."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "multipoint",
+      "eq-selection",
+      "custom-eq",
+      "button-customization",
+      "find-my-earbuds",
+      "dolby-audio"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added Dolby Audio (app-activated)",
+      "Added Qi wireless charging for the case"
+    ],
+    "sources": [
+      {
+        "url": "https://shokz.com/pages/openfit2",
+        "type": "official-product",
+        "title": "Shokz OpenFit 2 Series (2+ comparison)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Case visibility timing and live vs last-known case percentage when buds are out are not documented.",
+      "Codec list not published.",
+      "Wear detection not documented.",
+      "Custom-EQ band count not published."
+    ],
+    "notes": "Premium variant of OpenFit 2 with Dolby Audio and wireless charging.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shokz",
+    "companySlug": "shokz",
+    "family": "OpenFit",
+    "model": "OpenFit Air",
+    "slug": "openfit-air",
+    "generation": "2024",
+    "variant": "Air",
+    "releaseYear": 2024,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "Shokz",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "cn.com.aftershokz.app"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/sg/app/shokz/id1596854072",
+        "https://play.google.com/store/apps/details?id=cn.com.aftershokz.app"
+      ],
+      "appVersionObserved": null,
+      "notes": "App supports EQ, multipoint, controls and battery status."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 28,
+      "chargingIndicators": "Case LED; Shokz app status",
+      "notes": "6 h single charge, 28 h total; 10-min charge gives 2 h; USB-C case.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 28
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC; AI call noise cancellation."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "4 preset + 2 custom EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "MultiPoint pairing",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.shokz.directpitch",
+        "name": "DirectPitch",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap either earbud",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "tap-and-hold left earbud",
+          "action": "previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "tap-and-hold right earbud",
+          "action": "next track",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls."
+    },
+    "audio": {
+      "eqPresets": [
+        "standard",
+        "vocal",
+        "treble-boost",
+        "bass-boost"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "Bluetooth 5.2, IP54, 8.7 g per earbud. No Dolby or DualBoost."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "multipoint",
+      "eq-selection",
+      "custom-eq"
+    ],
+    "featureDeltaFromPrevious": [
+      "Single-charge battery reduced from 7 h to 6 h; case total stays 28 h",
+      "Weight reduced to 8.7 g per earbud with a pliable cut-out hook"
+    ],
+    "sources": [
+      {
+        "url": "https://shokz.com/pages/openfit2",
+        "type": "official-product",
+        "title": "OpenFit 2 Series comparison table (OpenFit Air)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official OpenFit Air product page not retrieved; specs taken from the official OpenFit 2 comparison table.",
+      "Case visibility timing and live vs last-known case percentage not documented.",
+      "Codec list and wear detection not published."
+    ],
+    "notes": "Value tier in the OpenFit family.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shokz",
+    "companySlug": "shokz",
+    "family": "OpenDots",
+    "model": "OpenDots ONE",
+    "slug": "opendots-one",
+    "generation": "2025",
+    "variant": "ONE",
+    "releaseYear": 2025,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "Shokz",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "cn.com.aftershokz.app"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/sg/app/shokz/id1596854072",
+        "https://play.google.com/store/apps/details?id=cn.com.aftershokz.app"
+      ],
+      "appVersionObserved": "5.5.3 or later for gesture customization",
+      "notes": "App supports EQ, Dolby Audio, gesture customization, Find My Earbuds, multipoint and battery status."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED; Shokz app status; Qi wireless charging case",
+      "notes": "10 h single charge, 40 h total; 10-min charge gives 2 h; USB-C and Qi wireless charging. Earbuds 6.5 g, case 39 g.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 40
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC; open clip design. AI call noise reduction."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "4 preset EQ",
+        "availability": "official-app",
+        "notes": "Standard, Vocal, Bass, Private."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "MultiPoint pairing",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.shokz.dolby-audio",
+        "name": "Dolby Audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Dynamic Ear Detection",
+        "availability": "device-only",
+        "notes": "Automatically assigns L/R when earbuds are swapped."
+      },
+      {
+        "id": "vendor.shokz.find-my-earbuds",
+        "name": "Find My Earbuds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.shokz.wireless-charging",
+        "name": "Qi wireless charging case",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "pinch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap battery compartment or JointArc",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "pinch battery compartment",
+          "action": "play/pause; call control",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double-tap / triple-tap",
+          "action": "track skip (configurable)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Tap and pinch gestures; track skipping configurable in app 5.5.3+ with firmware V_06+."
+    },
+    "audio": {
+      "eqPresets": [
+        "standard",
+        "vocal",
+        "bass",
+        "private"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Bassphere dual circular drivers, DirectPitch, Dolby Audio. IP54. Bluetooth version not stated on the page."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "multipoint",
+      "eq-selection",
+      "custom-eq",
+      "dolby-audio",
+      "gesture-customization",
+      "find-my-earbuds"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://shokz.com/pages/opendots-one",
+        "type": "official-product",
+        "title": "Shokz OpenDots ONE",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth version and codec list not published.",
+      "Case visibility timing and live vs last-known case percentage not documented.",
+      "Custom-EQ band count not published."
+    ],
+    "notes": "Clip-on open-ear with interchangeable left/right earbuds and automatic ear detection. Superseded by OpenDots 2.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shokz",
+    "companySlug": "shokz",
+    "family": "OpenDots",
+    "model": "OpenDots 2",
+    "slug": "opendots-2",
+    "generation": "2026",
+    "variant": "2",
+    "releaseYear": 2026,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "Shokz",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "cn.com.aftershokz.app"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/sg/app/shokz/id1596854072",
+        "https://play.google.com/store/apps/details?id=cn.com.aftershokz.app"
+      ],
+      "appVersionObserved": null,
+      "notes": "App supports EQ, Dolby Audio, multipoint, Find My Earbuds, gesture customization and battery status."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED; Shokz app status; Qi wireless charging case",
+      "notes": "10 h single charge, 40 h total; 5-min charge gives 2 h; USB-C and Qi wireless. Earbuds 6.4 g, case 38.8 g.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 40
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC; triple AI noise-canceling microphones for calls."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ modes",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "MultiPoint pairing",
+        "availability": "official-app",
+        "notes": "Bluetooth 6.1."
+      },
+      {
+        "id": "vendor.shokz.dolby-audio",
+        "name": "Dolby Audio",
+        "availability": "official-app",
+        "notes": "Upgraded Dolby Audio vs OpenDots ONE."
+      },
+      {
+        "id": "vendor.shokz.bassphere-2",
+        "name": "Bassphere 2.0",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.shokz.directpitch",
+        "name": "DirectPitch",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.shokz.mirrorpitch",
+        "name": "MirrorPitch",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.shokz.find-my-earbuds",
+        "name": "Find My Earbuds",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "pinch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; call control",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double-tap / triple-tap",
+          "action": "track skip; voice assistant",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "pinch",
+          "action": "play/pause; call control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch and pinch controls; app customizable."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Bluetooth 6.1, IP57, Dolby Audio, Bassphere 2.0. Codecs not published."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "multipoint",
+      "eq-selection",
+      "custom-eq",
+      "dolby-audio",
+      "gesture-customization",
+      "find-my-earbuds"
+    ],
+    "featureDeltaFromPrevious": [
+      "Water resistance increased from IP54 to IP57",
+      "Triple AI noise-canceling microphones (two air-conduction + one bone-conduction) replace dual mics",
+      "Bassphere 2.0 and upgraded Dolby Audio",
+      "Faster 5-min/2-h quick charge (vs 10-min/2-h)"
+    ],
+    "sources": [
+      {
+        "url": "https://shokz.com/pages/opendots-2",
+        "type": "official-product",
+        "title": "Shokz OpenDots 2",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Codec list not published.",
+      "Case visibility timing and live vs last-known case percentage not documented.",
+      "EQ preset names/count not listed."
+    ],
+    "notes": "2026 flagship clip-on; replaces OpenDots ONE.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shokz",
+    "companySlug": "shokz",
+    "family": "OpenMove",
+    "model": "OpenMove",
+    "slug": "openmove",
+    "generation": "2019",
+    "variant": null,
+    "releaseYear": 2019,
+    "formFactor": "bone-conduction",
+    "officialApp": {
+      "name": "Shokz",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "cn.com.aftershokz.app"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/sg/app/shokz/id1596854072",
+        "https://play.google.com/store/apps/details?id=cn.com.aftershokz.app"
+      ],
+      "appVersionObserved": null,
+      "notes": "Entry-level model; app support is limited compared with OpenRun/OpenFit."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": null,
+      "chargingIndicators": "LED; spoken battery prompt",
+      "notes": "6 h playback, 10-day standby; 2 h charge; USB-C; 135 mAh; no case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC; dual noise-canceling mics for calls."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "2 EQ modes",
+        "availability": "official-app",
+        "notes": "Standard and Vocal."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "MultiPoint pairing",
+        "availability": "official-app",
+        "notes": "Two devices."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction single-click",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "multifunction double-click",
+          "action": "next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "multifunction triple-click",
+          "action": "previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "volume + / -",
+          "action": "volume up/down",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Multifunction button and volume buttons",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "standard",
+        "vocal"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "7th-generation bone conduction, PremiumPitch 2.0; Bluetooth 5.1; IP55; 29 g."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "multipoint",
+      "eq-selection"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://shokz.com/pages/openmove",
+        "type": "official-product",
+        "title": "Shokz OpenMove",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Shokz app battery layout for OpenMove not documented.",
+      "App button remapping not documented."
+    ],
+    "notes": "Entry-level bone-conduction model; no case.",
+    "researchedAt": "2026-11-10"
+  }
+]

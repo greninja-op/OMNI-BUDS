@@ -1,0 +1,387 @@
+[
+  {
+    "company": "ZTE / nubia",
+    "companySlug": "zte-nubia",
+    "family": "nubia LiveClip",
+    "model": "nubia LiveClip",
+    "slug": "nubia-liveclip",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "Nubia Life+",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Nubia's AIoT app is the documented companion for nubia audio; the LiveClip page itself only documents an on-device AI button."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 20,
+      "chargingIndicators": "Case LED; USB-C.",
+      "notes": "Official: 300 mAh case, 20 h total. Per-bud playtime not published.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 20
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear clip; no ANC claimed."
+    },
+    "features": [
+      {
+        "id": "vendor.nubia.ai-button",
+        "name": "One-click AI (DeepSeek)",
+        "availability": "device-only",
+        "notes": "Dedicated AI activation; phone-side assistant integration."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "unknown",
+        "notes": null
+      },
+      {
+        "id": "vendor.nubia.open-ear-clip",
+        "name": "Metal-texture open-ear clip",
+        "availability": "device-only",
+        "notes": "4.5 g per bud."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "AI assistant",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": "On-device AI button/gesture documented; full mapping not published."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "Open-ear directional driver; no codec or driver size published."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Nubia's first open-ear clip model in the Malaysia lineup",
+      "DeepSeek AI shortcut"
+    ],
+    "sources": [
+      {
+        "url": "https://www.ztedevices.com.my/aiot/tws-earphones/nubia-liveclip",
+        "type": "official-product",
+        "title": "nubia LiveClip",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Per-bud playtime and ANC-free battery split not published",
+      "Bluetooth version and codecs not published",
+      "Battery display layout unverified",
+      "Multipoint and wear detection not stated",
+      "App feature set unverified"
+    ],
+    "notes": "Malaysia/global regional page. The 20 h figure is total with case, not per bud.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "ZTE / nubia",
+    "companySlug": "zte-nubia",
+    "family": "nubia CyberBuds",
+    "model": "nubia CyberBuds",
+    "slug": "nubia-cyberbuds",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Nubia Life+",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Used to customise earbud and case RGB lighting and additional functions."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "live",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 48,
+      "chargingIndicators": "Numeric display built into the charging case, plus RGB lighting.",
+      "notes": "Official launch coverage: 6 h single charge, 48 h with case. The case has its own small display showing battery information, so the case reading is live even with buds out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 48
+    },
+    "anc": {
+      "supported": null,
+      "modes": [
+        "enc"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC claim in launch coverage; call noise cancellation not detailed."
+    },
+    "features": [
+      {
+        "id": "vendor.nubia.flashlink-2",
+        "name": "FlashLink 2.0 50 ms low latency",
+        "availability": "device-only",
+        "notes": "Gaming mode."
+      },
+      {
+        "id": "vendor.nubia.rgb-case",
+        "name": "Customisable RGB buds and case",
+        "availability": "official-app",
+        "notes": "Nubia Life+."
+      },
+      {
+        "id": "vendor.nubia.case-display",
+        "name": "Case battery display",
+        "availability": "device-only",
+        "notes": "Small integrated screen."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "unknown",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "game mode / low latency",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": "Touch controls on both stems; full mapping not published."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm-class dynamic driver not confirmed; 3.6 g per bud, 58 g case."
+    },
+    "appOnlyFeatures": [
+      "RGB lighting customisation",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Gaming-focused alien design with RGB case and battery display",
+      "FlashLink 2.0 50 ms mode",
+      "48 h total battery"
+    ],
+    "sources": [
+      {
+        "url": "https://www.gizmochina.com/2025/12/06/nubia-alien-themed-cyberbuds-gaming-tws-earbuds-launched-specs-price",
+        "type": "reputable-secondary",
+        "title": "Nubia CyberBuds launched",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://gagadget.com/en/686779-nubia-has-introduced-cyberbuds-ultra-budget-gamer-tws-headphones-with-a-stylish-design-and-decent-autonomy",
+        "type": "reputable-secondary",
+        "title": "Nubia CyberBuds specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No official nubia product page found yet (China launch)",
+      "ANC support unconfirmed",
+      "Driver size and codecs not published",
+      "Buds battery display layout unverified",
+      "Multipoint and wear detection not stated"
+    ],
+    "notes": "China-only launch at CNY 199. The case display is the standout battery-contract feature.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "ZTE / nubia",
+    "companySlug": "zte-nubia",
+    "family": "RedMagic Cyberpods",
+    "model": "RedMagic Cyberpods TWS 2",
+    "slug": "redmagic-cyberpods-tws-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "RedMagic app / Game Space",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "RedMagic gaming accessories are configured through RedMagic software; no separate audio app is documented."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": null,
+      "chargingIndicators": "Case LED; USB-C.",
+      "notes": "Official launch claim: 8 h playtime on a single charge. Total with case not stated in the launch copy.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": null,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC claim in the 2nd-gen launch material."
+    },
+    "features": [
+      {
+        "id": "vendor.redmagic.low-latency",
+        "name": "50 ms gaming mode",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.redmagic.custom-sound",
+        "name": "Customisable gaming sound",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "unknown",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "game mode",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": "Gaming TWS with touch control; exact mapping not published."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "Gaming-tuned TWS; driver and codec details not published."
+    },
+    "appOnlyFeatures": [
+      "Gaming sound profile",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "2nd-generation Cyberpods",
+      "50 ms low-latency mode",
+      "8 h single-charge playtime"
+    ],
+    "sources": [
+      {
+        "url": "https://www.nubiamart.com/blog/redmagic-cyberpods-tws-2nd-earbuds-ultra-low-50ms-latency-8-hour-battery-customizable-gaming-sound.html",
+        "type": "reputable-secondary",
+        "title": "RedMagic Cyberpods TWS 2nd Gen",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "No official RedMagic product/spec page found",
+      "Case total hours not stated",
+      "ANC support unconfirmed",
+      "Battery display layout unverified",
+      "Codecs, driver size and multipoint not published"
+    ],
+    "notes": "Global gaming accessory. The 8 h figure is per charge, not total with case.",
+    "researchedAt": "2026-11-10"
+  }
+]

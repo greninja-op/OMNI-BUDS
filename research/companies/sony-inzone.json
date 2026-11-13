@@ -1,0 +1,611 @@
+[
+  {
+    "company": "Sony INZONE",
+    "companySlug": "sony-inzone",
+    "family": "INZONE Buds",
+    "model": "Sony INZONE Buds",
+    "slug": "sony-inzone-buds",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "INZONE Hub / Sony | Headphones Connect",
+      "platforms": [
+        "windows",
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sony.songpal.mdr"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr"
+      ],
+      "appVersionObserved": null,
+      "notes": "INZONE Hub on PC for EQ/spatial/game profiles; Headphones Connect for mobile settings where supported."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 12,
+      "caseHours": 12,
+      "chargingIndicators": "Case LED; USB-C.",
+      "notes": "Up to 24 h total with case (12 h buds + 12 h case). ANC-on figure not published.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 12
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "Active noise cancelling with personalized spatial sound; ambient mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancelling",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz USB-C dongle for PS5/PC",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "Bluetooth LE Audio (LC3)",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "360° Spatial Sound",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "INZONE Hub EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.sony.tempest",
+        "name": "Tempest 3D Audio support",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Long press",
+          "action": "ANC / ambient",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "None; touch controls.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "LC3"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "Designed for PS5/PC gaming via dongle; Bluetooth LE Audio for phones. No head tracking."
+    },
+    "appOnlyFeatures": [
+      "360 Spatial Sound",
+      "EQ",
+      "Game profiles"
+    ],
+    "featureDeltaFromPrevious": [
+      "Sony's first INZONE TWS",
+      "2.4 GHz dongle + LE Audio",
+      "ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://electronics.sony.com/audio/gaming-audio/all-gaming-headsets/p/wfg700n-b",
+        "type": "official-product",
+        "title": "INZONE Buds WF-G700N",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on battery hours not published",
+      "Multipoint not stated",
+      "EQ band count not published",
+      "App battery layout not visually verified"
+    ],
+    "notes": "Model number WF-G700N.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sony INZONE",
+    "companySlug": "sony-inzone",
+    "family": "INZONE H9",
+    "model": "Sony INZONE H9",
+    "slug": "sony-inzone-h9",
+    "generation": "H9",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "INZONE Hub",
+      "platforms": [
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "EQ, 360 spatial sound, ANC and game profiles on PC."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 32,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Up to 32 h; ANC-on figure not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Active noise cancelling with ambient mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancelling",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz USB-C dongle",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.0",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "360° Spatial Sound",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "INZONE Hub EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.sony.tempest",
+        "name": "Tempest 3D Audio",
+        "availability": "device-only"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Flip-up boom mic",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "ANC button",
+          "action": "ANC / ambient",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Volume dial",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mic flip",
+          "action": "Mute",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup volume dial, ANC button, power and flip-to-mute mic.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "40 mm drivers; 360 spatial sound; 2.4 GHz + Bluetooth."
+    },
+    "appOnlyFeatures": [
+      "360 Spatial Sound",
+      "EQ",
+      "ANC tuning",
+      "Game profiles"
+    ],
+    "featureDeltaFromPrevious": [
+      "INZONE flagship with ANC",
+      "2.4 GHz + Bluetooth",
+      "360 spatial sound"
+    ],
+    "sources": [
+      {
+        "url": "https://electronics.sony.com/audio/gaming-audio/all-gaming-headsets/p/whg900n-b",
+        "type": "official-product",
+        "title": "INZONE H9 WH-G900N",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on battery hours not published",
+      "Bluetooth codecs not published",
+      "Multipoint not stated",
+      "EQ band count not published"
+    ],
+    "notes": "Model number WH-G900N.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sony INZONE",
+    "companySlug": "sony-inzone",
+    "family": "INZONE H7",
+    "model": "Sony INZONE H7",
+    "slug": "sony-inzone-h7",
+    "generation": "H7",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "INZONE Hub",
+      "platforms": [
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "EQ, 360 spatial sound and game profiles."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 40,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Up to 40 h; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz USB-C dongle",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.0",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "360° Spatial Sound",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "INZONE Hub EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.sony.tempest",
+        "name": "Tempest 3D Audio",
+        "availability": "device-only"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Flip-up boom mic",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume dial",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mic flip",
+          "action": "Mute",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup volume dial, power and flip-to-mute mic.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "40 mm drivers; 360 spatial sound; 2.4 GHz + Bluetooth."
+    },
+    "appOnlyFeatures": [
+      "360 Spatial Sound",
+      "EQ",
+      "Game profiles"
+    ],
+    "featureDeltaFromPrevious": [
+      "No-ANC sibling of H9",
+      "40 h battery"
+    ],
+    "sources": [
+      {
+        "url": "https://electronics.sony.com/audio/gaming-audio/all-gaming-headsets/p/whg700n-b",
+        "type": "official-product",
+        "title": "INZONE H7 WH-G700N",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth codecs not published",
+      "Multipoint not stated",
+      "EQ band count not published"
+    ],
+    "notes": "Model number WH-G700N.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sony INZONE",
+    "companySlug": "sony-inzone",
+    "family": "INZONE H9",
+    "model": "Sony INZONE H9 II",
+    "slug": "sony-inzone-h9-ii",
+    "generation": "H9 II",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "INZONE Hub",
+      "platforms": [
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "EQ, 360 spatial sound, ANC and game profiles."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 30,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Up to 30 h; ANC-on figure not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Adaptive ANC with ambient mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz USB-C dongle",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.3",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "360° Spatial Sound",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "10-band EQ in INZONE Hub",
+        "availability": "official-app"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Flip-up boom mic",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "ANC button",
+          "action": "ANC / ambient",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Volume dial",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mic flip",
+          "action": "Mute",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup controls and flip-to-mute mic.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "40 mm drivers; 360 spatial sound; 2.4 GHz + Bluetooth 5.3."
+    },
+    "appOnlyFeatures": [
+      "360 Spatial Sound",
+      "10-band EQ",
+      "ANC tuning",
+      "Game profiles"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 5.3",
+      "Adaptive ANC",
+      "10-band EQ",
+      "Lighter chassis"
+    ],
+    "sources": [
+      {
+        "url": "https://electronics.sony.com/audio/gaming-audio/all-gaming-headsets/c/all-gaming-headsets",
+        "type": "official-product",
+        "title": "Sony INZONE gaming headsets",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Dedicated H9 II product page not captured",
+      "ANC-on battery hours not published",
+      "Bluetooth codecs not published",
+      "Multipoint not stated"
+    ],
+    "notes": "2025 refresh of the H9; values cross-checked against Sony's INZONE lineup page.",
+    "researchedAt": "2026-11-10"
+  }
+]

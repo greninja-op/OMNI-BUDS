@@ -1,0 +1,1662 @@
+[
+  {
+    "company": "Jabra",
+    "companySlug": "jabra",
+    "family": "Elite",
+    "model": "Jabra Elite 10 Gen 2",
+    "slug": "elite-10-gen-2",
+    "generation": "2",
+    "variant": "10",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Jabra Sound+",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.jabra.moments"
+      ],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, HearThrough, EQ, spatial audio, button customisation, firmware updates."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": null,
+      "caseHours": 21,
+      "chargingIndicators": "Case LED; app readout; USB-C; Qi wireless charging",
+      "notes": "Official: 6 h buds, 27 h with case, ANC on.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 21
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "hear-through",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "Jabra Advanced ANC, up to 2x stronger than Elite 10 Gen 1; Natural HearThrough with wind-noise reduction."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Jabra Advanced ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Natural HearThrough",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial Sound with Dolby Atmos",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.head-tracking",
+        "name": "Dolby Head Tracking",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio smart case",
+        "availability": "device-only",
+        "notes": "Case streams from USB-C/3.5 mm sources."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair / Swift Pair / Spotify Tap",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double press",
+          "action": "track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/HearThrough",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Button on each earbud",
+      "configurableInApp": true,
+      "notes": "Jabra uses physical buttons, not touch."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "LC3",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "10 mm speakers; semi-open ComfortFit; IP57."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "spatial audio",
+      "head tracking",
+      "button customisation",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "LE Audio smart case",
+      "Dolby Head Tracking",
+      "ANC up to 2x stronger",
+      "Natural HearThrough"
+    ],
+    "sources": [
+      {
+        "url": "https://www.jabra.com/about/news-and-press-releases/2024-jabra-unveils-second-generation-of-elite-8-active-and-elite-10",
+        "type": "official-product",
+        "title": "Jabra unveils Elite 8 Active Gen 2 and Elite 10 Gen 2",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-off runtime not published.",
+      "EQ band count unknown.",
+      "Battery UI layout inferred."
+    ],
+    "notes": "Final flagship Jabra earbud before exiting consumer audio.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Jabra",
+    "companySlug": "jabra",
+    "family": "Elite",
+    "model": "Jabra Elite 8 Active Gen 2",
+    "slug": "elite-8-active-gen-2",
+    "generation": "2",
+    "variant": "8 Active",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Jabra Sound+",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.jabra.moments"
+      ],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, HearThrough, EQ, spatial audio, controls."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 8,
+      "budsHoursNoAnc": null,
+      "caseHours": 24,
+      "chargingIndicators": "Case LED; app readout; USB-C; wireless charging",
+      "notes": "Official: 8 h buds, 32 h with case, ANC on.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 24
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "hear-through",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "Jabra Advanced ANC with Natural HearThrough."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Jabra Advanced ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Natural HearThrough",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Dolby Audio spatial sound",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio smart case",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.jabra.shakegrip",
+        "name": "ShakeGrip wing-free fit",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double press",
+          "action": "track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/HearThrough",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Button on each earbud",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "LC3",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IP68 earbuds, IP54 case; 6 mics."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "spatial audio",
+      "controls",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "LE Audio smart case",
+      "Improved ANC and HearThrough",
+      "IP68 retained"
+    ],
+    "sources": [
+      {
+        "url": "https://www.jabra.com/about/news-and-press-releases/2024-jabra-unveils-second-generation-of-elite-8-active-and-elite-10",
+        "type": "official-product",
+        "title": "Jabra Elite 8 Active Gen 2",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-off runtime not published.",
+      "EQ band count unknown.",
+      "Battery UI layout inferred."
+    ],
+    "notes": "Rugged sports flagship.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Jabra",
+    "companySlug": "jabra",
+    "family": "Elite",
+    "model": "Jabra Elite 10",
+    "slug": "elite-10",
+    "generation": "1",
+    "variant": "10",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Jabra Sound+",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.jabra.moments"
+      ],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, HearThrough, EQ, spatial audio."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": null,
+      "caseHours": 21,
+      "chargingIndicators": "Case LED; app readout; USB-C; wireless charging",
+      "notes": "6 h buds, 27 h total ANC on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "hear-through",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "HearThrough",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Dolby Atmos spatial sound",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.head-tracking",
+        "name": "Dolby Head Tracking",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double press",
+          "action": "track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/HearThrough",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Button on each earbud",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "10 mm speakers; IP57."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "spatial audio",
+      "head tracking",
+      "controls"
+    ],
+    "featureDeltaFromPrevious": [
+      "First Elite 10 with Dolby head tracking"
+    ],
+    "sources": [
+      {
+        "url": "https://www.jabra.com/support",
+        "type": "official-support",
+        "title": "Jabra support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No current official product page captured after Jabra exited consumer audio.",
+      "ANC-off runtime not published.",
+      "Battery UI layout inferred."
+    ],
+    "notes": "Gen 1 flagship; superseded by Gen 2.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Jabra",
+    "companySlug": "jabra",
+    "family": "Elite",
+    "model": "Jabra Elite 8 Active",
+    "slug": "elite-8-active",
+    "generation": "1",
+    "variant": "8 Active",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Jabra Sound+",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.jabra.moments"
+      ],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, HearThrough, EQ, spatial audio."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 8,
+      "budsHoursNoAnc": null,
+      "caseHours": 24,
+      "chargingIndicators": "Case LED; app readout",
+      "notes": "8 h buds, 32 h total ANC on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "hear-through",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "HearThrough",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Dolby Audio spatial sound",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double press",
+          "action": "track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/HearThrough",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Button on each earbud",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IP68."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "spatial audio",
+      "controls"
+    ],
+    "featureDeltaFromPrevious": [
+      "First Elite 8 Active"
+    ],
+    "sources": [
+      {
+        "url": "https://www.jabra.com/support",
+        "type": "official-support",
+        "title": "Jabra support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No current official product page.",
+      "ANC-off runtime not published.",
+      "Battery UI layout inferred."
+    ],
+    "notes": "Gen 1 rugged model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Jabra",
+    "companySlug": "jabra",
+    "family": "Elite",
+    "model": "Jabra Elite 7 Pro",
+    "slug": "elite-7-pro",
+    "generation": "7",
+    "variant": "Pro",
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Jabra Sound+",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.jabra.moments"
+      ],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, controls, firmware."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 8,
+      "budsHoursNoAnc": null,
+      "caseHours": 22,
+      "chargingIndicators": "Case LED; app readout",
+      "notes": "8 h buds, 30 h total ANC on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "hear-through",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adjustable ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adjustable ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "HearThrough",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.jabra.multi-sensor-voice",
+        "name": "MultiSensor Voice call technology",
+        "availability": "device-only",
+        "notes": "Bone-conduction sensor + mics."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double press",
+          "action": "track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/HearThrough",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Button on each earbud",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IP57."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "controls",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "MultiSensor Voice",
+      "Wear detection"
+    ],
+    "sources": [
+      {
+        "url": "https://www.jabra.com/support",
+        "type": "official-support",
+        "title": "Jabra support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No current official product page.",
+      "EQ band count unknown.",
+      "Battery UI layout inferred."
+    ],
+    "notes": "Call-focused flagship from 2021.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Jabra",
+    "companySlug": "jabra",
+    "family": "Elite",
+    "model": "Jabra Elite 7 Active",
+    "slug": "elite-7-active",
+    "generation": "7",
+    "variant": "Active",
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Jabra Sound+",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.jabra.moments"
+      ],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, controls."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 8,
+      "budsHoursNoAnc": null,
+      "caseHours": 22,
+      "chargingIndicators": "Case LED; app readout",
+      "notes": "8 h buds, 30 h total ANC on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "hear-through",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "HearThrough",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/HearThrough",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Button on each earbud",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IP57; ShakeGrip fit."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "controls"
+    ],
+    "featureDeltaFromPrevious": [
+      "Sports-focused sibling of Elite 7 Pro"
+    ],
+    "sources": [
+      {
+        "url": "https://www.jabra.com/support",
+        "type": "official-support",
+        "title": "Jabra support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No current official product page.",
+      "Battery UI layout inferred."
+    ],
+    "notes": "Sports version of Elite 7.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Jabra",
+    "companySlug": "jabra",
+    "family": "Elite",
+    "model": "Jabra Elite 5",
+    "slug": "elite-5",
+    "generation": "5",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Jabra Sound+",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.jabra.moments"
+      ],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, controls."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": null,
+      "caseHours": 29,
+      "chargingIndicators": "Case LED; app readout",
+      "notes": "7 h buds, 36 h total ANC on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "hear-through",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "HearThrough",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/HearThrough",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Button on each earbud",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "IP55; 6 mics."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "controls"
+    ],
+    "featureDeltaFromPrevious": [
+      "Mid-tier ANC with 36 h total"
+    ],
+    "sources": [
+      {
+        "url": "https://www.jabra.com/support",
+        "type": "official-support",
+        "title": "Jabra support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No current official product page.",
+      "Battery UI layout inferred."
+    ],
+    "notes": "Value ANC model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Jabra",
+    "companySlug": "jabra",
+    "family": "Elite",
+    "model": "Jabra Elite 4",
+    "slug": "elite-4",
+    "generation": "4",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Jabra Sound+",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.jabra.moments"
+      ],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, controls."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5.5,
+      "budsHoursNoAnc": null,
+      "caseHours": 16.5,
+      "chargingIndicators": "Case LED; app readout",
+      "notes": "5.5 h buds, 22 h total ANC on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "hear-through"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "HearThrough",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/HearThrough",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Button on each earbud",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "IP55."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "controls"
+    ],
+    "featureDeltaFromPrevious": [
+      "Affordable ANC model"
+    ],
+    "sources": [
+      {
+        "url": "https://www.jabra.com/support",
+        "type": "official-support",
+        "title": "Jabra support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No current official product page.",
+      "Battery values from launch materials.",
+      "Battery UI layout (split buds / separate case / last-known case while buds are out) is inferred from typical app behaviour and has not been screenshot-verified."
+    ],
+    "notes": "Entry ANC model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Jabra",
+    "companySlug": "jabra",
+    "family": "Elite",
+    "model": "Jabra Elite 3",
+    "slug": "elite-3",
+    "generation": "3",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Jabra Sound+",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.jabra.moments"
+      ],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ and controls."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 21,
+      "chargingIndicators": "Case LED; app readout",
+      "notes": "7 h buds, 28 h total; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double press",
+          "action": "track skip",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Button on each earbud",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "IP55. No multipoint on Elite 3."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "controls"
+    ],
+    "featureDeltaFromPrevious": [
+      "No ANC; budget line"
+    ],
+    "sources": [
+      {
+        "url": "https://www.jabra.com/support",
+        "type": "official-support",
+        "title": "Jabra support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No current official product page.",
+      "No multipoint on Elite 3 (confirmed by spec tier).",
+      "Battery UI layout (split buds / separate case / last-known case while buds are out) is inferred from typical app behaviour and has not been screenshot-verified."
+    ],
+    "notes": "Budget model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Jabra",
+    "companySlug": "jabra",
+    "family": "Elite",
+    "model": "Jabra Elite 85t",
+    "slug": "elite-85t",
+    "generation": "85t",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Jabra Sound+",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.jabra.moments"
+      ],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, controls."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5.5,
+      "budsHoursNoAnc": null,
+      "caseHours": 19.5,
+      "chargingIndicators": "Case LED; app readout; wireless charging",
+      "notes": "5.5 h buds, 25 h total ANC on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "hear-through",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adjustable ANC with 5 levels? Semi-open design."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adjustable ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "HearThrough",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/HearThrough",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Button on each earbud",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12 mm drivers; IPX4."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes",
+      "controls"
+    ],
+    "featureDeltaFromPrevious": [
+      "First Jabra with adjustable ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.jabra.com/support",
+        "type": "official-support",
+        "title": "Jabra support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No current official product page.",
+      "Battery UI layout inferred."
+    ],
+    "notes": "Seminal ANC model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Jabra",
+    "companySlug": "jabra",
+    "family": "Elite",
+    "model": "Jabra Elite 85h",
+    "slug": "elite-85h",
+    "generation": "85h",
+    "variant": null,
+    "releaseYear": 2019,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Jabra Sound+",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.jabra.moments"
+      ],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, sound profiles."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 36,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout",
+      "notes": "Up to 36 h with ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "hear-through",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "SmartSound adaptive ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "SmartSound ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "HearThrough",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wired-mode",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls, ANC",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm drivers; BT 5.0."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "SmartSound profiles"
+    ],
+    "featureDeltaFromPrevious": [
+      "Jabra's first over-ear ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.jabra.com/support",
+        "type": "official-support",
+        "title": "Jabra support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No current official product page.",
+      "ANC-off runtime not published.",
+      "Battery display is single combined readout."
+    ],
+    "notes": "Over-ear ANC with 36 h runtime.",
+    "researchedAt": "2026-11-10"
+  }
+]

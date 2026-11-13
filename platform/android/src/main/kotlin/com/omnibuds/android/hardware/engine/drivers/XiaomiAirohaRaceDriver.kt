@@ -47,8 +47,10 @@ class XiaomiAirohaRaceDriver : IVendorDriver {
         serviceUuids: List<String>,
     ): Boolean {
         val name = deviceName?.lowercase() ?: ""
-        if (name.contains("redmi") || name.contains("xiaomi") || name.contains("earfun") ||
-            name.contains("soundpeats") || name.contains("airoha")
+        if (name.contains("redmi") || name.contains("xiaomi") || name.contains("poco") ||
+            name.contains("earfun") || name.contains("soundpeats") || name.contains("airoha") ||
+            name.contains("edifier") || name.contains("1more") || name.contains("qcy") ||
+            name.contains("baseus") || name.contains("ugreen") || name.contains("tribit")
         ) {
             return true
         }

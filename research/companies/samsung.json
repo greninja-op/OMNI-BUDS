@@ -1,0 +1,2807 @@
+[
+  {
+    "company": "Samsung",
+    "companySlug": "samsung",
+    "family": "Galaxy Buds",
+    "model": "Galaxy Buds",
+    "slug": "galaxy-buds",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2019,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Galaxy Wearable",
+      "platforms": [
+        "android",
+        "ios",
+        "windows"
+      ],
+      "packageIds": [
+        "com.samsung.android.app.watchmanager"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.samsung.android.app.watchmanager",
+        "https://apps.apple.com/us/app/samsung-galaxy-buds/id1491433898"
+      ],
+      "appVersionObserved": "Galaxy Wearable listing updated 2026-10-06; version string not shown",
+      "notes": "Android uses Galaxy Wearable. The iOS Galaxy Buds app (v2.1.1) supports Buds+ and Buds Live only, not the original Buds. Windows uses the Galaxy Buds app for compatible models."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 13,
+      "chargingIndicators": "Case LED: red charging / below 30%, flashing red below 10%, yellow 30-60%, green above 60%, blue firmware update. Bud LEDs red charging / green full.",
+      "notes": "Battery Info widget shows each earbud and the case separately. The case has no independent radio, so its value is last-known once both buds are out. 6 h buds + 7 h case = 13 h total.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 13
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC. Ambient Sound is available."
+    },
+    "features": [
+      {
+        "id": "noise-control.ambient",
+        "name": "Ambient Sound",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Sound effects / equalizer",
+        "availability": "official-app",
+        "notes": "Galaxy Wearable sound-effect presets; labels are not restated on current US support pages."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Auto Switch between Galaxy devices",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.touchpad-lock",
+        "name": "Touchpad lock",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.find-my-earbuds",
+        "name": "Find My Earbuds",
+        "availability": "official-app"
+      },
+      {
+        "id": "app.battery-widget",
+        "name": "Battery Info widget",
+        "availability": "official-app"
+      },
+      {
+        "id": "firmware.update",
+        "name": "Earbud software update",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "Play/pause or answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-tap",
+          "action": "Next track / answer or end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "Previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "Ambient Sound or voice assistant (per-side choice)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touchpad settings are configurable per side in Galaxy Wearable."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "Samsung Scalable Codec"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "No 360 Audio, no hi-res codec, no Bluetooth multipoint. Auto Switch is Samsung-ecosystem only."
+    },
+    "appOnlyFeatures": [
+      "Touchpad lock",
+      "Find My Earbuds",
+      "Battery Info widget",
+      "Ambient Sound toggle",
+      "Equalizer"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.samsung.com/us/support/answer/ANS10001314/",
+        "type": "official-support",
+        "title": "The battery life of your Samsung earbuds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.samsung.com/us/support/answer/ANS10003422/",
+        "type": "official-support",
+        "title": "Add earbud widgets to your Galaxy phone",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.samsung.android.app.watchmanager",
+        "type": "official-app-store",
+        "title": "Galaxy Wearable listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Samsung no longer hosts a US product page for the original Buds; some feature labels and the exact EQ preset list are not restated.",
+      "No absolute ANC dB (no ANC).",
+      "Case battery freshness when buds are out is undocumented."
+    ],
+    "notes": "Battery display: split buds + separate case; the case reading is last-known when buds are out.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Samsung",
+    "companySlug": "samsung",
+    "family": "Galaxy Buds",
+    "model": "Galaxy Buds+",
+    "slug": "galaxy-buds-plus",
+    "generation": "Plus",
+    "variant": "Buds+",
+    "releaseYear": 2020,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Galaxy Wearable",
+      "platforms": [
+        "android",
+        "ios",
+        "windows"
+      ],
+      "packageIds": [
+        "com.samsung.android.app.watchmanager"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.samsung.android.app.watchmanager",
+        "https://apps.apple.com/us/app/samsung-galaxy-buds/id1491433898"
+      ],
+      "appVersionObserved": "Galaxy Wearable listing updated 2026-10-06; version string not shown",
+      "notes": "iOS Galaxy Buds app v2.1.1 supports Buds+ (including Ambient Sound) and Buds Live."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 11,
+      "caseHours": 22,
+      "chargingIndicators": "Case LED red/yellow/green plus flashing red; bud LEDs red/green.",
+      "notes": "11 h buds + 11 h case = 22 h total. Battery Info widget shows each bud and the case separately; case value is last-known when both buds are out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 22
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC; Ambient Sound only."
+    },
+    "features": [
+      {
+        "id": "noise-control.ambient",
+        "name": "Ambient Sound",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Sound effects / equalizer",
+        "availability": "official-app"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Auto Switch",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.touchpad-lock",
+        "name": "Touchpad lock",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.find-my-earbuds",
+        "name": "Find My Earbuds",
+        "availability": "official-app"
+      },
+      {
+        "id": "app.battery-widget",
+        "name": "Battery Info widget",
+        "availability": "official-app"
+      },
+      {
+        "id": "firmware.update",
+        "name": "Earbud software update",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "Play/pause or answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-tap",
+          "action": "Next track / answer or end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "Previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "Ambient Sound or voice assistant (per-side choice)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touchpad settings configurable in Galaxy Wearable."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "Samsung Scalable Codec"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "No 360 Audio or hi-res. No Bluetooth multipoint; Auto Switch only."
+    },
+    "appOnlyFeatures": [
+      "Ambient Sound toggle",
+      "Touchpad lock",
+      "Equalizer",
+      "Find My Earbuds",
+      "Battery Info widget"
+    ],
+    "featureDeltaFromPrevious": [
+      "Battery rises from 6 h to 11 h per charge and 13 h to 22 h total",
+      "Adds Ambient Sound",
+      "Adds an improved equalizer and iOS app support",
+      "Same bud design, no ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.samsung.com/us/support/answer/ANS10001314/",
+        "type": "official-support",
+        "title": "The battery life of your Samsung earbuds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://apps.apple.com/us/app/samsung-galaxy-buds/id1491433898",
+        "type": "official-app-store",
+        "title": "Samsung Galaxy Buds iOS app",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.samsung.com/us/support/answer/ANS10003422/",
+        "type": "official-support",
+        "title": "Add earbud widgets to your Galaxy phone",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No current US product page; EQ preset labels not restated.",
+      "No absolute ANC dB (no ANC).",
+      "Case battery freshness when buds are out is undocumented."
+    ],
+    "notes": "Battery display: split buds + separate case, last-known case once buds are out.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Samsung",
+    "companySlug": "samsung",
+    "family": "Galaxy Buds",
+    "model": "Galaxy Buds Live",
+    "slug": "galaxy-buds-live",
+    "generation": "Live",
+    "variant": "Live",
+    "releaseYear": 2020,
+    "formFactor": "tws-open",
+    "officialApp": {
+      "name": "Galaxy Wearable",
+      "platforms": [
+        "android",
+        "ios",
+        "windows"
+      ],
+      "packageIds": [
+        "com.samsung.android.app.watchmanager"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.samsung.android.app.watchmanager",
+        "https://apps.apple.com/us/app/samsung-galaxy-buds/id1491433898"
+      ],
+      "appVersionObserved": "Galaxy Wearable listing updated 2026-10-06; version string not shown",
+      "notes": "iOS Galaxy Buds app v2.1.1 supports Buds Live including ANC."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 8,
+      "caseHours": 21,
+      "chargingIndicators": "Case LED red/yellow/green; bud LEDs. Wireless charging and Wireless PowerShare supported.",
+      "notes": "ANC on: 6 h buds / 21 h total. ANC off: 8 h buds / 29 h total. caseHours stores the with-ANC total. Case reading is last-known once both buds are out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 21
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Samsung calls the pass-through mode Ambient Sound, not Transparency. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancelling",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.ambient",
+        "name": "Ambient Sound",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Sound effects / equalizer",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "360 Audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Auto Switch",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.touchpad-lock",
+        "name": "Touchpad lock",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.find-my-earbuds",
+        "name": "Find My Earbuds",
+        "availability": "official-app"
+      },
+      {
+        "id": "app.battery-widget",
+        "name": "Battery Info widget",
+        "availability": "official-app"
+      },
+      {
+        "id": "firmware.update",
+        "name": "Earbud software update",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "Play/pause or answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-tap",
+          "action": "Next track / answer or end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "Previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/Ambient or voice assistant (per-side choice)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Bean-shaped open-type bud with touchpad."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "Samsung Scalable Codec"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "360 Audio without head tracking. No hi-res codec and no multipoint."
+    },
+    "appOnlyFeatures": [
+      "ANC/Ambient toggle",
+      "Touchpad lock",
+      "Equalizer",
+      "Find My Earbuds",
+      "Battery Info widget"
+    ],
+    "featureDeltaFromPrevious": [
+      "First Galaxy Buds with ANC",
+      "Open-type bean design instead of a sealed in-ear tip",
+      "Adds 360 Audio",
+      "Claimed 6 h ANC / 8 h off and 21 h/29 h total"
+    ],
+    "sources": [
+      {
+        "url": "https://www.samsung.com/us/support/answer/ANS10001314/",
+        "type": "official-support",
+        "title": "The battery life of your Samsung earbuds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.samsung.com/us/support/answer/ANS10003422/",
+        "type": "official-support",
+        "title": "Add earbud widgets to your Galaxy phone",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://apps.apple.com/us/app/samsung-galaxy-buds/id1491433898",
+        "type": "official-app-store",
+        "title": "Samsung Galaxy Buds iOS app (Buds Live support)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No current US product page; EQ preset labels not restated.",
+      "No absolute ANC/Transparency dB published.",
+      "Head-tracking support for 360 Audio is not claimed by Samsung for Buds Live."
+    ],
+    "notes": "Battery display: split buds + separate case, last-known case once buds are out.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Samsung",
+    "companySlug": "samsung",
+    "family": "Galaxy Buds",
+    "model": "Galaxy Buds Pro",
+    "slug": "galaxy-buds-pro",
+    "generation": "Pro",
+    "variant": "Pro",
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Galaxy Wearable",
+      "platforms": [
+        "android",
+        "windows"
+      ],
+      "packageIds": [
+        "com.samsung.android.app.watchmanager"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.samsung.android.app.watchmanager"
+      ],
+      "appVersionObserved": "Galaxy Wearable listing updated 2026-10-06; version string not shown",
+      "notes": "iOS is Bluetooth-only for Buds Pro; Samsung's iOS Buds app does not support it."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 8,
+      "caseHours": 18,
+      "chargingIndicators": "Case LED red/yellow/green; wireless charging and Wireless PowerShare supported.",
+      "notes": "ANC on: 5 h buds / 18 h total. ANC off: 8 h buds / 28 h total. caseHours stores the with-ANC total. Case reading is last-known once buds are out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 18
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Two-level ANC plus Ambient Sound. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancelling",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.ambient",
+        "name": "Ambient Sound",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Sound effects / equalizer",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "360 Audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "360 Audio with head tracking",
+        "availability": "official-app"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Auto Switch",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.touchpad-lock",
+        "name": "Touchpad lock",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.find-my-earbuds",
+        "name": "Find My Earbuds",
+        "availability": "official-app"
+      },
+      {
+        "id": "app.battery-widget",
+        "name": "Battery Info widget",
+        "availability": "official-app"
+      },
+      {
+        "id": "firmware.update",
+        "name": "Earbud software update",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "Play/pause or answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-tap",
+          "action": "Next track / answer or end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "Previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/Ambient or voice assistant (per-side choice)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touchpad with per-side tap-and-hold assignment."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "Samsung Scalable Codec"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "2-way speaker, 360 Audio with head tracking. No hi-res codec and no multipoint."
+    },
+    "appOnlyFeatures": [
+      "ANC level",
+      "Ambient Sound",
+      "360 Audio",
+      "Touchpad lock",
+      "Equalizer",
+      "Find My Earbuds",
+      "Battery Info widget"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adds ANC and Ambient Sound to the Galaxy Buds line",
+      "2-way speaker with dedicated woofer and tweeter",
+      "Adds 360 Audio with head tracking",
+      "IPX7 water resistance",
+      "5 h ANC / 8 h off, 18 h/28 h total"
+    ],
+    "sources": [
+      {
+        "url": "https://www.samsung.com/us/support/answer/ANS10001314/",
+        "type": "official-support",
+        "title": "The battery life of your Samsung earbuds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.samsung.com/us/support/answer/ANS10003422/",
+        "type": "official-support",
+        "title": "Add earbud widgets to your Galaxy phone",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No current US product page; EQ preset labels not restated.",
+      "No absolute ANC/Transparency dB published.",
+      "Case battery freshness when buds are out is undocumented."
+    ],
+    "notes": "Battery display: split buds + separate case, last-known case once buds are out.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Samsung",
+    "companySlug": "samsung",
+    "family": "Galaxy Buds",
+    "model": "Galaxy Buds2",
+    "slug": "galaxy-buds2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Galaxy Wearable",
+      "platforms": [
+        "android",
+        "windows"
+      ],
+      "packageIds": [
+        "com.samsung.android.app.watchmanager"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.samsung.android.app.watchmanager"
+      ],
+      "appVersionObserved": "Galaxy Wearable listing updated 2026-10-06; version string not shown",
+      "notes": "iOS is Bluetooth-only for Buds2."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 7.5,
+      "caseHours": 20,
+      "chargingIndicators": "Case LED red/yellow/green; wireless charging supported.",
+      "notes": "ANC on: 5 h buds / 20 h total. ANC off: 7.5 h buds / 29 h total. caseHours stores the with-ANC total. Case reading is last-known once buds are out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 20
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "ANC with adjustable levels plus Ambient Sound. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancelling",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.ambient",
+        "name": "Ambient Sound",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "360 Audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "360 Audio with head tracking",
+        "availability": "official-app"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Auto Switch",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.touchpad-lock",
+        "name": "Touchpad lock",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.find-my-earbuds",
+        "name": "Find My Earbuds",
+        "availability": "official-app"
+      },
+      {
+        "id": "app.battery-widget",
+        "name": "Battery Info widget",
+        "availability": "official-app"
+      },
+      {
+        "id": "firmware.update",
+        "name": "Earbud software update",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "Play/pause or answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-tap",
+          "action": "Next track / answer or end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "Previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/Ambient or voice assistant (per-side choice)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touchpad controls; no swipe volume gesture."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "Samsung Scalable Codec"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "2-way speaker, 360 Audio with head tracking. No hi-res codec or multipoint."
+    },
+    "appOnlyFeatures": [
+      "ANC level",
+      "Ambient Sound",
+      "360 Audio",
+      "Touchpad lock",
+      "Equalizer",
+      "Find My Earbuds",
+      "Battery Info widget"
+    ],
+    "featureDeltaFromPrevious": [
+      "Smaller, lighter design with a 2-way speaker",
+      "Adds ANC to the main Buds line at a lower price than Buds Pro",
+      "5 h ANC / 7.5 h off, 20 h/29 h total",
+      "IPX2 rather than IPX7"
+    ],
+    "sources": [
+      {
+        "url": "https://www.samsung.com/us/support/answer/ANS10001314/",
+        "type": "official-support",
+        "title": "The battery life of your Samsung earbuds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.samsung.com/us/support/answer/ANS10003422/",
+        "type": "official-support",
+        "title": "Add earbud widgets to your Galaxy phone",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No current US product page; EQ preset labels not restated.",
+      "No absolute ANC/Transparency dB published.",
+      "Case battery freshness when buds are out is undocumented."
+    ],
+    "notes": "Battery display: split buds + separate case, last-known case once buds are out.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Samsung",
+    "companySlug": "samsung",
+    "family": "Galaxy Buds",
+    "model": "Galaxy Buds2 Pro",
+    "slug": "galaxy-buds2-pro",
+    "generation": "2",
+    "variant": "Pro",
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Galaxy Wearable",
+      "platforms": [
+        "android",
+        "windows"
+      ],
+      "packageIds": [
+        "com.samsung.android.app.watchmanager"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.samsung.android.app.watchmanager"
+      ],
+      "appVersionObserved": "Galaxy Wearable listing updated 2026-10-06; version string not shown",
+      "notes": "iOS is Bluetooth-only for Buds2 Pro."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 8,
+      "caseHours": 18,
+      "chargingIndicators": "Case LED red/yellow/green; wireless charging supported.",
+      "notes": "ANC on: 5 h buds / 18 h total. ANC off: 8 h buds / 29 h total. caseHours stores the with-ANC total. Case reading is last-known once buds are out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 18
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Intelligent ANC automatically adapts to surroundings; Voice Detect switches to Ambient when you speak. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Intelligent ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.ambient",
+        "name": "Ambient Sound",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.voice-detect",
+        "name": "Voice Detect / Conversation mode",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.adaptive-eq",
+        "name": "Adaptive EQ",
+        "availability": "device-only"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "360 Audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "360 Audio with head tracking",
+        "availability": "official-app"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Auto Switch",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.360-audio-recording",
+        "name": "360 Audio Recording",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.find-my-earbuds",
+        "name": "Find My Earbuds",
+        "availability": "official-app"
+      },
+      {
+        "id": "app.battery-widget",
+        "name": "Battery Info widget",
+        "availability": "official-app"
+      },
+      {
+        "id": "firmware.update",
+        "name": "Earbud software update",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "Play/pause or answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-tap",
+          "action": "Next track / answer or end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "Previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/Ambient or voice assistant (per-side choice)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touchpad controls; no swipe volume gesture."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "Samsung Scalable Codec"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "24-bit hi-fi audio with SSC on supported Galaxy devices. No Bluetooth multipoint; Auto Switch only."
+    },
+    "appOnlyFeatures": [
+      "Intelligent ANC",
+      "Voice Detect",
+      "360 Audio",
+      "360 Audio Recording",
+      "Equalizer",
+      "Find My Earbuds",
+      "Battery Info widget"
+    ],
+    "featureDeltaFromPrevious": [
+      "24-bit hi-fi audio versus Buds Pro",
+      "Intelligent ANC and Voice Detect",
+      "5 h ANC / 8 h off with 18 h/29 h total",
+      "Smaller design, IPX7, Bluetooth 5.3"
+    ],
+    "sources": [
+      {
+        "url": "https://www.samsung.com/us/support/answer/ANS10001314/",
+        "type": "official-support",
+        "title": "The battery life of your Samsung earbuds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.samsung.com/us/support/answer/ANS10003422/",
+        "type": "official-support",
+        "title": "Add earbud widgets to your Galaxy phone",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No current US product page; EQ preset labels not restated.",
+      "No absolute ANC/Transparency dB published.",
+      "Case battery freshness when buds are out is undocumented."
+    ],
+    "notes": "Battery display: split buds + separate case, last-known case once buds are out.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Samsung",
+    "companySlug": "samsung",
+    "family": "Galaxy Buds",
+    "model": "Galaxy Buds FE",
+    "slug": "galaxy-buds-fe",
+    "generation": "FE",
+    "variant": "Fan Edition",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Galaxy Wearable",
+      "platforms": [
+        "android"
+      ],
+      "packageIds": [
+        "com.samsung.android.app.watchmanager"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.samsung.android.app.watchmanager"
+      ],
+      "appVersionObserved": "Galaxy Wearable listing updated 2026-10-06; version string not shown",
+      "notes": "iOS is Bluetooth-only for Buds FE."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 8.5,
+      "caseHours": 24,
+      "chargingIndicators": "Case LED red/yellow/green; USB-C only, no wireless charging.",
+      "notes": "ANC on: 6 h buds / 24 h total. ANC off: 8.5 h buds / 30 h total. caseHours stores the with-ANC total. Case reading is last-known once buds are out. Samsung's support article quotes 7 h/26 h, which conflicts with the product spec; product figures are used here.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 24
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Single-level ANC plus Ambient Sound. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancelling",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.ambient",
+        "name": "Ambient Sound",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "360 Audio",
+        "availability": "official-app",
+        "notes": "No head tracking on Buds FE."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Auto Switch",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.find-my-earbuds",
+        "name": "Find My Earbuds / Lost Mode",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.gemini",
+        "name": "Gemini voice access",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.bixby",
+        "name": "Bixby voice wake-up",
+        "availability": "official-app"
+      },
+      {
+        "id": "app.battery-widget",
+        "name": "Battery Info widget",
+        "availability": "official-app"
+      },
+      {
+        "id": "firmware.update",
+        "name": "Earbud software update",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "Play/pause or answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-tap",
+          "action": "Next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "Previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/Ambient or voice assistant (per-side choice)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls; no pinch or swipe."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "Samsung Scalable Codec"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "1-way 11 mm driver, 360 Audio without head tracking. No hi-res or multipoint."
+    },
+    "appOnlyFeatures": [
+      "ANC",
+      "Ambient Sound",
+      "360 Audio",
+      "Equalizer",
+      "Find My Earbuds/Lost Mode",
+      "Battery Info widget"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adds ANC and 360 Audio at the FE price point",
+      "6 h ANC / 8.5 h off, 24 h/30 h total",
+      "No wireless charging and no head tracking",
+      "IPX2, Bluetooth 5.2"
+    ],
+    "sources": [
+      {
+        "url": "https://www.samsung.com/us/support/answer/ANS10001314/",
+        "type": "official-support",
+        "title": "The battery life of your Samsung earbuds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.samsung.com/us/support/answer/ANS10003422/",
+        "type": "official-support",
+        "title": "Add earbud widgets to your Galaxy phone",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Samsung's battery support article (7 h/26 h) conflicts with the product spec (6 h/8.5 h, 24 h/30 h); both are official, product figures used.",
+      "No current US product page; EQ preset labels not restated.",
+      "No absolute ANC/Transparency dB published."
+    ],
+    "notes": "Battery display: split buds + separate case, last-known case once buds are out.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Samsung",
+    "companySlug": "samsung",
+    "family": "Galaxy Buds",
+    "model": "Galaxy Buds3",
+    "slug": "galaxy-buds3",
+    "generation": "3",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-open",
+    "officialApp": {
+      "name": "Galaxy Wearable",
+      "platforms": [
+        "android",
+        "windows"
+      ],
+      "packageIds": [
+        "com.samsung.android.app.watchmanager"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.samsung.android.app.watchmanager"
+      ],
+      "appVersionObserved": "Galaxy Wearable listing updated 2026-10-06; version string not shown",
+      "notes": "On One UI 8.0+ Galaxy phones many controls move into device settings/Quick Panel; Galaxy Wearable is still used on other Android devices and for finer settings."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 6,
+      "caseHours": 24,
+      "chargingIndicators": "Case LED; blade lights on the buds; USB-C only, no wireless charging.",
+      "notes": "ANC on: 5 h buds / 24 h total. ANC off: 6 h buds / 30 h total. caseHours stores the with-ANC total. Battery Info widget shows each bud and case separately; case value is last-known once buds are out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 24
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "ANC plus Ambient Sound, no Adaptive Noise Control on Buds3. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancelling",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.ambient",
+        "name": "Ambient Sound",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.adaptive-eq",
+        "name": "Adaptive EQ",
+        "availability": "device-only"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "360 Audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "360 Audio with head tracking",
+        "availability": "official-app"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Auto Switch",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.auracast",
+        "name": "Auracast",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.galaxy-ai",
+        "name": "Galaxy AI (Gemini/Bixby, interpreter)",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.quick-voice-memo",
+        "name": "Quick Voice Memo",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.360-audio-recording",
+        "name": "360 Audio Recording",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.find-my-earbuds",
+        "name": "Find My Earbuds / Lost Mode",
+        "availability": "official-app"
+      },
+      {
+        "id": "app.battery-widget",
+        "name": "Battery Info widget",
+        "availability": "official-app"
+      },
+      {
+        "id": "firmware.update",
+        "name": "Earbud software update",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "pinch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "single pinch",
+          "action": "Play/pause, answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double pinch",
+          "action": "Next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple pinch",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "pinch and hold",
+          "action": "ANC/Ambient or preset action (customizable)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "Volume up/down",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Blade pinch/swipe controls; no head gestures on Buds3."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "Samsung Scalable Codec",
+        "SSC-UHQ",
+        "LC3"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "24-bit/96 kHz SSC-UHQ on compatible Galaxy devices. No Bluetooth multipoint; Auto Switch only."
+    },
+    "appOnlyFeatures": [
+      "ANC/Ambient",
+      "360 Audio",
+      "Equalizer",
+      "Adaptive EQ",
+      "Galaxy AI",
+      "Quick Voice Memo",
+      "360 Audio Recording",
+      "Find My Earbuds",
+      "Battery Info widget"
+    ],
+    "featureDeltaFromPrevious": [
+      "New open-type blade design with pinch and swipe controls",
+      "24-bit/96 kHz SSC-UHQ audio",
+      "360 Audio with head tracking",
+      "Bluetooth 5.4, LE Audio and Auracast",
+      "IP57, but no wireless charging",
+      "5 h ANC / 6 h off, 24 h/30 h total"
+    ],
+    "sources": [
+      {
+        "url": "https://www.samsung.com/us/mobile-audio/galaxy-buds/compare/",
+        "type": "official-product",
+        "title": "Compare Galaxy Buds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.samsung.com/us/support/answer/ANS10003393/",
+        "type": "official-support",
+        "title": "All about the Galaxy Buds3, Buds3 Pro, and Buds3 FE",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.samsung.com/us/support/answer/ANS10003422/",
+        "type": "official-support",
+        "title": "Add earbud widgets to your Galaxy phone",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No absolute ANC/Transparency dB published.",
+      "Exact equalizer preset labels are not listed on the US compare page.",
+      "Case battery freshness when buds are out is undocumented."
+    ],
+    "notes": "Battery display: split buds + separate case, last-known case once buds are out.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Samsung",
+    "companySlug": "samsung",
+    "family": "Galaxy Buds",
+    "model": "Galaxy Buds3 Pro",
+    "slug": "galaxy-buds3-pro",
+    "generation": "3",
+    "variant": "Pro",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Galaxy Wearable",
+      "platforms": [
+        "android",
+        "windows"
+      ],
+      "packageIds": [
+        "com.samsung.android.app.watchmanager"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.samsung.android.app.watchmanager"
+      ],
+      "appVersionObserved": "Galaxy Wearable listing updated 2026-10-06; version string not shown",
+      "notes": "One UI 8.0+ exposes many controls in Quick Panel/device settings; Galaxy Wearable remains for detailed settings."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 7,
+      "caseHours": 26,
+      "chargingIndicators": "Case LED; blade lights; USB-C only, no wireless charging.",
+      "notes": "ANC on: 6 h buds / 26 h total. ANC off: 7 h buds / 30 h total. caseHours stores the with-ANC total. Case value is last-known once buds are out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 26
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Adaptive Noise Control, Voice Detect and Siren Detect. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancelling",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.ambient",
+        "name": "Ambient Sound",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive Noise Control",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.voice-detect",
+        "name": "Voice Detect",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.siren-detect",
+        "name": "Siren Detect",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.adaptive-eq",
+        "name": "Adaptive EQ",
+        "availability": "device-only"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "360 Audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "360 Audio with head tracking",
+        "availability": "official-app"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Auto Switch",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.auracast",
+        "name": "Auracast",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.galaxy-ai",
+        "name": "Galaxy AI (Gemini/Bixby, interpreter)",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.quick-voice-memo",
+        "name": "Quick Voice Memo",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.360-audio-recording",
+        "name": "360 Audio Recording",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.gaming-mode",
+        "name": "Game mode (Labs)",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.find-my-earbuds",
+        "name": "Find My Earbuds / Lost Mode",
+        "availability": "official-app"
+      },
+      {
+        "id": "app.battery-widget",
+        "name": "Battery Info widget",
+        "availability": "official-app"
+      },
+      {
+        "id": "firmware.update",
+        "name": "Earbud software update",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "pinch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "single pinch",
+          "action": "Play/pause, answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double pinch",
+          "action": "Next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple pinch",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "pinch and hold",
+          "action": "ANC/Ambient or preset action (customizable)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "Volume up/down",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Blade pinch/swipe controls; no head gestures on Buds3 Pro."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "Samsung Scalable Codec",
+        "SSC-UHQ",
+        "LC3"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "2-way speaker, 24-bit/96 kHz SSC-UHQ. No Bluetooth multipoint; Auto Switch only."
+    },
+    "appOnlyFeatures": [
+      "Adaptive Noise Control",
+      "Voice Detect",
+      "Siren Detect",
+      "360 Audio",
+      "Equalizer",
+      "Galaxy AI",
+      "Quick Voice Memo",
+      "Game mode",
+      "Battery Info widget"
+    ],
+    "featureDeltaFromPrevious": [
+      "2-way speaker with dual amplifiers",
+      "Adaptive Noise Control, Voice Detect and Siren Detect",
+      "24-bit/96 kHz SSC-UHQ",
+      "Blade pinch/swipe controls and blade lights",
+      "IP57, 6 h ANC / 7 h off, 26 h/30 h total"
+    ],
+    "sources": [
+      {
+        "url": "https://www.samsung.com/us/mobile-audio/galaxy-buds/compare/",
+        "type": "official-product",
+        "title": "Compare Galaxy Buds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.samsung.com/us/support/answer/ANS10003393/",
+        "type": "official-support",
+        "title": "All about the Galaxy Buds3, Buds3 Pro, and Buds3 FE",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.samsung.com/us/support/answer/ANS10003422/",
+        "type": "official-support",
+        "title": "Add earbud widgets to your Galaxy phone",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No absolute ANC/Transparency dB published.",
+      "Exact equalizer preset labels are not listed on the US compare page.",
+      "Case battery freshness when buds are out is undocumented."
+    ],
+    "notes": "Battery display: split buds + separate case, last-known case once buds are out.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Samsung",
+    "companySlug": "samsung",
+    "family": "Galaxy Buds",
+    "model": "Galaxy Buds3 FE",
+    "slug": "galaxy-buds3-fe",
+    "generation": "3",
+    "variant": "Fan Edition",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Galaxy Wearable",
+      "platforms": [
+        "android",
+        "windows"
+      ],
+      "packageIds": [
+        "com.samsung.android.app.watchmanager"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.samsung.android.app.watchmanager"
+      ],
+      "appVersionObserved": "Galaxy Wearable listing updated 2026-10-06; version string not shown",
+      "notes": "One UI 8.0+ exposes Quick Panel controls; Galaxy Wearable for other Android devices/finer settings."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 8.5,
+      "caseHours": 24,
+      "chargingIndicators": "Case LED; USB-C only, no wireless charging.",
+      "notes": "ANC on: 6 h buds / 24 h total. ANC off: 8.5 h buds / 30 h total. caseHours stores the with-ANC total. Case value is last-known once buds are out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 24
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Improved ANC versus Buds FE; no Adaptive Noise Control. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancelling",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.ambient",
+        "name": "Ambient Sound",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer / app-specific sound presets",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "360 Audio",
+        "availability": "official-app",
+        "notes": "No head tracking on Buds3 FE."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Auto Switch",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.gemini",
+        "name": "Gemini voice access",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.interpreter",
+        "name": "Interpreter / Live Translate through buds",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.find-my-earbuds",
+        "name": "Find My Earbuds / Lost Mode",
+        "availability": "official-app"
+      },
+      {
+        "id": "app.battery-widget",
+        "name": "Battery Info widget",
+        "availability": "official-app"
+      },
+      {
+        "id": "firmware.update",
+        "name": "Earbud software update",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "pinch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "single pinch",
+          "action": "Play/pause, answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double pinch",
+          "action": "Next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple pinch",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "pinch and hold",
+          "action": "ANC/Ambient or preset action",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "Volume up/down",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Blade pinch/swipe; no head gestures."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "Samsung Scalable Codec"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "16-bit/48 kHz, 1-way 11 mm driver, 360 Audio without head tracking. No multipoint."
+    },
+    "appOnlyFeatures": [
+      "ANC",
+      "Ambient Sound",
+      "360 Audio",
+      "EQ and per-app sound presets",
+      "Gemini",
+      "Interpreter",
+      "Find My Earbuds",
+      "Battery Info widget"
+    ],
+    "featureDeltaFromPrevious": [
+      "Larger 11 mm driver and improved ANC versus Buds FE",
+      "Adds 360 Audio",
+      "6 h ANC / 8.5 h off, 24 h/30 h total",
+      "Bluetooth 5.4, IP54, still no wireless charging",
+      "Adds Gemini and interpreter features"
+    ],
+    "sources": [
+      {
+        "url": "https://www.samsung.com/us/mobile-audio/galaxy-buds3-fe/",
+        "type": "official-product",
+        "title": "Galaxy Buds3 FE",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.samsung.com/us/mobile-audio/galaxy-buds/compare/",
+        "type": "official-product",
+        "title": "Compare Galaxy Buds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.samsung.com/us/support/answer/ANS10003422/",
+        "type": "official-support",
+        "title": "Add earbud widgets to your Galaxy phone",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No absolute ANC/Transparency dB published.",
+      "Equalizer preset labels are not published on the US product page.",
+      "Case battery freshness when buds are out is undocumented."
+    ],
+    "notes": "Battery display: split buds + separate case, last-known case once buds are out.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Samsung",
+    "companySlug": "samsung",
+    "family": "Galaxy Buds",
+    "model": "Galaxy Buds4",
+    "slug": "galaxy-buds4",
+    "generation": "4",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "tws-open",
+    "officialApp": {
+      "name": "Galaxy Wearable",
+      "platforms": [
+        "android",
+        "windows"
+      ],
+      "packageIds": [
+        "com.samsung.android.app.watchmanager"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.samsung.android.app.watchmanager"
+      ],
+      "appVersionObserved": "Galaxy Wearable listing updated 2026-10-06; version string not shown",
+      "notes": "On One UI 8.0+ Galaxy devices, ANC/EQ/Quick Panel settings are available in device settings without Galaxy Wearable; Wearable is used on other Android devices."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 6,
+      "caseHours": 24,
+      "chargingIndicators": "Case LED; wireless charging supported; USB-C. Bud capacity 45 mAh, case 515 mAh.",
+      "notes": "ANC on: 5 h buds / 24 h total. ANC off: 6 h buds / 30 h total. caseHours stores the with-ANC total. Case value is last-known once buds are out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 24
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Adaptive ANC 1.0 (pre-trained algorithms) plus Adaptive Noise Control. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive Active Noise Cancelling",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.ambient",
+        "name": "Ambient Sound",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive Noise Control",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "9-band Equalizer",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.adaptive-eq",
+        "name": "Adaptive EQ 2.0",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.volume-eq",
+        "name": "Volume EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "360 Audio with head tracking",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "Dynamic head tracking",
+        "availability": "official-app"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Auto Switch",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.auracast",
+        "name": "Auracast",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.head-gesture",
+        "name": "Head gestures (nod/shake)",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.samsung.voice-command",
+        "name": "Voice Command",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.samsung.galaxy-ai",
+        "name": "Galaxy AI (Gemini/Bixby, Live Translate/Interpreter)",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.quick-panel",
+        "name": "Quick Panel audio controls and per-app presets",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.find-my-earbuds",
+        "name": "Find My Earbuds / Lost Mode",
+        "availability": "official-app"
+      },
+      {
+        "id": "app.battery-widget",
+        "name": "Battery Info widget",
+        "availability": "official-app"
+      },
+      {
+        "id": "firmware.update",
+        "name": "Earbud software update",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "pinch",
+        "slide",
+        "head-gesture",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "single pinch",
+          "action": "Play/pause, answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double pinch",
+          "action": "Next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple pinch",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "pinch and hold",
+          "action": "ANC/Ambient or preset action (customizable)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "Volume up/down",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "nod / shake head",
+          "action": "Accept/decline calls and interact with Bixby",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Blade pinch/swipe plus head gestures on One UI 8.5+."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 9,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "Samsung Scalable Codec",
+        "SSC-UHQ",
+        "LC3"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "24-bit/96 kHz SSC-UHQ. 9-band EQ. No Bluetooth multipoint; Auto Switch only. Open-type in-ear fit without silicone tips."
+    },
+    "appOnlyFeatures": [
+      "9-band EQ",
+      "Volume EQ",
+      "Adaptive Noise Control",
+      "360 Audio",
+      "Head gestures",
+      "Voice Command",
+      "Quick Panel presets",
+      "Battery Info widget"
+    ],
+    "featureDeltaFromPrevious": [
+      "New open-type in-ear design without ear tips",
+      "Adaptive ANC 1.0 plus Adaptive Noise Control",
+      "9-band equalizer and Volume EQ",
+      "Head gestures and Voice Command",
+      "Bluetooth 6.1, IP54, wireless charging",
+      "5 h ANC / 6 h off, 24 h/30 h total"
+    ],
+    "sources": [
+      {
+        "url": "https://www.samsung.com/us/audio-sound/galaxy-buds4/",
+        "type": "official-product",
+        "title": "Galaxy Buds4",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.samsung.com/us/mobile-audio/galaxy-buds/compare/",
+        "type": "official-product",
+        "title": "Compare Galaxy Buds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.samsung.com/us/support/answer/ANS10003422/",
+        "type": "official-support",
+        "title": "Add earbud widgets to your Galaxy phone",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No absolute ANC/Transparency dB published.",
+      "Samsung does not publish the 9-band EQ preset labels on the US page.",
+      "Case battery freshness when buds are out is undocumented."
+    ],
+    "notes": "Battery display: split buds + separate case, last-known case once buds are out.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Samsung",
+    "companySlug": "samsung",
+    "family": "Galaxy Buds",
+    "model": "Galaxy Buds4 Pro",
+    "slug": "galaxy-buds4-pro",
+    "generation": "4",
+    "variant": "Pro",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Galaxy Wearable",
+      "platforms": [
+        "android",
+        "windows"
+      ],
+      "packageIds": [
+        "com.samsung.android.app.watchmanager"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.samsung.android.app.watchmanager"
+      ],
+      "appVersionObserved": "Galaxy Wearable listing updated 2026-10-06; version string not shown",
+      "notes": "On One UI 8.0+ Galaxy devices, ANC/EQ/Quick Panel settings are available in device settings without Galaxy Wearable."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 7,
+      "caseHours": 26,
+      "chargingIndicators": "Case LED; wireless charging supported; USB-C. Bud capacity 61 mAh, case 530 mAh.",
+      "notes": "ANC on: 6 h buds / 26 h total. ANC off: 7 h buds / 30 h total. caseHours stores the with-ANC total. Case value is last-known once buds are out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 26
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Adaptive ANC 2.0 with real-time processing, plus Adaptive Noise Control, Voice Detect and Siren Detect. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive Active Noise Cancelling 2.0",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.ambient",
+        "name": "Ambient Sound",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive Noise Control",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.voice-detect",
+        "name": "Voice Detect",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.siren-detect",
+        "name": "Siren Detect",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "9-band Equalizer",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.adaptive-eq",
+        "name": "Adaptive EQ 2.0",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.volume-eq",
+        "name": "Volume EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "360 Audio with head tracking",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "Dynamic head tracking",
+        "availability": "official-app"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Auto Switch",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.auracast",
+        "name": "Auracast",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.head-gesture",
+        "name": "Head gestures (nod/shake)",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.samsung.voice-command",
+        "name": "Voice Command",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.samsung.galaxy-ai",
+        "name": "Galaxy AI (Gemini/Bixby, Live Translate/Interpreter)",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.quick-panel",
+        "name": "Quick Panel audio controls and per-app presets",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.find-my-earbuds",
+        "name": "Find My Earbuds / Lost Mode",
+        "availability": "official-app"
+      },
+      {
+        "id": "app.battery-widget",
+        "name": "Battery Info widget",
+        "availability": "official-app"
+      },
+      {
+        "id": "firmware.update",
+        "name": "Earbud software update",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "pinch",
+        "slide",
+        "head-gesture",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "single pinch",
+          "action": "Play/pause, answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double pinch",
+          "action": "Next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple pinch",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "pinch and hold",
+          "action": "ANC/Ambient or preset action (customizable)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "Volume up/down",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "nod / shake head",
+          "action": "Accept/decline calls and interact with Bixby",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Metal blade pinch/swipe plus head gestures."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 9,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "Samsung Scalable Codec",
+        "SSC-UHQ",
+        "LC3"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "2-way Super Wide Woofer + tweeter, dual amplifiers, 24-bit/96 kHz SSC-UHQ. No Bluetooth multipoint; Auto Switch only."
+    },
+    "appOnlyFeatures": [
+      "9-band EQ",
+      "Volume EQ",
+      "Adaptive ANC 2.0",
+      "Voice Detect",
+      "Siren Detect",
+      "360 Audio",
+      "Head gestures",
+      "Voice Command",
+      "Quick Panel presets",
+      "Battery Info widget"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adaptive ANC 2.0 with real-time processing replaces Buds3 Pro's Adaptive Noise Control",
+      "9-band equalizer and Volume EQ",
+      "New metal blade design and dual amplifiers",
+      "Head gestures and Voice Command",
+      "Bluetooth 6.1, IP57, wireless charging",
+      "6 h ANC / 7 h off, 26 h/30 h total"
+    ],
+    "sources": [
+      {
+        "url": "https://www.samsung.com/us/audio-sound/galaxy-buds4-pro/",
+        "type": "official-product",
+        "title": "Galaxy Buds4 Pro",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.samsung.com/us/mobile-audio/galaxy-buds/compare/",
+        "type": "official-product",
+        "title": "Compare Galaxy Buds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.samsung.com/us/support/answer/ANS10003422/",
+        "type": "official-support",
+        "title": "Add earbud widgets to your Galaxy phone",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No absolute ANC/Transparency dB published.",
+      "Samsung does not publish the 9-band EQ preset labels on the US page.",
+      "Case battery freshness when buds are out is undocumented."
+    ],
+    "notes": "Battery display: split buds + separate case, last-known case once buds are out.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Samsung",
+    "companySlug": "samsung",
+    "family": "Galaxy Buds",
+    "model": "Galaxy Buds On",
+    "slug": "galaxy-buds-on",
+    "generation": "On",
+    "variant": "Open",
+    "releaseYear": 2026,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "Galaxy Wearable",
+      "platforms": [
+        "android",
+        "windows"
+      ],
+      "packageIds": [
+        "com.samsung.android.app.watchmanager"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.samsung.android.app.watchmanager"
+      ],
+      "appVersionObserved": "Galaxy Wearable listing updated 2026-10-06; version string not shown",
+      "notes": "No app needed for basic pairing on Galaxy devices; Galaxy Wearable for detailed settings on other Android devices."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9.5,
+      "caseHours": 38,
+      "chargingIndicators": "Case LED; wireless charging supported; USB-C. Bud capacity 61 mAh, case 530 mAh.",
+      "notes": "9.5 h buds / 38 h total. No ANC, so the single figure is the no-ANC runtime. Case value is last-known once buds are out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 38
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear clip design with no ANC. Samsung relies on Sound Leakage Cancellation and Adaptive Volume instead."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "360 Audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.sound-leakage-cancellation",
+        "name": "Sound Leakage Cancellation",
+        "availability": "device-only"
+      },
+      {
+        "id": "vendor.samsung.adaptive-volume",
+        "name": "Adaptive Volume Adjust",
+        "availability": "device-only"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Auto Switch",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.auracast",
+        "name": "Auracast",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.head-gesture",
+        "name": "Head gestures (nod/shake)",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.samsung.voice-command",
+        "name": "Voice Command",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.samsung.quick-voice-memo",
+        "name": "Quick Voice Memo",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.samsung.gemini",
+        "name": "Gemini Live hands-free",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.galaxy-ai",
+        "name": "Galaxy AI assistance",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.samsung.find-my-earbuds",
+        "name": "Find My Earbuds / Lost Mode",
+        "availability": "official-app"
+      },
+      {
+        "id": "app.battery-widget",
+        "name": "Battery Info widget",
+        "availability": "official-app"
+      },
+      {
+        "id": "firmware.update",
+        "name": "Earbud software update",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide",
+        "head-gesture",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "Play/pause, answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-tap",
+          "action": "Next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/Ambient (no ANC here), voice assistant or Quick Voice Memo",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "Volume up/down",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "nod / shake head",
+          "action": "Accept/decline calls, dismiss alarms, check notifications",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch and swipe on the clip; head gestures require One UI 8.5+."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "Samsung Scalable Codec",
+        "SSC-UHQ",
+        "LC3"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "24-bit/96 kHz SSC-UHQ, TwinBoost 11.3 mm dual drivers. 360 Audio without documented head tracking. No multipoint; Auto Switch only."
+    },
+    "appOnlyFeatures": [
+      "Equalizer",
+      "360 Audio",
+      "Adaptive Volume",
+      "Head gestures",
+      "Voice Command",
+      "Quick Voice Memo",
+      "Gemini Live",
+      "Find My Earbuds",
+      "Battery Info widget"
+    ],
+    "featureDeltaFromPrevious": [
+      "Samsung's first open-ear clip-on Galaxy Buds",
+      "9.5 h buds / 38 h total with case",
+      "24-bit/96 kHz SSC-UHQ, Sound Leakage Cancellation and Adaptive Volume",
+      "Bluetooth 6.2, IP54",
+      "No ANC by design",
+      "Head gestures and Voice Command"
+    ],
+    "sources": [
+      {
+        "url": "https://www.samsung.com/us/audio-sound/galaxy-buds-on/",
+        "type": "official-product",
+        "title": "Galaxy Buds On",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.samsung.com/us/mobile-audio/galaxy-buds/compare/",
+        "type": "official-product",
+        "title": "Compare Galaxy Buds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.samsung.com/us/support/answer/ANS10003422/",
+        "type": "official-support",
+        "title": "Add earbud widgets to your Galaxy phone",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No ANC, so no ANC/Transparency dB.",
+      "Samsung does not publish a head-tracking claim for Buds On's 360 Audio.",
+      "No formal IP rating for the charging case.",
+      "Case battery freshness when buds are out is undocumented."
+    ],
+    "notes": "Battery-display surprise: despite being a 2026 flagship, Buds On has no ANC and only one battery figure (9.5 h). Do not show an ANC toggle for it.",
+    "researchedAt": "2026-11-10"
+  }
+]

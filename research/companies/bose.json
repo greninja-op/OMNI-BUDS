@@ -1,0 +1,3551 @@
+[
+  {
+    "company": "Bose",
+    "companySlug": "bose",
+    "family": "QuietComfort Ultra",
+    "model": "QuietComfort Ultra Earbuds (2nd Gen)",
+    "slug": "bose-quietcomfort-ultra-earbuds-2nd-gen",
+    "generation": "2",
+    "variant": "Ultra",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Bose app",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.bose.bosemusic"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.bose.bosemusic"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-22)",
+      "notes": "Formerly Bose Music. Requires iOS 16+ / Android 11+."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": null,
+      "caseHours": 18,
+      "chargingIndicators": "Earbud status light inside case; case front LED with 5 bands.",
+      "notes": "Bose publishes 6 h with Immersive Audio off and 4 h with it on; ANC is always part of Quiet mode. Case adds 18 h (three full charges). App collapses both buds to the lower reading and keeps the last-known case value while buds are out.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "quiet",
+        "aware",
+        "immersion",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": true,
+      "notes": "CustomTune calibrates to the ear; ActiveSense in Aware mode; Wind Block available in modes. Bose does not market adaptive ANC on this model; ActiveSense (where present) adapts transparency, not Quiet-mode ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adjustable Quiet mode ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Aware mode with ActiveSense",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.custom-modes",
+        "name": "Custom listening modes",
+        "availability": "official-app",
+        "notes": "Combine ANC level, Wind Block, ActiveSense and Immersive Audio."
+      },
+      {
+        "id": "noise-control.wind-block",
+        "name": "Wind Block",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.immersive",
+        "name": "Bose Immersive Audio (Still/Motion)",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.customtune",
+        "name": "CustomTune ear calibration",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "3-band adjustable EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.snapdragon-sound",
+        "name": "Snapdragon Sound / aptX Adaptive",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.shortcuts",
+        "name": "Customizable touch shortcuts",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.battery-prediction",
+        "name": "Battery prediction",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "press and hold",
+          "action": "cycle listening modes / shortcut",
+          "configurableInApp": true,
+          "notes": "Default shortcut cycles Quiet, Aware and Immersion."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Either earbud can be used independently."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Snapdragon Sound; aptX Adaptive up to 48 kHz; IPX4; wireless charging case."
+    },
+    "appOnlyFeatures": [
+      "custom-modes",
+      "wind-block",
+      "battery-prediction",
+      "shortcuts",
+      "immersive-audio-still-motion",
+      "equalizer"
+    ],
+    "featureDeltaFromPrevious": [
+      "Snapdragon Sound and aptX Adaptive added versus the 2023 Ultra Earbuds.",
+      "Bose claims improved noise cancelling and call quality.",
+      "Same 6 h / 18 h battery rating as the first generation."
+    ],
+    "sources": [
+      {
+        "url": "https://support.bose.com/article/quietcomfort-ultra-earbuds-gen-2-specifications",
+        "type": "official-product",
+        "title": "QuietComfort Ultra Earbuds (2nd Gen) specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.bose.com/article/ultra-open-earbuds-2nd-gen-checking-the-remaining-battery-charge",
+        "type": "official-support",
+        "title": "Bose support - checking remaining battery charge (case last-known behaviour)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.bose.bosemusic",
+        "type": "official-app-store",
+        "title": "Bose app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "Exact case LED percentage bands differ by model; not fully captured.",
+      "App version number is not displayed on the Play listing.",
+      "No official ANC-off runtime published; the quoted bud hours are the ANC-on figure.",
+      "Case last-known behaviour is explicitly documented for Ultra Open Earbuds (2nd Gen); it is inferred for this model from Bose's shared app behaviour."
+    ],
+    "notes": "Successor to the 2023 QuietComfort Ultra Earbuds.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bose",
+    "companySlug": "bose",
+    "family": "QuietComfort Ultra",
+    "model": "QuietComfort Ultra Earbuds",
+    "slug": "bose-quietcomfort-ultra-earbuds",
+    "generation": "1",
+    "variant": "Ultra",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Bose app",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.bose.bosemusic"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.bose.bosemusic"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-22)",
+      "notes": "Formerly Bose Music."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": null,
+      "caseHours": 18,
+      "chargingIndicators": "Earbud status light inside case; case front LED.",
+      "notes": "6 h Immersive off / 4 h Immersive on; 18 h case. Wireless charging only via optional case cover.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "quiet",
+        "aware",
+        "immersion",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": true,
+      "notes": "CustomTune; ActiveSense; Wind Block. Bose does not market adaptive ANC on this model; ActiveSense (where present) adapts transparency, not Quiet-mode ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adjustable Quiet mode ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Aware mode with ActiveSense",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.custom-modes",
+        "name": "Custom listening modes",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "noise-control.wind-block",
+        "name": "Wind Block",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.immersive",
+        "name": "Bose Immersive Audio (Still/Motion)",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.customtune",
+        "name": "CustomTune ear calibration",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "3-band adjustable EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.shortcuts",
+        "name": "Customizable touch shortcuts",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "press and hold",
+          "action": "cycle listening modes / shortcut",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IPX4; Snapdragon Sound; aptX Adaptive."
+    },
+    "appOnlyFeatures": [
+      "custom-modes",
+      "wind-block",
+      "shortcuts",
+      "immersive-audio-still-motion",
+      "equalizer"
+    ],
+    "featureDeltaFromPrevious": [
+      "Replaced the QuietComfort Earbuds II.",
+      "Immersive Audio and CustomTune added versus QC Earbuds II.",
+      "Six microphones total (three per bud)."
+    ],
+    "sources": [
+      {
+        "url": "https://www.bose.com/pressroom/bose-announces-new-quietcomfort-ultra-headphones-and-earbuds",
+        "type": "official-product",
+        "title": "Bose announcement - QuietComfort Ultra Earbuds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.bose.com/article/quietcomfort-ultra-earbuds-specifications",
+        "type": "official-product",
+        "title": "QuietComfort Ultra Earbuds specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.bose.bosemusic",
+        "type": "official-app-store",
+        "title": "Bose app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "Case wireless charging requires an optional cover; accessory SKU not recorded.",
+      "App version number not displayed.",
+      "No official ANC-off runtime published; the quoted bud hours are the ANC-on figure.",
+      "Case last-known behaviour is explicitly documented for Ultra Open Earbuds (2nd Gen); it is inferred for this model from Bose's shared app behaviour."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bose",
+    "companySlug": "bose",
+    "family": "QuietComfort Ultra",
+    "model": "QuietComfort Ultra Headphones (2nd Gen)",
+    "slug": "bose-quietcomfort-ultra-headphones-2nd-gen",
+    "generation": "2",
+    "variant": "Ultra",
+    "releaseYear": 2025,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Bose app",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.bose.bosemusic"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.bose.bosemusic"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-22)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 30,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Voice prompt; app percentage; USB-C.",
+      "notes": "30 h Quiet/Aware, 23 h with Immersive Audio. 15-minute charge = 3 h (2 h with Immersive).",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "quiet",
+        "aware",
+        "immersion",
+        "cinema",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": true,
+      "notes": "CustomTune; ActiveSense; Cinema mode new on this generation. Bose does not market adaptive ANC on this model; ActiveSense (where present) adapts transparency, not Quiet-mode ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adjustable ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Aware mode with ActiveSense",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.custom-modes",
+        "name": "Custom modes",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "noise-control.wind-block",
+        "name": "Wind Block",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.immersive",
+        "name": "Bose Immersive Audio",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.cinema-mode",
+        "name": "Cinema mode (TrueSpatial)",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.customtune",
+        "name": "CustomTune ear calibration",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "3-band adjustable EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.snapdragon-sound",
+        "name": "Snapdragon Sound",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.usb-c-audio",
+        "name": "USB-C audio while charging",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction button short press",
+          "action": "play/pause / call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "multifunction button double press",
+          "action": "next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "multifunction button long press",
+          "action": "cycle listening modes",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "capacitive strip swipe",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": "Shortcut access via touch strip."
+        }
+      ],
+      "physicalButtons": "Power/Bluetooth pairing, multifunction, capacitive touch strip.",
+      "configurableInApp": true,
+      "notes": "3.5 mm and USB-C wired inputs."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Bluetooth 5.4; replaceable battery; 3.5 mm cable."
+    },
+    "appOnlyFeatures": [
+      "custom-modes",
+      "wind-block",
+      "cinema-mode",
+      "immersive-audio",
+      "equalizer",
+      "shortcuts"
+    ],
+    "featureDeltaFromPrevious": [
+      "Battery increased from 24 h to 30 h (23 h with Immersive Audio).",
+      "Bluetooth 5.4 and Snapdragon Sound added.",
+      "Cinema mode added.",
+      "Battery is now user-replaceable per Bose."
+    ],
+    "sources": [
+      {
+        "url": "https://support.bose.com/article/product-specifications-bose-quietcomfort-ultra-headphones-2nd-gen",
+        "type": "official-product",
+        "title": "QuietComfort Ultra Headphones (2nd Gen) product specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.bose.com/p/headphones/bose-quietcomfort-ultra-headphones-2nd-gen/QCUH2-HEADPHONEARN.html",
+        "type": "official-product",
+        "title": "QuietComfort Ultra Headphones (2nd Gen) product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.bose.bosemusic",
+        "type": "official-app-store",
+        "title": "Bose app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "Exact codec list beyond aptX Adaptive/SBC/AAC not published on the spec page.",
+      "App version number not displayed.",
+      "No official ANC-off runtime published; the quoted bud hours are the ANC-on figure."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bose",
+    "companySlug": "bose",
+    "family": "QuietComfort Ultra",
+    "model": "QuietComfort Ultra Headphones",
+    "slug": "bose-quietcomfort-ultra-headphones",
+    "generation": "1",
+    "variant": "Ultra",
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Bose app",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.bose.bosemusic"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.bose.bosemusic"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-22)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 24,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Voice prompt; app percentage.",
+      "notes": "24 h with Immersive off, 18 h with Immersive on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "quiet",
+        "aware",
+        "immersion",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": true,
+      "notes": "CustomTune; ActiveSense; Wind Block. Bose does not market adaptive ANC on this model; ActiveSense (where present) adapts transparency, not Quiet-mode ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adjustable ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Aware mode with ActiveSense",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.custom-modes",
+        "name": "Custom modes",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "noise-control.wind-block",
+        "name": "Wind Block",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.immersive",
+        "name": "Bose Immersive Audio",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.customtune",
+        "name": "CustomTune ear calibration",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "3-band adjustable EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction button short press",
+          "action": "play/pause / call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "multifunction button double press",
+          "action": "next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "multifunction button long press",
+          "action": "cycle listening modes",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "capacitive strip swipe",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/Bluetooth pairing, multifunction, capacitive touch strip.",
+      "configurableInApp": true,
+      "notes": "2.5 mm to 3.5 mm cable included."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Bluetooth 5.3; 2.5 mm jack."
+    },
+    "appOnlyFeatures": [
+      "custom-modes",
+      "wind-block",
+      "immersive-audio-still-motion",
+      "equalizer"
+    ],
+    "featureDeltaFromPrevious": [
+      "Replaced the Noise Cancelling Headphones 700.",
+      "Immersive Audio with head tracking added.",
+      "CustomTune added."
+    ],
+    "sources": [
+      {
+        "url": "https://www.bose.com/pressroom/bose-announces-new-quietcomfort-ultra-headphones-and-earbuds",
+        "type": "official-product",
+        "title": "Bose announcement - QuietComfort Ultra Headphones",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.bose.com/article/quietcomfort-ultra-headphones-specifications",
+        "type": "official-product",
+        "title": "QuietComfort Ultra Headphones specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.bose.bosemusic",
+        "type": "official-app-store",
+        "title": "Bose app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "App version number not displayed.",
+      "No official ANC-off runtime published; the quoted bud hours are the ANC-on figure."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bose",
+    "companySlug": "bose",
+    "family": "QuietComfort",
+    "model": "QuietComfort Headphones",
+    "slug": "bose-quietcomfort-headphones",
+    "generation": "2023",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Bose app",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.bose.bosemusic"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.bose.bosemusic"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-22)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 24,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Voice prompt; status light; 15-minute charge = 2.5 h.",
+      "notes": "24 h with ANC on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "quiet",
+        "aware",
+        "custom",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Adjustable ANC levels; custom modes; no Immersive Audio or CustomTune. Bose does not market adaptive ANC on this model; ActiveSense (where present) adapts transparency, not Quiet-mode ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adjustable ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Aware mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.custom-modes",
+        "name": "Custom modes",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Adjustable EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.spotify-tap",
+        "name": "Spotify Tap",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.wired-mode",
+        "name": "3.5 mm wired listening with in-line mic",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction button short press",
+          "action": "play/pause / call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "multifunction button double press",
+          "action": "next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "multifunction button long press",
+          "action": "cycle modes",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "volume buttons",
+          "action": "volume",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/Bluetooth, multifunction, volume up/down.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.1; 3.5 mm cable with in-line mic."
+    },
+    "appOnlyFeatures": [
+      "custom-modes",
+      "equalizer"
+    ],
+    "featureDeltaFromPrevious": [
+      "Replaced the QuietComfort 45.",
+      "Adjustable ANC levels and custom modes added.",
+      "Battery increased from 22 h to 24 h."
+    ],
+    "sources": [
+      {
+        "url": "https://www.bose.com/pressroom/bose-announces-new-quietcomfort-ultra-headphones-and-earbuds",
+        "type": "official-product",
+        "title": "Bose announcement - QuietComfort Headphones",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.bose.com/article/quietcomfort-headphones-specifications",
+        "type": "official-product",
+        "title": "QuietComfort Headphones specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.bose.bosemusic",
+        "type": "official-app-store",
+        "title": "Bose app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "Whether the app exposes a 3-band or broader EQ is not stated on the spec page.",
+      "Wear detection is not officially listed; assumed absent.",
+      "No official ANC-off runtime published; the quoted bud hours are the ANC-on figure."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bose",
+    "companySlug": "bose",
+    "family": "QuietComfort",
+    "model": "QuietComfort Earbuds",
+    "slug": "bose-quietcomfort-earbuds-2024",
+    "generation": "2024",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Bose QCE app",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Bose shipped a dedicated Bose QCE app for this model rather than the main Bose app; package ID and store URL not captured."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 8.5,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Case front LED (green/amber/red); earbud status light.",
+      "notes": "Bose quotes up to 31.5 h total including the case, not additional case hours; case holds 2.5 charges. The spec page says up to 9 h buds, while Bose marketing says 8.5 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "quiet",
+        "aware",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Three mics per bud; no CustomTune or Immersive Audio on this model. Bose does not market adaptive ANC on this model; ActiveSense (where present) adapts transparency, not Quiet-mode ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Quiet mode ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Aware mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.off",
+        "name": "ANC Off setting",
+        "availability": "both",
+        "notes": "New versus QC Ultra Earbuds."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band adjustable EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.touch-controls",
+        "name": "Customizable tap controls",
+        "availability": "official-app",
+        "notes": "Including remote selfie capture."
+      },
+      {
+        "id": "app.battery-prediction",
+        "name": "Battery prediction",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "press and hold",
+          "action": "noise mode / shortcut",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IPX4; Bluetooth 5.3; no aptX."
+    },
+    "appOnlyFeatures": [
+      "battery-prediction",
+      "touch-controls",
+      "equalizer",
+      "noise-control-off"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC Off setting added versus QuietComfort Earbuds II.",
+      "Battery increased to 8.5 h buds / 31.5 h case.",
+      "Wireless charging case added.",
+      "CustomTune and Immersive Audio removed versus Ultra line."
+    ],
+    "sources": [
+      {
+        "url": "https://support.bose.com/article/quietcomfort-earbuds-specifications",
+        "type": "official-product",
+        "title": "QuietComfort Earbuds (2024) specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.bose.com/pressroom/bose-quietcomfort-earbuds-second-gen",
+        "type": "official-product",
+        "title": "Bose press release - new QuietComfort Earbuds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.bose.com/article/qcearb24-headphonein-checking-the-remaining-battery-charge",
+        "type": "official-support",
+        "title": "Bose support - checking remaining battery charge",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Dedicated Bose QCE app package ID and store URLs not captured.",
+      "App battery split/combined semantics inferred from Bose's documented lower-bud behaviour, not from a QCE-specific screenshot.",
+      "Bose's own pages disagree between 8.5 h and 9 h bud runtime.",
+      "EQ band count not confirmed on an official spec page.",
+      "No official ANC-off runtime published; the quoted bud hours are the ANC-on figure.",
+      "Case last-known behaviour is explicitly documented for Ultra Open Earbuds (2nd Gen); it is inferred for this model from Bose's shared app behaviour."
+    ],
+    "notes": "Sold 2024-2026; distinct from the QC Ultra Earbuds despite similar name.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bose",
+    "companySlug": "bose",
+    "family": "QuietComfort",
+    "model": "QuietComfort Earbuds II",
+    "slug": "bose-quietcomfort-earbuds-ii",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Bose app",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.bose.bosemusic"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.bose.bosemusic"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-22)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": null,
+      "caseHours": 18,
+      "chargingIndicators": "Earbud status light inside case; case front LED.",
+      "notes": "6 h buds, 18 h case; three full case charges.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "quiet",
+        "aware",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": true,
+      "notes": "CustomTune; ActiveSense; no Immersive Audio. Bose does not market adaptive ANC on this model; ActiveSense (where present) adapts transparency, not Quiet-mode ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Quiet mode ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Aware mode with ActiveSense",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.custom-modes",
+        "name": "Custom modes",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "noise-control.wind-block",
+        "name": "Wind Block",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.customtune",
+        "name": "CustomTune ear calibration",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "3-band adjustable EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "press and hold",
+          "action": "noise mode / shortcut",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IPX4; Bluetooth 5.3; no aptX."
+    },
+    "appOnlyFeatures": [
+      "custom-modes",
+      "wind-block",
+      "equalizer",
+      "active-sense"
+    ],
+    "featureDeltaFromPrevious": [
+      "CustomTune added versus QuietComfort Earbuds (2020).",
+      "Battery reduced from 6 h + 12 h to 6 h + 18 h case capacity.",
+      "Smaller case and new stability bands."
+    ],
+    "sources": [
+      {
+        "url": "https://support.bose.com/article/quietcomfort-earbuds-ii-specifications",
+        "type": "official-product",
+        "title": "QuietComfort Earbuds II specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.bose.com/article/quietcomfort-earbuds-ii-checking-the-remaining-battery-charge",
+        "type": "official-support",
+        "title": "Bose support - checking remaining battery charge",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.bose.bosemusic",
+        "type": "official-app-store",
+        "title": "Bose app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "App version number not displayed.",
+      "Case wireless charging requires optional cover.",
+      "No official ANC-off runtime published; the quoted bud hours are the ANC-on figure.",
+      "Case last-known behaviour is explicitly documented for Ultra Open Earbuds (2nd Gen); it is inferred for this model from Bose's shared app behaviour."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bose",
+    "companySlug": "bose",
+    "family": "QuietComfort",
+    "model": "QuietComfort 45",
+    "slug": "bose-quietcomfort-45",
+    "generation": "45",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Bose app",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.bose.bosemusic"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.bose.bosemusic"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-22)",
+      "notes": "Originally Bose Music."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 24,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Voice prompt; 15-minute charge = 2.5 h.",
+      "notes": "24 h ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "quiet",
+        "aware",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Two-mode ANC/aware toggle; no adjustable levels or custom modes. Bose does not market adaptive ANC on this model; ActiveSense (where present) adapts transparency, not Quiet-mode ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Aware mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Adjustable EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.wired-mode",
+        "name": "3.5 mm wired listening",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction button short press",
+          "action": "play/pause / call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "multifunction button double press",
+          "action": "next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "multifunction button long press",
+          "action": "ANC/aware toggle",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "volume buttons",
+          "action": "volume",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/Bluetooth, multifunction, volume up/down.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.1; 3.5 mm cable."
+    },
+    "appOnlyFeatures": [
+      "equalizer"
+    ],
+    "featureDeltaFromPrevious": [
+      "USB-C charging replaced micro-USB versus QC 35 II.",
+      "Battery increased to 24 h.",
+      "Multipoint added."
+    ],
+    "sources": [
+      {
+        "url": "https://support.bose.com/article/quietcomfort-45-specifications",
+        "type": "official-product",
+        "title": "QuietComfort 45 specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.bose.bosemusic",
+        "type": "official-app-store",
+        "title": "Bose app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official spec page not directly captured; battery and codecs from Bose's published QC45 data.",
+      "No official ANC/transparency dB figures.",
+      "EQ band count not confirmed.",
+      "No official ANC-off runtime published; the quoted bud hours are the ANC-on figure."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bose",
+    "companySlug": "bose",
+    "family": "QuietComfort",
+    "model": "QuietComfort SE",
+    "slug": "bose-quietcomfort-se",
+    "generation": "SE",
+    "variant": "SE",
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Bose app",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.bose.bosemusic"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.bose.bosemusic"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-22)",
+      "notes": "Originally Bose Music."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 24,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Voice prompt.",
+      "notes": "24 h ANC; retail-club variant of QC45.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "quiet",
+        "aware",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Same ANC platform as QC45. Bose does not market adaptive ANC on this model; ActiveSense (where present) adapts transparency, not Quiet-mode ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Aware mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Adjustable EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.wired-mode",
+        "name": "3.5 mm wired listening",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction button short press",
+          "action": "play/pause / call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "multifunction button double press",
+          "action": "next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "multifunction button long press",
+          "action": "ANC/aware toggle",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "volume buttons",
+          "action": "volume",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/Bluetooth, multifunction, volume up/down.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.1."
+    },
+    "appOnlyFeatures": [
+      "equalizer"
+    ],
+    "featureDeltaFromPrevious": [
+      "Club/retail variant of QC45; no feature changes."
+    ],
+    "sources": [
+      {
+        "url": "https://support.bose.com/article/quietcomfort-se-specifications",
+        "type": "official-product",
+        "title": "QuietComfort SE specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.bose.bosemusic",
+        "type": "official-app-store",
+        "title": "Bose app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official spec page not directly captured; data mirrors QC45.",
+      "No official ANC/transparency dB figures.",
+      "Regional availability and exact accessory bundle not verified.",
+      "No official ANC-off runtime published; the quoted bud hours are the ANC-on figure."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bose",
+    "companySlug": "bose",
+    "family": "Ultra Open",
+    "model": "Ultra Open Earbuds",
+    "slug": "bose-ultra-open-earbuds",
+    "generation": "1",
+    "variant": "Ultra Open",
+    "releaseYear": 2024,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "Bose app",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.bose.bosemusic"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.bose.bosemusic"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-22)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7.5,
+      "caseHours": 19.5,
+      "chargingIndicators": "Case LED; 10-minute charge = 2 h.",
+      "notes": "7.5 h without Immersive Audio, 4.5 h with it; 19.5 h case. Bose support page also lists 7 h / 4 h / 19.5 h, an inconsistency with the product page.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Open-ear design; no ANC. OpenAudio plus Immersive Audio."
+    },
+    "features": [
+      {
+        "id": "audio.openaudio",
+        "name": "Bose OpenAudio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.immersive",
+        "name": "Bose Immersive Audio (Still/Motion)",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.auto-volume",
+        "name": "Auto Volume",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "3-band adjustable EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.snapdragon-sound",
+        "name": "Snapdragon Sound / aptX Adaptive",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.simplesync",
+        "name": "SimpleSync with Bose soundbars",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": "Button on battery barrel."
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple press",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "press and hold",
+          "action": "voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Single multi-function button on each earbud barrel.",
+      "configurableInApp": true,
+      "notes": "No touch surface."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "IPX4 earbuds, IPX1 case; 6 g per bud; 48 h standby."
+    },
+    "appOnlyFeatures": [
+      "auto-volume",
+      "immersive-audio-still-motion",
+      "simplesync",
+      "equalizer"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://support.bose.com/article/ultra-open-earbuds-specifications",
+        "type": "official-product",
+        "title": "Ultra Open Earbuds specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.bose.com/pressroom/bose-ultra-open-earbuds",
+        "type": "official-product",
+        "title": "Bose press release - Ultra Open Earbuds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.bose.bosemusic",
+        "type": "official-app-store",
+        "title": "Bose app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Bose's own pages disagree between 7.5 h and 7 h bud runtime.",
+      "No ANC/transparency dB figures (no ANC).",
+      "Wear detection not confirmed; likely absent.",
+      "App version number not displayed.",
+      "Case last-known behaviour is explicitly documented for Ultra Open Earbuds (2nd Gen); it is inferred for this model from Bose's shared app behaviour."
+    ],
+    "notes": "Open-ear clip design; not an ANC product.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bose",
+    "companySlug": "bose",
+    "family": "Ultra Open",
+    "model": "Ultra Open Earbuds (2nd Gen)",
+    "slug": "bose-ultra-open-earbuds-2nd-gen",
+    "generation": "2",
+    "variant": "Ultra Open",
+    "releaseYear": 2026,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "Bose app",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.bose.bosemusic"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.bose.bosemusic"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-22)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": null,
+      "chargingIndicators": "Case LED; 10-minute charge = 2 h.",
+      "notes": "Bose support states up to 10 h with Immersive Audio and Auto Volume off; case holds three full charges (hours not stated on the captured page).",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Open-ear; no ANC."
+    },
+    "features": [
+      {
+        "id": "audio.openaudio",
+        "name": "Bose OpenAudio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.immersive",
+        "name": "Bose Immersive Audio",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.auto-volume",
+        "name": "Auto Volume",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Adjustable EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.simplesync",
+        "name": "SimpleSync",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple press",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "press and hold",
+          "action": "voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Multi-function button on each earbud.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Open-ear; IPX4 earbuds."
+    },
+    "appOnlyFeatures": [
+      "auto-volume",
+      "immersive-audio",
+      "simplesync",
+      "equalizer"
+    ],
+    "featureDeltaFromPrevious": [
+      "Battery increased from 7.5 h to 10 h.",
+      "Case now holds three full charges.",
+      "Lighter, redesigned flex arm per Bose."
+    ],
+    "sources": [
+      {
+        "url": "https://support.bose.com/article/ultra-open-earbuds-2nd-gen-checking-the-remaining-battery-charge",
+        "type": "official-support",
+        "title": "Ultra Open Earbuds (2nd Gen) - checking remaining battery charge",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.bose.bosemusic",
+        "type": "official-app-store",
+        "title": "Bose app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official full spec page and case-hour rating not captured.",
+      "Codec list beyond SBC/AAC not confirmed.",
+      "App version number not displayed.",
+      "No ANC (open-ear).",
+      "Case last-known behaviour is explicitly documented for Ultra Open Earbuds (2nd Gen); it is inferred for this model from Bose's shared app behaviour."
+    ],
+    "notes": "2026 second generation; battery semantics confirmed by Bose's own support wording.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bose",
+    "companySlug": "bose",
+    "family": "Sport",
+    "model": "Sport Earbuds",
+    "slug": "bose-sport-earbuds",
+    "generation": "1",
+    "variant": "Sport",
+    "releaseYear": 2020,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Bose app",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.bose.bosemusic"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.bose.bosemusic"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-22)",
+      "notes": "Originally Bose Music."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 10,
+      "chargingIndicators": "Case LED; voice prompt announces battery on removal.",
+      "notes": "5 h buds + 10 h case; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Passive isolation only."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Adjustable EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Auto play/pause on removal",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.voice-prompts",
+        "name": "Voice prompt battery level",
+        "availability": "both",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "press and hold left bud",
+          "action": "battery check shortcut",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "IPX4; stay-hold ear tips."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "Bluetooth 5.1; sport fit."
+    },
+    "appOnlyFeatures": [
+      "equalizer",
+      "voice-prompts"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://support.bose.com/article/sport-earbuds-specifications",
+        "type": "official-product",
+        "title": "Bose Sport Earbuds specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.bose.com/article/sport-headphonein-checking-the-remaining-battery-charge",
+        "type": "official-support",
+        "title": "Bose support - checking remaining battery charge (Sport Earbuds)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official spec page not directly captured; battery/Bluetooth data from Bose support pages.",
+      "EQ band count not confirmed.",
+      "Multipoint absence needs confirmation.",
+      "No ANC/transparency.",
+      "Case last-known behaviour is explicitly documented for Ultra Open Earbuds (2nd Gen); it is inferred for this model from Bose's shared app behaviour."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bose",
+    "companySlug": "bose",
+    "family": "SoundSport",
+    "model": "SoundSport Free",
+    "slug": "bose-soundsport-free",
+    "generation": "1",
+    "variant": "Free",
+    "releaseYear": 2017,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Bose Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.bose.boseconnect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.bose.boseconnect"
+      ],
+      "appVersionObserved": null,
+      "notes": "Legacy Bose Connect app; superseded by Bose app for newer products."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 10,
+      "chargingIndicators": "Five-LED case gauge (0-20/20-40/40-60/60-80/80-100%).",
+      "notes": "5 h buds + 10 h case; no ANC. Bose documents that the app shows the lower of the two earbud percentages.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "app.voice-prompts",
+        "name": "Voice prompt battery level",
+        "availability": "both",
+        "notes": "Right bud announces level on removal."
+      },
+      {
+        "id": "app.find-my-buds",
+        "name": "Find My Buds",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [],
+      "physicalButtons": "Play/pause, volume, skip buttons on each bud.",
+      "configurableInApp": false,
+      "notes": "No touch controls."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "IPX4; Bluetooth 4.1; 5 h."
+    },
+    "appOnlyFeatures": [
+      "find-my-buds",
+      "voice-prompts"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://support.bose.com/article/soundsport-free-specifications",
+        "type": "official-product",
+        "title": "SoundSport Free specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.bose.com/s/article/sspfree-headphonein-checking-the-remaining-battery-charge---ka08c000001bujfaaq",
+        "type": "official-support",
+        "title": "Bose support - checking remaining battery charge (SoundSport Free)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official spec page not directly captured; battery/Bluetooth data from Bose support pages.",
+      "Bose Connect package ID needs confirmation.",
+      "Codec list beyond SBC/AAC not confirmed.",
+      "No ANC (not applicable).",
+      "Case last-known behaviour is explicitly documented for Ultra Open Earbuds (2nd Gen); it is inferred for this model from Bose's shared app behaviour."
+    ],
+    "notes": "Legacy 2017 product kept for historical coverage.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bose",
+    "companySlug": "bose",
+    "family": "Noise Cancelling Headphones",
+    "model": "Noise Cancelling Headphones 700",
+    "slug": "bose-noise-cancelling-headphones-700",
+    "generation": "700",
+    "variant": null,
+    "releaseYear": 2019,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Bose app",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.bose.bosemusic"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.bose.bosemusic"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-22)",
+      "notes": "Originally Bose Music."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 20,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Voice prompt; app percentage.",
+      "notes": "20 h with ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc-0-10",
+        "aware",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Ten ANC levels; no adaptive mode. Bose does not market adaptive ANC on this model; ActiveSense (where present) adapts transparency, not Quiet-mode ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "10-level adjustable ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Aware mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Adjustable EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "controls.capacitive-touch",
+        "name": "Touch controls on right earcup",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.wired-mode",
+        "name": "2.5 mm to 3.5 mm wired listening",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "swipe left/right",
+          "action": "next/previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "press and hold",
+          "action": "voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/Bluetooth, ANC button.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.0; 2.5 mm jack."
+    },
+    "appOnlyFeatures": [
+      "equalizer",
+      "anc-levels"
+    ],
+    "featureDeltaFromPrevious": [
+      "Replaced the QuietComfort 35 II in Bose's flagship line.",
+      "Ten-level ANC and capacitive touch added."
+    ],
+    "sources": [
+      {
+        "url": "https://support.bose.com/article/noise-cancelling-headphones-700-specifications",
+        "type": "official-product",
+        "title": "Noise Cancelling Headphones 700 specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.bose.bosemusic",
+        "type": "official-app-store",
+        "title": "Bose app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official spec page not directly captured; battery/Bluetooth data from Bose's published NC700 data.",
+      "No official ANC/transparency dB figures.",
+      "App version number not displayed.",
+      "No official ANC-off runtime published; the quoted bud hours are the ANC-on figure."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bose",
+    "companySlug": "bose",
+    "family": "Aviation",
+    "model": "A20 Aviation Headset (Bluetooth)",
+    "slug": "bose-a20-aviation-headset-bluetooth",
+    "generation": "A20",
+    "variant": "Bluetooth",
+    "releaseYear": 2010,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "The Bose app does not support the A20 Aviation Headset. Battery state is only available from the control-module LED; there is no percentage readout in any app."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 45,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Control-module LED: green flashing = power on and batteries good; amber fast flashing = 8 hours or less remaining; red very fast flashing = 2 hours or less remaining (Bluetooth is disabled at this level); off = power off or batteries depleted.",
+      "notes": "One combined headset battery, two AA alkaline cells, no charging case. 45 hours is Bose's official minimum in typical general-aviation noise; Bluetooth use reduces runtime, but Bose publishes no separate Bluetooth-on figure for the A20.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "On"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Aviation ANR (active noise reduction) engineered for cockpit low-frequency noise, not consumer ANC. No transparency or ambient mode. Passive attenuation continues with the headset switched off."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Aviation active noise reduction",
+        "availability": "device-only",
+        "notes": "Single on/off ANR mode; no level selection."
+      },
+      {
+        "id": "noise-control.passive",
+        "name": "Passive noise attenuation",
+        "availability": "device-only",
+        "notes": "Certified passive headset; communications remain available with no battery power."
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth calls and audio",
+        "availability": "device-only",
+        "notes": "Bluetooth 2.1 hands-free profile; one connected device at a time."
+      },
+      {
+        "id": "audio.aux-input",
+        "name": "3.5 mm auxiliary audio input",
+        "availability": "device-only",
+        "notes": "Aux-in cable adapter included."
+      },
+      {
+        "id": "audio.priority-mix",
+        "name": "Audio priority mute/mix",
+        "availability": "device-only",
+        "notes": "Selector inside the battery compartment chooses whether intercom audio mutes or mixes with the secondary/Bluetooth source."
+      },
+      {
+        "id": "comms.aviation-intercom",
+        "name": "Aircraft intercom and radio communications",
+        "availability": "device-only",
+        "notes": "Dual G/A, 6-pin LEMO, U-174 and 5-pin XLR configurations; TSO-C139 approved."
+      },
+      {
+        "id": "controls.side-swappable-mic",
+        "name": "Side-swappable microphone and cable",
+        "availability": "device-only",
+        "notes": "Boom microphone and cable can be moved to either side without tools."
+      },
+      {
+        "id": "power.auto-shutoff",
+        "name": "Automatic shutoff",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.active-eq",
+        "name": "Active equalization",
+        "availability": "device-only",
+        "notes": "Shapes and equalizes incoming audio for speech intelligibility."
+      },
+      {
+        "id": "battery.aa",
+        "name": "Two AA alkaline batteries",
+        "availability": "device-only",
+        "notes": "Aircraft-powered variants can run from aircraft power instead."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Bluetooth function button, short press",
+          "action": "Answer/end call or start/stop Bluetooth audio",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Bluetooth function button, long press >5 s",
+          "action": "Disconnect current device and enter pairing mode",
+          "configurableInApp": false,
+          "notes": "Pairing mode exits after five minutes."
+        },
+        {
+          "gesture": "Volume + / −",
+          "action": "Adjust headphone volume",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Power and Bluetooth indicators, double press",
+          "action": "Dim or brighten indicators",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Secondary audio mode selector (inside battery compartment)",
+          "action": "Choose mute or mix priority for auxiliary/Bluetooth audio",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power button, Bluetooth function button, volume +/−, and a secondary-audio mode selector inside the control module.",
+      "configurableInApp": false,
+      "notes": "All controls are physical; there is no touch surface and no app configuration."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bose does not publish the A20 driver size or a Bluetooth codec list. Bluetooth 2.1 hands-free profile, with A2DP on later variants. One connected device at a time."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.bose.com/p/all-headphones/a20-aviation-headset-with-bluetooth/A20V2-HEADSETAVIA.html",
+        "type": "official-product",
+        "title": "Bose A20 Aviation Headset with Bluetooth product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "http://products.bose.com/pdf/customer_service/owners/og_a20_owners_en.pdf",
+        "type": "official-manual",
+        "title": "Bose A20 Aviation Headset Owner's Guide",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://boseaviation.com/wp-content/uploads/2021/07/2021-Bose-A20-ProFlight-Brochure.pdf",
+        "type": "official-product",
+        "title": "Bose A20 / ProFlight Series 2 brochure",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bose publishes no Bluetooth-on runtime figure for the A20.",
+      "Bluetooth codec list is not published; only profiles are documented.",
+      "No official ANC attenuation in dB.",
+      "No app and no battery percentage; only LED thresholds are documented.",
+      "Driver size and impedance are not published for the A20."
+    ],
+    "notes": "Record covers the Bluetooth variant only; the non-Bluetooth A20 is excluded. Connector, cable and microphone options are configuration variants of the same electronics, not separate models.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bose",
+    "companySlug": "bose",
+    "family": "Aviation",
+    "model": "A30 Aviation Headset (Bluetooth)",
+    "slug": "bose-a30-aviation-headset-bluetooth",
+    "generation": "A30",
+    "variant": "Bluetooth",
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "The Bose app does not support the A30. Battery state is reported only by the control-module LED."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 45,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Power LED: green flashing = batteries good; amber fast flashing = 8 hours or less remaining; red faster flashing = 2 hours or less remaining. Bluetooth LED: purple flashing = discoverable, blue flashing = connected, off = Bluetooth disabled.",
+      "notes": "One combined headset battery, two AA alkaline cells, no charging case. 45 hours minimum without Bluetooth, 25+ hours with Bluetooth running continuously. Aircraft-powered variants bypass the cells when aircraft power is applied; the USB port can also power the headset.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Aviation ANR with three user-selectable modes engineered for different cockpit uses: Low for intercom-off conversation, Medium for consistent broadband reduction, High for maximum radio signal-to-noise. This is not consumer ANC and there is no transparency mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Three-mode aviation ANR",
+        "availability": "device-only",
+        "notes": "Low, Medium and High selected on the control module."
+      },
+      {
+        "id": "noise-control.passive",
+        "name": "Passive noise attenuation and bypass communications",
+        "availability": "device-only",
+        "notes": "Primary intercom audio remains available with or without power."
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth calls and audio",
+        "availability": "device-only",
+        "notes": "A2DP, AVRCP, HFP, SPP and PBAP profiles; Bluetooth 4.2."
+      },
+      {
+        "id": "audio.priority-mix",
+        "name": "Bluetooth/intercom audio prioritization",
+        "availability": "device-only",
+        "notes": "Mix Bluetooth audio with intercom, or let intercom temporarily mute Bluetooth."
+      },
+      {
+        "id": "audio.aux-input",
+        "name": "3.5 mm auxiliary audio input",
+        "availability": "device-only",
+        "notes": "3.5 mm stereo input cable included."
+      },
+      {
+        "id": "audio.active-eq",
+        "name": "Active EQ on the Bluetooth path",
+        "availability": "device-only",
+        "notes": "Separate active equalization for secondary/Bluetooth audio; the primary ICS/radio path is tuned to TSO speech-intelligibility requirements."
+      },
+      {
+        "id": "comms.aviation-intercom",
+        "name": "Aircraft intercom and radio communications",
+        "availability": "device-only",
+        "notes": "Dual G/A, 6-pin LEMO, 5-pin XLR and U-174 configurations; FAA TSO and EASA E/TSO-C139a certified."
+      },
+      {
+        "id": "controls.side-swappable-mic",
+        "name": "Side-swappable microphone and cable",
+        "availability": "device-only",
+        "notes": "No tools required."
+      },
+      {
+        "id": "power.auto-shutoff",
+        "name": "Automatic shutoff and auto-on",
+        "availability": "device-only",
+        "notes": "Auto-on is available only on select panel-powered configurations."
+      },
+      {
+        "id": "battery.aa",
+        "name": "Two AA batteries or aircraft power",
+        "availability": "device-only",
+        "notes": "Supports alkaline and rechargeable chemistries; aircraft-powered units bypass batteries."
+      },
+      {
+        "id": "power.usb",
+        "name": "USB power input",
+        "availability": "device-only",
+        "notes": "USB connection in the control module can power the headset."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Noise-cancellation mode button",
+          "action": "Cycle Low / Medium / High ANR",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Bluetooth button, short press",
+          "action": "Answer/end call or play/pause Bluetooth audio",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Bluetooth button, long press",
+          "action": "Power on Bluetooth and enter pairing mode",
+          "configurableInApp": false,
+          "notes": "Also used to disconnect/re-pair."
+        },
+        {
+          "gesture": "Volume + / −",
+          "action": "Adjust headphone volume",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Control module with power, ANR mode, Bluetooth and volume controls.",
+      "configurableInApp": false,
+      "notes": "All controls are physical. No touch surface and no app."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "Bluetooth 4.2 with A2DP, AVRCP, HFP, SPP and PBAP. Bose does not publish a codec list or a multipoint claim for the A30."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Three selectable ANR modes (A20 had a single ANR mode).",
+      "25+ hours of Bluetooth-on runtime is published for the A30; Bose published no equivalent A20 figure.",
+      "USB power input in the control module.",
+      "Auto-on available on select panel-powered configurations.",
+      "Bluetooth 4.2 versus Bluetooth 2.1 on the A20."
+    ],
+    "sources": [
+      {
+        "url": "https://www.bose.com/p/aviation-headsets/bose-a30-aviation-headset/A30-HEADSETAVIA.html",
+        "type": "official-product",
+        "title": "Bose A30 Aviation Headset product page and FAQ",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.bose.com/article/a30-aviation-headset-specifications",
+        "type": "official-support",
+        "title": "Bose A30 Aviation Headset product specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.pooleys.com/media/11863/a30-aviation-headset-_faq.pdf",
+        "type": "official-manual",
+        "title": "Bose A30 Aviation Headset FAQ (official FAQ document)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Multipoint support is not stated by Bose.",
+      "Bluetooth codec list is not published.",
+      "No official ANC attenuation in dB.",
+      "No app and no battery percentage; only LED thresholds are documented.",
+      "Driver size and impedance are not published."
+    ],
+    "notes": "Record covers the Bluetooth variant only; Bose also sells non-Bluetooth A30 configurations. Connector, cable and microphone options are configuration variants of the same electronics.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bose",
+    "companySlug": "bose",
+    "family": "Sleepbuds",
+    "model": "Bose noise-masking Sleepbuds",
+    "slug": "bose-sleepbuds",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2018,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Bose Sleep",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Dedicated Bose Sleep app. Do not confuse with the Bose app or Bose Hear; Sleepbuds only work with the Sleep app."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "live",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 16,
+      "caseHours": 16,
+      "chargingIndicators": "Per-bud charging lights inside the case; five case battery lights under the lid. Micro-USB.",
+      "notes": "16 h per charge and one additional full case charge (16 h). The app shows the lower of the two bud percentages; tapping the battery meter reveals each bud separately. The case level is only shown by the five LEDs inside the lid, not in the app.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC and no transparency. Passive StayHear+ Sleep tip isolation plus masking audio."
+    },
+    "features": [
+      {
+        "id": "sleep.masking-sounds",
+        "name": "Preloaded noise-masking sleeptracks",
+        "availability": "both",
+        "notes": "Sounds are stored on the buds, not streamed."
+      },
+      {
+        "id": "sleep.in-ear-alarm",
+        "name": "Personal wake-up alarm",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sleep.sleep-timer",
+        "name": "Sleep timer",
+        "availability": "official-app",
+        "notes": "Stops masking after a set time."
+      },
+      {
+        "id": "sleep.phone-call-alerts",
+        "name": "Phone call alerts",
+        "availability": "official-app",
+        "notes": "Announces incoming calls; calls cannot be answered on the buds."
+      },
+      {
+        "id": "design.side-sleeper",
+        "name": "1.4 g side-sleeper design",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "No controls on the buds or case. Everything is set in the Bose Sleep app."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "No audio streaming, calls or music. Bluetooth Low Energy is used only for app control. 1.4 g per bud with a silver-zinc cell."
+    },
+    "appOnlyFeatures": [
+      "sleeptrack library",
+      "alarm",
+      "volume",
+      "phone call alerts",
+      "dark mode"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.bose.com/pressroom/bose-revolutionary-noise-masking-sleepbuds-officially-launch",
+        "type": "official-product",
+        "title": "Bose noise-masking Sleepbuds launch",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://assets.bosecreative.com/m/125e4dce5c2a12c4/original/OG_SBD-SLEEPBUDS_en.pdf",
+        "type": "official-manual",
+        "title": "Bose Sleepbuds owner's guide",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Android/iOS package ID not captured.",
+      "Exact number of preloaded sleeptracks not confirmed (launch materials say 10).",
+      "App layout beyond the combined/lowest-battery home reading is not documented.",
+      "Case LED state while buds are out is live only when the lid is opened."
+    ],
+    "notes": "First-generation Bose Sleepbuds, sold 2018-2019 and withdrawn after battery/reliability complaints. No streaming and no ANC; pure masking plus alarm.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bose",
+    "companySlug": "bose",
+    "family": "Sleepbuds",
+    "model": "Bose Sleepbuds II",
+    "slug": "bose-sleepbuds-ii",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Bose Sleep",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Adds Phone-Free Mode and a larger sound library. Only the Bose Sleep app works; other Bose apps cannot control Sleepbuds."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "live",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 30,
+      "chargingIndicators": "Per-bud charging lights; five case battery lights inside the lid; USB-C.",
+      "notes": "10 h per charge; the case holds three full charges (30 h). App shows the lower bud percentage on the home screen; tapping the battery meter shows left and right separately. Case percentage is not shown in the app, only via the five LEDs.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC/transparency. Passive silicone tip isolation plus masking audio; Bose explicitly says it masks rather than cancels."
+    },
+    "features": [
+      {
+        "id": "sleep.masking-sounds",
+        "name": "Noise-masking sound library",
+        "availability": "both",
+        "notes": "Up to 10 sounds stored on the buds."
+      },
+      {
+        "id": "sleep.in-ear-alarm",
+        "name": "Personal wake-up alarm",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sleep.phone-free-mode",
+        "name": "Phone-Free Mode",
+        "availability": "both",
+        "notes": "Plays a chosen sound with no phone connection; alarms and notifications are then unavailable."
+      },
+      {
+        "id": "sleep.phone-call-alerts",
+        "name": "Phone call alerts",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sleep.sleep-timer",
+        "name": "Sleep timer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "design.side-sleeper",
+        "name": "Quarter-inch-deep side-sleeper design",
+        "availability": "device-only",
+        "notes": "Anti-friction coating and etched BLE antenna."
+      }
+    ],
+    "controls": {
+      "types": [],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "No buttons or touch controls; app-only."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "No streaming. Bluetooth Low Energy control only. NiMH battery, 10 h; 6 h charge time."
+    },
+    "appOnlyFeatures": [
+      "sound library",
+      "alarm",
+      "sleep timer",
+      "phone-free mode",
+      "phone call alerts"
+    ],
+    "featureDeltaFromPrevious": [
+      "10 h versus 16 h on the original",
+      "Phone-Free Mode",
+      "Larger sound library",
+      "USB-C instead of micro-USB",
+      "NiMH instead of silver-zinc battery"
+    ],
+    "sources": [
+      {
+        "url": "https://www.bose.com/pressroom/bose-presents-sleepbuds-ii",
+        "type": "official-product",
+        "title": "Bose Sleepbuds II launch",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://assets.bose.com/content/dam/Bose_DAM/Web/consumer_electronics/global/products/headphones/noise_masking_sleepbuds_ii/pdf/842815_og_bose-sleepbuds-ii_en.pdf",
+        "type": "official-manual",
+        "title": "Bose Sleepbuds II owner's guide",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.bose.com/s/article/sbdii-sleepbuds-setting-up-your-product---ka08c000001brexaai",
+        "type": "official-support",
+        "title": "Bose Sleepbuds II setup",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "App package ID not captured.",
+      "No official statement on whether the case level appears in the app; the manual documents LEDs only.",
+      "Sound count in the shipping library is not stated on the product page."
+    ],
+    "notes": "Bose's second and last Sleepbuds generation. Still no streaming: the buds play stored masking audio and use BLE only for app control.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bose",
+    "companySlug": "bose",
+    "family": "SoundControl",
+    "model": "Bose SoundControl Hearing Aids",
+    "slug": "bose-soundcontrol-hearing-aids",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Bose Hear",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.bose.bosehear"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.bose.bosehear"
+      ],
+      "appVersionObserved": "2022-07-26 update",
+      "notes": "CustomTune self-fitting, World Volume, treble/bass and modes. The same app also supports Bose Hearphones."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 56,
+      "caseHours": null,
+      "chargingIndicators": "Low-battery voice prompt; no charging case. Replaceable size 312 zinc-air cells.",
+      "notes": "One 312 cell per aid lasts up to four days at 14 h/day (56 h). There is no charging case or case battery; a carry case is included. Per-aid percentage UI in the app is not documented.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC. World Volume is hearing amplification/attenuation, not noise cancelling."
+    },
+    "features": [
+      {
+        "id": "hearing.self-fit",
+        "name": "CustomTune self-fitting",
+        "availability": "official-app",
+        "notes": "Two-control fitting: World Volume and treble/bass clarity."
+      },
+      {
+        "id": "hearing.world-volume",
+        "name": "World Volume",
+        "availability": "both",
+        "notes": "On-aid buttons plus app."
+      },
+      {
+        "id": "hearing.treble-bass",
+        "name": "Treble and bass clarity",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "hearing.modes",
+        "name": "Listening modes",
+        "availability": "official-app",
+        "notes": "Saved combinations of World Volume, tone and directivity."
+      },
+      {
+        "id": "hearing.feedback-suppression",
+        "name": "Feedback suppression",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "World Volume up/down",
+          "action": "increase/decrease amplification",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "World Volume rocker on each BTE aid; battery door on/off",
+      "configurableInApp": false,
+      "notes": "No touch controls."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 2,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "No Bluetooth audio streaming or calls; BLE app control only. BTE receiver-in-canal, 2 microphones, 3 g per aid."
+    },
+    "appOnlyFeatures": [
+      "CustomTune",
+      "World Volume",
+      "treble/bass",
+      "modes"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.bose.com/p/exclude-from-feeds/bose-soundcontrol-hearing-aids/SNDCONTL-HEARINGAIDS-GRY-US.html",
+        "type": "official-product",
+        "title": "Bose SoundControl Hearing Aids",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://assets.bose.com/content/dam/Bose_DAM/Web/consumer_electronics/global/products/headphones/soundcontrol_hearing_aids/pdf/approved/862366_og_soundcontrol-hearing-aids_en.pdf",
+        "type": "official-manual",
+        "title": "Bose SoundControl instructions for use",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.prnewswire.com/news-releases/bose-officially-introduces-soundcontrol-hearing-aids-301288966.html",
+        "type": "official-product",
+        "title": "Bose SoundControl launch",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "App battery display for each aid is not documented; only the low-battery voice prompt is confirmed.",
+      "No official directivity/mode list captured beyond the manual's mode section.",
+      "No Bluetooth streaming, so codec and multipoint are not applicable."
+    ],
+    "notes": "Bose's self-fitting OTC hearing aid (2021). BLE only for the Bose Hear app; it cannot stream music or calls. Uses replaceable 312 cells rather than a charger.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bose",
+    "companySlug": "bose",
+    "family": "Hearphones",
+    "model": "Bose Hearphones",
+    "slug": "bose-hearphones",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2017,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "Bose Hear",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.bose.bosehear"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.bose.bosehear"
+      ],
+      "appVersionObserved": "2022-07-26 update",
+      "notes": "World Volume, directivity, bass/treble, left/right balance, mute and saved modes."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": null,
+      "chargingIndicators": "Battery light green/amber/red; voice announcement of percent on power-on; micro-USB.",
+      "notes": "Single 10 h battery in the neckband; no charging case (carry case only). About 3 h to charge. The LED gives bands, while the voice prompt gives a percentage.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Marketed as conversation-enhancing headphones with adjustable noise reduction via World Volume, not as ANC headphones. No transparency mode as such; World Volume can be turned up to hear surroundings."
+    },
+    "features": [
+      {
+        "id": "hearing.world-volume",
+        "name": "World Volume conversation amplification",
+        "availability": "both",
+        "notes": "Inline buttons plus app."
+      },
+      {
+        "id": "hearing.directivity",
+        "name": "Everywhere / Front / Focused directivity",
+        "availability": "both",
+        "notes": "Cycled by pressing both World Volume buttons."
+      },
+      {
+        "id": "hearing.treble-bass",
+        "name": "Bass/treble and high-frequency boost",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "hearing.balance-mute",
+        "name": "Left/right balance and single-ear mute",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.streaming",
+        "name": "Bluetooth music streaming",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "telephony.calls",
+        "name": "Hands-free calls",
+        "availability": "both",
+        "notes": "Inline microphone and multi-function button."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Two simultaneous device connections",
+        "availability": "device-only",
+        "notes": "Up to eight paired devices stored."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "World Volume +/-",
+          "action": "amplify/reduce surrounding sound",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "both World Volume buttons",
+          "action": "cycle directivity",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "multi-function button",
+          "action": "play/pause, calls, voice assistant",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Inline remote: power/Bluetooth, World Volume +/-, volume +/- and multi-function",
+      "configurableInApp": false,
+      "notes": "NFC pairing supported."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 2,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bluetooth with A2DP/HFP; NFC; 3.5 mm not provided. Neckband with StayHear+ tips."
+    },
+    "appOnlyFeatures": [
+      "World Volume",
+      "directivity",
+      "bass/treble",
+      "balance",
+      "saved modes"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://assets.bose.com/content/dam/Bose_DAM/Web/consumer_electronics/global/products/headphones/hearphones/pdf/780985_og_hearphones_en.pdf",
+        "type": "official-manual",
+        "title": "Bose Hearphones owner's guide",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.bose.com/s/article/hearph-headphonein-short-battery-life---ka08c000001bue0aaa",
+        "type": "official-support",
+        "title": "Bose Hearphones battery life",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.bose.bosehear",
+        "type": "official-app-store",
+        "title": "Bose Hear app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/attenuation dB figures; this is not an ANC product.",
+      "Codec list not published.",
+      "Battery display is a 3-band LED plus voice percentage; no app percentage UI documented."
+    ],
+    "notes": "Bluetooth neckband for conversation enhancement, not a hearing aid. Uses World Volume amplification and directivity; supports music and calls. Discontinued.",
+    "researchedAt": "2026-11-10"
+  }
+]

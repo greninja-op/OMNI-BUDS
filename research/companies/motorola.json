@@ -1,0 +1,591 @@
+[
+  {
+    "company": "Motorola",
+    "companySlug": "motorola",
+    "family": "moto buds",
+    "model": "Motorola moto buds ultra",
+    "slug": "motorola-moto-buds-ultra",
+    "generation": "Ultra",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "moto buds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.motorola.motobuds"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.motorola.motobuds"
+      ],
+      "appVersionObserved": null,
+      "notes": "Personalise controls, EQ and smart features; deep Motorola phone integration."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; case LED.",
+      "notes": "Official claim: up to 37 h total. Buds/case split not stated on the product page.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Bose QuietControl ANC that continuously adapts; transparency mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Bose QuietControl adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Dolby Atmos spatial audio",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "Hi-Res Audio",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "moto buds app EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.motorola.bose-tuning",
+        "name": "Sound by Bose",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Long press",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "None; touch controls.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": true,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "Sound tuned with Bose; Dolby Atmos requires a compatible Motorola phone."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Control customisation",
+      "Smart features"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bose QuietControl ANC",
+      "Sound by Bose tuning",
+      "Dolby Atmos + Hi-Res",
+      "37 h total"
+    ],
+    "sources": [
+      {
+        "url": "https://www.motorola.com/us/en/p/motoaccessories/moto-buds-ultra/pg38c08954",
+        "type": "official-product",
+        "title": "moto buds ultra",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds/case battery split not published",
+      "Bluetooth codec list not published",
+      "Multipoint not stated",
+      "ANC dB not published"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Motorola",
+    "companySlug": "motorola",
+    "family": "moto buds",
+    "model": "Motorola moto buds 2 plus",
+    "slug": "motorola-moto-buds-2-plus",
+    "generation": "2",
+    "variant": "Plus",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "moto buds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.motorola.motobuds"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.motorola.motobuds"
+      ],
+      "appVersionObserved": null,
+      "notes": "EQ, ANC, fit test and controls."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9,
+      "caseHours": 31,
+      "chargingIndicators": "USB-C; 10 min = several hours.",
+      "notes": "9 h listening + 40 h total; case adds 31 h. ANC-on figure not published.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 31
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Dynamic ANC tuned with Bose."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Dynamic ANC tuned with Bose",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 6.0",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "Hi-Res Audio",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "moto buds app EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.motorola.fit-test",
+        "name": "Fit Test",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Long press",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "None; touch controls.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": true,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "Sound by Bose; Bluetooth 6.0; spatial audio."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Fit test",
+      "Control customisation"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 6.0",
+      "Dynamic ANC",
+      "9 h + 40 h battery",
+      "Fit Test"
+    ],
+    "sources": [
+      {
+        "url": "https://www.motorola.com/us/en/p/motoaccessories/moto-buds-2-plus/pg38c08065",
+        "type": "official-product",
+        "title": "moto buds 2 plus",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on battery hours not published",
+      "Bluetooth codec list not published",
+      "Multipoint not stated"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Motorola",
+    "companySlug": "motorola",
+    "family": "moto buds",
+    "model": "Motorola moto buds 2",
+    "slug": "motorola-moto-buds-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "moto buds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.motorola.motobuds"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.motorola.motobuds"
+      ],
+      "appVersionObserved": null,
+      "notes": "EQ, ANC and controls."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Battery-hour figure not present in the visible product copy.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 55,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Dynamic Active Noise Cancellation up to 55 dB (official)."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Dynamic ANC up to 55 dB",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial Audio 360°",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LHDC high-resolution audio",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "moto buds app EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Long press",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "None; touch controls.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "LHDC"
+      ],
+      "hiRes": true,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "LHDC low-latency hi-res codec; spatial audio requires compatible Motorola phone."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC control",
+      "Control customisation"
+    ],
+    "featureDeltaFromPrevious": [
+      "55 dB ANC",
+      "LHDC hi-res",
+      "Spatial Audio 360"
+    ],
+    "sources": [
+      {
+        "url": "https://www.motorola.com/us/en/p/motoaccessories/moto-buds-2/pg38c08166",
+        "type": "official-product",
+        "title": "moto buds 2",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery hours not published in visible copy",
+      "Multipoint not stated",
+      "Transparency specifics not stated"
+    ],
+    "notes": "ANC depth of 55 dB is one of the few official dB figures in this set.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Motorola",
+    "companySlug": "motorola",
+    "family": "moto buds",
+    "model": "Motorola moto buds loop",
+    "slug": "motorola-moto-buds-loop",
+    "generation": "Loop",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "moto buds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.motorola.motobuds"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.motorola.motobuds"
+      ],
+      "appVersionObserved": null,
+      "notes": "EQ, controls and smart features; Moto AI voice commands on compatible phones."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; 10 min = 3 h.",
+      "notes": "8 h per charge; case total not published. No ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "vendor.motorola.open-ear-clip",
+        "name": "Open-ear clip design",
+        "availability": "device-only"
+      },
+      {
+        "id": "vendor.motorola.bose-tuning",
+        "name": "Sound by Bose",
+        "availability": "device-only"
+      },
+      {
+        "id": "power.quick-charge",
+        "name": "10 min = 3 h",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "moto buds app EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Press and hold button",
+          "action": "Moto AI voice command",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Physical button for Moto AI voice commands.",
+      "configurableInApp": true,
+      "notes": "Open-ear clip with a button for voice assistant."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "Sound by Bose; water-repellent design."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Control customisation",
+      "Smart Connect"
+    ],
+    "featureDeltaFromPrevious": [
+      "Motorola's first open-ear clip",
+      "Sound by Bose",
+      "Moto AI button"
+    ],
+    "sources": [
+      {
+        "url": "https://www.motorola.com/us/en/p/motoaccessories/moto-buds-loop/pg38c07168",
+        "type": "official-product",
+        "title": "moto buds loop",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Case battery hours not published",
+      "Bluetooth codec list not published",
+      "Multipoint not stated"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

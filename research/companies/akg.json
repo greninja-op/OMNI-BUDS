@@ -1,0 +1,951 @@
+[
+  {
+    "company": "AKG",
+    "companySlug": "akg",
+    "family": "N Hybrid",
+    "model": "AKG N5 Hybrid",
+    "slug": "n5-hybrid",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "AKG Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC control, EQ, spatial audio, Smart Talk, dongle pairing, firmware updates."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 10,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; app readout; 15 min charge = 4 h; USB-C",
+      "notes": "Official: 10 h buds / 6 h ANC; 40 h total ANC off (10 + 30).",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "True Adaptive Noise Cancelling with custom control; six mics."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "True Adaptive Noise Cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "AKG Spatial Audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.dongle",
+        "name": "2.4 GHz USB-C dongle",
+        "availability": "device-only",
+        "notes": "Dongle stores in case."
+      },
+      {
+        "id": "sensing.smart-talk",
+        "name": "Smart Talk",
+        "availability": "device-only",
+        "notes": "Auto pause when speaking."
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair / Microsoft Swift Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "Hi-Res Audio Wireless (LDAC)",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "LDAC",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "10 mm DLC-coated dynamic drivers; 20 Hz-40 kHz; IP54 buds."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "spatial audio",
+      "ANC custom control",
+      "Smart Talk",
+      "firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "New N Hybrid line with 2.4 GHz dongle and spatial audio"
+    ],
+    "sources": [
+      {
+        "url": "https://www.akg.com/AKG-N5-HYBRID.html",
+        "type": "official-product",
+        "title": "AKG N5 Hybrid",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on total with case not stated as a single figure.",
+      "EQ band count and head-tracking support not documented.",
+      "Battery UI layout inferred."
+    ],
+    "notes": "Zoom-certified business/consumer hybrid TWS with USB-C dongle.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "AKG",
+    "companySlug": "akg",
+    "family": "N Hybrid",
+    "model": "AKG N9 Hybrid",
+    "slug": "n9-hybrid",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "AKG Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, spatial audio, Smart Talk, dongle settings."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 55,
+      "budsHoursNoAnc": 100,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout; USB-C",
+      "notes": "Official: 100 h BT ANC off, 55 h BT ANC on; 85 h/45 h with 2.4 GHz dongle.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "True Adaptive Noise Cancelling with custom control."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "True Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "AKG Spatial Audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.dongle",
+        "name": "2.4 GHz USB-C dongle",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.smart-talk",
+        "name": "Smart Talk",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wired-mode",
+        "name": "Detachable 3.5 mm cable",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "touch gesture",
+          "action": "playback, volume, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "button press",
+          "action": "power, ANC",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/ANC buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "LDAC",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm dynamic drivers; 281 g; BT 5.3."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "spatial audio",
+      "ANC custom control",
+      "Smart Talk",
+      "firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "Over-ear N Hybrid with 55 h ANC runtime",
+      "USB-C dongle",
+      "Spatial audio"
+    ],
+    "sources": [
+      {
+        "url": "https://www.akg.com/AKG-N9-HYBRID.html",
+        "type": "official-product",
+        "title": "AKG N9 Hybrid",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "EQ band count and head tracking not documented.",
+      "Wear-detection basis is Smart Talk, not classic on-head detection."
+    ],
+    "notes": "Flagship over-ear with exceptional 100 h runtime.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "AKG",
+    "companySlug": "akg",
+    "family": "N",
+    "model": "AKG N700NC M2",
+    "slug": "n700nc-m2",
+    "generation": "2",
+    "variant": "M2",
+    "releaseYear": 2020,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "AKG Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC and EQ control."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 23,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout",
+      "notes": "Up to 23 h with ANC; 15 min charge = 3 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adaptive ANC with ambient aware."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wired-mode",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls, ANC",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm drivers; BT 5.0."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "M2 refresh: folding design, USB-C, ambient aware"
+    ],
+    "sources": [
+      {
+        "url": "https://www.akg.com/AKG-N700NC-M2.html",
+        "type": "official-product",
+        "title": "AKG N700NC M2",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC-off runtime not published.",
+      "EQ band count unknown.",
+      "Current product page may be archived."
+    ],
+    "notes": "Travel-focused over-ear ANC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "AKG",
+    "companySlug": "akg",
+    "family": "N",
+    "model": "AKG N400NC",
+    "slug": "n400nc",
+    "generation": "1",
+    "variant": "ANC",
+    "releaseYear": 2020,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "AKG Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC and EQ control."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 6,
+      "caseHours": 12,
+      "chargingIndicators": "Case LED; app readout",
+      "notes": "5 h ANC / 6 h no ANC; 18 h total with case.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 12
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/ambient",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "IPX7 earbuds."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "AKG's first ANC true-wireless model"
+    ],
+    "sources": [
+      {
+        "url": "https://www.akg.com/headphones/",
+        "type": "official-product",
+        "title": "AKG headphones lineup",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Discontinued; current official page not captured.",
+      "EQ band count unknown.",
+      "Battery UI layout inferred."
+    ],
+    "notes": "IPX7 ANC TWS from the Samsung/Harman era.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "AKG",
+    "companySlug": "akg",
+    "family": "Y",
+    "model": "AKG Y600NC",
+    "slug": "y600nc",
+    "generation": "1",
+    "variant": "NC",
+    "releaseYear": 2020,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "AKG Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC and EQ control."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 25,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "LED",
+      "notes": "Up to 25 h with ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, ANC",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm drivers."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "Affordable ANC over-ear below N700NC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.akg.com/headphones/",
+        "type": "official-product",
+        "title": "AKG headphones lineup",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC-off runtime not published.",
+      "Discontinued; page archived.",
+      "EQ band count unknown."
+    ],
+    "notes": "Budget ANC over-ear.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "AKG",
+    "companySlug": "akg",
+    "family": "K",
+    "model": "AKG K371-BT",
+    "slug": "k371-bt",
+    "generation": "1",
+    "variant": "BT",
+    "releaseYear": 2020,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app; studio monitor with Bluetooth."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 40,
+      "caseHours": null,
+      "chargingIndicators": "LED",
+      "notes": "Up to 40 h; wired mode with power off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.wired-mode",
+        "name": "Wired mode",
+        "availability": "device-only",
+        "notes": "Detachable cables."
+      },
+      {
+        "id": "controls.customizable",
+        "name": "Onboard controls",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls",
+          "configurableInApp": null,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "50 mm drivers; studio-flat tuning."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Bluetooth version of the K371 studio headphone"
+    ],
+    "sources": [
+      {
+        "url": "https://www.akg.com/headphones/",
+        "type": "official-product",
+        "title": "AKG headphones lineup",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Multipoint support undocumented.",
+      "Discontinued page archived."
+    ],
+    "notes": "Studio monitor with Bluetooth; no ANC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "AKG",
+    "companySlug": "akg",
+    "family": "N",
+    "model": "AKG N200 Wireless",
+    "slug": "n200-wireless",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2018,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": null,
+      "chargingIndicators": "LED",
+      "notes": "Up to 8 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "vendor.akg.magnetic-buds",
+        "name": "Magnetic earbuds",
+        "availability": "device-only",
+        "notes": "Buds snap together."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls",
+          "configurableInApp": null,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Neckband buttons",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "8 mm drivers."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Neckband form factor in the N series"
+    ],
+    "sources": [
+      {
+        "url": "https://www.akg.com/headphones/",
+        "type": "official-product",
+        "title": "AKG headphones lineup",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Legacy model; current page unavailable.",
+      "Codec list and battery claim not re-verified on official page."
+    ],
+    "notes": "Legacy neckband; included for family coverage.",
+    "researchedAt": "2026-11-10"
+  }
+]

@@ -41,9 +41,12 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -98,7 +101,9 @@ import com.omnibuds.android.hardware.engine.BinauralCrossfeedMode
 import com.omnibuds.android.hardware.engine.NonTwsHardwareController
 import com.omnibuds.android.ui.compose.components.AdaptiveAudioGlyph
 import com.omnibuds.android.hardware.capability.StrictBrandProfile
+import com.omnibuds.android.hardware.capability.BatteryDisplayContract
 import com.omnibuds.android.hardware.capability.StrictBrandProfileResolver
+import com.omnibuds.android.hardware.capability.VerifiedDeviceCatalog
 import com.omnibuds.android.hardware.capability.BrandSchema
 import com.omnibuds.android.ui.compose.components.NothingXNoiseControlCard
 import com.omnibuds.android.ui.compose.components.NothingXEqualizerCard
@@ -175,6 +180,8 @@ fun WorkspaceScreen(
     val scope = rememberCoroutineScope()
     val product = ProductCatalog.resolve(state.overview?.displayName, productOverrideId)
     val connected = state.overview?.connectionState is ConnectionState.Connected
+    val saveStates by com.omnibuds.android.hardware.protocol.EarbudProtocolManager.configSaveState.collectAsState()
+    val saveMessage = saveStates[state.deviceIdentifier]
 
     val bluetoothManager = remember { context.getSystemService(Context.BLUETOOTH_SERVICE) as? android.bluetooth.BluetoothManager }
     val bluetoothDevice = remember(state.deviceIdentifier) {
@@ -212,6 +219,13 @@ fun WorkspaceScreen(
             nameOverride = state.overview?.displayName,
             addressOverride = state.deviceIdentifier,
             discoveredGattUuids = deviceServices.map { it.uuid },
+        )
+    }
+
+    val verifiedProfile = remember(state.deviceIdentifier, state.overview?.displayName) {
+        VerifiedDeviceCatalog.resolve(
+            state.overview?.displayName,
+            state.deviceIdentifier,
         )
     }
 
@@ -386,6 +400,9 @@ fun WorkspaceScreen(
                 forceCombinedView = forceCombinedView,
                 supportsCaseBatteryWhenUndocked = strictProfile.supportsCaseBatteryWhenUndocked,
                 brandSchema = strictProfile.brandSchema,
+                batteryContract = verifiedProfile?.batteryContract ?: strictProfile.batteryContract,
+                batteryTopology = strictProfile.batteryTopology,
+                verifiedLayoutLabel = verifiedProfile?.let { "Layout matched to ${it.officialAppName}" },
                 onChangeStyleClick = { showFormFactorPicker = true },
                 onToggleViewMode = {
                     val next = !forceCombinedView
@@ -555,8 +572,19 @@ fun WorkspaceScreen(
                         modes = modes,
                         selectedMode = ancControl.currentValue ?: "OFF",
                         interactive = connected,
+                        auditAddress = state.deviceIdentifier,
                         onSelect = { mode -> viewModel.submitFeatureControl("anc_mode", mode) },
                     )
+                    saveMessage?.let { message ->
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Text(
+                            text = message,
+                            style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.SemiBold),
+                            color = Color(0xFF22E55E),
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier.fillMaxWidth(),
+                        )
+                    }
                     Spacer(modifier = Modifier.height(14.dp))
                     NoiseControlDiagnosticDrawer(
                         deviceAddress = state.deviceIdentifier,
@@ -938,6 +966,10 @@ private fun BatterySection(
     forceCombinedView: Boolean,
     supportsCaseBatteryWhenUndocked: Boolean = false,
     brandSchema: BrandSchema = BrandSchema.GENERIC,
+    batteryContract: BatteryDisplayContract = BatteryDisplayContract(),
+    batteryTopology: com.omnibuds.android.hardware.capability.BatteryTopologyMode =
+        com.omnibuds.android.hardware.capability.BatteryTopologyMode.DYNAMIC_COMBINED_FALLBACK,
+    verifiedLayoutLabel: String? = null,
     onChangeStyleClick: () -> Unit,
     onToggleViewMode: () -> Unit,
 ) {
@@ -1028,12 +1060,33 @@ private fun BatterySection(
             forceCombinedView = forceCombinedView,
             supportsCaseBatteryWhenUndocked = supportsCaseBatteryWhenUndocked,
             brandSchema = brandSchema,
+            budsDisplay = batteryContract.budsDisplay,
+            caseDisplay = batteryContract.caseDisplay,
+            caseVisibility = batteryContract.caseVisibility,
+            caseWhileBudsOut = batteryContract.caseWhileBudsOut,
+            batteryTopology = batteryTopology,
             onChangeStyleClick = onChangeStyleClick,
             onToggleViewMode = onToggleViewMode,
         )
 
         if (lastKnown && liveReport == null) {
             LastKnownCaption()
+        }
+
+        AnimatedVisibility(
+            visible = verifiedLayoutLabel != null,
+            enter = fadeIn(tween(220)),
+            exit = fadeOut(tween(160)),
+        ) {
+            Text(
+                text = verifiedLayoutLabel.orEmpty(),
+                style = MaterialTheme.typography.bodySmall,
+                color = OmniBrand.TextSecondary,
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 6.dp),
+            )
         }
     }
 }
@@ -1065,12 +1118,12 @@ private fun labelFor(kind: BatteryComponentKind): String = when (kind) {
     BatteryComponentKind.DEVICE -> "Battery"
 }
 
-/** Normal = green, low = amber, critical = red, last-known = neutral grey. */
+/** 100–51% green, 50–21% orange, 20–0% red, last-known neutral grey. */
 private fun batteryRingColor(percent: Int, lastKnown: Boolean): Color = when {
     lastKnown -> OmniBrand.Disabled
-    percent <= 10 -> OmniBrand.Error
-    percent <= 20 -> OmniBrand.Warning
-    else -> OmniBrand.Success
+    percent > 50 -> Color(0xFF22E55E)
+    percent > 20 -> Color(0xFFFF9800)
+    else -> Color(0xFFFF2222)
 }
 
 @Composable
@@ -1153,7 +1206,7 @@ private fun BatteryRing(
         Text(
             text = "$percent%",
             style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.SemiBold),
-            color = MaterialTheme.colorScheme.onSurface,
+            color = batteryRingColor(percent, lastKnown),
         )
         if (charging) {
             Text(
@@ -1223,16 +1276,29 @@ private fun NoiseControlCircles(
     selectedMode: String?,
     interactive: Boolean,
     onSelect: (String) -> Unit,
+    auditAddress: String? = null,
 ) {
     val effectiveSelected = selectedMode ?: "OFF"
 
     fun handleModeClick(mode: String) {
         if (!interactive) return
-        val targetMode = when (mode) {
-            "ANC" -> if (effectiveSelected.equals("ANC", ignoreCase = true)) "OFF" else "ANC"
-            "TRANSPARENCY" -> if (effectiveSelected.equals("TRANSPARENCY", ignoreCase = true)) "OFF" else "TRANSPARENCY"
-            "OFF" -> "OFF"
-            else -> mode
+        // Tapping ANC or Transparency while it is already the active mode switches back
+        // to Ambient (Off). That is only safe when the earbuds report their own mode:
+        // the selected state is then the real state, so the tap cannot invert. On
+        // devices without that read-back every button simply requests its own mode.
+        val toggleToOff = auditAddress != null &&
+            !mode.equals("OFF", ignoreCase = true) &&
+            effectiveSelected.equals(mode, ignoreCase = true) &&
+            com.omnibuds.android.hardware.engine.UniversalTwsEngine.hasVerifiedModeReadback(auditAddress)
+        val targetMode = if (toggleToOff) "OFF" else mode
+        if (auditAddress != null) {
+            com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+                stage = "CLICK",
+                address = auditAddress,
+                activeMode = effectiveSelected,
+                clickedMode = mode,
+                requestedMode = targetMode,
+            )
         }
         onSelect(targetMode)
     }
@@ -2449,6 +2515,8 @@ fun NoiseControlDiagnosticDrawer(
     val context = LocalContext.current
     val diagStates by com.omnibuds.android.hardware.protocol.EarbudProtocolManager.noiseControlDiagnosticStates.collectAsState()
     val diagState = diagStates[deviceAddress] ?: com.omnibuds.android.hardware.engine.NoiseControlDiagnosticState()
+    val auditEntries by com.omnibuds.android.hardware.protocol.AncAuditLog.entries.collectAsState()
+    val auditTimeFormat = remember { java.text.SimpleDateFormat("HH:mm:ss", java.util.Locale.US) }
 
     Surface(
         shape = RoundedCornerShape(14.dp),
@@ -2570,6 +2638,112 @@ fun NoiseControlDiagnosticDrawer(
                                 style = MaterialTheme.typography.bodySmall.copy(fontWeight = FontWeight.Bold),
                                 color = OmniBrand.Accent,
                             )
+                        }
+                    }
+                }
+
+                Spacer(modifier = Modifier.height(14.dp))
+
+                // Click -> active mode -> requested mode -> sent bytes -> ACK.
+                Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
+                    Text(
+                        text = "ANC CLICK / SIGNAL AUDIT",
+                        style = MaterialTheme.typography.labelSmall.copy(letterSpacing = 1.sp, fontWeight = FontWeight.Bold),
+                        color = Color(0xFF8E92A0),
+                    )
+                    Spacer(modifier = Modifier.weight(1f))
+                    Text(
+                        text = "Clear",
+                        style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
+                        color = OmniBrand.Accent,
+                        modifier = Modifier.clickable {
+                            com.omnibuds.android.hardware.protocol.AncAuditLog.clear()
+                        },
+                    )
+                }
+                Spacer(modifier = Modifier.height(6.dp))
+                Surface(
+                    shape = RoundedCornerShape(8.dp),
+                    color = Color(0xFF0F1013),
+                    border = BorderStroke(1.dp, Color(0xFF242730)),
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    Column(
+                        modifier = Modifier
+                            .heightIn(max = 240.dp)
+                            .verticalScroll(rememberScrollState())
+                            .padding(10.dp),
+                    ) {
+                        if (auditEntries.isEmpty()) {
+                            Text(
+                                text = "Tap ANC, Ambient or Transparency to record a click.",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = Color(0xFF8E92A0),
+                            )
+                        } else {
+                            auditEntries.takeLast(30).reversed().forEach { entry ->
+                                val stageColor = when (entry.stage) {
+                                    "CLICK" -> OmniBrand.Accent
+                                    "SEND" -> Color(0xFF55D0FF)
+                                    "ACK" -> Color(0xFF22E55E)
+                                    "NOTIFY", "CONFIRMED" -> Color(0xFFFFCC00)
+                                    "REJECTED", "ENGINE_SKIP" -> Color(0xFFFF5555)
+                                    else -> Color.White
+                                }
+                                Column(modifier = Modifier.padding(vertical = 3.dp)) {
+                                    Row {
+                                        Text(
+                                            text = auditTimeFormat.format(java.util.Date(entry.timestamp)),
+                                            style = MaterialTheme.typography.labelSmall.copy(fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace),
+                                            color = Color(0xFF8E92A0),
+                                        )
+                                        Spacer(modifier = Modifier.width(6.dp))
+                                        Text(
+                                            text = entry.stage,
+                                            style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
+                                            color = stageColor,
+                                        )
+                                    }
+                                    Text(
+                                        text = buildString {
+                                            entry.activeMode?.let { append("active=$it ") }
+                                            entry.clickedMode?.let { append("clicked=$it ") }
+                                            entry.requestedMode?.let { append("requested=$it ") }
+                                        }.trim(),
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = Color.White,
+                                    )
+                                    entry.sentHex?.let {
+                                        Text(
+                                            text = "sent=$it",
+                                            style = MaterialTheme.typography.labelSmall.copy(fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace),
+                                            color = Color(0xFF55D0FF),
+                                        )
+                                    }
+                                    entry.mapping?.let {
+                                        Text(
+                                            text = it,
+                                            style = MaterialTheme.typography.labelSmall,
+                                            color = Color(0xFF8E92A0),
+                                        )
+                                    }
+                                    entry.responseHex?.let {
+                                        Text(
+                                            text = "rx=$it",
+                                            style = MaterialTheme.typography.labelSmall.copy(fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace),
+                                            color = Color(0xFF22E55E),
+                                        )
+                                    }
+                                    entry.note?.let {
+                                        Text(
+                                            text = it,
+                                            style = MaterialTheme.typography.labelSmall,
+                                            color = Color(0xFFFFCC00),
+                                        )
+                                    }
+                                }
+                                HorizontalDivider(color = Color(0xFF242730), thickness = 1.dp)
+                            }
                         }
                     }
                 }

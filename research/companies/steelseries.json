@@ -1,0 +1,1419 @@
+[
+  {
+    "company": "SteelSeries",
+    "companySlug": "steelseries",
+    "family": "Arctis Nova Pro",
+    "model": "SteelSeries Arctis Nova Pro Wireless",
+    "slug": "steelseries-arctis-nova-pro-wireless",
+    "generation": "Nova Pro",
+    "variant": "Wireless",
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "SteelSeries GG / Sonar",
+      "platforms": [
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Sonar provides parametric EQ, 360 spatial audio and ChatMix; the base station handles onboard profiles."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 22,
+      "caseHours": null,
+      "chargingIndicators": "Base station shows battery; two hot-swappable batteries.",
+      "notes": "Two batteries, each rated up to 22 h; the base station charges the spare. ANC-on runtime not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Active noise cancellation with transparency mode; controlled on the base station."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancellation",
+        "availability": "device-only"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz wireless base station",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Simultaneous 2.4 GHz + Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "360° Spatial Audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "10-band parametric EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.steelseries.clearCast",
+        "name": "ClearCast Gen 2 AI noise-cancelling mic",
+        "availability": "official-app"
+      },
+      {
+        "id": "power.swappable-battery",
+        "name": "Dual hot-swappable batteries",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.usb-c-dongle",
+        "name": "Multi-system base with two USB inputs",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Base station volume dial",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Base station buttons",
+          "action": "ANC, source, EQ profile",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Headset power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "ChatMix dial",
+          "action": "Game/chat balance",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Wireless base station with OLED display, volume dial and function buttons; on-headset power/mute.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm Nova Pro drivers; 360° spatial audio via Sonar; Hi-Res certification applies to the wired/GameDAC path."
+    },
+    "appOnlyFeatures": [
+      "Sonar parametric EQ",
+      "360° Spatial Audio",
+      "ChatMix",
+      "Onboard profile management"
+    ],
+    "featureDeltaFromPrevious": [
+      "Nova Pro acoustic system",
+      "Dual hot-swappable batteries",
+      "ANC with transparency",
+      "Bluetooth + 2.4 GHz simultaneous"
+    ],
+    "sources": [
+      {
+        "url": "https://steelseries.com/gaming-headsets/arctis-nova-pro",
+        "type": "official-product",
+        "title": "Arctis Nova Pro",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://steelseries.com/gg/sonar",
+        "type": "official-product",
+        "title": "SteelSeries Sonar",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC-on battery hours not published",
+      "Bluetooth codec list not published",
+      "ANC attenuation in dB not published"
+    ],
+    "notes": "Official page mixes wired Nova Pro and Nova Pro Wireless content; wireless-specific figures cross-checked against the dual-battery design.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SteelSeries",
+    "companySlug": "steelseries",
+    "family": "Arctis Nova 7",
+    "model": "SteelSeries Arctis Nova 7",
+    "slug": "steelseries-arctis-nova-7",
+    "generation": "Nova 7",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "SteelSeries GG / Sonar",
+      "platforms": [
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Sonar EQ, 360 spatial audio; on-headset volume and ChatMix."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 38,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; 15 min charge = 6 h.",
+      "notes": "38 h; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz USB-C dongle",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Simultaneous 2.4 GHz + Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "360° Spatial Audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Sonar parametric EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.steelseries.clearCast",
+        "name": "ClearCast Gen 2 mic",
+        "availability": "device-only"
+      },
+      {
+        "id": "power.quick-charge",
+        "name": "15 min = 6 h",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume dial",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "ChatMix dial",
+          "action": "Game/chat balance",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mute button",
+          "action": "Mic mute",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "On-earcup volume dial, ChatMix dial, mute and power buttons.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm drivers."
+    },
+    "appOnlyFeatures": [
+      "Sonar EQ",
+      "360° Spatial Audio"
+    ],
+    "featureDeltaFromPrevious": [
+      "Nova acoustic system",
+      "Simultaneous 2.4 GHz + Bluetooth",
+      "38 h battery"
+    ],
+    "sources": [
+      {
+        "url": "https://steelseries.com/gaming-headsets/arctis-nova-7",
+        "type": "official-product",
+        "title": "Arctis Nova 7",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth codec list not published",
+      "EQ band count is Sonar's 10-band parametric EQ"
+    ],
+    "notes": "Page also covers 7P/7X; this record is the base multi-platform SKU.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SteelSeries",
+    "companySlug": "steelseries",
+    "family": "Arctis Nova 7",
+    "model": "SteelSeries Arctis Nova 7X",
+    "slug": "steelseries-arctis-nova-7x",
+    "generation": "Nova 7",
+    "variant": "7X (Xbox)",
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "SteelSeries GG / Sonar",
+      "platforms": [
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Same Sonar feature set as Nova 7; Xbox-specific dongle switch."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 38,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; 15 min = 6 h.",
+      "notes": "38 h; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz dongle with Xbox switch",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Simultaneous 2.4 GHz + Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "360° Spatial Audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Sonar parametric EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.steelseries.clearCast",
+        "name": "ClearCast Gen 2 mic",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume dial",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "ChatMix dial",
+          "action": "Game/chat balance",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "On-earcup dials and buttons.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm drivers."
+    },
+    "appOnlyFeatures": [
+      "Sonar EQ",
+      "360° Spatial Audio"
+    ],
+    "featureDeltaFromPrevious": [
+      "Xbox-specific 2.4 GHz switch",
+      "Same acoustic platform as Nova 7"
+    ],
+    "sources": [
+      {
+        "url": "https://steelseries.com/gaming-headsets/arctis-nova-7",
+        "type": "official-product",
+        "title": "Arctis Nova 7 series",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No dedicated 7X page; specs inherited from Nova 7 page",
+      "Bluetooth codecs not published"
+    ],
+    "notes": "Console variant of Nova 7.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SteelSeries",
+    "companySlug": "steelseries",
+    "family": "Arctis Nova 7",
+    "model": "SteelSeries Arctis Nova 7P",
+    "slug": "steelseries-arctis-nova-7p",
+    "generation": "Nova 7",
+    "variant": "7P (PlayStation)",
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "SteelSeries GG / Sonar",
+      "platforms": [
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Same Sonar feature set; PlayStation-tuned dongle."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 38,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; 15 min = 6 h.",
+      "notes": "38 h; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz USB-C dongle",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Simultaneous 2.4 GHz + Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "360° Spatial Audio / Tempest 3D",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Sonar parametric EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.steelseries.clearCast",
+        "name": "ClearCast Gen 2 mic",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume dial",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "ChatMix dial",
+          "action": "Game/chat balance",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "On-earcup dials and buttons.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm drivers; Tempest 3D supported on PS5."
+    },
+    "appOnlyFeatures": [
+      "Sonar EQ",
+      "360° Spatial Audio"
+    ],
+    "featureDeltaFromPrevious": [
+      "PlayStation-tuned variant",
+      "Tempest 3D support"
+    ],
+    "sources": [
+      {
+        "url": "https://steelseries.com/gaming-headsets/arctis-nova-7",
+        "type": "official-product",
+        "title": "Arctis Nova 7 series",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No dedicated 7P page; specs inherited from Nova 7 page",
+      "Bluetooth codecs not published"
+    ],
+    "notes": "PlayStation variant of Nova 7.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SteelSeries",
+    "companySlug": "steelseries",
+    "family": "Arctis Nova 5",
+    "model": "SteelSeries Arctis Nova 5",
+    "slug": "steelseries-arctis-nova-5",
+    "generation": "Nova 5",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "SteelSeries Arctis Companion",
+      "platforms": [
+        "android",
+        "ios",
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Mobile Companion app provides 100+ game audio presets and EQ; Sonar also supported on PC."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 60,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; fast charge.",
+      "notes": "60 h; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz USB-C dongle",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Simultaneous 2.4 GHz + Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Arctis Companion EQ and presets",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.steelseries.game-presets",
+        "name": "100+ game-specific audio presets",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.steelseries.clearCast",
+        "name": "ClearCast 2.X mic",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume dial",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "ChatMix dial",
+          "action": "Game/chat balance",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mute button",
+          "action": "Mic mute",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "On-earcup controls.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm drivers; 360° spatial audio via Sonar; separate gaming/mobile presets."
+    },
+    "appOnlyFeatures": [
+      "100+ game presets",
+      "EQ",
+      "Firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "60 h battery",
+      "Arctis Companion app with game presets",
+      "ClearCast 2.X mic"
+    ],
+    "sources": [
+      {
+        "url": "https://steelseries.com/gaming-headsets/arctis-nova-5",
+        "type": "official-product",
+        "title": "Arctis Nova 5",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth codec list not published",
+      "EQ band count not published"
+    ],
+    "notes": "Page also covers 5X/5P; this is the base SKU.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SteelSeries",
+    "companySlug": "steelseries",
+    "family": "Arctis Nova 5",
+    "model": "SteelSeries Arctis Nova 5X",
+    "slug": "steelseries-arctis-nova-5x",
+    "generation": "Nova 5",
+    "variant": "5X (Xbox)",
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "SteelSeries Arctis Companion",
+      "platforms": [
+        "android",
+        "ios",
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Same Companion app; Xbox-specific dongle."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 60,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "60 h; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz dongle with Xbox switch",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Simultaneous 2.4 GHz + Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Arctis Companion EQ and presets",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.steelseries.game-presets",
+        "name": "100+ game presets",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume dial",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "ChatMix dial",
+          "action": "Game/chat balance",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "On-earcup controls.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm drivers."
+    },
+    "appOnlyFeatures": [
+      "Game presets",
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Xbox-specific dongle",
+      "Same platform as Nova 5"
+    ],
+    "sources": [
+      {
+        "url": "https://steelseries.com/gaming-headsets/arctis-nova-5",
+        "type": "official-product",
+        "title": "Arctis Nova 5 series",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No dedicated 5X page; specs inherited",
+      "Bluetooth codecs not published"
+    ],
+    "notes": "Xbox variant of Nova 5.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SteelSeries",
+    "companySlug": "steelseries",
+    "family": "Arctis GameBuds",
+    "model": "SteelSeries Arctis GameBuds",
+    "slug": "steelseries-arctis-gamebuds",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "SteelSeries Arctis Companion",
+      "platforms": [
+        "android",
+        "ios",
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Companion app handles EQ, ANC, button remapping and firmware; 100+ PS5 presets."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; Qi wireless charging; 15 min = 3 h.",
+      "notes": "10 h per charge + 30 h case = 40 h total with noise control off. ANC-on figure not published.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "4-mic hybrid ANC with transparency mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "4-mic hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz USB-C dongle",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Quick-switch 2.4 GHz + Bluetooth 5.3",
+        "availability": "both"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "360° Spatial Audio / Tempest 3D",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Arctis Companion EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.steelseries.game-presets",
+        "name": "100+ PS5 audio presets",
+        "availability": "official-app"
+      },
+      {
+        "id": "power.wireless-charging",
+        "name": "Qi wireless charging case",
+        "availability": "device-only"
+      },
+      {
+        "id": "durability.ip55",
+        "name": "IP55 AquaBarrier",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single press",
+          "action": "Play/pause; answer call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Double press",
+          "action": "Skip track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Triple press",
+          "action": "Quick-switch 2.4 GHz / Bluetooth",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Long press",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "On-ear button on each bud.",
+      "configurableInApp": true,
+      "notes": "Official FAQ confirms button actions are changeable."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LC3"
+      ],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Bluetooth 5.3; LC3 via LE Audio on supported devices."
+    },
+    "appOnlyFeatures": [
+      "Game presets",
+      "EQ",
+      "Button remapping",
+      "Firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "SteelSeries' first gaming TWS",
+      "4-mic hybrid ANC",
+      "Qi case",
+      "IP55"
+    ],
+    "sources": [
+      {
+        "url": "https://steelseries.com/gaming-in-ear-headsets/arctis-gamebuds",
+        "type": "official-product",
+        "title": "Arctis GameBuds",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on battery hours not published",
+      "EQ band count not published",
+      "Battery layout in Companion app not visually verified"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SteelSeries",
+    "companySlug": "steelseries",
+    "family": "Arctis GameBuds",
+    "model": "SteelSeries Arctis GameBuds X",
+    "slug": "steelseries-arctis-gamebuds-x",
+    "generation": "1",
+    "variant": "X (Xbox)",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "SteelSeries Arctis Companion",
+      "platforms": [
+        "android",
+        "ios",
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Same Companion app; Xbox firmware path differs."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; Qi wireless charging; 15 min = 3 h.",
+      "notes": "10 h + 30 h case = 40 h total, noise control off.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "4-mic hybrid ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "4-mic hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz Xbox dongle",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Quick-switch 2.4 GHz + Bluetooth 5.3",
+        "availability": "both"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Arctis Companion EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "power.wireless-charging",
+        "name": "Qi wireless charging case",
+        "availability": "device-only"
+      },
+      {
+        "id": "durability.ip55",
+        "name": "IP55",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single press",
+          "action": "Play/pause; answer call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Triple press",
+          "action": "Quick-switch wireless modes",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Long press",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "On-ear buttons.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LC3"
+      ],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Bluetooth 5.3 LE Audio."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Button remapping",
+      "Firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "Xbox-specific 2.4 GHz dongle",
+      "Same hardware as GameBuds"
+    ],
+    "sources": [
+      {
+        "url": "https://steelseries.com/gaming-in-ear-headsets/arctis-gamebuds",
+        "type": "official-product",
+        "title": "Arctis GameBuds series",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No dedicated X page; specs inherited",
+      "ANC-on hours not published"
+    ],
+    "notes": "Xbox variant.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SteelSeries",
+    "companySlug": "steelseries",
+    "family": "Arctis 3",
+    "model": "SteelSeries Arctis 3 Bluetooth",
+    "slug": "steelseries-arctis-3-bluetooth",
+    "generation": "3",
+    "variant": "Bluetooth",
+    "releaseYear": 2019,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "SteelSeries Engine",
+      "platforms": [
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Legacy Engine software; limited EQ/configuration support."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 28,
+      "caseHours": null,
+      "chargingIndicators": "USB charging; battery status on device/OS.",
+      "notes": "Up to 28 h over Bluetooth; also works wired via 3.5 mm.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth + 3.5 mm wired",
+        "availability": "device-only"
+      },
+      {
+        "id": "vendor.steelseries.clearCast",
+        "name": "ClearCast bidirectional mic",
+        "availability": "device-only"
+      },
+      {
+        "id": "vendor.steelseries.airweave",
+        "name": "AirWeave ear cushions",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume dial",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mute button",
+          "action": "Mic mute",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "On-earcup volume dial, mute and power.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "40 mm S1 drivers; no ANC."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Bluetooth added to Arctis 3 chassis",
+      "Simultaneous wired + Bluetooth"
+    ],
+    "sources": [
+      {
+        "url": "https://steelseries.com/gaming-headsets/arctis-3-bluetooth",
+        "type": "official-product",
+        "title": "Arctis 3 Bluetooth",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Bluetooth codec list not published",
+      "Battery figure from legacy spec, not current page",
+      "App support limited"
+    ],
+    "notes": "Legacy model kept for recent coverage of Bluetooth + wired gaming headsets.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "SteelSeries",
+    "companySlug": "steelseries",
+    "family": "Arctis Pro",
+    "model": "SteelSeries Arctis Pro Wireless",
+    "slug": "steelseries-arctis-pro-wireless",
+    "generation": "Pro",
+    "variant": "Wireless",
+    "releaseYear": 2018,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "SteelSeries Engine",
+      "platforms": [
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Legacy Engine; base station handles most settings."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 20,
+      "caseHours": null,
+      "chargingIndicators": "Base station charges spare battery; two batteries included.",
+      "notes": "Up to 20 h per battery; dual hot-swap.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz wireless base station",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "Hi-Res certified DAC",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "DTS Headphone:X 2.0",
+        "availability": "official-app"
+      },
+      {
+        "id": "power.swappable-battery",
+        "name": "Dual batteries",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Base station dial",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Base station buttons",
+          "action": "Source, EQ, Bluetooth",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Wireless base station with OLED and controls.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm drivers; DTS Headphone:X 2.0; Hi-Res DAC in base station."
+    },
+    "appOnlyFeatures": [
+      "DTS Headphone:X",
+      "EQ profiles"
+    ],
+    "featureDeltaFromPrevious": [
+      "Dual swappable batteries",
+      "Hi-Res base station",
+      "Bluetooth + 2.4 GHz"
+    ],
+    "sources": [
+      {
+        "url": "https://steelseries.com/gaming-headsets/arctis-pro",
+        "type": "official-product",
+        "title": "Arctis Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Discontinued; official page now covers multiple Arctis Pro variants",
+      "Bluetooth codecs not published",
+      "ANC not offered"
+    ],
+    "notes": "Legacy flagship retained for recent coverage.",
+    "researchedAt": "2026-11-10"
+  }
+]

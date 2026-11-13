@@ -1,0 +1,1775 @@
+[
+  {
+    "company": "EarFun",
+    "companySlug": "earfun",
+    "family": "Air Pro",
+    "model": "EarFun Air Pro 4",
+    "slug": "earfun-air-pro-4",
+    "generation": "4",
+    "variant": "Pro",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "EarFun Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.corelink.earfun"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.corelink.earfun"
+      ],
+      "appVersionObserved": null,
+      "notes": "Multi-band EQ, touch customization, LDAC switch, in-ear detection, game mode, find headphones, multipoint management."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7.5,
+      "budsHoursNoAnc": 11,
+      "caseHours": 52,
+      "chargingIndicators": "10 minutes = 2 hours; USB-C and wireless charging.",
+      "notes": "Official 11 h/52 h ANC off, 7.5 h/35 h ANC on. 54 mAh per bud, 600 mAh case. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "QuietSmart 3.0 adaptive hybrid ANC up to 50 dB; 6 mics + cVc 8.0."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "QuietSmart 3.0 adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / aptX Lossless",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "audio.auracast",
+        "name": "LE Audio / Auracast",
+        "availability": "official-app"
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "50 ms game mode",
+        "availability": "official-app"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Multi-band EQ + 10 presets",
+        "availability": "official-app"
+      },
+      {
+        "id": "find-my-earbuds",
+        "name": "Find headphones",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap (either)",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap (L)",
+          "action": "previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap (R)",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "single tap (L)",
+          "action": "volume down",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "single tap (R)",
+          "action": "volume up",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press (L)",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Default mapping from the official manual; all touch actions customizable."
+    },
+    "audio": {
+      "eqPresets": [
+        "10 presets"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LC3",
+        "aptX",
+        "aptX Adaptive",
+        "aptX Lossless",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "10 mm composite driver; Bluetooth 5.4; IPX5."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "LDAC switch",
+      "in-ear detection",
+      "game mode",
+      "find headphones",
+      "wind noise cancellation"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC 50 dB versus 43 dB on Air Pro 3",
+      "aptX Lossless and LDAC added",
+      "52 h total battery versus 45 h",
+      "In-ear detection and Google Fast Pair"
+    ],
+    "sources": [
+      {
+        "url": "https://www.myearfun.com/press-release/earfun-s-new-premium-flagship-adaptive-anc-wireless-earbuds-with-uncompromising-lossless-audio-featuring-auracast",
+        "type": "official-product",
+        "title": "EarFun Air Pro 4 press release and specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.myearfun.com/press-release/earfun-s-new-premium-flagship-adaptive-anc-wireless-earbuds-with-uncompromising-lossless-audio-featuring-auracast",
+        "type": "official-product",
+        "title": "Air Pro 4 press release",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Exact EQ band count",
+      "Spatial audio support",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "EarFun",
+    "companySlug": "earfun",
+    "family": "Air Pro",
+    "model": "EarFun Air Pro 4+",
+    "slug": "earfun-air-pro-4-plus",
+    "generation": "4",
+    "variant": "Pro Plus",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "EarFun Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.corelink.earfun"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.corelink.earfun"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 12,
+      "caseHours": 54,
+      "chargingIndicators": "10 minutes = 2 hours; wireless charging.",
+      "notes": "Official 12 h/54 h ANC off. ANC-on split not captured. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "QuietSmart 3.0 adaptive hybrid ANC up to 50 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.dual-driver",
+        "name": "1 BA + 1 DD hybrid",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / aptX Lossless",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "audio.auracast",
+        "name": "Auracast",
+        "availability": "official-app"
+      },
+      {
+        "id": "water.ip55",
+        "name": "IP55",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap (L/R)",
+          "action": "previous/next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "single tap (L/R)",
+          "action": "volume down/up",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LC3",
+        "aptX",
+        "aptX Adaptive",
+        "aptX Lossless",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Hybrid 1 BA + 1 DD; Bluetooth 6.0; IP55."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "LDAC switch",
+      "game mode"
+    ],
+    "featureDeltaFromPrevious": [
+      "Hybrid dual-driver versus single dynamic on Air Pro 4",
+      "12 h/54 h battery versus 11 h/52 h",
+      "Bluetooth 6.0 versus 5.4",
+      "IP55 versus IPX5"
+    ],
+    "sources": [
+      {
+        "url": "https://www.myearfun.com/headphones",
+        "type": "official-product",
+        "title": "EarFun headphone catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC-on hours",
+      "Dedicated product page not captured",
+      "EQ presets",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "EarFun",
+    "companySlug": "earfun",
+    "family": "Air Pro",
+    "model": "EarFun Air Pro 4i",
+    "slug": "earfun-air-pro-4i",
+    "generation": "4",
+    "variant": "i",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "EarFun Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.corelink.earfun"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.corelink.earfun"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9.5,
+      "caseHours": 40,
+      "chargingIndicators": "10 minutes = 2 hours; wireless charging.",
+      "notes": "Official 9.5 h/40 h ANC off. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "Adaptive hybrid ANC up to 50 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / Hi-Res",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "water.ip55",
+        "name": "IP55",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.theater-mode",
+        "name": "Theater mode",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap (L/R)",
+          "action": "previous/next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm titanium-coated composite driver; Bluetooth 5.4; IP55."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "LDAC switch",
+      "theater mode"
+    ],
+    "featureDeltaFromPrevious": [
+      "Lower-cost Air Pro 4 variant with 50 dB ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.myearfun.com/headphones",
+        "type": "official-product",
+        "title": "EarFun headphone catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC-on hours",
+      "Dedicated product page not captured",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "EarFun",
+    "companySlug": "earfun",
+    "family": "Air Pro",
+    "model": "EarFun Air Pro 3",
+    "slug": "earfun-air-pro-3",
+    "generation": "3",
+    "variant": "Pro",
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "EarFun Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.corelink.earfun"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.corelink.earfun"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9,
+      "caseHours": 45,
+      "chargingIndicators": "10 minutes = 2 hours.",
+      "notes": "Official 9 h/45 h ANC off. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 43,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "QuietSmart 2.0 hybrid ANC up to 43 dB; 6 mics + cVc 8.0."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.aptx-adaptive",
+        "name": "aptX Adaptive",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "Game mode",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm wool dynamic driver; Bluetooth 5.3; IPX5."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "game mode"
+    ],
+    "featureDeltaFromPrevious": [
+      "43 dB ANC and 45 h battery versus Air Pro 2"
+    ],
+    "sources": [
+      {
+        "url": "https://www.myearfun.com/headphones",
+        "type": "official-product",
+        "title": "EarFun headphone catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC-on hours",
+      "Dedicated product page not captured",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "EarFun",
+    "companySlug": "earfun",
+    "family": "Free Pro",
+    "model": "EarFun Free Pro 3",
+    "slug": "earfun-free-pro-3",
+    "generation": "3",
+    "variant": "Pro",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "EarFun Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.corelink.earfun"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.corelink.earfun"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 27,
+      "chargingIndicators": "10 minutes = 2 hours; wireless charging.",
+      "notes": "Approximate 6 h/27 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 43,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "QuietSmart 2.0 ANC up to 43 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.aptx-adaptive",
+        "name": "Snapdragon Sound / aptX Adaptive",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "Game mode",
+        "availability": "official-app"
+      },
+      {
+        "id": "water.ipx5",
+        "name": "IPX5",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Bluetooth 5.3; IPX5."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "game mode"
+    ],
+    "featureDeltaFromPrevious": [
+      "Snapdragon Sound versus Free Pro 2"
+    ],
+    "sources": [
+      {
+        "url": "https://www.myearfun.com/headphones",
+        "type": "official-product",
+        "title": "EarFun headphone catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery approximate",
+      "ANC-on hours",
+      "Dedicated product page not captured",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "EarFun",
+    "companySlug": "earfun",
+    "family": "Free Pro",
+    "model": "EarFun Free Pro 2",
+    "slug": "earfun-free-pro-2",
+    "generation": "2",
+    "variant": "Pro",
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "EarFun Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.corelink.earfun"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.corelink.earfun"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 24,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 6 h/24 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 40,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "ANC up to 40 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "water.ipx5",
+        "name": "IPX5",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Bluetooth 5.2."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC added versus Free 2"
+    ],
+    "sources": [
+      {
+        "url": "https://www.myearfun.com/headphones",
+        "type": "official-product",
+        "title": "EarFun headphone catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery approximate",
+      "ANC dB",
+      "Dedicated product page not captured",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "EarFun",
+    "companySlug": "earfun",
+    "family": "Free",
+    "model": "EarFun Free 2",
+    "slug": "earfun-free-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "EarFun Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.corelink.earfun"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.corelink.earfun"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9,
+      "caseHours": 30,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 9 h/30 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "water.ipx5",
+        "name": "IPX5",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Free 2 adds app EQ and longer battery"
+    ],
+    "sources": [
+      {
+        "url": "https://www.myearfun.com/headphones",
+        "type": "official-product",
+        "title": "EarFun headphone catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery approximate",
+      "Dedicated product page not captured",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "EarFun",
+    "companySlug": "earfun",
+    "family": "Air",
+    "model": "EarFun Air 3",
+    "slug": "earfun-air-3",
+    "generation": "3",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "EarFun Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.corelink.earfun"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.corelink.earfun"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 40,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 10 h/40 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "water.ipx5",
+        "name": "IPX5",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Air 3 non-ANC value model"
+    ],
+    "sources": [
+      {
+        "url": "https://www.myearfun.com/headphones",
+        "type": "official-product",
+        "title": "EarFun headphone catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery approximate",
+      "Dedicated product page not captured",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "EarFun",
+    "companySlug": "earfun",
+    "family": "Wave",
+    "model": "EarFun Wave Pro",
+    "slug": "earfun-wave-pro",
+    "generation": "Pro",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "EarFun Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.corelink.earfun"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.corelink.earfun"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 80,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; 10 minutes = 5 hours.",
+      "notes": "Approximate 80 h ANC off; ANC-on split not captured.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 45,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "Hybrid adaptive ANC up to 45 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / Hi-Res",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "wired.3.5mm",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.buttons",
+        "name": "Physical buttons",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm driver."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "LDAC switch"
+    ],
+    "featureDeltaFromPrevious": [
+      "EarFun over-ear ANC model"
+    ],
+    "sources": [
+      {
+        "url": "https://www.myearfun.com/headphones",
+        "type": "official-product",
+        "title": "EarFun headphone catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery approximate",
+      "ANC dB",
+      "Dedicated product page not captured"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "EarFun",
+    "companySlug": "earfun",
+    "family": "Clip",
+    "model": "EarFun Clip 2",
+    "slug": "earfun-clip-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "EarFun Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.corelink.earfun"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.corelink.earfun"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 40,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 10 h/40 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear clip; no ANC."
+    },
+    "features": [
+      {
+        "id": "design.clip",
+        "name": "Open-ear clip",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "water.ipx5",
+        "name": "IPX5",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Clip 2 adds LDAC and longer battery versus Clip"
+    ],
+    "sources": [
+      {
+        "url": "https://www.myearfun.com/headphones",
+        "type": "official-product",
+        "title": "EarFun headphone catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery approximate",
+      "Dedicated product page not captured",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "EarFun",
+    "companySlug": "earfun",
+    "family": "OpenJump",
+    "model": "EarFun OpenJump",
+    "slug": "earfun-openjump",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "EarFun Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.corelink.earfun"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.corelink.earfun"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 42,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 10 h/42 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear; no ANC."
+    },
+    "features": [
+      {
+        "id": "design.open-ear",
+        "name": "Open-ear hook",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "water.ipx5",
+        "name": "IPX5",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "EarFun open-ear sport model"
+    ],
+    "sources": [
+      {
+        "url": "https://www.myearfun.com/headphones",
+        "type": "official-product",
+        "title": "EarFun headphone catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery approximate",
+      "Dedicated product page not captured",
+      "Codec list",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "EarFun",
+    "companySlug": "earfun",
+    "family": "Air Life",
+    "model": "EarFun Air Life",
+    "slug": "earfun-air-life",
+    "generation": "Life",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "EarFun Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.corelink.earfun"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.corelink.earfun"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 40,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 8 h/40 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "water.ipx5",
+        "name": "IPX5",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Value non-ANC Air model"
+    ],
+    "sources": [
+      {
+        "url": "https://www.myearfun.com/headphones",
+        "type": "official-product",
+        "title": "EarFun headphone catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery approximate",
+      "Dedicated product page not captured",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

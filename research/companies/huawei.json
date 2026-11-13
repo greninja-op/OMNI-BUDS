@@ -1,0 +1,1608 @@
+[
+  {
+    "company": "Huawei",
+    "companySlug": "huawei",
+    "family": "HUAWEI FreeBuds Pro",
+    "model": "HUAWEI FreeBuds Pro 5",
+    "slug": "huawei-freebuds-pro-5",
+    "generation": "5",
+    "variant": "Pro",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "HUAWEI Audio Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://consumer.huawei.com/en/mobileservices/ai-life/"
+      ],
+      "appVersionObserved": null,
+      "notes": "Product page names HUAWEI Audio Connect for iOS/Android. HUAWEI AI Life remains the legacy app for older FreeBuds; the two apps overlap during the 2025-2026 transition."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 9,
+      "caseHours": 38,
+      "chargingIndicators": "Case LED; wired USB-C; wireless charging",
+      "notes": "Official 6 h ANC / 9 h ANC-off, 38 h with case. Tested with Mate 80 Pro, AAC, 50% volume.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 38
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "awareness",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Dual-engine AI ANC (two drivers), 400,000 noise instances/s, 8 microsecond latency; no official dB depth. Conversation Awareness and Adaptive Volume."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Dual-engine AI noise cancellation",
+        "availability": "both",
+        "notes": "Real-time MIMO AI sensing."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Awareness mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.conversation-awareness",
+        "name": "Conversation Awareness",
+        "availability": "official-app",
+        "notes": "Auto-switches to Awareness when speaking."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Unlimited Spatial Audio",
+        "availability": "official-app",
+        "notes": "Head tracking; OTA feature."
+      },
+      {
+        "id": "audio.lossless",
+        "name": "2.3 Mbps L2HC 4.0 lossless",
+        "availability": "device-only",
+        "notes": "48 kHz/24-bit; requires Mate X7/EMUI 15 or later."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "HUAWEI SOUND profiles",
+        "availability": "official-app",
+        "notes": "Balanced, Voice, Classical, Bass."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": "Two devices; expands to multi-connection on EMUI."
+      },
+      {
+        "id": "noise-control.adaptive-volume",
+        "name": "Adaptive Volume",
+        "availability": "official-app",
+        "notes": "Disabled by default."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next/previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "volume",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / Awareness",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch stem; gesture customization in HUAWEI Audio Connect."
+    },
+    "audio": {
+      "eqPresets": [
+        "HUAWEI SOUND Balanced",
+        "HUAWEI SOUND Voice",
+        "HUAWEI SOUND Classical",
+        "HUAWEI SOUND Bass"
+      ],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "L2HC 4.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Dual-drive acoustic system: 11 mm bass dynamic + micro planar tweeter; dual DSP/DAC; 10 Hz-48 kHz."
+    },
+    "appOnlyFeatures": [
+      "HUAWEI SOUND profiles",
+      "Spatial audio toggle",
+      "Conversation Awareness",
+      "Adaptive Volume",
+      "Gesture remap",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added dual-engine AI ANC with dedicated bass/treble drivers vs FreeBuds Pro 4 (official-product)",
+      "Raised lossless transmission to 2.3 Mbps L2HC 4.0 (official-product)",
+      "Added Conversation Awareness and Adaptive Volume (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://consumer.huawei.com/en/headphones/freebuds-pro-5/",
+        "type": "official-product",
+        "title": "HUAWEI FreeBuds Pro 5",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://consumer.huawei.com/en/headphones/freebuds-pro-5/specs/",
+        "type": "official-product",
+        "title": "HUAWEI FreeBuds Pro 5 specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC depth in dB not published",
+      "Custom EQ band count not stated",
+      "Audio Connect package ID not confirmed",
+      "Battery split/separate layout inferred from AI Life pattern"
+    ],
+    "notes": "Flagship 2025 model; APP is transitioning from AI Life to Audio Connect.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Huawei",
+    "companySlug": "huawei",
+    "family": "HUAWEI FreeBuds",
+    "model": "HUAWEI FreeBuds 6",
+    "slug": "huawei-freebuds-6",
+    "generation": "6",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-open",
+    "officialApp": {
+      "name": "HUAWEI AI Life",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.huawei.smarthome"
+      ],
+      "appStoreUrls": [
+        "https://consumer.huawei.com/en/mobileservices/ai-life/"
+      ],
+      "appVersionObserved": null,
+      "notes": "Open-fit ANC, EQ and gesture settings are app-managed. Newer Audio Connect app may also support this model."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 4.0,
+      "budsHoursNoAnc": 5.5,
+      "caseHours": 32,
+      "chargingIndicators": "Case LED; wired USB-C; wireless charging up to 2 W",
+      "notes": "Sound-quality-priority mode: 5.5 h / 32 h ANC-off, 4.0 h / 24 h ANC-on. Connection-priority mode: 6 h / 36 h ANC-off, 4.5 h / 27 h ANC-on. Alternative values shown in separate fields are the connection-priority figures.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "awareness"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Open-fit ANC; no dB claim. Triple adaptive EQ, call noise cancellation."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Open-fit active noise cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Awareness mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.lossless",
+        "name": "2.3 Mbps L2HC 4.0 lossless",
+        "availability": "device-only",
+        "notes": "48 kHz/24-bit; requires EMUI 15+ Huawei phone/tablet."
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC Hi-Res",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Triple adaptive EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; next/previous; answer/end call; voice assistant",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous/next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "volume",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency; reject call; voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch stem."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "L2HC 4.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Dual driver: 11 mm dynamic + planar diaphragm; 4.9 g per bud; no LHDC/aptX."
+    },
+    "appOnlyFeatures": [
+      "Triple adaptive EQ",
+      "Gesture remap",
+      "Firmware update",
+      "ANC/Awareness"
+    ],
+    "featureDeltaFromPrevious": [
+      "First open-fit FreeBuds with 2.3 Mbps lossless vs FreeBuds 5 (official-product)",
+      "Added dual driver (dynamic + planar) and smaller/lighter stem (official-product)",
+      "Battery: 5.5 h/32 h ANC-off in sound-priority mode (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://consumer.huawei.com/en/headphones/freebuds6/",
+        "type": "official-product",
+        "title": "HUAWEI FreeBuds 6",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://consumer.huawei.com/en/headphones/freebuds6/specs/",
+        "type": "official-product",
+        "title": "HUAWEI FreeBuds 6 specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Spatial audio not stated for this model",
+      "Custom EQ not stated",
+      "ANC dB not published",
+      "Connection-priority battery only partly captured in numeric fields",
+      "Battery layout inferred"
+    ],
+    "notes": "Open-fit design. Battery depends on the sound-quality vs connection-quality priority setting, a real product-visible surprise.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Huawei",
+    "companySlug": "huawei",
+    "family": "HUAWEI FreeBuds",
+    "model": "HUAWEI FreeBuds 6i",
+    "slug": "huawei-freebuds-6i",
+    "generation": "6",
+    "variant": "i",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "HUAWEI AI Life",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.huawei.smarthome"
+      ],
+      "appStoreUrls": [
+        "https://consumer.huawei.com/en/mobileservices/ai-life/"
+      ],
+      "appVersionObserved": null,
+      "notes": "Dynamic EQ and ANC modes are app-managed."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 8,
+      "caseHours": 35,
+      "chargingIndicators": "Case LED; USB-C",
+      "notes": "Official 8 h / 35 h ANC-off; 5 h / 20 h ANC-on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "awareness"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Intelligent Dynamic ANC 3.0; no official dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Intelligent Dynamic ANC 3.0",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Dynamic ANC",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC Hi-Res",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Dynamic EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "volume",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / Awareness",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm quad-magnet dynamic driver; 14 Hz-40 kHz; 3 mics per bud."
+    },
+    "appOnlyFeatures": [
+      "Dynamic ANC",
+      "Dynamic EQ",
+      "Gesture remap",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added LDAC and Intelligent Dynamic ANC 3.0 vs FreeBuds 5i (official-product)",
+      "Battery: 5 h ANC / 8 h ANC-off, 20 h/35 h with case (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://consumer.huawei.com/en/headphones/freebuds6i/",
+        "type": "official-product",
+        "title": "HUAWEI FreeBuds 6i",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://consumer.huawei.com/en/headphones/freebuds6i/specs/",
+        "type": "official-product",
+        "title": "HUAWEI FreeBuds 6i specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB not published",
+      "Custom EQ not listed",
+      "Battery layout inferred"
+    ],
+    "notes": "2024 mid-range ANC model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Huawei",
+    "companySlug": "huawei",
+    "family": "HUAWEI FreeBuds SE",
+    "model": "HUAWEI FreeBuds SE 4 ANC",
+    "slug": "huawei-freebuds-se-4-anc",
+    "generation": "4",
+    "variant": "SE ANC",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "HUAWEI AI Life",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.huawei.smarthome"
+      ],
+      "appStoreUrls": [
+        "https://consumer.huawei.com/en/mobileservices/ai-life/"
+      ],
+      "appVersionObserved": null,
+      "notes": "Multi-EQ and noise-control settings through AI Life."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 10,
+      "caseHours": 50,
+      "chargingIndicators": "Three-colour case LED; USB-C",
+      "notes": "Official 10 h / 50 h ANC-off; 7 h / 35 h ANC-on. Bigger total than many flagships.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "ANC plus wind-noise reduction mode; no dB claim. 10 mm driver."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Multi-EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.huawei.gaming-low-latency",
+        "name": "Bluetooth gaming low latency",
+        "availability": "device-only",
+        "notes": "Huawei phones/tablets only."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next/previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "touch and hold",
+          "action": "noise-control cycle; volume; voice assistant; reject call",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch-and-hold action is assignable."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "mSBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "10 mm dynamic driver; 20 Hz-20 kHz; no LDAC."
+    },
+    "appOnlyFeatures": [
+      "Multi-EQ",
+      "Noise-control gesture assignment",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added ANC to the SE line vs FreeBuds SE 3 (official-product)",
+      "Battery: 7 h ANC / 10 h ANC-off, 35 h/50 h with case (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://consumer.huawei.com/en/headphones/freebuds-se-4-anc/",
+        "type": "official-product",
+        "title": "HUAWEI FreeBuds SE 4 ANC",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://consumer.huawei.com/en/headphones/freebuds-se-4-anc/specs/",
+        "type": "official-product",
+        "title": "HUAWEI FreeBuds SE 4 ANC specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Multipoint not stated",
+      "ANC dB not published",
+      "Wear detection explicitly absent",
+      "Battery layout inferred"
+    ],
+    "notes": "Budget ANC model with unusually high 50 h total.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Huawei",
+    "companySlug": "huawei",
+    "family": "HUAWEI FreeBuds SE",
+    "model": "HUAWEI FreeBuds SE 3",
+    "slug": "huawei-freebuds-se-3",
+    "generation": "3",
+    "variant": "SE",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "HUAWEI AI Life",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.huawei.smarthome"
+      ],
+      "appStoreUrls": [
+        "https://consumer.huawei.com/en/mobileservices/ai-life/"
+      ],
+      "appVersionObserved": null,
+      "notes": "Multi-EQ only; no ANC controls."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9,
+      "caseHours": 42,
+      "chargingIndicators": "Three-colour case LED; USB-C",
+      "notes": "No ANC. Official 9 h / 42 h; 5 h call time.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC; call noise reduction only."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Multi-EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.huawei.gaming-low-latency",
+        "name": "Bluetooth gaming low latency",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track (default)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Triple tap can be set to previous track."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "10 mm dynamic driver; 3.8 g per bud; no multipoint."
+    },
+    "appOnlyFeatures": [
+      "Multi-EQ",
+      "Triple-tap assignment",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Battery increased to 9 h/42 h vs FreeBuds SE 2 (official-product)",
+      "Lighter 3.8 g bud and BT 5.4 (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://consumer.huawei.com/en/headphones/freebuds-se-3/",
+        "type": "official-product",
+        "title": "HUAWEI FreeBuds SE 3",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://consumer.huawei.com/en/headphones/freebuds-se-3/specs/",
+        "type": "official-product",
+        "title": "HUAWEI FreeBuds SE 3 specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No ANC",
+      "Multipoint unsupported",
+      "EQ preset list not captured",
+      "Battery layout inferred"
+    ],
+    "notes": "Entry-level 2024 model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Huawei",
+    "companySlug": "huawei",
+    "family": "HUAWEI FreeClip",
+    "model": "HUAWEI FreeClip 2",
+    "slug": "huawei-freeclip-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "HUAWEI Audio Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://consumer.huawei.com/en/mobileservices/ai-life/"
+      ],
+      "appVersionObserved": null,
+      "notes": "Gesture customization and multi-EQ are app features. Audio Connect is named on the FreeClip 2 specs page."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9,
+      "caseHours": 38,
+      "chargingIndicators": "Case LED; USB-C; wireless charging up to 3 W",
+      "notes": "No ANC. Official 9 h / 38 h music; 6 h / 25 h calls.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Open-ear clip; no ANC. Call noise cancellation only."
+    },
+    "features": [
+      {
+        "id": "audio.open-ear",
+        "name": "Open-ear clip design",
+        "availability": "device-only",
+        "notes": "10.8 mm dual-diaphragm driver; 5.1 g per bud."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Multi-EQ with custom sound effect",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "noise-control.adaptive-volume",
+        "name": "Adaptive volume",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.huawei.find-earbuds",
+        "name": "Find earbuds",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "volume",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "C-bridge clip; gestures customizable in Audio Connect."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "L2HC"
+      ],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "BT 6.0; 20 Hz-20 kHz; IP57 buds / IP54 case."
+    },
+    "appOnlyFeatures": [
+      "Multi-EQ/custom EQ",
+      "Gesture remap",
+      "Adaptive volume",
+      "Find earbuds"
+    ],
+    "featureDeltaFromPrevious": [
+      "Battery increased from 8 h/36 h to 9 h/38 h vs FreeClip (official-product)",
+      "Added BT 6.0, IP57 buds, custom EQ and adaptive volume (official-product)",
+      "New 10.8 mm dual-diaphragm driver (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://consumer.huawei.com/en/headphones/freeclip2/",
+        "type": "official-product",
+        "title": "HUAWEI FreeClip 2",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://consumer.huawei.com/om/headphones/freeclip2/specs/",
+        "type": "official-product",
+        "title": "HUAWEI FreeClip 2 specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No ANC",
+      "Spatial audio not stated",
+      "Custom EQ band count not stated",
+      "Battery layout inferred"
+    ],
+    "notes": "Open-ear clip flagship; no ANC by design.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Huawei",
+    "companySlug": "huawei",
+    "family": "HUAWEI FreeClip",
+    "model": "HUAWEI FreeClip",
+    "slug": "huawei-freeclip",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "HUAWEI AI Life",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.huawei.smarthome"
+      ],
+      "appStoreUrls": [
+        "https://consumer.huawei.com/en/mobileservices/ai-life/"
+      ],
+      "appVersionObserved": null,
+      "notes": "EQ and gesture settings through AI Life."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 36,
+      "chargingIndicators": "Case LED; USB-C; wireless charging",
+      "notes": "No ANC. Official 8 h / 36 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Open-ear clip; no ANC. Call noise cancellation only."
+    },
+    "features": [
+      {
+        "id": "audio.open-ear",
+        "name": "Open-ear clip design",
+        "availability": "device-only",
+        "notes": "10.8 mm dual-magnet driver; 5.6 g per bud."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch on the C-bridge."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "L2HC"
+      ],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "BT 5.3; IP54."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Gesture remap",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://consumer.huawei.com/en/headphones/freeclip/",
+        "type": "official-product",
+        "title": "HUAWEI FreeClip",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://consumer.huawei.com/za/headphones/freeclip/specs/",
+        "type": "official-regional",
+        "title": "HUAWEI FreeClip specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No ANC",
+      "Custom EQ not stated",
+      "Spatial audio not stated",
+      "Battery layout inferred"
+    ],
+    "notes": "First-generation open-ear clip.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Huawei",
+    "companySlug": "huawei",
+    "family": "HUAWEI FreeLace",
+    "model": "HUAWEI FreeLace Pro 2",
+    "slug": "huawei-freelace-pro-2",
+    "generation": "2",
+    "variant": "Pro",
+    "releaseYear": 2024,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "HUAWEI AI Life",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.huawei.smarthome"
+      ],
+      "appStoreUrls": [
+        "https://consumer.huawei.com/en/mobileservices/ai-life/"
+      ],
+      "appVersionObserved": null,
+      "notes": "Intelligent ANC 2.0 must be enabled in AI Life; 10-band EQ also app-only."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": 12.5,
+      "budsHoursNoAnc": 25,
+      "caseHours": null,
+      "chargingIndicators": "Neckband LED; USB-C; USB-C reverse charging from phone; 5-minute charge = 5 h",
+      "notes": "No charging case. Connection-priority mode: 25 h ANC-off / 12.5 h ANC-on. Sound-priority mode: 15 h / 10 h. Numeric fields use connection-priority.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "deep",
+        "balanced",
+        "light",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Intelligent ANC 2.0 with three depths and environment adaptation; no dB claim. Five-mic AI call noise reduction."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Intelligent ANC 2.0",
+        "availability": "official-app",
+        "notes": "Three depths plus adaptive."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "10-band EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC/L2HC Hi-Res",
+        "availability": "device-only",
+        "notes": "Up to 990 kbps LDAC; HWA + Hi-Res certified."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": "Audio sharing on HarmonyOS."
+      },
+      {
+        "id": "vendor.huawei.hipair",
+        "name": "USB-C HiPair direct connection/charging",
+        "availability": "device-only",
+        "notes": "Plug into USB-C phone for pairing/charging."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "left bud long press",
+          "action": "ANC / transparency / off",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "function button short press",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "function button double press",
+          "action": "next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "function button triple press",
+          "action": "previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "volume + / - short press",
+          "action": "volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "volume + / - long press 2 s",
+          "action": "voice assistant",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Power slider, function button, volume rocker",
+      "configurableInApp": true,
+      "notes": "Only the left-bud noise-control gesture is app-configurable."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "L2HC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "10.8 mm dual-magnet driver; 15 Hz-40 kHz; IP55. No wear detection."
+    },
+    "appOnlyFeatures": [
+      "Intelligent ANC 2.0",
+      "10-band EQ",
+      "Noise-control gesture assignment",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added LDAC and L2HC dual Hi-Res vs FreeLace Pro (official-product)",
+      "Intelligent ANC 2.0 with three depths vs FreeLace Pro (official-product)",
+      "Battery: 25 h ANC-off / 12.5 h ANC-on (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://consumer.huawei.com/en/headphones/freelace-pro-2/",
+        "type": "official-product",
+        "title": "HUAWEI FreeLace Pro 2",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://consumer.huawei.com/en/headphones/freelace-pro-2/specs/",
+        "type": "official-product",
+        "title": "HUAWEI FreeLace Pro 2 specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB not published",
+      "No wear detection",
+      "Battery display has no case; neckband UI semantics unknown",
+      "EQ preset list not captured"
+    ],
+    "notes": "Neckband; battery depends on sound-quality vs connection-priority mode. USB-C HiPair is a distinguishing feature.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Huawei",
+    "companySlug": "huawei",
+    "family": "HUAWEI FreeArc",
+    "model": "HUAWEI FreeArc",
+    "slug": "huawei-freearc",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "HUAWEI AI Life",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.huawei.smarthome"
+      ],
+      "appStoreUrls": [
+        "https://consumer.huawei.com/en/mobileservices/ai-life/"
+      ],
+      "appVersionObserved": null,
+      "notes": "Touch controls and multi-EQ/custom sound are customized in AI Life."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 28,
+      "chargingIndicators": "Tri-colour case LED; USB-C",
+      "notes": "No ANC. Official 7 h / 28 h music; 5 h / 20 h calls.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Open-ear hook; no ANC. Call noise cancellation only."
+    },
+    "features": [
+      {
+        "id": "audio.open-ear",
+        "name": "Open-ear C-bridge hook",
+        "availability": "device-only",
+        "notes": "17x12 mm driver; 8.9 g per bud; Ni-Ti memory alloy bridge."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Multi-EQ with custom sound effect",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.huawei.find-earbuds",
+        "name": "Find earbuds",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "swipe forward/back",
+          "action": "volume",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "reject call",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls customizable in AI Life."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "BT 5.2; IP57 buds; 17x12 mm sensitive driver."
+    },
+    "appOnlyFeatures": [
+      "Multi-EQ/custom EQ",
+      "Gesture remap",
+      "Find earbuds",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://consumer.huawei.com/en/headphones/freearc/",
+        "type": "official-product",
+        "title": "HUAWEI FreeArc",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://consumer.huawei.com/en/headphones/freearc/specs/",
+        "type": "official-product",
+        "title": "HUAWEI FreeArc specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No ANC",
+      "Spatial audio not stated",
+      "Wear detection not documented",
+      "Battery layout inferred"
+    ],
+    "notes": "Open-ear hook sibling to FreeClip; no ANC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Huawei",
+    "companySlug": "huawei",
+    "family": "HUAWEI FreeBuds",
+    "model": "HUAWEI FreeBuds 5",
+    "slug": "huawei-freebuds-5",
+    "generation": "5",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-open",
+    "officialApp": {
+      "name": "HUAWEI AI Life",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.huawei.smarthome"
+      ],
+      "appStoreUrls": [
+        "https://consumer.huawei.com/en/mobileservices/ai-life/"
+      ],
+      "appVersionObserved": null,
+      "notes": "Open-fit ANC, EQ and gesture settings via AI Life."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 6.5,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; USB-C; wireless charging",
+      "notes": "Official/launch figures: 5 h ANC, 6.5 h ANC-off, 30 h with case. Verify regional spec sheet.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "awareness"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Open-fit ANC; no dB claim. Dual-mic call noise cancellation."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Open-fit ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Awareness mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC Hi-Res",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next/previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "volume",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / Awareness",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch stem."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "L2HC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm dual-magnet driver; open-fit; 5.4 g per bud."
+    },
+    "appOnlyFeatures": [
+      "ANC/Awareness",
+      "EQ",
+      "Gesture remap",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Open-fit redesign vs FreeBuds 4 (official-product)",
+      "Added LDAC and dual-device connection (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://consumer.huawei.com/en/headphones/freebuds5/",
+        "type": "official-product",
+        "title": "HUAWEI FreeBuds 5",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://consumer.huawei.com/en/headphones/freebuds5/specs/",
+        "type": "official-product",
+        "title": "HUAWEI FreeBuds 5 specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery figures need re-verification against a live spec page (product page retired in some regions)",
+      "ANC dB not published",
+      "Spatial audio not stated",
+      "Battery layout inferred"
+    ],
+    "notes": "2023 open-fit model; ancestor of FreeBuds 6.",
+    "researchedAt": "2026-11-10"
+  }
+]

@@ -1,0 +1,1292 @@
+[
+  {
+    "company": "Mivi",
+    "companySlug": "mivi",
+    "family": "SuperPods",
+    "model": "SuperPods Immersio Pro",
+    "slug": "mivi-superpods-immersio-pro",
+    "generation": null,
+    "variant": "Immersio Pro",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Mivi Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "in.mivi.audio.ota"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=in.mivi.audio.ota"
+      ],
+      "appVersionObserved": "Sep 2025 listing",
+      "notes": "Mivi Audio explicitly supports SuperPods Immersio, Opera ANC, Opera, Halo and Dueto. Pro is part of the Immersio family and is presumed supported, but the Play listing names only 'SuperPods Immersio'."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 60,
+      "chargingIndicators": "Case LED; charging indicator listed.",
+      "notes": "60 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC; dB not published in the listing captured."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.dolby",
+        "name": "Dolby Audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.mivi.gaming-mode",
+        "name": "Gaming mode",
+        "availability": "both",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "BT 5.3; IPX4; quad mic ANC."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC",
+      "Controls"
+    ],
+    "featureDeltaFromPrevious": [
+      "Dolby Audio",
+      "60 h playback",
+      "Quad-mic ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mivi.in/products/superpods-immersio-pro",
+        "type": "official-product",
+        "title": "Mivi SuperPods Immersio Pro",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=in.mivi.audio.ota",
+        "type": "official-app-store",
+        "title": "Mivi Audio",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB",
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map",
+      "Exact app support for Pro variant"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Mivi",
+    "companySlug": "mivi",
+    "family": "SuperPods",
+    "model": "SuperPods Immersio",
+    "slug": "mivi-superpods-immersio",
+    "generation": null,
+    "variant": "Immersio",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Mivi Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "in.mivi.audio.ota"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=in.mivi.audio.ota"
+      ],
+      "appVersionObserved": null,
+      "notes": "Explicitly supported by Mivi Audio."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 60,
+      "chargingIndicators": "Case LED.",
+      "notes": "60 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.dolby",
+        "name": "Dolby Audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "AI-ENC calls; Dolby Audio."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC",
+      "Controls"
+    ],
+    "featureDeltaFromPrevious": [
+      "Dolby Audio",
+      "60 h playback"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mivi.in/products/superpods-immersio",
+        "type": "official-product",
+        "title": "Mivi SuperPods Immersio",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=in.mivi.audio.ota",
+        "type": "official-app-store",
+        "title": "Mivi Audio",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB",
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Mivi",
+    "companySlug": "mivi",
+    "family": "SuperPods",
+    "model": "SuperPods Harmony",
+    "slug": "mivi-superpods-harmony",
+    "generation": null,
+    "variant": "Harmony",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Mivi Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "in.mivi.audio.ota"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=in.mivi.audio.ota"
+      ],
+      "appVersionObserved": null,
+      "notes": "Harmony is not named in the current Mivi Audio supported list; app support is presumed but unconfirmed."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 65,
+      "chargingIndicators": "Case LED.",
+      "notes": "65 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "35 dB quad-mic ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Quad-mic ANC",
+        "availability": "both",
+        "notes": "35 dB."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial Audio and 3D soundstage",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "BT 5.3."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC",
+      "Spatial audio"
+    ],
+    "featureDeltaFromPrevious": [
+      "35 dB ANC",
+      "Spatial audio",
+      "65 h playback"
+    ],
+    "sources": [
+      {
+        "url": "https://www.amazon.in/Mivi-SuperPods-Quad-mic-Soundstage-Bluetooth/dp/B0GDQZYR5K",
+        "type": "official-product",
+        "title": "Mivi SuperPods Harmony official listing",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=in.mivi.audio.ota",
+        "type": "official-app-store",
+        "title": "Mivi Audio",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map",
+      "App support"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Mivi",
+    "companySlug": "mivi",
+    "family": "SuperPods",
+    "model": "SuperPods Opera ANC",
+    "slug": "mivi-superpods-opera-anc",
+    "generation": null,
+    "variant": "Opera ANC",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Mivi Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "in.mivi.audio.ota"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=in.mivi.audio.ota"
+      ],
+      "appVersionObserved": null,
+      "notes": "Explicitly supported by Mivi Audio."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": null,
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://play.google.com/store/apps/details?id=in.mivi.audio.ota",
+        "type": "official-app-store",
+        "title": "Mivi Audio supported devices",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official product page not captured",
+      "ANC dB",
+      "Playtime",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Mivi",
+    "companySlug": "mivi",
+    "family": "SuperPods",
+    "model": "SuperPods Opera",
+    "slug": "mivi-superpods-opera",
+    "generation": null,
+    "variant": "Opera",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Mivi Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "in.mivi.audio.ota"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=in.mivi.audio.ota"
+      ],
+      "appVersionObserved": null,
+      "notes": "Explicitly supported by Mivi Audio."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": null,
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://play.google.com/store/apps/details?id=in.mivi.audio.ota",
+        "type": "official-app-store",
+        "title": "Mivi Audio supported devices",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official product page not captured",
+      "Playtime",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Mivi",
+    "companySlug": "mivi",
+    "family": "SuperPods",
+    "model": "SuperPods Halo",
+    "slug": "mivi-superpods-halo",
+    "generation": null,
+    "variant": "Halo",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Mivi Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "in.mivi.audio.ota"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=in.mivi.audio.ota"
+      ],
+      "appVersionObserved": null,
+      "notes": "Explicitly supported by Mivi Audio."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": null,
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://play.google.com/store/apps/details?id=in.mivi.audio.ota",
+        "type": "official-app-store",
+        "title": "Mivi Audio supported devices",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official product page not captured",
+      "ANC dB",
+      "Playtime",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Mivi",
+    "companySlug": "mivi",
+    "family": "SuperPods",
+    "model": "SuperPods Dueto",
+    "slug": "mivi-superpods-dueto",
+    "generation": null,
+    "variant": "Dueto",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Mivi Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "in.mivi.audio.ota"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=in.mivi.audio.ota"
+      ],
+      "appVersionObserved": null,
+      "notes": "Explicitly supported by Mivi Audio."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": null,
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://play.google.com/store/apps/details?id=in.mivi.audio.ota",
+        "type": "official-app-store",
+        "title": "Mivi Audio supported devices",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official product page not captured",
+      "ANC dB",
+      "Playtime",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Mivi",
+    "companySlug": "mivi",
+    "family": "DuoPods A",
+    "model": "DuoPods A25",
+    "slug": "mivi-duopods-a25",
+    "generation": null,
+    "variant": "A25",
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "DuoPods A25 predates Mivi Audio and is not in its supported list."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7.5,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED.",
+      "notes": "Official: 7.5 h buds, up to 40 h with charging capsule.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC; passive isolation only."
+    },
+    "features": [],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap MFB",
+          "action": "play/pause; answer/reject call; voice assistant",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "No volume control on the buds per review."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers; BT 5.0; IPX4."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.mivi.in/products/duopods-a25-earbud",
+        "type": "official-product",
+        "title": "Mivi DuoPods A25",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery display semantics",
+      "Codecs",
+      "Case percentage behaviour"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Mivi",
+    "companySlug": "mivi",
+    "family": "DuoPods A",
+    "model": "DuoPods A350",
+    "slug": "mivi-duopods-a350",
+    "generation": null,
+    "variant": "A350",
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": "Case LED; 500 mAh case.",
+      "notes": "50 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm electro-dynamic bass driver; dual mic."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "50 h playback",
+      "500 mAh case"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mivi.in/products/duopods-a350-earbud",
+        "type": "official-product",
+        "title": "Mivi DuoPods A350",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Mivi",
+    "companySlug": "mivi",
+    "family": "DuoPods",
+    "model": "DuoPods Marathon",
+    "slug": "mivi-duopods-marathon",
+    "generation": null,
+    "variant": "Marathon",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 70,
+      "chargingIndicators": null,
+      "notes": "70 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "AI-ENC for calls only."
+    },
+    "features": [
+      {
+        "id": "vendor.mivi.ai-enc",
+        "name": "AI-ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers; BT 5.3; IPX4."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "70 h playback"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mivi.in/collections/earbuds",
+        "type": "official-product",
+        "title": "Mivi earbuds collection",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map",
+      "Official product page URL"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Mivi",
+    "companySlug": "mivi",
+    "family": "DuoPods A",
+    "model": "DuoPods A70",
+    "slug": "mivi-duopods-a70",
+    "generation": null,
+    "variant": "A70",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": null,
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.mivi.in/collections/earbuds",
+        "type": "official-product",
+        "title": "Mivi earbuds collection",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "All technical specifications",
+      "Battery display semantics",
+      "Official product page URL"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Mivi",
+    "companySlug": "mivi",
+    "family": "Collar",
+    "model": "Collar 2",
+    "slug": "mivi-collar-2",
+    "generation": "2",
+    "variant": "Collar",
+    "releaseYear": 2022,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 24,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": "Neckband, no case. Up to 24 h playtime claimed; fast charging.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "CVC 6.0 call noise cancellation only."
+    },
+    "features": [
+      {
+        "id": "vendor.mivi.cvc",
+        "name": "CVC 6.0 call noise cancellation",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [],
+      "physicalButtons": "Inline neckband controls.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "BT 5.0; IPX4."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.mivi.in/collections/neckbands",
+        "type": "official-product",
+        "title": "Mivi neckbands collection",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Exact playtime per charge",
+      "Control map",
+      "Codecs",
+      "Official product page URL"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

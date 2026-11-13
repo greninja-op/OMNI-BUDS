@@ -83,8 +83,7 @@ class OmniBudsForegroundService : Service() {
                 BluetoothHeadset.ACTION_CONNECTION_STATE_CHANGED -> {
                     val dev = findConnectedAudioDevice(this@OmniBudsForegroundService)
                     if (dev == null) {
-                        Log.i(TAG, "Audio device disconnected in background. Tearing down foreground service.")
-                        UniversalTwsEngine.disconnectAll()
+                        Log.i(TAG, "Audio device disconnected in background. Stopping notification, keeping vendor link for docked-case telemetry.")
                         activeDeviceAddress = null
                         currentLeftBattery = null
                         currentRightBattery = null
@@ -140,7 +139,7 @@ class OmniBudsForegroundService : Service() {
                     if (resolvedDev != null) {
                         handleDeviceConnected(resolvedDev)
                     } else {
-                        promoteToForeground(address, activeDeviceName ?: "realme Buds T300")
+                        promoteToForeground(address, activeDeviceName ?: "OmniBuds")
                     }
                 } else {
                     restoreOrDiscoverConnectedDevice()
@@ -174,13 +173,9 @@ class OmniBudsForegroundService : Service() {
             }
 
             ACTION_DEVICE_DISCONNECTED -> {
-                if (address != null) {
-                    UniversalTwsEngine.disconnect(address)
-                }
                 val stillConnected = findConnectedAudioDevice(this)
                 if (stillConnected == null) {
-                    Log.i(TAG, "All audio devices disconnected. Stopping foreground service.")
-                    UniversalTwsEngine.disconnectAll()
+                    Log.i(TAG, "All audio devices disconnected. Stopping foreground service, keeping vendor link.")
                     activeDeviceAddress = null
                     currentLeftBattery = null
                     currentRightBattery = null
@@ -237,12 +232,10 @@ class OmniBudsForegroundService : Service() {
 
         val resolved = ProductCatalog.resolve(rawName)
         val catalogName = listOfNotNull(resolved.manufacturer, resolved.model).joinToString(" ").trim()
-        val displayName = if (resolved.confidence != ProductCatalog.Confidence.CATEGORY_FALLBACK && catalogName.isNotBlank()) {
-            catalogName
-        } else if (rawName.isNullOrBlank() || rawName.equals("realme", ignoreCase = true)) {
-            "realme Buds T300"
-        } else {
-            rawName
+        val displayName = when {
+            resolved.confidence != ProductCatalog.Confidence.CATEGORY_FALLBACK && catalogName.isNotBlank() -> catalogName
+            !rawName.isNullOrBlank() -> rawName
+            else -> "OmniBuds"
         }
         activeDeviceName = displayName
 

@@ -1,0 +1,565 @@
+[
+  {
+    "company": "3M Peltor",
+    "companySlug": "3m-peltor",
+    "family": "WS Alert",
+    "model": "3M PELTOR WS Alert X",
+    "slug": "3m-peltor-ws-alert-x",
+    "generation": "X",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "3M Connected Equipment",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "3M's connected-PPE app is used to set up and adjust the headset, including hygiene-kit replacement reminders. 3M does not document a battery percentage screen for this model."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 78,
+      "caseHours": null,
+      "chargingIndicators": "Low-battery warning only (audible/voice feedback). No percentage steps are published.",
+      "notes": "One combined headset battery: two AA alkaline cells, or optional NiMH rechargeables. Approximately 78 hours with Bluetooth streaming and level-dependent hearing protection running. No charging case. This is a passive hearing protector with level-dependent ambient sound, not an ANC headset.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No active noise cancellation. Protection is passive attenuation plus level-dependent ambient listening that compresses harmful noise; the level-dependent output is limited for hearing protection. Do not label this as ANC."
+    },
+    "features": [
+      {
+        "id": "hearing-protection.passive",
+        "name": "Certified passive hearing protection",
+        "availability": "device-only",
+        "notes": "EN 352-1/EN 352-3 earmuff; exact SNR/NRR depends on cushion and mounting."
+      },
+      {
+        "id": "hearing-protection.level-dependent",
+        "name": "Level-dependent ambient listening",
+        "availability": "device-only",
+        "notes": "Ambient microphones reproduce safe sounds and compress hazardous noise."
+      },
+      {
+        "id": "hearing-protection.push-to-listen",
+        "name": "Push-to-Listen",
+        "availability": "device-only",
+        "notes": "Instant ambient listening without removing the headset."
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth calls and streaming",
+        "availability": "device-only",
+        "notes": "Bluetooth 4.2; HSP, HFP, A2DP and AVRCP. Connects to one external source; no multipoint."
+      },
+      {
+        "id": "audio.boom-mic",
+        "name": "Noise-cancelling boom microphone",
+        "availability": "device-only",
+        "notes": "Electret boom microphone for hands-free calls in noise."
+      },
+      {
+        "id": "controls.voice-prompts",
+        "name": "Voice-guided settings feedback",
+        "availability": "device-only",
+        "notes": "Spoken confirmation after setting changes."
+      },
+      {
+        "id": "power.auto-shutoff",
+        "name": "Four-hour auto power-off",
+        "availability": "device-only",
+        "notes": "Turns off after four hours of non-use."
+      },
+      {
+        "id": "vendor.3m.hygiene-reminder",
+        "name": "Hygiene-kit replacement reminders",
+        "availability": "official-app",
+        "notes": "App schedules cushion/liner replacement reminders."
+      },
+      {
+        "id": "battery.aa",
+        "name": "Two AA batteries",
+        "availability": "device-only",
+        "notes": "Alkaline standard; NiMH rechargeables optional."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "On/Off button",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Mode button",
+          "action": "Cycle listening modes / settings",
+          "configurableInApp": true,
+          "notes": "Settings are adjusted through the app and confirmed by voice."
+        },
+        {
+          "gesture": "+ / − buttons",
+          "action": "Volume up/down",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Push-to-Listen button",
+          "action": "Temporarily pass ambient sound",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "On/Off/Mode and +/− buttons on the cup; Push-to-Listen control.",
+      "configurableInApp": true,
+      "notes": "Designed for gloved industrial use."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "27 mm dynamic speakers, 100 Ω. Bluetooth 4.2 with A2DP. No multipoint (3M explicitly states one external source for the X)."
+    },
+    "appOnlyFeatures": [
+      "Headset setup and adjustment",
+      "Hygiene-kit replacement reminders"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 4.2 streaming and hands-free calls with a noise-cancelling boom microphone.",
+      "Mobile-app setup and hygiene reminders.",
+      "Push-to-Listen ambient mode.",
+      "Voice-guided settings feedback."
+    ],
+    "sources": [
+      {
+        "url": "https://multimedia.3m.com/mws/media/2061046O/3m-peltor-ws-alert-x-technical-data-sheet.pdf",
+        "type": "official-product",
+        "title": "3M PELTOR WS Alert X technical data sheet (CE version)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://multimedia.3m.com/mws/media/2331058O/anz-3m-peltor-ws-alert-x-headset.pdf",
+        "type": "official-product",
+        "title": "3M PELTOR WS Alert X technical data sheet (ANZ)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.3m.com/3M/sl_SI/p/d/b5005307045",
+        "type": "official-product",
+        "title": "3M PELTOR WS Alert X product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "3M does not publish a battery percentage display for the app; only a low-battery warning is documented.",
+      "Exact SNR/NRR varies by cushion and headband/helmet mount and is not captured per SKU here.",
+      "Bluetooth codec list is not published.",
+      "No ANC (by design), so ancDb is null.",
+      "App package ID and observed version are not captured."
+    ],
+    "notes": "The WS Alert X is a hearing protector with Bluetooth communications, not an ANC headphone. Headband (MRX21A4WS6) and helmet-mount (MRX21P3E4WS6) are mounting variants of the same electronics.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "3M Peltor",
+    "companySlug": "3m-peltor",
+    "family": "WS Alert",
+    "model": "3M PELTOR WS Alert X+",
+    "slug": "3m-peltor-ws-alert-x-plus",
+    "generation": "X+",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "3M Connected Equipment",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Connected-PPE app for setup, adjustments and hygiene reminders. No documented battery-percentage screen."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 68,
+      "caseHours": null,
+      "chargingIndicators": "Low-battery warning only; no percentage steps published.",
+      "notes": "One combined headset battery: rechargeable lithium-ion polymer, charged over USB-C. Up to 68 hours with Bluetooth streaming. No charging case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. Passive hearing protection plus level-dependent ambient listening; harmful noise is compressed rather than cancelled."
+    },
+    "features": [
+      {
+        "id": "hearing-protection.passive",
+        "name": "Certified passive hearing protection",
+        "availability": "device-only",
+        "notes": "EN 352 earmuff; NRR 23 dB with foam cushions, 22 dB with gel cushions (US ANSI data)."
+      },
+      {
+        "id": "hearing-protection.level-dependent",
+        "name": "Level-dependent ambient listening",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "hearing-protection.push-to-listen",
+        "name": "Push-to-Listen",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "device-only",
+        "notes": "Bluetooth 5.2; connect to two devices simultaneously."
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth calls and streaming",
+        "availability": "device-only",
+        "notes": "A2DP, HFP, HSP, AVRCP."
+      },
+      {
+        "id": "audio.boom-mic",
+        "name": "Noise-cancelling boom microphone",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "controls.voice-prompts",
+        "name": "Voice-guided menu",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "power.auto-shutoff",
+        "name": "Four-hour auto power-off",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.3m.hygiene-reminder",
+        "name": "Hygiene-kit replacement reminders",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "battery.usb-c",
+        "name": "USB-C rechargeable battery",
+        "availability": "device-only",
+        "notes": "Lithium-ion polymer; no AA cells."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "On/Off button",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Mode button",
+          "action": "Cycle modes/settings",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "+ / − buttons",
+          "action": "Volume up/down",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Push-to-Listen button",
+          "action": "Temporarily pass ambient sound",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "On/Off/Mode and +/− buttons; Push-to-Listen.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "27 mm dynamic speakers, 100 Ω. Bluetooth 5.2 with multipoint. Codec list not published."
+    },
+    "appOnlyFeatures": [
+      "Headset setup and adjustment",
+      "Hygiene-kit replacement reminders"
+    ],
+    "featureDeltaFromPrevious": [
+      "Rechargeable lithium-ion battery with USB-C charging replaces two AA cells.",
+      "Bluetooth 5.2 with multipoint (the X is Bluetooth 4.2, single source).",
+      "Up to 68 hours streaming."
+    ],
+    "sources": [
+      {
+        "url": "https://multimedia.3m.com/mws/media/2787935O/3m-peltor-ws-alert-x-headset-technical-data-sheet-anz.pdf",
+        "type": "official-product",
+        "title": "3M PELTOR WS Alert X+ technical data sheet (ANZ)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://multimedia.3m.com/mws/media/2636336O/3m-peltor-ws-alert-x-headset-usac.pdf",
+        "type": "official-product",
+        "title": "3M PELTOR WS Alert X+ technical data sheet (USAC)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No documented battery percentage display in the app.",
+      "Bluetooth codec list is not published.",
+      "Exact SNR/NRR depends on cushion/mount; only US NRR is captured.",
+      "App package ID and version are not captured.",
+      "No ANC (by design)."
+    ],
+    "notes": "The X+ is the rechargeable, multipoint generation of the WS Alert X. Headband and helmet-mount versions share electronics.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "3M Peltor",
+    "companySlug": "3m-peltor",
+    "family": "WS Alert",
+    "model": "3M PELTOR WS Alert XPI",
+    "slug": "3m-peltor-ws-alert-xpi",
+    "generation": "XPI",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "3M Connected Equipment",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Connected-PPE app for setup, FM presets and hygiene reminders. No documented battery-percentage screen."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 78,
+      "caseHours": null,
+      "chargingIndicators": "Low-battery warning only; no percentage steps published.",
+      "notes": "One combined headset battery: two AA alkaline cells (NiMH rechargeables optional). Approximately 78 hours with Bluetooth streaming and level-dependent listening, or 58 hours with FM radio and level-dependent listening. No charging case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. Passive hearing protection plus level-dependent ambient listening. FM radio audio is also level-limited."
+    },
+    "features": [
+      {
+        "id": "hearing-protection.passive",
+        "name": "Certified passive hearing protection",
+        "availability": "device-only",
+        "notes": "EN 352-1/3 earmuff; SNR 31 dB for the tested helmet configuration."
+      },
+      {
+        "id": "hearing-protection.level-dependent",
+        "name": "Level-dependent ambient listening",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "device-only",
+        "notes": "Bluetooth 4.2+EDR; one or two external devices."
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth calls and streaming",
+        "availability": "device-only",
+        "notes": "HSP, HFP, A2DP, AVRCP."
+      },
+      {
+        "id": "audio.fm-radio",
+        "name": "Built-in FM radio",
+        "availability": "device-only",
+        "notes": "Digital station search and four favourite presets."
+      },
+      {
+        "id": "audio.boom-mic",
+        "name": "Noise-cancelling boom microphone",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "controls.voice-prompts",
+        "name": "Voice-guided menu with announced FM frequencies",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "power.auto-shutoff",
+        "name": "Four-hour auto power-off",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.3m.hygiene-reminder",
+        "name": "Hygiene-kit replacement reminders",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "battery.aa",
+        "name": "Two AA batteries",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "On/Off button",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Mode button",
+          "action": "Cycle Bluetooth/FM/ambient modes",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "+ / − buttons",
+          "action": "Volume, station search or preset selection",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Push-to-Listen button",
+          "action": "Temporarily pass ambient sound",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "On/Off/Mode and +/− buttons; Push-to-Listen.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "27 mm dynamic speakers, 100 Ω. Bluetooth 4.2+EDR. Codec list not published."
+    },
+    "appOnlyFeatures": [
+      "Headset setup and adjustment",
+      "FM radio configuration and presets",
+      "Hygiene-kit replacement reminders"
+    ],
+    "featureDeltaFromPrevious": [
+      "Built-in FM radio with digital scan and four presets.",
+      "Bluetooth multipoint (X is single-source).",
+      "Announced FM frequencies in the voice menu."
+    ],
+    "sources": [
+      {
+        "url": "https://multimedia.3m.com/mws/media/1393810O/3m-peltor-technical-datasheet-ws-alert-xpi-en-pdf.pdf",
+        "type": "official-product",
+        "title": "3M PELTOR WS Alert XPI technical data sheet (CE/UKCA)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://multimedia.3m.com/mws/media/2331060O/anz-3m-peltor-ws-alert-xpi-headset.pdf",
+        "type": "official-product",
+        "title": "3M PELTOR WS Alert XPI technical data sheet (ANZ)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No documented battery percentage display in the app.",
+      "Bluetooth codec list is not published.",
+      "Exact NRR for US cushion configurations is not captured.",
+      "App package ID and version are not captured.",
+      "No ANC (by design)."
+    ],
+    "notes": "The XPI adds FM radio to the WS Alert platform. Headband (MRX21A3WS6) and helmet-mount (MRX21P3E3WS6) share electronics.",
+    "researchedAt": "2026-11-10"
+  }
+]

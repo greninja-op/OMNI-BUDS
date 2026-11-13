@@ -1,0 +1,592 @@
+[
+  {
+    "company": "Earmor",
+    "companySlug": "earmor",
+    "family": "M300",
+    "model": "EARMOR M300T",
+    "slug": "earmor-m300t",
+    "generation": "M300",
+    "variant": "T (Bluetooth)",
+    "releaseYear": 2025,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Earmor does not list an app for the M300T. Bluetooth, listening modes and volume are controlled on the headset."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 45,
+      "caseHours": null,
+      "chargingIndicators": "Low-battery voice/indicator prompt; Earmor does not publish percentage steps. The headset uses two AAA batteries, so state is not exposed to the phone.",
+      "notes": "One combined headset battery: two AAA batteries. Up to 45 hours. No charging case. NRR 22 dB passive protection with level-dependent ambient listening; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. Passive NRR 22 dB plus electronic level-dependent ambient listening with three modes: Ambient, Clear Voice and Focus."
+    },
+    "features": [
+      {
+        "id": "hearing-protection.passive",
+        "name": "Passive hearing protection (NRR 22 dB)",
+        "availability": "device-only",
+        "notes": "Rated to suppress noise above 82 dB in under 1 ms."
+      },
+      {
+        "id": "hearing-protection.level-dependent",
+        "name": "Three-mode ambient listening",
+        "availability": "device-only",
+        "notes": "Ambient, Clear Voice and Focus modes."
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth calls and streaming",
+        "availability": "device-only",
+        "notes": "Bluetooth 5.4; play/pause, track skip and call answer/end/reject from the headset."
+      },
+      {
+        "id": "audio.boom-mic",
+        "name": "Noise-cancelling microphone",
+        "availability": "device-only",
+        "notes": "For calls and radio adapters."
+      },
+      {
+        "id": "comms.ptt-radio",
+        "name": "PTT radio adapter compatibility",
+        "availability": "device-only",
+        "notes": "Compatible with PTT radio adapters; not a built-in two-way radio."
+      },
+      {
+        "id": "power.auto-shutoff",
+        "name": "Four-hour auto power-off",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "battery.aaa",
+        "name": "Two AAA batteries",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Integrated power/volume knob",
+          "action": "Power and volume",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Mode button",
+          "action": "Cycle Ambient / Clear Voice / Focus",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Multi-function button",
+          "action": "Play/pause, next/previous track, answer/end/reject call",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Integrated power/volume knob plus mode and multi-function buttons.",
+      "configurableInApp": false,
+      "notes": "Designed for gloved use; no touch surface."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "Dynamic-coil speakers. Bluetooth 5.4; codec list and multipoint support are not published."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.earmor.com/products/m300t-bluetooth-hearing-protection-tactical-headset/",
+        "type": "official-product",
+        "title": "Earmor M300T product page and specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.earmor.com/wp-content/uploads/2026/09/EARMOR_Catalog_2026_A4_EN_V4.4_Web.pdf",
+        "type": "official-product",
+        "title": "Earmor 2026 catalog",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No published battery-percentage display; AAA cells are not exposed to the phone.",
+      "Bluetooth codec list and multipoint support are not published.",
+      "No official ANC (by design).",
+      "Exact low-battery indicator behaviour is not documented.",
+      "Water-resistance is inconsistently described (IPX5 in specs, IPX4 in marketing copy)."
+    ],
+    "notes": "M300T is the Bluetooth version of the M300 platform. Do not confuse it with the wired M300A or the M300X, which has no Bluetooth.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Earmor",
+    "companySlug": "earmor",
+    "family": "M23",
+    "model": "EARMOR M23T AI",
+    "slug": "earmor-m23t-ai",
+    "generation": "M23",
+    "variant": "T AI",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "EARMOR App",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "The EARMOR app controls environmental-listening level, left/right volume balance, music EQ, battery status and AI-powered real-time translation. This is the only Earmor model in this pass with a documented companion app."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 24,
+      "caseHours": null,
+      "chargingIndicators": "App shows battery status; the charging case also has an indicator. Exact LED behaviour is not documented.",
+      "notes": "True-wireless hearing-protection earbuds with a charging case. Up to 24 hours of environmental listening is claimed; Earmor does not state whether that is per charge or with the case, and does not publish case capacity. No ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. NRR 25 dB / SNR 31 dB passive protection plus four-microphone environmental listening with Off/Low/Medium/High levels."
+    },
+    "features": [
+      {
+        "id": "hearing-protection.passive",
+        "name": "Passive hearing protection (NRR 25 dB / SNR 31 dB)",
+        "availability": "device-only",
+        "notes": "Suppresses hazardous noise in under 1 ms."
+      },
+      {
+        "id": "hearing-protection.level-dependent",
+        "name": "Four-level environmental listening",
+        "availability": "both",
+        "notes": "Four-microphone omnidirectional system; levels set on-device or in the app."
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 6.0 calls and streaming",
+        "availability": "device-only",
+        "notes": "Earmor claims Bluetooth 6.0; codec list is not published."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Music EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.balance",
+        "name": "Left/right volume balance",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.earmor.ai-translation",
+        "name": "AI real-time translation",
+        "availability": "official-app",
+        "notes": "Translation runs through the EARMOR app."
+      },
+      {
+        "id": "battery.app-status",
+        "name": "Battery status in app",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "hearing-protection.ear-tips",
+        "name": "Foam and silicone ear tips",
+        "availability": "device-only",
+        "notes": "S/M/L sizes; 4.2 g per earbud."
+      }
+    ],
+    "controls": {
+      "types": [],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "The user manual supplied by Earmor is an app manual; on-earbud control gestures are not documented in the sources captured."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "Music EQ is app-controlled; band count is not published. Bluetooth 6.0 claim is unusual and not independently verified. Codec list not published."
+    },
+    "appOnlyFeatures": [
+      "Environmental-listening level",
+      "Left/right volume balance",
+      "Music EQ",
+      "Battery status",
+      "AI real-time translation"
+    ],
+    "featureDeltaFromPrevious": [
+      "True-wireless earbud form factor with charging case.",
+      "Bluetooth 6.0 (vendor claim).",
+      "Companion EARMOR app with EQ, balance, battery status and AI translation.",
+      "Four-microphone environmental listening with four levels."
+    ],
+    "sources": [
+      {
+        "url": "https://www.earmor.com/products/m23t-ai/",
+        "type": "official-product",
+        "title": "Earmor M23T AI product page and specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.earmor.com/wp-content/uploads/2026/09/EARMOR-APP-User-Manual-For-M23T-AI.pdf",
+        "type": "official-manual",
+        "title": "EARMOR app user manual for M23T AI",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery claim (24 h) is ambiguous: per charge vs with case is not stated.",
+      "Case battery capacity and case hours are not published.",
+      "Charging-case LED behaviour and when the case appears in the app are not documented.",
+      "On-earbud control gestures are not documented.",
+      "Bluetooth codec list and multipoint support are not published.",
+      "Bluetooth 6.0 claim is vendor-only.",
+      "No ANC (by design)."
+    ],
+    "notes": "M23T AI is the app-connected true-wireless hearing-protection earbud. It is a different product class from the over-ear M300T.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Earmor",
+    "companySlug": "earmor",
+    "family": "M20",
+    "model": "EARMOR M20T Pro",
+    "slug": "earmor-m20t-pro",
+    "generation": "M20",
+    "variant": "T Pro",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Earmor does not document an app for the M20T Pro. Listening modes, music and calls are controlled from the earbuds."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": null,
+      "chargingIndicators": "Charging case has a battery indicator; exact LED colours/steps are not documented.",
+      "notes": "True-wireless hearing-protection earbuds. 65 mAh per earbud, 500 mAh charging case, 10 hours runtime. Case hours are not published. USB-C charging. No ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. NRR 30 dB passive protection plus Quiet, Clear Voice and Ambient listening modes; activation above 82 dB in under 1 ms."
+    },
+    "features": [
+      {
+        "id": "hearing-protection.passive",
+        "name": "Passive hearing protection (NRR 30 dB)",
+        "availability": "device-only",
+        "notes": "Proprietary conical foam and triple-flange ear tips."
+      },
+      {
+        "id": "hearing-protection.level-dependent",
+        "name": "Three listening modes",
+        "availability": "device-only",
+        "notes": "Quiet, Clear Voice and Ambient."
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.4 calls and streaming",
+        "availability": "device-only",
+        "notes": "Hands-free calls and music controls from the earbuds."
+      },
+      {
+        "id": "controls.music",
+        "name": "Music and call controls",
+        "availability": "device-only",
+        "notes": "Previous/next track, play/pause, answer/end/reject call."
+      },
+      {
+        "id": "battery.case",
+        "name": "Charging case with battery indicator",
+        "availability": "device-only",
+        "notes": "500 mAh case; USB-C."
+      },
+      {
+        "id": "hearing-protection.retention-cord",
+        "name": "Silicone retention cord",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Earbud button, single press",
+          "action": "Play/pause or answer/end call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Earbud button, double press",
+          "action": "Next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Earbud button, triple press",
+          "action": "Previous track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Earbud button, long press",
+          "action": "Reject call / mode change",
+          "configurableInApp": false,
+          "notes": "Exact long-press mapping is not documented."
+        }
+      ],
+      "physicalButtons": "Physical button on each earbud.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "10 mm dynamic driver, 16 Ω, 3 mW. Bluetooth 5.4; codec list and multipoint support are not published."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.earmor.com/products/m20t-pro/",
+        "type": "official-product",
+        "title": "Earmor M20T Pro product page and specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.earmor.com/wp-content/uploads/2024/09/M20T-PRO说明书20261105_V2_OL.pdf",
+        "type": "official-manual",
+        "title": "Earmor M20T Pro user manual",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Case battery hours are not published.",
+      "Charging-case LED colours/steps are not documented.",
+      "Bluetooth codec list and multipoint support are not published.",
+      "No app, so no app battery contract; OS battery reporting is undocumented.",
+      "No ANC (by design)."
+    ],
+    "notes": "M20T Pro is the true-wireless in-ear model; M20 (non-T) is the non-Bluetooth earplug.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Earmor",
+    "companySlug": "earmor",
+    "family": "M200",
+    "model": "EARMOR M200T",
+    "slug": "earmor-m200t",
+    "generation": "M200",
+    "variant": "T (Bluetooth)",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app is documented. Bluetooth, ambient listening, music and calls are controlled on the earbud."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Not documented. Earmor publishes no runtime, no case capacity and no LED behaviour for this model.",
+      "notes": "Earhook-style electronic earplug with Bluetooth. Earmor does not publish battery life, battery capacity or whether a charging case is included. USB-C charging port on the earbud. No ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. NRR 26 dB / SNR 32 dB passive protection with ambient microphones for situational awareness."
+    },
+    "features": [
+      {
+        "id": "hearing-protection.passive",
+        "name": "Passive hearing protection (NRR 26 dB / SNR 32 dB)",
+        "availability": "device-only",
+        "notes": "EN 352-2 and ANSI S3.19 ratings."
+      },
+      {
+        "id": "hearing-protection.level-dependent",
+        "name": "Ambient listening",
+        "availability": "device-only",
+        "notes": "Ambient microphones reproduce surrounding sound."
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.4 calls and streaming",
+        "availability": "device-only",
+        "notes": "Hands-free music and phone-call controls with voice prompts."
+      },
+      {
+        "id": "controls.voice-prompts",
+        "name": "Voice prompts",
+        "availability": "device-only",
+        "notes": "Pairing and status prompts."
+      },
+      {
+        "id": "hearing-protection.earhook",
+        "name": "Earhook secure fit",
+        "availability": "device-only",
+        "notes": "S/M/L ear tips; 35 g."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Earbud button",
+          "action": "Power, pair, play/pause, call control",
+          "configurableInApp": false,
+          "notes": "Exact press mapping is not documented in the captured product page."
+        }
+      ],
+      "physicalButtons": "Physical control on the earbud.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "6 mm speaker. Bluetooth 5.4; codec list not published."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.earmor.com/products/m200t/",
+        "type": "official-product",
+        "title": "Earmor M200T product page and specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.earmor.com/wp-content/uploads/2024/09/M200T-USER-MAUAL20250403OL.pdf",
+        "type": "official-manual",
+        "title": "Earmor M200T user manual",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery life is not published.",
+      "Whether a charging case is included and its capacity are not published.",
+      "Battery/charging indicator behaviour is not documented.",
+      "Control gesture mapping is not documented in the product page.",
+      "Bluetooth codec list and multipoint support are not published.",
+      "No ANC (by design)."
+    ],
+    "notes": "M200T is an earhook electronic earplug, not a true-wireless pair with a case; the form-factor label reflects its in-ear bud shape.",
+    "researchedAt": "2026-11-10"
+  }
+]

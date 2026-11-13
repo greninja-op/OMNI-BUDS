@@ -134,36 +134,21 @@ class MainActivity : ComponentActivity() {
         if (components != null && components.isNotEmpty()) {
             bridge.onBatteryComponents(address, components, aggregateLevel = level)
         } else if (level != null && level in 0..100) {
-            val profile = com.omnibuds.android.hardware.capability.StrictBrandProfileResolver.resolve(device)
-            if (profile.brandSchema == com.omnibuds.android.hardware.capability.BrandSchema.NOTHING_X || profile.formFactor.isBinauralSplit) {
-                // Fallback Split Guarantee: Populate Left and Right rings immediately so binaural split is shown
-                val fallbackList = listOf(
-                    com.omnibuds.core.globalstate.BatteryState.ComponentLevel(
-                        com.omnibuds.core.globalstate.BatteryState.Component.LEFT_EARBUD,
-                        level,
-                        false,
-                    ),
-                    com.omnibuds.core.globalstate.BatteryState.ComponentLevel(
-                        com.omnibuds.core.globalstate.BatteryState.Component.RIGHT_EARBUD,
-                        level,
-                        false,
-                    ),
-                )
-                bridge.onBatteryComponents(address, fallbackList, aggregateLevel = level)
-                // Immediately trigger active Nothing Battery Read (0x07 C0) + Fast Pair scan
-                com.omnibuds.android.hardware.engine.UniversalTwsEngine.queryBattery(device)
-            } else {
-                bridge.onBatteryLevel(address, level)
-                // Attempt deep RFCOMM query for real Left/Right/Case breakdown
-                appScope.launch {
-                    com.omnibuds.app.hardware.TwsHardwareController.queryTwsBattery(device) { l, r, c, lChg, rChg, cChg ->
-                        val list = mutableListOf<com.omnibuds.core.globalstate.BatteryState.ComponentLevel>()
-                        if (l != null) list.add(com.omnibuds.core.globalstate.BatteryState.ComponentLevel(com.omnibuds.core.globalstate.BatteryState.Component.LEFT_EARBUD, l, lChg))
-                        if (r != null) list.add(com.omnibuds.core.globalstate.BatteryState.ComponentLevel(com.omnibuds.core.globalstate.BatteryState.Component.RIGHT_EARBUD, r, rChg))
-                        if (c != null && c in 1..100) list.add(com.omnibuds.core.globalstate.BatteryState.ComponentLevel(com.omnibuds.core.globalstate.BatteryState.Component.CHARGING_CASE, c, cChg))
-                        if (list.isNotEmpty()) {
-                            bridge.onBatteryComponents(address, list, aggregateLevel = level)
-                        }
+            // An aggregate broadcast is one reading, not a split reading.
+            // Never copy it into the left/right slots: those are populated
+            // only by a source that independently reports each component.
+            // Ask the vendor protocol for real split telemetry instead of
+            // inventing it.
+            bridge.onBatteryLevel(address, level)
+            com.omnibuds.android.hardware.engine.UniversalTwsEngine.queryBattery(device)
+            appScope.launch {
+                com.omnibuds.app.hardware.TwsHardwareController.queryTwsBattery(device) { l, r, c, lChg, rChg, cChg ->
+                    val list = mutableListOf<com.omnibuds.core.globalstate.BatteryState.ComponentLevel>()
+                    if (l != null) list.add(com.omnibuds.core.globalstate.BatteryState.ComponentLevel(com.omnibuds.core.globalstate.BatteryState.Component.LEFT_EARBUD, l, lChg))
+                    if (r != null) list.add(com.omnibuds.core.globalstate.BatteryState.ComponentLevel(com.omnibuds.core.globalstate.BatteryState.Component.RIGHT_EARBUD, r, rChg))
+                    if (c != null && c in 1..100) list.add(com.omnibuds.core.globalstate.BatteryState.ComponentLevel(com.omnibuds.core.globalstate.BatteryState.Component.CHARGING_CASE, c, cChg))
+                    if (list.isNotEmpty()) {
+                        bridge.onBatteryComponents(address, list, aggregateLevel = level)
                     }
                 }
             }
@@ -177,9 +162,13 @@ class MainActivity : ComponentActivity() {
                 val bytes = getMetadataMethod.invoke(device, key) as? ByteArray ?: return null
                 return String(bytes).trim().toIntOrNull()?.takeIf { it in 0..100 }
             }
-            fun getMetaBool(key: Int): Boolean {
-                val bytes = getMetadataMethod.invoke(device, key) as? ByteArray ?: return false
-                return String(bytes).trim().equals("true", ignoreCase = true)
+            fun getMetaBool(key: Int): Boolean? {
+                val bytes = getMetadataMethod.invoke(device, key) as? ByteArray ?: return null
+                return when (String(bytes).trim().lowercase()) {
+                    "true", "1" -> true
+                    "false", "0" -> false
+                    else -> null
+                }
             }
             // BluetoothDevice metadata constants for Fast Pair / TWS:
             // 10: METADATA_UNTETHERED_LEFT_BATTERY
@@ -240,6 +229,7 @@ class MainActivity : ComponentActivity() {
                     bridge.syncDevice(described, described.connectionState)
                     resolveDeviceImageIfNeeded(described.address, described.displayName)
                     if (described.connectionState is ConnectionState.Connected) {
+                        clearDockedPollGrace(described.address)
                         com.omnibuds.android.hardware.engine.UniversalTwsEngine.onDeviceChanged(applicationContext, device)
                         com.omnibuds.app.service.OmniBudsForegroundService.startForDevice(applicationContext, device)
                         updateQuickNotification(device)
@@ -257,10 +247,27 @@ class MainActivity : ComponentActivity() {
     private fun handleDeviceDisconnected(device: BluetoothDevice) {
         val address = try { device.address } catch (_: Exception) { null } ?: return
         discoveryProvider.markDisconnected(address)
-        com.omnibuds.android.hardware.engine.UniversalTwsEngine.disconnect(address)
+        // Keep the vendor (RFCOMM/GATT) channel alive. realme only exposes the
+        // charging-case level once both buds are seated, which is also when the
+        // audio profile disconnects. Tearing the engine down here was why the
+        // case ring never appeared. The worker closes the socket naturally if
+        // the buds actually power off.
+        val isActiveVendorDevice =
+            com.omnibuds.android.hardware.engine.UniversalTwsEngine.activeDevice?.address == address
+        if (isActiveVendorDevice) {
+            beginDockedPollGrace(address)
+            val graceUntil = dockedPollUntil[address] ?: 0L
+            if (System.currentTimeMillis() < graceUntil) {
+                try {
+                    com.omnibuds.android.hardware.engine.UniversalTwsEngine.connect(applicationContext, device)
+                    com.omnibuds.android.hardware.engine.UniversalTwsEngine.queryBattery(device)
+                } catch (_: Exception) {}
+            }
+        }
         com.omnibuds.app.service.OmniBudsForegroundService.checkAndStopIfNoDevices(applicationContext)
         com.omnibuds.android.notification.OmniBudsQuickNotificationManager.cancelNotification(applicationContext)
-        bridge.clearBattery(address)
+        // Keep the last-known battery snapshot; the workspace labels it as
+        // last-known while disconnected. Do not zero it.
         appScope.launch {
             try {
                 val described = discoveryProvider.describe(device)?.copy(
@@ -318,7 +325,7 @@ class MainActivity : ComponentActivity() {
                 val all = (devicesViewModel.state.value.knownDevices + devicesViewModel.state.value.discoveredDevices).distinctBy { it.id }
                 for (dev in all) {
                     discoveryProvider.markDisconnected(dev.address)
-                    bridge.clearBattery(dev.address)
+                    // Keep last-known battery; disconnect is not a zeroing event.
                     bridge.syncDevice(
                         dev.copy(connectionState = ConnectionState.Disconnected, batterySummary = null),
                         ConnectionState.Disconnected,
@@ -460,17 +467,27 @@ class MainActivity : ComponentActivity() {
                     observedAtMillis = now,
                     receivedAtMillis = now,
                     sessionId = null,
-                    connectionGeneration = 1L,
-                    protocolVersion = "1.0",
+                    connectionGeneration = null,
+                    protocolVersion = null,
                 )
                 repository.ingest(
-                    com.omnibuds.core.globalstate.DeviceStateEvent.FeatureObserved(
+                    com.omnibuds.core.globalstate.DeviceStateEvent.FeatureDesiredChanged(
                         deviceId = gid,
                         sessionId = null,
-                        sequence = System.currentTimeMillis(),
+                        sequence = repository.nextSequence(address),
                         sourceId = "notification-bar",
                         featureId = "anc_mode",
                         value = com.omnibuds.core.globalstate.ObservedValue(mode, prov),
+                    ),
+                )
+                repository.ingest(
+                    com.omnibuds.core.globalstate.DeviceStateEvent.FeatureOperationChanged(
+                        deviceId = gid,
+                        sessionId = null,
+                        sequence = repository.nextSequence(address),
+                        sourceId = "notification-bar",
+                        featureId = "anc_mode",
+                        status = com.omnibuds.core.globalstate.OperationStatus.Pending(now),
                     ),
                 )
                 val device = discoveryProvider.bondedDevice(address)
@@ -690,6 +707,7 @@ class MainActivity : ComponentActivity() {
                     discoveryProvider.bondedDevice(described.address)?.let { device ->
                         updateBatteryFromDevice(device)
                         if (described.connectionState is ConnectionState.Connected) {
+                            clearDockedPollGrace(described.address)
                             com.omnibuds.android.hardware.engine.UniversalTwsEngine.onDeviceChanged(applicationContext, device)
                             updateQuickNotification(device)
                             if (::shell.isInitialized) {
@@ -863,12 +881,11 @@ class MainActivity : ComponentActivity() {
         } catch (_: Exception) { null }
         val resolved = com.omnibuds.android.presentation.workspace.ProductCatalog.resolve(rawName)
         val catalogName = listOfNotNull(resolved.manufacturer, resolved.model).joinToString(" ").trim()
-        val name = if (resolved.confidence != com.omnibuds.android.presentation.workspace.ProductCatalog.Confidence.CATEGORY_FALLBACK && catalogName.isNotBlank()) {
-            catalogName
-        } else if (rawName.isNullOrBlank() || rawName.equals("realme", ignoreCase = true)) {
-            "realme Buds T300"
-        } else {
-            rawName
+        val name = when {
+            resolved.confidence != com.omnibuds.android.presentation.workspace.ProductCatalog.Confidence.CATEGORY_FALLBACK &&
+                catalogName.isNotBlank() -> catalogName
+            !rawName.isNullOrBlank() -> rawName
+            else -> "OmniBuds"
         }
         if (overrideMode != null) {
             lastKnownAncMode = overrideMode
@@ -893,14 +910,39 @@ class MainActivity : ComponentActivity() {
         val device = discoveryProvider.bondedDevice(address)
         when (featureId) {
             "anc_mode" -> {
-                lastKnownAncMode = value
+                // Normalize display labels from brand-specific cards to the
+                // canonical modes the engine, repository and notification use.
+                // Bare "Ambient" is the app's Normal/Off button label; only
+                // explicit "Ambient Sound"/"Ambient Mode" means Transparency.
+                val canonical = when {
+                    value.contains("anc", ignoreCase = true) ||
+                        value.contains("noise cancel", ignoreCase = true) -> "ANC"
+                    value.contains("off", ignoreCase = true) ||
+                        value.contains("normal", ignoreCase = true) ||
+                        value.trim().equals("ambient", ignoreCase = true) -> "OFF"
+                    value.contains("trans", ignoreCase = true) ||
+                        value.contains("ambient sound", ignoreCase = true) ||
+                        value.contains("ambient mode", ignoreCase = true) -> "TRANSPARENCY"
+                    else -> value
+                }
+                com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+                    stage = "DISPATCH",
+                    address = address,
+                    requestedMode = canonical,
+                    note = "uiValue=$value",
+                )
+                lastKnownAncMode = canonical
                 if (device != null) {
                     appScope.launch {
-                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.setNoiseControl(device, value)
+                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.setNoiseControl(device, canonical)
                     }
-                    updateQuickNotification(device, overrideMode = value)
+                    updateQuickNotification(device, overrideMode = canonical)
                 }
-                toast("Noise Control: $value")
+                toast("Noise Control: $canonical")
+            }
+            "transparency_mode" -> {
+                val mode = if (value.equals("OFF", ignoreCase = true)) "OFF" else "TRANSPARENCY"
+                handleFeatureControlDispatched(address, "anc_mode", mode)
             }
             "eq_preset" -> {
                 appScope.launch {
@@ -909,9 +951,13 @@ class MainActivity : ComponentActivity() {
                 toast("Equalizer: $value applied")
             }
             "spatial_audio" -> {
-                val enabled = value.equals("ON", ignoreCase = true)
+                val enabled = !value.equals("OFF", ignoreCase = true) &&
+                    !value.equals("DISABLED", ignoreCase = true)
                 appScope.launch {
                     com.omnibuds.android.hardware.engine.UniversalTwsEngine.setSpatialAudio(device, enabled)
+                    if (enabled) {
+                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.setSpatialAudioMode(value)
+                    }
                 }
                 toast("Spatial Audio: $value")
             }
@@ -1011,7 +1057,8 @@ class MainActivity : ComponentActivity() {
             }
             "in_ear_detection", "wear_detection" -> {
                 if (device != null) {
-                    val on = value.equals("ON", ignoreCase = true)
+                    val on = value.equals("ON", ignoreCase = true) ||
+                        value.equals("ENABLED", ignoreCase = true)
                     appScope.launch {
                         val profile = com.omnibuds.android.hardware.capability.StrictBrandProfileResolver.resolve(device)
                         if (profile.brandSchema == com.omnibuds.android.hardware.capability.BrandSchema.NOTHING_X) {
@@ -1098,19 +1145,15 @@ class MainActivity : ComponentActivity() {
                     toast("Transparency Level: $level (Voice Boost: $voice)")
                 }
             }
-            "in_ear_detection" -> {
-                if (device != null) {
-                    val on = value.equals("ON", ignoreCase = true)
-                    appScope.launch {
-                        com.omnibuds.android.hardware.engine.UniversalTwsEngine.setInEarDetection(device, on)
-                    }
-                    toast("In-Ear Detection: $value")
-                }
-            }
             "multipoint" -> {
                 if (device != null) {
-                    val on = value.equals("ON", ignoreCase = true)
+                    val on = value.equals("ON", ignoreCase = true) ||
+                        value.equals("ENABLED", ignoreCase = true)
                     appScope.launch {
+                        val profile = com.omnibuds.android.hardware.capability.StrictBrandProfileResolver.resolve(device)
+                        if (profile.brandSchema == com.omnibuds.android.hardware.capability.BrandSchema.NOTHING_X) {
+                            com.omnibuds.android.hardware.engine.UniversalTwsEngine.setNothingDualConnection(device, on)
+                        }
                         com.omnibuds.android.hardware.engine.UniversalTwsEngine.setMultipoint(device, on)
                     }
                     toast("Dual Device Connection: $value")
@@ -1265,6 +1308,21 @@ class MainActivity : ComponentActivity() {
 
     private var connectionMonitorJob: kotlinx.coroutines.Job? = null
 
+    /**
+     * After the audio profile drops (typically because both buds were docked),
+     * keep probing the vendor channel for a short window so the charging-case
+     * level can arrive. realme only exposes it when both buds are seated.
+     */
+    private val dockedPollUntil = java.util.concurrent.ConcurrentHashMap<String, Long>()
+
+    private fun beginDockedPollGrace(address: String) {
+        dockedPollUntil.putIfAbsent(address, System.currentTimeMillis() + 120_000L)
+    }
+
+    private fun clearDockedPollGrace(address: String) {
+        dockedPollUntil.remove(address)
+    }
+
     private fun startConnectionMonitor() {
         connectionMonitorJob?.cancel()
         connectionMonitorJob = appScope.launch {
@@ -1278,6 +1336,7 @@ class MainActivity : ComponentActivity() {
                         val isConn = actualState is ConnectionState.Connected
                         if (isConn) {
                             anyAudioConnected = true
+                            clearDockedPollGrace(described.address)
                             bridge.syncDevice(described, actualState)
                             discoveryProvider.bondedDevice(described.address)?.let { dev ->
                                 updateBatteryFromDevice(dev)

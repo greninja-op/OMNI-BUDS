@@ -23,6 +23,12 @@ class StrictBrandProfileDatabaseTest {
         assertEquals(listOf("High (42dB)", "Mid", "Low", "Adaptive"), profile.ancSubLevels)
         assertTrue(profile.hasNoiseControl)
         assertTrue(profile.hasAncSubLevels)
+
+        // Nothing X battery layout: L / C / R; case tile requires the case open.
+        assertEquals(BatteryBudsDisplay.SPLIT, profile.batteryContract.budsDisplay)
+        assertEquals(BatteryCaseDisplay.SEPARATE, profile.batteryContract.caseDisplay)
+        assertEquals(BatteryCaseVisibility.ONLY_WHEN_CASE_OPEN, profile.batteryContract.caseVisibility)
+        assertEquals(BatteryCaseWhileBudsOut.HIDDEN, profile.batteryContract.caseWhileBudsOut)
         
         // EQ
         assertEquals("Dirac Opteo", profile.eqPresets.first())
@@ -83,6 +89,13 @@ class StrictBrandProfileDatabaseTest {
         assertTrue(profile.hasMindRelax)
         assertFalse(profile.hasDualConnection)
         assertFalse(profile.hasLdac)
+
+        // The case tile appears while a bud is docked; it is hidden once both
+        // buds are out.
+        assertEquals(BatteryBudsDisplay.SPLIT, profile.batteryContract.budsDisplay)
+        assertEquals(BatteryCaseDisplay.SEPARATE, profile.batteryContract.caseDisplay)
+        assertEquals(BatteryCaseVisibility.ONLY_WHEN_DOCKED, profile.batteryContract.caseVisibility)
+        assertEquals(BatteryCaseWhileBudsOut.HIDDEN, profile.batteryContract.caseWhileBudsOut)
     }
 
     @Test

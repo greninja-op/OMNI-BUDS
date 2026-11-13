@@ -1,0 +1,1922 @@
+[
+  {
+    "company": "CMF by Nothing",
+    "companySlug": "cmf",
+    "family": "CMF Buds",
+    "model": "CMF Buds",
+    "slug": "cmf-buds",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Nothing X",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.nothing.smartcenter"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "https://apps.apple.com/us/app/nothing-x/id1568033706"
+      ],
+      "appVersionObserved": "2.4.9 (SoundGuys review, Aug 2024, firmware 1.0.5.49); current Play listing updated 2026-11-03",
+      "notes": "CMF Buds use the Nothing X app, not a separate CMF app."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 5.5,
+      "budsHoursNoAnc": 8,
+      "caseHours": 35.5,
+      "chargingIndicators": "Case LED; numeric L/C/R levels in Nothing X.",
+      "notes": "DIRECT EVIDENCE: the Nothing X home screen for CMF Buds (1st gen) shows three separate readings, 100% L / 80% C / 100% R, in SoundGuys' review screenshot taken with Nothing X 2.4.9 and firmware 1.0.5.49. Buds are split L/R and the case is a separate tile. The case reading requires the case to be open; Nothing's support article says the app must be active and the case open. This model is therefore NOT a combined-battery device in the official app. If OmniBuds shows one combined bud percentage for CMF Buds 1, that is an OmniBuds parsing/rendering defect, not the official behaviour.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 42,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "42 dB hybrid ANC; no adaptive or personalised ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "42 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Dirac-tuned presets plus 3-band custom EQ."
+      },
+      {
+        "id": "vendor.cmf.ultra-bass",
+        "name": "Ultra Bass",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Find My Buds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap",
+          "action": "skip forward or answer/end call",
+          "configurableInApp": true,
+          "notes": "No single-tap action."
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "skip back or reject call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap-and-hold",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double-tap-and-hold",
+          "action": "volume or voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch area at the top of the stem. No single tap."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "More Bass",
+        "More Treble",
+        "Voice",
+        "Dirac tuned"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Dirac-tuned; 3-band custom EQ; no spatial audio."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Ultra Bass",
+      "Find My Buds",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://us.nothing.tech/products/cmf-buds",
+        "type": "official-product",
+        "title": "CMF Buds product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.soundguys.com/cmf-buds-by-nothing-review-120996/",
+        "type": "reputable-secondary",
+        "title": "CMF Buds review with Nothing X battery screenshot",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.soundguys.com/wp-content/uploads/2024/08/nothing-x-app-cmf-buds-homepage.jpg",
+        "type": "other",
+        "title": "Nothing X CMF Buds screenshot: 100% L / 80% C / 100% R",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.nothing.tech/hc/en-us/articles/7455053910545-How-can-I-check-the-battery-level",
+        "type": "official-support",
+        "title": "How can I check the battery level?",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "type": "official-app-store",
+        "title": "Nothing X on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Case tile behaviour when both buds are out and the case is closed is not independently verified.",
+      "Transparency dB is not published.",
+      "The exact five preset names are not all visible in the official material."
+    ],
+    "notes": "KEY RECORD for the reported CMF Buds 1 vs realme Buds T300 discrepancy. Official Nothing X shows split L/R plus separate case for CMF Buds 1; it does not combine the two buds.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "CMF by Nothing",
+    "companySlug": "cmf",
+    "family": "CMF Buds",
+    "model": "CMF Buds Pro",
+    "slug": "cmf-buds-pro",
+    "generation": "1",
+    "variant": "Pro",
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Nothing X",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.nothing.smartcenter"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "https://apps.apple.com/us/app/nothing-x/id1568033706"
+      ],
+      "appVersionObserved": "Current Play listing updated 2026-11-03; exact version not exposed",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 6.5,
+      "caseHours": 38,
+      "chargingIndicators": "Case LED; numeric L/C/R levels in Nothing X.",
+      "notes": "38 h total with case (ANC off). L/C/R layout; case open required. Battery figures are from launch material and should be treated as claimed.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 38
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 45,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "45 dB ANC with transparency; no adaptive levels."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "45 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets plus 3-band custom EQ."
+      },
+      {
+        "id": "vendor.cmf.ultra-bass",
+        "name": "Ultra Bass",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Find My Buds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap",
+          "action": "play/pause or answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "next/previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap-and-hold",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double-tap-and-hold",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch controls."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "More Bass",
+        "More Treble",
+        "Voice"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "No spatial audio; no LDAC."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Ultra Bass",
+      "Find My Buds",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://nothing.tech/products/cmf-buds-pro",
+        "type": "official-product",
+        "title": "CMF Buds Pro product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://maniacx.github.io/BudsLink/nothingcmf",
+        "type": "reputable-secondary",
+        "title": "BudsLink Nothing/CMF compatibility and battery layout",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "type": "official-app-store",
+        "title": "Nothing X on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official page does not expose exact battery hours in the fetched copy; figures come from launch/review material.",
+      "Transparency dB is not published.",
+      "Case tile behaviour with buds out and case closed is not independently verified."
+    ],
+    "notes": "First CMF ANC model. Split L/R plus separate case in Nothing X, same layout as CMF Buds 1.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "CMF by Nothing",
+    "companySlug": "cmf",
+    "family": "CMF Buds",
+    "model": "CMF Buds Pro 2",
+    "slug": "cmf-buds-pro-2",
+    "generation": "2",
+    "variant": "Pro",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Nothing X",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.nothing.smartcenter"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "https://apps.apple.com/us/app/nothing-x/id1568033706"
+      ],
+      "appVersionObserved": "Current Play listing updated 2026-11-03; exact version not exposed",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 6.5,
+      "budsHoursNoAnc": 11,
+      "caseHours": 43,
+      "chargingIndicators": "Case LED and smart dial; numeric L/C/R levels in Nothing X.",
+      "notes": "43 h total with case (ANC off). L/C/R layout. Case has a rotating smart dial.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 43
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc-low",
+        "anc-mid",
+        "anc-high",
+        "adaptive",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "50 dB hybrid ANC with adaptive mode and three manual levels."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "50 dB adaptive."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets plus 3-band custom EQ."
+      },
+      {
+        "id": "vendor.cmf.ultra-bass",
+        "name": "Ultra Bass 2.0",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "Spatial audio",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Find My Buds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "other"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap",
+          "action": "play/pause or answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "next/previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap-and-hold",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "rotate case dial",
+          "action": "volume or playback control",
+          "configurableInApp": null,
+          "notes": "Physical smart dial on the charging case."
+        }
+      ],
+      "physicalButtons": "Rotating smart dial on the charging case.",
+      "configurableInApp": true,
+      "notes": "Stem touch plus case dial."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "More Bass",
+        "More Treble",
+        "Voice"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm + 6 mm dual drivers; spatial audio without head tracking."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Ultra Bass 2.0",
+      "Spatial audio",
+      "Find My Buds",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC increased from 45 dB to 50 dB with adaptive mode.",
+      "Added 11 mm + 6 mm dual drivers.",
+      "Added spatial audio.",
+      "Added a rotating smart dial on the case."
+    ],
+    "sources": [
+      {
+        "url": "https://us.nothing.tech/products/cmf-buds-pro-2",
+        "type": "official-product",
+        "title": "CMF Buds Pro 2 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://maniacx.github.io/BudsLink/nothingcmf",
+        "type": "reputable-secondary",
+        "title": "BudsLink CMF Buds Pro 2 battery/feature support",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "type": "official-app-store",
+        "title": "Nothing X on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Transparency dB is not published.",
+      "Case dial action mapping is not fully documented in the fetched official copy.",
+      "Case tile behaviour with buds out and case closed is not independently verified."
+    ],
+    "notes": "Split L/R plus separate case confirmed by BudsLink's tested Left+Right+Case support for B172.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "CMF by Nothing",
+    "companySlug": "cmf",
+    "family": "CMF Neckband",
+    "model": "CMF Neckband Pro",
+    "slug": "cmf-neckband-pro",
+    "generation": "1",
+    "variant": "Pro",
+    "releaseYear": 2024,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "Nothing X",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.nothing.smartcenter"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "https://apps.apple.com/us/app/nothing-x/id1568033706"
+      ],
+      "appVersionObserved": "Current Play listing updated 2026-11-03; exact version not exposed",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 37,
+      "caseHours": null,
+      "chargingIndicators": "Single battery reading in Nothing X; no charging case.",
+      "notes": "Neckband has one battery, so only a single/combined percentage exists. No case tile. 37 h is the claimed playback figure; ANC-on runtime is not published in the fetched material.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc-low",
+        "anc-mid",
+        "anc-high",
+        "adaptive",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "50 dB ANC with adaptive mode and three levels."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "50 dB adaptive."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets plus 3-band custom EQ."
+      },
+      {
+        "id": "vendor.cmf.ultra-bass",
+        "name": "Ultra Bass",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "Spatial audio",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Magnetic wear detection",
+        "availability": "device-only",
+        "notes": "Auto play/pause when the buds attach magnetically."
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Find My Buds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Control customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "play/pause button",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "volume buttons",
+          "action": "volume up/down",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "ANC button",
+          "action": "cycle ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Inline neckband controls: play/pause, volume, ANC.",
+      "configurableInApp": true,
+      "notes": "Neckband with physical controls rather than stem touch zones."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "More Bass",
+        "More Treble",
+        "Voice"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12.6 mm driver; spatial audio without head tracking."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Ultra Bass",
+      "Spatial audio",
+      "Find My Buds",
+      "Control customization",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "New neckband form factor in the CMF line.",
+      "50 dB adaptive ANC.",
+      "Spatial audio and dual-device connection."
+    ],
+    "sources": [
+      {
+        "url": "https://nothing.tech/products/cmf-neckband-pro",
+        "type": "official-product",
+        "title": "CMF Neckband Pro product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://maniacx.github.io/BudsLink/nothingcmf",
+        "type": "reputable-secondary",
+        "title": "BudsLink Neckband Pro single-battery support",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "type": "official-app-store",
+        "title": "Nothing X on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on battery runtime is not published in the fetched material.",
+      "Exact button layout and remapping options are not fully documented.",
+      "Transparency dB is not published."
+    ],
+    "notes": "Single-battery neckband. BudsLink confirms a single battery level, so OmniBuds must not try to render L/R for it.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "CMF by Nothing",
+    "companySlug": "cmf",
+    "family": "CMF Buds",
+    "model": "CMF Buds 2",
+    "slug": "cmf-buds-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Nothing X",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.nothing.smartcenter"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "https://apps.apple.com/us/app/nothing-x/id1568033706"
+      ],
+      "appVersionObserved": "Current Play listing updated 2026-11-03; exact version not exposed",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 13.5,
+      "caseHours": 55,
+      "chargingIndicators": "Case LED; numeric L/C/R levels in Nothing X.",
+      "notes": "55 h total with case (ANC off). L/C/R layout; BudsLink lists B179 as tested with Left+Right+Case support.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 55
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc-low",
+        "anc-mid",
+        "anc-high",
+        "adaptive",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 48,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "48 dB hybrid ANC with adaptive mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "48 dB adaptive."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets plus 3-band custom EQ."
+      },
+      {
+        "id": "vendor.cmf.ultra-bass",
+        "name": "Ultra Bass 2.0",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "Spatial audio",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Find My Buds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap",
+          "action": "play/pause or answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "next/previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap-and-hold",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch controls."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "More Bass",
+        "More Treble",
+        "Voice"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm PMI driver; spatial audio; no LDAC."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Ultra Bass 2.0",
+      "Spatial audio",
+      "Find My Buds",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC increased from 42 dB to 48 dB with adaptive mode.",
+      "Added spatial audio and Ultra Bass 2.0.",
+      "Battery increased to 55 h total."
+    ],
+    "sources": [
+      {
+        "url": "https://us.nothing.tech/products/cmf-buds-2",
+        "type": "official-product",
+        "title": "CMF Buds 2 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://maniacx.github.io/BudsLink/nothingcmf",
+        "type": "reputable-secondary",
+        "title": "BudsLink CMF Buds 2 tested battery/feature support",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "type": "official-app-store",
+        "title": "Nothing X on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Transparency dB is not published.",
+      "Case tile behaviour with buds out and case closed is not independently verified."
+    ],
+    "notes": "Split L/R plus separate case, confirmed by BudsLink's tested B179 support.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "CMF by Nothing",
+    "companySlug": "cmf",
+    "family": "CMF Buds",
+    "model": "CMF Buds 2 Plus",
+    "slug": "cmf-buds-2-plus",
+    "generation": "2",
+    "variant": "Plus",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Nothing X",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.nothing.smartcenter"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "https://apps.apple.com/us/app/nothing-x/id1568033706"
+      ],
+      "appVersionObserved": "Current Play listing updated 2026-11-03; exact version not exposed",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 7.5,
+      "budsHoursNoAnc": 14,
+      "caseHours": 61.5,
+      "chargingIndicators": "Case LED; numeric L/C/R levels in Nothing X.",
+      "notes": "61.5 h total with case (ANC off). L/C/R layout.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 61.5
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc-low",
+        "anc-mid",
+        "anc-high",
+        "adaptive",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "50 dB hybrid ANC with adaptive mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "50 dB adaptive."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets plus custom EQ."
+      },
+      {
+        "id": "vendor.cmf.ultra-bass",
+        "name": "Ultra Bass 2.0",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "Spatial audio",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Find My Buds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap",
+          "action": "play/pause or answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "next/previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap-and-hold",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch controls."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "More Bass",
+        "More Treble",
+        "Voice"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12 mm LCP driver; LDAC Hi-Res; spatial audio."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Ultra Bass 2.0",
+      "Spatial audio",
+      "Find My Buds",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added LDAC Hi-Res audio.",
+      "ANC increased to 50 dB.",
+      "Battery increased to 61.5 h total.",
+      "12 mm LCP driver."
+    ],
+    "sources": [
+      {
+        "url": "https://us.nothing.tech/products/cmf-buds-2-plus",
+        "type": "official-product",
+        "title": "CMF Buds 2 Plus product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://maniacx.github.io/BudsLink/nothingcmf",
+        "type": "reputable-secondary",
+        "title": "BudsLink CMF Buds 2 Plus feature support",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "type": "official-app-store",
+        "title": "Nothing X on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Transparency dB is not published.",
+      "BudsLink lists Left+Right+Case as untested for B184; split/separate is inferred from the family UI and product behaviour.",
+      "Case tile behaviour with buds out and case closed is not independently verified."
+    ],
+    "notes": "Top CMF TWS for 2025; LDAC is the main differentiator from CMF Buds 2.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "CMF by Nothing",
+    "companySlug": "cmf",
+    "family": "CMF Buds",
+    "model": "CMF Buds 2a",
+    "slug": "cmf-buds-2a",
+    "generation": "2",
+    "variant": "2a",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Nothing X",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.nothing.smartcenter"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "https://apps.apple.com/us/app/nothing-x/id1568033706"
+      ],
+      "appVersionObserved": "Current Play listing updated 2026-11-03; exact version not exposed",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 5.5,
+      "budsHoursNoAnc": 8.5,
+      "caseHours": 42,
+      "chargingIndicators": "Case LED; numeric L/C/R levels in Nothing X.",
+      "notes": "42 h total with case (ANC off). L/C/R layout; BudsLink lists B185 as tested with Left+Right+Case support.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 42
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 42,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "42 dB ANC; no adaptive levels."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "42 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets plus 3-band custom EQ."
+      },
+      {
+        "id": "vendor.cmf.ultra-bass",
+        "name": "Ultra Bass",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Find My Buds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap",
+          "action": "play/pause or answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "next/previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap-and-hold",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch controls."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "More Bass",
+        "More Treble",
+        "Voice"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Budget model; no spatial audio or LDAC."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Ultra Bass",
+      "Find My Buds",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "42 dB ANC at a lower price than CMF Buds 2.",
+      "42 h total battery.",
+      "No spatial audio or LDAC."
+    ],
+    "sources": [
+      {
+        "url": "https://us.nothing.tech/products/cmf-buds-2a",
+        "type": "official-product",
+        "title": "CMF Buds 2a product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://maniacx.github.io/BudsLink/nothingcmf",
+        "type": "reputable-secondary",
+        "title": "BudsLink CMF Buds 2a tested battery/feature support",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "type": "official-app-store",
+        "title": "Nothing X on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Transparency dB is not published.",
+      "Case tile behaviour with buds out and case closed is not independently verified."
+    ],
+    "notes": "Split L/R plus separate case, confirmed by BudsLink's tested B185 support.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "CMF by Nothing",
+    "companySlug": "cmf",
+    "family": "CMF Buds",
+    "model": "CMF Buds Neo",
+    "slug": "cmf-buds-neo",
+    "generation": "Neo",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Nothing X",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.nothing.smartcenter"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "https://apps.apple.com/us/app/nothing-x/id1568033706"
+      ],
+      "appVersionObserved": "Current Play listing updated 2026-11-03; exact version not exposed",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 52,
+      "chargingIndicators": "Case LED; numeric levels in Nothing X.",
+      "notes": "52 h total with case (ANC off). Per-bud ANC-on runtime is not published in the fetched material.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 52
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": null,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "35 dB ANC; fixed rather than adaptive."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "35 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets plus 3-band custom EQ."
+      },
+      {
+        "id": "vendor.cmf.ultra-bass",
+        "name": "Ultra Bass 2.0",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "Spatial audio",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Find My Buds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap",
+          "action": "play/pause or answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "next/previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap-and-hold",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch controls; case has a fidget-spinner-style dial."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "More Bass",
+        "More Treble",
+        "Voice"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12.4 mm driver; Bluetooth 6.0; spatial audio."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Ultra Bass 2.0",
+      "Spatial audio",
+      "Find My Buds",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "35 dB ANC at a lower price than Buds 2a.",
+      "52 h total battery.",
+      "Bluetooth 6.0 and a fidget-spinner case dial."
+    ],
+    "sources": [
+      {
+        "url": "https://nothing.tech/collections/audio",
+        "type": "official-regional",
+        "title": "Nothing audio lineup (CMF Buds Neo)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.gsmarena.com/cmf_buds_neo_goes_official_with_anc_and_up_to_52_hour_battery_life-news-74263.php",
+        "type": "reputable-secondary",
+        "title": "CMF Buds Neo announcement",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "type": "official-app-store",
+        "title": "Nothing X on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Per-bud ANC-on runtime is not published.",
+      "Split/separate battery layout is inferred from the Nothing X family UI, not from a model-specific screenshot.",
+      "Transparency dB is not published."
+    ],
+    "notes": "2026 budget model; the case dial is decorative/fidget-style rather than a control dial.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "CMF by Nothing",
+    "companySlug": "cmf",
+    "family": "CMF Clip",
+    "model": "CMF Clip Pro",
+    "slug": "cmf-clip-pro",
+    "generation": "1",
+    "variant": "Pro",
+    "releaseYear": 2026,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "Nothing X",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.nothing.smartcenter"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "https://apps.apple.com/us/app/nothing-x/id1568033706"
+      ],
+      "appVersionObserved": "Current Play listing updated 2026-11-03; exact version not exposed",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": "Open-ear clip; official battery and battery-display behaviour were not available in the fetched material. Do not assume an L/R/case layout.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear clip design; no ANC is documented."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Find My Buds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double-tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap-and-hold",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls on the clip; exact gesture set not documented in the fetched material."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Open-ear clip; codec and driver details were not available in the fetched official copy."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Find My Buds",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "First CMF open-ear clip model.",
+      "No ANC; open-ear design."
+    ],
+    "sources": [
+      {
+        "url": "https://us.nothing.tech/products/cmf-clip-pro",
+        "type": "official-product",
+        "title": "CMF Clip Pro product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "type": "official-app-store",
+        "title": "Nothing X on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery hours, battery display layout, case behaviour, codecs, driver size, and exact gesture map were not available.",
+      "ANC absence is inferred from the open-ear clip design, not from an explicit official statement.",
+      "Do not render a case tile until official evidence is found."
+    ],
+    "notes": "Placeholder-quality record deliberately marked low confidence. Needs a model-specific manual or app screenshot before shipping UI.",
+    "researchedAt": "2026-11-10"
+  }
+]

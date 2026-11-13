@@ -1,0 +1,2585 @@
+[
+  {
+    "company": "Sennheiser",
+    "companySlug": "sennheiser",
+    "family": "MOMENTUM True Wireless",
+    "model": "MOMENTUM True Wireless 4",
+    "slug": "sennheiser-momentum-true-wireless-4",
+    "generation": "4",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Sennheiser Smart Control Plus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sonova.chb.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sonova.chb.control"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-09-15)",
+      "notes": "Sennheiser recommends Smart Control Plus for this model; the older Smart Control app still connects but is being superseded."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 7.5,
+      "caseHours": 22.5,
+      "chargingIndicators": "Case LED; voice prompt; app percentage in 10% steps.",
+      "notes": "Sennheiser's FAQ confirms the app shows ONE battery level for both earbuds, always the lower-charging side (e.g. 50% and 80% shows 50%). 30 h total; 8 minutes charge = 1 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "anti-wind",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Hybrid adaptive ANC; anti-wind mode; 3 mics per bud."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive hybrid ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.anti-wind",
+        "name": "Anti-wind mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band equalizer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.presets",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.sound-personalization",
+        "name": "Sound Personalization",
+        "availability": "official-app",
+        "notes": "Guided hearing-profile calibration."
+      },
+      {
+        "id": "audio.sound-check",
+        "name": "Sound Check",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.sound-zones",
+        "name": "Sound Zones",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.lossless",
+        "name": "aptX Adaptive Lossless",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.auracast",
+        "name": "Auracast assistant",
+        "availability": "official-app",
+        "notes": "Available via firmware update."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio / LC3",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.fit-test",
+        "name": "Fit test",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.find-headphones",
+        "name": "Find Headphones",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls can be disabled in app."
+    },
+    "audio": {
+      "eqPresets": [
+        "Neutral",
+        "Bass Boost",
+        "Podcast",
+        "Rock",
+        "Pop",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive",
+        "LC3"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "TrueResponse 7 mm driver; IP54; Bluetooth 5.4; Qi wireless charging; 30 h total."
+    },
+    "appOnlyFeatures": [
+      "sound-personalization",
+      "sound-check",
+      "sound-zones",
+      "fit-test",
+      "find-headphones",
+      "auracast-assistant",
+      "anti-wind",
+      "touch-disable"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 5.4 and LC3/LE Audio added versus MTW3.",
+      "aptX Adaptive Lossless and Auracast support added.",
+      "Battery increased to 7.5 h / 30 h total.",
+      "New battery supplier and reliability program after MTW3 battery issues."
+    ],
+    "sources": [
+      {
+        "url": "https://support.sennheiser-hearing.com/hc/en-ch/articles/37818069144221-MOMENTUM-True-Wireless-4-Specifications",
+        "type": "official-product",
+        "title": "MOMENTUM True Wireless 4 specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://us.sennheiser-hearing.com/pages/mtw4-faq",
+        "type": "official-support",
+        "title": "MOMENTUM True Wireless 4 FAQ - one battery level for both earbuds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.sonova.chb.control",
+        "type": "official-app-store",
+        "title": "Sennheiser Smart Control Plus on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "Full EQ preset list not published on the spec page.",
+      "App version number not displayed on the Play listing.",
+      "Case battery visibility in Smart Control Plus is inferred; only the combined single-bud-level rule is officially documented."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sennheiser",
+    "companySlug": "sennheiser",
+    "family": "MOMENTUM",
+    "model": "MOMENTUM 4 Wireless",
+    "slug": "sennheiser-momentum-4-wireless",
+    "generation": "4",
+    "variant": "Wireless",
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Sennheiser Smart Control Plus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sonova.chb.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sonova.chb.control"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-09-15)",
+      "notes": "Sennheiser recommends Smart Control Plus for this model."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 60,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Voice prompt; app percentage; 10-minute charge = 6 h.",
+      "notes": "60 h with ANC on; 700 mAh battery.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Hybrid adaptive ANC; 2 mics per side."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band equalizer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.presets",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.sound-personalization",
+        "name": "Sound Personalization",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.sound-check",
+        "name": "Sound Check",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.sound-zones",
+        "name": "Sound Zones",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "High-resolution mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Smart Pause wear detection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.auto-on-off",
+        "name": "Auto on/off when picked up",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "app.touch-disable",
+        "name": "Disable touch controls",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.wired-mode",
+        "name": "USB-C audio and 3.5 mm cable",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": "Right earcup."
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/Bluetooth button, 3.5 mm jack.",
+      "configurableInApp": true,
+      "notes": "Touch controls can be disabled."
+    },
+    "audio": {
+      "eqPresets": [
+        "Neutral",
+        "Bass Boost",
+        "Podcast",
+        "Rock",
+        "Pop",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "42 mm driver; 60 h; 2 mics per side; 3.5 mm cable."
+    },
+    "appOnlyFeatures": [
+      "sound-personalization",
+      "sound-check",
+      "sound-zones",
+      "high-res-mode",
+      "touch-disable",
+      "auto-answer"
+    ],
+    "featureDeltaFromPrevious": [
+      "Battery increased to 60 h versus Momentum 3 Wireless.",
+      "Sound Personalization and Sound Zones added.",
+      "Touch controls can be disabled in app."
+    ],
+    "sources": [
+      {
+        "url": "https://support.sennheiser-hearing.com/hc/en-us/articles/37791406604189-MOMENTUM-4-Wireless-Specifications",
+        "type": "official-product",
+        "title": "MOMENTUM 4 Wireless specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://global.sennheiser-hearing.com/products/momentum-4-wireless",
+        "type": "official-product",
+        "title": "MOMENTUM 4 Wireless product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.sonova.chb.control",
+        "type": "official-app-store",
+        "title": "Sennheiser Smart Control Plus on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "Full EQ preset list not published.",
+      "App version number not displayed.",
+      "No official ANC-off runtime published; the quoted bud hours are the ANC-on figure."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sennheiser",
+    "companySlug": "sennheiser",
+    "family": "MOMENTUM Sport",
+    "model": "MOMENTUM Sport",
+    "slug": "sennheiser-momentum-sport",
+    "generation": "1",
+    "variant": "Sport",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Sennheiser Smart Control Plus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sonova.chb.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sonova.chb.control"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-09-15)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": null,
+      "caseHours": 18,
+      "chargingIndicators": "Case LED; voice prompt; 10-minute charge = 1 h.",
+      "notes": "6 h buds + 24 h total; case adds 18 h. App shows the lower earbud only.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 18
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "anti-wind",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Hybrid ANC with dedicated Anti Wind mode; 3 mics per bud."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.anti-wind",
+        "name": "Anti Wind mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band equalizer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.sound-personalization",
+        "name": "Sound Personalization",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.sound-check",
+        "name": "Sound Check",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "High-Res mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.heart-rate",
+        "name": "Heart-rate sensor",
+        "availability": "both",
+        "notes": "Polar-powered; data to Polar Flow."
+      },
+      {
+        "id": "sensing.body-temperature",
+        "name": "Body-temperature sensor",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.fit-test",
+        "name": "Fit test",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.find-headphones",
+        "name": "Find Headphones",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Neutral",
+        "Bass Boost",
+        "Podcast",
+        "Rock",
+        "Pop",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "10 mm driver; IP55 buds / IP54 case; Bluetooth 5.2; Qi charging."
+    },
+    "appOnlyFeatures": [
+      "anti-wind",
+      "sound-personalization",
+      "sound-check",
+      "fit-test",
+      "find-headphones",
+      "high-res-mode",
+      "heart-rate-view",
+      "body-temperature-view"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://ch.sennheiser-hearing.com/products/momentum-sport",
+        "type": "official-product",
+        "title": "MOMENTUM Sport product page and specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://newsroom.sennheiser.com/the-thrill-of-performance-mltzvt",
+        "type": "official-product",
+        "title": "Sennheiser press release - MOMENTUM Sport",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.sonova.chb.control",
+        "type": "official-app-store",
+        "title": "Sennheiser Smart Control Plus on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "Whether multipoint is enabled at launch or by firmware is not stated.",
+      "App version number not displayed.",
+      "No official ANC-off runtime published; the quoted bud hours are the ANC-on figure.",
+      "Case battery visibility in Smart Control Plus is inferred; only the combined single-bud-level rule is officially documented."
+    ],
+    "notes": "Sport model with Polar biosensors.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sennheiser",
+    "companySlug": "sennheiser",
+    "family": "ACCENTUM",
+    "model": "ACCENTUM True Wireless",
+    "slug": "sennheiser-accentum-true-wireless",
+    "generation": "1",
+    "variant": "True Wireless",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Sennheiser Smart Control Plus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sonova.chb.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sonova.chb.control"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-09-15)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 8,
+      "caseHours": 20,
+      "chargingIndicators": "Case LED; 10-minute charge = 1 h.",
+      "notes": "28 h total (8 h + 20 h case); ANC on 6 h. App shows the lower earbud only.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 20
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Hybrid ANC; 2 mics per bud."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band equalizer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.sound-personalization",
+        "name": "Sound Personalization",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.sound-check",
+        "name": "Sound Check",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.fit-test",
+        "name": "Fit test",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.find-headphones",
+        "name": "Find Headphones",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Neutral",
+        "Bass Boost",
+        "Podcast",
+        "Rock",
+        "Pop",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "LC3"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "TrueResponse 7 mm driver; IP54; Bluetooth 5.3; Qi charging."
+    },
+    "appOnlyFeatures": [
+      "sound-personalization",
+      "sound-check",
+      "fit-test",
+      "find-headphones"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://support.sennheiser-hearing.com/hc/en-at/articles/37845152498973-ACCENTUM-True-Wireless-Specifications",
+        "type": "official-product",
+        "title": "ACCENTUM True Wireless specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://global.sennheiser-hearing.com/pages/acc-tw-faq",
+        "type": "official-support",
+        "title": "ACCENTUM True Wireless FAQ",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.sonova.chb.control",
+        "type": "official-app-store",
+        "title": "Sennheiser Smart Control Plus on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "Whether the case supports wireless charging is stated only in FAQ, not the spec table.",
+      "App version number not displayed.",
+      "Case battery visibility in Smart Control Plus is inferred; only the combined single-bud-level rule is officially documented."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sennheiser",
+    "companySlug": "sennheiser",
+    "family": "ACCENTUM",
+    "model": "ACCENTUM Wireless",
+    "slug": "sennheiser-accentum-wireless",
+    "generation": "1",
+    "variant": "Wireless",
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Sennheiser Smart Control Plus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sonova.chb.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sonova.chb.control"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-09-15)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 50,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Voice prompt; 10-minute charge = 5 h.",
+      "notes": "50 h with ANC on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Hybrid ANC; dedicated wind-reduction mode for calls."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.wind-reduction",
+        "name": "Wind reduction for calls",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band equalizer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.presets",
+        "name": "Sound modes (Bass Boost, Podcast, etc.)",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.wired-mode",
+        "name": "USB-C audio interface",
+        "availability": "device-only",
+        "notes": "Class-compliant USB-C audio."
+      },
+      {
+        "id": "app.sound-zones",
+        "name": "Sound Zones",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [],
+      "physicalButtons": "Power/Bluetooth, volume, play/pause, ANC button.",
+      "configurableInApp": false,
+      "notes": "No touch controls."
+    },
+    "audio": {
+      "eqPresets": [
+        "Neutral",
+        "Bass Boost",
+        "Podcast",
+        "Rock",
+        "Pop",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX HD"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "37 mm driver; 222 g; Bluetooth 5.2; USB-C audio."
+    },
+    "appOnlyFeatures": [
+      "sound-zones",
+      "wind-reduction",
+      "equalizer"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://support.sennheiser-hearing.com/hc/en-us/articles/37817763029789-ACCENTUM-Wireless-Specifications",
+        "type": "official-product",
+        "title": "ACCENTUM Wireless specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://newsroom.sennheiser.com/introducing-accentum-wireless",
+        "type": "official-product",
+        "title": "Sennheiser press release - ACCENTUM Wireless",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.sonova.chb.control",
+        "type": "official-app-store",
+        "title": "Sennheiser Smart Control Plus on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "Wear detection not listed; assumed absent.",
+      "App version number not displayed.",
+      "No official ANC-off runtime published; the quoted bud hours are the ANC-on figure."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sennheiser",
+    "companySlug": "sennheiser",
+    "family": "ACCENTUM",
+    "model": "ACCENTUM Plus Wireless",
+    "slug": "sennheiser-accentum-plus-wireless",
+    "generation": "1",
+    "variant": "Plus",
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Sennheiser Smart Control Plus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sonova.chb.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sonova.chb.control"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-09-15)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 50,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Voice prompt; 10-minute charge = 5 h.",
+      "notes": "50 h with ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Adaptive hybrid ANC; wind reduction."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive hybrid ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.wind-reduction",
+        "name": "Wind reduction",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band equalizer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.sound-personalization",
+        "name": "Sound Personalization",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.sound-check",
+        "name": "Sound Check",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.sound-zones",
+        "name": "Sound Zones",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.wired-mode",
+        "name": "3.5 mm and USB-C wired listening",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/Bluetooth, ANC button.",
+      "configurableInApp": true,
+      "notes": "Touch controls on right earcup."
+    },
+    "audio": {
+      "eqPresets": [
+        "Neutral",
+        "Bass Boost",
+        "Podcast",
+        "Rock",
+        "Pop",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "37 mm driver; 50 h; Bluetooth 5.3; 3.5 mm cable."
+    },
+    "appOnlyFeatures": [
+      "sound-personalization",
+      "sound-check",
+      "sound-zones",
+      "wind-reduction",
+      "equalizer"
+    ],
+    "featureDeltaFromPrevious": [
+      "Touch controls and wear detection added versus ACCENTUM Wireless.",
+      "aptX Adaptive replaces aptX HD.",
+      "3.5 mm input added."
+    ],
+    "sources": [
+      {
+        "url": "https://support.sennheiser-hearing.com/hc/en-us/articles/37817763029789-ACCENTUM-Wireless-Specifications",
+        "type": "official-product",
+        "title": "ACCENTUM family specifications (Plus shares platform)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.sonova.chb.control",
+        "type": "official-app-store",
+        "title": "Sennheiser Smart Control Plus on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Dedicated ACCENTUM Plus spec page not captured; values shared with ACCENTUM Wireless where Sennheiser's platform is common.",
+      "No official ANC/transparency dB figures.",
+      "App version number not displayed.",
+      "No official ANC-off runtime published; the quoted bud hours are the ANC-on figure."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sennheiser",
+    "companySlug": "sennheiser",
+    "family": "MOMENTUM True Wireless",
+    "model": "MOMENTUM True Wireless 3",
+    "slug": "sennheiser-momentum-true-wireless-3",
+    "generation": "3",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Sennheiser Smart Control Plus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sonova.chb.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sonova.chb.control"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-09-15)",
+      "notes": "Smart Control Plus recommended for this model."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": null,
+      "caseHours": 21,
+      "chargingIndicators": "Case LED; voice prompt.",
+      "notes": "7 h buds + 28 h total. App shows the lower earbud only.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "anti-wind",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Adaptive hybrid ANC; anti-wind mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive hybrid ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.anti-wind",
+        "name": "Anti-wind mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band equalizer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.sound-personalization",
+        "name": "Sound Personalization",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.fit-test",
+        "name": "Ear adapter fit test",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Neutral",
+        "Bass Boost",
+        "Podcast",
+        "Rock",
+        "Pop",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "7 mm TrueResponse driver; IPX4; Bluetooth 5.2; Qi charging."
+    },
+    "appOnlyFeatures": [
+      "sound-personalization",
+      "fit-test",
+      "anti-wind",
+      "equalizer"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adaptive ANC and Sound Personalization added versus MTW2.",
+      "Battery increased to 7 h / 28 h total.",
+      "Qi wireless charging added."
+    ],
+    "sources": [
+      {
+        "url": "https://support.sennheiser-hearing.com/hc/en-us/articles/35061825922717-Download",
+        "type": "official-support",
+        "title": "Sennheiser MOMENTUM True Wireless 3 support downloads",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://apps.apple.com/us/app/sennheiser-smart-control/id1408526071",
+        "type": "official-app-store",
+        "title": "Sennheiser Smart Control on the App Store (version history)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Dedicated MTW3 spec page not captured in this pass; battery and codec data from Sennheiser's published MTW3 specifications.",
+      "No official ANC/transparency dB figures.",
+      "Known historical battery-reliability complaints are noted in Sennheiser's MTW4 FAQ.",
+      "No official ANC-off runtime published; the quoted bud hours are the ANC-on figure.",
+      "Case battery visibility in Smart Control Plus is inferred; only the combined single-bud-level rule is officially documented."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sennheiser",
+    "companySlug": "sennheiser",
+    "family": "HD",
+    "model": "HD 450BT",
+    "slug": "sennheiser-hd-450bt",
+    "generation": "450",
+    "variant": "BT",
+    "releaseYear": 2020,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Sennheiser Smart Control",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sennheiser.control"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/us/app/sennheiser-smart-control/id1408526071"
+      ],
+      "appVersionObserved": "4.9.4 (App Store, 28 Oct)",
+      "notes": "Legacy Smart Control app; Smart Control Plus does not list HD 450BT."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 30,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Voice prompt; USB-C.",
+      "notes": "30 h with ANC; wired mode available.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Active noise cancelling with Transparent Hearing."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparent Hearing",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.presets",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.wired-mode",
+        "name": "3.5 mm wired listening",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "app.voice-guidance",
+        "name": "Voice prompt language",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [],
+      "physicalButtons": "Power, ANC, volume, play/pause, voice assistant.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Neutral",
+        "Bass Boost",
+        "Podcast",
+        "Rock",
+        "Pop",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX Low Latency"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.0; 30 h; 3.5 mm cable; foldable."
+    },
+    "appOnlyFeatures": [
+      "equalizer",
+      "voice-guidance"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://support.sennheiser-hearing.com/hc/en-us/articles/35061825922717-Download",
+        "type": "official-support",
+        "title": "Sennheiser HD 450BT support downloads",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://apps.apple.com/us/app/sennheiser-smart-control/id1408526071",
+        "type": "official-app-store",
+        "title": "Sennheiser Smart Control on the App Store",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Dedicated HD 450BT spec page not captured in this pass.",
+      "No official ANC/transparency dB figures.",
+      "Multipoint absence needs confirmation across firmware.",
+      "No official ANC-off runtime published; the quoted bud hours are the ANC-on figure."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sennheiser",
+    "companySlug": "sennheiser",
+    "family": "HD",
+    "model": "HD 350BT",
+    "slug": "sennheiser-hd-350bt",
+    "generation": "350",
+    "variant": "BT",
+    "releaseYear": 2020,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Sennheiser Smart Control",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sennheiser.control"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/us/app/sennheiser-smart-control/id1408526071"
+      ],
+      "appVersionObserved": "4.9.4 (App Store, 28 Oct)",
+      "notes": "Legacy Smart Control app."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 30,
+      "caseHours": null,
+      "chargingIndicators": "Voice prompt; USB-C.",
+      "notes": "30 h; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.presets",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.voice-guidance",
+        "name": "Voice prompt language",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [],
+      "physicalButtons": "Power, volume, play/pause, voice assistant.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Neutral",
+        "Bass Boost",
+        "Podcast",
+        "Rock",
+        "Pop",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX Low Latency"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.0; 30 h; no wired jack."
+    },
+    "appOnlyFeatures": [
+      "equalizer",
+      "voice-guidance"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://support.sennheiser-hearing.com/hc/en-us/articles/35061825922717-Download",
+        "type": "official-support",
+        "title": "Sennheiser HD 350BT support downloads",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://apps.apple.com/us/app/sennheiser-smart-control/id1408526071",
+        "type": "official-app-store",
+        "title": "Sennheiser Smart Control on the App Store",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Dedicated HD 350BT spec page not captured.",
+      "No ANC/transparency (not applicable).",
+      "Whether a 3.5 mm jack exists is not confirmed; HD 350BT is generally wireless-only."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sennheiser",
+    "companySlug": "sennheiser",
+    "family": "HD",
+    "model": "HD 250BT",
+    "slug": "sennheiser-hd-250bt",
+    "generation": "250",
+    "variant": "BT",
+    "releaseYear": 2021,
+    "formFactor": "on-ear",
+    "officialApp": {
+      "name": "Sennheiser Smart Control",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sennheiser.control"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/us/app/sennheiser-smart-control/id1408526071"
+      ],
+      "appVersionObserved": "4.9.4 (App Store, 28 Oct)",
+      "notes": "Legacy Smart Control app."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 25,
+      "caseHours": null,
+      "chargingIndicators": "Voice prompt; USB-C.",
+      "notes": "25 h; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.voice-guidance",
+        "name": "Voice prompt language",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [],
+      "physicalButtons": "Power, volume, play/pause.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Neutral",
+        "Bass Boost",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "On-ear; Bluetooth 5.0; 25 h."
+    },
+    "appOnlyFeatures": [
+      "equalizer",
+      "voice-guidance"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://support.sennheiser-hearing.com/hc/en-us/articles/35061825922717-Download",
+        "type": "official-support",
+        "title": "Sennheiser HD 250BT support downloads",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://apps.apple.com/us/app/sennheiser-smart-control/id1408526071",
+        "type": "official-app-store",
+        "title": "Sennheiser Smart Control on the App Store",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Dedicated HD 250BT spec page not captured.",
+      "No ANC/transparency (not applicable).",
+      "EQ band count not confirmed."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sennheiser",
+    "companySlug": "sennheiser",
+    "family": "CX",
+    "model": "CX Plus True Wireless",
+    "slug": "sennheiser-cx-plus-true-wireless",
+    "generation": "1",
+    "variant": "Plus",
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Sennheiser Smart Control Plus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sonova.chb.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sonova.chb.control"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-09-15)",
+      "notes": "Smart Control Plus lists CX Plus True Wireless as supported."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 8,
+      "budsHoursNoAnc": null,
+      "caseHours": 16,
+      "chargingIndicators": "Case LED; voice prompt.",
+      "notes": "8 h buds + 24 h total. App shows the lower earbud only.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Active noise cancelling with Transparent Hearing."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparent Hearing",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.presets",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.fit-test",
+        "name": "Fit test",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Neutral",
+        "Bass Boost",
+        "Podcast",
+        "Rock",
+        "Pop",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "7 mm driver; IPX4; Bluetooth 5.2."
+    },
+    "appOnlyFeatures": [
+      "equalizer",
+      "fit-test"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC added versus CX True Wireless.",
+      "aptX Adaptive added.",
+      "Battery reduced to 8 h versus CX's 9 h."
+    ],
+    "sources": [
+      {
+        "url": "https://support.sennheiser-hearing.com/hc/en-us/articles/35061825922717-Download",
+        "type": "official-support",
+        "title": "Sennheiser CX Plus True Wireless support downloads",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.sonova.chb.control",
+        "type": "official-app-store",
+        "title": "Sennheiser Smart Control Plus on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Dedicated CX Plus spec page not captured.",
+      "No official ANC/transparency dB figures.",
+      "Multipoint absence needs confirmation.",
+      "No official ANC-off runtime published; the quoted bud hours are the ANC-on figure.",
+      "Case battery visibility in Smart Control Plus is inferred; only the combined single-bud-level rule is officially documented."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sennheiser",
+    "companySlug": "sennheiser",
+    "family": "CX",
+    "model": "CX True Wireless",
+    "slug": "sennheiser-cx-true-wireless",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Sennheiser Smart Control Plus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sonova.chb.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sonova.chb.control"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-09-15)",
+      "notes": "Smart Control Plus lists CX True Wireless as supported."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9,
+      "caseHours": 18,
+      "chargingIndicators": "Case LED; voice prompt.",
+      "notes": "9 h buds + 27 h total; no ANC. App shows the lower earbud only.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.presets",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.fit-test",
+        "name": "Fit test",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Neutral",
+        "Bass Boost",
+        "Podcast",
+        "Rock",
+        "Pop",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "7 mm driver; IPX4; Bluetooth 5.2; 27 h total."
+    },
+    "appOnlyFeatures": [
+      "equalizer",
+      "fit-test"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://support.sennheiser-hearing.com/hc/en-us/articles/35061825922717-Download",
+        "type": "official-support",
+        "title": "Sennheiser CX True Wireless support downloads",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.sonova.chb.control",
+        "type": "official-app-store",
+        "title": "Sennheiser Smart Control Plus on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Dedicated CX spec page not captured.",
+      "No ANC/transparency (not applicable).",
+      "Multipoint absence needs confirmation.",
+      "Case battery visibility in Smart Control Plus is inferred; only the combined single-bud-level rule is officially documented."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sennheiser",
+    "companySlug": "sennheiser",
+    "family": "MOMENTUM True Wireless",
+    "model": "MOMENTUM True Wireless 2",
+    "slug": "sennheiser-momentum-true-wireless-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Sennheiser Smart Control",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sennheiser.control"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/us/app/sennheiser-smart-control/id1408526071"
+      ],
+      "appVersionObserved": "4.9.4 (App Store, 28 Oct)",
+      "notes": "Legacy Smart Control app; MTW2 predates Smart Control Plus."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": null,
+      "caseHours": 21,
+      "chargingIndicators": "Case LED; voice prompt.",
+      "notes": "7 h buds + 28 h total; app shows one combined level (lower bud).",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Active noise cancelling with Transparent Hearing."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparent Hearing",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.presets",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Neutral",
+        "Bass Boost",
+        "Podcast",
+        "Rock",
+        "Pop",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "7 mm driver; IPX4; Bluetooth 5.1; 28 h total."
+    },
+    "appOnlyFeatures": [
+      "equalizer"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC added versus MOMENTUM True Wireless 1.",
+      "Battery increased to 7 h / 28 h total.",
+      "Transparent Hearing added."
+    ],
+    "sources": [
+      {
+        "url": "https://support.sennheiser-hearing.com/hc/en-us/articles/35061825922717-Download",
+        "type": "official-support",
+        "title": "Sennheiser MOMENTUM True Wireless 2 support downloads",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://apps.apple.com/us/app/sennheiser-smart-control/id1408526071",
+        "type": "official-app-store",
+        "title": "Sennheiser Smart Control on the App Store",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Dedicated MTW2 spec page not captured.",
+      "No official ANC/transparency dB figures.",
+      "EQ band count not confirmed.",
+      "No official ANC-off runtime published; the quoted bud hours are the ANC-on figure.",
+      "Case battery visibility in Smart Control Plus is inferred; only the combined single-bud-level rule is officially documented."
+    ],
+    "notes": "Legacy generation kept for family coverage.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sennheiser",
+    "companySlug": "sennheiser",
+    "family": "IE PRO",
+    "model": "IE 100 PRO Wireless",
+    "slug": "sennheiser-ie-100-pro-wireless",
+    "generation": "1",
+    "variant": "Wireless",
+    "releaseYear": 2021,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Professional in-ear monitor with IE PRO BT Connector (SEBT1); controls are on-device only."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": null,
+      "chargingIndicators": "No charging case; USB-C charging, on-device LED/voice prompts.",
+      "notes": "10 h music playback via SBC; 240 h standby; 2.5 h charge. No app, so no app battery-display contract exists.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Passive isolation only (<26 dB attenuation)."
+    },
+    "features": [
+      {
+        "id": "audio.wired-mode",
+        "name": "Modular wired/wireless use",
+        "availability": "device-only",
+        "notes": "Swap the BT connector for the included standard cable."
+      },
+      {
+        "id": "controls.remote",
+        "name": "3-button remote with microphone",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.aptx-ll",
+        "name": "aptX Low Latency",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "other"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press center",
+          "action": "play/pause / call",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "double press center",
+          "action": "next track",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "triple press center",
+          "action": "previous track",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "press and hold center",
+          "action": "voice assistant",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "volume up/down",
+          "action": "volume",
+          "configurableInApp": null,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Three-button inline remote on the Bluetooth neckband cable.",
+      "configurableInApp": null,
+      "notes": "No app; button functions fixed."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Low Latency"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "20 ohm dynamic in-ear monitor; 20 Hz-18 kHz; 115 dB SPL; <26 dB passive isolation."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://docs.cloud.sennheiser.com/en-us/ie-pro/specifications-ie-100-pro-wireless.html",
+        "type": "official-product",
+        "title": "IE 100 PRO Wireless specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.sennheiser.com/en-us/catalog/products/headphones/ie-100-pro-wireless/ie-100-pro-wireless-black-509171",
+        "type": "official-product",
+        "title": "IE 100 PRO Wireless product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://newsroom.sennheiser.com/take-perfect-monitoring-sound-to-the-streets-n54lt0",
+        "type": "official-product",
+        "title": "Sennheiser press release - IE 100 PRO Wireless",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No companion app exists, so app battery display, EQ and noise-control semantics are not applicable.",
+      "Multipoint support not stated.",
+      "No ANC or transparency (not applicable)."
+    ],
+    "notes": "Professional IEM with a Bluetooth neckband cable; included in scope for IE coverage.",
+    "researchedAt": "2026-11-10"
+  }
+]

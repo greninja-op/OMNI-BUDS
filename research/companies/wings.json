@@ -1,0 +1,783 @@
+[
+  {
+    "company": "Wings",
+    "companySlug": "wings",
+    "family": "Flobuds",
+    "model": "Flobuds 100",
+    "slug": "wings-flobuds-100",
+    "generation": "100",
+    "variant": "Flobuds",
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Flobuds 100 predates Wings Sync and is not a documented Sync device."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "live",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Digital battery display on the charging case.",
+      "notes": "The case exposes a digital numeric battery display; no app. The case display reads the case battery directly, so it remains live while the buds are out.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Smart ENC only."
+    },
+    "features": [
+      {
+        "id": "vendor.wings.digital-display",
+        "name": "Digital battery display",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.wings.enc",
+        "name": "Smart ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.flipkart.com/wings-flobuds-100-made-india-digital-battery-display-smart-enc-ergonomic-case-bluetooth-headset/p/itmba1e4e082a549",
+        "type": "official-product",
+        "title": "Wings Flobuds 100 official listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Playtime",
+      "Battery display semantics for buds vs case",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": "Battery readout is a numeric display on the case, not an app.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Wings",
+    "companySlug": "wings",
+    "family": "Flobuds",
+    "model": "Flobuds 200",
+    "slug": "wings-flobuds-200",
+    "generation": "200",
+    "variant": "Flobuds",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": "Case LED.",
+      "notes": "50 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ENC only."
+    },
+    "features": [
+      {
+        "id": "vendor.wings.enc",
+        "name": "ENC calling",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "50 h total playback",
+      "13 mm drivers"
+    ],
+    "sources": [
+      {
+        "url": "https://www.wingslifestyle.com/collections/earbuds",
+        "type": "official-product",
+        "title": "Wings earbuds collection",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fonearena.com/blog/401182/wings-flobuds-200-price-features.html",
+        "type": "reputable-secondary",
+        "title": "Wings Flobuds 200 launch",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official product page not accessible (site returns 500)",
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Wings",
+    "companySlug": "wings",
+    "family": "Flobuds",
+    "model": "Flobuds 300",
+    "slug": "wings-flobuds-300",
+    "generation": "300",
+    "variant": "Flobuds",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Official manual documents touch controls only; no app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 50,
+      "chargingIndicators": "LED battery indicator on the case.",
+      "notes": "Official: 10 h buds, 50 h total. Talk time up to 45 h, standby 300 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Smart ENC, not ANC."
+    },
+    "features": [
+      {
+        "id": "vendor.wings.enc",
+        "name": "Smart ENC",
+        "availability": "device-only",
+        "notes": "Quad mic."
+      },
+      {
+        "id": "vendor.wings.game-mode",
+        "name": "Game mode",
+        "availability": "device-only",
+        "notes": "40 ms; long-press right earbud."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap right",
+          "action": "volume up",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "single tap left",
+          "action": "volume down",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap right",
+          "action": "next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap left",
+          "action": "previous track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "long press left",
+          "action": "voice assistant",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "long press right",
+          "action": "game mode on/off",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "AAC"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers; BT 5.3; IPX5; 15 m range."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "13 mm drivers",
+      "AAC",
+      "40 ms game mode",
+      "15 m range"
+    ],
+    "sources": [
+      {
+        "url": "https://manualspro.net/294358-wings-flobuds-300-true-wireless-earbuds-user-manual",
+        "type": "official-manual",
+        "title": "Wings Flobuds 300 user manual",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fonearena.com/blog/403194/wings-prime-wings-flobuds-300-price-features.html",
+        "type": "reputable-secondary",
+        "title": "Wings Flobuds 300 launch",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery display semantics",
+      "Case percentage while buds are out",
+      "EQ"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Wings",
+    "companySlug": "wings",
+    "family": "Flobuds",
+    "model": "Flobuds 335",
+    "slug": "wings-flobuds-335",
+    "generation": "335",
+    "variant": "Flobuds",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Case LED.",
+      "notes": null,
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "vendor.wings.enc",
+        "name": "ENC calling",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.wingslifestyle.com/collections/earbuds",
+        "type": "official-product",
+        "title": "Wings earbuds collection",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Playtime",
+      "Battery display semantics",
+      "Codecs",
+      "Control map",
+      "Official product page URL"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Wings",
+    "companySlug": "wings",
+    "family": "Phantom",
+    "model": "Phantom 320",
+    "slug": "wings-phantom-320",
+    "generation": "320",
+    "variant": "Phantom",
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Wings Sync",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Retail listing and app how-to videos describe Wings Sync as the companion app for Phantom gaming TWS, including low-latency control."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Case LED.",
+      "notes": null,
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Gaming model; no ANC documented."
+    },
+    "features": [
+      {
+        "id": "vendor.wings.sync-app",
+        "name": "Wings Sync app control",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.wings.game-mode",
+        "name": "Low-latency game mode",
+        "availability": "both",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "BT 5.3."
+    },
+    "appOnlyFeatures": [
+      "Game mode",
+      "Controls"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.wingslifestyle.com/collections/earbuds",
+        "type": "official-product",
+        "title": "Wings earbuds collection",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.dealsmagnet.com/deal/wings-phantom-320-gaming-earbuds-with-bluetooth-5--19hDOozM",
+        "type": "reputable-secondary",
+        "title": "Wings Phantom 320 listing with Wings Sync support",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://wings-sync.en.softonic.com/android",
+        "type": "reputable-secondary",
+        "title": "Wings Sync app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Playtime",
+      "Battery display semantics",
+      "Codecs",
+      "Control map",
+      "Official product page"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Wings",
+    "companySlug": "wings",
+    "family": "Phantom",
+    "model": "Phantom 850",
+    "slug": "wings-phantom-850",
+    "generation": "850",
+    "variant": "Phantom",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Wings Sync",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Manual coverage describes app features for Phantom 850."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Case LED.",
+      "notes": null,
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "vendor.wings.sync-app",
+        "name": "Wings Sync app control",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.wings.game-mode",
+        "name": "Low-latency mode",
+        "availability": "both",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "Game mode",
+      "Controls"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://manuals.plus/category/wings",
+        "type": "official-manual",
+        "title": "Wings Phantom 850 manual listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Playtime",
+      "Battery display semantics",
+      "Codecs",
+      "Control map",
+      "Official product page"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Wings",
+    "companySlug": "wings",
+    "family": "Phantom",
+    "model": "Phantom 860",
+    "slug": "wings-phantom-860",
+    "generation": "860",
+    "variant": "Phantom",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Wings Sync",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Retail listing explicitly advertises app support."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": "Case LED.",
+      "notes": "50 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Quad ENC mic only."
+    },
+    "features": [
+      {
+        "id": "vendor.wings.sync-app",
+        "name": "Wings Sync app control",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.wings.enc",
+        "name": "Quad ENC mic",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.wings.game-mode",
+        "name": "Game mode",
+        "availability": "both",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "BT 5.3."
+    },
+    "appOnlyFeatures": [
+      "Game mode",
+      "Controls"
+    ],
+    "featureDeltaFromPrevious": [
+      "50 h playback",
+      "App support"
+    ],
+    "sources": [
+      {
+        "url": "https://www.wingslifestyle.com/collections/earbuds",
+        "type": "official-product",
+        "title": "Wings earbuds collection",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://manuals.plus/category/wings",
+        "type": "official-manual",
+        "title": "Wings manuals index",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map",
+      "Official product page URL"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

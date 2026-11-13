@@ -1,0 +1,954 @@
+[
+  {
+    "company": "Suunto",
+    "companySlug": "suunto",
+    "family": "Wing",
+    "model": "Suunto Wing",
+    "slug": "suunto-wing",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "bone-conduction",
+    "officialApp": {
+      "name": "Suunto",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.stt.android.suunto"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/us/app/suunto/id1230327951",
+        "https://play.google.com/store/apps/details?id=com.stt.android.suunto"
+      ],
+      "appVersionObserved": null,
+      "notes": "Headphone settings live under the profile > headphones menu in Suunto app."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 20,
+      "chargingIndicators": "LED on headphones; Suunto app battery status; powerbank LED",
+      "notes": "10 h music, plus 20 h from the bundled powerbank (not a charging case). Music time drops to about 8 h with Head Movement Control on and about 4 h with LEDs constantly on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "No ANC. Anti-wind noise up to 30 km/h for calls."
+    },
+    "features": [
+      {
+        "id": "vendor.suunto.head-movement-control",
+        "name": "Head Movement Control",
+        "availability": "both",
+        "notes": "Nod/shake to change tracks and answer/decline calls; app can enable/disable."
+      },
+      {
+        "id": "vendor.suunto.led-lights",
+        "name": "Red LED visibility lights",
+        "availability": "both",
+        "notes": "App selects constant/blinking/off."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual device connection",
+        "availability": "official-app",
+        "notes": "Two devices; second connection temporarily disconnects the first."
+      },
+      {
+        "id": "vendor.suunto.sound-modes",
+        "name": "Normal and Outdoor sound modes",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.suunto.powerbank",
+        "name": "Bundled 20 h powerbank",
+        "availability": "device-only",
+        "notes": "Separate 40 g powerbank, not a charging case."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "head-gesture"
+      ],
+      "gestures": [
+        {
+          "gesture": "nod",
+          "action": "answer call / next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "shake",
+          "action": "decline call / previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "multifunction button",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "volume + / -",
+          "action": "volume up/down; track skip via long press",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Three buttons (multifunction plus volume +/-)",
+      "configurableInApp": true,
+      "notes": "Buttons are customizable in Suunto app; head gestures can be toggled."
+    },
+    "audio": {
+      "eqPresets": [
+        "normal",
+        "outdoor"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bone conduction, Bluetooth 5.3, IP67, 33 g, 20 Hz-20 kHz."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "head-movement-control",
+      "led-mode",
+      "sound-mode",
+      "button-customization",
+      "dual-device"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://us.suunto.com/products/suunto-wing-black",
+        "type": "official-product",
+        "title": "Suunto Wing",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.suunto.com/Support/Product-support/suunto_wing/suunto_wing/getting-started/suunto-app/",
+        "type": "official-support",
+        "title": "Suunto Wing user guide: Suunto app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Whether the app shows any powerbank charge level is not documented.",
+      "Case visibility timing is not applicable because the powerbank is not a display case.",
+      "Custom EQ not offered."
+    ],
+    "notes": "Bone-conduction sports headphone with LED safety lights and a separate powerbank. The powerbank is not a charging case and has no app battery widget.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Suunto",
+    "companySlug": "suunto",
+    "family": "Wing",
+    "model": "Suunto Wing 2",
+    "slug": "suunto-wing-2",
+    "generation": "2",
+    "variant": "Wing 2",
+    "releaseYear": 2025,
+    "formFactor": "bone-conduction",
+    "officialApp": {
+      "name": "Suunto",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.stt.android.suunto"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/us/app/suunto/id1230327951",
+        "https://play.google.com/store/apps/details?id=com.stt.android.suunto"
+      ],
+      "appVersionObserved": null,
+      "notes": "App tunes audio, smart LED modes and firmware; watch integration adds real-time performance feedback."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 12,
+      "caseHours": 24,
+      "chargingIndicators": "LED; Suunto app battery status; powerbank LED",
+      "notes": "Headline 12 h, plus 24 h from the bundled powerbank. The spec table also lists music-only play time of at least 10 h, so 12 h is the marketing headline.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "No ANC. Dual microphone with anti-wind noise up to 30 km/h."
+    },
+    "features": [
+      {
+        "id": "vendor.suunto.head-movement-control",
+        "name": "Head Movement Control",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "vendor.suunto.smart-led",
+        "name": "Smart LED modes",
+        "availability": "both",
+        "notes": "Lights pulse with running cadence or flash when checking traffic."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual device connection",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.suunto.watch-feedback",
+        "name": "Real-time watch performance feedback",
+        "availability": "both",
+        "notes": "Text-to-speech lap time, distance, duration and average speed from a Suunto watch."
+      },
+      {
+        "id": "vendor.suunto.sound-modes",
+        "name": "Normal and Outdoor sound modes",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.suunto.powerbank",
+        "name": "Bundled 24 h powerbank",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "head-gesture"
+      ],
+      "gestures": [
+        {
+          "gesture": "nod",
+          "action": "answer call / next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "shake",
+          "action": "decline call / previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "multifunction button",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "volume + / -",
+          "action": "volume up/down",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Three buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "normal",
+        "outdoor"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bone conduction, Bluetooth 5.3, IP66, 35 g, 170 mAh."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "head-movement-control",
+      "led-mode",
+      "sound-mode",
+      "button-customization",
+      "dual-device"
+    ],
+    "featureDeltaFromPrevious": [
+      "Battery increased from 10 h to 12 h; powerbank from 20 h to 24 h",
+      "Smart LED modes react to running cadence and traffic checks",
+      "Added real-time performance feedback from Suunto watches",
+      "Charging changed to USB-C",
+      "IP rating changed from IP67 to IP66 (dust-tight but lower water-immersion protection)",
+      "Weight increased from 33 g to 35 g"
+    ],
+    "sources": [
+      {
+        "url": "https://us.suunto.com/products/suunto-wing-2-coral-orange",
+        "type": "official-product",
+        "title": "Suunto Wing 2",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Official battery figures conflict (12 h headline vs at least 10 h in the spec table).",
+      "Whether the app shows powerbank charge is not documented.",
+      "No custom EQ."
+    ],
+    "notes": "Successor to Wing. IP66 is a lower immersion rating than Wing's IP67, despite the newer generation.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Suunto",
+    "companySlug": "suunto",
+    "family": "Sonic",
+    "model": "Suunto Sonic",
+    "slug": "suunto-sonic",
+    "generation": "2024",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "bone-conduction",
+    "officialApp": {
+      "name": "Suunto",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.stt.android.suunto"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/us/app/suunto/id1230327951",
+        "https://play.google.com/store/apps/details?id=com.stt.android.suunto"
+      ],
+      "appVersionObserved": null,
+      "notes": "App adjusts sound mode, dual-device connection and firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": null,
+      "chargingIndicators": "LED; Suunto app battery status",
+      "notes": "10 h music; 60-min full charge; 10-min quick charge gives 3 h. No case/powerbank.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "No ANC. Dual microphone and CVC noise cancellation for calls up to about 15 km/h wind."
+    },
+    "features": [
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual device connection",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.suunto.sound-modes",
+        "name": "Normal and Outdoor sound modes",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction button",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "volume + / -",
+          "action": "volume up/down; next/previous track via long press",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Three easy-to-reach buttons",
+      "configurableInApp": false,
+      "notes": "No head-gesture control on Sonic."
+    },
+    "audio": {
+      "eqPresets": [
+        "normal",
+        "outdoor"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bone conduction, Bluetooth 5.2, IP55, 31 g, 20 Hz-20 kHz."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "sound-mode",
+      "dual-device"
+    ],
+    "featureDeltaFromPrevious": [
+      "No LED visibility lights",
+      "No Head Movement Control",
+      "IP55 vs Wing IP67",
+      "31 g vs Wing 33 g",
+      "Bluetooth 5.2 vs Wing 5.3",
+      "No bundled powerbank"
+    ],
+    "sources": [
+      {
+        "url": "https://us.suunto.com/products/suunto-sonic-lime",
+        "type": "official-product",
+        "title": "Suunto Sonic",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.suunto.com/en-us/News/new-suunto-sonic-headphones/",
+        "type": "official-support",
+        "title": "New Suunto Sonic headphones",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "App battery layout for Sonic not documented.",
+      "No custom EQ."
+    ],
+    "notes": "Affordable sibling of Wing; no LEDs, no head gestures, no powerbank.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Suunto",
+    "companySlug": "suunto",
+    "family": "Spark",
+    "model": "Suunto Spark",
+    "slug": "suunto-spark",
+    "generation": "2026",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "tws-open",
+    "officialApp": {
+      "name": "Suunto",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.stt.android.suunto"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/us/app/suunto/id1230327951",
+        "https://play.google.com/store/apps/details?id=com.stt.android.suunto"
+      ],
+      "appVersionObserved": null,
+      "notes": "App provides EQ, head-gesture settings, button customization, Find My Spark, battery status and firmware."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED (green >40%, orange <40%); app battery page",
+      "notes": "Up to 7 h per charge; official spec says 7-30 h total, while the product page headline says up to 36 h. Case adds 24 h per the user guide. Inconsistent official figures; 7 h buds and 30 h case are used here.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "No ANC. Dual mics with Environmental Noise Cancellation for calls."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "4 preset EQ plus custom",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.suunto.head-movement-control",
+        "name": "Head gesture control",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "vendor.suunto.spatial-audio",
+        "name": "Head-tracked spatial audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.suunto.find-my",
+        "name": "Find My Suunto Spark",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.suunto.training-feedback",
+        "name": "Real-time training feedback",
+        "availability": "both",
+        "notes": "Cadence, ground contact, vertical oscillation, pace, heart rate and laps via a Suunto watch."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "head-gesture"
+      ],
+      "gestures": [
+        {
+          "gesture": "head gesture",
+          "action": "track skip / call answer or decline",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "button single-press",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "button double-press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "button long-press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Buttons on each earbud; app-customizable",
+      "configurableInApp": true,
+      "notes": "Exact default button map not fully documented on the product page."
+    },
+    "audio": {
+      "eqPresets": [
+        "standard",
+        "vocal",
+        "bass",
+        "treble"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "LHDC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "Hybrid multi-driver open-ear system, Bluetooth 5.4, IP55, 9.7 g per earbud. LHDC 5.0 up to 96 kHz; Hi-Res Audio Wireless."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "eq-selection",
+      "custom-eq",
+      "head-gesture",
+      "button-customization",
+      "find-my",
+      "dual-device",
+      "training-settings"
+    ],
+    "featureDeltaFromPrevious": [
+      "First true-wireless open-ear earbud in the Suunto headphone line (previous models are neckband bone conduction)",
+      "LHDC 5.0 and Hi-Res Audio Wireless support",
+      "Head-tracked spatial audio",
+      "Up to 7 h per charge with a charging case",
+      "Bluetooth 5.4 and dual-device connection",
+      "IP55"
+    ],
+    "sources": [
+      {
+        "url": "https://us.suunto.com/products/suunto-spark-coral-orange",
+        "type": "official-product",
+        "title": "Suunto Spark",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.suunto.com/Support/Product-support/suunto_spark/suunto_spark/care-and-support/battery-and-charging/",
+        "type": "official-support",
+        "title": "Suunto Spark battery and charging",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery figures conflict: 7 h/30 h spec vs 36 h marketing headline vs 6 h in the user guide.",
+      "App battery layout (split L/R vs combined, and case percentage) is not documented.",
+      "Wear detection not documented.",
+      "Exact default button gesture map not published."
+    ],
+    "notes": "Suunto's first open-ear TWS earbud, distinct from its bone-conduction neckbands. Case LED reports coarse bands only; app is required for detailed status.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Suunto",
+    "companySlug": "suunto",
+    "family": "Aqua",
+    "model": "Suunto Aqua",
+    "slug": "suunto-aqua",
+    "generation": "2025",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "bone-conduction",
+    "officialApp": {
+      "name": "Suunto",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.stt.android.suunto"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/us/app/suunto/id1230327951",
+        "https://play.google.com/store/apps/details?id=com.stt.android.suunto"
+      ],
+      "appVersionObserved": null,
+      "notes": "App manages offline music, button customization, swim analysis, EQ/sound mode and firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 20,
+      "chargingIndicators": "LED; Suunto app battery status; powerbank LED",
+      "notes": "10 h playback, plus 20 h from the bundled powerbank; 32 GB offline storage; IP68 to 5 m for 2 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": false,
+      "notes": "No ANC. Bone conduction open-ear design."
+    },
+    "features": [
+      {
+        "id": "vendor.suunto.offline-music",
+        "name": "32 GB offline audio",
+        "availability": "both",
+        "notes": "Bluetooth on land, offline storage for swimming."
+      },
+      {
+        "id": "vendor.suunto.head-movement-control",
+        "name": "Head Movement Control",
+        "availability": "both",
+        "notes": "Calls and track changes hands-free."
+      },
+      {
+        "id": "vendor.suunto.swim-analysis",
+        "name": "Swim technique analysis",
+        "availability": "official-app",
+        "notes": "Stroke posture, head pitch, breath frequency, glide time."
+      },
+      {
+        "id": "vendor.suunto.mobility",
+        "name": "Neck/muscle fatigue and mobility monitoring",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual device connection",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "head-gesture"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction button",
+          "action": "play/pause; answer/end call; mode control",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "volume + / -",
+          "action": "volume up/down; track skip",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "head gesture",
+          "action": "answer/hang up; change track",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Multifunction plus two volume buttons",
+      "configurableInApp": true,
+      "notes": "All buttons fully customizable in Suunto app."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bone conduction, Bluetooth 5.3, IP68 5 m/2 h, 35 g, 24.2x14.45 mm transducer."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "offline-music-management",
+      "swim-analysis",
+      "button-customization",
+      "head-movement-control",
+      "dual-device"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adds swimming-focused 32 GB offline audio and IP68 5 m/2 h rating",
+      "Adds swim technique analysis (stroke, head pitch, breath frequency, glide)",
+      "Adds neck/muscle fatigue and mobility monitoring"
+    ],
+    "sources": [
+      {
+        "url": "https://us.suunto.com/products/suunto-aqua-black",
+        "type": "official-product",
+        "title": "Suunto Aqua",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.suunto.com/Support/Product-support/suunto_aqua/suunto_aqua/getting-started/suunto-app/",
+        "type": "official-support",
+        "title": "Suunto Aqua user guide: Suunto app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Whether the app shows powerbank charge is not documented.",
+      "EQ preset names and custom-EQ support not stated on the product page.",
+      "Case visibility timing is not applicable because the powerbank is not a display case."
+    ],
+    "notes": "Swim-focused bone-conduction model; Bluetooth does not work underwater, so offline audio is used in the pool.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Suunto",
+    "companySlug": "suunto",
+    "family": "Aqua",
+    "model": "Suunto Aqua Light",
+    "slug": "suunto-aqua-light",
+    "generation": "2025",
+    "variant": "Light",
+    "releaseYear": 2025,
+    "formFactor": "bone-conduction",
+    "officialApp": {
+      "name": "Suunto",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.stt.android.suunto"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/us/app/suunto/id1230327951",
+        "https://play.google.com/store/apps/details?id=com.stt.android.suunto"
+      ],
+      "appVersionObserved": null,
+      "notes": "App manages sound mode, offline music, dual-device connection and firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": null,
+      "chargingIndicators": "LED; Suunto app battery status",
+      "notes": "10 h music; 1 h quick charge; 32 GB offline storage; IP68 to 2 m; no powerbank listed in the box.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "vendor.suunto.offline-music",
+        "name": "32 GB offline audio",
+        "availability": "both",
+        "notes": "Swim without a phone."
+      },
+      {
+        "id": "vendor.suunto.head-movement-control",
+        "name": "Head Movement Control",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual device connection",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "head-gesture"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction button",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "volume + / -",
+          "action": "volume up/down; track skip",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "head gesture",
+          "action": "answer/hang up; change track",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Multifunction plus two volume buttons",
+      "configurableInApp": true,
+      "notes": "Buttons customizable in Suunto app."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bone conduction, IP68 2 m, 10 h, titanium frame with silicone. Bluetooth version not stated on the product page."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "offline-music-management",
+      "button-customization",
+      "head-movement-control",
+      "dual-device"
+    ],
+    "featureDeltaFromPrevious": [
+      "Lower-tier swim model vs Aqua: IP68 2 m (vs 5 m/2 h)",
+      "No bundled powerbank",
+      "No swim-technique analysis or mobility monitoring listed"
+    ],
+    "sources": [
+      {
+        "url": "https://us.suunto.com/products/suunto-aqua-light-reef-blue",
+        "type": "official-product",
+        "title": "Suunto Aqua Light",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Bluetooth version and codec list not stated on the product page.",
+      "EQ preset names/custom-EQ support not stated.",
+      "Whether the app shows a case/powerbank level is not applicable (no powerbank in the box).",
+      "Head-gesture support inferred from the Suunto Aqua/Aqua Light user-guide family; exact Light manual not retrieved."
+    ],
+    "notes": "Value swim model. IP68 depth rating is lower than Aqua's 5 m/2 h.",
+    "researchedAt": "2026-11-10"
+  }
+]

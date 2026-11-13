@@ -84,13 +84,13 @@ class CodecManager(private val context: Context) {
             val codecConfig = getCodecConfigMethod.invoke(codecStatus) ?: return null
 
             val getCodecTypeMethod = codecConfig.javaClass.getMethod("getCodecType")
-            val codecType = getCodecTypeMethod.invoke(codecConfig) as? Int ?: 0
+            val codecType = getCodecTypeMethod.invoke(codecConfig) as? Int ?: return null
 
             val getSampleRateMethod = codecConfig.javaClass.getMethod("getSampleRate")
-            val sampleRateRaw = getSampleRateMethod.invoke(codecConfig) as? Int ?: 0
+            val sampleRateRaw = getSampleRateMethod.invoke(codecConfig) as? Int ?: return null
 
             val getBitsMethod = codecConfig.javaClass.getMethod("getBitsPerSample")
-            val bitsRaw = getBitsMethod.invoke(codecConfig) as? Int ?: 0
+            val bitsRaw = getBitsMethod.invoke(codecConfig) as? Int ?: return null
 
             val codecName = when (codecType) {
                 SOURCE_CODEC_TYPE_SBC -> "SBC"
@@ -101,7 +101,7 @@ class CodecManager(private val context: Context) {
                 SOURCE_CODEC_TYPE_LC3 -> "LC3 / LE Audio"
                 SOURCE_CODEC_TYPE_OPUS -> "Opus"
                 SOURCE_CODEC_TYPE_LHDC -> "LHDC 5.0"
-                else -> "AAC"
+                else -> return null // Unknown codec id stays unknown.
             }
 
             val sampleRateHz = when (sampleRateRaw) {
@@ -110,14 +110,14 @@ class CodecManager(private val context: Context) {
                 4 -> 88200
                 8 -> 96000
                 16 -> 192000
-                else -> 48000
+                else -> return null
             }
 
             val bits = when (bitsRaw) {
                 1 -> 16
                 2 -> 24
                 4 -> 32
-                else -> 24
+                else -> return null
             }
 
             val isHiRes = codecType == SOURCE_CODEC_TYPE_LDAC || codecType == SOURCE_CODEC_TYPE_LHDC || sampleRateHz >= 96000
@@ -126,11 +126,10 @@ class CodecManager(private val context: Context) {
             _activeCodecState.value = _activeCodecState.value + (device.address to details)
             details
         } catch (e: Exception) {
-            Log.d(TAG, "Codec status query fallback: ${e.message}")
-            // Fallback: Default to AAC 48kHz 24-bit
-            val fallback = CodecDetails("AAC", 48000, 24, false)
-            _activeCodecState.value = _activeCodecState.value + (device.address to fallback)
-            fallback
+            Log.d(TAG, "Codec status query failed: ${e.javaClass.simpleName}")
+            // Unknown stays unknown. Do not invent a codec reading.
+            _activeCodecState.value = _activeCodecState.value - device.address
+            null
         }
     }
 
@@ -166,9 +165,10 @@ class CodecManager(private val context: Context) {
             )
             setMethod.invoke(proxy, device, newConfig)
 
-            inspectCodec(device)
-            Log.i(TAG, "Set Hi-Res Codec Preference to enabled=$enabled for ${device.address}")
-            true
+            val details = inspectCodec(device)
+            val applied = details != null && details.isHiRes == enabled
+            Log.i(TAG, "Set Hi-Res Codec Preference enabled=$enabled for ${device.address}; applied=$applied")
+            applied
         } catch (e: Exception) {
             Log.w(TAG, "Failed to set Hi-Res codec config: ${e.message}")
             false
@@ -203,9 +203,10 @@ class CodecManager(private val context: Context) {
                 codecConfigClass,
             )
             setMethod.invoke(proxy, device, newConfig)
-            inspectCodec(device)
-            Log.i(TAG, "Force High-Bitrate AAC set: $enabled for ${device.address}")
-            true
+            val details = inspectCodec(device)
+            val applied = details?.codecName?.startsWith("AAC", ignoreCase = true) == true
+            Log.i(TAG, "Force High-Bitrate AAC set: $enabled for ${device.address}; applied=$applied")
+            applied
         } catch (e: Exception) {
             Log.w(TAG, "Failed to force AAC: ${e.message}")
             false

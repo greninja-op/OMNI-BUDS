@@ -93,6 +93,13 @@ class BleCommandSequencer(
         }
     }
 
+    /** Milliseconds since the user's last noise-mode command, or a very large value if none. */
+    fun millisSinceUserCommand(address: String): Long {
+        val last = lastUserCommandTimestamps[address]?.get() ?: return Long.MAX_VALUE
+        if (last == 0L) return Long.MAX_VALUE
+        return System.currentTimeMillis() - last
+    }
+
     fun recordUserInteraction(address: String) {
         lastUserCommandTimestamps.computeIfAbsent(address) { AtomicLong(0L) }
             .set(System.currentTimeMillis())
@@ -154,6 +161,16 @@ class BleCommandSequencer(
 
     fun getInFlightMode(address: String): String? =
         inFlightModes[address]?.get()
+
+    /**
+     * Re-arms the noise-mode dedupe so an explicit user tap is always
+     * dispatched, even if the previous request had the same target.
+     */
+    fun clearNoiseModeDedup(address: String) {
+        latestRequestedModes[address]?.set(null)
+        lastDispatchedModes[address]?.set(null)
+        inFlightModes[address]?.set(null)
+    }
 
     fun isWriteBusy(address: String): Boolean =
         isWriteInFlight[address]?.get() == true

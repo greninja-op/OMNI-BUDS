@@ -14,7 +14,10 @@ object RealmeProtocolParser {
     const val CMD_BATTERY_RESP = 0x8106
     const val CMD_BATTERY_ALT_RESP = 0x0204
     const val CMD_QUERY_ANC = 0x0104
+    const val CMD_QUERY_ANC_OPO = 0x8204
     const val CMD_SET_ANC = 0x0404
+    const val CMD_BATCH_STATUS_QUERY = 0x010D
+    const val CMD_BATCH_STATUS_RESP = 0x810D
     const val CMD_ANC_RESP = 0x8404
     const val CMD_SET_EQ = 0x0405
     const val CMD_SET_SPATIAL_AUDIO = 0x0422
@@ -39,6 +42,14 @@ object RealmeProtocolParser {
     const val CMD_SET_PINCH_SPEED = 0x0418
     const val CMD_SET_STEM_SLIDE = 0x0419
     const val CMD_SET_HI_RES_CODEC = 0x041A
+
+    private val ancSeqCounter = java.util.concurrent.atomic.AtomicInteger(1)
+
+    /** Monotonic sequence for ANC SET frames; wraps 1..255. */
+    fun nextAncSeq(): Byte {
+        val value = ancSeqCounter.getAndIncrement() and 0xFF
+        return (if (value == 0) 1 else value).toByte()
+    }
 
     /**
      * Builds an OPOv1 framed packet:
@@ -72,50 +83,191 @@ object RealmeProtocolParser {
         mapping: AncByteMapping = AncByteMapping.PROFILE_C,
     ): ByteArray {
         val modeVal = mapping.byteForMode(mode)
-        return buildFrame(CMD_SET_ANC, byteArrayOf(0x01, 0x01, modeVal))
+        return buildFrame(CMD_SET_ANC, byteArrayOf(0x01, 0x01, modeVal), seq = nextAncSeq())
     }
 
     /**
-     * Builds the full multi-byte hardware payload for BES / HeyMelody chipsets (realme Buds T300 RMA2302):
-     * - ANC: [0x01, 0x01, ancByte, 0x03, 0x00, 0x00] (enables feedforward + feedback mics, max intensity)
-     * - TRANSPARENCY: [0x01, 0x01, transByte, 0x01, 0x01, 0x00] (enables external passthrough mics, voice boost)
-     * - NORMAL / OFF: [0x01, 0x01, offByte, 0x00, 0x00, 0x00] (complete zeroed-out hardware bypass frame:
-     *   Mode = Off/Normal, SubLevel/Intensity = 0x00, VoicePassthrough = 0x00, WindNoise = 0x00)
+     * Builds the OPOv1/BES ANC SET frame.
+     *
+     * Hardware captures for realme/OPPO/OnePlus show a fixed 3-byte payload
+     * `[0x01, 0x01, mode]`; longer payloads are not part of the SET command and
+     * can be misread as sub-modes by the buds.
      */
     fun buildFullHardwareAncCommand(
         mode: String,
-        mapping: AncByteMapping = AncByteMapping.PROFILE_A,
+        mapping: AncByteMapping = AncByteMapping.PROFILE_D,
     ): ByteArray {
         val modeVal = mapping.byteForMode(mode)
-        val payload = when (mode.uppercase()) {
-            "ANC", "ANC_ON", "NOISE_CANCELLATION" -> {
-                byteArrayOf(0x01, 0x01, modeVal, 0x03.toByte(), 0x00, 0x00)
-            }
-            "TRANSPARENCY", "AMBIENT" -> {
-                byteArrayOf(0x01, 0x01, modeVal, 0x01.toByte(), 0x01.toByte(), 0x00)
-            }
-            else -> {
-                // Complete zeroed-out hardware bypass frame
-                byteArrayOf(0x01, 0x01, modeVal, 0x00, 0x00, 0x00)
-            }
-        }
-        return buildFrame(CMD_SET_ANC, payload)
+        return buildFrame(CMD_SET_ANC, byteArrayOf(0x01, 0x01, modeVal), seq = nextAncSeq())
     }
 
     /**
-     * Builds candidate 2-byte reset payload for the 3-Variant Off-Byte Tester:
-     * ModeByte = offByte, SubByte = subByte, VoicePassthrough = 0x00, WindNoise = 0x00.
+     * Builds candidate reset payload for the 3-Variant Off-Byte Tester.
      */
     fun buildAncCustomOffCommand(offByte: Byte, subByte: Byte = 0x00): ByteArray {
-        return buildFrame(CMD_SET_ANC, byteArrayOf(0x01, 0x01, offByte, subByte, 0x00, 0x00))
+        return buildFrame(CMD_SET_ANC, byteArrayOf(0x01, 0x01, offByte), seq = nextAncSeq())
     }
 
     /**
-     * Builds the query frame to request current ANC / noise control status from earbuds.
+     * Builds the OPOv1 ANC query: CAT 0x04 / SUB 0x82.
+     * The older 0x0104 frame is a firmware query on realme hardware and never
+     * names the current noise mode.
      */
-    fun buildAncQueryCommand(): ByteArray {
-        return buildFrame(CMD_QUERY_ANC)
+    fun buildAncQueryCommand(): ByteArray = buildAncModeRead()
+
+    // -- Mode read and event subscription ---------------------------------------------
+    // The current noise mode is read with 0x010C 01 01, and the buds answer with the value as
+    // a little-endian bitmask. The read was confirmed on a realme Buds T300 (reply
+    // `00 01 01 <mask>`). These frames are reads and subscriptions only. They never change a mode.
+
+    const val CMD_QUERY_ANC_MODE = 0x010C
+    const val CMD_ANC_MODE_RESP = 0x810C
+    const val CMD_QUERY_BROADCAST_CODES = 0x0200
+    const val CMD_SUBSCRIBE_EVENTS = 0x0205
+
+    fun buildHandshake(): ByteArray = buildFrame(CMD_HANDSHAKE, seq = 0x40)
+
+    fun buildBroadcastCodesQuery(): ByteArray = buildFrame(CMD_QUERY_BROADCAST_CODES, seq = 0x41)
+
+    /** Payload is the count first, then the event codes. */
+    fun buildEventSubscribe(codes: ByteArray): ByteArray =
+        buildFrame(CMD_SUBSCRIBE_EVENTS, byteArrayOf(codes.size.toByte()) + codes, seq = 0x42)
+
+    fun buildAncModeRead(): ByteArray = buildFrame(CMD_QUERY_ANC_MODE, byteArrayOf(0x01, 0x01), seq = 0x43)
+
+    /**
+     * Reads which modes the buds' own press-and-hold cycles through. The reply is
+     * `00 02 01 <mask LE>` and uses the same bit values as a mode write.
+     */
+    fun buildHoldCycleRead(): ByteArray = buildFrame(CMD_QUERY_ANC_MODE, byteArrayOf(0x02, 0x01), seq = 0x45)
+
+    /**
+     * A noise-mode value the buds reported, kept as the raw little-endian bitmask.
+     * The mask is NOT a write byte: the report table and the write table differ.
+     */
+    data class AncModeReport(
+        val mask: Int,
+        val maskBytes: String,
+        val viaPush: Boolean,
+    )
+
+    /** True for a push shaped `03 01 01 <mask LE>`. The old tagged-list decoder must skip it. */
+    fun isModeMaskPush(bytes: ByteArray, payloadStart: Int, avail: Int): Boolean =
+        avail >= 4 &&
+            bytes[payloadStart] == 0x03.toByte() &&
+            bytes[payloadStart + 1] == 0x01.toByte() &&
+            bytes[payloadStart + 2] == 0x01.toByte()
+
+    /**
+     * Reads the buds' own noise-mode reports from a buffer that may hold several frames:
+     * the reply to 0x010C 01 01 (payload `00 01 01 <mask>`) and the event-03 push
+     * (payload `03 01 01 <mask>`, cmd 0x0204).
+     */
+    fun parseAncModeReports(bytes: ByteArray): List<AncModeReport> {
+        val reports = mutableListOf<AncModeReport>()
+        var i = 0
+        while (i + 9 <= bytes.size) {
+            if (bytes[i] != MAGIC_HEADER) {
+                i++
+                continue
+            }
+            val total = (bytes[i + 1].toInt() and 0xFF) + 2
+            if (total < 9 || i + total > bytes.size) {
+                i++
+                continue
+            }
+            val cmd = ((bytes[i + 5].toInt() and 0xFF) shl 8) or (bytes[i + 4].toInt() and 0xFF)
+            val payLen = (bytes[i + 7].toInt() and 0xFF) or ((bytes[i + 8].toInt() and 0xFF) shl 8)
+            val start = i + 9
+            val avail = minOf(payLen, i + total - start)
+            val isRead = cmd == CMD_ANC_MODE_RESP &&
+                avail >= 4 && bytes[start] == 0x00.toByte() &&
+                bytes[start + 1] == 0x01.toByte() && bytes[start + 2] == 0x01.toByte()
+            val isPush = cmd == CMD_BATTERY_ALT_RESP && isModeMaskPush(bytes, start, avail)
+            if (isRead || isPush) {
+                val count = minOf(avail - 3, 4)
+                var mask = 0
+                val shown = StringBuilder()
+                for (k in 0 until count) {
+                    val b = bytes[start + 3 + k].toInt() and 0xFF
+                    mask = mask or (b shl (8 * k))
+                    if (k > 0) shown.append(' ')
+                    shown.append("%02X".format(b))
+                }
+                reports += AncModeReport(mask = mask, maskBytes = shown.toString(), viaPush = isPush)
+            }
+            i += total
+        }
+        return reports
     }
+
+    /**
+     * Fixed OPOv1 batch-status query. The reply carries a key/value stream;
+     * key 0x28 names the game-mode state (next byte 0x01 on / 0x00 off).
+     */
+    fun buildBatchStatusQuery(): ByteArray = buildFrame(
+        CMD_BATCH_STATUS_QUERY,
+        byteArrayOf(
+            0x0B, 0x05, 0x04, 0x0B, 0x11, 0x13, 0x18, 0x06, 0x1B, 0x1C, 0x27, 0x28,
+        ),
+    )
+
+    data class BatchStatus(
+        val gameMode: Boolean?,
+    )
+
+    /**
+     * Parses the 0x810D batch-status reply. Payload is:
+     * status, count, then `count` (key, value) pairs.
+     * Key 0x28 is game mode. Key 0x27 is deliberately NOT used as the ANC
+     * mode: it is a battery-poll field that stays at 0x01 and must never
+     * overwrite the confirmed noise-control state.
+     */
+    fun parseBatchStatus(bytes: ByteArray): BatchStatus? {
+        var payloadStart = -1
+        var payloadLen = 0
+        for (i in 0 until bytes.size - 8) {
+            if (bytes[i] != MAGIC_HEADER) continue
+            val cmdLo = bytes[i + 4].toInt() and 0xFF
+            val cmdHi = bytes[i + 5].toInt() and 0xFF
+            val cmd = (cmdHi shl 8) or cmdLo
+            if (cmd == CMD_BATCH_STATUS_RESP) {
+                payloadStart = i + 9
+                payloadLen = minOf(
+                    (bytes[i + 7].toInt() and 0xFF) or ((bytes[i + 8].toInt() and 0xFF) shl 8),
+                    bytes.size - payloadStart,
+                )
+                break
+            }
+        }
+        if (payloadStart < 0 || payloadLen < 3) return null
+
+        val end = payloadStart + payloadLen
+        var p = payloadStart
+        if ((bytes[p].toInt() and 0xFF) == 0x00) p++ // status
+        if (p >= end) return null
+        val count = bytes[p].toInt() and 0xFF
+        p++
+        var gameMode: Boolean? = null
+        repeat(count.coerceAtMost(32)) {
+            if (p + 1 >= end) return@repeat
+            val key = bytes[p].toInt() and 0xFF
+            val value = bytes[p + 1].toInt() and 0xFF
+            if (key == 0x28) {
+                gameMode = when (value) {
+                    0x01 -> true
+                    0x00 -> false
+                    else -> null
+                }
+            }
+            p += 2
+        }
+        return BatchStatus(gameMode = gameMode)
+    }
+
+    /** Reads the game-mode key from a 0x810D batch-status reply. */
+    fun parseGameModeFromBatchStatus(bytes: ByteArray): Boolean? =
+        parseBatchStatus(bytes)?.gameMode
 
     /**
      * Checks if the packet is an acknowledgment (ACK) response for CMD_SET_ANC.
@@ -158,7 +310,7 @@ object RealmeProtocolParser {
                 val cmdHi = if (i + 5 < bytes.size) bytes[i + 5].toInt() and 0xFF else 0
                 val cmd = (cmdHi shl 8) or cmdLo
 
-                if (cmd == CMD_SET_ANC || cmd == CMD_ANC_RESP || cmd == CMD_QUERY_ANC || cmd == 0x0204 || cmd == 0x0401) {
+                if (cmd == CMD_SET_ANC || cmd == CMD_ANC_RESP || cmd == CMD_QUERY_ANC || cmd == CMD_QUERY_ANC_OPO || cmd == 0x0204 || cmd == 0x0401) {
                     val payloadStart = i + 9
                     if (payloadStart < bytes.size) {
                         val pLen = if (i + 8 < bytes.size) {
@@ -168,9 +320,43 @@ object RealmeProtocolParser {
                         }
                         val avail = minOf(pLen, bytes.size - payloadStart)
 
-                        // 1-byte 0x00 on CMD_ANC_RESP (0x8404) is command SUCCESS ACK, not an "OFF" mode state
-                        if (cmd == CMD_ANC_RESP && avail == 1 && bytes[payloadStart] == 0x00.toByte()) {
+                        // A 1-byte 0x8404 payload is a command status (0x00 accepted,
+                        // 0x01 rejected), never a mode byte.
+                        if (cmd == CMD_ANC_RESP && avail == 1) {
                             return null
+                        }
+
+                        // Unsolicited status notification (CAT 0x04 / SUB 0x02):
+                        // tagged list <type> <count> (id, value)...
+                        // Type 0x03 is the real noise mode; type 0x02 is not.
+                        // A `03 01 01 <mask>` push carries a report bitmask, not a write byte.
+                        // The tagged-list decoder below would look one mask byte up in the
+                        // write table and invent a mode, so these frames are left alone.
+                        if (cmd == CMD_BATTERY_ALT_RESP && isModeMaskPush(bytes, payloadStart, avail)) {
+                            continue
+                        }
+
+                        if (cmd == CMD_BATTERY_ALT_RESP) {
+                            var p = payloadStart
+                            val end = payloadStart + avail
+                            while (p + 1 < end) {
+                                val type = bytes[p].toInt() and 0xFF
+                                val count = bytes[p + 1].toInt() and 0xFF
+                                if (count <= 0 || p + 2 + count * 2 > end) break
+                                if (type == 0x03) {
+                                    var q = p + 2
+                                    repeat(count) {
+                                        val id = bytes[q].toInt() and 0xFF
+                                        val raw = bytes[q + 1]
+                                        if (id == 1) {
+                                            val detected = mapping.modeForByte(raw)
+                                            if (detected != null) return detected
+                                        }
+                                        q += 2
+                                    }
+                                }
+                                p += 2 + count * 2
+                            }
                         }
 
                         // In HeyMelody/BES framing, payload starts with [0x01, 0x01, modeByte, ...]
@@ -191,12 +377,6 @@ object RealmeProtocolParser {
                     }
                 }
             }
-        }
-
-        // Raw characteristic notification fallback (1-4 byte telemetry)
-        if (bytes.size in 1..4) {
-            val detected = mapping.modeForByte(bytes[0])
-            if (detected != null) return detected
         }
 
         return null
@@ -534,6 +714,7 @@ object RealmeProtocolParser {
 
         var payloadStart = -1
         var payloadLen = 0
+        var batteryCmd = 0
 
         for (i in 0 until bytes.size - 8) {
             if (bytes[i] == MAGIC_HEADER) {
@@ -545,6 +726,7 @@ object RealmeProtocolParser {
                 if (cmd == CMD_BATTERY_RESP || cmd == CMD_BATTERY_ALT_RESP) {
                     payloadStart = i + 9
                     payloadLen = minOf(pLen, bytes.size - payloadStart)
+                    batteryCmd = cmd
                     break
                 }
             }
@@ -552,6 +734,15 @@ object RealmeProtocolParser {
 
         // If not a battery response packet, do not parse!
         if (payloadStart == -1 || payloadLen < 2) {
+            return null
+        }
+
+        // 0x0204 is also the unsolicited status channel. Its tagged list can
+        // carry the noise mode (type 0x03) or another setting (type 0x02);
+        // those are not battery frames. ANC parsing handles them.
+        if (batteryCmd == CMD_BATTERY_ALT_RESP &&
+            (bytes[payloadStart] == 0x02.toByte() || bytes[payloadStart] == 0x03.toByte())
+        ) {
             return null
         }
 
@@ -591,8 +782,8 @@ object RealmeProtocolParser {
                             rightChg = charging
                         }
                         3 -> {
-                            // Real hardware pogo-pin check: Case byte is only valid when in 1..100.
-                            // 0x00, 0x7F (127), and 0xFF (255) indicate buds are out of case (pogo pins disconnected).
+                            // Case index. 0x00 / 0x7F / 0xFF mean no case
+                            // reading (both buds are out); 1..100 is live.
                             case = if (level in 1..100) level else null
                             caseChg = charging
                         }

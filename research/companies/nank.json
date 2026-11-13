@@ -1,0 +1,1426 @@
+[
+  {
+    "company": "Nank",
+    "companySlug": "nank",
+    "family": "Runner Diver",
+    "model": "Nank Runner Diver2 Pro",
+    "slug": "runner-diver2-pro",
+    "generation": "2",
+    "variant": "Pro",
+    "releaseYear": 2024,
+    "formFactor": "bone-conduction",
+    "officialApp": {
+      "name": "NANK",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.yscoco.nankasound"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/us/app/nank%E5%8D%97%E5%8D%A1/id6470352501",
+        "https://play.google.com/store/apps/details?id=com.yscoco.nankasound"
+      ],
+      "appVersionObserved": "1.2.9 (iOS, Oct 2026 listing)",
+      "notes": "App offers custom EQ, key-function remapping, music/game mode, MP3/Bluetooth switch, shuffle/sequential play, firmware update and manuals."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": null,
+      "chargingIndicators": "LED; NANK app battery level",
+      "notes": "10 h playback; 10-min charge gives about 2 h. 32 GB MP3 storage; magnetic charging; no case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "No ANC. Nank's 'noise-canceling mode' is an anti-wind/ambient call mode, not active noise cancellation."
+    },
+    "features": [
+      {
+        "id": "vendor.nank.mp3-mode",
+        "name": "32 GB MP3/TF mode",
+        "availability": "both",
+        "notes": "Only TF mode works underwater."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device pairing",
+        "availability": "device-only",
+        "notes": "Two Bluetooth devices."
+      },
+      {
+        "id": "vendor.nank.noise-canceling-mode",
+        "name": "Noise-canceling listening mode",
+        "availability": "device-only",
+        "notes": "Anti-wind/ambient mode, not ANC."
+      },
+      {
+        "id": "vendor.nank.adjustable-ear-hook",
+        "name": "35-degree adjustable ear hook",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction single-click",
+          "action": "play/pause; answer call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "multifunction double-click",
+          "action": "next track; reject call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "multifunction triple-click",
+          "action": "previous track; MP3/Bluetooth switch",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "volume + / - long press",
+          "action": "previous/next track",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Power/multifunction plus volume buttons",
+      "configurableInApp": true,
+      "notes": "NANK app can remap key functions."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bone conduction, Bluetooth 5.4, IP69 (3rd gen), 32 g, 20 Hz-20 kHz. Codec list not published."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "eq-selection",
+      "custom-eq",
+      "button-customization",
+      "mp3-bluetooth-switch",
+      "game-mode"
+    ],
+    "featureDeltaFromPrevious": [
+      "IP69 (3rd-gen) vs IP68 (2nd-gen) on Runner Diver2",
+      "Bluetooth 5.4 vs 5.3",
+      "Added noise-canceling listening mode",
+      "Weight reduced from 35 g to 32 g"
+    ],
+    "sources": [
+      {
+        "url": "https://naenka.com/products/nank-runner-diver2-pro-multifunctional-sports-headphones",
+        "type": "official-product",
+        "title": "Nank Runner Diver2 Pro",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://apps.apple.com/us/app/nank%E5%8D%97%E5%8D%A1/id6470352501",
+        "type": "official-app-store",
+        "title": "NANK app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "NANK app battery layout for a single headband is not documented.",
+      "Codec list not published.",
+      "Exact ANC/call-noise dB not published."
+    ],
+    "notes": "Flagship swim-capable bone-conduction model. Bluetooth does not work underwater; MP3/TF mode is required.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Nank",
+    "companySlug": "nank",
+    "family": "Runner Diver",
+    "model": "Nank Runner Diver2",
+    "slug": "runner-diver2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "bone-conduction",
+    "officialApp": {
+      "name": "NANK",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.yscoco.nankasound"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/us/app/nank%E5%8D%97%E5%8D%A1/id6470352501",
+        "https://play.google.com/store/apps/details?id=com.yscoco.nankasound"
+      ],
+      "appVersionObserved": null,
+      "notes": "App support is model-dependent; user reviews report the app failing to find Runner Diver 2 in some versions."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": null,
+      "chargingIndicators": "LED; voice/app battery status",
+      "notes": "10 h playback; 32 GB MP3 storage; magnetic charging; no case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "vendor.nank.mp3-mode",
+        "name": "32 GB MP3/TF mode",
+        "availability": "device-only",
+        "notes": "Swim without a phone."
+      },
+      {
+        "id": "vendor.nank.ip68",
+        "name": "IP68 swimming design",
+        "availability": "device-only",
+        "notes": "2nd-generation waterproofing."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction single-click",
+          "action": "play/pause; answer call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "multifunction double-click",
+          "action": "reject call; next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "multifunction triple-click",
+          "action": "MP3/Bluetooth switch",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "multifunction quadruple-click",
+          "action": "random playback",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "volume + / - long press",
+          "action": "previous/next track",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "Power/multifunction plus volume buttons on the right",
+      "configurableInApp": null,
+      "notes": "Physical controls work with wet hands."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "Bone conduction, Bluetooth 5.3, IP68, 35 g. 32 GB storage."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Storage increased to 32 GB and battery to 10 h vs earlier Runner Diver generations",
+      "IP68 2nd-generation waterproofing",
+      "Bluetooth 5.3"
+    ],
+    "sources": [
+      {
+        "url": "https://naenka.com/products/runner-diver2-bone-conduction-swimming-headphones-for-sports",
+        "type": "official-product",
+        "title": "Nank Runner Diver2",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.mbreviews.com/nank-runner-diver2-review/",
+        "type": "reputable-secondary",
+        "title": "Nank Runner Diver2 review (controls, 32 GB)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "NANK app support is inconsistent for this model; official compatibility list not published.",
+      "Codec list and multipoint support not stated.",
+      "Battery display layout in app not documented."
+    ],
+    "notes": "Predecessor of Diver2 Pro. App support is not guaranteed despite the shared NANK app.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Nank",
+    "companySlug": "nank",
+    "family": "Runner Pro",
+    "model": "Nank Runner Pro2",
+    "slug": "runner-pro2",
+    "generation": "2",
+    "variant": "Pro2",
+    "releaseYear": 2023,
+    "formFactor": "bone-conduction",
+    "officialApp": {
+      "name": "NANK",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.yscoco.nankasound"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/us/app/nank%E5%8D%97%E5%8D%A1/id6470352501",
+        "https://play.google.com/store/apps/details?id=com.yscoco.nankasound"
+      ],
+      "appVersionObserved": null,
+      "notes": "App may expose EQ and controls on supported firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": null,
+      "chargingIndicators": "LED; app battery status",
+      "notes": "8 h playback; 16 GB MP3 storage; magnetic charging; no case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "vendor.nank.mp3-mode",
+        "name": "16 GB MP3 mode",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.nank.ot-leakage-reduction",
+        "name": "OT Leakage Reduction 2.0",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction single-click",
+          "action": "play/pause; answer call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "multifunction double-click",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "multifunction triple-click",
+          "action": "previous track; MP3/Bluetooth switch",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "volume + / -",
+          "action": "volume up/down",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "Multifunction and volume buttons",
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "Bone conduction, Bluetooth 5.3, IP68, 32 g, 16 GB storage."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "IP68 2nd-generation waterproofing",
+      "16 GB MP3 storage",
+      "8 h battery and Bluetooth 5.3",
+      "OT Leakage Reduction 2.0"
+    ],
+    "sources": [
+      {
+        "url": "https://naenka.com/products/runner-pro2-running-headphones",
+        "type": "official-product",
+        "title": "Nank Runner Pro2",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://naenka.com/blogs/products/best-bone-conduction-headphones-of-2025-compare-nank-shokz-h2o-mojawa-more",
+        "type": "official-support",
+        "title": "Nank model comparison (Pro2 16 GB, 8 h)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official product page not retrieved directly; specifications cross-checked from Nank's own comparison article.",
+      "App support, codec list and multipoint not confirmed.",
+      "Battery display layout in app not documented."
+    ],
+    "notes": "Mid-tier bone-conduction model with MP3 storage; between Runner 4 and Diver2 in the lineup.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Nank",
+    "companySlug": "nank",
+    "family": "Runner",
+    "model": "Nank Runner 4",
+    "slug": "runner-4",
+    "generation": "4",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "bone-conduction",
+    "officialApp": {
+      "name": "NANK",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.yscoco.nankasound"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/us/app/nank%E5%8D%97%E5%8D%A1/id6470352501",
+        "https://play.google.com/store/apps/details?id=com.yscoco.nankasound"
+      ],
+      "appVersionObserved": null,
+      "notes": "Companion app for EQ, button customization, game mode, MP3/Bluetooth switch and firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": null,
+      "chargingIndicators": "LED; app battery status",
+      "notes": "8 h playback; 10-min charge gives 2 h; 180 mAh; magnetic charging; no case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "vendor.nank.mp3-mode",
+        "name": "16 GB MP3 mode",
+        "availability": "both",
+        "notes": "MP3/TF mode for phone-free listening."
+      },
+      {
+        "id": "vendor.nank.resovibe-3",
+        "name": "3rd ResoVibe technology",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.nank.ot-leakage-reduction-3",
+        "name": "OT Leakage Reduction 3.0",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.nank.dwa-submersible-sound",
+        "name": "DWA submersible sound",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction single-click",
+          "action": "play/pause; answer call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "multifunction double-click",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "multifunction triple-click",
+          "action": "previous track; MP3/Bluetooth switch",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "volume + / -",
+          "action": "volume up/down; track skip via long press",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Dedicated playback, volume and shortcut buttons",
+      "configurableInApp": true,
+      "notes": "App can remap shortcuts."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bone conduction, Bluetooth 5.4, IP68 3rd-gen, 26 g, 16 GB storage."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "eq-selection",
+      "custom-eq",
+      "button-customization",
+      "mp3-bluetooth-switch",
+      "game-mode"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 5.4 vs 5.3 on Runner Pro2",
+      "Weight reduced to 26 g",
+      "3rd ResoVibe and OT Leakage Reduction 3.0",
+      "IP68 3rd-generation waterproofing"
+    ],
+    "sources": [
+      {
+        "url": "https://naenka.com/products/runner-4",
+        "type": "official-product",
+        "title": "Nank Runner 4",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://naenka.com/blogs/products/nank-runner-4-your-most-trusted-running-headphones",
+        "type": "official-support",
+        "title": "Nank Runner 4 feature article",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "NANK app battery layout not documented.",
+      "Codec list not published.",
+      "Exact custom-EQ bands not published."
+    ],
+    "notes": "Mainstream bone-conduction runner with 16 GB MP3 mode and IP68.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Nank",
+    "companySlug": "nank",
+    "family": "Runner Air",
+    "model": "Nank Runner Air",
+    "slug": "runner-air",
+    "generation": "1",
+    "variant": "Air",
+    "releaseYear": 2025,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "NANK",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.yscoco.nankasound"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/us/app/nank%E5%8D%97%E5%8D%A1/id6470352501",
+        "https://play.google.com/store/apps/details?id=com.yscoco.nankasound"
+      ],
+      "appVersionObserved": null,
+      "notes": "App support not explicitly stated on the Runner Air product page; shared NANK app is assumed."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": null,
+      "chargingIndicators": "LED; app battery status (if supported)",
+      "notes": "10 h playback; magnetic charging; no case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": false,
+      "notes": "No ANC; open-ear air conduction."
+    },
+    "features": [
+      {
+        "id": "vendor.nank.air-conduction",
+        "name": "Air-conduction open-ear neckband",
+        "availability": "device-only",
+        "notes": "Not bone conduction."
+      },
+      {
+        "id": "vendor.nank.super-sound-os",
+        "name": "Super Sound OS",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction single-click",
+          "action": "play/pause; answer call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "multifunction double-click",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "volume + / -",
+          "action": "volume up/down",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "Physical buttons on the neckband",
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "Air conduction, Bluetooth 5.4, IPX5, 26 g. No MP3 storage."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "First air-conduction neckband in the Runner line (other Runner models are bone conduction)",
+      "10 h battery and IPX5",
+      "No MP3 storage",
+      "Bluetooth 5.4 and 26 g"
+    ],
+    "sources": [
+      {
+        "url": "https://naenka.com/products/runner-air",
+        "type": "official-product",
+        "title": "Nank Runner Air",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://naenka.com/blogs/products/nank-runner-air-review",
+        "type": "official-support",
+        "title": "Nank Runner Air review",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "App compatibility and EQ/button customization not stated on the product page.",
+      "Codec list and multipoint not published.",
+      "Battery display layout in app not documented."
+    ],
+    "notes": "Air-conduction neckband rather than bone conduction; positioned for runners who prefer an open ear without vibration.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Nank",
+    "companySlug": "nank",
+    "family": "Runner Neo",
+    "model": "Nank Runner Neo",
+    "slug": "runner-neo",
+    "generation": "1",
+    "variant": "Neo",
+    "releaseYear": 2023,
+    "formFactor": "bone-conduction",
+    "officialApp": {
+      "name": "NANK",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.yscoco.nankasound"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/us/app/nank%E5%8D%97%E5%8D%A1/id6470352501",
+        "https://play.google.com/store/apps/details?id=com.yscoco.nankasound"
+      ],
+      "appVersionObserved": null,
+      "notes": "Model may predate full app support; NANK app compatibility is model-dependent."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": null,
+      "chargingIndicators": "LED",
+      "notes": "10 h playback; Bluetooth only, no MP3 storage; no case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "vendor.nank.ip66",
+        "name": "IP66 water resistance",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "multifunction single-click",
+          "action": "play/pause; answer call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "multifunction double-click",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "volume + / -",
+          "action": "volume up/down",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "Physical buttons",
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "Bone conduction, Bluetooth 5.3, IP66, 29 g, no MP3 storage."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Bluetooth-only bone-conduction model (no MP3 storage)",
+      "10 h battery, IP66, 29 g"
+    ],
+    "sources": [
+      {
+        "url": "https://naenka.com/products/runner-neo-high-performance-bone-conduction-sports-headphones",
+        "type": "official-product",
+        "title": "Nank Runner Neo",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://naenka.com/collections/bone-conduction-headphones",
+        "type": "official-product",
+        "title": "Nank bone-conduction lineup",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official product page not retrieved directly; specs cross-checked from Nank's own model comparison table.",
+      "App compatibility, codec list and multipoint not confirmed.",
+      "Battery display layout in app not documented."
+    ],
+    "notes": "Lightweight Bluetooth-only bone-conduction model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Nank",
+    "companySlug": "nank",
+    "family": "Clip",
+    "model": "Nank Clip Super2",
+    "slug": "clip-super2",
+    "generation": "2",
+    "variant": "Super2",
+    "releaseYear": 2026,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "NANK",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.yscoco.nankasound"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/us/app/nank%E5%8D%97%E5%8D%A1/id6470352501",
+        "https://play.google.com/store/apps/details?id=com.yscoco.nankasound"
+      ],
+      "appVersionObserved": null,
+      "notes": "App supports EQ, key customization, game mode and firmware."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; app battery status",
+      "notes": "8 h per charge, up to 30 h total with the charging case. TWS clip, so L/R split is physically possible but app layout is undocumented.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "No ANC. 32K HD call noise reduction and wind interference reduction."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": "Bluetooth 6.0."
+      },
+      {
+        "id": "vendor.nank.game-mode",
+        "name": "Game mode low latency",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.nank.ds3-directional-audio",
+        "name": "DS3.0 directional audio",
+        "availability": "device-only",
+        "notes": "Reduces sound leakage."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls; app can remap key functions."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "Open-ear clip, Bluetooth 6.0, IPX5, 4.8 g per earbud. Codec list not published."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "eq-selection",
+      "custom-eq",
+      "button-customization",
+      "game-mode"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 6.0 vs 5.4 on Clip Super",
+      "Weight reduced from 5.1 g to 4.8 g per earbud",
+      "Total case battery reduced from 32 h to 30 h",
+      "32K HD call technology and DS3.0 directional audio"
+    ],
+    "sources": [
+      {
+        "url": "https://naenka.com/products/nank-clip-super2",
+        "type": "official-product",
+        "title": "Nank Clip Super2",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "App battery layout (split L/R and case percentage) is not documented.",
+      "Codec list not published.",
+      "Wear detection not documented.",
+      "Case additional hours not separated from the 30 h total."
+    ],
+    "notes": "TWS clip-on model. Battery figure is total with case, not a separate case-only number.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Nank",
+    "companySlug": "nank",
+    "family": "Clip",
+    "model": "Nank Ultra",
+    "slug": "nank-ultra",
+    "generation": "1",
+    "variant": "Ultra",
+    "releaseYear": 2025,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "NANK",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.yscoco.nankasound"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/us/app/nank%E5%8D%97%E5%8D%A1/id6470352501",
+        "https://play.google.com/store/apps/details?id=com.yscoco.nankasound"
+      ],
+      "appVersionObserved": null,
+      "notes": "App supports EQ, controls, game mode and firmware."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED; app battery status",
+      "notes": "8 h per charge, up to 40 h total with the charging case; 170 mAh.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 40
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": false,
+      "notes": "No ANC; open-ear clip."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.nank.air-conduction",
+        "name": "Air-conduction clip design",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "All touch controls; app customization."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "Air conduction, Bluetooth 5.4, IPX5, 10.4 g pair. Codec list not published."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "eq-selection",
+      "custom-eq",
+      "button-customization",
+      "game-mode"
+    ],
+    "featureDeltaFromPrevious": [
+      "Total battery increased to 40 h with case",
+      "Air-conduction clip design (vs bone conduction on Runner models)",
+      "8 h per charge and IPX5",
+      "Bluetooth 5.4"
+    ],
+    "sources": [
+      {
+        "url": "https://naenka.com/products/ultra",
+        "type": "official-product",
+        "title": "Nank Ultra",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://naenka.com/blogs/products/nank-runner4-vs-nank-ultra-which-one-is-better-for-you",
+        "type": "official-support",
+        "title": "Nank Runner 4 vs Ultra comparison",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "App battery layout is not documented.",
+      "Codec list not published.",
+      "Wear detection not documented.",
+      "Case additional hours not separated from the 40 h total."
+    ],
+    "notes": "Air-conduction clip-on earbud; not bone conduction.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Nank",
+    "companySlug": "nank",
+    "family": "Clip",
+    "model": "Nank Clip Super",
+    "slug": "clip-super",
+    "generation": "1",
+    "variant": "Super",
+    "releaseYear": 2025,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "NANK",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.yscoco.nankasound"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/us/app/nank%E5%8D%97%E5%8D%A1/id6470352501",
+        "https://play.google.com/store/apps/details?id=com.yscoco.nankasound"
+      ],
+      "appVersionObserved": null,
+      "notes": "App supports EQ, controls, game mode and firmware."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 32,
+      "chargingIndicators": "Case LED; app battery status",
+      "notes": "8 h per charge, up to 32 h total with the charging case. 5.1 g per earbud.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 32
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.nank.game-mode",
+        "name": "Game mode low latency",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "Open-ear clip, Bluetooth 5.4, IPX5, 5.1 g per earbud, 16.2 mm ceramic composite diaphragm."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "eq-selection",
+      "custom-eq",
+      "button-customization",
+      "game-mode"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://naenka.com/products/nank-clip-super",
+        "type": "official-product",
+        "title": "Nank Clip Super",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "App battery layout is not documented.",
+      "Codec list not published.",
+      "Wear detection not documented.",
+      "Case additional hours not separated from the 32 h total."
+    ],
+    "notes": "Predecessor of Clip Super2.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Nank",
+    "companySlug": "nank",
+    "family": "Clip",
+    "model": "Nank Clip Pro",
+    "slug": "clip-pro",
+    "generation": "1",
+    "variant": "Pro",
+    "releaseYear": 2025,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "NANK",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.yscoco.nankasound"
+      ],
+      "appStoreUrls": [
+        "https://apps.apple.com/us/app/nank%E5%8D%97%E5%8D%A1/id6470352501",
+        "https://play.google.com/store/apps/details?id=com.yscoco.nankasound"
+      ],
+      "appVersionObserved": null,
+      "notes": "App supports EQ, controls, game mode and firmware."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 32,
+      "chargingIndicators": "Case LED; app battery status",
+      "notes": "8 h per charge, up to 32 h total with the charging case. 5.1 g per earbud claim shared with Clip Super; Clip Pro is the cheaper sibling.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 32
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.nank.game-mode",
+        "name": "Game mode low latency",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "Open-ear clip, Bluetooth 5.4, IPX5. Driver size not published."
+    },
+    "appOnlyFeatures": [
+      "battery-status",
+      "firmware-update",
+      "eq-selection",
+      "custom-eq",
+      "button-customization",
+      "game-mode"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://naenka.com/products/clip-pro",
+        "type": "official-product",
+        "title": "Nank Clip Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official product page and detailed specs not retrieved; values cross-checked from Nank's comparison table.",
+      "App battery layout, codec list and wear detection not documented.",
+      "Positioning vs Clip Super is unclear; may be a regional/price variant."
+    ],
+    "notes": "Sibling of Clip Super; included as a separate commercial variant but specs are thin.",
+    "researchedAt": "2026-11-10"
+  }
+]

@@ -1,0 +1,3412 @@
+[
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Nirvana",
+    "model": "Nirvana Crown",
+    "slug": "boat-nirvana-crown",
+    "generation": null,
+    "variant": "Crown",
+    "releaseYear": 2026,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables",
+        "https://apps.apple.com/in/app/boat-hearables/id1592550875"
+      ],
+      "appVersionObserved": "2.0 (Oct 2026 listing)",
+      "notes": "Crown is controlled by Hearables App v2.0, including EQ, control remapping, LED behaviour, ANC modes, haptic intensity and OTA."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 40,
+      "chargingIndicators": "Circular LED ring on the charging case; also reports case state in app.",
+      "notes": "Official launch coverage states 40 h total without ANC and 25 h total with ANC; per-bud hours are not published. Reporting says the app checks individual battery levels. Case reading while buds are out is not separately documented; last-known is inferred from the app device dashboard.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 40
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC modes and levels are app-managed. No official dB figure found."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "boAt Equalizer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "control.touch-customization",
+        "name": "Control remapping",
+        "availability": "official-app",
+        "notes": "Case buttons plus touch gestures are remappable."
+      },
+      {
+        "id": "vendor.boat.case-dial",
+        "name": "Rotating case volume dial with haptics",
+        "availability": "device-only",
+        "notes": "Also acts as a remote camera shutter."
+      },
+      {
+        "id": "vendor.boat.case-lock",
+        "name": "Case control lock",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.find-my-device",
+        "name": "Google Find Hub",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.beast-mode",
+        "name": "BEAST low-latency mode",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "case dial rotate",
+          "action": "volume up/down with haptic feedback",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "case button",
+          "action": "mode switching / camera shutter",
+          "configurableInApp": true,
+          "notes": "LED behaviour and haptic intensity also configurable."
+        }
+      ],
+      "physicalButtons": "Configurable buttons and a rotating dial on the charging case.",
+      "configurableInApp": true,
+      "notes": "Exact per-earbud tap map not published in the launch coverage reviewed."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "EQ and remapping are app features; exact preset list and codec list were not in the source reviewed."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "control remapping",
+      "ANC modes",
+      "LED behaviour",
+      "haptic intensity",
+      "individual battery levels",
+      "OTA"
+    ],
+    "featureDeltaFromPrevious": [
+      "Rotating case dial for volume",
+      "Case-based camera shutter",
+      "Case lock",
+      "Adjustable haptic intensity",
+      "Hearables App v2.0"
+    ],
+    "sources": [
+      {
+        "url": "https://support.boat-lifestyle.com/articles/airdopes-true-wireless/nirvana-crown/6965a711c1583f1b8c66759b",
+        "type": "official-support",
+        "title": "Nirvana Crown support article",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://themobileindian.com/news/boat-nirvana-crown-tws-earbuds-with-rotational-dial-on-case-launched",
+        "type": "reputable-secondary",
+        "title": "boAt Nirvana Crown launch coverage",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.boAt.hearables",
+        "type": "official-app-store",
+        "title": "boAt Hearables",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No official ANC dB figure",
+      "No official codec list",
+      "Spatial audio and multipoint not confirmed",
+      "Per-gesture touch map not published"
+    ],
+    "notes": "2026 flagship with case-based physical controls; battery display evidence comes from launch coverage, not an app screenshot.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Nirvana",
+    "model": "Nirvana Zenith Pro",
+    "slug": "boat-nirvana-zenith-pro",
+    "generation": null,
+    "variant": "Pro",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables",
+        "https://apps.apple.com/in/app/boat-hearables/id1592550875"
+      ],
+      "appVersionObserved": null,
+      "notes": "Sound tab: ANC/Adaptive ANC, Spatial Audio, preset EQ, Adaptive EQ. System tab: In-Ear Detection, Multipoint, firmware, ear-tip check, Smart Diagnostics."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 80,
+      "chargingIndicators": "Case LED: 3 white flashes <30%, solid white >70%, solid white when full.",
+      "notes": "Official support says the app can show the battery level of both earbuds individually. 80 h total non-ANC, 40 h total ANC. Per-bud hours not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "adaptive",
+        "ambient/transparency",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adaptive Hybrid ANC up to 50 dB; custom adaptive levels Max / Moderate / Mild."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "official-app",
+        "notes": "Adaptive Hybrid ANC, 50 dB."
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive ANC levels",
+        "availability": "official-app",
+        "notes": "Max / Moderate / Mild."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "boAt Equalizer",
+        "availability": "official-app",
+        "notes": "Default, Balanced, Rock, Classic, Pop, Club, Custom."
+      },
+      {
+        "id": "equalization.adaptive-eq",
+        "name": "boAt Adaptive EQ by Mimi",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "boAt Spatial Audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "official-app",
+        "notes": "On by default; toggle in System tab."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "official-app",
+        "notes": "Auto play/pause; on by default."
+      },
+      {
+        "id": "vendor.boat.iwp",
+        "name": "Insta Wake N' Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.asap-charge",
+        "name": "ASAP Charge",
+        "availability": "device-only",
+        "notes": "10 min = 250 min playback."
+      },
+      {
+        "id": "vendor.boat.beast-mode",
+        "name": "BEAST mode",
+        "availability": "device-only",
+        "notes": "60 ms low latency."
+      },
+      {
+        "id": "vendor.boat.smart-diagnostics",
+        "name": "Smart Diagnostics",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause; answer call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap left",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap right",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap right",
+          "action": "voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap during call",
+          "action": "end/reject call",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Reset button on the charging case only.",
+      "configurableInApp": true,
+      "notes": "No on-device volume control; volume only via the connected device."
+    },
+    "audio": {
+      "eqPresets": [
+        "Default",
+        "Balanced",
+        "Rock",
+        "Classic",
+        "Pop",
+        "Club",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "LDAC",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "LDAC Hi-Res Audio confirmed. Adaptive EQ by Mimi. No aptX."
+    },
+    "appOnlyFeatures": [
+      "Adaptive ANC levels",
+      "Spatial audio",
+      "Adaptive EQ",
+      "Multipoint toggle",
+      "In-ear detection toggle",
+      "EQ",
+      "Smart Diagnostics",
+      "OTA"
+    ],
+    "featureDeltaFromPrevious": [
+      "LDAC Hi-Res Audio",
+      "Adaptive Hybrid ANC up to 50 dB",
+      "Adaptive ANC levels",
+      "Multipoint toggle",
+      "12 mm drivers",
+      "BT 5.4"
+    ],
+    "sources": [
+      {
+        "url": "https://support.boat-lifestyle.com/articles/airdopes-true-wireless/nirvana-zenith-pro/68dcef19b23de2619bc17841",
+        "type": "official-support",
+        "title": "Nirvana Zenith Pro",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.boat-lifestyle.com/products/nirvana-zenith-pro-wireless-earphones",
+        "type": "official-product",
+        "title": "Nirvana Zenith Pro product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.boAt.hearables",
+        "type": "official-app-store",
+        "title": "boAt Hearables",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Per-bud battery hours not published",
+      "Codec list is inferred from LDAC support plus boAt's standard AAC/SBC; no official codec table"
+    ],
+    "notes": "Best-documented boAt model for battery semantics: the support page explicitly says both earbuds' levels are shown separately in the app.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Nirvana",
+    "model": "Nirvana Ion ANC Pro",
+    "slug": "boat-nirvana-ion-anc-pro",
+    "generation": null,
+    "variant": "ANC Pro",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables"
+      ],
+      "appVersionObserved": null,
+      "notes": "Sound tab exposes Noise Cancellation, boAt Equalizer, Adaptive EQ; ANC / Default / Ambient modes."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": 20,
+      "budsHoursNoAnc": 24,
+      "caseHours": 120,
+      "chargingIndicators": "Case LED; exact thresholds not captured.",
+      "notes": "Official: 24 h per charge / 120 h total non-ANC; 20 h per charge / 100 h total ANC. Case adds 96 h non-ANC or 80 h ANC.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 120
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient/transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": 32,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Up to 32 dB ANC. App calls the off state 'Default'."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "official-app",
+        "notes": "32 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "boAt Equalizer",
+        "availability": "official-app",
+        "notes": "Default, Pop, Rock, Custom."
+      },
+      {
+        "id": "equalization.adaptive-eq",
+        "name": "boAt Adaptive EQ by Mimi",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.enc",
+        "name": "AI-ENx call noise cancellation",
+        "availability": "device-only",
+        "notes": "4 mics."
+      },
+      {
+        "id": "vendor.boat.iwp",
+        "name": "Insta Wake N' Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.beast-mode",
+        "name": "BEAST mode",
+        "availability": "device-only",
+        "notes": "40 ms / 60 ms figures appear in the same official table."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Per-gesture map not published in the support article reviewed."
+    },
+    "audio": {
+      "eqPresets": [
+        "Default",
+        "Pop",
+        "Rock",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "Dual EQ modes plus Adaptive EQ."
+    },
+    "appOnlyFeatures": [
+      "ANC modes",
+      "EQ presets",
+      "Custom EQ",
+      "Adaptive EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC Pro variant adds Adaptive EQ and 120 h total playback"
+    ],
+    "sources": [
+      {
+        "url": "https://support.boat-lifestyle.com/articles/airdopes-true-wireless/nirvana-ion-anc-pro/673706f6aea7b36f95c53183",
+        "type": "official-support",
+        "title": "Nirvana Ion ANC Pro",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.boat-lifestyle.com/products/nirvana-ion-anc-pro-earbuds",
+        "type": "official-product",
+        "title": "Nirvana Ion ANC Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery display semantics not documented",
+      "Per-gesture control map not published",
+      "Multipoint and wear detection unconfirmed"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Nirvana",
+    "model": "Nirvana Ion ANC",
+    "slug": "boat-nirvana-ion-anc",
+    "generation": null,
+    "variant": "ANC",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 120,
+      "chargingIndicators": null,
+      "notes": "Product listing claims 120 h total playback; ANC and per-bud breakdown not captured.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient/transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC supported; dB not published on the listing reviewed."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "boAt Equalizer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.enc",
+        "name": "ENx call noise cancellation",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "ANC modes",
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://support.boat-lifestyle.com/articles/airdopes-true-wireless/nirvana-ion-anc/65e9a7ad24f50f1c579930ff",
+        "type": "official-support",
+        "title": "Nirvana Ion ANC",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.boat-lifestyle.com/products/nirvana-ion-anc-earbuds",
+        "type": "official-product",
+        "title": "Nirvana Ion ANC",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB",
+      "Per-bud playtime",
+      "Battery display semantics",
+      "Codecs",
+      "Multipoint/wear detection",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Nirvana",
+    "model": "Nirvana Ion",
+    "slug": "boat-nirvana-ion",
+    "generation": null,
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 120,
+      "chargingIndicators": null,
+      "notes": "120 h total playback claimed. No ANC on this variant.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Dual EQ modes",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.enc",
+        "name": "ENx call noise cancellation",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.beast-mode",
+        "name": "BEAST mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "Dual EQ modes"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://support.boat-lifestyle.com/articles/airdopes-true-wireless/nirvana-ion/6458a5dd00e2cd436025de9c",
+        "type": "official-support",
+        "title": "Nirvana Ion",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.boat-lifestyle.com/products/nirvana-ion-bluetooth-wireless-earbuds",
+        "type": "official-product",
+        "title": "Nirvana Ion",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Per-bud playtime",
+      "Battery display semantics",
+      "Codecs",
+      "Multipoint/wear detection",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Nirvana",
+    "model": "Nirvana Crystl",
+    "slug": "boat-nirvana-crystl",
+    "generation": null,
+    "variant": "Crystl",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": 18,
+      "budsHoursNoAnc": 20,
+      "caseHours": 100,
+      "chargingIndicators": null,
+      "notes": "Official: 20 h per charge / 100 h total non-ANC; 18 h per charge / 80 h total ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient/transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": 32,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Up to 32 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "official-app",
+        "notes": "32 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Dual EQ modes",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "boAt 360 Spatial Audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.enc",
+        "name": "ENx call noise cancellation",
+        "availability": "device-only",
+        "notes": "4 mics."
+      },
+      {
+        "id": "vendor.boat.beast-mode",
+        "name": "BEAST mode",
+        "availability": "device-only",
+        "notes": "60 ms."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "ANC modes",
+      "Dual EQ",
+      "Spatial audio"
+    ],
+    "featureDeltaFromPrevious": [
+      "360 Spatial Audio",
+      "100 h total playback",
+      "32 dB ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://support.boat-lifestyle.com/articles/airdopes-true-wireless/nirvana-crystl/6867bae31844584756a56727",
+        "type": "official-support",
+        "title": "Nirvana Crystl",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.boat-lifestyle.com/products/nirvana-crystl-wireless-earbuds",
+        "type": "official-product",
+        "title": "Nirvana Crystl",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery display semantics",
+      "Control map",
+      "Codecs",
+      "Multipoint/wear detection"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Nirvana",
+    "model": "Nirvana Iris",
+    "slug": "boat-nirvana-iris",
+    "generation": null,
+    "variant": "Iris",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": 20,
+      "budsHoursNoAnc": 24,
+      "caseHours": 120,
+      "chargingIndicators": null,
+      "notes": "Official: 24 h per charge / 120 h total non-ANC; 20 h per charge / 100 h total ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient/transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": 32,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Up to 32 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "official-app",
+        "notes": "32 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "boAt Equalizer",
+        "availability": "official-app",
+        "notes": "Default, Pop, Rock, Custom."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "official-app",
+        "notes": "Mentioned in official product description."
+      },
+      {
+        "id": "vendor.boat.enc",
+        "name": "ENx call noise cancellation",
+        "availability": "device-only",
+        "notes": "4 mics."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Default",
+        "Pop",
+        "Rock",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "ANC modes",
+      "EQ",
+      "Spatial audio",
+      "Multipoint"
+    ],
+    "featureDeltaFromPrevious": [
+      "Multipoint",
+      "Spatial audio",
+      "120 h total playback"
+    ],
+    "sources": [
+      {
+        "url": "https://support.boat-lifestyle.com/articles/airdopes-true-wireless/nirvana-iris/67fd093be57a3911490e6040",
+        "type": "official-support",
+        "title": "Nirvana Iris",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.boat-lifestyle.com/products/nirvana-iris-anc-earbuds",
+        "type": "official-product",
+        "title": "Nirvana Iris",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery display semantics",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Nirvana",
+    "model": "Nirvana Ivy",
+    "slug": "boat-nirvana-ivy",
+    "generation": null,
+    "variant": "Ivy",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": null,
+      "notes": "50 h total non-ANC; 30.5 h total ANC. Per-bud hours not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient/transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Up to 50 dB Hybrid ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "official-app",
+        "notes": "50 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "boAt Equalizer",
+        "availability": "official-app",
+        "notes": "Default, Balanced, Rock, Classic, Pop, Club."
+      },
+      {
+        "id": "equalization.adaptive-eq",
+        "name": "boAt Adaptive EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.enc",
+        "name": "AI-ENx",
+        "availability": "device-only",
+        "notes": "4 mics."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Default",
+        "Balanced",
+        "Rock",
+        "Classic",
+        "Pop",
+        "Club"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "ANC modes",
+      "EQ",
+      "Adaptive EQ",
+      "In-ear detection"
+    ],
+    "featureDeltaFromPrevious": [
+      "50 dB Hybrid ANC",
+      "In-ear detection",
+      "Adaptive EQ"
+    ],
+    "sources": [
+      {
+        "url": "https://support.boat-lifestyle.com/articles/airdopes-true-wireless/nirvana-ivy/67325390aea7b36f95c1d4fd",
+        "type": "official-support",
+        "title": "Nirvana Ivy",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.boat-lifestyle.com/products/nirvana-ivy-wireless-earbuds",
+        "type": "official-product",
+        "title": "Nirvana Ivy",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Per-bud hours",
+      "Battery display semantics",
+      "Control map",
+      "Multipoint"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Nirvana",
+    "model": "Nirvana X",
+    "slug": "boat-nirvana-x",
+    "generation": null,
+    "variant": "X",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 40,
+      "chargingIndicators": null,
+      "notes": "40 h total playback. No ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "boAt Equalizer",
+        "availability": "official-app",
+        "notes": "Rock, Jazz, Club, Classic."
+      },
+      {
+        "id": "equalization.adaptive-eq",
+        "name": "boAt Adaptive EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.enc",
+        "name": "AI-ENx",
+        "availability": "device-only",
+        "notes": "4 mics."
+      },
+      {
+        "id": "vendor.boat.beast-mode",
+        "name": "BEAST mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Rock",
+        "Jazz",
+        "Club",
+        "Classic"
+      ],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "Dual drivers powered by Knowles per product listing."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Adaptive EQ",
+      "In-ear detection"
+    ],
+    "featureDeltaFromPrevious": [
+      "Dual Knowles drivers",
+      "Adaptive EQ",
+      "In-ear detection"
+    ],
+    "sources": [
+      {
+        "url": "https://support.boat-lifestyle.com/articles/airdopes-true-wireless/nirvana-x/6846f1d5db1e264949f3bd32",
+        "type": "official-support",
+        "title": "Nirvana X",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.boat-lifestyle.com/products/nirvana-x-wireless-earbuds",
+        "type": "official-product",
+        "title": "Nirvana X",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Per-bud hours",
+      "Battery display semantics",
+      "Codecs",
+      "Multipoint",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Nirvana",
+    "model": "Nirvana Space",
+    "slug": "boat-nirvana-space",
+    "generation": null,
+    "variant": "Space",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 100,
+      "chargingIndicators": null,
+      "notes": "100 h total non-ANC; 75 h total ANC. Per-bud hours not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient/transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": 32,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Up to 32 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "official-app",
+        "notes": "32 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "boAt Equalizer",
+        "availability": "official-app",
+        "notes": "Default, Balanced, Pop, Rock, Jazz, Club, Custom."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.enc",
+        "name": "AI-ENx",
+        "availability": "device-only",
+        "notes": "4 mics."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Default",
+        "Balanced",
+        "Pop",
+        "Rock",
+        "Jazz",
+        "Club",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "ANC modes",
+      "EQ",
+      "In-ear detection"
+    ],
+    "featureDeltaFromPrevious": [
+      "In-ear detection",
+      "100 h total playback"
+    ],
+    "sources": [
+      {
+        "url": "https://support.boat-lifestyle.com/articles/airdopes-true-wireless/nirvana-space/673265242c769d5bc7b5e86c",
+        "type": "official-support",
+        "title": "Nirvana Space",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.boat-lifestyle.com/products/boat-nirvana-space-wireless-earbuds-with-anc",
+        "type": "official-product",
+        "title": "Nirvana Space",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Per-bud hours",
+      "Battery display semantics",
+      "Control map",
+      "Multipoint"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Nirvana",
+    "model": "Nirvana Zenith",
+    "slug": "boat-nirvana-zenith",
+    "generation": null,
+    "variant": "Zenith",
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": 7.75,
+      "budsHoursNoAnc": 8,
+      "caseHours": 50,
+      "chargingIndicators": null,
+      "notes": "Official: 8 h per charge / 50 h total non-ANC; 7 h 45 min per charge / 49 h 45 min total ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient/transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Up to 50 dB Hybrid ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "official-app",
+        "notes": "50 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "boAt signature sound modes",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.adaptive-eq",
+        "name": "boAt Adaptive EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.dolby",
+        "name": "Dolby Audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.enc",
+        "name": "AI-ENx",
+        "availability": "device-only",
+        "notes": "6 mics."
+      },
+      {
+        "id": "vendor.boat.asap-charge",
+        "name": "ASAP Charge",
+        "availability": "device-only",
+        "notes": "5 min = 60 min."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": "Left and right separately remappable."
+        },
+        {
+          "gesture": "double tap",
+          "action": "previous/next track",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Official article lists customizable functions including ANC toggle, volume, voice assistant and BEAST mode."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "Dolby Audio."
+    },
+    "appOnlyFeatures": [
+      "ANC modes",
+      "EQ",
+      "Adaptive EQ",
+      "Control remapping"
+    ],
+    "featureDeltaFromPrevious": [
+      "50 dB Hybrid ANC",
+      "Dolby Audio",
+      "6 mics"
+    ],
+    "sources": [
+      {
+        "url": "https://support.boat-lifestyle.com/articles/airdopes-true-wireless/airdopes-nirvana-zenith/65e975f824f50f1c579900a4",
+        "type": "official-support",
+        "title": "Airdopes Nirvana Zenith",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery display semantics",
+      "Multipoint/wear detection",
+      "Spatial audio"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Airdopes Prime",
+    "model": "Airdopes Prime 701 ANC",
+    "slug": "boat-airdopes-prime-701-anc",
+    "generation": null,
+    "variant": "Prime 701 ANC",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": "Case LED: red <30%, white 30-70%, green >70%; solid green when full.",
+      "notes": "50 h total non-ANC; 35 h total ANC. Per-bud hours not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient/transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": 46,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "46 dB Hybrid ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "official-app",
+        "notes": "46 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Real Spatial Audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.enc",
+        "name": "AI-ENx",
+        "availability": "device-only",
+        "notes": "4 mics."
+      },
+      {
+        "id": "vendor.boat.asap-charge",
+        "name": "ASAP Charge",
+        "availability": "device-only",
+        "notes": "10 min = 180 min."
+      },
+      {
+        "id": "vendor.boat.beast-mode",
+        "name": "BEAST mode",
+        "availability": "device-only",
+        "notes": "60 ms."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Button/touch personalization is a Hearables app feature; per-model map not published."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "ANC modes",
+      "Spatial audio",
+      "In-ear detection",
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "46 dB Hybrid ANC",
+      "Real Spatial Audio",
+      "In-ear detection"
+    ],
+    "sources": [
+      {
+        "url": "https://support.boat-lifestyle.com/articles/airdopes-true-wireless/airdopes-prime-701-anc/68b012056a3ff56b1d8e17b0",
+        "type": "official-support",
+        "title": "Airdopes Prime 701 ANC",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.boat-lifestyle.com/products/airdopes-prime-701-anc-wireless-earbuds",
+        "type": "official-product",
+        "title": "Airdopes Prime 701 ANC",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Per-bud hours",
+      "Battery display semantics",
+      "Control map",
+      "Codecs",
+      "Multipoint"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Airdopes Prime",
+    "model": "Airdopes Prime 800D",
+    "slug": "boat-airdopes-prime-800d",
+    "generation": null,
+    "variant": "Prime 800D",
+    "releaseYear": 2026,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": "No official playtime figure captured on the listing.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": null,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Listing headline names Dolby Audio, quad mics and 11 mm drivers but not ANC; ANC status unconfirmed."
+    },
+    "features": [
+      {
+        "id": "audio.dolby",
+        "name": "Dolby Audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.enc",
+        "name": "Quad-mic ENx",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "11 mm drivers; Dolby Audio."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Dolby Audio",
+      "11 mm drivers"
+    ],
+    "sources": [
+      {
+        "url": "https://www.boat-lifestyle.com/products/boat-airdopes-prime-800d",
+        "type": "official-product",
+        "title": "Airdopes Prime 800D",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.boAt.hearables",
+        "type": "official-app-store",
+        "title": "boAt Hearables",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "ANC support",
+      "Battery hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map",
+      "App support"
+    ],
+    "notes": "New 2026 listing; most technical detail is not yet published.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Airdopes",
+    "model": "Airdopes ProClip",
+    "slug": "boat-airdopes-proclip",
+    "generation": null,
+    "variant": "ProClip",
+    "releaseYear": 2025,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 52,
+      "chargingIndicators": null,
+      "notes": "52 h total playback claimed. Open-ear clip design, air-conduction.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC; open-ear design."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.enc",
+        "name": "Call noise cancellation",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "Air-conduction open-ear."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Clip-on open-ear form factor"
+    ],
+    "sources": [
+      {
+        "url": "https://www.boat-lifestyle.com/products/airdopes-proclip",
+        "type": "official-product",
+        "title": "Airdopes ProClip",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.boat-lifestyle.com/articles/airdopes-true-wireless/airdopes-proclip/6ac8f6e432818a190e48f1e2",
+        "type": "official-support",
+        "title": "Airdopes ProClip",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery display semantics",
+      "Codecs",
+      "Control map",
+      "Per-bud hours"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Airdopes",
+    "model": "Airdopes Supreme",
+    "slug": "boat-airdopes-supreme",
+    "generation": null,
+    "variant": "Supreme",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": null,
+      "notes": "50 h total playback per listing.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC; ENx for calls."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial Audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.enc",
+        "name": "AI-ENx",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Spatial audio",
+      "In-ear detection"
+    ],
+    "featureDeltaFromPrevious": [
+      "Spatial audio",
+      "In-ear detection",
+      "AI-ENx"
+    ],
+    "sources": [
+      {
+        "url": "https://www.boat-lifestyle.com/products/airdopes-supreme-long-playback-earbuds",
+        "type": "official-product",
+        "title": "Airdopes Supreme",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.boat-lifestyle.com/articles/airdopes-true-wireless/airdopes-supreme/6593dba2949708400155088c",
+        "type": "official-support",
+        "title": "Airdopes Supreme",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Per-bud hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map",
+      "Multipoint"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Airdopes",
+    "model": "Airdopes 141 Gen 2",
+    "slug": "boat-airdopes-141-gen-2",
+    "generation": "2",
+    "variant": "141",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 48,
+      "chargingIndicators": "Case LED; thresholds not captured.",
+      "notes": "48 h total playback; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "vendor.boat.enc",
+        "name": "Quad-mic ENx",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.beast-mode",
+        "name": "BEAST mode",
+        "availability": "device-only",
+        "notes": "65 ms."
+      },
+      {
+        "id": "vendor.boat.asap-charge",
+        "name": "ASAP Charge",
+        "availability": "device-only",
+        "notes": "10 min = 180 min."
+      },
+      {
+        "id": "vendor.boat.iwp",
+        "name": "Insta Wake N' Pair",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 5.4",
+      "48 h total playback",
+      "10 mm drivers"
+    ],
+    "sources": [
+      {
+        "url": "https://support.boat-lifestyle.com/articles/airdopes-true-wireless/airdopes-141-gen-2/68b000d6a7a05751a1e4af77",
+        "type": "official-support",
+        "title": "Airdopes 141 Gen 2",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.boat-lifestyle.com/products/airdopes-141-gen2-wireless-earbuds",
+        "type": "official-product",
+        "title": "Airdopes 141 Gen 2",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Per-bud hours",
+      "Battery display semantics",
+      "Codecs",
+      "App feature set",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Airdopes",
+    "model": "Airdopes 141 ANC",
+    "slug": "boat-airdopes-141-anc",
+    "generation": null,
+    "variant": "141 ANC",
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 6,
+      "caseHours": 42,
+      "chargingIndicators": null,
+      "notes": "Official: 6 h per charge / 42 h total non-ANC; 5 h per charge / 35 h total ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": 32,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Up to 32 dB; no ambient mode documented."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "official-app",
+        "notes": "32 dB."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Dual EQ modes",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.enc",
+        "name": "ENx",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause; answer call",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "end/reject call",
+          "configurableInApp": null,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": "No on-device volume control."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "ANC",
+      "Dual EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adds 32 dB ANC to the 141 family",
+      "Dual EQ modes"
+    ],
+    "sources": [
+      {
+        "url": "https://support.boat-lifestyle.com/articles/airdopes-true-wireless/airdopes-141-anc/6569a06b495f94594b9ab5c0",
+        "type": "official-support",
+        "title": "Airdopes 141 ANC",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.boat-lifestyle.com/products/airdopes-141-anc-earbuds",
+        "type": "official-product",
+        "title": "Airdopes 141 ANC",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery display semantics",
+      "Codecs",
+      "Transparency mode",
+      "App feature set"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Airdopes",
+    "model": "Airdopes 141 Elite ANC",
+    "slug": "boat-airdopes-141-elite-anc",
+    "generation": null,
+    "variant": "141 Elite ANC",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 6,
+      "caseHours": 42,
+      "chargingIndicators": null,
+      "notes": "Official: 6 h per charge / 42 h total non-ANC; 5 h per charge / 35 h total ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Feed-forward ANC up to 35 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Feed-forward ANC",
+        "availability": "official-app",
+        "notes": "35 dB."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.enc",
+        "name": "Quad-mic ENx",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.asap-charge",
+        "name": "ASAP Charge",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.iwp",
+        "name": "Insta Wake N' Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.beast-mode",
+        "name": "BEAST mode",
+        "availability": "device-only",
+        "notes": "50 ms."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "ANC",
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Feed-forward 35 dB ANC",
+      "Elite variant below the 46 dB Prime"
+    ],
+    "sources": [
+      {
+        "url": "https://support.boat-lifestyle.com/articles/airdopes-true-wireless/141-elite-anc/68cba90ca7a05751a1ace6e5",
+        "type": "official-support",
+        "title": "Airdopes 141 Elite ANC",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery display semantics",
+      "Transparency mode",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Airdopes",
+    "model": "Airdopes 311 Pro",
+    "slug": "boat-airdopes-311-pro",
+    "generation": null,
+    "variant": "311 Pro",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": "White case LED; solid while charging, off when complete.",
+      "notes": "50 h total playback. Per-bud hours not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": 32,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Up to 32 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "official-app",
+        "notes": "32 dB."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "boAt Equalizer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.adaptive-eq",
+        "name": "Adaptive EQ modes",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.enc",
+        "name": "Quad-mic ENx",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.iwp",
+        "name": "Insta Wake N' Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.beast-mode",
+        "name": "BEAST mode",
+        "availability": "device-only",
+        "notes": "50 ms."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause; answer call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "end/reject call",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "No volume gestures; volume only from the phone."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "10 mm drivers."
+    },
+    "appOnlyFeatures": [
+      "ANC",
+      "EQ",
+      "Adaptive EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "32 dB ANC",
+      "Adaptive EQ",
+      "50 h playback"
+    ],
+    "sources": [
+      {
+        "url": "https://support.boat-lifestyle.com/articles/airdopes-true-wireless/airdopes-311-pro/66601769594a3b0ffa77c4f9",
+        "type": "official-support",
+        "title": "Airdopes 311 Pro",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.boat-lifestyle.com/products/airdopes-311-pro-wireless-earbuds",
+        "type": "official-product",
+        "title": "Airdopes 311 Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Per-bud hours",
+      "Battery display semantics",
+      "Codecs",
+      "Transparency mode"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Airdopes",
+    "model": "Airdopes 181 Pro",
+    "slug": "boat-airdopes-181-pro",
+    "generation": null,
+    "variant": "181 Pro",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 100,
+      "chargingIndicators": null,
+      "notes": "100 h total playback per listing.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "vendor.boat.enc",
+        "name": "ENx",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.asap-charge",
+        "name": "ASAP Charge",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.beast-mode",
+        "name": "BEAST mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "100 h total playback"
+    ],
+    "sources": [
+      {
+        "url": "https://www.boat-lifestyle.com/products/airdopes-181-pro-bluetooth-earbuds",
+        "type": "official-product",
+        "title": "Airdopes 181 Pro",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.boat-lifestyle.com/articles/airdopes-true-wireless/airdopes-181-pro/66e2b68f45e2eb46373a91c4",
+        "type": "official-support",
+        "title": "Airdopes 181 Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Per-bud hours",
+      "Battery display semantics",
+      "Codecs",
+      "App support",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Airdopes",
+    "model": "Airdopes 161",
+    "slug": "boat-airdopes-161",
+    "generation": null,
+    "variant": "161",
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 40,
+      "chargingIndicators": null,
+      "notes": "Listing claims 40 h total; support article headline mentions 17 h. The two figures conflict and need manual verification.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "vendor.boat.asap-charge",
+        "name": "ASAP Charge",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.iwp",
+        "name": "Insta Wake N' Pair",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.boat-lifestyle.com/products/airdopes-161",
+        "type": "official-product",
+        "title": "Airdopes 161",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.boat-lifestyle.com/articles/airdopes-true-wireless/airdopes-161/64fdd6d790fbfc1b93ca0d79",
+        "type": "official-support",
+        "title": "Airdopes 161",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official playtime figure conflicts (17 h headline vs 40 h listing)",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Rockerz",
+    "model": "Rockerz 255 Pro+",
+    "slug": "boat-rockerz-255-pro-plus",
+    "generation": null,
+    "variant": "255 Pro+",
+    "releaseYear": 2021,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables"
+      ],
+      "appVersionObserved": null,
+      "notes": "Rockerz 255 Pro+ is on the official supported-device list."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": "Neckband has no charging case, so case fields are not applicable; hidden is recorded to keep the battery contract explicit.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.boat.asap-charge",
+        "name": "ASAP Charge",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [],
+      "physicalButtons": "Inline magnetic neckband controls.",
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.boat-lifestyle.com/collections/bluetooth-neckbands",
+        "type": "official-product",
+        "title": "boAt neckbands collection",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.boAt.hearables",
+        "type": "official-app-store",
+        "title": "boAt Hearables supported devices",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Playtime",
+      "Driver size",
+      "Codecs",
+      "Control map",
+      "App feature specifics"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Rockerz",
+    "model": "Rockerz 255 ANC",
+    "slug": "boat-rockerz-255-anc",
+    "generation": null,
+    "variant": "255 ANC",
+    "releaseYear": 2023,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables"
+      ],
+      "appVersionObserved": null,
+      "notes": "On the official supported-device list."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": "Neckband, no case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient/transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC neckband; dB not captured."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.adaptive-eq",
+        "name": "boAt Adaptive EQ by Mimi",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [],
+      "physicalButtons": "Inline controls.",
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "ANC",
+      "Adaptive EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adds ANC to Rockerz 255 family",
+      "Mimi Adaptive EQ"
+    ],
+    "sources": [
+      {
+        "url": "https://www.boat-lifestyle.com/collections/bluetooth-neckbands",
+        "type": "official-product",
+        "title": "boAt neckbands collection",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.boAt.hearables",
+        "type": "official-app-store",
+        "title": "boAt Hearables supported devices",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB",
+      "Playtime",
+      "Control map",
+      "Codecs"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "boAt",
+    "companySlug": "boat",
+    "family": "Rockerz",
+    "model": "Rockerz 525 ANC",
+    "slug": "boat-rockerz-525-anc",
+    "generation": null,
+    "variant": "525 ANC",
+    "releaseYear": 2023,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "boAt Hearables",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.boAt.hearables"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.boAt.hearables"
+      ],
+      "appVersionObserved": null,
+      "notes": "On the official supported-device list under Nirvana neckbands."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": "Neckband, no case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient/transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.adaptive-eq",
+        "name": "boAt Adaptive EQ by Mimi",
+        "availability": "official-app",
+        "notes": "Mimi lists 525ANC as a supported personalization device."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [],
+      "physicalButtons": "Inline controls.",
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "ANC",
+      "Adaptive EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Mimi Adaptive EQ",
+      "ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://mimi.io/partners/boat",
+        "type": "official-support",
+        "title": "boAt x Mimi partnership device list",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.boAt.hearables",
+        "type": "official-app-store",
+        "title": "boAt Hearables supported devices",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB",
+      "Playtime",
+      "Control map",
+      "Codecs"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

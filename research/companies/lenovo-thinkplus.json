@@ -1,0 +1,387 @@
+[
+  {
+    "company": "Lenovo / Thinkplus",
+    "companySlug": "lenovo-thinkplus",
+    "family": "Thinkplus LivePods",
+    "model": "Lenovo Thinkplus LP5",
+    "slug": "lenovo-thinkplus-lp5",
+    "generation": "5",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "No official companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Only third-party guide apps exist; Lenovo's manual documents touch controls and on-device pairing."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Case LED; USB-C.",
+      "notes": "The official manual publishes electrical ratings but not playtime. Retail copy claims up to 7 h; not treated as verified.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "vendor.lenovo.single-ear",
+        "name": "Single-ear use",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.lenovo.touch-control",
+        "name": "Touch key operation",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double tap right",
+          "action": "volume up",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple tap left/right",
+          "action": "previous/next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "long press",
+          "action": "power / voice assistant",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Fixed touch mapping from the manual."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "13 mm dynamic driver; 32 ohm; Bluetooth 5.3; >59 dB SNR."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "13 mm driver",
+      "Bluetooth 5.3",
+      "Single-ear use"
+    ],
+    "sources": [
+      {
+        "url": "https://manuals.plus/lenovo/lp5-wireless-bluetooth-earbuds-manual",
+        "type": "official-manual",
+        "title": "Lenovo LP5 user manual",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.notice-facile.com/en/manual/1856986/lenovo+lp5-wireless-earbuds",
+        "type": "reputable-secondary",
+        "title": "Lenovo LP5 manual/spec sheet",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official playtime not published",
+      "Battery capacities not stated in the manual",
+      "Battery display layout unverified",
+      "Codec list not published",
+      "No ANC or app"
+    ],
+    "notes": "Widely sold budget Thinkplus model; the 7 h retail claim is unverified.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Lenovo / Thinkplus",
+    "companySlug": "lenovo-thinkplus",
+    "family": "Thinkplus LivePods",
+    "model": "Lenovo Thinkplus XT96",
+    "slug": "lenovo-thinkplus-xt96",
+    "generation": "XT96",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "No official companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No Lenovo audio app; touch controls only."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 3.5,
+      "caseHours": null,
+      "chargingIndicators": "Case LED; USB-C; 1 h charge.",
+      "notes": "Retail spec: 3.5 h music, 30 mAh per bud, 300 mAh case; total with case not stated.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC; intelligent noise reduction for calls."
+    },
+    "features": [
+      {
+        "id": "vendor.lenovo.low-latency",
+        "name": "60 ms low latency",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.lenovo.single-ear",
+        "name": "Single-ear use",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.lenovo.battery-indicator",
+        "name": "Battery indicator",
+        "availability": "device-only",
+        "notes": "LED, not numeric."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double tap",
+          "action": "next/previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Fixed touch controls."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "13 mm composite-film driver; Bluetooth 5.1; 3.4 g per bud."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "60 ms low-latency mode",
+      "13 mm composite driver",
+      "AAC/SBC dual decoding"
+    ],
+    "sources": [
+      {
+        "url": "https://manuals.plus/asin/B0B7VZ4FBG",
+        "type": "official-manual",
+        "title": "Lenovo Thinkplus XT96 user manual",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://fusertech.co.zw/product/lenovo-thinkplus-live-pods-xt96-earphone",
+        "type": "reputable-secondary",
+        "title": "Lenovo Thinkplus XT96 specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Total with case not stated",
+      "Battery display layout unverified",
+      "No ANC or app",
+      "Bluetooth 5.1 is dated"
+    ],
+    "notes": "3.5 h per charge is short; the case adds unknown total runtime.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Lenovo / Thinkplus",
+    "companySlug": "lenovo-thinkplus",
+    "family": "Thinkplus LivePods",
+    "model": "Lenovo Thinkplus XT83 II",
+    "slug": "lenovo-thinkplus-xt83-ii",
+    "generation": "XT83",
+    "variant": "II",
+    "releaseYear": 2023,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "No official companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app; touch controls on the earclip."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": null,
+      "chargingIndicators": "Case LED; USB-C; 250 mAh case.",
+      "notes": "Retail specs conflict: 5 h vs 3.5 h playtime. 250 mAh case; total with case not stated.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear clip; no ANC."
+    },
+    "features": [
+      {
+        "id": "vendor.lenovo.open-ear-clip",
+        "name": "Earclip open-ear design",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.lenovo.hd-voice",
+        "name": "HD voice calls",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double tap",
+          "action": "next/previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Fixed touch mapping."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "Open-ear earclip; driver size not published; Bluetooth 5.3."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Open-ear earclip form factor",
+      "Bluetooth 5.3",
+      "HD voice"
+    ],
+    "sources": [
+      {
+        "url": "https://manuals.plus/ae/1005005519412237",
+        "type": "official-manual",
+        "title": "Lenovo XT83 II user manual",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.geekwills.com/thinkplus-xt83-ii.html",
+        "type": "reputable-secondary",
+        "title": "Thinkplus XT83 II specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Playtime conflicts (5 h vs 3.5 h)",
+      "Driver size and codecs not published",
+      "Total with case not stated",
+      "Battery display layout unverified",
+      "No ANC or app"
+    ],
+    "notes": "Open-ear clip, not in-ear. Retail specs are inconsistent.",
+    "researchedAt": "2026-11-10"
+  }
+]

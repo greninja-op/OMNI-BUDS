@@ -20,9 +20,10 @@ class NothingXProtocolDriverTest {
         assertEquals(0x01.toByte(), cmd[2]) // Protocol version
         assertEquals(0x07.toByte(), cmd[3]) // Cmd ID Low
         assertEquals(0xC0.toByte(), cmd[4]) // Cmd ID High
-        assertEquals(0x00.toByte(), cmd[5]) // Payload length = 0
-        // Total length = 6 header + 2 CRC = 8 bytes
-        assertEquals(8, cmd.size)
+        assertEquals(0x00.toByte(), cmd[5]) // Payload length low = 0
+        assertEquals(0x00.toByte(), cmd[6]) // Payload length high = 0
+        // 8-byte header + 2 CRC = 10 bytes
+        assertEquals(10, cmd.size)
     }
 
     @Test
@@ -32,15 +33,42 @@ class NothingXProtocolDriverTest {
         assertEquals(0x60.toByte(), cmdHigh[1])
         assertEquals(0x0F.toByte(), cmdHigh[3])
         assertEquals(0xF0.toByte(), cmdHigh[4])
-        // Sub-mode for High is 0x01, sub-level 0x03
-        assertEquals(0x01.toByte(), cmdHigh[6])
-        assertEquals(0x03.toByte(), cmdHigh[7])
+        assertEquals(0x03.toByte(), cmdHigh[5]) // payload length low
+        assertEquals(0x00.toByte(), cmdHigh[6]) // payload length high
+        assertEquals(0x01.toByte(), cmdHigh[8]) // payload[0] = 0x01
+        assertEquals(0x01.toByte(), cmdHigh[9]) // High mode = 0x01
+        assertEquals(0x00.toByte(), cmdHigh[10]) // payload[2] = 0x00
 
         val cmdTransparency = driver.buildAncCommand("Transparency")
-        assertEquals(0x02.toByte(), cmdTransparency[6])
+        assertEquals(0x07.toByte(), cmdTransparency[9])
 
         val cmdOff = driver.buildAncCommand("Off")
-        assertEquals(0x00.toByte(), cmdOff[6])
+        assertEquals(0x05.toByte(), cmdOff[9])
+    }
+
+    @Test
+    fun testNothingModbusCrcMatchesHardwareCaptures() {
+        val off = driver.buildNothingFrame(
+            0x0F, 0xF0, byteArrayOf(0x01, 0x05, 0x00), seq = 0xCD,
+        )
+        assertArrayEquals(
+            byteArrayOf(
+                0x55, 0x60, 0x01, 0x0F, 0xF0.toByte(), 0x03, 0x00, 0xCD.toByte(),
+                0x01, 0x05, 0x00, 0xC4.toByte(), 0x47,
+            ),
+            off,
+        )
+
+        val trans = driver.buildNothingFrame(
+            0x0F, 0xF0, byteArrayOf(0x01, 0x07, 0x00), seq = 0xCB,
+        )
+        assertArrayEquals(
+            byteArrayOf(
+                0x55, 0x60, 0x01, 0x0F, 0xF0.toByte(), 0x03, 0x00, 0xCB.toByte(),
+                0x01, 0x07, 0x00, 0xC5.toByte(), 0xAF.toByte(),
+            ),
+            trans,
+        )
     }
 
     @Test
@@ -50,11 +78,11 @@ class NothingXProtocolDriverTest {
         assertEquals(0x60.toByte(), cmdLevel3[1])
         assertEquals(0x19.toByte(), cmdLevel3[3]) // CMD_ULTRA_BASS
         assertEquals(0xA0.toByte(), cmdLevel3[4]) // SUB_ULTRA_BASS
-        assertEquals(0x01.toByte(), cmdLevel3[6]) // Enabled = true
-        assertEquals(0x03.toByte(), cmdLevel3[7]) // Level = 3
+        assertEquals(0x01.toByte(), cmdLevel3[8]) // Enabled = true
+        assertEquals(0x03.toByte(), cmdLevel3[9]) // Level = 3
 
         val cmdDisabled = driver.buildUltraBassCommand(false, 1)
-        assertEquals(0x00.toByte(), cmdDisabled[6]) // Enabled = false
+        assertEquals(0x00.toByte(), cmdDisabled[8]) // Enabled = false
     }
 
     @Test
@@ -63,10 +91,10 @@ class NothingXProtocolDriverTest {
         assertEquals(0x55.toByte(), diracCmd[0])
         assertEquals(0x0D.toByte(), diracCmd[3]) // CMD_EQ
         assertEquals(0xE0.toByte(), diracCmd[4]) // SUB_EQ_PRESET
-        assertEquals(0x00.toByte(), diracCmd[6]) // 0x00 = Dirac Opteo
+        assertEquals(0x00.toByte(), diracCmd[8]) // 0x00 = Dirac Opteo
 
         val bassCmd = driver.buildEqualizerCommand("More Bass")
-        assertEquals(0x02.toByte(), bassCmd[6])
+        assertEquals(0x02.toByte(), bassCmd[8])
     }
 
     @Test
@@ -74,10 +102,11 @@ class NothingXProtocolDriverTest {
         val eqCmd = driver.buildCustom3BandEqCommand(bass = 2, mid = -1, treble = 4)
         assertEquals(0x0D.toByte(), eqCmd[3]) // CMD_EQ
         assertEquals(0xE1.toByte(), eqCmd[4]) // SUB_EQ_3BAND
-        assertEquals(3.toByte(), eqCmd[5]) // 3 bytes payload
-        assertEquals(2.toByte(), eqCmd[6])
-        assertEquals((-1).toByte(), eqCmd[7])
-        assertEquals(4.toByte(), eqCmd[8])
+        assertEquals(3.toByte(), eqCmd[5]) // 3 bytes payload low
+        assertEquals(0x00.toByte(), eqCmd[6]) // 3 bytes payload high
+        assertEquals(2.toByte(), eqCmd[8])
+        assertEquals((-1).toByte(), eqCmd[9])
+        assertEquals(4.toByte(), eqCmd[10])
     }
 
     @Test
@@ -135,14 +164,16 @@ class NothingXProtocolDriverTest {
     }
 
     private fun buildFrame(cmdLow: Int, cmdHigh: Int, payload: ByteArray): ByteArray {
-        val frame = ByteArray(6 + payload.size + 2)
+        val frame = ByteArray(8 + payload.size + 2)
         frame[0] = 0x55.toByte()
         frame[1] = 0x60.toByte()
         frame[2] = 0x01.toByte()
         frame[3] = cmdLow.toByte()
         frame[4] = cmdHigh.toByte()
         frame[5] = payload.size.toByte()
-        System.arraycopy(payload, 0, frame, 6, payload.size)
+        frame[6] = 0x00
+        frame[7] = 0xCD.toByte()
+        System.arraycopy(payload, 0, frame, 8, payload.size)
         // Add dummy CRC
         frame[frame.size - 2] = 0x00
         frame[frame.size - 1] = 0x00

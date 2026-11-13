@@ -1,0 +1,133 @@
+[
+  {
+    "company": "Amazfit",
+    "companySlug": "amazfit",
+    "family": "ZenBuds",
+    "model": "Amazfit ZenBuds",
+    "slug": "amazfit-zenbuds",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Zepp",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.huami.watch.hmwatchmanager"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.huami.watch.hmwatchmanager"
+      ],
+      "appVersionObserved": null,
+      "notes": "Zepp transfers sounds to the buds, sets volume, playback duration/alarm and shows the sleep report. The buds are not a streaming headset."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 12,
+      "caseHours": 56,
+      "chargingIndicators": "Case LED; USB-C.",
+      "notes": "Official: 12 h in 3-hour playback mode with sleep monitoring all night; 8 h with sound playing continuously. Case adds seven full recharges, quoted as 56 h / eight nights total. Whether Zepp splits left/right and case percentages is not documented.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 56
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC. Passive umbrella-shaped tip isolation plus masking sounds; not a noise-cancelling device."
+    },
+    "features": [
+      {
+        "id": "sleep.masking-sounds",
+        "name": "Downloadable sleep sounds stored on the buds",
+        "availability": "official-app",
+        "notes": "Only Amazfit's official library can be transferred; no Bluetooth streaming."
+      },
+      {
+        "id": "sleep.smart-playback",
+        "name": "Auto-stop on sleep detection",
+        "availability": "official-app",
+        "notes": "Unlimited, fixed-duration and smart-playback modes."
+      },
+      {
+        "id": "sleep.sleep-tracking",
+        "name": "Sleep-stage, position and heart-rate tracking",
+        "availability": "official-app",
+        "notes": "Accelerometer plus heart-rate sensing; report in Zepp."
+      },
+      {
+        "id": "sleep.in-ear-alarm",
+        "name": "Personal in-ear alarm",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "design.side-sleeper",
+        "name": "1.78 g side-sleeper design",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "No buttons or touch controls. Playback starts when a bud leaves the case and stops when it returns; volume and track choice are app-only."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Knowles balanced-armature receiver, 20 Hz-8 kHz. Bluetooth 5.0 BLE is used for app sync only; the buds never stream phone audio."
+    },
+    "appOnlyFeatures": [
+      "sound library transfer",
+      "playback duration",
+      "volume",
+      "alarm",
+      "sleep report"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.amazfit.com/products/amazfit-zenbuds",
+        "type": "official-product",
+        "title": "Amazfit ZenBuds product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://us.amazfit.com/blogs/news/award-winning-amazfit-zenbuds-now-available-to-u-s-consumers",
+        "type": "official-product",
+        "title": "Amazfit ZenBuds US launch and battery details",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery UI layout in Zepp (split vs combined, case visibility) is not documented.",
+      "No official statement on whether the case percentage is live while buds are out.",
+      "No codec support because there is no audio streaming."
+    ],
+    "notes": "A sleep-only earplug-style device: BLE for app configuration, sounds stored locally, no calls and no streaming. Included because it is a Bluetooth-connected audio wearable for sleep.",
+    "researchedAt": "2026-11-10"
+  }
+]

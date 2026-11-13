@@ -1,0 +1,762 @@
+[
+  {
+    "company": "Lightspeed Aviation",
+    "companySlug": "lightspeed",
+    "family": "Zulu",
+    "model": "Zulu 4 ANR Headset",
+    "slug": "lightspeed-zulu-4",
+    "generation": "4",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Lightspeed Aviation App",
+      "platforms": [
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://apps.apple.com/us/app/lightspeed-app/id1469234593"
+      ],
+      "appVersionObserved": null,
+      "notes": "Free iPad/iPhone in-flight cockpit recording app. Connects over Bluetooth to record incoming and outgoing communications, play back transmissions, draw diagrams and archive flights. It is a flight-recording/training app, not a settings or battery app."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Battery indicator LED on the control module. Lightspeed does not publish percentage steps or the exact low-battery thresholds.",
+      "notes": "One combined headset battery: two AA batteries (3 V). No charging case. Panel-powered 6-pin LEMO variants run from aircraft power with AA backup. Lightspeed does not publish a runtime figure on the Zulu 4 product page.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "ANR on"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Aviation ANR optimized for deep, broad low-frequency cockpit noise, not consumer ANC. No transparency mode. Passive attenuation remains when switched off."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Aviation active noise reduction",
+        "availability": "device-only",
+        "notes": "Single ANR on/off; no level selection."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual Bluetooth",
+        "availability": "device-only",
+        "notes": "Two devices connected simultaneously; A2DP music/calls plus aviation-app alerts."
+      },
+      {
+        "id": "audio.priority-mix",
+        "name": "ComPriority",
+        "availability": "device-only",
+        "notes": "Automatically lowers auxiliary/Bluetooth audio during radio or intercom transmissions, then softly restores it."
+      },
+      {
+        "id": "audio.aux-input",
+        "name": "Auxiliary audio input",
+        "availability": "device-only",
+        "notes": "Integrated control-box auxiliary input for a phone or music player."
+      },
+      {
+        "id": "vendor.lightspeed.flight-recording",
+        "name": "In-flight communications recording",
+        "availability": "official-app",
+        "notes": "Lightspeed Aviation App records over Bluetooth; iOS only."
+      },
+      {
+        "id": "power.auto-shutoff",
+        "name": "Auto Shutoff",
+        "availability": "device-only",
+        "notes": "Powers down automatically when not in use."
+      },
+      {
+        "id": "audio.vocal-isolation",
+        "name": "Bluetooth vocal isolation",
+        "availability": "device-only",
+        "notes": "Up to 90% reduction of background noise on outgoing Bluetooth transmissions."
+      },
+      {
+        "id": "audio.equalization",
+        "name": "Front Row Center and stereo cross-feed",
+        "availability": "device-only",
+        "notes": "Lightspeed's music/audio processing; no user EQ."
+      },
+      {
+        "id": "comms.aviation-intercom",
+        "name": "Aircraft intercom and radio communications",
+        "availability": "device-only",
+        "notes": "Dual G/A, 6-pin LEMO panel power and U-174 helicopter configurations."
+      },
+      {
+        "id": "battery.aa",
+        "name": "Two AA batteries with panel-power backup",
+        "availability": "device-only",
+        "notes": "GA dual-plug version is battery-only; 6-pin LEMO version uses aircraft power with AA backup."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Bluetooth button, hold 3–5 s",
+          "action": "Turn Bluetooth on",
+          "configurableInApp": false,
+          "notes": "Bluetooth is off by default to conserve battery."
+        },
+        {
+          "gesture": "Bluetooth button, hold 2 s",
+          "action": "Enter pairing mode",
+          "configurableInApp": false,
+          "notes": "LED flashes red/blue; headset advertises as Zulu 4_#####."
+        },
+        {
+          "gesture": "Bluetooth button, hold 2–5 s",
+          "action": "Pair a second device (multipoint)",
+          "configurableInApp": false,
+          "notes": "The oldest connected device is replaced when a new one is paired."
+        },
+        {
+          "gesture": "Volume + / −",
+          "action": "Adjust audio volume",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Control module with power, Bluetooth and volume buttons.",
+      "configurableInApp": false,
+      "notes": "All controls are physical; the app does not configure the headset."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bluetooth with A2DP for stereo music and HFP for calls. Codec list is not published. 40 mm moving-coil transducer, 20 Hz–20 kHz."
+    },
+    "appOnlyFeatures": [
+      "In-flight recording of incoming and outgoing communications",
+      "Playback of recorded transmissions",
+      "Flight-diagram drawing and archive",
+      "Post-flight briefing/training records"
+    ],
+    "featureDeltaFromPrevious": [
+      "Dual Bluetooth multipoint (Zulu 3 connects to one device at a time).",
+      "Up to 90% background-noise reduction on outgoing Bluetooth audio.",
+      "FrameFit ear seals.",
+      "10% longer mic boom and longer upper cable.",
+      "Lightspeed Aviation App recording over Bluetooth; Zulu 3 uses FlightLink over a patch cable."
+    ],
+    "sources": [
+      {
+        "url": "https://www.lightspeedaviation.com/product/zulu-4-anr-headset/",
+        "type": "official-product",
+        "title": "Lightspeed Zulu 4 ANR Headset product page and tech specs",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.lightspeedaviation.com/wp-content/uploads/2026/09/LSA-Datasheet_Zulu-4_091026.pdf",
+        "type": "official-product",
+        "title": "Lightspeed Zulu 4 datasheet (09/26)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.lightspeedaviation.com/blog-posts/new-zulu-4-headset-now-with-multipoint-bluetooth",
+        "type": "official-support",
+        "title": "New Zulu 4 Headset Now with Multipoint Bluetooth",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Official battery runtime is not published on the Zulu 4 product page or datasheet.",
+      "Bluetooth codec list and Bluetooth version are not published.",
+      "Battery indicator thresholds and whether the LED is multi-colour are not documented.",
+      "No official ANR attenuation in dB.",
+      "App battery display: the Lightspeed Aviation App is a recorder and does not expose headset battery percentage."
+    ],
+    "notes": "Record covers the current Zulu 4. Connector variants (dual G/A, 6-pin LEMO, U-174) are configuration variants of the same headset.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Lightspeed Aviation",
+    "companySlug": "lightspeed",
+    "family": "Zulu",
+    "model": "Zulu 3 ANR Headset",
+    "slug": "lightspeed-zulu-3",
+    "generation": "3",
+    "variant": null,
+    "releaseYear": 2017,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "FlightLink",
+      "platforms": [
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Free iPad/iPhone cockpit recording app. Zulu 3 records through the supplied patch cable, not over Bluetooth. FlightLink is also used to register the headset. It does not show battery percentage or configure audio."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Battery indicator LED on the control box; Lightspeed does not publish percentage steps or exact thresholds.",
+      "notes": "One combined headset battery: two AA batteries (3 V). No charging case. Panel-powered 6-pin version runs from aircraft power.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "ANR on"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Aviation ANR for low-frequency cockpit noise; no transparency mode. Magnesium cups add passive high-frequency attenuation."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Aviation active noise reduction",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth calls and audio",
+        "availability": "device-only",
+        "notes": "One device at a time; no multipoint."
+      },
+      {
+        "id": "audio.priority-mix",
+        "name": "ComPriority",
+        "availability": "device-only",
+        "notes": "Lowers auxiliary/Bluetooth volume during radio or intercom transmissions."
+      },
+      {
+        "id": "audio.aux-input",
+        "name": "Auxiliary audio input",
+        "availability": "device-only",
+        "notes": "Integrated control-box input."
+      },
+      {
+        "id": "vendor.lightspeed.flightlink",
+        "name": "FlightLink cockpit recording",
+        "availability": "official-app",
+        "notes": "Wired recording via patch cable; iOS only."
+      },
+      {
+        "id": "power.auto-shutoff",
+        "name": "Auto Shutoff",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.equalization",
+        "name": "Front Row Center and stereo cross-feed",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "comms.aviation-intercom",
+        "name": "Aircraft intercom and radio communications",
+        "availability": "device-only",
+        "notes": "Dual G/A, 6-pin LEMO panel power and U-174 configurations."
+      },
+      {
+        "id": "battery.aa",
+        "name": "Two AA batteries",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Bluetooth button",
+          "action": "Pair, connect, answer/end calls",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume + / −",
+          "action": "Adjust audio volume",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Mic gain trim",
+          "action": "Adjust microphone gain",
+          "configurableInApp": false,
+          "notes": "User-adjustable to balance loud and soft voices in multi-headset aircraft."
+        }
+      ],
+      "physicalButtons": "Control box with power, Bluetooth and volume controls; recessed mic-gain adjustment.",
+      "configurableInApp": false,
+      "notes": "No touch controls."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "40 mm moving-coil transducer, 20 Hz–20 kHz. Bluetooth phone and A2DP streaming; codec list not published."
+    },
+    "appOnlyFeatures": [
+      "Cockpit communications recording via patch cable",
+      "Playback and archive of recordings",
+      "Headset registration"
+    ],
+    "featureDeltaFromPrevious": [
+      "Full Bluetooth integration versus Zulu.2's Bluetooth.",
+      "Kevlar-core cables and magnesium/stainless construction.",
+      "ComPriority soft-mute behaviour.",
+      "7-year warranty."
+    ],
+    "sources": [
+      {
+        "url": "https://www.lightspeedaviation.com/product/zulu-3-anr-headset/",
+        "type": "official-product",
+        "title": "Lightspeed Zulu 3 ANR Headset product page and tech specs",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.lightspeedaviation.com/support/zulu-3-support/",
+        "type": "official-support",
+        "title": "Lightspeed Zulu 3 support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Official battery runtime is not stated in the Zulu 3 tech specs.",
+      "Bluetooth version and codec list are not published.",
+      "Battery LED thresholds are not documented.",
+      "No official ANR attenuation in dB.",
+      "FlightLink shows no battery percentage."
+    ],
+    "notes": "Record covers the Zulu 3; connector variants are configuration options.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Lightspeed Aviation",
+    "companySlug": "lightspeed",
+    "family": "Delta Zulu",
+    "model": "Delta Zulu ANR Headset",
+    "slug": "lightspeed-delta-zulu",
+    "generation": "Delta Zulu",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Lightspeed App",
+      "platforms": [
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://apps.apple.com/us/app/lightspeed-app/id1469234593"
+      ],
+      "appVersionObserved": null,
+      "notes": "iOS-only app for HearingEQity hearing profile, CO sensor data/thresholds, recording and firmware updates. The app is not required to fly; Android users need an iOS device only for first-time setup. The app does not show a battery percentage."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "No dedicated charging LED is documented; a published user review specifically complains that plugging in the UAC charging cable gives no charge indication.",
+      "notes": "One combined headset battery with two interchangeable magazines: a rechargeable lithium-ion cartridge or a two-AA cartridge. No charging case. The Li-ion magazine charges in the headset over UAC/USB; an optional external charger exists.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "Signature ANR",
+        "Rotax-specific ANR profile"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": false,
+      "notes": "Aviation ANR, not consumer ANC. HearingEQity builds a 12-frequency hearing profile and applies personalized equalization; it is not personalized noise cancellation. Rotax profile is selected in the app."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Aviation active noise reduction",
+        "availability": "device-only",
+        "notes": "Signature and Rotax-specific profiles; profile switching is app-controlled."
+      },
+      {
+        "id": "vendor.lightspeed.co-sensor",
+        "name": "Kanari carbon-monoxide sensor",
+        "availability": "both",
+        "notes": "Always-on cabin CO monitoring with audible/visual alerts; thresholds and history in the app."
+      },
+      {
+        "id": "vendor.lightspeed.hearingeqity",
+        "name": "HearingEQity personalized audio",
+        "availability": "official-app",
+        "notes": "12-frequency hearing test in the app creates a profile stored in the headset."
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth calls and audio",
+        "availability": "device-only",
+        "notes": "A2DP stereo music and cell-phone calls plus aviation-app alerts."
+      },
+      {
+        "id": "audio.priority-mix",
+        "name": "ComPriority",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.aux-input",
+        "name": "Auxiliary audio via UAC",
+        "availability": "device-only",
+        "notes": "UAC plug supports charging, data and auxiliary audio; UAC-to-USB-A, USB-C, 3.5 mm and Lightning cables."
+      },
+      {
+        "id": "vendor.lightspeed.flight-recording",
+        "name": "Flight recording and playback",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware updates",
+        "availability": "official-app",
+        "notes": "Digital platform designed for feature updates."
+      },
+      {
+        "id": "power.auto-shutoff",
+        "name": "Auto Shutoff",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "comms.aviation-intercom",
+        "name": "Aircraft intercom and radio communications",
+        "availability": "device-only",
+        "notes": "Dual G/A, 6-pin LEMO and U-174 configurations."
+      },
+      {
+        "id": "battery.swappable",
+        "name": "Interchangeable Li-ion or AA battery magazine",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Bluetooth button",
+          "action": "Pair, connect, answer/end calls",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume + / −",
+          "action": "Adjust audio volume",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Control module with power, Bluetooth and volume buttons; UAC connector.",
+      "configurableInApp": false,
+      "notes": "App configures hearing profile, CO thresholds and ANR profile, but not button behaviour."
+    },
+    "audio": {
+      "eqPresets": [
+        "HearingEQity personalized profile"
+      ],
+      "customEq": true,
+      "eqBands": 12,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "12-frequency hearing test drives a personalized equalization curve. Bluetooth A2DP. Codec list and multipoint support are not published. 40 mm moving-coil transducer, 20 Hz–20 kHz."
+    },
+    "appOnlyFeatures": [
+      "HearingEQity 12-frequency hearing test and profile",
+      "CO sensor live readout, history and alert thresholds",
+      "Signature vs Rotax ANR profile selection",
+      "Flight recording and playback",
+      "Firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "Built-in carbon-monoxide sensor with Kanari alerts.",
+      "HearingEQity personalized hearing profile.",
+      "Rechargeable lithium-ion battery magazine with AA backup magazine.",
+      "UAC connector for charging, data and auxiliary audio.",
+      "App-based firmware updates and Rotax-specific ANR profile."
+    ],
+    "sources": [
+      {
+        "url": "https://www.lightspeedaviation.com/product/lightspeed-delta-zulu-anr-headset/",
+        "type": "official-product",
+        "title": "Lightspeed Delta Zulu ANR Headset product page and tech specs",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://apps.apple.com/us/app/lightspeed-app/id1469234593",
+        "type": "official-app-store",
+        "title": "Lightspeed App on the App Store",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Official runtime for the Li-ion magazine is not published on the product page.",
+      "Multipoint support is not stated.",
+      "Bluetooth codec list is not published.",
+      "No charging-state LED is documented.",
+      "No official ANR attenuation in dB.",
+      "The app is iOS-only; no Android app."
+    ],
+    "notes": "Record covers the Delta Zulu; connector variants are configuration options.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Lightspeed Aviation",
+    "companySlug": "lightspeed",
+    "family": "Tango",
+    "model": "Tango Wireless ANR Headset",
+    "slug": "lightspeed-tango",
+    "generation": "Tango",
+    "variant": null,
+    "releaseYear": 2017,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "FlightLink",
+      "platforms": [
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Lightspeed's warranty/registration page lists Tango as FlightLink-compatible. FlightLink is a cockpit recording app, not a battery or settings app."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Not documented in the sell sheet; the headset is rechargeable and has no charging case.",
+      "notes": "One combined headset battery: built-in 3.7 V rechargeable lithium-ion. This is the first Lightspeed aviation headset with a rechargeable Li-ion pack instead of AA cells. No case. The headset is wireless via the Lightspeed Link panel interface, with a wired backup cable.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "ANR on"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Aviation ANR; ANR maximum SPL greater than 120 dB at 100 Hz per the sell sheet. Not consumer ANC; no transparency mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Aviation active noise reduction",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth calls and stereo audio",
+        "availability": "device-only",
+        "notes": "Bluetooth phone and A2DP audio."
+      },
+      {
+        "id": "vendor.lightspeed.link",
+        "name": "Lightspeed Link wireless cockpit link",
+        "availability": "device-only",
+        "notes": "Proprietary wireless link through a panel interface; not Bluetooth or Wi-Fi. Up to six Tango headsets can operate in one aircraft."
+      },
+      {
+        "id": "audio.priority-mix",
+        "name": "ComPriority",
+        "availability": "device-only",
+        "notes": "Volume and ComPriority controls are on the headset, not a control box."
+      },
+      {
+        "id": "audio.aux-input",
+        "name": "Wired backup/auxiliary connection",
+        "availability": "device-only",
+        "notes": "Backup cable allows wired operation."
+      },
+      {
+        "id": "comms.aviation-intercom",
+        "name": "Aircraft intercom and radio communications",
+        "availability": "device-only",
+        "notes": "Panel interface routes communications to the wireless headset."
+      },
+      {
+        "id": "battery.li-ion",
+        "name": "Rechargeable lithium-ion battery",
+        "availability": "device-only",
+        "notes": "3.7 V; charged from the panel interface or charger."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume + / −",
+          "action": "Adjust audio volume",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "ComPriority control",
+          "action": "Adjust intercom/auxiliary priority",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Bluetooth button",
+          "action": "Pair/connect Bluetooth device",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Headset-mounted controls for power, volume, ComPriority and Bluetooth; no inline control box.",
+      "configurableInApp": false,
+      "notes": "Lightspeed positions the key controls on the headset itself to preserve the wireless design."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "40 mm moving-coil headphone, 20 Hz–20 kHz. Bluetooth phone and A2DP. Codec list not published."
+    },
+    "appOnlyFeatures": [
+      "Cockpit communications recording via FlightLink (wired)"
+    ],
+    "featureDeltaFromPrevious": [
+      "First premium aviation headset with no cable to the aircraft.",
+      "First Lightspeed aviation headset powered by a rechargeable lithium-ion battery.",
+      "Lightspeed Link proprietary wireless link, up to six headsets per aircraft.",
+      "Headset-mounted volume and ComPriority controls."
+    ],
+    "sources": [
+      {
+        "url": "https://www.lightspeedaviation.com/wp-content/uploads/2019/09/Tango-sell-sheet0719.pdf",
+        "type": "official-product",
+        "title": "Lightspeed Tango sell sheet and technical specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.lightspeedaviation.com/support/tango-support/",
+        "type": "official-support",
+        "title": "Lightspeed Tango support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official battery runtime is not stated in the sell sheet.",
+      "Charging indicator behaviour is not documented.",
+      "Bluetooth version and codec list are not published.",
+      "Whether the panel interface is mandatory for all aircraft is not clear from the sell sheet.",
+      "No official ANR attenuation in dB beyond the >120 dB SPL at 100 Hz statement.",
+      "FlightLink battery/status behaviour on Tango is undocumented."
+    ],
+    "notes": "Record covers the original Tango (2017). It is a wireless Lightspeed Link headset, not a conventional cable-to-panel ANR headset.",
+    "researchedAt": "2026-11-10"
+  }
+]

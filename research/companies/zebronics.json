@@ -1,0 +1,1754 @@
+[
+  {
+    "company": "Zebronics",
+    "companySlug": "zebronics",
+    "family": "Zeb Pods",
+    "model": "Zeb Pods 1",
+    "slug": "zebronics-zeb-pods-1",
+    "generation": null,
+    "variant": "Pods 1",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app documented)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Zebronics ships two audio apps, ZEB-Aural IQ and ZEB-VibeControl, but the Zeb Pods 1 product page does not claim app support."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 7,
+      "caseHours": 28,
+      "chargingIndicators": "Case LED; earbud charge 1 h, case 2 h.",
+      "notes": "Official: 7 h buds / 28 h total ANC off; 6 h buds / 22 h total ANC on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Zebronics' first ANC earbuds; dB not published on the product page."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.zebronics.enc",
+        "name": "ENC call noise cancellation",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.zebronics.flash-connect",
+        "name": "Flash Connect",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.zebronics.game-mode",
+        "name": "Gaming mode",
+        "availability": "device-only",
+        "notes": "Low latency."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers; BT 5.2; splash proof; 40 h standby."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "First Zebronics ANC earbuds",
+      "22 h ANC total"
+    ],
+    "sources": [
+      {
+        "url": "https://zebronics.com/products/zeb-pods-1",
+        "type": "official-product",
+        "title": "Zeb Pods 1",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://zebronics.info/user_manual_zeb/Audio/earphone/BT/ZEB-PODS_I_UM.pdf",
+        "type": "official-manual",
+        "title": "Zeb Pods 1 user manual",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Zebronics",
+    "companySlug": "zebronics",
+    "family": "Zeb Pods",
+    "model": "Zeb Pods O",
+    "slug": "zebronics-zeb-pods-o",
+    "generation": null,
+    "variant": "Pods O",
+    "releaseYear": 2025,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "None (no companion app documented)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Product page lists no app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED; 1.5 h charge for buds and case.",
+      "notes": "Official: 10 h playback, 40 h total, 9 h talk, 150 h standby.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ENC only; open-ear."
+    },
+    "features": [
+      {
+        "id": "vendor.zebronics.enc",
+        "name": "ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual pairing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.zebronics.flash-connect",
+        "name": "Flash Connect",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.zebronics.game-mode",
+        "name": "Gaming mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "13 x 11 mm drivers; BT 5.4; 16 ohm; splash proof."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Zebronics' first OWS open-ear form factor",
+      "Dual pairing"
+    ],
+    "sources": [
+      {
+        "url": "https://zebronics.com/products/zeb-pods-o",
+        "type": "official-product",
+        "title": "Zeb Pods O",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://zebronics.info/user_manual_zeb/Audio/earphone/BT/ZEB-PODS_O_UM.pdf",
+        "type": "official-manual",
+        "title": "Zeb Pods O user manual",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Zebronics",
+    "companySlug": "zebronics",
+    "family": "Zeb Pods",
+    "model": "Zeb Pods A21",
+    "slug": "zebronics-zeb-pods-a21",
+    "generation": null,
+    "variant": "Pods A21",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app documented)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Per-model app support not published."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED.",
+      "notes": "30 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC confirmed by the official listing; dB not published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Dual EQ modes",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "BT 6.0."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "BT 6.0",
+      "ANC",
+      "30 h total"
+    ],
+    "sources": [
+      {
+        "url": "https://zebronics.com/products/zeb-pods-a21",
+        "type": "official-product",
+        "title": "Zeb Pods A21",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB",
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Zebronics",
+    "companySlug": "zebronics",
+    "family": "Zeb Pods",
+    "model": "Zeb PODS 141 Pro",
+    "slug": "zebronics-zeb-pods-141-pro",
+    "generation": null,
+    "variant": "Pods 141 Pro",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app documented)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 27,
+      "chargingIndicators": "Case LED; rapid charging.",
+      "notes": "27 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.zebronics.flash-connect",
+        "name": "Flash Connect",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "ANC",
+      "Rapid charging",
+      "27 h total"
+    ],
+    "sources": [
+      {
+        "url": "https://zebronics.com/products/zeb-pods-141-pro",
+        "type": "official-product",
+        "title": "Zeb PODS 141 Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB",
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Zebronics",
+    "companySlug": "zebronics",
+    "family": "Zeb Monk",
+    "model": "Zeb Monk Pro",
+    "slug": "zebronics-zeb-monk-pro",
+    "generation": null,
+    "variant": "Monk Pro",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app documented)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 27,
+      "chargingIndicators": "Case LED.",
+      "notes": "27 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Hybrid ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "3 EQ modes",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Hybrid ANC",
+      "3 EQ modes"
+    ],
+    "sources": [
+      {
+        "url": "https://zebronics.com/products/zeb-monk-pro",
+        "type": "official-product",
+        "title": "Zeb Monk Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB",
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Zebronics",
+    "companySlug": "zebronics",
+    "family": "Zeb Monk",
+    "model": "Zeb Monk+",
+    "slug": "zebronics-zeb-monk-plus",
+    "generation": null,
+    "variant": "Monk+",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app documented)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 25,
+      "chargingIndicators": "Case LED.",
+      "notes": "25 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://zebronics.com/products/zeb-monk-plus",
+        "type": "official-product",
+        "title": "Zeb Monk+",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB",
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Zebronics",
+    "companySlug": "zebronics",
+    "family": "Zeb Pods K",
+    "model": "Zeb Pods K2",
+    "slug": "zebronics-zeb-pods-k2",
+    "generation": "2",
+    "variant": "Pods K2",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app documented)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED.",
+      "notes": "40 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Listing says 'Noise Cancellation'; quad mic. ANC vs ENC labelling is ambiguous."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Noise cancellation",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.zebronics.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.zebronics.game-mode",
+        "name": "Gaming mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://zebronics.com/products/zeb-pods-k2",
+        "type": "official-product",
+        "title": "Zeb Pods K2",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Whether the noise cancellation is ANC or ENC",
+      "ANC dB",
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Zebronics",
+    "companySlug": "zebronics",
+    "family": "Zeb Pods K",
+    "model": "Zeb Pods K3",
+    "slug": "zebronics-zeb-pods-k3",
+    "generation": "3",
+    "variant": "Pods K3",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app documented)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED.",
+      "notes": "40 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Dual EQ, not ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Dual EQ modes",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "10 mm drivers."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "40 h battery",
+      "Dual EQ"
+    ],
+    "sources": [
+      {
+        "url": "https://zebronics.com/products/zeb-pods-k3",
+        "type": "official-product",
+        "title": "Zeb Pods K3",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Zebronics",
+    "companySlug": "zebronics",
+    "family": "Zeb Sound Bomb",
+    "model": "Zeb Sound Bomb 7",
+    "slug": "zebronics-zeb-sound-bomb-7",
+    "generation": "7",
+    "variant": "Sound Bomb",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app documented)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 60,
+      "chargingIndicators": "Case LED; rapid charging.",
+      "notes": "60 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ENC only."
+    },
+    "features": [
+      {
+        "id": "vendor.zebronics.enc",
+        "name": "ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://zebronics.com/products/zeb-sound-bomb-7",
+        "type": "official-product",
+        "title": "Zeb Sound Bomb 7",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Zebronics",
+    "companySlug": "zebronics",
+    "family": "Zeb Sound Bomb",
+    "model": "Zeb Sound Bomb 1",
+    "slug": "zebronics-zeb-sound-bomb-1",
+    "generation": "1",
+    "variant": "Sound Bomb",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app documented)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 12,
+      "chargingIndicators": "Case LED.",
+      "notes": "12 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://zebronics.com/products/zeb-sound-bomb-1",
+        "type": "official-product",
+        "title": "Zeb Sound Bomb 1",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Zebronics",
+    "companySlug": "zebronics",
+    "family": "Zeb Meteoroid",
+    "model": "Zeb Meteoroid",
+    "slug": "zebronics-zeb-meteoroid",
+    "generation": null,
+    "variant": "Meteoroid",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app documented)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 80,
+      "chargingIndicators": "Case LED.",
+      "notes": "80 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ENC only."
+    },
+    "features": [
+      {
+        "id": "vendor.zebronics.enc",
+        "name": "ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.zebronics.game-mode",
+        "name": "Low-latency mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "6 mm drivers."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "80 h total playback"
+    ],
+    "sources": [
+      {
+        "url": "https://zebronics.com/products/zeb-meteoroid",
+        "type": "official-product",
+        "title": "Zeb Meteoroid",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Zebronics",
+    "companySlug": "zebronics",
+    "family": "Zeb Pods B",
+    "model": "Zeb Pods B15",
+    "slug": "zebronics-zeb-pods-b15",
+    "generation": null,
+    "variant": "Pods B15",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app documented)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED.",
+      "notes": "40 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "vendor.zebronics.game-mode",
+        "name": "Gaming mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://zebronics.com/products/zeb-pods-b15",
+        "type": "official-product",
+        "title": "Zeb Pods B15",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Zebronics",
+    "companySlug": "zebronics",
+    "family": "Zeb Pods B",
+    "model": "Zeb Pods B11",
+    "slug": "zebronics-zeb-pods-b11",
+    "generation": null,
+    "variant": "Pods B11",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app documented)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 27,
+      "chargingIndicators": "Case LED.",
+      "notes": "27 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "vendor.zebronics.game-mode",
+        "name": "Gaming mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://zebronics.com/products/zeb-pods-b11",
+        "type": "official-product",
+        "title": "Zeb Pods B11",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Zebronics",
+    "companySlug": "zebronics",
+    "family": "Dh'vny",
+    "model": "Zeb Dh'vny E21",
+    "slug": "zebronics-zeb-dhvny-e21",
+    "generation": null,
+    "variant": "Zeb Dh'vny E21",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app documented)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Zebronics ships ZEB-Aural IQ and ZEB-VibeControl, but this model page does not claim app support."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 35,
+      "chargingIndicators": "Case LED.",
+      "notes": "35 h total; 12 mm drivers.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "12 mm drivers; splash proof."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://zebronics.com/collections/wireless-earbuds",
+        "type": "official-product",
+        "title": "Zebronics Wireless Earbuds collection",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Zebronics",
+    "companySlug": "zebronics",
+    "family": "Chime",
+    "model": "Zeb Chime R",
+    "slug": "zebronics-zeb-chime-r",
+    "generation": null,
+    "variant": "Zeb Chime R",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app documented)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Zebronics ships ZEB-Aural IQ and ZEB-VibeControl, but this model page does not claim app support."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED.",
+      "notes": "30 h total; 13 mm drivers.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers; splash proof."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://zebronics.com/collections/wireless-earbuds",
+        "type": "official-product",
+        "title": "Zebronics Wireless Earbuds collection",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Zebronics",
+    "companySlug": "zebronics",
+    "family": "Pods",
+    "model": "Zeb Pods B31",
+    "slug": "zebronics-zeb-pods-b31",
+    "generation": null,
+    "variant": "Zeb Pods B31",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app documented)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Zebronics ships ZEB-Aural IQ and ZEB-VibeControl, but this model page does not claim app support."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 28,
+      "chargingIndicators": "Case LED.",
+      "notes": "28 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "vendor.zebronics.game-mode",
+        "name": "Gaming mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://zebronics.com/collections/wireless-earbuds",
+        "type": "official-product",
+        "title": "Zebronics Wireless Earbuds collection",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Zebronics",
+    "companySlug": "zebronics",
+    "family": "Pods",
+    "model": "Zeb Pods Zi 12",
+    "slug": "zebronics-zeb-pods-zi-12",
+    "generation": null,
+    "variant": "Zeb Pods Zi 12",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app documented)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Zebronics ships ZEB-Aural IQ and ZEB-VibeControl, but this model page does not claim app support."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Case LED.",
+      "notes": "No official playtime figure captured.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Dual EQ modes",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "BT 5.3."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://zebronics.com/collections/wireless-earbuds",
+        "type": "official-product",
+        "title": "Zebronics Wireless Earbuds collection",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Playtime",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Zebronics",
+    "companySlug": "zebronics",
+    "family": "Dh'vny",
+    "model": "Zeb Dh'vny E11",
+    "slug": "zebronics-zeb-dhvny-e11",
+    "generation": null,
+    "variant": "Zeb Dh'vny E11",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app documented)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Zebronics ships ZEB-Aural IQ and ZEB-VibeControl, but this model page does not claim app support."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Case LED.",
+      "notes": "No official playtime figure captured.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Dual EQ modes",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.zebronics.game-mode",
+        "name": "Gaming mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "BT 5.4."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://zebronics.com/collections/wireless-earbuds",
+        "type": "official-product",
+        "title": "Zebronics Wireless Earbuds collection",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Playtime",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

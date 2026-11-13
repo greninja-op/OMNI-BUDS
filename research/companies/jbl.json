@@ -1,0 +1,2470 @@
+[
+  {
+    "company": "JBL",
+    "companySlug": "jbl",
+    "family": "Tour",
+    "model": "Tour Pro 3",
+    "slug": "jbl-tour-pro-3",
+    "generation": "3",
+    "variant": "Pro",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "JBL Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "jbl.stc.com"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=jbl.stc.com"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-15)",
+      "notes": "Package ID is jbl.stc.com, not com.jbl.headphones."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 8,
+      "budsHoursNoAnc": 11,
+      "caseHours": 33,
+      "chargingIndicators": "Smart Charging Case screen shows battery status; case LED.",
+      "notes": "7 h with True Adaptive ANC, 8 h with standard ANC, 11 h ANC off; 44 h total. JBL's FAQ says L/R and case are shown separately and the case reading updates when buds are placed in the case with the lid open.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 33
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "true-adaptive-anc",
+        "anc",
+        "ambient-aware",
+        "talkthru",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "True Adaptive Noise Cancelling 2.0; six mics; Personi-Fi 3.0 hearing personalization."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "True Adaptive Noise Cancelling 2.0",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.talkthru",
+        "name": "TalkThru",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "JBL Spatial 360 with head tracking",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.personi-fi",
+        "name": "Personi-Fi 3.0 hearing profile",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "Hi-Res Audio Wireless",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets and custom EQ",
+        "availability": "official-app",
+        "notes": "JBL app presets: Jazz, Bass, Vocal, Club, Studio."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.auracast",
+        "name": "Auracast via Smart Charging Case",
+        "availability": "both",
+        "notes": "Case acts as Auracast transmitter/dongle."
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio (OTA)",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Auto play/pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.smart-talk",
+        "name": "Smart Talk",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.find-my-buds",
+        "name": "Find My Buds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.fit-test",
+        "name": "Check My Best Fit / Ear Canal test",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.smart-case",
+        "name": "Smart Charging Case touchscreen controls",
+        "availability": "device-only",
+        "notes": "1.57-inch touchscreen; case can act as USB-C/AUX dongle."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/ambient or voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Case touchscreen duplicates playback, call, ANC and settings control."
+    },
+    "audio": {
+      "eqPresets": [
+        "Jazz",
+        "Bass",
+        "Vocal",
+        "Club",
+        "Studio"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "LC3"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "10.2 mm dynamic + balanced armature per bud; IP55; 6 mics."
+    },
+    "appOnlyFeatures": [
+      "personi-fi",
+      "smart-talk",
+      "find-my-buds",
+      "fit-test",
+      "ear-canal-test",
+      "gesture-customization",
+      "smart-audio-video",
+      "power-saving"
+    ],
+    "featureDeltaFromPrevious": [
+      "Smart Charging Case with 1.57-inch touchscreen replaces the Tour Pro 2 case.",
+      "Dual-driver configuration and True Adaptive ANC 2.0.",
+      "Auracast transmission from the case added.",
+      "Battery increased to 44 h total from 40 h."
+    ],
+    "sources": [
+      {
+        "url": "https://www.jbl.com/TOUR-PRO-3.html",
+        "type": "official-product",
+        "title": "JBL Tour Pro 3 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw3dd9bbf3/pdfs/JBL_Tour_Pro_3_Specsheet_EN.pdf",
+        "type": "official-product",
+        "title": "JBL Tour Pro 3 spec sheet",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.jbl.com/app.html",
+        "type": "official-support",
+        "title": "JBL Headphones app FAQ - battery display",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "Custom EQ band count not stated officially.",
+      "Wind-noise-specific mode not confirmed.",
+      "App version number not displayed."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "JBL",
+    "companySlug": "jbl",
+    "family": "Tour",
+    "model": "Tour One M3",
+    "slug": "jbl-tour-one-m3",
+    "generation": "M3",
+    "variant": "One",
+    "releaseYear": 2025,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "JBL Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "jbl.stc.com"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=jbl.stc.com"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-15)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 40,
+      "budsHoursNoAnc": 70,
+      "caseHours": null,
+      "chargingIndicators": "Voice prompt; app percentage; 5-minute charge = 5 h.",
+      "notes": "40 h ANC / 70 h no ANC; no charging case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "true-adaptive-anc",
+        "anc",
+        "ambient-aware",
+        "talkthru",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "True Adaptive Noise Cancelling 2.0; 10 microphones; Personi-Fi 3.0."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "True Adaptive Noise Cancelling 2.0",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.talkthru",
+        "name": "TalkThru",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "JBL Spatial Sound",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.personi-fi",
+        "name": "Personi-Fi 3.0",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "Hi-Res Audio Wireless (LDAC)",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets and custom EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.auracast",
+        "name": "Auracast",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Auto play/pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.smart-talk",
+        "name": "Smart Talk",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.smart-audio-video",
+        "name": "Smart Audio & Video",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.wired-mode",
+        "name": "USB-C and 3.5 mm wired listening",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/ambient / voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/Bluetooth and ANC buttons on earcup.",
+      "configurableInApp": true,
+      "notes": "Touch controls on ear cups."
+    },
+    "audio": {
+      "eqPresets": [
+        "Jazz",
+        "Bass",
+        "Vocal",
+        "Club",
+        "Studio"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "LC3"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm driver; 278 g; foldable; detachable cable."
+    },
+    "appOnlyFeatures": [
+      "personi-fi",
+      "smart-talk",
+      "smart-audio-video",
+      "gesture-customization",
+      "find-my-headphones"
+    ],
+    "featureDeltaFromPrevious": [
+      "Battery increased to 70 h no ANC / 40 h ANC from Tour One M2's 50 h / 25 h.",
+      "LDAC and Auracast added.",
+      "True Adaptive ANC 2.0 and Personi-Fi 3.0.",
+      "10 microphones."
+    ],
+    "sources": [
+      {
+        "url": "https://www.jbl.com/over-ear-headphones/TOUR-ONE-M3.html",
+        "type": "official-product",
+        "title": "JBL Tour One M3 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw8a867336/pdfs/JBL_Tour_One_M3_Specsheet_EN.pdf",
+        "type": "official-product",
+        "title": "JBL Tour One M3 spec sheet",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.jbl.com/app.html",
+        "type": "official-support",
+        "title": "JBL Headphones app FAQ",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "Head-tracking behaviour for Spatial Sound not spelled out on the spec sheet.",
+      "App version number not displayed.",
+      "Head-tracking support for JBL Spatial Sound is not stated on the official spec sheet."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "JBL",
+    "companySlug": "jbl",
+    "family": "Live",
+    "model": "Live Buds 3",
+    "slug": "jbl-live-buds-3",
+    "generation": "3",
+    "variant": "Buds",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "JBL Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "jbl.stc.com"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=jbl.stc.com"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-15)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 8,
+      "budsHoursNoAnc": 10,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; app L/R/case percentages.",
+      "notes": "40 h total. Smart Charging Case with screen on this generation.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "true-adaptive-anc",
+        "anc",
+        "ambient-aware",
+        "talkthru",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "True Adaptive Noise Cancelling; Personi-Fi 3.0."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "True Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.talkthru",
+        "name": "TalkThru",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "JBL Spatial Sound",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.personi-fi",
+        "name": "Personi-Fi 3.0",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets and custom EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio (OTA)",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Auto play/pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.smart-case",
+        "name": "Smart Charging Case screen controls",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "app.find-my-buds",
+        "name": "Find My Buds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.fit-test",
+        "name": "Check My Best Fit",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/ambient / voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Case screen also controls playback and settings."
+    },
+    "audio": {
+      "eqPresets": [
+        "Jazz",
+        "Bass",
+        "Vocal",
+        "Club",
+        "Studio"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LC3"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "10 mm driver; IP54; Smart Charging Case."
+    },
+    "appOnlyFeatures": [
+      "personi-fi",
+      "find-my-buds",
+      "fit-test",
+      "gesture-customization",
+      "smart-case"
+    ],
+    "featureDeltaFromPrevious": [
+      "Smart Charging Case with screen added versus Live Pro 2.",
+      "Personi-Fi 3.0 and spatial sound added.",
+      "Battery 40 h total."
+    ],
+    "sources": [
+      {
+        "url": "https://www.jbl.com/wireless-earbuds/LIVE-BUDS-3.html",
+        "type": "official-product",
+        "title": "JBL Live Buds 3 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.jbl.com/app.html",
+        "type": "official-support",
+        "title": "JBL Headphones app FAQ - battery display",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official spec page not directly captured; battery figures from JBL's Live 3 comparison table.",
+      "No official ANC/transparency dB figures.",
+      "Codec list (LDAC) not confirmed for this model.",
+      "App version number not displayed."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "JBL",
+    "companySlug": "jbl",
+    "family": "Live",
+    "model": "Live Beam 3",
+    "slug": "jbl-live-beam-3",
+    "generation": "3",
+    "variant": "Beam",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "JBL Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "jbl.stc.com"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=jbl.stc.com"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-15)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 10,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED; app L/R/case percentages.",
+      "notes": "JBL comparison table lists 40 h case capacity and 48 h total; the arithmetic does not reconcile, so the case figure is recorded as published.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 40
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "true-adaptive-anc",
+        "anc",
+        "ambient-aware",
+        "talkthru",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "True Adaptive ANC; Personi-Fi 3.0."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "True Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.talkthru",
+        "name": "TalkThru",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "JBL Spatial Sound",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.personi-fi",
+        "name": "Personi-Fi 3.0",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets and custom EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Auto play/pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.smart-case",
+        "name": "Smart Charging Case screen controls",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "app.find-my-buds",
+        "name": "Find My Buds",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/ambient / voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem design."
+    },
+    "audio": {
+      "eqPresets": [
+        "Jazz",
+        "Bass",
+        "Vocal",
+        "Club",
+        "Studio"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "10 mm driver; IP54; Smart Charging Case."
+    },
+    "appOnlyFeatures": [
+      "personi-fi",
+      "find-my-buds",
+      "fit-test",
+      "gesture-customization",
+      "smart-case"
+    ],
+    "featureDeltaFromPrevious": [
+      "Smart Charging Case added versus Live Free 2.",
+      "Battery 48 h total.",
+      "Spatial sound and Personi-Fi 3.0 added."
+    ],
+    "sources": [
+      {
+        "url": "https://www.jbl.com/wireless-earbuds/LIVE-BEAM-3.html",
+        "type": "official-product",
+        "title": "JBL Live Beam 3 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.jbl.com/app.html",
+        "type": "official-support",
+        "title": "JBL Headphones app FAQ",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official spec page not directly captured; battery from JBL Live 3 comparison table.",
+      "No official ANC/transparency dB figures.",
+      "App version number not displayed."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "JBL",
+    "companySlug": "jbl",
+    "family": "Live",
+    "model": "Live Flex 3",
+    "slug": "jbl-live-flex-3",
+    "generation": "3",
+    "variant": "Flex",
+    "releaseYear": 2024,
+    "formFactor": "tws-open",
+    "officialApp": {
+      "name": "JBL Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "jbl.stc.com"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=jbl.stc.com"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-15)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 10,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED; app L/R/case percentages.",
+      "notes": "50 h total (10 h + 40 h case); ANC on 7 h. Open-fit design with sealing-tip mode.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 40
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "true-adaptive-anc",
+        "anc",
+        "ambient-aware",
+        "talkthru",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "ANC works best with sealing tips; open tips trade isolation for awareness."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "True Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.talkthru",
+        "name": "TalkThru",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "JBL Spatial Sound",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.personi-fi",
+        "name": "Personi-Fi 3.0",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets and custom EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Auto play/pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.smart-case",
+        "name": "Smart Charging Case screen controls",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "app.sealing-tip-mode",
+        "name": "Sealing Ear Tip mode",
+        "availability": "official-app",
+        "notes": "Optimizes sound for open vs sealed tips."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/ambient / voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Jazz",
+        "Bass",
+        "Vocal",
+        "Club",
+        "Studio"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12 mm driver; IP54; open-fit with optional sealing tips."
+    },
+    "appOnlyFeatures": [
+      "personi-fi",
+      "sealing-tip-mode",
+      "find-my-buds",
+      "fit-test",
+      "gesture-customization",
+      "smart-case"
+    ],
+    "featureDeltaFromPrevious": [
+      "Smart Charging Case added.",
+      "Battery 50 h total.",
+      "Spatial sound and Personi-Fi 3.0 added."
+    ],
+    "sources": [
+      {
+        "url": "https://www.jbl.com/wireless-earbuds/LIVE-FLEX-3.html",
+        "type": "official-product",
+        "title": "JBL Live Flex 3 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.jbl.com/app.html",
+        "type": "official-support",
+        "title": "JBL Headphones app FAQ",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official spec page not directly captured; battery from JBL Live 3 comparison table.",
+      "No official ANC/transparency dB figures.",
+      "ANC performance with open tips not quantified.",
+      "App version number not displayed."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "JBL",
+    "companySlug": "jbl",
+    "family": "Live",
+    "model": "Live Pro 2",
+    "slug": "jbl-live-pro-2",
+    "generation": "2",
+    "variant": "Pro",
+    "releaseYear": 2022,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "JBL Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "jbl.stc.com"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=jbl.stc.com"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-15)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 8,
+      "budsHoursNoAnc": 10,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; app L/R/case percentages.",
+      "notes": "10 h ANC off / 8 h ANC / 6 h True Adaptive ANC; 40 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "true-adaptive-anc",
+        "anc",
+        "ambient-aware",
+        "talkthru",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "True Adaptive Noise Cancelling with six beamforming mics."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "True Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.talkthru",
+        "name": "TalkThru",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets and custom EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Auto play/pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.voice-aware",
+        "name": "VoiceAware call mix",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.find-my-buds",
+        "name": "Find My Buds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.smart-audio-video",
+        "name": "Smart Audio & Video",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/ambient / voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Jazz",
+        "Bass",
+        "Vocal",
+        "Club",
+        "Studio"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm driver; IPX5; Qi wireless charging case."
+    },
+    "appOnlyFeatures": [
+      "voice-aware",
+      "find-my-buds",
+      "smart-audio-video",
+      "gesture-customization"
+    ],
+    "featureDeltaFromPrevious": [
+      "True Adaptive ANC added versus Live Pro+ TWS.",
+      "Battery increased to 40 h total.",
+      "Oval Tubes design."
+    ],
+    "sources": [
+      {
+        "url": "https://support.jbl.com/us/en/product-registration/LIVE-PRO-2-TWS-.html",
+        "type": "official-product",
+        "title": "JBL Live Pro 2 product specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.jbl.com/app.html",
+        "type": "official-support",
+        "title": "JBL Headphones app FAQ",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "Custom EQ band count not stated.",
+      "App version number not displayed."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "JBL",
+    "companySlug": "jbl",
+    "family": "Tune",
+    "model": "Tune Buds",
+    "slug": "jbl-tune-buds",
+    "generation": "1",
+    "variant": "Buds",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "JBL Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "jbl.stc.com"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=jbl.stc.com"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-15)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 10,
+      "budsHoursNoAnc": 12,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; app L/R/case percentages.",
+      "notes": "48 h total (12 h + 36 h in JBL's 12+36 wording; spec table lists 30 h case with ANC on 10 h). JBL's own copy mixes 12+36 and 10+30.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient-aware",
+        "talkthru",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Active Noise Cancelling with Smart Ambient; no adaptive ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.talkthru",
+        "name": "TalkThru",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets and custom EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Auto play/pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.voice-aware",
+        "name": "VoiceAware",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.find-my-buds",
+        "name": "Find My Buds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.smart-audio-video",
+        "name": "Smart Audio & Video",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/ambient",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Jazz",
+        "Bass",
+        "Vocal",
+        "Club",
+        "Studio"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "10 mm driver; IP54; Bluetooth 5.3."
+    },
+    "appOnlyFeatures": [
+      "voice-aware",
+      "find-my-buds",
+      "smart-audio-video",
+      "gesture-customization"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.jbl.com/wireless-earbuds/TUNE-BUDS.html",
+        "type": "official-product",
+        "title": "JBL Tune Buds product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw74284437/pdfs/JBL_Tune_BUDS_%20Specsheet_EN.pdf",
+        "type": "official-product",
+        "title": "JBL Tune Buds spec sheet",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.jbl.com/app.html",
+        "type": "official-support",
+        "title": "JBL Headphones app FAQ",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "JBL's own battery copy is internally inconsistent (12+36 vs 10+30).",
+      "No official ANC/transparency dB figures.",
+      "Custom EQ band count not stated.",
+      "App version number not displayed."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "JBL",
+    "companySlug": "jbl",
+    "family": "Tune",
+    "model": "Tune Beam",
+    "slug": "jbl-tune-beam",
+    "generation": "1",
+    "variant": "Beam",
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "JBL Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "jbl.stc.com"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=jbl.stc.com"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-15)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 10,
+      "budsHoursNoAnc": 12,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; app L/R/case percentages.",
+      "notes": "48 h total (12 h + 36 h in JBL's copy; 30 h case in spec table). Same inconsistency as Tune Buds.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient-aware",
+        "talkthru",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "ANC with Smart Ambient; 4 mics."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.talkthru",
+        "name": "TalkThru",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets and custom EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Auto play/pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.voice-aware",
+        "name": "VoiceAware",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.find-my-buds",
+        "name": "Find My Buds",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/ambient",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stick-closed design."
+    },
+    "audio": {
+      "eqPresets": [
+        "Jazz",
+        "Bass",
+        "Vocal",
+        "Club",
+        "Studio"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "6 mm driver; IP54; Bluetooth 5.3."
+    },
+    "appOnlyFeatures": [
+      "voice-aware",
+      "find-my-buds",
+      "gesture-customization"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.jbl.com/wireless-earbuds/TUNE-BEAM.html",
+        "type": "official-product",
+        "title": "JBL Tune Beam product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwac55c198/pdfs/JBL_Tune_BEAM_%20Specsheet_EN.pdf",
+        "type": "official-product",
+        "title": "JBL Tune Beam spec sheet",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "JBL's battery copy is internally inconsistent (12+36 vs 10+30).",
+      "No official ANC/transparency dB figures.",
+      "Custom EQ band count not stated."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "JBL",
+    "companySlug": "jbl",
+    "family": "Tune",
+    "model": "Tune Flex",
+    "slug": "jbl-tune-flex",
+    "generation": "1",
+    "variant": "Flex",
+    "releaseYear": 2023,
+    "formFactor": "tws-open",
+    "officialApp": {
+      "name": "JBL Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "jbl.stc.com"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=jbl.stc.com"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-15)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 8,
+      "caseHours": 18,
+      "chargingIndicators": "Case LED; app L/R/case percentages.",
+      "notes": "32 h total (8 h + 24 h in JBL's copy; 18 h case in spec table); ANC on 6 h.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 18
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient-aware",
+        "talkthru",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "ANC with open or sealing tips; sealing-tip mode in app."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.talkthru",
+        "name": "TalkThru",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets and custom EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.sealing-tip-mode",
+        "name": "Sealing Ear Tip mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Auto play/pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.voice-aware",
+        "name": "VoiceAware",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.find-my-buds",
+        "name": "Find My Buds",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/ambient",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Jazz",
+        "Bass",
+        "Vocal",
+        "Club",
+        "Studio"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "12 mm driver; IPX4; no multipoint."
+    },
+    "appOnlyFeatures": [
+      "sealing-tip-mode",
+      "voice-aware",
+      "find-my-buds",
+      "gesture-customization"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.jbl.com/TUNE-FLEX.html",
+        "type": "official-product",
+        "title": "JBL Tune Flex product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://global.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw42f65cf7/pdfs/JBL_Tune%20Flex_Spec%20Sheet_EN.pdf",
+        "type": "official-product",
+        "title": "JBL Tune Flex spec sheet",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "JBL's total-hour copy conflicts with the case-hour spec (24 h vs 18 h case).",
+      "No official ANC/transparency dB figures.",
+      "Multipoint absence verified from feature list; needs confirmation across firmware."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "JBL",
+    "companySlug": "jbl",
+    "family": "Wave",
+    "model": "Wave Buds 2",
+    "slug": "jbl-wave-buds-2",
+    "generation": "2",
+    "variant": "Buds",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "JBL Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "jbl.stc.com"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=jbl.stc.com"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-15)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 8,
+      "budsHoursNoAnc": 10,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; app L/R/case percentages.",
+      "notes": "40 h total; ANC on 8 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient-aware",
+        "talkthru",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Active Noise Cancelling with Smart Ambient; 4 mics."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.talkthru",
+        "name": "TalkThru",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets and custom EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Auto play/pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.relax-mode",
+        "name": "Relax Mode (five ambient sounds)",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.voice-prompts",
+        "name": "Voice prompts in multiple languages",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/ambient / voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Jazz",
+        "Bass",
+        "Vocal",
+        "Club",
+        "Studio"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "8 mm driver; IP54; Bluetooth 5.3."
+    },
+    "appOnlyFeatures": [
+      "relax-mode",
+      "voice-prompts",
+      "find-my-buds",
+      "gesture-customization"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC added versus original Wave Buds (no ANC).",
+      "Battery increased to 10 h no ANC / 40 h total.",
+      "Multipoint and Relax Mode added."
+    ],
+    "sources": [
+      {
+        "url": "https://www.jbl.com/wireless-earbuds/WAVE-BUDS-2.html",
+        "type": "official-product",
+        "title": "JBL Wave Buds 2 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://th.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw0021b2e7/pdfs/JBL_Wave_Buds_2_Specsheet_EN.pdf",
+        "type": "official-product",
+        "title": "JBL Wave Buds 2 spec sheet",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "Custom EQ band count not stated.",
+      "App version number not displayed."
+    ],
+    "notes": "Do not confuse with the original Wave Buds, which had no ANC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "JBL",
+    "companySlug": "jbl",
+    "family": "Wave",
+    "model": "Wave Beam 2",
+    "slug": "jbl-wave-beam-2",
+    "generation": "2",
+    "variant": "Beam",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "JBL Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "jbl.stc.com"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=jbl.stc.com"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-15)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 8,
+      "budsHoursNoAnc": 10,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; app L/R/case percentages.",
+      "notes": "40 h total; ANC on 8 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient-aware",
+        "talkthru",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Active Noise Cancelling with Smart Ambient."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.talkthru",
+        "name": "TalkThru",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets and custom EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Auto play/pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.relax-mode",
+        "name": "Relax Mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.voice-prompts",
+        "name": "Voice prompts in multiple languages",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC/ambient / voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Jazz",
+        "Bass",
+        "Vocal",
+        "Club",
+        "Studio"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "8 mm driver; IP54; Bluetooth 5.3."
+    },
+    "appOnlyFeatures": [
+      "relax-mode",
+      "voice-prompts",
+      "find-my-buds",
+      "gesture-customization"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC added versus original Wave Beam (no ANC).",
+      "Battery increased to 10 h no ANC / 40 h total.",
+      "Multipoint added."
+    ],
+    "sources": [
+      {
+        "url": "https://support.jbl.com/us/en/headphones/headphones-in-ear-grp/headphones-in-ear/WAVE-BEAM-2.html",
+        "type": "official-product",
+        "title": "JBL Wave Beam 2 product specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.jbl.com/wireless-earbuds/WAVE-BEAM-2.html",
+        "type": "official-product",
+        "title": "JBL Wave Beam 2 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "Custom EQ band count not stated.",
+      "App version number not displayed."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "JBL",
+    "companySlug": "jbl",
+    "family": "Tune",
+    "model": "Tune 770NC",
+    "slug": "jbl-tune-770nc",
+    "generation": "770",
+    "variant": "NC",
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "JBL Headphones",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "jbl.stc.com"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=jbl.stc.com"
+      ],
+      "appVersionObserved": "unlisted (Google Play listing updated 2026-10-15)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 44,
+      "budsHoursNoAnc": 70,
+      "caseHours": null,
+      "chargingIndicators": "Voice prompt; 5-minute charge = 3 h.",
+      "notes": "44 h ANC / 70 h no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "adaptive-anc",
+        "anc",
+        "ambient-aware",
+        "talkthru",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Adaptive Noise Cancelling with Smart Ambient."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive Noise Cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.talkthru",
+        "name": "TalkThru",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets and custom EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio (OTA)",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "app.voice-aware",
+        "name": "VoiceAware",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.smart-audio-video",
+        "name": "Smart Audio & Video",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.wired-mode",
+        "name": "3.5 mm detachable cable",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [],
+      "physicalButtons": "Power/Bluetooth, ANC, volume up/down, play/pause.",
+      "configurableInApp": false,
+      "notes": "No touch controls."
+    },
+    "audio": {
+      "eqPresets": [
+        "Jazz",
+        "Bass",
+        "Vocal",
+        "Club",
+        "Studio"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm driver; 232 g; foldable; Bluetooth 5.3."
+    },
+    "appOnlyFeatures": [
+      "voice-aware",
+      "smart-audio-video",
+      "find-my-headphones"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adaptive ANC added versus Tune 760NC.",
+      "Battery increased to 70 h no ANC / 44 h ANC.",
+      "LE Audio support."
+    ],
+    "sources": [
+      {
+        "url": "https://www.jbl.com/over-ear-headphones/TUNE770NC.html",
+        "type": "official-product",
+        "title": "JBL Tune 770NC product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://global.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw84f6db2c/pdfs/JBL%20Tune%20770NC_Specsheet_EN.pdf",
+        "type": "official-product",
+        "title": "JBL Tune 770NC spec sheet",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "Custom EQ band count not stated.",
+      "App version number not displayed."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

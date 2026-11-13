@@ -16,6 +16,22 @@ enum class AncProfileType(val title: String, val description: String) {
         "Profile C (Legacy Bitmask)",
         "Off: 0x01 | ANC: 0x02 | Transparency: 0x04",
     ),
+    PROFILE_D(
+        "Profile D (realme BES)",
+        "Off: 0x01 | Transparency: 0x02 | ANC: 0x04",
+    ),
+    PROFILE_E(
+        "Profile E (realme Buds T300)",
+        "Off: 0x02 | Transparency: 0x01 | ANC: 0x04",
+    ),
+    PROFILE_F(
+        "Profile F (realme Buds T300 direct)",
+        "Off: 0x00 | Transparency: 0x01 | ANC: 0x04",
+    ),
+    PROFILE_G(
+        "Profile G (realme Buds T300, measured effect)",
+        "Off: 0x08 | Transparency: 0x02 | ANC: 0x01",
+    ),
     CUSTOM(
         "Custom Calibrated",
         "User-calibrated hardware byte mapping",
@@ -65,12 +81,46 @@ data class AncByteMapping(
             transByte = 0x04,
             profileType = AncProfileType.PROFILE_C,
         )
+        val PROFILE_D = AncByteMapping(
+            offByte = 0x01,
+            ancByte = 0x04,
+            transByte = 0x02,
+            profileType = AncProfileType.PROFILE_D,
+        )
+        val PROFILE_E = AncByteMapping(
+            offByte = 0x02,
+            ancByte = 0x04,
+            transByte = 0x01,
+            profileType = AncProfileType.PROFILE_E,
+        )
+        val PROFILE_F = AncByteMapping(
+            offByte = 0x00,
+            ancByte = 0x04,
+            transByte = 0x01,
+            profileType = AncProfileType.PROFILE_F,
+        )
+        // Measured on a realme Buds T300 by the effect the user hears: 0x01 gives ANC,
+        // 0x02 gives Transparency, 0x08 gives Ambient/Normal. Writing 0x04 or 0x00 changes
+        // nothing, and the buds report the same values back.
+        // The firmware's activation sound does NOT match the effect on this unit: it plays
+        // the ANC sound for 0x08 and the ambient sound for 0x01, also on a stem press with
+        // no app involved. The app follows the effect. Do not "fix" this by swapping the bytes.
+        val PROFILE_G = AncByteMapping(
+            offByte = 0x08,
+            ancByte = 0x01,
+            transByte = 0x02,
+            profileType = AncProfileType.PROFILE_G,
+        )
 
         fun forType(type: AncProfileType): AncByteMapping {
             return when (type) {
                 AncProfileType.PROFILE_A -> PROFILE_A
                 AncProfileType.PROFILE_B -> PROFILE_B
                 AncProfileType.PROFILE_C -> PROFILE_C
+                AncProfileType.PROFILE_D -> PROFILE_D
+                AncProfileType.PROFILE_E -> PROFILE_E
+                AncProfileType.PROFILE_F -> PROFILE_F
+                AncProfileType.PROFILE_G -> PROFILE_G
                 AncProfileType.CUSTOM -> PROFILE_A
             }
         }
@@ -91,27 +141,39 @@ object OpcodeRemapMatrix {
         }
     }
 
-    fun getMapping(address: String): AncByteMapping {
-        val p = prefs ?: return AncByteMapping.PROFILE_A
-        val typeStr = p.getString("type_$address", AncProfileType.PROFILE_A.name)
+    fun getMapping(address: String): AncByteMapping =
+        getMapping(address, AncProfileType.PROFILE_A)
+
+    /**
+     * Reads the stored mapping, falling back to [defaultType] when the user has
+     * never chosen one for this device. Different protocols use different byte
+     * orders, so the caller supplies the correct default.
+     */
+    fun getMapping(address: String, defaultType: AncProfileType): AncByteMapping {
+        val p = prefs ?: return AncByteMapping.forType(defaultType)
+        val typeStr = p.getString("v2_type_$address", defaultType.name)
         val type = try {
-            AncProfileType.valueOf(typeStr ?: AncProfileType.PROFILE_A.name)
+            AncProfileType.valueOf(typeStr ?: defaultType.name)
         } catch (_: Exception) {
-            AncProfileType.PROFILE_A
+            defaultType
         }
 
         if (type == AncProfileType.CUSTOM) {
-            val off = p.getInt("custom_off_$address", 0x00).toByte()
-            val anc = p.getInt("custom_anc_$address", 0x01).toByte()
-            val trans = p.getInt("custom_trans_$address", 0x02).toByte()
+            val off = p.getInt("v2_custom_off_$address", 0x00).toByte()
+            val anc = p.getInt("v2_custom_anc_$address", 0x01).toByte()
+            val trans = p.getInt("v2_custom_trans_$address", 0x02).toByte()
             return AncByteMapping(offByte = off, ancByte = anc, transByte = trans, profileType = AncProfileType.CUSTOM)
         }
 
         return AncByteMapping.forType(type)
     }
 
+    /** True when this device has an explicitly stored profile or custom bytes. */
+    fun hasStoredMapping(address: String): Boolean =
+        prefs?.contains("v2_type_$address") == true
+
     fun setProfile(address: String, type: AncProfileType): AncByteMapping {
-        prefs?.edit()?.putString("type_$address", type.name)?.apply()
+        prefs?.edit()?.putString("v2_type_$address", type.name)?.apply()
         return getMapping(address)
     }
 
@@ -120,7 +182,11 @@ object OpcodeRemapMatrix {
         val nextType = when (current.profileType) {
             AncProfileType.PROFILE_A -> AncProfileType.PROFILE_B
             AncProfileType.PROFILE_B -> AncProfileType.PROFILE_C
-            AncProfileType.PROFILE_C -> AncProfileType.PROFILE_A
+            AncProfileType.PROFILE_C -> AncProfileType.PROFILE_D
+            AncProfileType.PROFILE_D -> AncProfileType.PROFILE_E
+            AncProfileType.PROFILE_E -> AncProfileType.PROFILE_F
+            AncProfileType.PROFILE_F -> AncProfileType.PROFILE_G
+            AncProfileType.PROFILE_G -> AncProfileType.PROFILE_A
             AncProfileType.CUSTOM -> AncProfileType.PROFILE_A
         }
         return setProfile(address, nextType)
@@ -128,10 +194,10 @@ object OpcodeRemapMatrix {
 
     fun setCustomMapping(address: String, off: Byte, anc: Byte, trans: Byte): AncByteMapping {
         prefs?.edit()
-            ?.putString("type_$address", AncProfileType.CUSTOM.name)
-            ?.putInt("custom_off_$address", off.toInt() and 0xFF)
-            ?.putInt("custom_anc_$address", anc.toInt() and 0xFF)
-            ?.putInt("custom_trans_$address", trans.toInt() and 0xFF)
+            ?.putString("v2_type_$address", AncProfileType.CUSTOM.name)
+            ?.putInt("v2_custom_off_$address", off.toInt() and 0xFF)
+            ?.putInt("v2_custom_anc_$address", anc.toInt() and 0xFF)
+            ?.putInt("v2_custom_trans_$address", trans.toInt() and 0xFF)
             ?.apply()
         return AncByteMapping(offByte = off, ancByte = anc, transByte = trans, profileType = AncProfileType.CUSTOM)
     }

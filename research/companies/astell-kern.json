@@ -1,0 +1,358 @@
+[
+  {
+    "company": "Astell&Kern",
+    "companySlug": "astell-kern",
+    "family": "UW100",
+    "model": "AK UW100",
+    "slug": "astell-kern-ak-uw100",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "AK Control",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "AK Control shows product/battery status and Bluetooth state, controls four ambient levels, EQ, wear detection, tap actions and DAC filters, and performs OTA updates."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 18,
+      "chargingIndicators": "Case LEDs blink blue/green while charging and turn off when full; exact level is only in the app.",
+      "notes": "Official: up to 6 h buds, 24 h total with case. No ANC, so there is no ANC runtime split.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 18
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "Ambient 1",
+        "Ambient 2",
+        "Ambient 3",
+        "Ambient 4"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. Astell&Kern relies on passive noise isolation (PNI) and offers four ambient-mode levels."
+    },
+    "features": [
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode (4 levels)",
+        "availability": "both",
+        "notes": "Single tap on the left bud cycles ambient modes."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "10-band EQ",
+        "availability": "official-app",
+        "notes": "Presets plus custom EQ."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Proximity wear sensor",
+        "availability": "both",
+        "notes": "Auto play/pause; can be disabled in the app."
+      },
+      {
+        "id": "controls.customizable",
+        "name": "Customisable touch controls",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multi-point",
+        "availability": "device-only",
+        "notes": "Two devices."
+      },
+      {
+        "id": "vendor.astellkern.dac-filter",
+        "name": "DAC filter selection",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap (left)",
+          "action": "Cycle ambient modes",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Single tap (right)",
+          "action": "Play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Triple tap (left)",
+          "action": "Voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Capacitive touch on both buds."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Single Knowles balanced-armature driver, AKM AK4332ECB 32-bit DAC, QCC5141, Bluetooth 5.2, IPX4. No ANC."
+    },
+    "appOnlyFeatures": [
+      "10-band EQ",
+      "Ambient levels",
+      "Tap remapping",
+      "Wear detection toggle",
+      "DAC filter",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.ecoustics.com/products/astell-kern-uw100-mk-ii-true-wireless-earphones/",
+        "type": "official-product",
+        "title": "Astell&Kern UW100 / UW100 MK II comparison table",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.bhphotovideo.com/lit_files/1152389.pdf",
+        "type": "official-manual",
+        "title": "AK UW100 MK II instruction book (AK Control app and battery behaviour)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "First-generation UW100 battery layout in AK Control is not documented; L/R split versus combined is unknown.",
+      "Case battery visibility while buds are out is inferred as last-known because the case has no independent radio.",
+      "ANC dB is not applicable; PNI attenuation is not published as a single figure."
+    ],
+    "notes": "First-generation UW100. Uses PNI instead of ANC; the app is the only place to read an exact percentage.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Astell&Kern",
+    "companySlug": "astell-kern",
+    "family": "UW100",
+    "model": "AK UW100 MK II",
+    "slug": "astell-kern-ak-uw100-mk-ii",
+    "generation": "2",
+    "variant": "MK II",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "AK Control",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "AK Control shows battery status, ambient level, EQ, wear detection, tap actions, DAC filter and language; OTA firmware."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9.5,
+      "caseHours": 19.5,
+      "chargingIndicators": "Case LEDs blink blue/green during charging and turn off when full; exact level only in the app.",
+      "notes": "Official: 9.5 h buds, 29 h total. A 10-minute charge gives about 1 h. Wireless charging supported.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "Ambient 1",
+        "Ambient 2",
+        "Ambient 3",
+        "Ambient 4"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. Passive noise isolation only, with four ambient levels."
+    },
+    "features": [
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode (4 levels)",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "10-band EQ",
+        "availability": "official-app",
+        "notes": "Presets and custom profiles."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Proximity wear sensor",
+        "availability": "both",
+        "notes": "Auto play/pause; toggle in app."
+      },
+      {
+        "id": "controls.customizable",
+        "name": "Customisable touch controls",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multi-point",
+        "availability": "device-only",
+        "notes": "Two sources, e.g. tablet playback plus phone calls."
+      },
+      {
+        "id": "vendor.astellkern.dac-filter",
+        "name": "DAC filter selection",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap (left)",
+          "action": "Cycle ambient modes",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Single tap (right)",
+          "action": "Play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Triple tap (left)",
+          "action": "Voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Capacitive touch."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Knowles BA, AKM AK4332ECB, QCC5141, Bluetooth 5.2, IPX4, 7 g per bud."
+    },
+    "appOnlyFeatures": [
+      "10-band EQ",
+      "Ambient levels",
+      "Tap remapping",
+      "Wear detection toggle",
+      "DAC filter",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Battery raised from 6 h to 9.5 h buds and 24 h to 29 h total",
+      "Smaller charging case",
+      "10-minute charge gives about 1 h playback"
+    ],
+    "sources": [
+      {
+        "url": "https://astellnkern.co.uk/products/ak-uw100mkii",
+        "type": "official-regional",
+        "title": "AK UW100 MK II product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.bhphotovideo.com/lit_files/1152389.pdf",
+        "type": "official-manual",
+        "title": "AK UW100 MK II instruction book",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "AK Control's battery layout (split L/R versus combined) is not documented; the manual only says the exact level is in the app.",
+      "Case reading while buds are worn is inferred as last-known; the case has no independent radio.",
+      "Transparency/ambient dB is not published."
+    ],
+    "notes": "No ANC is a deliberate product decision, not an omission: Astell&Kern markets passive isolation instead. The app is mandatory for firmware and exact battery.",
+    "researchedAt": "2026-11-10"
+  }
+]

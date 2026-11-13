@@ -1,0 +1,860 @@
+[
+  {
+    "company": "Corsair",
+    "companySlug": "corsair",
+    "family": "Virtuoso",
+    "model": "Corsair Virtuoso Max Wireless",
+    "slug": "corsair-virtuoso-max-wireless",
+    "generation": "Max",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Corsair iCUE",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "iCUE for EQ, ANC, Dolby Atmos, RGB and firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 60,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; battery status in iCUE.",
+      "notes": "Up to 60 h with RGB off; ANC-on figure not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Active Noise Cancellation plus transparency/ambient mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancellation",
+        "availability": "device-only"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz wireless",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Simultaneous 2.4 GHz + Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Dolby Atmos",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "iCUE EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.corsair.rgb",
+        "name": "RGB lighting",
+        "availability": "official-app"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Detachable noise-cancelling mic",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume wheel",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "ANC button",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Mute button",
+          "action": "Mic mute",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup volume wheel, ANC and mute controls.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "50 mm graphene drivers; Dolby Atmos on PC."
+    },
+    "appOnlyFeatures": [
+      "Dolby Atmos",
+      "EQ",
+      "ANC tuning",
+      "RGB"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC added to Virtuoso line",
+      "60 h battery",
+      "Dolby Atmos",
+      "Bluetooth + 2.4 GHz"
+    ],
+    "sources": [
+      {
+        "url": "https://www.corsair.com/us/en/p/gaming-headsets/ca-9011372-ww/virtuoso-max-wireless-gaming-headset-carbon-ca-9011372-ww",
+        "type": "official-product",
+        "title": "Virtuoso Max Wireless",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on battery hours not published",
+      "Bluetooth codecs not published",
+      "ANC attenuation in dB not published"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Corsair",
+    "companySlug": "corsair",
+    "family": "Virtuoso",
+    "model": "Corsair Virtuoso Max Wireless for Xbox",
+    "slug": "corsair-virtuoso-max-wireless-xbox",
+    "generation": "Max",
+    "variant": "Xbox",
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Corsair iCUE",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Same iCUE feature set; Xbox-specific wireless adapter."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 60,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; iCUE battery status.",
+      "notes": "60 h with RGB off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "ANC plus transparency."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancellation",
+        "availability": "device-only"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz Xbox wireless",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Simultaneous 2.4 GHz + Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Dolby Atmos",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "iCUE EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume wheel",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "ANC button",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Earcup controls.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "50 mm graphene drivers."
+    },
+    "appOnlyFeatures": [
+      "Dolby Atmos",
+      "EQ",
+      "ANC tuning"
+    ],
+    "featureDeltaFromPrevious": [
+      "Xbox wireless adapter",
+      "Same Virtuoso Max platform"
+    ],
+    "sources": [
+      {
+        "url": "https://www.corsair.com/us/en/p/gaming-headsets/ca-9011374-ww/virtuoso-max-wireless-for-xbox-gaming-headset-carbon-ca-9011374-ww",
+        "type": "official-product",
+        "title": "Virtuoso Max Wireless for Xbox",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No separate spec page parsed; values inherited from Virtuoso Max",
+      "Bluetooth codecs not published"
+    ],
+    "notes": "Xbox SKU of Virtuoso Max.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Corsair",
+    "companySlug": "corsair",
+    "family": "Virtuoso",
+    "model": "Corsair Virtuoso RGB Wireless XT",
+    "slug": "corsair-virtuoso-rgb-wireless-xt",
+    "generation": "XT",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Corsair iCUE",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "iCUE for EQ, RGB, surround and firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 20,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Up to 20 h; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz Slipstream wireless",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.3.5mm",
+        "name": "3.5 mm wired",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Dolby Atmos / 7.1 surround",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "iCUE EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.corsair.rgb",
+        "name": "RGB lighting",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume wheel",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mute button",
+          "action": "Mic mute",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup volume wheel, mute and power.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "50 mm neodymium drivers; 24-bit/96 kHz USB DAC; hi-res via USB."
+    },
+    "appOnlyFeatures": [
+      "Dolby Atmos",
+      "EQ",
+      "RGB"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bluetooth added to Virtuoso",
+      "3.5 mm + USB + 2.4 GHz",
+      "24-bit/96 kHz DAC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.corsair.com/us/en/p/gaming-headsets/ca-9011188-na/virtuoso-rgb-wireless-xt-high-fidelity-gaming-headset-slate-ca-9011188-na",
+        "type": "official-product",
+        "title": "Virtuoso RGB Wireless XT",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth codecs not published",
+      "EQ band count not published"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Corsair",
+    "companySlug": "corsair",
+    "family": "HS80",
+    "model": "Corsair HS80 Max Wireless",
+    "slug": "corsair-hs80-max-wireless",
+    "generation": "HS80",
+    "variant": "Max",
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Corsair iCUE",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "iCUE for EQ, Dolby Atmos, RGB, SoundID and firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 65,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; 15 min = 6 h.",
+      "notes": "Official: 24 h with RGB, 65 h without RGB on 2.4 GHz, and 130 h over Bluetooth. No ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz Slipstream",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Dolby Atmos",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "iCUE EQ + Sonarworks SoundID",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.corsair.rgb",
+        "name": "RGB lighting",
+        "availability": "official-app"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Omnidirectional mic",
+        "availability": "device-only"
+      },
+      {
+        "id": "power.quick-charge",
+        "name": "15 min = 6 h",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume wheel",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Source button",
+          "action": "Switch 2.4 GHz / Bluetooth",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mute button",
+          "action": "Mic mute",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup volume wheel, mute, source and power.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "50 mm drivers; Dolby Atmos on PC; floating headband."
+    },
+    "appOnlyFeatures": [
+      "Dolby Atmos",
+      "EQ",
+      "SoundID",
+      "RGB"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bluetooth added to HS80",
+      "130 h Bluetooth battery",
+      "65 h 2.4 GHz without RGB",
+      "Dolby Atmos"
+    ],
+    "sources": [
+      {
+        "url": "https://www.corsair.com/us/en/p/gaming-headsets/ca-9011295-na/hs80-max-wireless-gaming-headset-steel-gray-ca-9011295-na",
+        "type": "official-product",
+        "title": "HS80 Max Wireless",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth codecs not published",
+      "EQ band count not published",
+      "ANC not offered"
+    ],
+    "notes": "The 130 h Bluetooth figure is unusually high for a gaming headset and worth surfacing in the battery UI.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Corsair",
+    "companySlug": "corsair",
+    "family": "HS80",
+    "model": "Corsair HS80 V2 Max Wireless",
+    "slug": "corsair-hs80-v2-max-wireless",
+    "generation": "HS80 V2",
+    "variant": "Max",
+    "releaseYear": 2025,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Corsair iCUE",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "iCUE for EQ, Dolby Atmos and firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 110,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; 15 min = 6 h.",
+      "notes": "Up to 110 h wireless; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz wireless",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Simultaneous 2.4 GHz + Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Dolby Atmos",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "iCUE EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "mic.enc",
+        "name": "10 mm broadcast-grade mic capsule",
+        "availability": "device-only"
+      },
+      {
+        "id": "power.quick-charge",
+        "name": "15 min = 6 h",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume wheel",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mute button",
+          "action": "Mic mute",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup volume wheel, mute and power.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "50 mm non-Newtonian laminate drivers; memory-foam cushions."
+    },
+    "appOnlyFeatures": [
+      "Dolby Atmos",
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "110 h battery",
+      "Simultaneous 2.4 GHz + Bluetooth",
+      "50 mm non-Newtonian drivers",
+      "10 mm mic capsule"
+    ],
+    "sources": [
+      {
+        "url": "https://www.corsair.com/us/en/p/gaming-headsets/ca-9011414-ww/hs80-v2-max-wireless-gaming-headset-ca-9011414-ww",
+        "type": "official-product",
+        "title": "HS80 V2 Max Wireless",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth codecs not published",
+      "EQ band count not published",
+      "ANC not offered"
+    ],
+    "notes": "2025 refresh of the HS80 Max.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Corsair",
+    "companySlug": "corsair",
+    "family": "HS70",
+    "model": "Corsair HS70 Bluetooth",
+    "slug": "corsair-hs70-bluetooth",
+    "generation": "HS70",
+    "variant": "Bluetooth",
+    "releaseYear": 2020,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Corsair iCUE",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "iCUE support is limited on the Bluetooth model; most controls are on-device."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 20,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Up to 20 h over Bluetooth; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.3.5mm",
+        "name": "3.5 mm wired",
+        "availability": "device-only"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Detachable unidirectional mic",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume wheel",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mute button",
+          "action": "Mic mute",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup volume wheel, mute and power.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "50 mm drivers; Bluetooth + 3.5 mm."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Bluetooth added to HS70",
+      "Detachable mic",
+      "20 h battery"
+    ],
+    "sources": [
+      {
+        "url": "https://www.corsair.com/us/en/p/gaming-headsets/ca-9011211-na/hs70-bluetooth-gaming-headset-carbon-ca-9011211-na",
+        "type": "official-product",
+        "title": "HS70 Bluetooth",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Bluetooth codecs not published",
+      "Multipoint not supported",
+      "iCUE feature support limited"
+    ],
+    "notes": "Recent budget Bluetooth headset; retained for coverage.",
+    "researchedAt": "2026-11-10"
+  }
+]

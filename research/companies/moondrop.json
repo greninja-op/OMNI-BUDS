@@ -1,0 +1,2110 @@
+[
+  {
+    "company": "MOONDROP",
+    "companySlug": "moondrop",
+    "family": "MOCA",
+    "model": "MOCA",
+    "slug": "moondrop-moca",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "MOONDROP Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://moondroplab.com/en/moondrop-link"
+      ],
+      "appVersionObserved": null,
+      "notes": "Official MOONDROP companion app. Product pages document EQ, custom touch controls, ANC/transparency switching and firmware/settings for supported TWS models. Package ID not verified from this region."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 15,
+      "chargingIndicators": "USB-C charging; case LED; app/OS battery readout.",
+      "notes": "Battery hours are the official Moondrop figures at the codec stated on the product page. Case value is last-known while buds are out because the case has no independent radio.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": 40,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid wide-band ANC (40 dB)",
+        "availability": "both",
+        "notes": "40 dB hybrid ANC claimed by Moondrop."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Photo-sensor wear detection",
+        "availability": "both",
+        "notes": "Remove to pause, insert to play."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": "Not listed in the MOCA specification block."
+      },
+      {
+        "id": "power.wireless-charging",
+        "name": "Wireless charging case",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "60 ms low-latency game mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.bass-tunings",
+        "name": "Five bass tunings",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap (left/right)",
+          "action": "Previous/next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Voice assistant and/or ANC mode cycle",
+          "configurableInApp": true,
+          "notes": "Exact mapping is model-specific and customisable in MOONDROP Link."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch mapping is customisable in MOONDROP Link."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LC3"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "TiN ceramic dome dynamic driver. LC3 support is listed; no LDAC."
+    },
+    "appOnlyFeatures": [
+      "EQ / tuning",
+      "Custom touch mapping",
+      "ANC mode control",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://moondroplab.com/en/products/moca/",
+        "type": "official-product",
+        "title": "MOONDROP MOCA True Wireless Stereo",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://moondroplab.com/en/moondrop-link",
+        "type": "official-support",
+        "title": "MOONDROP Link app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery layout in MOONDROP Link is not documented; split/separate is inferred.",
+      "Multipoint is not listed; treat as unconfirmed.",
+      "No official ANC-on runtime published."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "MOONDROP",
+    "companySlug": "moondrop",
+    "family": "PUDDING",
+    "model": "PUDDING",
+    "slug": "moondrop-pudding",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "MOONDROP Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://moondroplab.com/en/moondrop-link"
+      ],
+      "appVersionObserved": null,
+      "notes": "Official MOONDROP companion app. Product pages document EQ, custom touch controls, ANC/transparency switching and firmware/settings for supported TWS models. Package ID not verified from this region."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 12.5,
+      "caseHours": 41,
+      "chargingIndicators": "USB-C charging; case LED; app/OS battery readout.",
+      "notes": "Battery hours are the official Moondrop figures at the codec stated on the product page. Case value is last-known while buds are out because the case has no independent radio.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "MOONDROP Link EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "Low-latency game mode",
+        "availability": "both",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap (left/right)",
+          "action": "Previous/next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Voice assistant and/or ANC mode cycle",
+          "configurableInApp": true,
+          "notes": "Exact mapping is model-specific and customisable in MOONDROP Link."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch mapping is customisable in MOONDROP Link."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "LHDC support listed; no LDAC."
+    },
+    "appOnlyFeatures": [
+      "EQ / tuning",
+      "Custom touch mapping",
+      "ANC mode control",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://moondroplab.com/en/products/pudding/",
+        "type": "official-product",
+        "title": "MOONDROP PUDDING ANC True Wireless Stereo",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://moondroplab.com/en/moondrop-link",
+        "type": "official-support",
+        "title": "MOONDROP Link app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC depth and modes are not published.",
+      "Battery layout in MOONDROP Link is inferred.",
+      "No ANC-on runtime published."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "MOONDROP",
+    "companySlug": "moondrop",
+    "family": "GOLDEN AGES",
+    "model": "GOLDEN AGES 2",
+    "slug": "moondrop-golden-ages-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "MOONDROP Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://moondroplab.com/en/moondrop-link"
+      ],
+      "appVersionObserved": null,
+      "notes": "Official MOONDROP companion app. Product pages document EQ, custom touch controls, ANC/transparency switching and firmware/settings for supported TWS models. Package ID not verified from this region."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 24,
+      "chargingIndicators": "USB-C charging; case LED; app/OS battery readout.",
+      "notes": "Battery hours are the official Moondrop figures at the codec stated on the product page. Case value is last-known while buds are out because the case has no independent radio.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "driver.planar",
+        "name": "Planar driver",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "MOONDROP Link EQ",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap (left/right)",
+          "action": "Previous/next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Voice assistant and/or ANC mode cycle",
+          "configurableInApp": true,
+          "notes": "Exact mapping is model-specific and customisable in MOONDROP Link."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch mapping is customisable in MOONDROP Link."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "LHDC",
+        "LC3"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "Planar magnetic TWS. LDAC, LHDC and LC3 listed."
+    },
+    "appOnlyFeatures": [
+      "EQ / tuning",
+      "Custom touch mapping",
+      "ANC mode control",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://moondroplab.com/en/products/golden-ages-2/",
+        "type": "official-product",
+        "title": "MOONDROP GOLDEN AGES 2 Planar True Wireless Stereo",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://moondroplab.com/en/moondrop-link",
+        "type": "official-support",
+        "title": "MOONDROP Link app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No ANC.",
+      "Battery layout in MOONDROP Link is inferred.",
+      "No IP rating published."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "MOONDROP",
+    "companySlug": "moondrop",
+    "family": "SPACE TRAVEL",
+    "model": "SPACE TRAVEL 2 ULTRA",
+    "slug": "moondrop-space-travel-2-ultra",
+    "generation": "2",
+    "variant": "Ultra",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "MOONDROP Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://moondroplab.com/en/moondrop-link"
+      ],
+      "appVersionObserved": null,
+      "notes": "Official MOONDROP companion app. Product pages document EQ, custom touch controls, ANC/transparency switching and firmware/settings for supported TWS models. Package ID not verified from this region."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 24,
+      "chargingIndicators": "USB-C charging; case LED; app/OS battery readout.",
+      "notes": "Battery hours are the official Moondrop figures at the codec stated on the product page. Case value is last-known while buds are out because the case has no independent radio.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": null,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "driver.planar",
+        "name": "Planar driver",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "MOONDROP Link EQ",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap (left/right)",
+          "action": "Previous/next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Voice assistant and/or ANC mode cycle",
+          "configurableInApp": true,
+          "notes": "Exact mapping is model-specific and customisable in MOONDROP Link."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch mapping is customisable in MOONDROP Link."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "Planar driver; LDAC is the headline codec."
+    },
+    "appOnlyFeatures": [
+      "EQ / tuning",
+      "Custom touch mapping",
+      "ANC mode control",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://moondroplab.com/en/products/space-travel-2-ultra/",
+        "type": "official-product",
+        "title": "MOONDROP SPACE TRAVEL 2 ULTRA Planar True Wireless Stereo",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://moondroplab.com/en/moondrop-link",
+        "type": "official-support",
+        "title": "MOONDROP Link app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official page does not state ANC, transparency or IP rating for the ULTRA; unverified.",
+      "Battery layout in MOONDROP Link is inferred.",
+      "No ANC-on runtime published."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "MOONDROP",
+    "companySlug": "moondrop",
+    "family": "SPACE TRAVEL",
+    "model": "SPACE TRAVEL 2",
+    "slug": "moondrop-space-travel-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "MOONDROP Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://moondroplab.com/en/moondrop-link"
+      ],
+      "appVersionObserved": null,
+      "notes": "Official MOONDROP companion app. Product pages document EQ, custom touch controls, ANC/transparency switching and firmware/settings for supported TWS models. Package ID not verified from this region."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 24,
+      "chargingIndicators": "USB-C charging; case LED; app/OS battery readout.",
+      "notes": "Battery hours are the official Moondrop figures at the codec stated on the product page. Case value is last-known while buds are out because the case has no independent radio.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Wide-band ANC with NPU AI noise cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "55 ms low-latency game mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "MOONDROP app EQ and tune sharing",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap (left/right)",
+          "action": "Previous/next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Voice assistant and/or ANC mode cycle",
+          "configurableInApp": true,
+          "notes": "Exact mapping is model-specific and customisable in MOONDROP Link."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch mapping is customisable in MOONDROP Link."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Single feedforward ANC. New MOONDROP app adds DSP graphic EQ and tune community."
+    },
+    "appOnlyFeatures": [
+      "EQ / tuning",
+      "Custom touch mapping",
+      "ANC mode control",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://moondroplab.com/en/products/space-travel-2/",
+        "type": "official-product",
+        "title": "MOONDROP SPACE TRAVEL 2 True Wireless Stereo",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://moondroplab.com/en/moondrop-link",
+        "type": "official-support",
+        "title": "MOONDROP Link app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC depth not published.",
+      "Battery layout in MOONDROP Link is inferred.",
+      "No ANC-on runtime published."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "MOONDROP",
+    "companySlug": "moondrop",
+    "family": "PILL",
+    "model": "PILL",
+    "slug": "moondrop-pill",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "MOONDROP Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://moondroplab.com/en/moondrop-link"
+      ],
+      "appVersionObserved": null,
+      "notes": "Official MOONDROP companion app. Product pages document EQ, custom touch controls, ANC/transparency switching and firmware/settings for supported TWS models. Package ID not verified from this region."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 20,
+      "chargingIndicators": "USB-C charging; case LED; app/OS battery readout.",
+      "notes": "Battery hours are the official Moondrop figures at the codec stated on the product page. Case value is last-known while buds are out because the case has no independent radio.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "form.open-ear",
+        "name": "Open-ear clip design",
+        "availability": "device-only",
+        "notes": "Dipole directional sound transmission to reduce leakage."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "55 ms game mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "MOONDROP app EQ / bass control",
+        "availability": "official-app",
+        "notes": "Three bass tunings."
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap (left/right)",
+          "action": "Previous/next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Voice assistant and/or ANC mode cycle",
+          "configurableInApp": true,
+          "notes": "Exact mapping is model-specific and customisable in MOONDROP Link."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch mapping is customisable in MOONDROP Link."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "13 mm dynamic driver; open-ear tuning. No ANC; ENC call noise cancellation only."
+    },
+    "appOnlyFeatures": [
+      "EQ / tuning",
+      "Custom touch mapping",
+      "ANC mode control",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://moondroplab.com/en/products/pill/",
+        "type": "official-product",
+        "title": "MOONDROP PILL OWS Ear-clip Earbuds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://moondroplab.com/en/moondrop-link",
+        "type": "official-support",
+        "title": "MOONDROP Link app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery layout in MOONDROP Link is inferred.",
+      "Codec list is SBC/AAC only on the official page."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "MOONDROP",
+    "companySlug": "moondrop",
+    "family": "ULTRASONIC",
+    "model": "ULTRASONIC",
+    "slug": "moondrop-ultrasonic",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "MOONDROP Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://moondroplab.com/en/moondrop-link"
+      ],
+      "appVersionObserved": null,
+      "notes": "Official MOONDROP companion app. Product pages document EQ, custom touch controls, ANC/transparency switching and firmware/settings for supported TWS models. Package ID not verified from this region."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 18,
+      "chargingIndicators": "USB-C charging; case LED; app/OS battery readout.",
+      "notes": "Battery hours are the official Moondrop figures at the codec stated on the product page. Case value is last-known while buds are out because the case has no independent radio.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": null,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "driver.hybrid",
+        "name": "13 mm dynamic + balanced-armature tweeter",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC / LC3",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "55 ms game mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "MOONDROP Link EQ",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap (left/right)",
+          "action": "Previous/next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Voice assistant and/or ANC mode cycle",
+          "configurableInApp": true,
+          "notes": "Exact mapping is model-specific and customisable in MOONDROP Link."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch mapping is customisable in MOONDROP Link."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LC3",
+        "LDAC"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "Hybrid two-way crossover; sapphire diaphragm dynamic driver."
+    },
+    "appOnlyFeatures": [
+      "EQ / tuning",
+      "Custom touch mapping",
+      "ANC mode control",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://moondroplab.com/en/products/ultrasonic/",
+        "type": "official-product",
+        "title": "MOONDROP ULTRASONIC True Wireless Stereo",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://moondroplab.com/en/moondrop-link",
+        "type": "official-support",
+        "title": "MOONDROP Link app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official page does not state ANC; unverified.",
+      "Battery layout in MOONDROP Link is inferred.",
+      "No IP rating published."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "MOONDROP",
+    "companySlug": "moondrop",
+    "family": "BLOCK",
+    "model": "BLOCK",
+    "slug": "moondrop-block",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "MOONDROP Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://moondroplab.com/en/moondrop-link"
+      ],
+      "appVersionObserved": null,
+      "notes": "Official MOONDROP companion app. Product pages document EQ, custom touch controls, ANC/transparency switching and firmware/settings for supported TWS models. Package ID not verified from this region."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 15,
+      "chargingIndicators": "USB-C charging; case LED; app/OS battery readout.",
+      "notes": "Battery hours are the official Moondrop figures at the codec stated on the product page. Case value is last-known while buds are out because the case has no independent radio.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "form.flat-head",
+        "name": "Semi-in-ear flat-head design",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "MOONDROP Link EQ",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap (left/right)",
+          "action": "Previous/next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Voice assistant and/or ANC mode cycle",
+          "configurableInApp": true,
+          "notes": "Exact mapping is model-specific and customisable in MOONDROP Link."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch mapping is customisable in MOONDROP Link."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "Flat-head earbud shape; no ANC."
+    },
+    "appOnlyFeatures": [
+      "EQ / tuning",
+      "Custom touch mapping",
+      "ANC mode control",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://moondroplab.com/en/products/block/",
+        "type": "official-product",
+        "title": "MOONDROP BLOCK True Wireless Stereo (Earbuds)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://moondroplab.com/en/moondrop-link",
+        "type": "official-support",
+        "title": "MOONDROP Link app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No ANC/transparency.",
+      "Battery layout in MOONDROP Link is inferred.",
+      "No IP rating published."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "MOONDROP",
+    "companySlug": "moondrop",
+    "family": "GOLDEN AGES",
+    "model": "GOLDEN AGES",
+    "slug": "moondrop-golden-ages",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "MOONDROP Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://moondroplab.com/en/moondrop-link"
+      ],
+      "appVersionObserved": null,
+      "notes": "Official MOONDROP companion app. Product pages document EQ, custom touch controls, ANC/transparency switching and firmware/settings for supported TWS models. Package ID not verified from this region."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 18,
+      "chargingIndicators": "USB-C charging; case LED; app/OS battery readout.",
+      "notes": "Battery hours are the official Moondrop figures at the codec stated on the product page. Case value is last-known while buds are out because the case has no independent radio.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC / LC3",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "MOONDROP Link EQ",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap (left/right)",
+          "action": "Previous/next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Voice assistant and/or ANC mode cycle",
+          "configurableInApp": true,
+          "notes": "Exact mapping is model-specific and customisable in MOONDROP Link."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch mapping is customisable in MOONDROP Link."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "LC3"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "LDAC and LC3 support; no ANC."
+    },
+    "appOnlyFeatures": [
+      "EQ / tuning",
+      "Custom touch mapping",
+      "ANC mode control",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://moondroplab.com/en/products/golden-ages/",
+        "type": "official-product",
+        "title": "MOONDROP GOLDEN AGES True Wireless Stereo",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://moondroplab.com/en/moondrop-link",
+        "type": "official-support",
+        "title": "MOONDROP Link app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No ANC.",
+      "Battery layout in MOONDROP Link is inferred.",
+      "Driver type not stated in the specification block."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "MOONDROP",
+    "companySlug": "moondrop",
+    "family": "VOYAGER",
+    "model": "VOYAGER",
+    "slug": "moondrop-voyager",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "No official companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Neckband/cable model with inline controls; no app, EQ or firmware UI."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 12,
+      "caseHours": null,
+      "chargingIndicators": "USB-C charging; case LED; app/OS battery readout.",
+      "notes": "Battery hours are the official Moondrop figures at the codec stated on the product page. Case value is last-known while buds are out because the case has no independent radio.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "form.neckband",
+        "name": "Bluetooth neckband",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LHDC / aptX HD",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Inline buttons",
+          "action": "Power, volume, play/pause, track skip, calls",
+          "configurableInApp": false,
+          "notes": "Fixed inline controls."
+        }
+      ],
+      "physicalButtons": "Inline remote on the neckband.",
+      "configurableInApp": false,
+      "notes": "No app."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX HD",
+        "aptX Adaptive",
+        "LHDC"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "Neckband with LHDC/aptX HD. No ANC."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://moondroplab.com/en/products/voyager/",
+        "type": "official-product",
+        "title": "MOONDROP VOYAGER Bluetooth Neckband Earphone",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://moondroplab.com/en/moondrop-link",
+        "type": "official-support",
+        "title": "MOONDROP Link app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No battery display contract: no app and no case, OS shows one combined percentage.",
+      "No ANC.",
+      "Exact button map not published."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "MOONDROP",
+    "companySlug": "moondrop",
+    "family": "SPACE TRAVEL",
+    "model": "SPACE TRAVEL",
+    "slug": "moondrop-space-travel",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "MOONDROP Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://moondroplab.com/en/moondrop-link"
+      ],
+      "appVersionObserved": null,
+      "notes": "Official MOONDROP companion app. Product pages document EQ, custom touch controls, ANC/transparency switching and firmware/settings for supported TWS models. Package ID not verified from this region."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 4,
+      "caseHours": 12,
+      "chargingIndicators": "USB-C charging; case LED; app/OS battery readout.",
+      "notes": "Battery hours are the official Moondrop figures at the codec stated on the product page. Case value is last-known while buds are out because the case has no independent radio.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": "Moondrop markets Space Travel as noise-cancelling; depth not published."
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "Low-latency game mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "MOONDROP Link EQ",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap (left/right)",
+          "action": "Previous/next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Voice assistant and/or ANC mode cycle",
+          "configurableInApp": true,
+          "notes": "Exact mapping is model-specific and customisable in MOONDROP Link."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch mapping is customisable in MOONDROP Link."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "37 mAh buds / 380 mAh case. 4 h + 12 h is the official runtime."
+    },
+    "appOnlyFeatures": [
+      "EQ / tuning",
+      "Custom touch mapping",
+      "ANC mode control",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://moondroplab.com/en/products/space-travel/",
+        "type": "official-product",
+        "title": "MOONDROP SPACE TRAVEL True Wireless Stereo",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://moondroplab.com/en/moondrop-link",
+        "type": "official-support",
+        "title": "MOONDROP Link app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC depth/modes not published on the official spec page.",
+      "Battery layout in MOONDROP Link is inferred.",
+      "No ANC-on runtime published."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "MOONDROP",
+    "companySlug": "moondrop",
+    "family": "ALICE",
+    "model": "ALICE",
+    "slug": "moondrop-alice",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "MOONDROP Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://moondroplab.com/en/moondrop-link"
+      ],
+      "appVersionObserved": null,
+      "notes": "Official MOONDROP companion app. Product pages document EQ, custom touch controls, ANC/transparency switching and firmware/settings for supported TWS models. Package ID not verified from this region."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 40,
+      "chargingIndicators": "USB-C charging; case LED; app/OS battery readout.",
+      "notes": "Battery hours are the official Moondrop figures at the codec stated on the product page. Case value is last-known while buds are out because the case has no independent radio.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "driver.ult",
+        "name": "10 mm U.L.T. super-linear dynamic driver",
+        "availability": "device-only",
+        "notes": "Same driver family as KATO."
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "aptX Adaptive",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "MOONDROP Link EQ / 10 tunings",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap (left/right)",
+          "action": "Previous/next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Voice assistant and/or ANC mode cycle",
+          "configurableInApp": true,
+          "notes": "Exact mapping is model-specific and customisable in MOONDROP Link."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch mapping is customisable in MOONDROP Link."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX Adaptive"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "QCC5151, 10 mm DLC composite diaphragm. No ANC documented."
+    },
+    "appOnlyFeatures": [
+      "EQ / tuning",
+      "Custom touch mapping",
+      "ANC mode control",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://moondroplab.com/en/products/alice/",
+        "type": "official-product",
+        "title": "MOONDROP ALICE True Wireless Stereo",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://moondroplab.com/en/moondrop-link",
+        "type": "official-support",
+        "title": "MOONDROP Link app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No ANC documented; treat as absent.",
+      "Battery layout in MOONDROP Link is inferred.",
+      "Codec list from official page: AAC/SBC/aptX Adaptive."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "MOONDROP",
+    "companySlug": "moondrop",
+    "family": "NEKOCAKE",
+    "model": "NEKOCAKE",
+    "slug": "moondrop-nekocake",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "MOONDROP Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://moondroplab.com/en/moondrop-link"
+      ],
+      "appVersionObserved": null,
+      "notes": "Official MOONDROP companion app. Product pages document EQ, custom touch controls, ANC/transparency switching and firmware/settings for supported TWS models. Package ID not verified from this region."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 4,
+      "caseHours": 12,
+      "chargingIndicators": "USB-C charging; case LED; app/OS battery readout.",
+      "notes": "Battery hours are the official Moondrop figures at the codec stated on the product page. Case value is last-known while buds are out because the case has no independent radio.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC digital active noise cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "MOONDROP Link EQ",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap (left/right)",
+          "action": "Previous/next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Voice assistant and/or ANC mode cycle",
+          "configurableInApp": true,
+          "notes": "Exact mapping is model-specific and customisable in MOONDROP Link."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch mapping is customisable in MOONDROP Link."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "2022 revision page; 4 h buds + 12 h case."
+    },
+    "appOnlyFeatures": [
+      "EQ / tuning",
+      "Custom touch mapping",
+      "ANC mode control",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://moondroplab.com/en/products/nekocake/",
+        "type": "official-product",
+        "title": "MOONDROP NEKOCAKE True Wireless Stereo",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://moondroplab.com/en/moondrop-link",
+        "type": "official-support",
+        "title": "MOONDROP Link app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC depth not published.",
+      "Battery layout in MOONDROP Link is inferred.",
+      "No ANC-on runtime published."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "MOONDROP",
+    "companySlug": "moondrop",
+    "family": "SPARKS",
+    "model": "SPARKS",
+    "slug": "moondrop-sparks",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "MOONDROP Link",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://moondroplab.com/en/moondrop-link"
+      ],
+      "appVersionObserved": null,
+      "notes": "Official MOONDROP companion app. Product pages document EQ, custom touch controls, ANC/transparency switching and firmware/settings for supported TWS models. Package ID not verified from this region."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 48,
+      "chargingIndicators": "USB-C charging; case LED; app/OS battery readout.",
+      "notes": "Battery hours are the official Moondrop figures at the codec stated on the product page. Case value is last-known while buds are out because the case has no independent radio.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "driver.hemc",
+        "name": "6 mm HEMC dynamic driver",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "aptX Adaptive",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "MOONDROP Link EQ",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap (left/right)",
+          "action": "Previous/next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Voice assistant and/or ANC mode cycle",
+          "configurableInApp": true,
+          "notes": "Exact mapping is model-specific and customisable in MOONDROP Link."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch mapping is customisable in MOONDROP Link."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "50 mAh buds + 700 mAh case; 8 h + 48 h official."
+    },
+    "appOnlyFeatures": [
+      "EQ / tuning",
+      "Custom touch mapping",
+      "ANC mode control",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://moondroplab.com/en/products/sparks/",
+        "type": "official-product",
+        "title": "MOONDROP SPARKS True Wireless Stereo",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://moondroplab.com/en/moondrop-link",
+        "type": "official-support",
+        "title": "MOONDROP Link app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No ANC.",
+      "Battery layout in MOONDROP Link is inferred.",
+      "No IP rating published."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "MOONDROP",
+    "companySlug": "moondrop",
+    "family": "LITTLE WHITE",
+    "model": "LITTLE WHITE",
+    "slug": "moondrop-little-white",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "No official companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Neckband/cable model with inline controls; no app, EQ or firmware UI."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 12,
+      "caseHours": null,
+      "chargingIndicators": "USB-C charging; case LED; app/OS battery readout.",
+      "notes": "Battery hours are the official Moondrop figures at the codec stated on the product page. Case value is last-known while buds are out because the case has no independent radio.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.wireless-cable",
+        "name": "Bluetooth neckband cable for IEMs",
+        "availability": "device-only",
+        "notes": "Turns wired IEMs into a wireless neckband."
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LHDC / aptX HD",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Inline buttons",
+          "action": "Power, volume, play/pause, track skip, calls",
+          "configurableInApp": false,
+          "notes": "Fixed inline controls."
+        }
+      ],
+      "physicalButtons": "Inline remote on the neckband.",
+      "configurableInApp": false,
+      "notes": "No app."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX HD",
+        "aptX Adaptive",
+        "LHDC"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "45.4 g neckband cable; 12 h battery; LHDC/aptX HD."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://moondroplab.com/en/products/littlewhite/",
+        "type": "official-product",
+        "title": "MOONDROP LITTLEWHITE Bluetooth Neckband",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://moondroplab.com/en/moondrop-link",
+        "type": "official-support",
+        "title": "MOONDROP Link app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No battery display contract: no app and no case, OS shows one combined percentage.",
+      "No ANC.",
+      "Connector variants (MMCX/2-pin) not differentiated on the page."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

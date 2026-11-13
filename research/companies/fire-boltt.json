@@ -1,0 +1,1228 @@
+[
+  {
+    "company": "Fire-Boltt",
+    "companySlug": "fire-boltt",
+    "family": "FirePods Aero",
+    "model": "FirePods Aero",
+    "slug": "fire-boltt-firepods-aero",
+    "generation": null,
+    "variant": "Aero",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Firepod Aero App",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://www.fireboltt.com/pages/firepod-aero-app"
+      ],
+      "appVersionObserved": null,
+      "notes": "Fire-Boltt hosts a dedicated Firepod Aero App page with Google Play and App Store links; the app is for the Aero TWS line."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": "Case LED; fast-charging case.",
+      "notes": "50 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC in the Aero line; quad-mic ENC for calls."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Custom EQ profile",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "control.touch-customization",
+        "name": "Touch control remapping",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.fireboltt.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.fireboltt.low-latency",
+        "name": "50 ms low-latency mode",
+        "availability": "both",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers; BT 5.4; IPX4."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Touch remapping"
+    ],
+    "featureDeltaFromPrevious": [
+      "Aero line with app EQ at entry price"
+    ],
+    "sources": [
+      {
+        "url": "https://www.fireboltt.com/collections/audio",
+        "type": "official-product",
+        "title": "Fire-Boltt Audio collection",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fireboltt.com/pages/firepod-aero-app",
+        "type": "official-app-store",
+        "title": "Firepod Aero App",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map",
+      "App package IDs"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Fire-Boltt",
+    "companySlug": "fire-boltt",
+    "family": "FirePods Aero",
+    "model": "FirePods Aero Pro",
+    "slug": "fire-boltt-firepods-aero-pro",
+    "generation": null,
+    "variant": "Aero Pro",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Firepod Aero App",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://www.fireboltt.com/pages/firepod-aero-app"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": "Case LED; fast-charging case.",
+      "notes": "50 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Custom EQ profile",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "control.touch-customization",
+        "name": "Touch remapping",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.fireboltt.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.fireboltt.low-latency",
+        "name": "50 ms low-latency mode",
+        "availability": "both",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers; BT 5.4; IPX4."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Touch remapping"
+    ],
+    "featureDeltaFromPrevious": [
+      "Pro trim of Aero"
+    ],
+    "sources": [
+      {
+        "url": "https://www.fireboltt.com/collections/audio",
+        "type": "official-product",
+        "title": "Fire-Boltt Audio collection",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fireboltt.com/pages/firepod-aero-app",
+        "type": "official-app-store",
+        "title": "Firepod Aero App",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Fire-Boltt",
+    "companySlug": "fire-boltt",
+    "family": "FirePods Aero",
+    "model": "FirePods Aero Ultra",
+    "slug": "fire-boltt-firepods-aero-ultra",
+    "generation": null,
+    "variant": "Aero Ultra",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Firepod Aero App",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://www.fireboltt.com/pages/firepod-aero-app"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": "Case LED; metallic finish.",
+      "notes": "50 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Custom EQ profile",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "control.touch-customization",
+        "name": "Touch remapping",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.fireboltt.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.fireboltt.low-latency",
+        "name": "50 ms low-latency mode",
+        "availability": "both",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers; BT 5.4; IPX4."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Touch remapping"
+    ],
+    "featureDeltaFromPrevious": [
+      "Metallic finish"
+    ],
+    "sources": [
+      {
+        "url": "https://www.fireboltt.com/collections/audio",
+        "type": "official-product",
+        "title": "Fire-Boltt Audio collection",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fireboltt.com/pages/firepod-aero-app",
+        "type": "official-app-store",
+        "title": "Firepod Aero App",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Fire-Boltt",
+    "companySlug": "fire-boltt",
+    "family": "FirePods Aero",
+    "model": "FirePods Aero Drift",
+    "slug": "fire-boltt-firepods-aero-drift",
+    "generation": null,
+    "variant": "Aero Drift",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Firepod Aero App",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://www.fireboltt.com/pages/firepod-aero-app"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": "Case LED; fast charging.",
+      "notes": "50 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC; passive noise cancellation only."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Custom EQ profile",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "control.touch-customization",
+        "name": "Touch remapping",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.fireboltt.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.fireboltt.low-latency",
+        "name": "50 ms low-latency mode",
+        "availability": "both",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers; BT 5.4; IPX4."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Touch remapping"
+    ],
+    "featureDeltaFromPrevious": [
+      "New colourways"
+    ],
+    "sources": [
+      {
+        "url": "https://www.fireboltt.com/collections/audio",
+        "type": "official-product",
+        "title": "Fire-Boltt Audio collection - Aero Drift",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://day-technology.com/fire-boltt-firepods-aero-drift-review.html",
+        "type": "reputable-secondary",
+        "title": "FirePods Aero Drift review",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Fire-Boltt",
+    "companySlug": "fire-boltt",
+    "family": "FirePods Aero",
+    "model": "FirePods Aero Luxe",
+    "slug": "fire-boltt-firepods-aero-luxe",
+    "generation": null,
+    "variant": "Aero Luxe",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Firepod Aero App",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://www.fireboltt.com/pages/firepod-aero-app"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": "Case LED.",
+      "notes": "50 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Custom EQ profile",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "control.touch-customization",
+        "name": "Touch remapping",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.fireboltt.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers; BT 5.4; IPX4."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Touch remapping"
+    ],
+    "featureDeltaFromPrevious": [
+      "Luxe trim"
+    ],
+    "sources": [
+      {
+        "url": "https://www.fireboltt.com/collections/audio",
+        "type": "official-product",
+        "title": "Fire-Boltt Audio collection - Aero Luxe",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map",
+      "App package IDs"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Fire-Boltt",
+    "companySlug": "fire-boltt",
+    "family": "FirePods Aero",
+    "model": "FirePods Aero Lite",
+    "slug": "fire-boltt-firepods-aero-lite",
+    "generation": null,
+    "variant": "Aero Lite",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Firepod Aero App",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://www.fireboltt.com/pages/firepod-aero-app"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": "Case LED.",
+      "notes": "50 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Custom EQ profile",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "control.touch-customization",
+        "name": "Touch remapping",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers; BT 5.3; IPX4."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Touch remapping"
+    ],
+    "featureDeltaFromPrevious": [
+      "Entry trim with BT 5.3"
+    ],
+    "sources": [
+      {
+        "url": "https://www.fireboltt.com/collections/audio",
+        "type": "official-product",
+        "title": "Fire-Boltt Audio collection - Aero Lite",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Fire-Boltt",
+    "companySlug": "fire-boltt",
+    "family": "FirePods Aero",
+    "model": "FirePods Aero Fit",
+    "slug": "fire-boltt-firepods-aero-fit",
+    "generation": null,
+    "variant": "Aero Fit",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Firepod Aero App",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://www.fireboltt.com/pages/firepod-aero-app"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Case LED.",
+      "notes": null,
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Custom EQ profile",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers; BT 5.4."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.fireboltt.com/collections/audio",
+        "type": "official-product",
+        "title": "Fire-Boltt Audio collection - Aero Fit",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Playtime",
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Fire-Boltt",
+    "companySlug": "fire-boltt",
+    "family": "FirePods Aero",
+    "model": "FirePods Aero Glide",
+    "slug": "fire-boltt-firepods-aero-glide",
+    "generation": null,
+    "variant": "Aero Glide",
+    "releaseYear": 2026,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "Firepod Aero App",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://www.fireboltt.com/pages/firepod-aero-app"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Case LED.",
+      "notes": null,
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Open-ear; no ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Custom EQ profile",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.fireboltt.enc",
+        "name": "Call ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers; BT 5.4; open-ear."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Open-ear OWS form factor"
+    ],
+    "sources": [
+      {
+        "url": "https://www.fireboltt.com/collections/audio",
+        "type": "official-product",
+        "title": "Fire-Boltt Audio collection - Aero Glide",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Playtime",
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Fire-Boltt",
+    "companySlug": "fire-boltt",
+    "family": "FirePods Aero",
+    "model": "FirePods Aero Shadow",
+    "slug": "fire-boltt-firepods-aero-shadow",
+    "generation": null,
+    "variant": "Aero Shadow",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Firepod Aero App",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [
+        "https://www.fireboltt.com/pages/firepod-aero-app"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Case LED.",
+      "notes": null,
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Custom EQ profile",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.fireboltt.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers; BT 5.4."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.fireboltt.com/collections/audio",
+        "type": "official-product",
+        "title": "Fire-Boltt Audio collection - Aero Shadow",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Playtime",
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Fire-Boltt",
+    "companySlug": "fire-boltt",
+    "family": "Fire Pods",
+    "model": "Fire Pods Polaris ANC 701",
+    "slug": "fire-boltt-fire-pods-polaris-anc-701",
+    "generation": null,
+    "variant": "Polaris ANC 701",
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Predates the Aero app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": null,
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC confirmed by model name and retail spec; no dB figure."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "BT 5.1."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.fireboltt.com/collections/audio",
+        "type": "official-product",
+        "title": "Fire-Boltt Audio collection",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.smartprix.com/mobile_headphones/fire_boltt-brand",
+        "type": "reputable-secondary",
+        "title": "Fire-Boltt headphone price list - Polaris ANC 701",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official product page",
+      "ANC dB",
+      "Playtime",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": "Older ANC model; the current Fire-Boltt audio catalogue has moved to the ANC-less Aero line.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Fire-Boltt",
+    "companySlug": "fire-boltt",
+    "family": "Fire Pods Ninja",
+    "model": "Fire Pods Ninja Pro 401",
+    "slug": "fire-boltt-fire-pods-ninja-pro-401",
+    "generation": null,
+    "variant": "Ninja Pro 401",
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": null,
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers; BT 5.1."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.fireboltt.com/collections/audio",
+        "type": "official-product",
+        "title": "Fire-Boltt Audio collection",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.smartprix.com/mobile_headphones/fire_boltt-brand",
+        "type": "reputable-secondary",
+        "title": "Fire-Boltt headphone price list - Ninja Pro 401",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official product page",
+      "Playtime",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

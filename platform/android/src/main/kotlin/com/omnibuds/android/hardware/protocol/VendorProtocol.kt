@@ -63,6 +63,11 @@ object KnownUuids {
     val REALME_BLE_CHAR_TX_2: UUID = UUID.fromString("00000201-3C17-D293-8E48-14FE2E4DA212")
     val REALME_BLE_CHAR_RX_2: UUID = UUID.fromString("00000202-3C17-D293-8E48-14FE2E4DA212")
 
+    // OPOv1 BLE control service (same UUID family as the RFCOMM service)
+    val OPO_SERVICE: UUID = UUID.fromString("0000079A-D102-11E1-9B23-00025B00A5A5")
+    val OPO_CHAR_TX: UUID = UUID.fromString("0100079A-D102-11E1-9B23-00025B00A5A5")
+    val OPO_CHAR_RX: UUID = UUID.fromString("0200079A-D102-11E1-9B23-00025B00A5A5")
+
     // BES (Bestechnic) & Airoha proprietary BLE services (commonly used on Realme, Boat, CMF)
     val BES_OTA_SERVICE: UUID = UUID.fromString("00000001-0000-1000-8000-00805F9B34FB")
     val BES_CHAR_TX: UUID = UUID.fromString("00000002-0000-1000-8000-00805F9B34FB")

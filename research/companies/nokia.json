@@ -1,0 +1,505 @@
+[
+  {
+    "company": "Nokia",
+    "companySlug": "nokia",
+    "family": "Clarity",
+    "model": "Nokia Clarity Earbuds 2 Pro",
+    "slug": "nokia-clarity-earbuds-2-pro",
+    "generation": "2",
+    "variant": "Pro",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Nokia Headphones (legacy)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Nokia-branded audio app from the HMD-licensed era; app store availability has since lapsed."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; case LED.",
+      "notes": "Battery figures are not available from a live official page; left null rather than estimated.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Active noise cancellation with ambient mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "ANC / ambient",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "None; touch controls.",
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "10 mm drivers; AAC/SBC expected but not confirmed from a live official spec."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC control"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC added versus non-Pro Clarity 2",
+      "Pro tuning"
+    ],
+    "sources": [
+      {
+        "url": "https://www.nokia.com/support/licensed-products/",
+        "type": "official-support",
+        "title": "Nokia licensed products support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official product page retired",
+      "Battery hours and display semantics unknown",
+      "Bluetooth version/codecs unknown",
+      "App availability lapsed",
+      "Gesture map unverified"
+    ],
+    "notes": "Nokia audio was licensed to HMD; live official documentation is largely gone.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Nokia",
+    "companySlug": "nokia",
+    "family": "Clarity",
+    "model": "Nokia Clarity Earbuds 2",
+    "slug": "nokia-clarity-earbuds-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Nokia Headphones (legacy)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Legacy Nokia audio app; availability lapsed."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "No live official spec page; figures left null.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "None; touch controls.",
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "No ANC; standard TWS."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Non-Pro sibling of Clarity 2 Pro",
+      "No ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.nokia.com/support/licensed-products/",
+        "type": "official-support",
+        "title": "Nokia licensed products support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official product page retired",
+      "Battery hours and display semantics unknown",
+      "Codecs unknown",
+      "App availability lapsed"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Nokia",
+    "companySlug": "nokia",
+    "family": "Clarity",
+    "model": "Nokia Clarity Earbuds+",
+    "slug": "nokia-clarity-earbuds-plus",
+    "generation": "1",
+    "variant": "Plus",
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Nokia Headphones (legacy)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Legacy Nokia audio app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; wireless charging case.",
+      "notes": "No live official spec page; figures left null.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "ANC with ambient mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "power.wireless-charging",
+        "name": "Wireless charging case",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "ANC / ambient",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "None; touch controls.",
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "ANC TWS with wireless charging case."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC control"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC",
+      "Wireless charging case"
+    ],
+    "sources": [
+      {
+        "url": "https://www.nokia.com/support/licensed-products/",
+        "type": "official-support",
+        "title": "Nokia licensed products support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official product page retired",
+      "Battery hours and display semantics unknown",
+      "Codecs unknown",
+      "App availability lapsed"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Nokia",
+    "companySlug": "nokia",
+    "family": "E-series",
+    "model": "Nokia E3500",
+    "slug": "nokia-e3500",
+    "generation": "E3500",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Nokia Headphones (legacy)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Legacy Nokia audio app; may not be required for basic use."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "No live official spec page; figures left null.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "Splash resistance",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "None; touch controls.",
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "Entry-level TWS."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Entry-level model below Clarity line"
+    ],
+    "sources": [
+      {
+        "url": "https://www.nokia.com/support/licensed-products/",
+        "type": "official-support",
+        "title": "Nokia licensed products support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official product page retired",
+      "Battery hours and display semantics unknown",
+      "Codecs unknown",
+      "Gesture map unverified"
+    ],
+    "notes": "Included for Nokia legacy coverage.",
+    "researchedAt": "2026-11-10"
+  }
+]

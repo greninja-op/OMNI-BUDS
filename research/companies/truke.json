@@ -1,0 +1,1998 @@
+[
+  {
+    "company": "Truke",
+    "companySlug": "truke",
+    "family": "Buds Vibe",
+    "model": "Buds Vibe",
+    "slug": "truke-buds-vibe",
+    "generation": null,
+    "variant": "Vibe",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app named on the official listing; the Truke Buds app is documented for Buds S2."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 48,
+      "chargingIndicators": "Case LED.",
+      "notes": "48 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "35 dB ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "device-only",
+        "notes": "35 dB."
+      },
+      {
+        "id": "vendor.truke.enc",
+        "name": "4-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm driver; BT 5.x."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "35 dB ANC at the entry price"
+    ],
+    "sources": [
+      {
+        "url": "https://www.truke.in/category/41ba8837-9ed6-4718-a1a3-1b8ab79b30fc/True%20Wireless%20Earbuds",
+        "type": "official-product",
+        "title": "Truke TWS collection - Buds Vibe",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map",
+      "Transparency mode"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Truke",
+    "companySlug": "truke",
+    "family": "Earbuds A",
+    "model": "Earbuds A1",
+    "slug": "truke-earbuds-a1",
+    "generation": null,
+    "variant": "A1",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 48,
+      "chargingIndicators": "Case LED.",
+      "notes": "48 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": 30,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Quad-mic ANC up to 30 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Quad-mic ANC",
+        "availability": "device-only",
+        "notes": "30 dB."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.truke.in/category/41ba8837-9ed6-4718-a1a3-1b8ab79b30fc/True%20Wireless%20Earbuds",
+        "type": "official-product",
+        "title": "Truke TWS collection - Earbuds A1",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map",
+      "Transparency mode"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Truke",
+    "companySlug": "truke",
+    "family": "Buds Pro ANC",
+    "model": "Buds Pro ANC",
+    "slug": "truke-buds-pro-anc",
+    "generation": null,
+    "variant": "Pro ANC",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 48,
+      "chargingIndicators": "Case LED.",
+      "notes": "48 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC plus transparency; dB not captured."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.truke.in/category/41ba8837-9ed6-4718-a1a3-1b8ab79b30fc/True%20Wireless%20Earbuds",
+        "type": "official-product",
+        "title": "Truke TWS collection - Buds Pro ANC",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB",
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Truke",
+    "companySlug": "truke",
+    "family": "Mega",
+    "model": "Mega 12",
+    "slug": "truke-mega-12",
+    "generation": "12",
+    "variant": "Mega",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 70,
+      "chargingIndicators": "Case LED.",
+      "notes": "70 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ENC only."
+    },
+    "features": [
+      {
+        "id": "audio.spatial",
+        "name": "24-bit Spatial Sound",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual pairing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.truke.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "13 mm drivers; 40 ms low latency."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "24-bit spatial sound",
+      "70 h playback",
+      "Dual pairing"
+    ],
+    "sources": [
+      {
+        "url": "https://www.truke.in/category/41ba8837-9ed6-4718-a1a3-1b8ab79b30fc/True%20Wireless%20Earbuds",
+        "type": "official-product",
+        "title": "Truke TWS collection - Mega 12",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Truke",
+    "companySlug": "truke",
+    "family": "Mega",
+    "model": "Mega 10",
+    "slug": "truke-mega-10",
+    "generation": "10",
+    "variant": "Mega",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 70,
+      "chargingIndicators": "Case LED.",
+      "notes": "70 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ENC only."
+    },
+    "features": [
+      {
+        "id": "audio.spatial",
+        "name": "24-bit Spatial Sound",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual pairing",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "13 mm drivers."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "70 h playback",
+      "Spatial sound"
+    ],
+    "sources": [
+      {
+        "url": "https://www.truke.in/category/41ba8837-9ed6-4718-a1a3-1b8ab79b30fc/True%20Wireless%20Earbuds",
+        "type": "official-product",
+        "title": "Truke TWS collection - Mega 10",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Truke",
+    "companySlug": "truke",
+    "family": "Mega",
+    "model": "Mega 9",
+    "slug": "truke-mega-9",
+    "generation": "9",
+    "variant": "Mega",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 70,
+      "chargingIndicators": "Case LED.",
+      "notes": "70 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "audio.spatial",
+        "name": "24-bit Spatial Sound",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers; leather-finish case."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Leather-finish case",
+      "24-bit spatial sound"
+    ],
+    "sources": [
+      {
+        "url": "https://www.truke.in/category/41ba8837-9ed6-4718-a1a3-1b8ab79b30fc/True%20Wireless%20Earbuds",
+        "type": "official-product",
+        "title": "Truke TWS collection - Mega 9",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Truke",
+    "companySlug": "truke",
+    "family": "Mega",
+    "model": "Mega 8",
+    "slug": "truke-mega-8",
+    "generation": "8",
+    "variant": "Mega",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 70,
+      "chargingIndicators": "Case LED.",
+      "notes": "70 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Quad-mic ENC only."
+    },
+    "features": [
+      {
+        "id": "audio.spatial",
+        "name": "24-bit Spatial Audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.truke.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "70 h playback",
+      "Spatial audio"
+    ],
+    "sources": [
+      {
+        "url": "https://www.truke.in/category/41ba8837-9ed6-4718-a1a3-1b8ab79b30fc/True%20Wireless%20Earbuds",
+        "type": "official-product",
+        "title": "Truke TWS collection - Mega 8",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Truke",
+    "companySlug": "truke",
+    "family": "Buds Echo",
+    "model": "Buds Echo",
+    "slug": "truke-buds-echo",
+    "generation": null,
+    "variant": "Echo",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 70,
+      "chargingIndicators": "Case LED.",
+      "notes": "70 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "4-mic ENC only."
+    },
+    "features": [
+      {
+        "id": "audio.spatial",
+        "name": "24-bit 360 Spatial Audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual pairing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.truke.enc",
+        "name": "4-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "13 mm titanium drivers."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "24-bit 360 spatial audio",
+      "Dual pairing",
+      "Titanium drivers"
+    ],
+    "sources": [
+      {
+        "url": "https://www.truke.in/category/41ba8837-9ed6-4718-a1a3-1b8ab79b30fc/True%20Wireless%20Earbuds",
+        "type": "official-product",
+        "title": "Truke TWS collection - Buds Echo",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Truke",
+    "companySlug": "truke",
+    "family": "BTG",
+    "model": "BTG Ultra",
+    "slug": "truke-btg-ultra",
+    "generation": null,
+    "variant": "Ultra",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 60,
+      "chargingIndicators": "Case LED.",
+      "notes": "60 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Gaming model; no ANC."
+    },
+    "features": [
+      {
+        "id": "audio.spatial",
+        "name": "360 Spatial Audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.truke.battle-mode",
+        "name": "40 ms Battle Mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.truke.in/category/41ba8837-9ed6-4718-a1a3-1b8ab79b30fc/True%20Wireless%20Earbuds",
+        "type": "official-product",
+        "title": "Truke TWS collection - BTG Ultra",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Truke",
+    "companySlug": "truke",
+    "family": "BTG",
+    "model": "BTG Storm",
+    "slug": "truke-btg-storm",
+    "generation": null,
+    "variant": "Storm",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": "Case LED.",
+      "notes": "50 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ENC only."
+    },
+    "features": [
+      {
+        "id": "vendor.truke.battle-mode",
+        "name": "40 ms ultra-low latency",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.truke.enc",
+        "name": "ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm titanium drivers."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.truke.in/category/41ba8837-9ed6-4718-a1a3-1b8ab79b30fc/True%20Wireless%20Earbuds",
+        "type": "official-product",
+        "title": "Truke TWS collection - BTG Storm",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Truke",
+    "companySlug": "truke",
+    "family": "BTG",
+    "model": "BTG Flex",
+    "slug": "truke-btg-flex",
+    "generation": null,
+    "variant": "Flex",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 60,
+      "chargingIndicators": "Case LED.",
+      "notes": "60 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "4-mic ENC only."
+    },
+    "features": [
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual pairing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.truke.enc",
+        "name": "4-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "BT 5.4; HiFi DSP audio."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "BT 5.4",
+      "Dual pairing"
+    ],
+    "sources": [
+      {
+        "url": "https://www.truke.in/category/41ba8837-9ed6-4718-a1a3-1b8ab79b30fc/True%20Wireless%20Earbuds",
+        "type": "official-product",
+        "title": "Truke TWS collection - BTG Flex",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Truke",
+    "companySlug": "truke",
+    "family": "BTG",
+    "model": "BTG Beta",
+    "slug": "truke-btg-beta",
+    "generation": null,
+    "variant": "Beta",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 38,
+      "chargingIndicators": "Case LED.",
+      "notes": "38 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "vendor.truke.battle-mode",
+        "name": "Gaming mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.truke.in/category/41ba8837-9ed6-4718-a1a3-1b8ab79b30fc/True%20Wireless%20Earbuds",
+        "type": "official-product",
+        "title": "Truke TWS collection - BTG Beta",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Truke",
+    "companySlug": "truke",
+    "family": "BTG",
+    "model": "BTG X1",
+    "slug": "truke-btg-x1",
+    "generation": null,
+    "variant": "X1",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 48,
+      "chargingIndicators": "Case LED.",
+      "notes": "48 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "12 mm titanium drivers."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.truke.in/category/41ba8837-9ed6-4718-a1a3-1b8ab79b30fc/True%20Wireless%20Earbuds",
+        "type": "official-product",
+        "title": "Truke TWS collection - BTG X1",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Truke",
+    "companySlug": "truke",
+    "family": "Clarity",
+    "model": "Clarity 6",
+    "slug": "truke-clarity-6",
+    "generation": "6",
+    "variant": "Clarity",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 80,
+      "chargingIndicators": "Case LED; touch-glass case.",
+      "notes": "80 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "6-mic advanced ENC only."
+    },
+    "features": [
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connectivity",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.truke.enc",
+        "name": "6-mic advanced ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "BT 5.3."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "80 h playback",
+      "6-mic ENC",
+      "Dual connectivity"
+    ],
+    "sources": [
+      {
+        "url": "https://www.truke.in/category/41ba8837-9ed6-4718-a1a3-1b8ab79b30fc/True%20Wireless%20Earbuds",
+        "type": "official-product",
+        "title": "Truke TWS collection - Clarity 6",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Truke",
+    "companySlug": "truke",
+    "family": "Clarity",
+    "model": "Clarity 2 V2",
+    "slug": "truke-clarity-2-v2",
+    "generation": "2",
+    "variant": "Clarity V2",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 68,
+      "chargingIndicators": "Case LED.",
+      "notes": "68 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "6-mic ENC only."
+    },
+    "features": [
+      {
+        "id": "vendor.truke.enc",
+        "name": "6-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.truke.in/category/41ba8837-9ed6-4718-a1a3-1b8ab79b30fc/True%20Wireless%20Earbuds",
+        "type": "official-product",
+        "title": "Truke TWS collection - Clarity 2 V2",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Truke",
+    "companySlug": "truke",
+    "family": "Buds S",
+    "model": "Buds S2",
+    "slug": "truke-buds-s2",
+    "generation": "2",
+    "variant": "S2",
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Truke Buds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Official page says the 'Truke Buds' app provides 20 EQ modes, gaming mode and in-ear sensor toggling."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 48,
+      "chargingIndicators": "Case LED.",
+      "notes": "48 h total; case gives four additional charges of up to 10 h each.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 48
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Quad-mic ENC only."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "20 EQ modes and custom EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "control.touch-customization",
+        "name": "Touch customisation",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear sensor toggle",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.truke.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "10 mm drivers; BT 5.1; sliding case; 55 ms low latency."
+    },
+    "appOnlyFeatures": [
+      "20 EQ modes",
+      "Custom EQ",
+      "Touch customisation",
+      "In-ear sensor toggle",
+      "Gaming mode"
+    ],
+    "featureDeltaFromPrevious": [
+      "20 EQ modes via app",
+      "Sliding case",
+      "In-ear sensor"
+    ],
+    "sources": [
+      {
+        "url": "https://www.truke.in/product/183585ac831781719646860",
+        "type": "official-product",
+        "title": "Truke Buds S2",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds split vs combined display",
+      "Codecs",
+      "Control map",
+      "App package ID"
+    ],
+    "notes": "One of the few Truke models with a documented app feature set.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Truke",
+    "companySlug": "truke",
+    "family": "TruClips",
+    "model": "TruClips 2",
+    "slug": "truke-truclips-2",
+    "generation": "2",
+    "variant": "TruClips",
+    "releaseYear": 2026,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "AI translation is described as on-device/phone-side, not via a named companion app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 70,
+      "chargingIndicators": "Case LED.",
+      "notes": "70 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Open-ear clip; no ANC."
+    },
+    "features": [
+      {
+        "id": "vendor.truke.ai-translation",
+        "name": "AI translation",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.truke.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm beryllium drivers; BT 6.0; IPX5."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "BT 6.0",
+      "AI translation",
+      "70 h playback"
+    ],
+    "sources": [
+      {
+        "url": "https://www.truke.in/best-sellers",
+        "type": "official-product",
+        "title": "Truke best sellers - TruClips 2",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map",
+      "How AI translation is invoked"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Truke",
+    "companySlug": "truke",
+    "family": "ResonanceX",
+    "model": "ResonanceX",
+    "slug": "truke-resonancex",
+    "generation": null,
+    "variant": "OWS",
+    "releaseYear": 2025,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 70,
+      "chargingIndicators": "Case LED.",
+      "notes": "70 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Open-ear; no ANC."
+    },
+    "features": [
+      {
+        "id": "audio.spatial",
+        "name": "24-bit spatial sound",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.truke.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.truke.battle-mode",
+        "name": "40 ms gaming mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "16 mm titanium drivers; BT 5.4; IPX5."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "OWS form factor",
+      "16 mm titanium drivers"
+    ],
+    "sources": [
+      {
+        "url": "https://www.truke.in/best-sellers",
+        "type": "official-product",
+        "title": "Truke best sellers - ResonanceX",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Truke",
+    "companySlug": "truke",
+    "family": "Buds Freedom",
+    "model": "Buds Freedom",
+    "slug": "truke-buds-freedom",
+    "generation": null,
+    "variant": "Freedom OWS",
+    "releaseYear": 2025,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 60,
+      "chargingIndicators": "Case LED.",
+      "notes": "60 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Open-ear; no ANC."
+    },
+    "features": [
+      {
+        "id": "vendor.truke.enc",
+        "name": "Quad-mic PureVoice ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "16 mm drivers; BT 5.4."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.truke.in/best-sellers",
+        "type": "official-product",
+        "title": "Truke best sellers - Buds Freedom",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Truke",
+    "companySlug": "truke",
+    "family": "Buds Infinity",
+    "model": "Buds Infinity",
+    "slug": "truke-buds-infinity",
+    "generation": null,
+    "variant": "Infinity OWS",
+    "releaseYear": 2025,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 70,
+      "chargingIndicators": "Case LED.",
+      "notes": "70 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual pairing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.truke.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "16 mm drivers; BT 5.4."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "70 h playback",
+      "Dual pairing"
+    ],
+    "sources": [
+      {
+        "url": "https://www.truke.in/best-sellers",
+        "type": "official-product",
+        "title": "Truke best sellers - Buds Infinity",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

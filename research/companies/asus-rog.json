@@ -1,0 +1,950 @@
+[
+  {
+    "company": "ASUS ROG",
+    "companySlug": "asus-rog",
+    "family": "Cetra",
+    "model": "ROG Cetra True Wireless",
+    "slug": "asus-rog-cetra-true-wireless",
+    "generation": "Cetra",
+    "variant": "True Wireless",
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Armoury Crate",
+      "platforms": [
+        "android",
+        "ios",
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Armoury Crate for EQ, ANC and firmware; PC version for ROG ecosystem."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 4.5,
+      "budsHoursNoAnc": 5.5,
+      "caseHours": 17,
+      "chargingIndicators": "Case LED; USB-C.",
+      "notes": "Official: 4.5 h + 17 h (ANC on), 5.5 h + 21.5 h (ANC off). Case hours listed are the additional case-only figure for the ANC-on configuration.",
+      "hoursBasis": "case-only",
+      "caseOnlyHours": 17,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Active Noise Cancellation; no transparency mode listed."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.0",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Armoury Crate EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.rog.aura",
+        "name": "Aura RGB (case)",
+        "availability": "official-app"
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Long press",
+          "action": "ANC toggle",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "None; touch controls.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "10 mm neodymium drivers; 20 Hz-20 kHz; 32 ohm."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC control",
+      "Aura RGB",
+      "Firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "ROG's first ANC TWS",
+      "Armoury Crate integration",
+      "Aura RGB case"
+    ],
+    "sources": [
+      {
+        "url": "https://rog.asus.com/headsets-audio/earbuds/rog-cetra-true-wireless-model/spec/",
+        "type": "official-product",
+        "title": "ROG Cetra True Wireless tech specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC attenuation in dB not published",
+      "Multipoint not stated",
+      "EQ band count not published",
+      "Battery layout in Armoury Crate not visually verified"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "ASUS ROG",
+    "companySlug": "asus-rog",
+    "family": "Cetra",
+    "model": "ROG Cetra True Wireless SpeedNova",
+    "slug": "asus-rog-cetra-true-wireless-speednova",
+    "generation": "Cetra",
+    "variant": "True Wireless SpeedNova",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Armoury Crate",
+      "platforms": [
+        "android",
+        "ios",
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "EQ, ANC, RGB and firmware."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7.5,
+      "budsHoursNoAnc": 11.5,
+      "caseHours": 22.5,
+      "chargingIndicators": "Case LED; USB-C.",
+      "notes": "BT mode: 11.5 h + 34.5 h (ANC off, RGB off); 7.5 h + 22.5 h (ANC on, RGB off); 6.5 h + 19.5 h (ANC on, RGB on); 10 h + 30 h (ANC off, RGB on).",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "ANC with RGB-dependent battery trade-offs."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "ROG SpeedNova 2.4 GHz",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Armoury Crate EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.rog.aura",
+        "name": "Aura RGB",
+        "availability": "official-app"
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Long press",
+          "action": "ANC toggle",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "None; touch controls.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "10 mm neodymium drivers; 20 Hz-40 kHz."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC control",
+      "Aura RGB",
+      "Firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "SpeedNova 2.4 GHz added",
+      "46 h max BT battery",
+      "20 Hz-40 kHz frequency response",
+      "RGB"
+    ],
+    "sources": [
+      {
+        "url": "https://rog.asus.com/headsets-audio/earbuds/rog-cetra-true-wireless-speednova/spec/",
+        "type": "official-product",
+        "title": "ROG Cetra True Wireless SpeedNova tech specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Codec list not published",
+      "ANC dB not published",
+      "Multipoint not stated",
+      "EQ band count not published"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "ASUS ROG",
+    "companySlug": "asus-rog",
+    "family": "Cetra",
+    "model": "ROG Cetra Open Wireless",
+    "slug": "asus-rog-cetra-open-wireless",
+    "generation": "Cetra",
+    "variant": "Open Wireless",
+    "releaseYear": 2025,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "Armoury Crate",
+      "platforms": [
+        "android",
+        "ios",
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "EQ and firmware via Armoury Crate."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C charging case.",
+      "notes": "Battery-hour figures were not present in the official tech-spec table.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear design; no ANC."
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz SpeedNova",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "vendor.rog.open-ear",
+        "name": "Open-ear hook design",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Armoury Crate EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "None; touch controls.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "Open-ear acoustic design."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "First ROG open-ear gaming buds",
+      "2.4 GHz + Bluetooth"
+    ],
+    "sources": [
+      {
+        "url": "https://rog.asus.com/headsets-audio/earbuds/rog-cetra-open-wireless/spec/",
+        "type": "official-product",
+        "title": "ROG Cetra Open Wireless tech specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery hours not published in spec table",
+      "Codec list not published",
+      "Multipoint not stated"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "ASUS ROG",
+    "companySlug": "asus-rog",
+    "family": "Delta",
+    "model": "ROG Delta II",
+    "slug": "asus-rog-delta-ii",
+    "generation": "Delta II",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Armoury Crate",
+      "platforms": [
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "EQ, 7.1 surround, Aura and firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; 1800 mAh battery.",
+      "notes": "Spec table lists only 1800 mAh, not hours.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz wireless",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.3.5mm",
+        "name": "3.5 mm wired",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "7.1 surround",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Armoury Crate EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.rog.aura",
+        "name": "Aura RGB",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume wheel",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mute button",
+          "action": "Mic mute",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup volume wheel, mute and source controls.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "50 mm drivers; 2.4 GHz + Bluetooth + 3.5 mm."
+    },
+    "appOnlyFeatures": [
+      "7.1 surround",
+      "EQ",
+      "Aura RGB"
+    ],
+    "featureDeltaFromPrevious": [
+      "2.4 GHz + Bluetooth added to Delta line",
+      "3.5 mm",
+      "Aura RGB"
+    ],
+    "sources": [
+      {
+        "url": "https://rog.asus.com/headsets-audio/headsets/wireless-headsets/rog-delta-ii/spec/",
+        "type": "official-product",
+        "title": "ROG Delta II tech specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery hours not published in spec table",
+      "Codec list not published",
+      "ANC not offered"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "ASUS ROG",
+    "companySlug": "asus-rog",
+    "family": "Pelta",
+    "model": "ROG Pelta",
+    "slug": "asus-rog-pelta",
+    "generation": "Pelta",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Armoury Crate",
+      "platforms": [
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "EQ, 7.1 surround and firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; 900 mAh battery.",
+      "notes": "Spec table lists only 900 mAh, not hours.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz wireless",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.usb-c-dongle",
+        "name": "USB-C wired",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "7.1 surround",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Armoury Crate EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume wheel",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mute button",
+          "action": "Mic mute",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup controls.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "50 mm drivers; 2.4 GHz + Bluetooth + USB-C."
+    },
+    "appOnlyFeatures": [
+      "7.1 surround",
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Lightweight 900 mAh chassis",
+      "2.4 GHz + Bluetooth + USB-C"
+    ],
+    "sources": [
+      {
+        "url": "https://rog.asus.com/headsets-audio/headsets/wireless-headsets/rog-pelta/spec/",
+        "type": "official-product",
+        "title": "ROG Pelta tech specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery hours not published in spec table",
+      "Codec list not published",
+      "Multipoint not stated"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "ASUS ROG",
+    "companySlug": "asus-rog",
+    "family": "Strix Go",
+    "model": "ROG Strix Go BT",
+    "slug": "asus-rog-strix-go-bt",
+    "generation": "Strix Go",
+    "variant": "BT",
+    "releaseYear": 2021,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Armoury Crate",
+      "platforms": [
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "EQ, ANC and firmware on PC."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 45,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Up to 45 h; ANC-on figure not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Active Noise Cancellation; no transparency listed."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth + 3.5 mm",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Armoury Crate EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "mic.enc",
+        "name": "AI noise-cancelling mic",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "ANC button",
+          "action": "ANC toggle",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Volume wheel",
+          "action": "Volume",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup volume, ANC, mute and power.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "40 mm drivers; Bluetooth + 3.5 mm; console support via 3.5 mm."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC control",
+      "AI mic noise cancellation"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC in a lightweight Strix Go chassis",
+      "45 h battery",
+      "AI mic"
+    ],
+    "sources": [
+      {
+        "url": "https://rog.asus.com/headsets-audio/headsets/wireless-headsets/rog-strix-go-bt-model/spec/",
+        "type": "official-product",
+        "title": "ROG Strix Go BT tech specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on hours not published",
+      "Bluetooth codecs not published",
+      "EQ band count not published"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "ASUS ROG",
+    "companySlug": "asus-rog",
+    "family": "Delta",
+    "model": "ROG Delta S Wireless",
+    "slug": "asus-rog-delta-s-wireless",
+    "generation": "Delta S",
+    "variant": "Wireless",
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Armoury Crate",
+      "platforms": [
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "EQ, 7.1 surround and firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; 1800 mAh battery.",
+      "notes": "Spec table lists only 1800 mAh, not hours.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz wireless",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "7.1 surround",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Armoury Crate EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "mic.enc",
+        "name": "AI noise-cancelling mic",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume wheel",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mute button",
+          "action": "Mic mute",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup volume, mute and power.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "50 mm drivers; 2.4 GHz + Bluetooth."
+    },
+    "appOnlyFeatures": [
+      "7.1 surround",
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Wireless Delta S",
+      "2.4 GHz + Bluetooth",
+      "AI mic"
+    ],
+    "sources": [
+      {
+        "url": "https://rog.asus.com/headsets-audio/headsets/wireless-headsets/rog-delta-s-wireless-model/spec/",
+        "type": "official-product",
+        "title": "ROG Delta S Wireless tech specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery hours not published in spec table",
+      "Codec list not published",
+      "Multipoint not stated"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

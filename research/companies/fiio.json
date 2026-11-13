@@ -1,0 +1,2762 @@
+[
+  {
+    "company": "FiiO",
+    "companySlug": "fiio",
+    "family": "UTWS",
+    "model": "UTWS3",
+    "slug": "fiio-utws3",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "FiiO Control",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.fiio.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.fiio.control"
+      ],
+      "appVersionObserved": "4.6.1 (Android, Sep 2026)",
+      "notes": "FiiO Control and FiiO Music both expose EQ, channel balance and firmware updates for the UTWS3. FiiO Control's store listing still names the older BTR/EH3 generation explicitly; UTWS3 support is documented on the product page."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": null,
+      "chargingIndicators": "LEDs on the ear hooks; the 800 mAh case charges the hooks and has its own charge indication.",
+      "notes": "Official figures: 7 h per charge in TWS+ mode, 5.5 h in TWS mode, 30 h total with the case (4-5 recharges). No ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC and no transparency mode; cVc call noise reduction only."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ and channel balance",
+        "availability": "official-app",
+        "notes": "EQ and L/R channel balance via FiiO Control or FiiO Music."
+      },
+      {
+        "id": "connectivity.tws-plus",
+        "name": "TWS+ dual transmission",
+        "availability": "device-only",
+        "notes": "Both ear hooks connect directly to the source; no primary/secondary pair."
+      },
+      {
+        "id": "controls.volume-independent",
+        "name": "Independent 32-step volume",
+        "availability": "device-only",
+        "notes": "Volume is separate from the phone's Bluetooth volume."
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single press (either hook)",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Double press (right)",
+          "action": "Next track",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Double press (left)",
+          "action": "Previous track",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Power on/off; pairing",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "One multi-function button on each ear hook; pairing button on the charging case.",
+      "configurableInApp": null,
+      "notes": "Buttons are physical; no touch surface."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.0, Qualcomm QCC3020, independent headphone amp. 16-100 ohm drive capability. No LDAC or aptX HD."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Channel balance",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.fiio.com/utws3",
+        "type": "official-product",
+        "title": "FiiO UTWS3 True Wireless Bluetooth Amplifier",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fiio.com/utws3_parameters",
+        "type": "official-product",
+        "title": "UTWS3 specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "The official app's battery layout (split L/R versus combined, and whether the case is shown) is not documented.",
+      "EQ band count and preset names are not published.",
+      "Multipoint is not claimed; assumed absent."
+    ],
+    "notes": "UTWS3 turns MMCX or 0.78 mm 2-pin IEMs into true wireless earphones. Connector options are commercial variants of the same model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "FiiO",
+    "companySlug": "fiio",
+    "family": "UTWS",
+    "model": "UTWS5",
+    "slug": "fiio-utws5",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "FiiO Control",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.fiio.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.fiio.control"
+      ],
+      "appVersionObserved": "4.6.1 (Android, Sep 2026)",
+      "notes": "EQ, channel balance, game mode, charging protection and OTA firmware. FiiO Music also works."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": null,
+      "chargingIndicators": "White LED on each ear hook, on while charging and off when full; the 800 mAh case has its own indicator and supports wireless charging.",
+      "notes": "Official: >8 h (AAC) per charge, 30 h total from the case (3-4 charges). No ANC. Case itself charges by USB-C (wireless charging is for the case).",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC and no hear-through; only call noise reduction (aptX Voice / cVc)."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ and 10-band PEQ",
+        "availability": "official-app",
+        "notes": "PEQ with frequency, gain and Q editing; presets can be saved and shared."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "device-only",
+        "notes": "Two devices connected simultaneously."
+      },
+      {
+        "id": "vendor.fiio.game-mode",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": "Lower latency at higher power consumption."
+      },
+      {
+        "id": "vendor.fiio.charging-protection",
+        "name": "Charging protection (85%)",
+        "availability": "official-app",
+        "notes": "Stops charging the hooks at 85%."
+      },
+      {
+        "id": "audio.snapdragon-sound",
+        "name": "Snapdragon Sound / aptX Adaptive",
+        "availability": "device-only",
+        "notes": "96 kHz/24-bit over aptX Adaptive."
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single press (main button)",
+          "action": "Play/pause; answer call",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Long press 1 s (left)",
+          "action": "Previous track / volume down",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Long press 1 s (right)",
+          "action": "Next track / volume up",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Double press",
+          "action": "Voice assistant",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Long press 8 s",
+          "action": "Reset",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Physical buttons on each ear hook.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive",
+        "LHDC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.2, QCC5141, AK4332 DAC per side; 96 kHz/24-bit. No LDAC in the official codec list."
+    },
+    "appOnlyFeatures": [
+      "10-band PEQ",
+      "Game mode",
+      "Charging protection",
+      "Channel balance",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Snapdragon Sound and aptX Adaptive added",
+      "Independent AK4332 DAC per ear hook",
+      "Multipoint added",
+      "10-band PEQ added",
+      "Wireless charging case added"
+    ],
+    "sources": [
+      {
+        "url": "https://www.fiio.com/utws5",
+        "type": "official-product",
+        "title": "FiiO UTWS5",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fiio.com/utws5_parameters",
+        "type": "official-product",
+        "title": "UTWS5 specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Official battery UI layout is undocumented; no source states whether FiiO Control shows L/R separately and whether case charge is shown.",
+      "EQ preset names are not published.",
+      "No ANC; not a gap."
+    ],
+    "notes": "UTWS5 is the ear-hook adapter line, not a complete earphone; the IEM is user-supplied.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "FiiO",
+    "companySlug": "fiio",
+    "family": "UTWS",
+    "model": "UTWS5 2025",
+    "slug": "fiio-utws5-2025",
+    "generation": "2",
+    "variant": "2025",
+    "releaseYear": 2025,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "FiiO Control",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.fiio.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.fiio.control"
+      ],
+      "appVersionObserved": "4.6.1 (Android, Sep 2026)",
+      "notes": "10-band lossless PEQ, channel balance, HiFi/game mode, OTA. Firmware v0.63 added LDAC compatibility detection."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 16,
+      "chargingIndicators": "Ear hooks charge wirelessly inside the case (contact-free); LED on each hook. Case charges over USB-C only.",
+      "notes": "Official: >8 h (AAC), case provides 2 full charges (about 16 h more, 24 h total). Wireless charging applies to the ear hooks, not the case.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 16
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "FiiO states the UTWS5 2025 does not support hear-through; no ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "10-band PEQ",
+        "availability": "official-app",
+        "notes": "Up to 96 kHz/24-bit PEQ, seven presets, save/share curves."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.fiio.wireless-charging-hooks",
+        "name": "Contact-free hook charging",
+        "availability": "device-only",
+        "notes": "Charging contacts removed to avoid corrosion."
+      },
+      {
+        "id": "vendor.fiio.game-mode",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single press",
+          "action": "Play/pause; answer call",
+          "configurableInApp": null,
+          "notes": "New light-touch button mechanism."
+        },
+        {
+          "gesture": "Long press (left)",
+          "action": "Previous track",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Long press (right)",
+          "action": "Next track",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Long press (either)",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Physical button on each ear hook.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive",
+        "LHDC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.2, QCC5141, AK4332; 96 kHz/24-bit. LDAC added by firmware and supported in the 2025 spec sheet."
+    },
+    "appOnlyFeatures": [
+      "10-band PEQ",
+      "Game mode",
+      "Channel balance",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Contact-free wireless charging for the ear hooks",
+      "LDAC added (listed in the 2025 codec set)",
+      "Case reduced to 2 full charges (24 h total) from 30 h",
+      "10-band PEQ replaces the earlier EQ implementation"
+    ],
+    "sources": [
+      {
+        "url": "https://www.fiio.com/utws52025",
+        "type": "official-product",
+        "title": "FiiO UTWS5 2025",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fiio.com/utws52025_parameters",
+        "type": "official-product",
+        "title": "UTWS5 2025 specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://fiio.jp/products/utws5-2025",
+        "type": "official-regional",
+        "title": "FiiO Japan UTWS5 2025 page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "App battery display layout is not documented.",
+      "Preset names for the 10-band PEQ are not published."
+    ],
+    "notes": "Successor to the UTWS5; sold in MMCX and 0.78 mm 2-pin versions.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "FiiO",
+    "companySlug": "fiio",
+    "family": "LINK",
+    "model": "UTWS17",
+    "slug": "fiio-utws17",
+    "generation": "1",
+    "variant": "LINK TWS",
+    "releaseYear": 2026,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "FiiO Control",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.fiio.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.fiio.control"
+      ],
+      "appVersionObserved": "4.6.1 (Android, Sep 2026)",
+      "notes": "EQ/PEQ, channel balance, game mode, transparency and OTA. Firmware v0.62 released 2026-11-05."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 14,
+      "chargingIndicators": "The charging case has a display that shows the battery level of both the case and the ear hooks. Ear hooks also have LEDs.",
+      "notes": "Official: >7 h (SBC); case recharges the hooks twice (about 14 h more, 21 h total). The case display is the only numeric battery readout in this family.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 14
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "Transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Transparency mode is supported; active noise cancellation is not."
+    },
+    "features": [
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ and PEQ",
+        "availability": "official-app",
+        "notes": "10-band PEQ."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.aptx-lossless",
+        "name": "aptX Lossless / LDAC / LHDC",
+        "availability": "device-only",
+        "notes": "Bluetooth 6.0, up to 192 kHz/24-bit."
+      },
+      {
+        "id": "vendor.fiio.case-display",
+        "name": "Case battery display",
+        "availability": "device-only",
+        "notes": "Shows case and ear-hook levels."
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single press",
+          "action": "Play/pause; answer call",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Long press (left/right)",
+          "action": "Previous/next track",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Long press 2 s",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Physical buttons on each ear hook.",
+      "configurableInApp": false,
+      "notes": "Includes both MMCX and 0.78 mm 2-pin connectors in the box."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "LC3",
+        "aptX",
+        "aptX Adaptive",
+        "aptX Lossless",
+        "LDAC",
+        "LHDC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bluetooth 6.0, dual QCC5181, dual AK4333; 85 mW at 32 ohm; 8-100 ohm adaptive impedance."
+    },
+    "appOnlyFeatures": [
+      "EQ/PEQ",
+      "Channel balance",
+      "Game mode",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 6.0 and dual QCC5181",
+      "aptX Lossless and LHDC added",
+      "Case with numeric battery display",
+      "Both connector types included"
+    ],
+    "sources": [
+      {
+        "url": "https://www.fiio.com/UTWS17",
+        "type": "official-product",
+        "title": "FiiO LINK TWS (UTWS17)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fiio.com/utws17_parameters",
+        "type": "official-product",
+        "title": "UTWS17 / LINK TWS specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Whether the app itself shows split L/R hook charge in addition to the case display is not documented.",
+      "EQ preset names are not published."
+    ],
+    "notes": "Marketed as LINK TWS with model code UTWS17. The case display is unusual for this category and should be modelled as a device-level readout, not an app row.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "FiiO",
+    "companySlug": "fiio",
+    "family": "FW",
+    "model": "FW3",
+    "slug": "fiio-fw3",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "FiiO Control",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.fiio.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.fiio.control"
+      ],
+      "appVersionObserved": "4.6.1 (Android, Sep 2026)",
+      "notes": "EQ/PEQ, game mode, indicator switch, charging protection (85%), filter selection and codec selection."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 14,
+      "chargingIndicators": "LEDs on buds and case.",
+      "notes": "Official: 7 h buds + 14 h case = 21 h. 65 mAh per bud, 380 mAh case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC, no transparency."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ and PEQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.fiio.game-mode",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.fiio.codec-selection",
+        "name": "Codec selection",
+        "availability": "official-app",
+        "notes": "Unused codecs can be disabled."
+      },
+      {
+        "id": "vendor.fiio.charging-protection",
+        "name": "85% charge limit",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single press (main)",
+          "action": "Play/pause; answer call",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Single press (secondary)",
+          "action": "Volume down (left) / up (right)",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Long press 1 s",
+          "action": "Previous/next track; reject/hang up",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Double press",
+          "action": "Voice assistant",
+          "configurableInApp": null,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Physical buttons on each bud.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive",
+        "LHDC"
+      ],
+      "hiRes": true,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "Single dynamic driver, 32 ohm, 106 dB/mW. Bluetooth 5.2, QCC5141, AK4332."
+    },
+    "appOnlyFeatures": [
+      "EQ/PEQ",
+      "Game mode",
+      "Codec selection",
+      "Charge limit",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.fiio.com/FW3",
+        "type": "official-product",
+        "title": "FiiO FW3",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fiio.com/fw3_parameters",
+        "type": "official-product",
+        "title": "FW3 specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Multipoint is not listed for FW3; left null rather than assumed.",
+      "Official app battery layout is undocumented.",
+      "EQ band count is not published."
+    ],
+    "notes": "Entry model in the FW true-wireless line; single dynamic driver versus the FW5 hybrid.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "FiiO",
+    "companySlug": "fiio",
+    "family": "FW",
+    "model": "FW5",
+    "slug": "fiio-fw5",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "FiiO Control",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.fiio.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.fiio.control"
+      ],
+      "appVersionObserved": "4.6.1 (Android, Sep 2026)",
+      "notes": "10-band PEQ, game mode, filters, channel balance and OTA."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 14,
+      "chargingIndicators": "LEDs on buds and case.",
+      "notes": "Official: 7 h (aptX) + 14 h case = 21 h. Call time 5.5 h. 65 mAh per bud, 380 mAh case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC and no transparency mode."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "10-band PEQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.fiio.game-mode",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.fiio.filters",
+        "name": "Digital filter selection",
+        "availability": "official-app",
+        "notes": "Four filters."
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single press (main)",
+          "action": "Play/pause; answer call",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Single press (secondary)",
+          "action": "Volume down (left) / up (right)",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Long press 1 s",
+          "action": "Previous/next track; reject/hang up",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Double press",
+          "action": "Voice assistant",
+          "configurableInApp": null,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Physical buttons on each bud.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive",
+        "LHDC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "1 dynamic + 2 balanced armature drivers; 32 ohm; 108 dB/mW; Bluetooth 5.2, QCC5141, AK4332."
+    },
+    "appOnlyFeatures": [
+      "10-band PEQ",
+      "Game mode",
+      "Filters",
+      "Channel balance",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Hybrid 1DD+2BA driver configuration replaces the FW3 single dynamic",
+      "Multipoint added",
+      "10-band PEQ added"
+    ],
+    "sources": [
+      {
+        "url": "https://www.fiio.com/fw5",
+        "type": "official-product",
+        "title": "FiiO FW5",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fiio.com/fw5_parameters",
+        "type": "official-product",
+        "title": "FW5 specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Official app battery layout (split versus combined, case visibility) is undocumented.",
+      "PEQ preset names are not published."
+    ],
+    "notes": "FiiO's audiophile TWS; no ANC by design.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "FiiO",
+    "companySlug": "fiio",
+    "family": "BTR",
+    "model": "BTR3K",
+    "slug": "fiio-btr3k",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "FiiO Control",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.fiio.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.fiio.control"
+      ],
+      "appVersionObserved": "4.6.1 (Android, Sep 2026)",
+      "notes": "Explicitly supported by FiiO Control. EQ, filters, channel balance and firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 11,
+      "caseHours": null,
+      "chargingIndicators": "RGB LED for codec, charging and low battery; no numeric display.",
+      "notes": "Single 330 mAh battery, about 11 h. No charging case; clip-on receiver.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.usb-dac",
+        "name": "USB DAC mode",
+        "availability": "device-only",
+        "notes": "Up to 48 kHz/16-bit."
+      },
+      {
+        "id": "connectivity.nfc",
+        "name": "NFC pairing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power/multifunction button",
+          "action": "Power, pairing, play/pause, call handling",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume buttons",
+          "action": "Volume; long press track skip",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Side buttons: power/multifunction, volume up/down.",
+      "configurableInApp": false,
+      "notes": "Rear clip for clothing."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX LL",
+        "aptX HD",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.0; dual AK4377A; 3.5 mm single-ended and 2.5 mm balanced."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Filters",
+      "Channel balance",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.fiio.com/btr3k",
+        "type": "official-product",
+        "title": "FiiO BTR3K",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fiio.com/btr3k_parameters",
+        "type": "official-product",
+        "title": "BTR3K specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Multipoint is not claimed and is assumed absent.",
+      "EQ band count is not published."
+    ],
+    "notes": "Small clip-on Bluetooth receiver for wired IEMs/headphones; still listed by FiiO.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "FiiO",
+    "companySlug": "fiio",
+    "family": "BTR",
+    "model": "BTR5 2021",
+    "slug": "fiio-btr5-2021",
+    "generation": "2",
+    "variant": "2021",
+    "releaseYear": 2021,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "FiiO Control",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.fiio.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.fiio.control"
+      ],
+      "appVersionObserved": "4.6.1 (Android, Sep 2026)",
+      "notes": "EQ, filters, channel balance, car mode and OTA. Also works with FiiO Music."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9,
+      "caseHours": null,
+      "chargingIndicators": "OLED shows battery level and charging state; LED for codec.",
+      "notes": "Single 550 mAh battery, about 9 h. No case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.usb-dac",
+        "name": "USB DAC",
+        "availability": "device-only",
+        "notes": "Driver-free, 384 kHz/32-bit and DSD256 on the 2021 model."
+      },
+      {
+        "id": "connectivity.nfc",
+        "name": "NFC pairing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.fiio.display",
+        "name": "OLED status display",
+        "availability": "device-only",
+        "notes": "Codec, charge, volume, sample rate."
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Multifunction button",
+          "action": "Play/pause, call handling",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume buttons",
+          "action": "Volume; long press track skip",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Side buttons.",
+      "configurableInApp": false,
+      "notes": "Rear clip."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX LL",
+        "aptX HD",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.0, dual ES9219C, 3.5 mm and 2.5 mm balanced."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Filters",
+      "Channel balance",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Dual ES9219C DAC/amp replaces the single ES9218P of the original BTR5",
+      "MQA support added",
+      "USB DAC resolution raised to 384 kHz/32-bit and DSD256"
+    ],
+    "sources": [
+      {
+        "url": "https://www.fiio.com/btr52021",
+        "type": "official-product",
+        "title": "FiiO BTR5 2021",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fiio.com/btr52021_parameters",
+        "type": "official-product",
+        "title": "BTR5 2021 specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Multipoint is not claimed; assumed absent.",
+      "EQ band count is not published."
+    ],
+    "notes": "The 2021 revision of the BTR5; the original BTR5 is a separate, older generation.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "FiiO",
+    "companySlug": "fiio",
+    "family": "BTR",
+    "model": "BTR7",
+    "slug": "fiio-btr7",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "FiiO Control",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.fiio.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.fiio.control"
+      ],
+      "appVersionObserved": "4.6.1 (Android, Sep 2026)",
+      "notes": "EQ, filters, channel balance, car mode and OTA."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9,
+      "caseHours": null,
+      "chargingIndicators": "Colour display shows battery level; case-less device.",
+      "notes": "880 mAh; about 9 h single-ended and 8 h balanced. Supports wired and wireless charging.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.usb-dac",
+        "name": "USB DAC",
+        "availability": "device-only",
+        "notes": "384 kHz/32-bit, DSD256."
+      },
+      {
+        "id": "vendor.fiio.wireless-charging",
+        "name": "Qi wireless charging",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.fiio.display",
+        "name": "Colour status display",
+        "availability": "device-only",
+        "notes": "Codec, volume, gain, sample rate."
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume buttons",
+          "action": "Volume",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Side buttons.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX LL",
+        "aptX Adaptive",
+        "aptX HD",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.1; dual ES9219C; 3.5 mm and 4.4 mm balanced; 68 g."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Filters",
+      "Channel balance",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.fiio.com/btr7",
+        "type": "official-product",
+        "title": "FiiO BTR7",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fiio.com/btr7_parameters",
+        "type": "official-product",
+        "title": "BTR7 specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Multipoint is not claimed; assumed absent.",
+      "EQ band count is not published."
+    ],
+    "notes": "Larger 4.4 mm-balanced Bluetooth receiver with wireless charging; not a case-based TWS.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "FiiO",
+    "companySlug": "fiio",
+    "family": "BTR",
+    "model": "BTR11",
+    "slug": "fiio-btr11",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "FiiO Control",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.fiio.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.fiio.control"
+      ],
+      "appVersionObserved": "4.6.1 (Android, Sep 2026)",
+      "notes": "Codec and EQ settings; OTA."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 15,
+      "caseHours": null,
+      "chargingIndicators": "Single LED for codec/charging/low battery.",
+      "notes": "120 mAh; 15 h AAC, 8.5 h LDAC. 13 g clip-on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.fiio.clip",
+        "name": "Integrated clip",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Multifunction button",
+          "action": "Power/pairing/play/pause/calls",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume +/-",
+          "action": "Volume",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Multifunction plus volume buttons.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.3, BES2700IHC, 3.5 mm only, no display."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Codec settings",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.fiio.com/btr11",
+        "type": "official-product",
+        "title": "FiiO BTR11",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fiio.com/btr11_parameters",
+        "type": "official-product",
+        "title": "BTR11 specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Multipoint is not claimed; assumed absent.",
+      "EQ band count is not published."
+    ],
+    "notes": "Entry-level clip-on Bluetooth receiver with LDAC and no display.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "FiiO",
+    "companySlug": "fiio",
+    "family": "BTR",
+    "model": "BTR13",
+    "slug": "fiio-btr13",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "FiiO Control",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.fiio.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.fiio.control"
+      ],
+      "appVersionObserved": "4.6.1 (Android, Sep 2026)",
+      "notes": "EQ, filters, channel balance, car mode and OTA."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": null,
+      "chargingIndicators": "0.96-inch display shows battery level and charging state.",
+      "notes": "460 mAh; 8 h Bluetooth (3.5 mm or 4.4 mm), 10 h USB-dongle mode.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.usb-dac",
+        "name": "USB dongle mode",
+        "availability": "device-only",
+        "notes": "Up to 96 kHz/16-bit."
+      },
+      {
+        "id": "vendor.fiio.display",
+        "name": "0.96-inch display",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Multifunction button",
+          "action": "Play/pause/calls",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume +/-",
+          "action": "Volume",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Three side buttons plus mode switch.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX LL",
+        "aptX Adaptive",
+        "aptX HD",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.1, dual CS43131, 3.5 mm and 4.4 mm, 28.6 g."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Filters",
+      "Channel balance",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.fiio.com/BTR13",
+        "type": "official-product",
+        "title": "FiiO BTR13",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fiio.com/btr13_parameters",
+        "type": "official-product",
+        "title": "BTR13 specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Multipoint is not claimed; assumed absent.",
+      "EQ band count is not published."
+    ],
+    "notes": "4.4 mm-balanced budget receiver; USB mode is limited to 96 kHz/16-bit.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "FiiO",
+    "companySlug": "fiio",
+    "family": "BTR",
+    "model": "BTR15",
+    "slug": "fiio-btr15",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "FiiO Control",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.fiio.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.fiio.control"
+      ],
+      "appVersionObserved": "4.6.1 (Android, Sep 2026)",
+      "notes": "Global PEQ, filters, channel balance, car mode and OTA."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": null,
+      "chargingIndicators": "0.96-inch OLED shows battery level and charging state.",
+      "notes": "550 mAh; 8 h on either output in Bluetooth mode. PC/PHONE modes are bus-powered.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Global PEQ",
+        "availability": "official-app",
+        "notes": "Works in PC, BT and PHONE modes."
+      },
+      {
+        "id": "connectivity.usb-dac",
+        "name": "USB DAC",
+        "availability": "device-only",
+        "notes": "384 kHz/32-bit, DSD256, MQA."
+      },
+      {
+        "id": "vendor.fiio.mode-switch",
+        "name": "PC/BT/PHONE mode switch",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.fiio.display",
+        "name": "OLED display",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Multifunction button",
+          "action": "Play/pause/calls",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume +/-",
+          "action": "Volume",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Mode switch",
+          "action": "PC / BT / PHONE",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power, multifunction and volume buttons; mode slide switch.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX LL",
+        "aptX Adaptive",
+        "aptX HD",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.1, QCC5125 + XMOS XU316, dual ES9219MQ, 3.5 mm and 4.4 mm, 37.3 g."
+    },
+    "appOnlyFeatures": [
+      "Global PEQ",
+      "Filters",
+      "Channel balance",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "4.4 mm balanced output replaces 2.5 mm",
+      "XMOS XU316 USB input added",
+      "Global PEQ across all modes"
+    ],
+    "sources": [
+      {
+        "url": "https://www.fiio.com/BTR15",
+        "type": "official-product",
+        "title": "FiiO BTR15",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fiio.com/btr15_parameters",
+        "type": "official-product",
+        "title": "BTR15 specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "EQ band count is not published.",
+      "Multipoint is claimed for the BTR15 in support notes but the number of simultaneous devices is not stated in the spec table."
+    ],
+    "notes": "Bluetooth receiver and USB DAC with a three-position mode switch.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "FiiO",
+    "companySlug": "fiio",
+    "family": "BTR",
+    "model": "BTR17",
+    "slug": "fiio-btr17",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "FiiO Control",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.fiio.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.fiio.control"
+      ],
+      "appVersionObserved": "4.6.1 (Android, Sep 2026)",
+      "notes": "PEQ, filters, channel balance, desktop mode, car mode and OTA."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9,
+      "caseHours": null,
+      "chargingIndicators": "1.3-inch colour IPS display shows battery, codec, gain and sample rate.",
+      "notes": "9 h single-ended, 8 h balanced in Bluetooth; 10 h / 9 h in PHONE mode.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "PEQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.usb-dac",
+        "name": "USB DAC",
+        "availability": "device-only",
+        "notes": "768 kHz/32-bit, DSD512, MQA full decode."
+      },
+      {
+        "id": "vendor.fiio.desktop-mode",
+        "name": "Desktop mode",
+        "availability": "device-only",
+        "notes": "High-power mode when externally powered."
+      },
+      {
+        "id": "vendor.fiio.display",
+        "name": "1.3-inch colour display",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.fiio.mic",
+        "name": "Built-in microphone",
+        "availability": "device-only",
+        "notes": "Bluetooth voice calls."
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume knob",
+          "action": "Volume with push-to-confirm",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Previous/next buttons",
+          "action": "Track skip",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Mode switch",
+          "action": "PC / BT / PHONE; desktop mode switch",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power, previous, next, volume knob; two slide switches.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive",
+        "aptX Lossless",
+        "aptX HD",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.4, QCC5181, dual ES9069Q, XMOS XU316; 3.5 mm and 4.4 mm; 73.4 g."
+    },
+    "appOnlyFeatures": [
+      "PEQ",
+      "Filters",
+      "Channel balance",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 5.4 and aptX Lossless",
+      "Dual ES9069Q DACs",
+      "Colour IPS display and physical volume knob",
+      "Desktop mode"
+    ],
+    "sources": [
+      {
+        "url": "https://www.fiio.com/btr17",
+        "type": "official-product",
+        "title": "FiiO BTR17",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fiio.com/btr17_parameters",
+        "type": "official-product",
+        "title": "BTR17 specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "EQ band count is not published.",
+      "Number of simultaneous Bluetooth devices for multipoint is not stated."
+    ],
+    "notes": "Flagship clip-on receiver; the display is a device-level battery readout, not an app-only one.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "FiiO",
+    "companySlug": "fiio",
+    "family": "EH",
+    "model": "EH3 NC",
+    "slug": "fiio-eh3-nc",
+    "generation": "1",
+    "variant": "NC",
+    "releaseYear": 2019,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "FiiO Control",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.fiio.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.fiio.control"
+      ],
+      "appVersionObserved": "4.6.1 (Android, Sep 2026)",
+      "notes": "FiiO Control explicitly lists EH3 NC support for EQ and codec on/off. FiiO Music was the earlier route for the same settings."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 30,
+      "budsHoursNoAnc": 50,
+      "caseHours": null,
+      "chargingIndicators": "LED on the earcup; 10-minute charge gives about 3 hours.",
+      "notes": "1000 mAh. Bluetooth 50 h, Bluetooth + ANC 30 h, standby 1000 h. Wired 3.5 mm and USB-C audio.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "ANC on",
+        "ANC off"
+      ],
+      "adaptive": false,
+      "ancDb": 30,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Feedforward + feedback hybrid ANC using an ADI1777 DSP and four microphones; 30 dB +/-5 dB, 80 Hz-20 kHz. No transparency mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "device-only",
+        "notes": "Hardware switch; no app level control."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ",
+        "availability": "official-app",
+        "notes": "EQ and codec enable/disable in FiiO Control."
+      },
+      {
+        "id": "connectivity.nfc",
+        "name": "NFC pairing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.usb-dac",
+        "name": "USB-C audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.wired-mode",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only",
+        "notes": "Works passively when the battery is empty."
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power on/off; pairing",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "ANC switch",
+          "action": "ANC on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Multifunction button",
+          "action": "Play/pause; calls",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume +/-",
+          "action": "Volume; track skip",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power, multifunction, volume and ANC switch on the earcup.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX LL",
+        "aptX HD",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "45 mm titanium-plated dynamic driver, 32 ohm, 98 dB. Bluetooth 5.0, CSR8675 + ADI1777."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Codec enable/disable",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://fiio.com/eh3nc",
+        "type": "official-product",
+        "title": "FiiO EH3 NC",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.fiio.control",
+        "type": "official-app-store",
+        "title": "FiiO Control app listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "FiiO Control's battery presentation for EH3 NC is undocumented; single combined value is inferred from the single battery and LED-only hardware.",
+      "No transparency mode; not a gap."
+    ],
+    "notes": "FiiO's first ANC headphone. ANC is hardware-switched; the app does not expose levels.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "FiiO",
+    "companySlug": "fiio",
+    "family": "EH",
+    "model": "EH11",
+    "slug": "fiio-eh11",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "on-ear",
+    "officialApp": {
+      "name": "FiiO Control",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.fiio.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.fiio.control"
+      ],
+      "appVersionObserved": "4.6.1 (Android, Sep 2026)",
+      "notes": "EQ presets, gaming EQ, LDAC on/off and OTA. Firmware V1.1.1 released 2026-11-07."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 30,
+      "caseHours": null,
+      "chargingIndicators": "LED status indicator; 2-hour charge.",
+      "notes": "30 h playback, 92 g, no ANC. Semi-open on-ear design.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC; semi-open acoustic design."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ presets",
+        "availability": "official-app",
+        "notes": "Pop, classical, jazz, rock plus gaming EQ."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.fiio.retro-controls",
+        "name": "Rotary volume/track dials",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC",
+        "availability": "device-only",
+        "notes": "Hi-Res Audio Wireless; LDAC can be disabled in the app."
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "other"
+      ],
+      "gestures": [
+        {
+          "gesture": "Right earcup dial",
+          "action": "Volume",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Left earcup dial",
+          "action": "Track skip",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Power button",
+          "action": "Power; play/pause",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/play button and two rotary dials.",
+      "configurableInApp": false,
+      "notes": "Retro transparent mechanical housing with wood accent."
+    },
+    "audio": {
+      "eqPresets": [
+        "Pop",
+        "Classical",
+        "Jazz",
+        "Rock",
+        "Gaming"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm long-throw dynamic driver, 16 ohm, 20 Hz-40 kHz (LDAC). Bluetooth 6.0."
+    },
+    "appOnlyFeatures": [
+      "EQ presets",
+      "Gaming EQ",
+      "LDAC toggle",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.fiio.com/EH11",
+        "type": "official-product",
+        "title": "FiiO EH11 Bluetooth On-Ear Headphones",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fiio.com/newsinfo/1112975.html",
+        "type": "official-product",
+        "title": "EH11 launch notice (30 h, LDAC, BT 6.0)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "App battery layout is undocumented for the single-battery headphone.",
+      "EQ band count is not published."
+    ],
+    "notes": "Semi-open retro on-ear; no ANC. A separate model from the EH13 over-ear.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "FiiO",
+    "companySlug": "fiio",
+    "family": "EH",
+    "model": "EH13",
+    "slug": "fiio-eh13",
+    "generation": "1",
+    "variant": "ANC",
+    "releaseYear": 2026,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "FiiO Control",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.fiio.control"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/apps/details?id=com.fiio.control"
+      ],
+      "appVersionObserved": "4.6.1 (Android, Sep 2026)",
+      "notes": "EQ, gaming/cinema effects, LDAC toggle and OTA."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 45,
+      "budsHoursNoAnc": 75,
+      "caseHours": null,
+      "chargingIndicators": "LED status indicator; 2-hour charge over USB-C.",
+      "notes": "75 h ANC off / 45 h ANC on. 278 g. Wired 3.5 mm with DSP compensation when powered on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "High",
+        "Medium",
+        "Low",
+        "Transparency"
+      ],
+      "adaptive": false,
+      "ancDb": -42,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Hybrid feedforward + feedback ANC, three levels, up to -42 dB. Five microphones with ENC for calls."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Three-level hybrid ANC",
+        "availability": "both",
+        "notes": "Hardware button cycles modes; app EQ is separate."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ and effects",
+        "availability": "official-app",
+        "notes": "Gaming and cinema EQ effects."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC / Hi-Res",
+        "availability": "device-only",
+        "notes": "LDAC up to 990 kbps; Hi-Res Audio and Hi-Res Wireless certified."
+      },
+      {
+        "id": "audio.wired-mode",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only",
+        "notes": "DSP compensation when powered on."
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power on/off; pairing",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "ANC button, single press",
+          "action": "Cycle ANC levels / transparency / off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume +/-",
+          "action": "Volume; track skip",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power, ANC and volume buttons on the earcup.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Gaming",
+        "Cinema"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm sapphire-coated composite diaphragm, 16 ohm, 20 Hz-40 kHz. Bluetooth 6.0."
+    },
+    "appOnlyFeatures": [
+      "EQ and effects",
+      "LDAC toggle",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC added (EH11 has none)",
+      "Over-ear rather than on-ear",
+      "75 h / 45 h ANC battery versus 30 h",
+      "Hybrid ANC with three levels and -42 dB claim"
+    ],
+    "sources": [
+      {
+        "url": "https://fiio.com/EH13",
+        "type": "official-product",
+        "title": "FiiO EH13 Bluetooth Noise Cancelling Over-Ear Headphones",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fiio.com/newsinfo/1121315.html",
+        "type": "official-product",
+        "title": "EH13 launch notice",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "App battery presentation is undocumented.",
+      "Transparency dB is not published.",
+      "EQ band count is not published."
+    ],
+    "notes": "Budget ANC over-ear; the -42 dB claim is the vendor's low-frequency maximum.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "FiiO",
+    "companySlug": "fiio",
+    "family": "ANYTIME",
+    "model": "ANYTIME",
+    "slug": "fiio-anytime",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "on-ear",
+    "officialApp": {
+      "name": "None",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No companion app is documented for ANYTIME. All controls are on-device; FiiO Control is not listed for this model."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 58,
+      "caseHours": null,
+      "chargingIndicators": "LED status indicator; 2-hour charge.",
+      "notes": "500 mAh. Official: 58 h ANC off, 35 h with ANC on, about 50 h ANC only, 330 h standby. ANC-on music figure (35 h) is used as budsHoursAnc.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "ANC on",
+        "Transparency",
+        "ANC off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Feedforward ANC with a dedicated hardware button; no level control."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Feedforward ANC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.fiio.game-mode",
+        "name": "Game mode",
+        "availability": "device-only",
+        "notes": "Double-press ANC button; under 60 ms."
+      },
+      {
+        "id": "audio.wired-mode",
+        "name": "3.5 mm / USB-C audio",
+        "availability": "device-only",
+        "notes": "Also works wired."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "ANC button, single press",
+          "action": "ANC / transparency / off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "ANC button, double press",
+          "action": "Game / music mode",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume +/-",
+          "action": "Volume; long press track skip",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power, ANC, volume +/- buttons.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.4, JL7006F. No LDAC. On-ear ANC headset."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.fiio.com/anytime",
+        "type": "official-product",
+        "title": "FiiO ANYTIME Bluetooth Noise Cancelling Headset",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fiio.com/anytime_parameters",
+        "type": "official-product",
+        "title": "ANYTIME specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No companion app; battery is only visible through the phone's system Bluetooth UI or the headset LED.",
+      "ANC attenuation in dB is not published.",
+      "The official battery table is internally inconsistent (58 h ANC off, 35 h ANC off/on); ANC-on music is recorded as 35 h."
+    ],
+    "notes": "No-app budget ANC on-ear. The separate ANYWHERE product is a portable speaker and is out of scope.",
+    "researchedAt": "2026-11-10"
+  }
+]

@@ -156,4 +156,32 @@ class AggregationTest {
         )
         assertTrue(result is IngestResult.Rejected)
     }
+
+    @Test
+    fun `repository sequence source continues above an externally applied sequence`() = runTest {
+        val repo = GlobalDeviceStateRepository()
+        val id = GlobalDeviceId("dev-seq")
+
+        // A writer that supplies a high literal sequence first must not make
+        // the repository's own allocator hand out a stale, lower sequence.
+        repo.ingest(
+            DeviceStateEvent.BatteryUpdated(
+                deviceId = id, sessionId = null,
+                sequence = 20_000L, sourceId = "test",
+                battery = BatteryState.Unknown,
+            ),
+        )
+
+        val next = repo.nextSequence(id.value)
+        assertTrue(next > 20_000L)
+
+        val result = repo.ingest(
+            DeviceStateEvent.BatteryUpdated(
+                deviceId = id, sessionId = null,
+                sequence = next, sourceId = "test",
+                battery = BatteryState.Unknown,
+            ),
+        )
+        assertTrue(result == IngestResult.Applied)
+    }
 }

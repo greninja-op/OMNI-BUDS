@@ -1,0 +1,145 @@
+[
+  {
+    "company": "iBasso",
+    "companySlug": "ibasso",
+    "family": "CF",
+    "model": "CF01",
+    "slug": "ibasso-cf01",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "None",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No companion app. All controls are the physical button on each adapter; firmware is not user-updatable through an app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "only-when-charging",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 4.5,
+      "caseHours": 20,
+      "chargingIndicators": "LED in each adapter's button; the case has a charge LED. No numeric percentage readout.",
+      "notes": "Official: about 4.5 h per adapter plus 20 h from the case (24 h total). Case supports USB-C and Qi wireless charging.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 20
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC and no transparency."
+    },
+    "features": [
+      {
+        "id": "vendor.ibasso.tws-plus",
+        "name": "Qualcomm TWS+ dual-channel",
+        "availability": "device-only",
+        "notes": "Both adapters connect directly to a TWS+ source."
+      },
+      {
+        "id": "vendor.ibasso.wireless-charging-case",
+        "name": "Qi wireless charging case",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.mmcx",
+        "name": "MMCX IEM connection",
+        "availability": "device-only",
+        "notes": "Turns MMCX IEMs into true wireless; 2-pin needs an adapter."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single press (either adapter)",
+          "action": "Play/pause",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Double press (right)",
+          "action": "Next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Double press (left)",
+          "action": "Previous track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Triple press",
+          "action": "Voice assistant",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Long press 3 s / 5 s",
+          "action": "Power on/off / pairing",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "One physical button per adapter, with LED.",
+      "configurableInApp": false,
+      "notes": "No onboard volume control; volume is adjusted on the source."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.0, QCC3020 plus an independent amp; 9 mW at 32 ohm; 24-bit/192 kHz decoding claim; IPX5; 6 g per adapter."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.musinltd.com/CF01.html",
+        "type": "official-product",
+        "title": "iBasso CF01 official Japanese distributor page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://ibasso.com/product/cf01/",
+        "type": "official-product",
+        "title": "iBasso CF01 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official battery UI is LED-only; the phone's per-bud percentage behaviour is undocumented.",
+      "No app means no EQ, no firmware UI and no split-battery display.",
+      "LDAC and aptX HD are absent; not a gap."
+    ],
+    "notes": "iBasso's only Bluetooth wearable to date; MMCX-only adapter. No companion app should be assumed in OmniBuds.",
+    "researchedAt": "2026-11-10"
+  }
+]

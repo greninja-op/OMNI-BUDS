@@ -1,0 +1,461 @@
+[
+  {
+    "company": "Unique Melody",
+    "companySlug": "unique-melody",
+    "family": "TWS",
+    "model": "TWS30X",
+    "slug": "unique-melody-tws30x",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No companion app is documented for the TWS30X. Unique Melody's UM Smart Sound app arrived with the later U-Free."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "only-when-charging",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 19,
+      "chargingIndicators": "Buds and case LEDs; no numeric percentage.",
+      "notes": "Official: about 5 h per charge, about 24 h total with the case (19 h additional). No ANC.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 19
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC and no transparency."
+    },
+    "features": [
+      {
+        "id": "vendor.uniquemelody.hybrid",
+        "name": "3-driver hybrid",
+        "availability": "device-only",
+        "notes": "7.2 mm dynamic plus two balanced armatures per side."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Track skip",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Voice assistant",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Qualcomm Bluetooth chip, Bluetooth 5.0-class; no LDAC and no app EQ. Four colourways."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.aptx.com/products/uniquemelody-tws30x",
+        "type": "official-product",
+        "title": "Unique Melody TWS30X aptX listing",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.phileweb.com/news/d-av/202109/29/53711.html",
+        "type": "reputable-secondary",
+        "title": "Unique Melody TWS30X launch coverage (drivers, battery)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No official product page remains; driver count, battery and codec facts come from launch coverage.",
+      "No app is documented; battery UI is phone-level only.",
+      "Bluetooth version and chipset are not stated precisely.",
+      "Touch gesture mapping is not published."
+    ],
+    "notes": "Unique Melody's first TWS (2021). Superseded by the U-Free and UXUE.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Unique Melody",
+    "companySlug": "unique-melody",
+    "family": "U-Free",
+    "model": "U-Free",
+    "slug": "unique-melody-u-free",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "UM Smart Sound",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "UM Smart Sound provides sound profiles, basic EQ, device information and the four mode switches. It launched on iOS first and reached Android in June 2023."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 8,
+      "caseHours": 14,
+      "chargingIndicators": "LED on buds and case; no numeric display.",
+      "notes": "Official: about 7 h + 14 h with ANC on, 8 h + 16 h with ANC off. 50 mAh per bud, 240 mAh case. Case is USB-C only (no wireless charging).",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "ANC",
+        "Ambient",
+        "Hear",
+        "HiFi"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "ANC plus Ambient and a speech-focused Hear mode. No dB figure published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": "Mode selected by touch or in UM Smart Sound."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "vendor.uniquemelody.hear-mode",
+        "name": "Hear mode",
+        "availability": "both",
+        "notes": "Boosts voices selectively."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Infrared wear detection",
+        "availability": "device-only",
+        "notes": "Auto power on when inserted and off a few seconds after removal."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ",
+        "availability": "official-app",
+        "notes": "Basic EQ and profiles."
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Track skip",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Cycle HiFi / ANC / Ambient / Hear",
+          "configurableInApp": null,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": "Touch controls were criticised as over-sensitive in reviews."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "Bluetooth 5.2; 10 mm carbon-nanotube dynamic driver plus a silver-palladium bone-conduction driver; 30 mW dual balanced output; IPX5."
+    },
+    "appOnlyFeatures": [
+      "EQ/profiles",
+      "Mode selection",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bone-conduction driver added",
+      "ANC added",
+      "LDAC added",
+      "Companion app added"
+    ],
+    "sources": [
+      {
+        "url": "https://www.psoundasia.com/products/unique-melody-u-free",
+        "type": "official-regional",
+        "title": "Unique Melody U-Free product page (specifications)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.audiodiscourse.com/2023/07/unique-melody-u-free-true-wireless.html",
+        "type": "reputable-secondary",
+        "title": "U-Free review (app and modes)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official app battery layout is undocumented.",
+      "ANC attenuation in dB is not published.",
+      "Multipoint is not stated; left null.",
+      "EQ band count is not published.",
+      "Package ID not verified."
+    ],
+    "notes": "Unique Melody's first ANC TWS, with a bone-conduction driver. App is required to change modes beyond the touch cycle.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Unique Melody",
+    "companySlug": "unique-melody",
+    "family": "UXUE",
+    "model": "UXUE",
+    "slug": "unique-melody-uxue",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "UM Smart Sound",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "UM Smart Sound provides EQ and a low-latency gaming mode. The earbuds also have an on-device mode cycle."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 5,
+      "chargingIndicators": "Buds and case LEDs; no numeric display.",
+      "notes": "Class AB firmware: about 5 h buds, 10 h total. Class D firmware: about 6 h buds, 12 h total. The two runtimes come from a user-flashed firmware, not a menu toggle.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "HiFi",
+        "Ambient",
+        "Hearing"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. HiFi, Ambient and a speech-boosting Hearing mode; passive isolation only."
+    },
+    "features": [
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.uniquemelody.hearing-mode",
+        "name": "Hearing mode",
+        "availability": "device-only",
+        "notes": "Boosts low-level and speech-range sound."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.uniquemelody.amplifier-firmware",
+        "name": "Class AB / Class D firmware",
+        "availability": "device-only",
+        "notes": "Manually flashed; not switchable on the fly."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear sensor",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.uniquemelody.low-latency",
+        "name": "Low-latency gaming mode",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap (right)",
+          "action": "Play/pause",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Touch and hold (left)",
+          "action": "Cycle HiFi / Ambient / Hearing",
+          "configurableInApp": null,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive",
+        "aptX Lossless"
+      ],
+      "hiRes": true,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "QCC5144, 24-bit/96 kHz aptX Lossless; 10 mm carbon-nanotube dynamic + balanced armature + bone conduction per side; IP55."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Gaming mode"
+    ],
+    "featureDeltaFromPrevious": [
+      "aptX Lossless added",
+      "Balanced-armature driver added to the dynamic + bone-conduction pair",
+      "IP55 replaces IPX5",
+      "ANC removed relative to the U-Free",
+      "Case total cut to 10-12 h from 21-24 h"
+    ],
+    "sources": [
+      {
+        "url": "https://uniquemelody.org/collections/bluetooth-earphones",
+        "type": "official-product",
+        "title": "Unique Melody true-wireless collection (UXUE)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://primeaudio.org/unique-melody-uxue-review/",
+        "type": "reputable-secondary",
+        "title": "UXUE review (QCC5144, battery, modes)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official specifications page is thin; battery and codec details come from reviews.",
+      "App battery layout is undocumented.",
+      "Multipoint is not stated; left null.",
+      "EQ band count is not published.",
+      "Class D runtime requires manually flashing firmware; the shipping firmware is Class AB."
+    ],
+    "notes": "2026 TWS with no ANC, positioned below the U-Free. Battery is poor for the class (10-12 h total).",
+    "researchedAt": "2026-11-10"
+  }
+]

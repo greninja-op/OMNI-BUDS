@@ -42,7 +42,8 @@ class SamsungGalaxyBudsDriver : IVendorDriver {
     ): Boolean {
         val name = deviceName?.lowercase() ?: ""
         if (name.contains("galaxy buds") || name.contains("buds pro") || name.contains("buds live") ||
-            name.contains("buds2") || name.contains("buds fe") || name.contains("gear iconx")
+            name.contains("buds2") || name.contains("buds fe") || name.contains("gear iconx") ||
+            name.contains("akg")
         ) {
             return true
         }

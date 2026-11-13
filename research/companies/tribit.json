@@ -1,0 +1,1551 @@
+[
+  {
+    "company": "Tribit",
+    "companySlug": "tribit",
+    "family": "FlyBuds",
+    "model": "Tribit FlyBuds 3",
+    "slug": "tribit-flybuds-3",
+    "generation": "3",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Tribit",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thousandshores.tribit"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thousandshores.tribit"
+      ],
+      "appVersionObserved": null,
+      "notes": "Tribit app supports EQ and firmware on compatible models."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 110,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 110 h total with case, marketed as 20 days of use. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 110
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "water.ipx8",
+        "name": "IPX8 waterproof",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.bluetooth-5",
+        "name": "Bluetooth 5.0",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "IPX8; Bluetooth 5.0."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "110 h battery and IPX8 versus FlyBuds 2"
+    ],
+    "sources": [
+      {
+        "url": "https://tribit.com/products/tribit-flybuds-3-true-wireless-earbuds",
+        "type": "official-product",
+        "title": "Tribit FlyBuds 3 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Per-bud hours",
+      "Codec list",
+      "Multipoint",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": "Battery claim is total-with-case only; per-bud hours not published.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Tribit",
+    "companySlug": "tribit",
+    "family": "FlyBuds",
+    "model": "Tribit FlyBuds C1",
+    "slug": "tribit-flybuds-c1",
+    "generation": "C1",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Tribit",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thousandshores.tribit"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thousandshores.tribit"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 12,
+      "caseHours": 50,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 12 h/50 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "connectivity.bluetooth-5",
+        "name": "Bluetooth 5.2",
+        "availability": "device-only"
+      },
+      {
+        "id": "calls.4mic",
+        "name": "4-mic call array",
+        "availability": "device-only"
+      },
+      {
+        "id": "water.ipx5",
+        "name": "IPX5",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.2; IPX5."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "FlyBuds C1 long-battery model"
+    ],
+    "sources": [
+      {
+        "url": "https://tribit.com/collections/earbuds",
+        "type": "official-product",
+        "title": "Tribit earbuds collection (legacy product page removed)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery approximate",
+      "Codec list",
+      "Dedicated spec table not captured",
+      "Official product page removed; specs from launch materials and need re-verification",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Tribit",
+    "companySlug": "tribit",
+    "family": "FlyBuds",
+    "model": "Tribit FlyBuds C1 Pro",
+    "slug": "tribit-flybuds-c1-pro",
+    "generation": "C1",
+    "variant": "Pro",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Tribit",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thousandshores.tribit"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thousandshores.tribit"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 40,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 10 h/40 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC depth approximate."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "water.ipx5",
+        "name": "IPX5",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC added versus FlyBuds C1"
+    ],
+    "sources": [
+      {
+        "url": "https://tribit.com/collections/earbuds",
+        "type": "official-product",
+        "title": "Tribit earbuds collection (legacy product page removed)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery approximate",
+      "ANC dB",
+      "Spec table not captured",
+      "Official product page removed; specs from launch materials and need re-verification",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Tribit",
+    "companySlug": "tribit",
+    "family": "FlyBuds",
+    "model": "Tribit FlyBuds C2",
+    "slug": "tribit-flybuds-c2",
+    "generation": "C2",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Tribit",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thousandshores.tribit"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thousandshores.tribit"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 32,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 8 h/32 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "connectivity.bluetooth-5",
+        "name": "Bluetooth 5.2",
+        "availability": "device-only"
+      },
+      {
+        "id": "water.ipx5",
+        "name": "IPX5",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "C2 compact non-ANC model"
+    ],
+    "sources": [
+      {
+        "url": "https://tribit.com/collections/earbuds",
+        "type": "official-product",
+        "title": "Tribit earbuds collection (legacy product page removed)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery approximate",
+      "Spec table not captured",
+      "Official product page removed; specs from launch materials and need re-verification",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Tribit",
+    "companySlug": "tribit",
+    "family": "FlyBuds",
+    "model": "Tribit FlyBuds NC",
+    "slug": "tribit-flybuds-nc",
+    "generation": "NC",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Tribit",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thousandshores.tribit"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thousandshores.tribit"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 40,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 8 h/40 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC depth approximate."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "water.ipx5",
+        "name": "IPX5",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Dedicated ANC FlyBuds variant"
+    ],
+    "sources": [
+      {
+        "url": "https://tribit.com/collections/earbuds",
+        "type": "official-product",
+        "title": "Tribit earbuds collection (legacy product page removed)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery approximate",
+      "ANC dB",
+      "Spec table not captured",
+      "Official product page removed; specs from launch materials and need re-verification",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Tribit",
+    "companySlug": "tribit",
+    "family": "MoveBuds",
+    "model": "Tribit MoveBuds H1",
+    "slug": "tribit-movebuds-h1",
+    "generation": "H1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Tribit",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thousandshores.tribit"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thousandshores.tribit"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 40,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 10 h/40 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Sport model; no ANC."
+    },
+    "features": [
+      {
+        "id": "design.ear-hooks",
+        "name": "Sport ear hooks",
+        "availability": "device-only"
+      },
+      {
+        "id": "water.ipx7",
+        "name": "IPX7",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IPX7."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Sport-focused MoveBuds line"
+    ],
+    "sources": [
+      {
+        "url": "https://tribit.com/collections/earbuds",
+        "type": "official-product",
+        "title": "Tribit earbuds collection (legacy product page removed)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery approximate",
+      "Spec table not captured",
+      "Official product page removed; specs from launch materials and need re-verification",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Tribit",
+    "companySlug": "tribit",
+    "family": "QuietPlus",
+    "model": "Tribit QuietPlus 72",
+    "slug": "tribit-quietplus-72",
+    "generation": "72",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Tribit",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thousandshores.tribit"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thousandshores.tribit"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 50,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 50 h ANC off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Hybrid ANC; depth approximate."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "wired.3.5mm",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm driver."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "QuietPlus 72 ANC over-ear"
+    ],
+    "sources": [
+      {
+        "url": "https://tribit.com/collections/earbuds",
+        "type": "official-product",
+        "title": "Tribit earbuds collection (legacy product page removed)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery approximate",
+      "ANC dB",
+      "Spec table not captured",
+      "Official product page removed; specs from launch materials and need re-verification"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Tribit",
+    "companySlug": "tribit",
+    "family": "QuietPlus",
+    "model": "Tribit QuietPlus 81",
+    "slug": "tribit-quietplus-81",
+    "generation": "81",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Tribit",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thousandshores.tribit"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thousandshores.tribit"
+      ],
+      "appVersionObserved": null,
+      "notes": "Six EQ modes, hearing protection mode."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 70,
+      "budsHoursNoAnc": 110,
+      "caseHours": null,
+      "chargingIndicators": "10 minutes = 5 hours.",
+      "notes": "Official 110 h total / 70 h with ANC on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 45,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Hybrid ANC with 5 mics and AI algorithm, up to 45 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "audio.xbass",
+        "name": "XBass",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "6 EQ modes",
+        "availability": "official-app"
+      },
+      {
+        "id": "hearing.protection",
+        "name": "85 dB hearing protection",
+        "availability": "official-app"
+      },
+      {
+        "id": "controls.buttons",
+        "name": "Earcup buttons",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap (right earcup)",
+          "action": "toggle XBass",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Earcup buttons plus touch gesture for XBass.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "6 modes"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "hearing protection",
+      "XBass"
+    ],
+    "featureDeltaFromPrevious": [
+      "110 h battery and 45 dB ANC versus QuietPlus 72"
+    ],
+    "sources": [
+      {
+        "url": "https://tribit.com/products/tribit-quietplus-81-wireless-headphone",
+        "type": "official-product",
+        "title": "Tribit QuietPlus 81 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Codec list",
+      "EQ preset names"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Tribit",
+    "companySlug": "tribit",
+    "family": "XFree",
+    "model": "Tribit XFree Go",
+    "slug": "tribit-xfree-go",
+    "generation": "Go",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Tribit",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thousandshores.tribit"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thousandshores.tribit"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 60,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 60 h ANC off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "wired.3.5mm",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "controls.buttons",
+        "name": "Physical controls",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "power/pairing",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Value over-ear without ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://tribit.com/collections/earbuds",
+        "type": "official-product",
+        "title": "Tribit earbuds collection (legacy product page removed)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery approximate",
+      "Codec list",
+      "Spec table not captured",
+      "Official product page removed; specs from launch materials and need re-verification"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Tribit",
+    "companySlug": "tribit",
+    "family": "CallElite",
+    "model": "Tribit CallElite 81",
+    "slug": "tribit-callelite-81",
+    "generation": "81",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Tribit",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thousandshores.tribit"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thousandshores.tribit"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 50,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 50 h; office headset with boom mic.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "ANC with call-focused ENC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "calls.boom-mic",
+        "name": "Detachable boom microphone",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "wired.3.5mm",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Earcup buttons and boom-mic mute.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Office/UC headset form factor."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Office headset with boom mic"
+    ],
+    "sources": [
+      {
+        "url": "https://tribit.com/collections/earbuds",
+        "type": "official-product",
+        "title": "Tribit earbuds collection (legacy product page removed)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery approximate",
+      "ANC dB",
+      "Spec table not captured",
+      "Official product page removed; specs from launch materials and need re-verification"
+    ],
+    "notes": "Form factor recorded as 'other' because the schema lacks a headset-with-boom category.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Tribit",
+    "companySlug": "tribit",
+    "family": "FlyBuds",
+    "model": "Tribit FlyBuds C3",
+    "slug": "tribit-flybuds-c3",
+    "generation": "C3",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Tribit",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.thousandshores.tribit"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.thousandshores.tribit"
+      ],
+      "appVersionObserved": null,
+      "notes": "10 EQ presets, manual ANC levels and noise-control scenes."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 8,
+      "caseHours": 35,
+      "chargingIndicators": "Case LED: orange below 10%, white above 10%.",
+      "notes": "Official ANC off 8 h single / 35 h case; ANC on 6 h single / 25 h case. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 45,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "45 dB hybrid ANC with 5 manual ANC levels and 3 ANC scenes."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "45 dB hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.xbass",
+        "name": "XBass",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "10 preset EQ modes",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "water.ipx5",
+        "name": "IPX5",
+        "availability": "device-only"
+      },
+      {
+        "id": "tips.antibacterial",
+        "name": "Anti-bacterial ear tips",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "10 presets"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Bluetooth 6.0; IPX5."
+    },
+    "appOnlyFeatures": [
+      "10 EQ presets",
+      "5 ANC levels",
+      "3 ANC scenes"
+    ],
+    "featureDeltaFromPrevious": [
+      "45 dB ANC versus FlyBuds NC",
+      "Bluetooth 6.0 and multipoint",
+      "35 h total battery"
+    ],
+    "sources": [
+      {
+        "url": "https://tribit.com/products/tribit-flybuds-c3-hybrid-anc-true-wireless-earbuds",
+        "type": "official-product",
+        "title": "Tribit FlyBuds C3 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Codec list",
+      "Full gesture map",
+      "Spatial audio support"
+    ],
+    "notes": "Current 2026 Tribit ANC model.",
+    "researchedAt": "2026-11-10"
+  }
+]

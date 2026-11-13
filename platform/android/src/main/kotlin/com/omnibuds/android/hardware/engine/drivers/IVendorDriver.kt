@@ -78,6 +78,33 @@ interface IVendorDriver {
     fun buildBatteryQueryCommand(): ByteArray? = null
 
     /**
+     * Builds the batch-status query used to read live switch states.
+     */
+    fun buildBatchStatusQuery(): ByteArray? = null
+
+    /**
+     * Parses the game-mode bit from a batch-status reply.
+     */
+    fun parseGameModeState(bytes: ByteArray): Boolean? = null
+
+    /**
+     * Parses the full batch-status reply (noise mode + game mode).
+     */
+    fun parseBatchStatus(bytes: ByteArray): com.omnibuds.android.hardware.protocol.RealmeProtocolParser.BatchStatus? = null
+
+    /**
+     * Read-only query sent with every battery poll so the app can ask the earbuds for
+     * their real noise mode instead of assuming it. Null means the driver has no verified
+     * mode read, so nothing extra is sent.
+     */
+    fun buildModePollCommand(): ByteArray? = null
+
+    /**
+     * Connection-time state-read queries (ANC, keymap, EQ, toggles).
+     */
+    fun buildStateQueryCommands(): List<ByteArray> = emptyList()
+
+    /**
      * Parses incoming byte payload into multi-component battery levels (Left, Right, Case).
      */
     fun parseBatteryReport(bytes: ByteArray): TwsBatteryReport? = null

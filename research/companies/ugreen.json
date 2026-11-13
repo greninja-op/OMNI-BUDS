@@ -1,0 +1,1113 @@
+[
+  {
+    "company": "UGREEN",
+    "companySlug": "ugreen",
+    "family": "HiTune T",
+    "model": "UGREEN HiTune T3 Pro",
+    "slug": "ugreen-hitune-t3-pro",
+    "generation": "T3",
+    "variant": "Pro",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "UGREEN",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "UGREEN app can rename the buds, show power, adjust EQ and enable multipoint. Package ID not verified."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7.5,
+      "caseHours": 30,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 7.5 h buds / 30 h with case. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 38,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC up to 38 dB, >95% ambient noise filtered."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "app.rename",
+        "name": "Rename earbuds in app",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "10 mm bio-diaphragm driver; Bluetooth 5.3."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "multipoint toggle",
+      "rename"
+    ],
+    "featureDeltaFromPrevious": [
+      "Pro upgrade over HiTune T3 with 38 dB ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.ugreen.com/en-id/products/id-35725",
+        "type": "official-product",
+        "title": "UGREEN HiTune T3 Pro product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on hours",
+      "Codec list",
+      "App package ID",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "UGREEN",
+    "companySlug": "ugreen",
+    "family": "HiTune X",
+    "model": "UGREEN HiTune X6",
+    "slug": "ugreen-hitune-x6",
+    "generation": "X6",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "UGREEN",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "App support for EQ and firmware; package ID not verified."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 26,
+      "chargingIndicators": "USB-C; 1.5 h buds, 2 h case.",
+      "notes": "Official 6 h buds / 26 h with case. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 26
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Dual ANC up to 35 dB; 6-mic calls."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "50 ms game mode",
+        "availability": "both"
+      },
+      {
+        "id": "calls.6mic",
+        "name": "6-mic call noise reduction",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "10 mm DLC diaphragm; Bluetooth 5.1."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "First HiTune with hybrid ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.lulian.cn/product/919.html",
+        "type": "official-product",
+        "title": "UGREEN HiTune X6 product page (CN)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.prnewswire.com/news-releases/ugreen-launches-new-hitune-x6-anc-earbuds-301515591.html",
+        "type": "reputable-secondary",
+        "title": "Ugreen launches HiTune X6 ANC earbuds",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Multipoint",
+      "App package ID",
+      "Full gesture map",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "UGREEN",
+    "companySlug": "ugreen",
+    "family": "HiTune X",
+    "model": "UGREEN HiTune X6s",
+    "slug": "ugreen-hitune-x6s",
+    "generation": "X6",
+    "variant": "s",
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "UGREEN",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 28,
+      "chargingIndicators": "15 minutes = 1 hour; USB-C.",
+      "notes": "Official 7 h buds / 28 h with case, IPX6. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 28
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Dual ANC up to 35 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Dual ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.aptx",
+        "name": "aptX",
+        "availability": "device-only"
+      },
+      {
+        "id": "water.ipx6",
+        "name": "IPX6",
+        "availability": "device-only"
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "Low-latency mode",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "QCC3040; 10 mm DLC driver; IPX6."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "aptX and IPX6 versus X6"
+    ],
+    "sources": [
+      {
+        "url": "https://www.ugreen.com",
+        "type": "official-product",
+        "title": "UGREEN official site (HiTune X6s listing)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official product URL not captured",
+      "Multipoint",
+      "App package ID",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "UGREEN",
+    "companySlug": "ugreen",
+    "family": "HiTune Max",
+    "model": "UGREEN HiTune Max5c",
+    "slug": "ugreen-hitune-max5c",
+    "generation": "Max5",
+    "variant": "c",
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "UGREEN",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Eight EQ presets in app; package ID not verified."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; wired USB-C audio supported.",
+      "notes": "Playtime not published in retrieved spec block.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 43,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Hybrid adaptive ANC up to 43 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / Hi-Res",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "8 EQ presets",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint / seamless switching",
+        "availability": "both"
+      },
+      {
+        "id": "wired.usb-c",
+        "name": "USB-C wired audio",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Physical buttons for playback, volume and ANC.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm driver; 264 g; 360-degree immersive audio claim."
+    },
+    "appOnlyFeatures": [
+      "8 EQ presets",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "Max5c adds LDAC and 43 dB adaptive ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.ugreen.com/en-sg/products/sg-35757",
+        "type": "official-product",
+        "title": "UGREEN HiTune Max5c product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery hours",
+      "App package ID",
+      "EQ preset names"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "UGREEN",
+    "companySlug": "ugreen",
+    "family": "HiTune Max",
+    "model": "UGREEN HiTune Max5",
+    "slug": "ugreen-hitune-max5",
+    "generation": "Max5",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "UGREEN",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Playtime not captured.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Hybrid ANC; depth not captured."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "First HiTune Max over-ear"
+    ],
+    "sources": [
+      {
+        "url": "https://www.ugreen.com",
+        "type": "official-product",
+        "title": "UGREEN official site (HiTune Max5 listing)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery hours",
+      "ANC dB",
+      "Codecs",
+      "Official product URL not captured"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "UGREEN",
+    "companySlug": "ugreen",
+    "family": "HiTune Max",
+    "model": "UGREEN HiTune Max5s",
+    "slug": "ugreen-hitune-max5s",
+    "generation": "Max5",
+    "variant": "s",
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "UGREEN",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Playtime not captured.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "AI noise cancelling; depth not captured."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "AI ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "AI ANC and LDAC versus Max5"
+    ],
+    "sources": [
+      {
+        "url": "https://www.ugreen.com",
+        "type": "official-product",
+        "title": "UGREEN official site (HiTune Max5s listing)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery hours",
+      "ANC dB",
+      "Official product URL not captured",
+      "Codec list"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "UGREEN",
+    "companySlug": "ugreen",
+    "family": "HiTune T",
+    "model": "UGREEN HiTune T6",
+    "slug": "ugreen-hitune-t6",
+    "generation": "T6",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "UGREEN",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Playtime not captured. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC; depth not captured."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "T6 sits between T3 Pro and Max series"
+    ],
+    "sources": [
+      {
+        "url": "https://www.ugreen.com",
+        "type": "official-product",
+        "title": "UGREEN official site (HiTune T6 listing)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery hours",
+      "ANC dB",
+      "Official product URL not captured",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "UGREEN",
+    "companySlug": "ugreen",
+    "family": "HiTune X",
+    "model": "UGREEN HiTune X8",
+    "slug": "ugreen-hitune-x8",
+    "generation": "X8",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "UGREEN",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Playtime not captured. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear flagship; no ANC."
+    },
+    "features": [
+      {
+        "id": "design.open-ear",
+        "name": "Open-ear hook",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "water.ipx5",
+        "name": "IPX5",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "UGREEN open-ear flagship"
+    ],
+    "sources": [
+      {
+        "url": "https://www.ugreen.com",
+        "type": "official-product",
+        "title": "UGREEN official site (HiTune X8 listing)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery hours",
+      "Official product URL not captured",
+      "Codec list",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

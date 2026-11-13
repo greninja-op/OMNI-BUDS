@@ -1,0 +1,746 @@
+[
+  {
+    "company": "Infinix",
+    "companySlug": "infinix",
+    "family": "XE",
+    "model": "Infinix XE 27",
+    "slug": "infinix-xe-27",
+    "generation": "27",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Welife",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Transsion Welife app provides sound effects and gesture customisation for Infinix audio."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 28,
+      "chargingIndicators": "Case LED; USB-C; 10 min = 1 h.",
+      "notes": "Official: up to 5 h per charge, 28 h with case (ANC and voice-through off). ANC-on hours not published.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 28
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "voice-through"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "First Infinix headphone with ANC. Dual-array microphones with ENC and wind-noise filtering; mode switch by holding the left stem 3 s."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Voice Through",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "mic.enc",
+        "name": "4-mic ENC call noise cancellation",
+        "availability": "device-only",
+        "notes": "2x2 beamforming."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Welife sound effects",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4 sweat resistance",
+        "availability": "device-only",
+        "notes": "Buds only."
+      },
+      {
+        "id": "vendor.infinix.fast-charge",
+        "name": "10 min = 1 h charge",
+        "availability": "device-only",
+        "notes": "Below 50% battery."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "volume down",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next song",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "hold 3 s",
+          "action": "ANC / voice-through switch",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch controls; volume-up gesture not listed in the official table."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "10 mm dynamic driver; 20 Hz-20 kHz; 46 mAh per bud, 460 mAh case."
+    },
+    "appOnlyFeatures": [
+      "Sound effects",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Infinix's first ANC headphone",
+      "Voice-through mode",
+      "4-mic ENC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.infinixmobility.com/xe-27",
+        "type": "official-product",
+        "title": "Infinix XE 27",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC depth in dB not published",
+      "ANC-on playtime not published",
+      "Battery display layout unverified",
+      "Multipoint and wear detection not stated",
+      "Bluetooth 5.0 is dated for a 2023 ANC model"
+    ],
+    "notes": "Global model also sold as XE 27. The overview's 4.5 h claim conflicts with the spec table's 5 h; spec table used.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Infinix",
+    "companySlug": "infinix",
+    "family": "XE",
+    "model": "Infinix XE 28",
+    "slug": "infinix-xe-28",
+    "generation": "28",
+    "variant": "Buds NC",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Welife",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Marketed for custom sound adjustment and gesture control."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6.5,
+      "caseHours": 35,
+      "chargingIndicators": "Case LED; USB-C; 10 min = 1 h.",
+      "notes": "Official: 6.5 h per charge, 35 h total with ANC and voice-through off. ANC-on hours not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "voice-through"
+      ],
+      "adaptive": false,
+      "ancDb": 30,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "30 dB ANC (ANC + PNC) with 4-mic AI ENC; voice-through."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "30 dB ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Voice-through",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "mic.enc",
+        "name": "4-mic AI ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Welife sound adjustment",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4",
+        "availability": "device-only",
+        "notes": "Buds only."
+      },
+      {
+        "id": "vendor.infinix.fast-charge",
+        "name": "10 min = 1 h",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC / voice-through",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls on both buds."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "10 mm dynamic driver; 40 mAh per bud, 500 mAh case; 5 h talk time."
+    },
+    "appOnlyFeatures": [
+      "Custom sound",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC depth increased to 30 dB",
+      "Battery raised to 6.5 h/35 h",
+      "Bluetooth 5.3"
+    ],
+    "sources": [
+      {
+        "url": "https://www.infinixmobility.com/specs/buds-nc",
+        "type": "official-product",
+        "title": "Infinix BUDS NC / XE 28 specs",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.infinixmobility.com/buds-nc",
+        "type": "official-product",
+        "title": "Infinix XE 28 overview",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on playtime not published",
+      "Battery display layout unverified",
+      "Multipoint and wear detection not stated",
+      "Only SBC codec listed"
+    ],
+    "notes": "Regional naming varies: XE 28 and BUDS NC are the same SKU family.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Infinix",
+    "companySlug": "infinix",
+    "family": "XBUDS",
+    "model": "Infinix XE 30",
+    "slug": "infinix-xe-30",
+    "generation": "30",
+    "variant": "XBUDS 3 GT",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Welife",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Official overview: check status, customise hand gestures and fine-tune audio effects in Welife."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 28,
+      "chargingIndicators": "Adaptive LED interface on the case (charging, low battery, open/close); USB-C.",
+      "notes": "Official: 6 h per charge, 28 h with case. No ANC, so the 6 h is the normal figure.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 28
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC. 4-mic AI ENC for calls only."
+    },
+    "features": [
+      {
+        "id": "mic.enc",
+        "name": "4-mic AI ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Welife sound effects",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.infinix.game-mode",
+        "name": "45 ms low-latency game mode",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.infinix.led-case",
+        "name": "Adaptive LED case interface",
+        "availability": "device-only",
+        "notes": "Three lighting scenes."
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "game mode",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Half-in-ear stem design."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm x2 drivers; PU+PEEK composite diaphragm; 40 mAh per bud, 400 mAh case."
+    },
+    "appOnlyFeatures": [
+      "Sound effects",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Gaming-focused XBUDS 3 GT",
+      "45 ms low-latency mode",
+      "Adaptive LED case"
+    ],
+    "sources": [
+      {
+        "url": "https://www.infinixmobility.com/XBUDS-3-GT",
+        "type": "official-product",
+        "title": "Infinix XE 30 / XBUDS 3 GT",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.infinixmobility.com/specs/xbuds-3-gt",
+        "type": "official-product",
+        "title": "XBUDS 3 GT specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery display layout unverified",
+      "Codec list not published",
+      "Multipoint and wear detection not stated",
+      "ANC absent by design"
+    ],
+    "notes": "Half-in-ear gaming model; the LED case indicates charging/low battery but is not a numeric display.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Infinix",
+    "companySlug": "infinix",
+    "family": "XBUDS",
+    "model": "Infinix XE 31",
+    "slug": "infinix-xe-31",
+    "generation": "31",
+    "variant": "XBUDS 3",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Welife",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Welife supports custom sound adjustment and gesture settings."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; USB-C.",
+      "notes": "Official: 7 h earbuds, 30 h total with case. No ANC.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "AI ENC for calls only."
+    },
+    "features": [
+      {
+        "id": "mic.enc",
+        "name": "AI ENC clear call",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Welife sound adjustment",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Smart connection",
+        "availability": "unknown",
+        "notes": "Marketing phrase; multipoint not explicit."
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4",
+        "availability": "device-only",
+        "notes": "Buds only."
+      },
+      {
+        "id": "vendor.infinix.hall-switch",
+        "name": "Hall switch auto pairing",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls on both stems."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm driver; 35 mAh per bud, 400 mAh case; 4.5 h talk time."
+    },
+    "appOnlyFeatures": [
+      "Sound adjustment",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Higher 7 h/30 h battery than XBUDS 3 GT",
+      "Non-gaming tuning",
+      "Hall-switch quick pair"
+    ],
+    "sources": [
+      {
+        "url": "https://www.infinixmobility.com/specs/xbuds-3",
+        "type": "official-product",
+        "title": "Infinix XE 31 / XBUDS 3 specs",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.infinixmobility.com/xbuds-3",
+        "type": "official-product",
+        "title": "Infinix XBUDS 3",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery display layout unverified",
+      "Codec list not published",
+      "Multipoint not explicitly confirmed",
+      "Wear detection not stated"
+    ],
+    "notes": "Value sibling of XBUDS 3 GT with longer battery and no LED case.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Infinix",
+    "companySlug": "infinix",
+    "family": "XE",
+    "model": "Infinix XE 33",
+    "slug": "infinix-xe-33",
+    "generation": "33",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Welife",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Same Transsion Welife companion app used across Infinix audio."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 4,
+      "caseHours": null,
+      "chargingIndicators": "Case LED; USB-C.",
+      "notes": "Retailer listing: 30 mAh per bud, 300 mAh case, 4-5 h playtime, 2 h charge. No total-with-case figure.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "ENC for calls only; no ANC."
+    },
+    "features": [
+      {
+        "id": "mic.enc",
+        "name": "ENC clear calls",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Welife sound adjustment",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.infinix.auto-pair",
+        "name": "Auto pairing",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": "Entry-level touch controls."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm driver; Bluetooth 5.3; no IP rating published."
+    },
+    "appOnlyFeatures": [
+      "Sound adjustment"
+    ],
+    "featureDeltaFromPrevious": [
+      "Entry-level XE model below XE 30/31",
+      "No IP rating"
+    ],
+    "sources": [
+      {
+        "url": "https://allmytech.pk/product/infinix-xe33-wireless-earbuds-white",
+        "type": "reputable-secondary",
+        "title": "Infinix XE33 retailer listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "No official Infinix product page found",
+      "Total battery with case not published",
+      "IP rating not published",
+      "Codec list not published",
+      "Battery display layout unverified",
+      "ANC absent"
+    ],
+    "notes": "Retailer-only data. Treat the 4-5 h figure as approximate.",
+    "researchedAt": "2026-11-10"
+  }
+]

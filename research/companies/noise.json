@@ -1,0 +1,1970 @@
+[
+  {
+    "company": "Noise",
+    "companySlug": "noise",
+    "family": "Master Buds",
+    "model": "Master Buds 2",
+    "slug": "noise-master-buds-2",
+    "generation": "2",
+    "variant": "Master",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Noise Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.noise.audio"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.noise.audio"
+      ],
+      "appVersionObserved": "Updated 30 Oct 2026",
+      "notes": "Noise Audio is the companion app for the Master series only. It is not NoiseFit, which is the smartwatch app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; charging indicator listed as yes.",
+      "notes": "Up to 30 h total playback. Noise Audio is described as tracking both earbud and case battery in real time, but the split/combined bud layout is not documented.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off",
+        "adaptive",
+        "low",
+        "medium",
+        "max"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "App offers ANC / Transparency plus Low, Medium, Max and Adaptive levels. No official dB figure for Master Buds 2."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC with level control",
+        "availability": "official-app",
+        "notes": "Low / Medium / Max / Adaptive."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "3-band EQ and presets",
+        "availability": "official-app",
+        "notes": "Default, Jazz, Club, Rock plus Custom bass/mid/treble."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "360 Spatial Audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.head-tracking",
+        "name": "Head tracking",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "official-app",
+        "notes": "Can be toggled in app."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual device pairing",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "control.touch-customization",
+        "name": "Touch gesture customisation",
+        "availability": "official-app",
+        "notes": "Single, double, triple tap and tap-hold, per earbud."
+      },
+      {
+        "id": "vendor.noise.find-my-buds",
+        "name": "Find My Earbuds",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "assignable",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "assignable (volume, music, ANC, spatial, assistant)",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "assignable",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "assignable",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Charging case pairing button.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Default",
+        "Jazz",
+        "Club",
+        "Rock",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "3-band custom EQ (bass/mid/treble). LHDC support is likely inherited from Master Buds but not confirmed on the Master Buds 2 page."
+    },
+    "appOnlyFeatures": [
+      "ANC levels",
+      "3-band EQ",
+      "Spatial audio",
+      "Head tracking",
+      "Touch mapping",
+      "Wear detection",
+      "Find My Earbuds",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 6.1",
+      "Head tracking",
+      "Wear detection toggle",
+      "New 30 h rating"
+    ],
+    "sources": [
+      {
+        "url": "https://us.gonoise.com/products/noise-master-buds-2-truly-wireless-bluetooth-earbuds",
+        "type": "official-product",
+        "title": "Noise Master Buds 2",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.noise.audio",
+        "type": "official-app-store",
+        "title": "Noise Audio",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.gonoise.com/support/solutions/articles/47001271995-app-noise-master-buds-truly-wireless-earbuds",
+        "type": "official-support",
+        "title": "Noise Audio app support article",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB",
+      "Buds-only playtime",
+      "Buds split vs combined display",
+      "Codec list"
+    ],
+    "notes": "The Master Buds 2 page says the app monitors earbud and case battery, but not whether the buds are shown separately.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Noise",
+    "companySlug": "noise",
+    "family": "Master Buds",
+    "model": "Master Buds",
+    "slug": "noise-master-buds",
+    "generation": "1",
+    "variant": "Master",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Noise Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.noise.audio"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.noise.audio"
+      ],
+      "appVersionObserved": null,
+      "notes": "First Noise product supported by Noise Audio; the app was exclusive to Master Buds at launch."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 44,
+      "chargingIndicators": "Case LED and in-app battery.",
+      "notes": "Official: 6 h buds, 44 h total. App home screen shows battery level of the earphones and the case.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 44
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off",
+        "adaptive",
+        "low",
+        "medium",
+        "max"
+      ],
+      "adaptive": true,
+      "ancDb": 49,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adaptive ANC up to 49 dB; app exposes low/medium/high levels."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "official-app",
+        "notes": "49 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "3-band EQ and presets",
+        "availability": "official-app",
+        "notes": "Default, Jazz, Club, Rock, Custom."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "both",
+        "notes": "Four taps on either earbud toggles it; also app-assignable."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual device pairing",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "control.touch-customization",
+        "name": "Touch gesture customisation",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.noise.find-my-buds",
+        "name": "Find My Buds",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "assignable",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "assignable",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "assignable",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "assignable",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "four taps",
+          "action": "toggle spatial audio",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Charging case button for pairing.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Default",
+        "Jazz",
+        "Club",
+        "Rock",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "LHDC",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "LHDC 5.0 up to 900 kbit/s; 12.4 mm titanium/PEEK drivers; tuned with Sound by Bose."
+    },
+    "appOnlyFeatures": [
+      "ANC levels",
+      "3-band EQ",
+      "Touch mapping",
+      "Wear detection toggle",
+      "Find My Buds",
+      "Firmware"
+    ],
+    "featureDeltaFromPrevious": [
+      "First Noise Master series",
+      "Sound by Bose tuning",
+      "LHDC 5.0",
+      "Noise Audio app"
+    ],
+    "sources": [
+      {
+        "url": "https://www.gonoise.com/a/h/noise-master-buds-truly-wireless-earbuds",
+        "type": "official-product",
+        "title": "Noise Master Buds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.gonoise.com/support/solutions/articles/47001271995-app-noise-master-buds-truly-wireless-earbuds",
+        "type": "official-support",
+        "title": "Noise Audio app support",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.noise.audio",
+        "type": "official-app-store",
+        "title": "Noise Audio",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds split vs combined display",
+      "Head tracking",
+      "ANC dB per mode"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Noise",
+    "companySlug": "noise",
+    "family": "Buds Xero",
+    "model": "Buds Xero",
+    "slug": "noise-buds-xero",
+    "generation": null,
+    "variant": "Xero",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Official product page does not list an app; features are device/app-agnostic."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": "Charging indicator yes; LED thresholds not published.",
+      "notes": "Up to 50 h total; 10 min Instacharge = 6 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adaptive ANC up to 50 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "device-only",
+        "notes": "50 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.noise.sound-plus",
+        "name": "Sound+ algorithm",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.noise.hypersync",
+        "name": "HyperSync",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "Dual device pairing explicitly listed as No. 12.4 mm drivers."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "50 dB adaptive ANC",
+      "In-ear detection",
+      "50 h playback"
+    ],
+    "sources": [
+      {
+        "url": "https://www.gonoise.com/products/noise-buds-xero-truly-wireless-earbuds",
+        "type": "official-product",
+        "title": "Noise Buds Xero",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No app: EQ/control customisation unavailable",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": "A high-ANC model with no companion app is a notable omission for OmniBuds parity.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Noise",
+    "companySlug": "noise",
+    "family": "Buds N",
+    "model": "Buds N2 Pro",
+    "slug": "noise-buds-n2-pro",
+    "generation": "2",
+    "variant": "N2 Pro",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Product page lists no app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 70,
+      "chargingIndicators": "Charging indicator yes.",
+      "notes": "70 h total; 10 min = 3.3 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": 32,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Up to 32 dB ANC plus quad-mic ENC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "device-only",
+        "notes": "32 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual device pairing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.noise.hypersync",
+        "name": "HyperSync / Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "10 mm drivers."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 6.0",
+      "70 h total playback",
+      "Dual device pairing"
+    ],
+    "sources": [
+      {
+        "url": "https://www.gonoise.com/products/noise-buds-n2-pro-truly-wireless-bluetooth-earbuds",
+        "type": "official-product",
+        "title": "Noise Buds N2 Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map",
+      "No app"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Noise",
+    "companySlug": "noise",
+    "family": "Buds N",
+    "model": "Buds N1 Pro",
+    "slug": "noise-buds-n1-pro",
+    "generation": "1",
+    "variant": "N1 Pro",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Official page gives phone-level battery checking instructions, not an app."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 60,
+      "chargingIndicators": "Case charging indicator yes.",
+      "notes": "Official FAQ says battery is checked from the phone's Bluetooth/notification bar, which shows one earbud percentage, not a split L/R or case view. 60 h total.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 60
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": 32,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Up to 32 dB ANC; no transparency mode documented."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "device-only",
+        "notes": "32 dB."
+      },
+      {
+        "id": "vendor.noise.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next/previous track",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "volume",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ANC toggle / voice assistant",
+          "configurableInApp": null,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": false,
+      "wearDetection": null,
+      "notes": "11 mm drivers; dual device pairing explicitly No."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "32 dB ANC",
+      "60 h total"
+    ],
+    "sources": [
+      {
+        "url": "https://www.gonoise.com/products/noise-buds-n1-pro-truly-wireless-earbuds",
+        "type": "official-product",
+        "title": "Noise Buds N1 Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Buds-only hours",
+      "Case display while buds are out",
+      "Codecs",
+      "No app equaliser"
+    ],
+    "notes": "Battery display is the phone's single combined bud percentage; no case percentage is exposed.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Noise",
+    "companySlug": "noise",
+    "family": "Air Buds Pro",
+    "model": "Air Buds Pro 4",
+    "slug": "noise-air-buds-pro-4",
+    "generation": "4",
+    "variant": "Pro",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Product page does not name an app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": null,
+      "notes": "Up to 50 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC supported; dB not captured."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual device pairing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.noise.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "Metallic finish; 13 mm drivers per family pattern (not confirmed on the page)."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "50 h total playback",
+      "Google Fast Pair",
+      "Dual device pairing"
+    ],
+    "sources": [
+      {
+        "url": "https://www.gonoise.com/products/noise-air-buds-pro-4-earbuds",
+        "type": "official-product",
+        "title": "Noise Air Buds Pro 4",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "ANC dB",
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map",
+      "App support"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Noise",
+    "companySlug": "noise",
+    "family": "Air Buds Pro",
+    "model": "Air Buds Pro 3",
+    "slug": "noise-air-buds-pro-3",
+    "generation": "3",
+    "variant": "Pro",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 45,
+      "chargingIndicators": "Charging indicator yes.",
+      "notes": "Official: 7 h per charge at 70% volume, 45 h total. Instacharge 10 min = 180 min.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC supported; dB not stated on the spec block."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.noise.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.noise.instacharge",
+        "name": "Instacharge",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers; 45 ms low latency."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "45 h total",
+      "13 mm drivers",
+      "45 ms latency"
+    ],
+    "sources": [
+      {
+        "url": "https://www.gonoise.com/products/noise-air-buds-pro-3-earbuds",
+        "type": "official-product",
+        "title": "Noise Air Buds Pro 3",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB",
+      "Battery display semantics",
+      "Codecs",
+      "Control map",
+      "App support"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Noise",
+    "companySlug": "noise",
+    "family": "Air Buds Pro",
+    "model": "Air Buds Pro SE",
+    "slug": "noise-air-buds-pro-se",
+    "generation": null,
+    "variant": "Pro SE",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7.5,
+      "caseHours": 45,
+      "chargingIndicators": "Charging indicator yes.",
+      "notes": "Official: 7.5 h at 60% volume, additional 37.5 h with case (45 h total).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 45
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": 30,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Up to 30 dB ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "device-only",
+        "notes": "30 dB."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "BT 5.3; SBC only per official profile listing; 13 mm drivers."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.gonoise.com/products/noise-air-buds-pro-se-earbuds",
+        "type": "official-product",
+        "title": "Noise Air Buds Pro SE",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery display semantics",
+      "Control map",
+      "Transparency mode",
+      "App support"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Noise",
+    "companySlug": "noise",
+    "family": "Air Buds Pro",
+    "model": "Air Buds Pro 2",
+    "slug": "noise-air-buds-pro-2",
+    "generation": "2",
+    "variant": "Pro",
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 25,
+      "chargingIndicators": "Charging indicator yes.",
+      "notes": "Official: 5 h per charge, additional 20 h with case (25 h total).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 25
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": 40,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Hybrid ANC up to 40 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "device-only",
+        "notes": "40 dB."
+      },
+      {
+        "id": "vendor.noise.enc",
+        "name": "Triple-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "40 dB hybrid ANC",
+      "Triple mic"
+    ],
+    "sources": [
+      {
+        "url": "https://www.gonoise.com/products/noise-air-buds-pro-2-active-noise-cancellation",
+        "type": "official-product",
+        "title": "Noise Air Buds Pro 2",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery display semantics",
+      "Codecs",
+      "Control map",
+      "App support"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Noise",
+    "companySlug": "noise",
+    "family": "Air Buds Pro",
+    "model": "Air Buds Pro",
+    "slug": "noise-air-buds-pro",
+    "generation": "1",
+    "variant": "Pro",
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": 3.5,
+      "budsHoursNoAnc": 4,
+      "caseHours": 20,
+      "chargingIndicators": null,
+      "notes": "Official: 4 h basic mode / 3.5 h ANC; 20 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": 25,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Up to 25 dB ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "device-only",
+        "notes": "25 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.noise.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.gonoise.com/products/noise-air-buds-pro-truly-wireless-earbuds",
+        "type": "official-product",
+        "title": "Noise Air Buds Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Noise",
+    "companySlug": "noise",
+    "family": "Air Buds",
+    "model": "Air Buds 6",
+    "slug": "noise-air-buds-6",
+    "generation": "6",
+    "variant": "Air Buds",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Noise BUDSLINK",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.bragi.app.android.noise"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.bragi.app.android.noise",
+        "https://apps.apple.com/in/app/noise-budslink/id6736731468"
+      ],
+      "appVersionObserved": "2.0.4 (Dec 2024)",
+      "notes": "Built with Bragi. App is not NoiseFit. Some app features are paid upgrades (EQ, touch controls, voice control, low-latency)."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5.5,
+      "budsHoursNoAnc": 7,
+      "caseHours": 50,
+      "chargingIndicators": "Case LED; app battery prediction.",
+      "notes": "Official: 50 h total ANC off / 40 h ANC on; per-bud 7 h / 5.5 h. App has a battery-prediction feature showing audio and call time.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": 32,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC up to 32 dB; transparency level adjustable in app."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "official-app",
+        "notes": "32 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Superhearing transparency",
+        "availability": "official-app",
+        "notes": "Adjustable levels."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Custom EQ",
+        "availability": "official-app",
+        "notes": "Paid upgrade in BudsLink."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "official-app",
+        "notes": "Paid upgrade."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "control.touch-customization",
+        "name": "Action button customisation",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.noise.voice-control",
+        "name": "Offline voice control",
+        "availability": "official-app",
+        "notes": "Calls, ANC, media, assistant."
+      },
+      {
+        "id": "vendor.noise.fast-mute",
+        "name": "Fast Mute",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.noise.smart-calls",
+        "name": "Smart Calls caller announcement",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.noise.battery-prediction",
+        "name": "Battery prediction",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "touch actions",
+          "action": "assignable via Action Button",
+          "configurableInApp": true,
+          "notes": "Media, calls, ANC, gaming, assistant."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Voice control is on-device and offline for media/calls/ANC."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12.4 mm drivers; 50 ms low latency."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC/transparency levels",
+      "Touch mapping",
+      "Multipoint",
+      "Battery prediction",
+      "Fast Mute",
+      "Smart Calls",
+      "Voice control",
+      "Low-latency toggle"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bragi-powered app",
+      "Offline voice control",
+      "Fast Mute",
+      "Sidetones",
+      "Battery prediction",
+      "Paid feature upgrades"
+    ],
+    "sources": [
+      {
+        "url": "https://www.gonoise.com/products/noise-air-buds-6-truly-wireless-earbuds",
+        "type": "official-product",
+        "title": "Noise Air Buds 6",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.bragi.app.android.noise",
+        "type": "official-app-store",
+        "title": "Noise BUDSLINK",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://apps.apple.com/in/app/noise-budslink/id6736731468",
+        "type": "official-app-store",
+        "title": "Noise BUDSLINK iOS",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds split vs combined display",
+      "Codec list",
+      "Case battery display while buds are out"
+    ],
+    "notes": "Important app-fragmentation case: Air Buds 6 uses BUDSLINK, not NoiseFit or Noise Audio, and several features are paywalled.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Noise",
+    "companySlug": "noise",
+    "family": "ALT Buds",
+    "model": "ALT Buds",
+    "slug": "noise-alt-buds",
+    "generation": null,
+    "variant": "ALT",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Noise Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.noise.audio"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.noise.audio"
+      ],
+      "appVersionObserved": null,
+      "notes": "Product page says Noise Audio App with AI, covering EQ, ANC and AI controls."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 45,
+      "chargingIndicators": null,
+      "notes": "45 h total; 10 min = 4 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Up to 35 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "official-app",
+        "notes": "35 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial Audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual device pairing",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.noise.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.noise.ai-controls",
+        "name": "AI controls in Noise Audio",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "11 mm drivers; BT 6.0."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC",
+      "AI controls",
+      "Spatial audio"
+    ],
+    "featureDeltaFromPrevious": [
+      "Noise Audio app with AI",
+      "BT 6.0",
+      "Spatial audio"
+    ],
+    "sources": [
+      {
+        "url": "https://www.gonoise.com/products/noise-alt-buds-truly-wireless-bluetooth-earbuds",
+        "type": "official-product",
+        "title": "Noise ALT Buds",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": "ALT Buds shows the Noise Audio app expanding beyond the Master series.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Noise",
+    "companySlug": "noise",
+    "family": "Buds Venus",
+    "model": "Buds Venus",
+    "slug": "noise-buds-venus",
+    "generation": null,
+    "variant": "Venus",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Gadgets360 review explicitly notes there is no companion app; official page lists none."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 40,
+      "chargingIndicators": "Charging indicator yes.",
+      "notes": "Official: 7 h per charge, 40 h total, ANC off. 10 min = 120 min.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": 30,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Up to 30 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "device-only",
+        "notes": "30 dB."
+      },
+      {
+        "id": "vendor.noise.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.noise.instacharge",
+        "name": "Instacharge",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "All features controlled on-device; no app."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "10 mm drivers; 45 ms gaming mode."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "ANC at a sub-2K price point"
+    ],
+    "sources": [
+      {
+        "url": "https://www.gonoise.com/products/noise-buds-venus-truly-wireless-earbuds",
+        "type": "official-product",
+        "title": "Noise Buds Venus",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.gadgets360.com/audio/reviews/noise-buds-venus-anc-true-wireless-earphones-tws-review-price-in-india-4384907",
+        "type": "reputable-secondary",
+        "title": "Noise Buds Venus review (no companion app)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery display semantics",
+      "Control map",
+      "Transparency mode"
+    ],
+    "notes": "No app means no EQ, no remapping and no in-app battery detail — only phone-level battery.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Noise",
+    "companySlug": "noise",
+    "family": "Buds Verve",
+    "model": "Buds Verve",
+    "slug": "noise-buds-verve",
+    "generation": null,
+    "variant": "Verve",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 45,
+      "chargingIndicators": "Charging indicator yes.",
+      "notes": "Official: 7 h per charge at 60% volume, 45 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "vendor.noise.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "touch controls",
+          "action": "volume, music, calls, voice assistant",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "10 mm drivers; BT 5.3."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.gonoise.com/products/noise-buds-verve-truly-wireless-earbuds",
+        "type": "official-product",
+        "title": "Noise Buds Verve",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery display semantics",
+      "Codecs",
+      "Detailed gesture map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Noise",
+    "companySlug": "noise",
+    "family": "Buds N",
+    "model": "Buds N1",
+    "slug": "noise-buds-n1",
+    "generation": "1",
+    "variant": "N1",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 40,
+      "chargingIndicators": "Charging indicator yes.",
+      "notes": "40 h total; 10 min = 120 min.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC; passive isolation only."
+    },
+    "features": [
+      {
+        "id": "vendor.noise.enc",
+        "name": "Quad-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": false,
+      "wearDetection": null,
+      "notes": "11 mm drivers; 40 ms latency; dual device pairing No."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.gonoise.com/products/noise-buds-n1-truly-wireless-earbuds",
+        "type": "official-product",
+        "title": "Noise Buds N1",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Control map",
+      "Codecs"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

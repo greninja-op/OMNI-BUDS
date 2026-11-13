@@ -1,0 +1,916 @@
+[
+  {
+    "company": "Shanling",
+    "companySlug": "shanling",
+    "family": "UP",
+    "model": "UP6",
+    "slug": "shanling-up6",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Eddict Player",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Eddict Player mirrors the device menu, adds a 10-band graphic EQ, custom EQ slot and OTA updates (Android only for firmware per reviews)."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6.5,
+      "caseHours": null,
+      "chargingIndicators": "1.54-inch colour screen shows battery and charging progress; LED charging indicator.",
+      "notes": "950 mAh. Official 6.5 h single-ended / 4.5 h balanced; about 2 h charge. No case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "10-band EQ",
+        "availability": "official-app",
+        "notes": "Custom slot editable only in Eddict Player."
+      },
+      {
+        "id": "connectivity.usb-dac",
+        "name": "USB DAC",
+        "availability": "device-only",
+        "notes": "XMOS XU316, 768 kHz/32-bit, DSD512."
+      },
+      {
+        "id": "connectivity.nfc",
+        "name": "NFC pairing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.shanling.display",
+        "name": "1.54-inch colour display",
+        "availability": "device-only",
+        "notes": "Full menu access on-device."
+      },
+      {
+        "id": "vendor.shanling.car-mode",
+        "name": "Car mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Multifunction button, long press",
+          "action": "Open menu",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Multifunction button",
+          "action": "Play/pause; calls",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume/next/previous buttons",
+          "action": "Volume and track skip",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Multifunction, volume and track buttons; screen-driven menu.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Custom",
+        "Blue",
+        "Classical",
+        "Rock",
+        "Jazz",
+        "Folk",
+        "Pop"
+      ],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX LL",
+        "aptX HD",
+        "aptX Adaptive",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.2, QCC5125; dual ESS ES9069Q; dual SGM8262; 3.5 mm and 4.4 mm; 626 mW at 32 ohm balanced; 51 g."
+    },
+    "appOnlyFeatures": [
+      "10-band EQ",
+      "Custom EQ slot",
+      "Some menu settings",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Dual ESS ES9069Q replaces the dual ES9219C of the UP5",
+      "1.54-inch colour screen added",
+      "USB input upgraded to XMOS XU316 with 768 kHz/DSD512"
+    ],
+    "sources": [
+      {
+        "url": "https://en.shanling.com/product/471",
+        "type": "official-product",
+        "title": "Shanling UP6 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://en.shanling.com/article/101230",
+        "type": "official-product",
+        "title": "Introducing Shanling UP6",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Eddict Player's battery display layout for a single-battery DAC is undocumented; combined value inferred.",
+      "Multipoint is not claimed; assumed absent.",
+      "Package ID not verified."
+    ],
+    "notes": "Pocket Bluetooth DAC/amp with a screen; not a case-based wearable, but clips/rests in a pocket and is in scope as a Bluetooth audio wearable adapter.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shanling",
+    "companySlug": "shanling",
+    "family": "UP",
+    "model": "UP5",
+    "slug": "shanling-up5",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Eddict Player",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Settings and firmware are reachable through Shanling's Eddict Player app; the UP5 also has an on-device OLED menu."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 15,
+      "caseHours": null,
+      "chargingIndicators": "Small OLED shows battery and charging state.",
+      "notes": "680 mAh. Official 15 h single-ended/single DAC, 11 h balanced. No case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.usb-dac",
+        "name": "USB DAC",
+        "availability": "device-only",
+        "notes": "XMOS USB input, MQA support."
+      },
+      {
+        "id": "vendor.shanling.oled",
+        "name": "OLED settings display",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.shanling.car-mode",
+        "name": "Car mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "other"
+      ],
+      "gestures": [
+        {
+          "gesture": "Multifunction wheel",
+          "action": "Volume; play/pause; calls",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Mode button",
+          "action": "Gain/filter switching",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Multifunction wheel and mode button.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX LL",
+        "aptX HD",
+        "LDAC",
+        "LHDC"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.0, QCC5120; dual ESS ES9219C; 3.5 mm, 2.5 mm and 4.4 mm outputs; 240 mW balanced; 50 g."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "4.4 mm balanced output added alongside 2.5 mm",
+      "Dual ES9219C DAC/amps replace the single ES9218P of the UP4",
+      "MQA support added",
+      "XMOS USB input added"
+    ],
+    "sources": [
+      {
+        "url": "https://en.shanling.com/article/101306",
+        "type": "official-product",
+        "title": "Introducing Shanling UP5",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://en.shanling.com/category/248",
+        "type": "official-product",
+        "title": "Shanling Bluetooth product category",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Eddict Player support for UP5 is not explicitly stated on the official UP5 launch page; app control inferred from the product family.",
+      "EQ band count is not published.",
+      "Multipoint is not claimed; assumed absent.",
+      "Package ID not verified."
+    ],
+    "notes": "Flagship of the earlier UP generation; three headphone outputs.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shanling",
+    "companySlug": "shanling",
+    "family": "UP",
+    "model": "UP4 (2022)",
+    "slug": "shanling-up4-2022",
+    "generation": "2",
+    "variant": "2022",
+    "releaseYear": 2022,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Eddict Player",
+      "platforms": [
+        "android"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Eddict Player can set EQ and gain modes and update firmware. Reviews at launch report Android-only app support."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 11.5,
+      "caseHours": null,
+      "chargingIndicators": "Status LED; no numeric display.",
+      "notes": "540 mAh. 11.5 h single-ended, 9.5 h balanced, 300 h standby. No case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.usb-dac",
+        "name": "USB DAC",
+        "availability": "device-only",
+        "notes": "Driverless on Windows."
+      },
+      {
+        "id": "connectivity.nfc",
+        "name": "NFC pairing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.shanling.gain-modes",
+        "name": "Gain and digital filter modes",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "other"
+      ],
+      "gestures": [
+        {
+          "gesture": "Multifunction wheel",
+          "action": "Volume; play/pause; calls",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Mode button",
+          "action": "Gain/filter",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Multifunction wheel and mode button.",
+      "configurableInApp": false,
+      "notes": "Includes a clip case."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX LL",
+        "aptX HD",
+        "LDAC",
+        "LHDC"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.0, CSR8675, dual ES9219C; 3.5 mm and 2.5 mm balanced; 165 mW balanced; 37 g."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Gain modes",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Dual ES9219C DAC/amps",
+      "Battery raised from 11 h to 11.5 h single-ended",
+      "USB-C replaces micro-USB"
+    ],
+    "sources": [
+      {
+        "url": "https://shanling.com/product/4663",
+        "type": "official-product",
+        "title": "Shanling UP4(22) product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://en.shanling.com/category/248",
+        "type": "official-product",
+        "title": "Shanling Bluetooth product category",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official iOS app support is not confirmed; launch coverage says Android only.",
+      "EQ band count is not published.",
+      "Multipoint is not claimed; assumed absent."
+    ],
+    "notes": "2022 revision of the UP4 with dual ES9219C and a 540 mAh battery.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shanling",
+    "companySlug": "shanling",
+    "family": "MW",
+    "model": "MW200",
+    "slug": "shanling-mw200",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "Shanling controller app",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Official launch page promises a companion app for Android and iOS with OTA updates. The app name is not given; Shanling later consolidated app control into Eddict Player."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 14,
+      "caseHours": null,
+      "chargingIndicators": "Status LED and voice prompts; no numeric display.",
+      "notes": "360 mAh neckband. 14 h SBC / 11 h LDAC. No case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.usb-dac",
+        "name": "USB DAC",
+        "availability": "device-only",
+        "notes": "Up to 16-bit/48 kHz."
+      },
+      {
+        "id": "connectivity.nfc",
+        "name": "NFC pairing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.mmcx",
+        "name": "MMCX IEM connection",
+        "availability": "device-only",
+        "notes": "Turns MMCX IEMs into a neckband headset."
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Multifunction button",
+          "action": "Power/pairing/play/pause/calls",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume +/-",
+          "action": "Volume; track skip",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Neckband buttons.",
+      "configurableInApp": false,
+      "notes": "IPX4, Knowles microphone, quad-core silver-plated cable."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX LL",
+        "aptX HD",
+        "LDAC",
+        "LHDC"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.0, CSR8675, AK4377A; 27 mW at 32 ohm; 119 dB SNR; MMCX only."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://en.shanling.com/article/101320",
+        "type": "official-product",
+        "title": "Introducing Shanling MW200",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://shanling.com/product/4602",
+        "type": "official-product",
+        "title": "Shanling MW200 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official companion-app name/package is not stated (only 'companion app for Android and iOS').",
+      "EQ band count is not published.",
+      "Multipoint is not claimed; assumed absent."
+    ],
+    "notes": "Neckband Bluetooth adapter for MMCX IEMs, not a complete earphone.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shanling",
+    "companySlug": "shanling",
+    "family": "MTW",
+    "model": "MTW60",
+    "slug": "shanling-mtw60",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Shanling explicitly ships the MTW60 without app support; all controls are touch gestures on the buds."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "only-when-charging",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 6,
+      "caseHours": 17,
+      "chargingIndicators": "Buds: white LED while charging, off when full. Case: red LED blinking low, pulsing while charging, solid red when full.",
+      "notes": "Official: up to 5 h with ANC and 22 h total with case; independent reviews measure 6 h ANC off and 34 h total. Case adds 17 h using the official 22 h total.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 17
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "ANC",
+        "Transparency",
+        "Off"
+      ],
+      "adaptive": false,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "35 dB ANC claimed by Shanling; mode cycling by 2-second touch hold."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "device-only",
+        "notes": "35 dB claim."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Volume +/-",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Triple tap",
+          "action": "Previous/next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Long press 2 s",
+          "action": "ANC / transparency / off",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "No app, so gestures are fixed."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.3, 13 mm DLC dynamic driver, IPX4. No app, no LDAC, no multipoint."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://en.shanling.com/article/101252",
+        "type": "official-product",
+        "title": "Introducing Shanling MTW60",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "http://openwin.shanling.com:9000/pdf/sms/MTW60-V1.1.pdf",
+        "type": "official-manual",
+        "title": "MTW60 user manual",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No app, so there is no vendor battery UI; the phone's system UI layout (split versus combined) is not documented.",
+      "Official total is 22 h while reviews report 34 h; regional/measurement difference unresolved.",
+      "ANC dB is a vendor claim without a measurement standard."
+    ],
+    "notes": "Budget ANC TWS with no companion app — a clear example of ANC without an app.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shanling",
+    "companySlug": "shanling",
+    "family": "MTW",
+    "model": "MTW200 Plus",
+    "slug": "shanling-mtw200-plus",
+    "generation": "2",
+    "variant": "Plus",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No companion app is documented for MTW200 Plus. Shanling's Eddict Player app covers its DAC/player products; the TWS launch page lists no app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "only-when-charging",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 32,
+      "chargingIndicators": "Case and bud LEDs; no numeric display.",
+      "notes": "Official: up to 10 h per charge, up to 42 h with the case (32 h additional). No ANC runtime split published.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 32
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "ANC",
+        "Transparency",
+        "Music"
+      ],
+      "adaptive": true,
+      "ancDb": 43,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "-43 dB adaptive ANC, vendor claim; transparency mode included."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "device-only",
+        "notes": "-43 dB claim."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "aptX Adaptive",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.shanling.zinc-case",
+        "name": "Zinc alloy case",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Track skip",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "ANC / transparency / music",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "No app, so gestures are fixed."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.3, QCC3072, 10 mm titanium-plated dynamic driver, IPX7 buds / IPX4 case."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Adaptive ANC rated -43 dB",
+      "Battery raised to 10 h buds / 42 h total",
+      "aptX Adaptive and Bluetooth 5.3",
+      "IPX7 buds"
+    ],
+    "sources": [
+      {
+        "url": "https://en.shanling.com/article/101241",
+        "type": "official-product",
+        "title": "Introducing Shanling MTW200 Plus",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://en.shanling.com/category/248",
+        "type": "official-product",
+        "title": "Shanling Bluetooth product category",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No app is documented, but the absence of an app is not stated as explicitly as on the MTW60 page.",
+      "ANC-on runtime is not published; only the 10 h / 42 h ANC-off figures are given.",
+      "Battery UI layout is undocumented.",
+      "Multipoint is not claimed; assumed absent."
+    ],
+    "notes": "Shanling's higher-end TWS; the official page lists no companion app.",
+    "researchedAt": "2026-11-10"
+  }
+]

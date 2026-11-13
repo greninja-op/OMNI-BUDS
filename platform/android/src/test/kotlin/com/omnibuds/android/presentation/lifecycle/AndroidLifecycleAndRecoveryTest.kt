@@ -11,12 +11,14 @@ import com.omnibuds.core.globalstate.DeviceStateEvent
 import com.omnibuds.core.globalstate.GlobalDeviceId
 import com.omnibuds.core.globalstate.GlobalDeviceStateRepository
 import com.omnibuds.core.globalstate.IdentityState
+import com.omnibuds.core.presentation.control.ControlExecutionStatus
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertNotNull
+import org.junit.jupiter.api.Assertions.assertNull
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 
@@ -94,17 +96,17 @@ class AndroidLifecycleAndRecoveryTest {
         testScheduler.runCurrent()
 
         val anc = vm.state.value.controls.first { it.featureId == "anc_mode" }
-        assertEquals("ANC", anc.currentValue)
+        assertEquals("ANC", anc.desiredValue)
+        assertEquals(ControlExecutionStatus.PENDING, anc.executionStatus)
     }
 
     @Test
-    fun `device disappearing during observation produces clear error without crashing`() = runTest {
+    fun `device disappearing during observation produces neutral disconnected state without crashing`() = runTest {
         val repo = GlobalDeviceStateRepository()
         val vm = DeviceWorkspaceViewModel(deviceIdentifier = "ghost-device", scope = backgroundScope, stateRepository = repo)
         testScheduler.runCurrent()
 
-        assertNotNull(vm.state.value.errorBanner)
-        assertTrue(vm.state.value.errorBanner?.contains("not currently registered") == true)
+        assertNull(vm.state.value.errorBanner)
         assertFalse(vm.state.value.isConnected)
     }
 }

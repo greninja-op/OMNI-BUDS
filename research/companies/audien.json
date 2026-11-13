@@ -1,0 +1,460 @@
+[
+  {
+    "company": "Audien",
+    "companySlug": "audien",
+    "family": "ION",
+    "model": "Audien ION Pro 2",
+    "slug": "audien-ion-pro-2",
+    "generation": "2",
+    "variant": "ION Pro",
+    "releaseYear": 2025,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Audien IQ",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.audienhearing.audienhearingion"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.audienhearing.audienhearingion"
+      ],
+      "appVersionObserved": "2026-09-14 update",
+      "notes": "Six hearing profiles, three environmental modes, volume, noise reduction, transparency and Bluetooth streaming. App store lists support for Ion Pro and IQ devices."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 24,
+      "caseHours": 24,
+      "chargingIndicators": "Case LED; app battery life; UV-C cleaning case. 3 h charge.",
+      "notes": "Audien quotes 48 h with the charging case and about 24 h per charge. Exact per-bud split UI is inferred from the app's per-ear volume controls.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC. 'Background noise cancellation' and directional microphones are hearing-aid noise reduction."
+    },
+    "features": [
+      {
+        "id": "hearing.profiles",
+        "name": "Six audiologist-designed hearing profiles",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "hearing.modes",
+        "name": "Three environmental modes",
+        "availability": "both",
+        "notes": "Conversation, Crowd and TV style modes."
+      },
+      {
+        "id": "hearing.directional-microphones",
+        "name": "Dual directional microphones",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "hearing.noise-reduction",
+        "name": "Background-noise cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "hearing.feedback-control",
+        "name": "Feedback control",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.streaming",
+        "name": "Bluetooth music and media streaming",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "telephony.calls",
+        "name": "Bluetooth calls",
+        "availability": "both",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "volume / mode",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Buttons on each BTE aid",
+      "configurableInApp": false,
+      "notes": "Primary personalisation is in the Audien IQ app."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth streaming and calls; exact profile/codec list not published. BTE form factor."
+    },
+    "appOnlyFeatures": [
+      "hearing profiles",
+      "environmental modes",
+      "volume",
+      "noise reduction",
+      "transparency"
+    ],
+    "featureDeltaFromPrevious": [
+      "A2 Max chip versus Ion Pro",
+      "Six profiles versus five",
+      "Improved Bluetooth streaming",
+      "UV-C charging case"
+    ],
+    "sources": [
+      {
+        "url": "https://audienhearing.com/products/audien-ion-pro-otc-hearing-aids",
+        "type": "official-product",
+        "title": "Audien ION Pro 2 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.audienhearing.audienhearingion",
+        "type": "official-app-store",
+        "title": "Audien IQ app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Per-bud runtime not stated separately from the 48 h case figure.",
+      "Codec list and multipoint not published.",
+      "Battery UI split/combined not officially documented."
+    ],
+    "notes": "Audien's current Bluetooth BTE flagship; app-controlled with six profiles. No ANC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Audien",
+    "companySlug": "audien",
+    "family": "ION",
+    "model": "Audien ION Pro",
+    "slug": "audien-ion-pro",
+    "generation": "1",
+    "variant": "ION Pro",
+    "releaseYear": 2024,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Audien IQ",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.audienhearing.audienhearingion"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.audienhearing.audienhearingion"
+      ],
+      "appVersionObserved": "2026-09-14 update",
+      "notes": "Five profiles, environment modes and streaming control."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 24,
+      "caseHours": 24,
+      "chargingIndicators": "Case LED; app battery life. 4-6 h charge.",
+      "notes": "Audien marketing alternately says 'up to 48 hours on a single charge' and '48 hours with the charging case'; per-bud runtime is not consistently published. Recorded 24 h bud + 24 h case as the plausible split, with a gap.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC. Directional sound technology and background-noise cancellation are hearing-aid processing."
+    },
+    "features": [
+      {
+        "id": "hearing.profiles",
+        "name": "Five hearing profiles",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "hearing.modes",
+        "name": "Environmental modes",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "hearing.directional-microphones",
+        "name": "Directional sound technology",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "hearing.noise-reduction",
+        "name": "Background-noise cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.streaming",
+        "name": "Bluetooth music streaming",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "telephony.calls",
+        "name": "Bluetooth calls",
+        "availability": "both",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "volume / mode",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Buttons on each BTE aid",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth streaming and calls; codecs not published."
+    },
+    "appOnlyFeatures": [
+      "hearing profiles",
+      "environment modes",
+      "volume",
+      "noise reduction"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://audienhearing.com/products/audien-ion-otc-hearing-aids-new",
+        "type": "official-product",
+        "title": "Audien ION series page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://audienhearing.com/blogs/home/answering-your-top-questions-about-the-audien-ion-pro",
+        "type": "official-support",
+        "title": "Audien ION Pro FAQ",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.audienhearing.audienhearingion",
+        "type": "official-app-store",
+        "title": "Audien IQ app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery claim is internally inconsistent across Audien pages.",
+      "Codec list and multipoint not published.",
+      "Battery UI layout inferred."
+    ],
+    "notes": "First-generation Bluetooth ION Pro BTE; superseded by ION Pro 2.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Audien",
+    "companySlug": "audien",
+    "family": "ION",
+    "model": "Audien ION IQ",
+    "slug": "audien-ion-iq",
+    "generation": "IQ",
+    "variant": "ION IQ",
+    "releaseYear": 2025,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Audien IQ",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.audienhearing.audienhearingion"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.audienhearing.audienhearingion"
+      ],
+      "appVersionObserved": "2026-09-14 update",
+      "notes": "Six hearing profiles, four environmental modes, background-noise control and streaming settings."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 64,
+      "chargingIndicators": "Self-cleaning UV charging case; app battery view.",
+      "notes": "Audien quotes '64 hours of listening time with the charging case' but does not publish a separate per-bud figure; caseHours is the official total and is therefore not a pure add-on figure. Gap recorded.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 64
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC. Voice-isolation/background-noise cancellation is hearing-aid noise reduction."
+    },
+    "features": [
+      {
+        "id": "hearing.profiles",
+        "name": "Six hearing profiles",
+        "availability": "official-app",
+        "notes": "Based on common audiogram patterns."
+      },
+      {
+        "id": "hearing.modes",
+        "name": "Four environmental modes",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "hearing.noise-reduction",
+        "name": "Voice isolation and background-noise cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.streaming",
+        "name": "Bluetooth music and media streaming",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "telephony.calls",
+        "name": "Bluetooth calls",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "charging.uv-case",
+        "name": "Self-cleaning UV charging case",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "volume / mode",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Buttons on each BTE aid",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth streaming and calls; codecs not published."
+    },
+    "appOnlyFeatures": [
+      "six profiles",
+      "four modes",
+      "volume",
+      "noise reduction",
+      "streaming"
+    ],
+    "featureDeltaFromPrevious": [
+      "Six profiles versus five on ION Pro",
+      "Four environmental modes",
+      "64 h case"
+    ],
+    "sources": [
+      {
+        "url": "https://audienhearing.com/products/ion-iq",
+        "type": "official-product",
+        "title": "Audien ION IQ product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.audienhearing.audienhearingion",
+        "type": "official-app-store",
+        "title": "Audien IQ app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Per-bud runtime not published.",
+      "Codec list and multipoint not published.",
+      "Whether 64 h is total with case or case-only add-on is ambiguous."
+    ],
+    "notes": "Bluetooth BTE with a UV-cleaning case; app-controlled profiles. No ANC.",
+    "researchedAt": "2026-11-10"
+  }
+]

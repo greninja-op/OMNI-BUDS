@@ -32,6 +32,30 @@ class GlobalDeviceStateRepository(
     private val aggregators = mutableMapOf<String, DeviceStateAggregator>()
     private val removed = mutableSetOf<String>()
 
+    /**
+     * One monotonic sequence source per device, shared by every writer.
+     *
+     * The aggregator rejects an event whose sequence is older than the last
+     * applied one. Independent per-writer counters therefore corrupt the
+     * stream as soon as one writer starts higher than another (for example a
+     * UI action at 20_000 followed by telemetry at 4). All writers allocate
+     * from this map instead.
+     *
+     * Implemented with a compare-and-set StateFlow so the core module stays
+     * free of JVM-only concurrency types. The base is deliberately above the
+     * small literal sequences used by tests and fixtures.
+     */
+    private val sequences = MutableStateFlow<Map<String, Long>>(emptyMap())
+
+    /** Next event sequence for [deviceId]. Thread-safe and strictly increasing. */
+    fun nextSequence(deviceId: String): Long {
+        while (true) {
+            val current = sequences.value
+            val next = (current[deviceId] ?: SEQUENCE_BASE) + 1
+            if (sequences.compareAndSet(current, current + (deviceId to next))) return next
+        }
+    }
+
     private val _allDevices =
         MutableStateFlow<Map<GlobalDeviceId, GlobalDeviceState>>(emptyMap())
     /** Aggregate multi-device observation. */
@@ -92,5 +116,10 @@ class GlobalDeviceStateRepository(
                 .mapValues { it.value.second }
         }
         _allDevices.value = snapshot
+    }
+
+    private companion object {
+        /** Above the literal sequences used by tests and fixtures. */
+        const val SEQUENCE_BASE = 1_000_000_000L
     }
 }

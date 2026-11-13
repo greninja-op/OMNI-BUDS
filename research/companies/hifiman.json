@@ -1,0 +1,937 @@
+[
+  {
+    "company": "HiFiMAN",
+    "companySlug": "hifiman",
+    "family": "Svanar",
+    "model": "Svanar Wireless",
+    "slug": "hifiman-svanar-wireless",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "No confirmed companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "HiFiMAN's app launched later and is documented for Svanar Wireless 2. Original Svanar Wireless app support is not confirmed; treat controls as device-only."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 8,
+      "caseHours": 21,
+      "chargingIndicators": "Case indicator light; supports wireless charging.",
+      "notes": "Official listings quote up to 7 h and a 28 h total with case (some sources say 8 h buds). Case adds about three charges. No app battery screen confirmed.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 21
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "ANC",
+        "Transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Up to 35 dB ANC and a transparency mode. No adaptive mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "device-only",
+        "notes": "Up to 35 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.hifiman.r2r-dac",
+        "name": "Hymalaya R2R DAC/amp",
+        "availability": "device-only",
+        "notes": "Discrete R2R ladder DAC and headphone amp in each earbud."
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.hifiman.topology",
+        "name": "Topology diaphragm",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "charging.wireless",
+        "name": "Wireless charging case",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Triple tap",
+          "action": "Previous track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Cycle ANC / Transparency",
+          "configurableInApp": false,
+          "notes": "Exact mapping not fully documented in the English materials."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Touch controls; no confirmed app remapping."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Topology 10 mm dynamic driver, R2R DAC, IPX5. No app EQ, no spatial audio, no wear detection. Multipoint not documented."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://hifiman.com/products/svanar-wireless",
+        "type": "official-product",
+        "title": "HiFiMAN Svanar Wireless",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://hifiman.com/attachments/file/20230519/20230519045928_91930.pdf",
+        "type": "official-manual",
+        "title": "Svanar Wireless owner's guide",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery hours differ between sources (7 h vs 8 h buds; 28 h total).",
+      "App support and battery-display layout are unconfirmed.",
+      "Multipoint is not documented and is assumed absent.",
+      "Exact touch gesture mapping is not published in English."
+    ],
+    "notes": "The first Svanar TWS. Its R2R DAC is the defining feature; later LE/Jr variants simplify it.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "HiFiMAN",
+    "companySlug": "hifiman",
+    "family": "Svanar",
+    "model": "Svanar Wireless 2",
+    "slug": "hifiman-svanar-wireless-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "HIFIMAN",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.hifiman.audio"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.hifiman.audio"
+      ],
+      "appVersionObserved": null,
+      "notes": "App adds EQ, touch-gesture personalisation and firmware updates. Some launch coverage calls it HIFIMAN Mobile App; store name is HIFIMAN."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 8,
+      "caseHours": 24,
+      "chargingIndicators": "Case indicator light; USB-C charging.",
+      "notes": "HiFi mode 4.5 h, ANC 7 h, Transparency 8 h. Case provides three full charges, up to 32 h total (about 24 h reserve at 8 h per charge).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 24
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "ANC",
+        "Transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Up to 35 dB ANC. A separate HiFi mode bypasses ANC processing to prioritise the R2R DAC/amp; it is a listening mode, not a noise-control mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": "Up to 35 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "App EQ",
+        "availability": "official-app",
+        "notes": "Exact band count not published."
+      },
+      {
+        "id": "controls.customizable",
+        "name": "Touch-gesture personalisation",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.hifiman.r2r-dac",
+        "name": "Hymalaya Mini R2R DAC",
+        "availability": "device-only",
+        "notes": "45 mW balanced Class-AB amp."
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / L2HC",
+        "availability": "device-only",
+        "notes": "Bluetooth 6.0."
+      },
+      {
+        "id": "vendor.hifiman.topology",
+        "name": "Topology diaphragm",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Triple tap",
+          "action": "Previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Cycle ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch gestures can be personalised in the HIFIMAN app."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "L2HC"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "10 mm dynamic driver, 10 Hz–35 kHz, IPX5, 7.4 g per bud. Bluetooth 6.0. No spatial audio, no wear detection. Multipoint not documented."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Touch-gesture personalisation",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "New Hymalaya Mini R2R DAC and 45 mW balanced amp",
+      "Bluetooth 6.0 with LDAC and L2HC",
+      "Three listening modes (HiFi, ANC, Transparency) with mode-dependent battery",
+      "HIFIMAN app with EQ and touch personalisation",
+      "Case reduced to three full charges but total battery rises to 32 h"
+    ],
+    "sources": [
+      {
+        "url": "https://hifiman.com/products/svanar-wireless-2",
+        "type": "official-product",
+        "title": "HiFiMAN Svanar Wireless 2",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.amazon.com/HIFIMAN-Wireless-Cancelling-Bluetooth-Earphones/dp/B0HH783YXM",
+        "type": "reputable-secondary",
+        "title": "Svanar Wireless 2 specifications (4.5/7/8 h, 32 h total, 35 dB)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.hifiman.audio",
+        "type": "official-app-store",
+        "title": "HIFIMAN app",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official HiFiMAN page does not expose a text spec table; battery figures come from the official retail listing and launch coverage.",
+      "App battery-display layout (split vs combined) is not documented.",
+      "Multipoint is not mentioned; assumed absent.",
+      "EQ band count is not published."
+    ],
+    "notes": "Launched in 2026 as the flagship Svanar TWS. HiFi mode deliberately sacrifices ANC and battery for the R2R DAC path.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "HiFiMAN",
+    "companySlug": "hifiman",
+    "family": "Svanar",
+    "model": "Svanar Wireless LE",
+    "slug": "hifiman-svanar-wireless-le",
+    "generation": "1",
+    "variant": "LE",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "No confirmed companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app support documented for LE."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 7,
+      "caseHours": 21,
+      "chargingIndicators": "Case indicator light; USB-C only, no wireless charging.",
+      "notes": "Up to 5/6/7 h depending on mode; up to 28 h total with case. Case adds roughly three charges.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 21
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "ANC",
+        "Transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "ANC and transparency retained from the full Svanar Wireless."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.hifiman.r2r-dac",
+        "name": "Hymalaya R2R DAC/amp",
+        "availability": "device-only",
+        "notes": "Retained from the full model."
+      },
+      {
+        "id": "vendor.hifiman.topology",
+        "name": "Topology diaphragm",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Triple tap",
+          "action": "Previous track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Cycle ANC / Transparency",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Fixed touch controls."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "No LDAC on LE. IPX5. R2R DAC retained. No app EQ."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Removes LDAC and wireless case charging",
+      "Lower price point than Svanar Wireless",
+      "Retains R2R DAC, ANC and IPX5"
+    ],
+    "sources": [
+      {
+        "url": "https://hifiman.com/products/svanar-wireless-le",
+        "type": "official-product",
+        "title": "HiFiMAN Svanar Wireless LE",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.audioadvisor.com/products/hifiman-svanar-wireless-le-tws-in-ear-monitor",
+        "type": "reputable-secondary",
+        "title": "Svanar Wireless LE FAQ (no LDAC, 5/6/7 h, 28 h)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official spec table is image-only; codec list beyond SBC/AAC is not confirmed.",
+      "ANC dB is not published.",
+      "App support and battery display are undocumented.",
+      "Exact touch mapping is not published."
+    ],
+    "notes": "Lite Edition of the original Svanar Wireless. No LDAC and no wireless charging are the main cuts.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "HiFiMAN",
+    "companySlug": "hifiman",
+    "family": "Svanar",
+    "model": "Svanar Wireless Jr",
+    "slug": "hifiman-svanar-wireless-jr",
+    "generation": "1",
+    "variant": "Jr",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "No confirmed companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app support documented."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 8,
+      "budsHoursNoAnc": 8,
+      "caseHours": 24,
+      "chargingIndicators": "Case indicator light; USB-C.",
+      "notes": "Up to 8 h playback, 32 h total with three case charges (about 24 h reserve).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 24
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "ANC",
+        "Transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "ANC and ENC for calls. No adaptive mode documented."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.hifiman.class-ab",
+        "name": "Class-AB balanced amp",
+        "availability": "device-only",
+        "notes": "Up to 50 mW at 32 Ω."
+      },
+      {
+        "id": "vendor.hifiman.topology",
+        "name": "Topology diaphragm",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Triple tap",
+          "action": "Previous track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "Cycle ANC / Transparency",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "10 mm Topology driver, IPX5, Bluetooth 5.2. No R2R DAC and no app EQ. No spatial audio or wear detection."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Removes the R2R DAC while keeping LDAC and ANC",
+      "Lower price and simpler amp section",
+      "8 h / 32 h battery"
+    ],
+    "sources": [
+      {
+        "url": "https://hifiman.com/products/svanar-wireless-jr",
+        "type": "official-product",
+        "title": "HiFiMAN Svanar Wireless Jr",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://store.hifiman.com/index.php/svanar-wireless-jr.html",
+        "type": "official-product",
+        "title": "Svanar Wireless Jr store listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official text specs are sparse; 8 h/32 h and LDAC come from the official store and retail listings.",
+      "ANC dB is not published.",
+      "Battery display and app support are undocumented."
+    ],
+    "notes": "Budget Svanar. It keeps LDAC and ANC but drops the R2R DAC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "HiFiMAN",
+    "companySlug": "hifiman",
+    "family": "Ananda",
+    "model": "Ananda BT",
+    "slug": "hifiman-ananda-bt",
+    "generation": "1",
+    "variant": "BT",
+    "releaseYear": 2019,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "No official companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app; all controls are on the earcup."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": null,
+      "chargingIndicators": "LED on earcup; USB-C charging.",
+      "notes": "Official Japanese spec lists 10 h playback and 2.7 h charge. No case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Open-back planar; no ANC."
+    },
+    "features": [
+      {
+        "id": "connectivity.usb-dac",
+        "name": "USB DAC/amp",
+        "availability": "device-only",
+        "notes": "24-bit/192 kHz wired USB."
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "device-only",
+        "notes": "24-bit/96 kHz Bluetooth."
+      },
+      {
+        "id": "vendor.hifiman.planar",
+        "name": "Open-back planar magnetic driver",
+        "availability": "device-only",
+        "notes": "NEO supernano diaphragm."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power, long press",
+          "action": "Power on/off and pairing",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Play/pause button",
+          "action": "Play/pause; answer call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume +/−",
+          "action": "Volume; long press track skip",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power, playback and volume buttons on the earcup.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Open-back planar, 8 Hz–55 kHz, 35 Ω, 103 dB, 460 g (495 g with mic/cable). No app EQ."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://hifiman.com/attachments/file/20240924/20240924033754_69771.pdf",
+        "type": "official-manual",
+        "title": "Ananda BT owner's guide (2024 English)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://hifiman.jp/products/detail/306",
+        "type": "official-regional",
+        "title": "Ananda BT Japanese spec page (10 h, 8 Hz–55 kHz)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Global HiFiMAN product page is no longer available; Japanese regional page and manual used.",
+      "Bluetooth version is not stated in the current manual extract.",
+      "Battery display layout is OS-dependent because there is no app.",
+      "Exact button mapping is only partly documented."
+    ],
+    "notes": "A landmark open-back Bluetooth planar. A 2024 manual revision exists, suggesting continued support.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "HiFiMAN",
+    "companySlug": "hifiman",
+    "family": "Deva",
+    "model": "Deva Pro",
+    "slug": "hifiman-deva-pro",
+    "generation": "1",
+    "variant": "Pro",
+    "releaseYear": 2021,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "No official companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app. The Bluemini module has fixed controls."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": null,
+      "chargingIndicators": "LED on Bluemini module; USB-C charging.",
+      "notes": "Bluemini R2R module: 6–7 h Bluetooth, less with LDAC (about 4.5–5 h in reviews). Wired mode works without the module.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Open-back planar; no ANC."
+    },
+    "features": [
+      {
+        "id": "connectivity.bluetooth-module",
+        "name": "Bluemini R2R wireless module",
+        "availability": "device-only",
+        "notes": "Detachable Bluetooth DAC/amp dongle."
+      },
+      {
+        "id": "connectivity.usb-dac",
+        "name": "USB-C DAC",
+        "availability": "device-only",
+        "notes": "Bluemini can run as a USB DAC."
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "device-only",
+        "notes": "Also aptX HD, aptX, AAC, SBC."
+      },
+      {
+        "id": "vendor.hifiman.planar",
+        "name": "Stealth Magnet open-back planar",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power, long press",
+          "action": "Power on/off and pairing",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Play/pause button",
+          "action": "Play/pause; answer call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume +/−",
+          "action": "Volume; long press track skip",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Buttons on the Bluemini module.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX HD",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Open-back planar, 20 Hz–20 kHz. Bluemini R2R module weighs 25 g. No app EQ."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Bluemini R2R module replaces the original Deva's Bluemini",
+      "Stealth Magnet driver and revised headband",
+      "Wired 3.5 mm cable included; module optional on some bundles"
+    ],
+    "sources": [
+      {
+        "url": "https://hifiman.com/products/deva-pro",
+        "type": "official-product",
+        "title": "HiFiMAN Deva Pro",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://hifiman.jp/products/detail/313",
+        "type": "official-regional",
+        "title": "Deva Pro / Bluemini R2R specs (6–7 h, LDAC)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery display is OS-dependent; no app.",
+      "Exact Bluetooth version is not stated on the Japanese spec extract.",
+      "Multipoint is not documented; assumed absent."
+    ],
+    "notes": "The Bluemini module is not a default accessory for every Deva Pro wired bundle. This record covers the Bluetooth-capable Deva Pro package.",
+    "researchedAt": "2026-11-10"
+  }
+]

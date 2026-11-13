@@ -1,0 +1,367 @@
+[
+  {
+    "company": "Nuheara",
+    "companySlug": "nuheara",
+    "family": "IQbuds",
+    "model": "Nuheara IQbuds2 MAX",
+    "slug": "nuheara-iqbuds2-max",
+    "generation": "2",
+    "variant": "MAX",
+    "releaseYear": 2020,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "IQbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.nuheara.iqbudsapp"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.nuheara.iqbudsapp"
+      ],
+      "appVersionObserved": "2023-10-30 update",
+      "notes": "Ear ID hearing assessment, SINC, World EQ, Focus, location presets and battery status."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 8.5,
+      "caseHours": 24,
+      "chargingIndicators": "Case LEDs for buds and case; USB-C. 120 min bud charge, 120 min case charge.",
+      "notes": "5 h Bluetooth streaming, 8.5 h hearing processing only. Three case recharges give 20 h streaming or 32 h hearing total (caseHours 24 is the hearing-mode add-on; streaming add-on is 15 h).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 24
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "world",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Hybrid ANC plus World control for mixing ambient sound. No documented adaptive ANC or dB figures."
+    },
+    "features": [
+      {
+        "id": "hearing.self-fit",
+        "name": "Ear ID self-assessment and NAL-NL2 fitting",
+        "availability": "official-app",
+        "notes": "Six frequencies from 500 Hz to 6 kHz, 20-70 dB range."
+      },
+      {
+        "id": "hearing.programs",
+        "name": "Seven programs via app, four stored on device",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "hearing.noise-reduction",
+        "name": "SINC speech-in-noise control",
+        "availability": "official-app",
+        "notes": "Balances world noise against speech."
+      },
+      {
+        "id": "hearing.directional-focus",
+        "name": "Focus directional beamforming",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid active noise cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.world-eq",
+        "name": "World EQ and location presets",
+        "availability": "official-app",
+        "notes": "Workout, Street, Home, Office, Restaurant, Driving, Plane."
+      },
+      {
+        "id": "audio.streaming",
+        "name": "aptX Low Latency music streaming",
+        "availability": "both",
+        "notes": "SBC and aptX LL."
+      },
+      {
+        "id": "telephony.calls",
+        "name": "Hands-free calls",
+        "availability": "both",
+        "notes": "Wideband on supported devices; two-mic voice pickup."
+      },
+      {
+        "id": "controls.tap-custom",
+        "name": "Programmable tap controls",
+        "availability": "official-app",
+        "notes": "Four favourites switch with a long tap."
+      },
+      {
+        "id": "audio.tv-streaming",
+        "name": "IQstream TV support",
+        "availability": "device-only",
+        "notes": "Requires the optional IQstream TV accessory."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long tap right earbud",
+          "action": "cycle four favourite programs",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Programmable tap touch sensor on each earbud."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "aptX Low Latency"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "9.2 mm dynamic driver, vented; six microphones (three per ear); 12-channel WDRC; IP54; 8 g per bud."
+    },
+    "appOnlyFeatures": [
+      "Ear ID",
+      "SINC",
+      "World EQ",
+      "Focus",
+      "location presets",
+      "battery status"
+    ],
+    "featureDeltaFromPrevious": [
+      "Hybrid ANC added versus IQbuds BOOST",
+      "9.2 mm driver and six microphones",
+      "5 h streaming / 8.5 h hearing"
+    ],
+    "sources": [
+      {
+        "url": "https://support.nuheara.com/hc/en-us/articles/360001386835-Technical-Data-Sheet",
+        "type": "official-support",
+        "title": "IQbuds2 MAX technical data sheet",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.nuheara.com/products/max-page-new/",
+        "type": "official-product",
+        "title": "IQbuds2 MAX product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.nuheara.iqbudsapp",
+        "type": "official-app-store",
+        "title": "IQbuds app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC and transparency depth not published.",
+      "Battery UI split/combined not documented beyond case LEDs.",
+      "Multipoint not supported/documented."
+    ],
+    "notes": "Nuheara's flagship hearing bud: true wireless, ANC, self-fit Ear ID, calls and aptX LL. Not a regulated hearing aid in the US; positioned as a hearing-enhancement earbud.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Nuheara",
+    "companySlug": "nuheara",
+    "family": "IQbuds",
+    "model": "Nuheara IQbuds BOOST",
+    "slug": "nuheara-iqbuds-boost",
+    "generation": "1",
+    "variant": "BOOST",
+    "releaseYear": 2018,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "IQbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.nuheara.iqbudsapp"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.nuheara.iqbudsapp"
+      ],
+      "appVersionObserved": "2023-10-30 update",
+      "notes": "Ear ID, SINC, World EQ, Focus and program control."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 24,
+      "chargingIndicators": "Case LEDs; USB. 120 mAh per bud; 1140 mAh case.",
+      "notes": "5 h music streaming / 8 h assisted listening per charge; case adds three charges, quoted as 20 h streaming or 32 h hearing total.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 24
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC. SINC noise reduction and World control only."
+    },
+    "features": [
+      {
+        "id": "hearing.self-fit",
+        "name": "Ear ID self-assessment with NAL-NL2",
+        "availability": "official-app",
+        "notes": "500 Hz-6 kHz, 20-70 dB."
+      },
+      {
+        "id": "hearing.noise-reduction",
+        "name": "SINC speech-in-noise control",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "hearing.directional-focus",
+        "name": "Focus directional beamforming",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "hearing.programs",
+        "name": "Seven programs via app, four on device",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.streaming",
+        "name": "aptX Low Latency streaming",
+        "availability": "both",
+        "notes": "SBC and aptX LL."
+      },
+      {
+        "id": "telephony.calls",
+        "name": "Hands-free calls",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.tv-streaming",
+        "name": "Low-latency TV streaming",
+        "availability": "device-only",
+        "notes": "With an optional Bluetooth transmitter; not included."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long tap",
+          "action": "cycle programs",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "aptX Low Latency"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Balanced-armature driver, 120 mAh per bud, Bluetooth 4.2, IPX7-rated NanoProof coating, 8 g per bud."
+    },
+    "appOnlyFeatures": [
+      "Ear ID",
+      "SINC",
+      "World EQ",
+      "Focus",
+      "programs"
+    ],
+    "featureDeltaFromPrevious": [
+      "Ear ID and NAL-NL2 added",
+      "aptX Low Latency",
+      "Longer 5 h streaming / 8 h hearing runtime"
+    ],
+    "sources": [
+      {
+        "url": "https://www.nuheara.com/usa/products-2/iqbuds-earbuds-left-or-right/",
+        "type": "official-product",
+        "title": "Nuheara IQbuds BOOST specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.nuheara.com/hc/en-us/articles/360001386835-Technical-Data-Sheet",
+        "type": "official-support",
+        "title": "Nuheara technical data sheet",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.nuheara.iqbudsapp",
+        "type": "official-app-store",
+        "title": "IQbuds app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official page mixes 5 h streaming and 8 h hearing figures.",
+      "Battery UI layout not documented.",
+      "Some retail docs list 90 min bud charge versus 120 min on Nuheara's sheet."
+    ],
+    "notes": "Assistive-listening earbud, not a regulated hearing aid. Notable for Ear ID self-fit and low-latency TV use.",
+    "researchedAt": "2026-11-10"
+  }
+]

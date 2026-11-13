@@ -1,0 +1,305 @@
+[
+  {
+    "company": "Westone",
+    "companySlug": "westone",
+    "family": "Etymotion",
+    "model": "Etymotion BT Cable (T2)",
+    "slug": "westone-etymotion-bt-cable-t2",
+    "generation": null,
+    "variant": "T2",
+    "releaseYear": 2020,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "No official companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "All controls are on the inline microphone pod; no app, EQ or firmware UI."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": null,
+      "chargingIndicators": "Inline LED; micro-USB charging on the control pod.",
+      "notes": "Single battery in the cable control pod. Up to 8 h playback; about 2 h to charge. No case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. Passive isolation depends on the attached earphones."
+    },
+    "features": [
+      {
+        "id": "connectivity.wireless-cable",
+        "name": "Bluetooth MMCX/T2 cable",
+        "availability": "device-only",
+        "notes": "Turns passive T2 earphones into a wireless in-ear."
+      },
+      {
+        "id": "vendor.etymotic.akm-dac",
+        "name": "AKM AK4331 Velvet Sound DAC/amp",
+        "availability": "device-only",
+        "notes": "Dedicated DAC and headphone amplifier in the cable pod."
+      },
+      {
+        "id": "controls.inline",
+        "name": "Inline remote",
+        "availability": "device-only",
+        "notes": "Volume, playback, track and voice assistant."
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "aptX HD",
+        "availability": "device-only",
+        "notes": "24-bit/48 kHz over aptX HD."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Volume + / −",
+          "action": "Volume up/down; long press skips track",
+          "configurableInApp": false,
+          "notes": "Exact long-press mapping not published by Westone; inherited from the Etymotion design."
+        },
+        {
+          "gesture": "Power, single press",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Power, long press",
+          "action": "Power on/off; pairing",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Power, double press",
+          "action": "Voice assistant",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Inline microphone pod with volume and power/play buttons.",
+      "configurableInApp": false,
+      "notes": "No app; button behaviour is fixed."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "aptX",
+        "aptX HD"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "No DSP, EQ or app tuning. Sound depends entirely on the attached T2 earphones."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "T2 connector version sold by Westone Audio after the Etymotic/Westone brand consolidation",
+      "Same AKM AK4331 DAC/amp as the MMCX Etymotion"
+    ],
+    "sources": [
+      {
+        "url": "https://westoneaudio.com/products/etymotion-bt-cable-t2-connectors",
+        "type": "official-product",
+        "title": "Etymotion BT Cable | T2 Connectors",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.muzix.eu/no/Etymotic/Adapter/MG-ERETYMOTION-BT/ETYMOTIC-ETYMOTION-BT-Bluetooth-Cable-with-MMCX-Connector-and-AptX-HD",
+        "type": "reputable-secondary",
+        "title": "Etymotion BT product listing (8 h, inline controls)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Westone's page does not publish battery hours, Bluetooth version or full codec list.",
+      "Exact inline-button gesture map is not published on the current product page.",
+      "No official statement on multipoint."
+    ],
+    "notes": "Accessory/cable product, not a standalone earphone. Included because it is Westone Audio's current Bluetooth audio wearable.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Westone",
+    "companySlug": "westone",
+    "family": "Bluetooth Cable",
+    "model": "Westone Audio Bluetooth V2 Cable",
+    "slug": "westone-bluetooth-v2-cable",
+    "generation": "2",
+    "variant": "MMCX",
+    "releaseYear": 2021,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "No official companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app; fixed inline controls."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": null,
+      "chargingIndicators": "Inline LED: red charging, blue charged; low-battery red flash.",
+      "notes": "Single battery in the cable pod. 8 h is the commonly published figure for the V2 cable; Westone's current manual does not state hours.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.wireless-cable",
+        "name": "Bluetooth MMCX cable",
+        "availability": "device-only",
+        "notes": "Designed for Westone universal and custom-fit IEMs with MMCX connectors."
+      },
+      {
+        "id": "audio.aptx",
+        "name": "aptX",
+        "availability": "device-only",
+        "notes": "Qualcomm aptX, tuned by Westone's chief audio engineer."
+      },
+      {
+        "id": "controls.inline",
+        "name": "Inline remote",
+        "availability": "device-only",
+        "notes": "Volume, playback, calls and voice assistant."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power, single press",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Power, long press 1 s",
+          "action": "Power on/off",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Power, long press 5 s",
+          "action": "Pairing mode",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume +, single press",
+          "action": "Volume up",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume +, long press 1 s",
+          "action": "Next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume −, single press",
+          "action": "Volume down",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume −, long press 1 s",
+          "action": "Previous track",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power, Volume + and Volume − buttons on the inline pod.",
+      "configurableInApp": false,
+      "notes": "Behaviour documented in Westone's Bluetooth Cable manual (MMCX version)."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "aptX"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "No DSP or app EQ. The V2 cable is tuned for Westone MMCX IEMs."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "V2 cable adds aptX and a slimmer inline pod over the original Bluetooth cable",
+      "MMCX connectors with formed ear hooks"
+    ],
+    "sources": [
+      {
+        "url": "https://westoneaudio.com/pages/user-manuals-and-spec-sheets",
+        "type": "official-support",
+        "title": "Westone Audio manuals page (Bluetooth Cable manual)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.guitarcenter.com/Westone-Audio/Bluetooth-V2-Cable-1500000261152.gc",
+        "type": "reputable-secondary",
+        "title": "Westone Audio Bluetooth V2 Cable product listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Westone no longer lists the V2 cable as an active product; official battery and codec specs are not on the current site.",
+      "Battery hours (8 h) are from retailer/secondary listings, not a current official spec sheet.",
+      "Multipoint is not documented and is assumed absent."
+    ],
+    "notes": "Discontinued/recent-past accessory retained because it is the main Westone Bluetooth product before the Etymotion T2. Current Westone IEMs are wired-only.",
+    "researchedAt": "2026-11-10"
+  }
+]

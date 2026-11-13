@@ -1,0 +1,1159 @@
+[
+  {
+    "company": "Bang & Olufsen",
+    "companySlug": "bang-olufsen",
+    "family": "Beoplay",
+    "model": "Bang & Olufsen Beoplay Eleven",
+    "slug": "beoplay-eleven",
+    "generation": "11",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Bang & Olufsen",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ/BeoSonic, controls, firmware updates."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 8,
+      "caseHours": 14,
+      "chargingIndicators": "Case LED; app readout; USB-C; wireless charging",
+      "notes": "Official: 6 h ANC / 20 h total ANC; 8 h no ANC / 28 h total no ANC. Case adds 14 h with ANC.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 14
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Improved ANC over Beoplay EX."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "BeoSonic EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.bang-olufsen.replaceable-battery",
+        "name": "Replaceable batteries",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "aptX Adaptive",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "Aluminium earbuds; replaceable battery design."
+    },
+    "appOnlyFeatures": [
+      "BeoSonic EQ",
+      "ANC modes",
+      "controls"
+    ],
+    "featureDeltaFromPrevious": [
+      "Improved ANC",
+      "Multipoint",
+      "Replaceable batteries"
+    ],
+    "sources": [
+      {
+        "url": "https://www.bang-olufsen.com/en/us/earphones/beoplay-eleven",
+        "type": "official-product",
+        "title": "Beoplay Eleven",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Codec list and EQ band count not verified on current page.",
+      "Battery UI layout inferred.",
+      "Official B&O spec confirms 6/20 h ANC and 8/28 h no ANC; earlier 24 h total was wrong."
+    ],
+    "notes": "2024 flagship ANC earbud with replaceable batteries.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bang & Olufsen",
+    "companySlug": "bang-olufsen",
+    "family": "Beo Grace",
+    "model": "Bang & Olufsen Beo Grace",
+    "slug": "beo-grace",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Bang & Olufsen",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, controls, firmware."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 4.5,
+      "budsHoursNoAnc": null,
+      "caseHours": 12.5,
+      "chargingIndicators": "Case LED; app readout",
+      "notes": "Official: 4.5 h with ANC (earbuds), 17 h total with case.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 12.5
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Advanced ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Advanced ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Full Adaptive ANC with EarSense",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency-levels",
+        "name": "TrueTransparency with 5 app levels",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Dolby Spatial Audio",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "gesture",
+          "action": "playback and calls",
+          "configurableInApp": true,
+          "notes": "Simple gesture control."
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Hand-polished aluminium design; $1,500 launch price."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "New ultra-premium TWS tier above Beoplay Eleven"
+    ],
+    "sources": [
+      {
+        "url": "https://www.bang-olufsen.com/en/us/earphones/beograce",
+        "type": "official-product",
+        "title": "Beo Grace",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery UI layout unverified.",
+      "ANC dB, EQ bands, wear detection unknown."
+    ],
+    "notes": "Ultra-luxury 2025 earbud ($1,500). Research incomplete.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bang & Olufsen",
+    "companySlug": "bang-olufsen",
+    "family": "Beoplay",
+    "model": "Bang & Olufsen Beoplay EX",
+    "slug": "beoplay-ex",
+    "generation": "EX",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Bang & Olufsen",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, BeoSonic EQ, controls."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": null,
+      "caseHours": 14,
+      "chargingIndicators": "Case LED; app readout; wireless charging",
+      "notes": "6 h with ANC; 20 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adaptive ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "BeoSonic EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "aptX Adaptive",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "aptX Adaptive",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "9.2 mm drivers; aluminium stems; BT 5.2; IP57."
+    },
+    "appOnlyFeatures": [
+      "BeoSonic EQ",
+      "ANC modes",
+      "controls"
+    ],
+    "featureDeltaFromPrevious": [
+      "Stem design with 9.2 mm drivers",
+      "IP57"
+    ],
+    "sources": [
+      {
+        "url": "https://www.bang-olufsen.com/en/us/earphones/beoplay-eleven",
+        "type": "official-product",
+        "title": "Beoplay earbuds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.bang-olufsen.com/en/us/headphones",
+        "type": "official-product",
+        "title": "Bang & Olufsen headphones",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Current dedicated product page not captured.",
+      "EQ band count unknown.",
+      "Battery values from launch materials.",
+      "Battery UI layout (split buds / separate case / last-known case while buds are out) is inferred from typical app behaviour and has not been screenshot-verified."
+    ],
+    "notes": "Stem-style flagship of 2022.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bang & Olufsen",
+    "companySlug": "bang-olufsen",
+    "family": "Beoplay",
+    "model": "Bang & Olufsen Beoplay EQ",
+    "slug": "beoplay-eq",
+    "generation": "EQ",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Bang & Olufsen",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, BeoSonic EQ, controls."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6.5,
+      "budsHoursNoAnc": null,
+      "caseHours": 13.5,
+      "chargingIndicators": "Case LED; app readout; wireless charging",
+      "notes": "6.5 h with ANC; 20 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adaptive ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "BeoSonic EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "aptX Adaptive",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "aptX Adaptive",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "BT 5.2; IP54."
+    },
+    "appOnlyFeatures": [
+      "BeoSonic EQ",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "B&O's first ANC earbud"
+    ],
+    "sources": [
+      {
+        "url": "https://www.bang-olufsen.com/en/us/headphones",
+        "type": "official-product",
+        "title": "Bang & Olufsen headphones",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Dedicated page not captured.",
+      "EQ band count unknown.",
+      "Battery values from launch materials.",
+      "Battery UI layout (split buds / separate case / last-known case while buds are out) is inferred from typical app behaviour and has not been screenshot-verified."
+    ],
+    "notes": "First B&O ANC earbud.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bang & Olufsen",
+    "companySlug": "bang-olufsen",
+    "family": "Beoplay H",
+    "model": "Bang & Olufsen Beoplay H100",
+    "slug": "beoplay-h100",
+    "generation": "100",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Bang & Olufsen",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, spatial audio, controls, firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 32,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout; USB-C",
+      "notes": "Official: 32 h with ANC; 30 h with spatial audio + head tracking.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adaptive ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio with head tracking",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.head-tracking",
+        "name": "Head tracking",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.bang-olufsen.replaceable-battery",
+        "name": "Replaceable battery",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "touch gesture",
+          "action": "playback, volume, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "button press",
+          "action": "power, ANC",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/ANC buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm titanium drivers; BT 5.3; IP53; 10 mics; no aptX support (B&O explicitly chose AAC/SBC)."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "spatial audio",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "New H100 flagship above H95",
+      "Spatial audio with head tracking",
+      "Replaceable battery"
+    ],
+    "sources": [
+      {
+        "url": "https://www.bang-olufsen.com/en/us/headphones/beoplay-h100",
+        "type": "official-product",
+        "title": "Beoplay H100",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "EQ band count unknown."
+    ],
+    "notes": "2024 luxury flagship ($2,200).",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bang & Olufsen",
+    "companySlug": "bang-olufsen",
+    "family": "Beoplay H",
+    "model": "Bang & Olufsen Beoplay HX",
+    "slug": "beoplay-hx",
+    "generation": "HX",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Bang & Olufsen",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, controls."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 35,
+      "budsHoursNoAnc": 40,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout",
+      "notes": "35 h with ANC, 40 h without.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adaptive ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "BeoSonic EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "aptX Adaptive",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "touch gesture",
+          "action": "playback, volume, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "button press",
+          "action": "power, ANC",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/ANC buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "aptX Adaptive",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm drivers; BT 5.1."
+    },
+    "appOnlyFeatures": [
+      "BeoSonic EQ",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "Longer battery than H9 3rd Gen",
+      "Multipoint"
+    ],
+    "sources": [
+      {
+        "url": "https://www.bang-olufsen.com/en/us/headphones/beoplay-hx",
+        "type": "official-product",
+        "title": "Beoplay HX",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery values from launch materials; current page lacks full spec table.",
+      "EQ band count unknown."
+    ],
+    "notes": "Mainstream luxury ANC over-ear.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bang & Olufsen",
+    "companySlug": "bang-olufsen",
+    "family": "Beoplay H",
+    "model": "Bang & Olufsen Beoplay H95",
+    "slug": "beoplay-h95",
+    "generation": "95",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Bang & Olufsen",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, controls."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 38,
+      "budsHoursNoAnc": 50,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout",
+      "notes": "38 h with ANC, 50 h without.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adaptive ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "BeoSonic EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "aptX Adaptive",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wired-mode",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "touch gesture",
+          "action": "playback, volume, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "button press",
+          "action": "power, ANC",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/ANC buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "aptX Adaptive",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "40 mm titanium drivers; BT 5.1."
+    },
+    "appOnlyFeatures": [
+      "BeoSonic EQ",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "Titanium drivers",
+      "38 h ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.bang-olufsen.com/en/us/headphones/beoplay-h95",
+        "type": "official-product",
+        "title": "Beoplay H95",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Multipoint support not documented.",
+      "EQ band count unknown.",
+      "Battery values from launch materials."
+    ],
+    "notes": "Flagship travel headphone.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bang & Olufsen",
+    "companySlug": "bang-olufsen",
+    "family": "Beoplay Portal",
+    "model": "Bang & Olufsen Beoplay Portal",
+    "slug": "beoplay-portal",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Bang & Olufsen",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, controls."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 24,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout",
+      "notes": "Up to 24 h with ANC; Xbox/PC wireless dongle.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.bang-olufsen.xbox-wireless",
+        "name": "Xbox wireless + Bluetooth",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls, ANC",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "aptX Adaptive",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "40 mm drivers; gaming focus."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "Gaming-first B&O headphone"
+    ],
+    "sources": [
+      {
+        "url": "https://www.bang-olufsen.com/en/us/headphones",
+        "type": "official-product",
+        "title": "Bang & Olufsen headphones",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Dedicated page not captured.",
+      "Multipoint support unknown.",
+      "Battery value from launch materials."
+    ],
+    "notes": "Xbox/PC gaming headphone.",
+    "researchedAt": "2026-11-10"
+  }
+]

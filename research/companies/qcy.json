@@ -1,0 +1,1988 @@
+[
+  {
+    "company": "QCY",
+    "companySlug": "qcy",
+    "family": "MeloBuds",
+    "model": "QCY MeloBuds Pro",
+    "slug": "qcy-melobuds-pro",
+    "generation": "Pro",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "QCY Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.qcy.audio.google"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.qcy.audio.google"
+      ],
+      "appVersionObserved": null,
+      "notes": "QCY app exposes ANC modes, EQ, controls and firmware."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 34,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 34 h total. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 34
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 46,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "ANC up to 46 dB with adaptive mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / Hi-Res",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.dual-driver",
+        "name": "Dual driver",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "Game mode",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Dual driver; Bluetooth 5.3."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes",
+      "game mode"
+    ],
+    "featureDeltaFromPrevious": [
+      "Dual-driver MeloBuds flagship"
+    ],
+    "sources": [
+      {
+        "url": "https://www.qcy.com/products/qcy-melobuds-pro",
+        "type": "official-product",
+        "title": "QCY MeloBuds Pro product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Per-bud ANC/off hours",
+      "ANC dB from launch materials",
+      "EQ presets",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "QCY",
+    "companySlug": "qcy",
+    "family": "MeloBuds",
+    "model": "QCY MeloBuds N70",
+    "slug": "qcy-melobuds-n70",
+    "generation": "N70",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "QCY Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.qcy.audio.google"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.qcy.audio.google"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 50 h total. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 50
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 56,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "ANC depth from launch materials; adaptive mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / Hi-Res",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "50 h battery versus N60 45 h",
+      "Newer ANC generation"
+    ],
+    "sources": [
+      {
+        "url": "https://www.qcy.com/products/qcy-melobuds-n70",
+        "type": "official-product",
+        "title": "QCY MeloBuds N70 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Per-bud hours",
+      "ANC dB confirmation",
+      "EQ presets",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "QCY",
+    "companySlug": "qcy",
+    "family": "MeloBuds",
+    "model": "QCY MeloBuds N60",
+    "slug": "qcy-melobuds-n60",
+    "generation": "N60",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "QCY Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.qcy.audio.google"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.qcy.audio.google"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 45,
+      "chargingIndicators": "10 minutes = 2 hours.",
+      "notes": "Official 45 h total. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 45
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 40,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "ANC depth approximate; adaptive mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / Hi-Res Wireless",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "45 h battery versus N50 28 h",
+      "LDAC added"
+    ],
+    "sources": [
+      {
+        "url": "https://www.qcy.com/products/qcy-melobuds-n60",
+        "type": "official-product",
+        "title": "QCY MeloBuds N60 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB",
+      "Per-bud hours",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "QCY",
+    "companySlug": "qcy",
+    "family": "MeloBuds",
+    "model": "QCY MeloBuds N50",
+    "slug": "qcy-melobuds-n50",
+    "generation": "N50",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "QCY Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.qcy.audio.google"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.qcy.audio.google"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 28,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 28 h total. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 28
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 45,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC depth approximate."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Entry ANC model below N60"
+    ],
+    "sources": [
+      {
+        "url": "https://www.qcy.com/products/qcy-melobuds-n50",
+        "type": "official-product",
+        "title": "QCY MeloBuds N50 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "ANC dB",
+      "Per-bud hours",
+      "Codec list",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "QCY",
+    "companySlug": "qcy",
+    "family": "MeloBuds",
+    "model": "QCY MeloBuds A30",
+    "slug": "qcy-melobuds-a30",
+    "generation": "A30",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "QCY Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.qcy.audio.google"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.qcy.audio.google"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 11,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 11 h per charge with low-power mode; total case hours not captured. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "8-mic call array and ANC; depth not captured."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "battery.low-power-mode",
+        "name": "Low-power mode",
+        "availability": "official-app"
+      },
+      {
+        "id": "calls.8mic",
+        "name": "8-mic clear calls",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "low-power mode"
+    ],
+    "featureDeltaFromPrevious": [
+      "Low-power mode for 11 h single-charge use"
+    ],
+    "sources": [
+      {
+        "url": "https://www.qcy.com/products/melobuds-a30",
+        "type": "official-product",
+        "title": "QCY MeloBuds A30 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Total case hours",
+      "ANC dB",
+      "Codecs",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "QCY",
+    "companySlug": "qcy",
+    "family": "MeloBuds",
+    "model": "QCY MeloBuds ANC",
+    "slug": "qcy-melobuds-anc",
+    "generation": "1",
+    "variant": "ANC",
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "QCY Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.qcy.audio.google"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.qcy.audio.google"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7.5,
+      "caseHours": 30,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 7.5 h/30 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 40,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Entry ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "First MeloBuds ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.qcy.com/products/qcy-ht05",
+        "type": "official-product",
+        "title": "QCY MeloBuds ANC product page (HT05 URL)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery approximate",
+      "ANC dB",
+      "No current product page",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "QCY",
+    "companySlug": "qcy",
+    "family": "T",
+    "model": "QCY T13 ANC",
+    "slug": "qcy-t13-anc",
+    "generation": "13",
+    "variant": "ANC",
+    "releaseYear": 2022,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "QCY Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.qcy.audio.google"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.qcy.audio.google"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 30,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 7 h/30 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 28,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC up to 28 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC added to T13"
+    ],
+    "sources": [
+      {
+        "url": "https://www.qcy.com/products/qcy-t13-anc",
+        "type": "official-product",
+        "title": "QCY T13 ANC product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Per-bud hours",
+      "Battery values approximate",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "QCY",
+    "companySlug": "qcy",
+    "family": "T",
+    "model": "QCY T13 ANC2",
+    "slug": "qcy-t13-anc2",
+    "generation": "13",
+    "variant": "ANC2",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "QCY Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.qcy.audio.google"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.qcy.audio.google"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 60,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 60 h total. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 60
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 40,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC depth approximate."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "Game mode",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "game mode"
+    ],
+    "featureDeltaFromPrevious": [
+      "60 h total versus 30 h on T13 ANC",
+      "ANC improved to ~40 dB"
+    ],
+    "sources": [
+      {
+        "url": "https://www.qcy.com/products/qcy-t13-anc2-active-noise-canceling-wireless-earbuds",
+        "type": "official-product",
+        "title": "QCY T13 ANC2 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Per-bud hours",
+      "ANC dB",
+      "Codec list",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "QCY",
+    "companySlug": "qcy",
+    "family": "T",
+    "model": "QCY T13",
+    "slug": "qcy-t13",
+    "generation": "13",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "QCY Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.qcy.audio.google"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.qcy.audio.google"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 30,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 8 h/30 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Volume-selling T-series model"
+    ],
+    "sources": [
+      {
+        "url": "https://www.qcy.com/products/qcy-t13-wireless-earphones",
+        "type": "official-product",
+        "title": "QCY T13 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery values approximate",
+      "Codec list",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "QCY",
+    "companySlug": "qcy",
+    "family": "H",
+    "model": "QCY H3",
+    "slug": "qcy-h3",
+    "generation": "3",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "QCY Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.qcy.audio.google"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.qcy.audio.google"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 40,
+      "budsHoursNoAnc": 60,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 60 h ANC off / 40 h ANC on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 43,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adaptive ANC up to 43 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "wired.3.5mm",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm driver."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "QCY entry over-ear ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.qcy.com/products/qcy-h3-wireless-headphone",
+        "type": "official-product",
+        "title": "QCY H3 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery values approximate",
+      "ANC dB"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "QCY",
+    "companySlug": "qcy",
+    "family": "H",
+    "model": "QCY H3 Pro",
+    "slug": "qcy-h3-pro",
+    "generation": "3",
+    "variant": "Pro",
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "QCY Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.qcy.audio.google"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.qcy.audio.google"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 55,
+      "caseHours": null,
+      "chargingIndicators": "Wireless charging supported.",
+      "notes": "Official 55 h playback; ANC-on split not captured.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adaptive ANC; depth approximate."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "charging.wireless",
+        "name": "Wireless charging",
+        "availability": "device-only"
+      },
+      {
+        "id": "wired.3.5mm",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm driver."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "LDAC and wireless charging versus H3"
+    ],
+    "sources": [
+      {
+        "url": "https://www.qcy.com/products/qcy-h3-pro",
+        "type": "official-product",
+        "title": "QCY H3 Pro product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC-on hours",
+      "ANC dB"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "QCY",
+    "companySlug": "qcy",
+    "family": "Crossky",
+    "model": "QCY Crossky C50",
+    "slug": "qcy-crossky-c50",
+    "generation": "C50",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "QCY Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.qcy.audio.google"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.qcy.audio.google"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 35,
+      "chargingIndicators": "Wireless charging.",
+      "notes": "Official 35 h total. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 35
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear; no ANC."
+    },
+    "features": [
+      {
+        "id": "design.open-ear",
+        "name": "Open-ear hook",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "charging.wireless",
+        "name": "Wireless charging",
+        "availability": "device-only"
+      },
+      {
+        "id": "auto.left-right-correction",
+        "name": "Auto left-right correction",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "LDAC and wireless charging in open-ear"
+    ],
+    "sources": [
+      {
+        "url": "https://www.qcy.com/products/qcy-crossky-c50",
+        "type": "official-product",
+        "title": "QCY Crossky C50 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Per-bud hours",
+      "Codec list",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "QCY",
+    "companySlug": "qcy",
+    "family": "Crossky",
+    "model": "QCY Crossky C70",
+    "slug": "qcy-crossky-c70",
+    "generation": "C70",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "QCY Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.qcy.audio.google"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.qcy.audio.google"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 50 h total. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 50
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear clip; no ANC."
+    },
+    "features": [
+      {
+        "id": "design.clip",
+        "name": "Open-ear clip",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "water.ipx5",
+        "name": "IPX5",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Clip form factor and 50 h battery versus C50"
+    ],
+    "sources": [
+      {
+        "url": "https://www.qcy.com/products/qcy-crossky-c70-open-ear-clip-on-earbuds",
+        "type": "official-product",
+        "title": "QCY Crossky C70 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Per-bud hours",
+      "Codec list",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "QCY",
+    "companySlug": "qcy",
+    "family": "Crossky",
+    "model": "QCY Crossky C30",
+    "slug": "qcy-crossky-c30",
+    "generation": "C30",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "QCY Audio",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.qcy.audio.google"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.qcy.audio.google"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 25,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 6 h/24 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear clip; no ANC."
+    },
+    "features": [
+      {
+        "id": "design.clip",
+        "name": "Open-ear clip",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "water.ipx4",
+        "name": "IPX4",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "First Crossky clip model"
+    ],
+    "sources": [
+      {
+        "url": "https://www.qcy.com/products/qcy-crossky-c30",
+        "type": "official-product",
+        "title": "QCY Crossky C30 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery values approximate",
+      "Codec list",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

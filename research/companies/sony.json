@@ -1,0 +1,3160 @@
+[
+  {
+    "company": "Sony",
+    "companySlug": "sony",
+    "family": "WF-1000X",
+    "model": "WF-1000XM6",
+    "slug": "sony-wf-1000xm6",
+    "generation": "6",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Sony | Sound Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sony.songpal.mdr"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr"
+      ],
+      "appVersionObserved": "12.x (Google Play listing updated 2026-11-06; v12.5+ requires Android 11)",
+      "notes": "Formerly Sony | Headphones Connect, renamed October 2024."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 8,
+      "budsHoursNoAnc": 12,
+      "caseHours": null,
+      "chargingIndicators": "Case LED and voice guidance; exact LED thresholds not captured.",
+      "notes": "Sony app shows left/right earbud charge independently (Sony support says L/R can differ on the Sound Connect screen); Android/iOS system status instead reports the lower earbud. Total-case hours are not stated on the official spec page.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient-sound",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "Adaptive NC Optimizer automatically adjusts ANC to wearer and environment; no official dB reduction figure."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Sound Mode",
+        "availability": "both",
+        "notes": "20-level ambient sound adjustment in app."
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive NC Optimizer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "noise-control.quick-attention",
+        "name": "Quick Attention",
+        "availability": "device-only",
+        "notes": "Cup/bud gesture lowers volume to hear surroundings."
+      },
+      {
+        "id": "noise-control.speak-to-chat",
+        "name": "Speak-to-Chat",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.dsee-extreme",
+        "name": "DSEE Extreme",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band equalizer with Clear Bass",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.360-reality-audio",
+        "name": "360 Reality Audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": "Two devices."
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio / LC3",
+        "availability": "both",
+        "notes": "LC3 listed in official codec list."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "power.battery-care",
+        "name": "Battery Care charge limit",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.voice-guidance",
+        "name": "Voice guidance language and volume",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "noise mode / Quick Attention",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Left/right assignments can be swapped in Sound Connect."
+    },
+    "audio": {
+      "eqPresets": [
+        "Off",
+        "Bright",
+        "Excited",
+        "Mellow",
+        "Relaxed",
+        "Vocal",
+        "Treble Boost",
+        "Bass Boost",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "LC3"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "LDAC up to 96 kHz/990 kbps. IPX4 earbuds."
+    },
+    "appOnlyFeatures": [
+      "adaptive-nc-optimizer",
+      "speak-to-chat",
+      "dsee-extreme",
+      "battery-care",
+      "360-reality-audio",
+      "voice-guidance-language",
+      "codec-display"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wf-1000xm6/specifications",
+        "type": "official-product",
+        "title": "WF-1000XM6 specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://helpguide.sony.net/mdr/2985/v1/en/contents/F018_Checking_the_remaining_battery_charge.html",
+        "type": "official-manual",
+        "title": "WF-1000XM6 Help Guide - Checking the remaining battery charge",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr",
+        "type": "official-app-store",
+        "title": "Sony | Sound Connect on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Total playback hours with charging case not published on the official spec page.",
+      "No official ANC or transparency dB figures.",
+      "Exact case LED thresholds not documented.",
+      "Codec/hi-res behaviour under multipoint not verified.",
+      "Case visibility and last-known case reading are inferred from the Sound Connect feature list; no screenshot verification in this pass."
+    ],
+    "notes": "Flagship 2025 TWS; case supports Qi wireless charging.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sony",
+    "companySlug": "sony",
+    "family": "WF-1000X",
+    "model": "WF-1000XM5",
+    "slug": "sony-wf-1000xm5",
+    "generation": "5",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Sony | Sound Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sony.songpal.mdr"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr"
+      ],
+      "appVersionObserved": "12.x (Google Play listing updated 2026-11-06)",
+      "notes": "Formerly Sony | Headphones Connect."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 8,
+      "budsHoursNoAnc": 12,
+      "caseHours": 16,
+      "chargingIndicators": "Case LED; voice guidance reports remaining charge.",
+      "notes": "24 h total (8 h buds + 16 h case). App shows L/R separately; system status uses the lower bud.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 16
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient-sound",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "Auto NC Optimizer; Adaptive Sound Control switches by activity/location."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Sound Mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive Sound Control",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "noise-control.quick-attention",
+        "name": "Quick Attention",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "noise-control.speak-to-chat",
+        "name": "Speak-to-Chat",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.dsee-extreme",
+        "name": "DSEE Extreme",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band equalizer with Clear Bass",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.360-reality-audio",
+        "name": "360 Reality Audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "power.battery-care",
+        "name": "Battery Care charge limit",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "noise mode / Quick Attention",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Off",
+        "Bright",
+        "Excited",
+        "Mellow",
+        "Relaxed",
+        "Vocal",
+        "Treble Boost",
+        "Bass Boost",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "LC3"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IPX4; Qi wireless charging case."
+    },
+    "appOnlyFeatures": [
+      "adaptive-sound-control",
+      "speak-to-chat",
+      "dsee-extreme",
+      "battery-care",
+      "360-reality-audio",
+      "voice-guidance-language"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wf-1000xm5/specifications",
+        "type": "official-product",
+        "title": "WF-1000XM5 specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr",
+        "type": "official-app-store",
+        "title": "Sony | Sound Connect on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "App battery split confirmed by Sony support language, not by a screenshot in this pass.",
+      "Case-hours figure inferred from Sony's 24 h total claim.",
+      "Case visibility and last-known case reading are inferred from the Sound Connect feature list; no screenshot verification in this pass."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sony",
+    "companySlug": "sony",
+    "family": "WH-1000X",
+    "model": "WH-1000XM6",
+    "slug": "sony-wh-1000xm6",
+    "generation": "6",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Sony | Sound Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sony.songpal.mdr"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr"
+      ],
+      "appVersionObserved": "12.x (Google Play listing updated 2026-11-06)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 30,
+      "budsHoursNoAnc": 40,
+      "caseHours": null,
+      "chargingIndicators": "Voice guidance and app percentage; 3-minute charge gives up to 1 h (USB) or 3 h (USB PD).",
+      "notes": "LDAC reduces ANC runtime to 26 h / 36 h without ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient-sound",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "Adaptive NC Optimizer; atmospheric-pressure optimisation."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Sound Mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive NC Optimizer",
+        "availability": "official-app",
+        "notes": "Also atmospheric-pressure optimisation."
+      },
+      {
+        "id": "noise-control.quick-attention",
+        "name": "Quick Attention",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "noise-control.speak-to-chat",
+        "name": "Speak-to-Chat",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.dsee-extreme",
+        "name": "DSEE Extreme",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band equalizer with Clear Bass",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.360-upmix",
+        "name": "360 Upmix for Cinema",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio / LC3",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "power.battery-care",
+        "name": "Battery Care charge limit",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": "Right earcup touch panel."
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "Quick Attention / noise mode",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/Bluetooth pairing button and NC/ambient button on left earcup.",
+      "configurableInApp": true,
+      "notes": "Folding headband returns on this generation."
+    },
+    "audio": {
+      "eqPresets": [
+        "Off",
+        "Bright",
+        "Excited",
+        "Mellow",
+        "Relaxed",
+        "Vocal",
+        "Treble Boost",
+        "Bass Boost",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "LC3"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "30 mm driver; 3.5 mm wired mode; 254 g."
+    },
+    "appOnlyFeatures": [
+      "adaptive-nc-optimizer",
+      "speak-to-chat",
+      "dsee-extreme",
+      "battery-care",
+      "360-upmix",
+      "voice-guidance-language",
+      "codec-display"
+    ],
+    "featureDeltaFromPrevious": [
+      "Folding headband returns after the non-folding WH-1000XM5.",
+      "Adaptive NC Optimizer replaces the previous Auto NC Optimizer naming.",
+      "360 Upmix for Cinema added."
+    ],
+    "sources": [
+      {
+        "url": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wh-1000xm6/specifications",
+        "type": "official-product",
+        "title": "WH-1000XM6 specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://helpguide.sony.net/mdr/2984/v1/en/contents/TP1001856818.html",
+        "type": "official-manual",
+        "title": "WH-1000XM6 Help Guide - Available operating time",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr",
+        "type": "official-app-store",
+        "title": "Sony | Sound Connect on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "Wind-noise-specific reduction toggle not confirmed.",
+      "Head-tracking support for spatial audio not confirmed."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sony",
+    "companySlug": "sony",
+    "family": "WH-1000X",
+    "model": "WH-1000XM5",
+    "slug": "sony-wh-1000xm5",
+    "generation": "5",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Sony | Sound Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sony.songpal.mdr"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr"
+      ],
+      "appVersionObserved": "12.x (Google Play listing updated 2026-11-06)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 30,
+      "budsHoursNoAnc": 40,
+      "caseHours": null,
+      "chargingIndicators": "Voice guidance; 3-minute charge gives up to 3 h.",
+      "notes": "30 h ANC / 40 h no ANC with AAC; LDAC reduces runtime.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient-sound",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "Auto NC Optimizer; Adaptive Sound Control."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Sound Mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive Sound Control",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "noise-control.quick-attention",
+        "name": "Quick Attention",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "noise-control.speak-to-chat",
+        "name": "Speak-to-Chat",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.dsee-extreme",
+        "name": "DSEE Extreme",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band equalizer with Clear Bass",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.360-reality-audio",
+        "name": "360 Reality Audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": "Added by firmware after launch."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "power.battery-care",
+        "name": "Battery Care charge limit",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "Quick Attention",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/Bluetooth and NC/ambient buttons.",
+      "configurableInApp": true,
+      "notes": "Non-folding headband."
+    },
+    "audio": {
+      "eqPresets": [
+        "Off",
+        "Bright",
+        "Excited",
+        "Mellow",
+        "Relaxed",
+        "Vocal",
+        "Treble Boost",
+        "Bass Boost",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "30 mm driver; 250 g; 3.5 mm wired mode."
+    },
+    "appOnlyFeatures": [
+      "adaptive-sound-control",
+      "speak-to-chat",
+      "dsee-extreme",
+      "battery-care",
+      "360-reality-audio",
+      "voice-guidance-language"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wh-1000xm5/specifications",
+        "type": "official-product",
+        "title": "WH-1000XM5 specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr",
+        "type": "official-app-store",
+        "title": "Sony | Sound Connect on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "Some units may not expose multipoint until firmware update; version not recorded."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sony",
+    "companySlug": "sony",
+    "family": "WF-C700N",
+    "model": "WF-C710N",
+    "slug": "sony-wf-c710n",
+    "generation": null,
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Sony | Sound Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sony.songpal.mdr"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr"
+      ],
+      "appVersionObserved": "12.x (Google Play listing updated 2026-11-06)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 8.5,
+      "budsHoursNoAnc": 12,
+      "caseHours": null,
+      "chargingIndicators": "Case LED; voice guidance.",
+      "notes": "Sony does not publish total-with-case hours on the spec page.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient-sound",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Dual noise sensor; Quick Attention supported."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Sound Mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.quick-attention",
+        "name": "Quick Attention",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.dsee",
+        "name": "DSEE",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer with presets and custom bands",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "power.battery-care",
+        "name": "Battery Care charge limit",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.voice-guidance",
+        "name": "Voice guidance language/volume",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "noise mode / Quick Attention",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Off",
+        "Bright",
+        "Excited",
+        "Mellow",
+        "Relaxed",
+        "Vocal",
+        "Treble Boost",
+        "Bass Boost",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "5 mm driver; IPX4; no LDAC."
+    },
+    "appOnlyFeatures": [
+      "battery-care",
+      "dsee",
+      "voice-guidance-language",
+      "equalizer"
+    ],
+    "featureDeltaFromPrevious": [
+      "Multipoint connection added versus WF-C700N.",
+      "Battery increased to 8.5 h ANC / 12 h no ANC from 7.5 h / 10 h.",
+      "DSEE added."
+    ],
+    "sources": [
+      {
+        "url": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wf-c710n/specifications",
+        "type": "official-product",
+        "title": "WF-C710N specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr",
+        "type": "official-app-store",
+        "title": "Sony | Sound Connect on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Total case hours not published.",
+      "Adaptive/personalized ANC capability not stated on spec page.",
+      "No official dB figures.",
+      "Case visibility and last-known case reading are inferred from the Sound Connect feature list; no screenshot verification in this pass."
+    ],
+    "notes": "2025 refresh of the C700N line.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sony",
+    "companySlug": "sony",
+    "family": "WF-C500",
+    "model": "WF-C510",
+    "slug": "sony-wf-c510",
+    "generation": null,
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Sony | Sound Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sony.songpal.mdr"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr"
+      ],
+      "appVersionObserved": "12.x (Google Play listing updated 2026-11-06)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 11,
+      "caseHours": 11,
+      "chargingIndicators": "Case LED; voice guidance.",
+      "notes": "22 h total (11 h buds + 11 h case); no ANC.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 11
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "ambient-sound",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Ambient Sound Mode only; no active noise cancelling."
+    },
+    "features": [
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Sound Mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer with presets and custom bands",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.360-reality-audio",
+        "name": "360 Reality Audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "power.battery-care",
+        "name": "Battery Care charge limit",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.voice-guidance",
+        "name": "Voice guidance language/volume",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "ambient sound / Quick Access",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Off",
+        "Bright",
+        "Excited",
+        "Mellow",
+        "Relaxed",
+        "Vocal",
+        "Treble Boost",
+        "Bass Boost",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IPX4; no LDAC."
+    },
+    "appOnlyFeatures": [
+      "battery-care",
+      "360-reality-audio",
+      "voice-guidance-language",
+      "equalizer"
+    ],
+    "featureDeltaFromPrevious": [
+      "Multipoint added versus WF-C500.",
+      "Battery increased to 11 h from 10 h.",
+      "360 Reality Audio support added."
+    ],
+    "sources": [
+      {
+        "url": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wf-c510/specifications",
+        "type": "official-product",
+        "title": "WF-C510 specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://helpguide.sony.net/mdr/2982/v1/en/contents/TP1001612402.html",
+        "type": "official-manual",
+        "title": "WF-C510 Help Guide - Sound Connect app features",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official dB figures (no ANC).",
+      "Exact EQ band count not stated in the manual page captured.",
+      "No ANC (not applicable).",
+      "Case visibility and last-known case reading are inferred from the Sound Connect feature list; no screenshot verification in this pass."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sony",
+    "companySlug": "sony",
+    "family": "WF-C700N",
+    "model": "WF-C700N",
+    "slug": "sony-wf-c700n",
+    "generation": null,
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Sony | Sound Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sony.songpal.mdr"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr"
+      ],
+      "appVersionObserved": "12.x (Google Play listing updated 2026-11-06)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7.5,
+      "budsHoursNoAnc": 10,
+      "caseHours": 7.5,
+      "chargingIndicators": "Case LED; voice guidance.",
+      "notes": "15 h total (7.5 h buds + 7.5 h case). Sony support lists this model among four-stage battery displays (100/70/50/20).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 7.5
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient-sound",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Adaptive Sound Control."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Sound Mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive Sound Control",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer with presets and custom bands",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "power.battery-care",
+        "name": "Battery Care charge limit",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.voice-guidance",
+        "name": "Voice guidance language/volume",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "noise mode",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Off",
+        "Bright",
+        "Excited",
+        "Mellow",
+        "Relaxed",
+        "Vocal",
+        "Treble Boost",
+        "Bass Boost",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "IPX4; no multipoint; four-stage battery percentage display."
+    },
+    "appOnlyFeatures": [
+      "battery-care",
+      "adaptive-sound-control",
+      "voice-guidance-language",
+      "equalizer"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wf-c700n/specifications",
+        "type": "official-product",
+        "title": "WF-C700N specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.sony.com/electronics/support/articles/00266785",
+        "type": "official-support",
+        "title": "Sony support - remaining battery charges differ (four-stage models)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "Case total hours inferred from 15 h total claim.",
+      "Multipoint absence verified from spec/manual family, not from a single page.",
+      "Case visibility and last-known case reading are inferred from the Sound Connect feature list; no screenshot verification in this pass."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sony",
+    "companySlug": "sony",
+    "family": "LinkBuds",
+    "model": "LinkBuds Fit",
+    "slug": "sony-linkbuds-fit",
+    "generation": "1",
+    "variant": "Fit",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Sony | Sound Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sony.songpal.mdr"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr"
+      ],
+      "appVersionObserved": "12.x (Google Play listing updated 2026-11-06)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5.5,
+      "budsHoursNoAnc": 8,
+      "caseHours": 15.5,
+      "chargingIndicators": "Case LED; 5-minute charge gives 1 h.",
+      "notes": "21 h total (5.5 h ANC + 15.5 h case). LDAC reduces buds runtime to 3.5 h ANC.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 15.5
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient-sound",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "Personal NC Optimizer and Auto Ambient Sound."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Sound Mode with auto adjustment",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.personal-nc-optimizer",
+        "name": "Personal NC Optimizer",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive Sound Control",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.dsee-extreme",
+        "name": "DSEE Extreme",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer with presets and custom bands",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.360-reality-audio",
+        "name": "360 Reality Audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio (beta)",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "power.battery-care",
+        "name": "Battery Care charge limit",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "noise mode",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Wide-area tap on the area around the ear."
+    },
+    "audio": {
+      "eqPresets": [
+        "Off",
+        "Bright",
+        "Excited",
+        "Mellow",
+        "Relaxed",
+        "Vocal",
+        "Treble Boost",
+        "Bass Boost",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "LC3"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IPX4; 4.9 g per bud; fitting supporters."
+    },
+    "appOnlyFeatures": [
+      "personal-nc-optimizer",
+      "auto-ambient-sound",
+      "dsee-extreme",
+      "battery-care",
+      "360-reality-audio",
+      "equalizer"
+    ],
+    "featureDeltaFromPrevious": [
+      "Personal NC Optimizer added versus LinkBuds S.",
+      "Battery 5.5 h ANC / 21 h total.",
+      "Interchangeable fitting supporters and case covers."
+    ],
+    "sources": [
+      {
+        "url": "https://helpguide.sony.net/mdr/2975/v1/en/contents/TP1001612417.html",
+        "type": "official-manual",
+        "title": "LinkBuds Fit Help Guide - Available operating time",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://helpguide.sony.net/mdr/2975/v1/en/contents/TP1001614209.html",
+        "type": "official-manual",
+        "title": "LinkBuds Fit Help Guide - Specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr",
+        "type": "official-app-store",
+        "title": "Sony | Sound Connect on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "Exact case battery LED thresholds not captured.",
+      "Case visibility and last-known case reading are inferred from the Sound Connect feature list; no screenshot verification in this pass."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sony",
+    "companySlug": "sony",
+    "family": "LinkBuds",
+    "model": "LinkBuds Open",
+    "slug": "sony-linkbuds-open",
+    "generation": "1",
+    "variant": "Open",
+    "releaseYear": 2024,
+    "formFactor": "tws-open",
+    "officialApp": {
+      "name": "Sony | Sound Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sony.songpal.mdr"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr"
+      ],
+      "appVersionObserved": "12.x (Google Play listing updated 2026-11-06)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 14,
+      "chargingIndicators": "Case LED; 3-minute charge gives 1 h.",
+      "notes": "22 h total (8 h buds + 14 h case); no ANC.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 14
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "ambient-sound",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Open-ring design is acoustically transparent; no ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.transparency",
+        "name": "Open ambient sound (no ANC)",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.dsee",
+        "name": "DSEE",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer with presets and custom bands",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.360-reality-audio",
+        "name": "360 Reality Audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.background-music-effect",
+        "name": "Background Music Effect",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "power.battery-care",
+        "name": "Battery Care charge limit",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "volume / Quick Access",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Wide-area tap in front of the ear."
+    },
+    "audio": {
+      "eqPresets": [
+        "Off",
+        "Bright",
+        "Excited",
+        "Mellow",
+        "Relaxed",
+        "Vocal",
+        "Treble Boost",
+        "Bass Boost",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LC3"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm ring driver; IPX4 equivalent; 5.1 g per bud."
+    },
+    "appOnlyFeatures": [
+      "dsee",
+      "background-music-effect",
+      "battery-care",
+      "360-reality-audio",
+      "equalizer"
+    ],
+    "featureDeltaFromPrevious": [
+      "Battery increased to 8 h buds / 22 h total from 5.5 h / 17.5 h.",
+      "LE Audio added.",
+      "New 11 mm ring driver and fitting supporters."
+    ],
+    "sources": [
+      {
+        "url": "https://helpguide.sony.net/mdr/2964/v1/en/contents/TP1001298908.html",
+        "type": "official-manual",
+        "title": "LinkBuds Open Help Guide - Available operating time",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://helpguide.sony.net/mdr/2964/v1/en/contents/TP1001300700.html",
+        "type": "official-manual",
+        "title": "LinkBuds Open Help Guide - Specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr",
+        "type": "official-app-store",
+        "title": "Sony | Sound Connect on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No ANC/transparency dB figures (no ANC).",
+      "Case LED thresholds not captured.",
+      "Case visibility and last-known case reading are inferred from the Sound Connect feature list; no screenshot verification in this pass."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sony",
+    "companySlug": "sony",
+    "family": "LinkBuds",
+    "model": "LinkBuds S",
+    "slug": "sony-linkbuds-s",
+    "generation": "1",
+    "variant": "S",
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Sony | Sound Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sony.songpal.mdr"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr"
+      ],
+      "appVersionObserved": "12.x (Google Play listing updated 2026-11-06)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 8,
+      "caseHours": 14,
+      "chargingIndicators": "Case LED; voice guidance.",
+      "notes": "20 h total (6 h ANC + 14 h case).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 14
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient-sound",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "Auto NC Optimizer; Adaptive Sound Control."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Sound Mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive Sound Control",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "noise-control.speak-to-chat",
+        "name": "Speak-to-Chat",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.dsee-extreme",
+        "name": "DSEE Extreme",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band equalizer with Clear Bass",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.360-reality-audio",
+        "name": "360 Reality Audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "power.battery-care",
+        "name": "Battery Care charge limit",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "noise mode",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Off",
+        "Bright",
+        "Excited",
+        "Mellow",
+        "Relaxed",
+        "Vocal",
+        "Treble Boost",
+        "Bass Boost",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IPX4; 4.8 g per bud."
+    },
+    "appOnlyFeatures": [
+      "adaptive-sound-control",
+      "speak-to-chat",
+      "dsee-extreme",
+      "battery-care",
+      "360-reality-audio"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/linkbuds-s/specifications",
+        "type": "official-product",
+        "title": "LinkBuds S specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr",
+        "type": "official-app-store",
+        "title": "Sony | Sound Connect on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Total case hours not directly captured from an official page in this pass.",
+      "No official ANC/transparency dB figures.",
+      "Wind-noise toggle not confirmed.",
+      "Case visibility and last-known case reading are inferred from the Sound Connect feature list; no screenshot verification in this pass."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sony",
+    "companySlug": "sony",
+    "family": "LinkBuds",
+    "model": "LinkBuds",
+    "slug": "sony-linkbuds",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-open",
+    "officialApp": {
+      "name": "Sony | Sound Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sony.songpal.mdr"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr"
+      ],
+      "appVersionObserved": "12.x (Google Play listing updated 2026-11-06)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5.5,
+      "caseHours": 12,
+      "chargingIndicators": "Case LED; voice guidance.",
+      "notes": "17.5 h total (5.5 h buds + 12 h case); no ANC.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 12
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "ambient-sound",
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Open ring driver; no ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.transparency",
+        "name": "Open ambient sound (no ANC)",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer with presets and custom bands",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.360-reality-audio",
+        "name": "360 Reality Audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "power.battery-care",
+        "name": "Battery Care charge limit",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "volume / Quick Access",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Wide-area tap."
+    },
+    "audio": {
+      "eqPresets": [
+        "Off",
+        "Bright",
+        "Excited",
+        "Mellow",
+        "Relaxed",
+        "Vocal",
+        "Treble Boost",
+        "Bass Boost",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Ring driver; IPX4."
+    },
+    "appOnlyFeatures": [
+      "battery-care",
+      "360-reality-audio",
+      "equalizer"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/linkbuds/specifications",
+        "type": "official-product",
+        "title": "LinkBuds specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr",
+        "type": "official-app-store",
+        "title": "Sony | Sound Connect on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official spec page not fetched in this pass; battery figures from Sony's published family data and retail spec mirror.",
+      "No official dB figures (no ANC).",
+      "Case hours need confirmation against the current Sony product page.",
+      "No ANC (not applicable).",
+      "Case visibility and last-known case reading are inferred from the Sound Connect feature list; no screenshot verification in this pass."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sony",
+    "companySlug": "sony",
+    "family": "ULT",
+    "model": "ULT WEAR",
+    "slug": "sony-ult-wear",
+    "generation": "1",
+    "variant": "WEAR",
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Sony | Sound Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sony.songpal.mdr"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr"
+      ],
+      "appVersionObserved": "12.x (Google Play listing updated 2026-11-06)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 30,
+      "budsHoursNoAnc": 50,
+      "caseHours": null,
+      "chargingIndicators": "Voice guidance; quick charge.",
+      "notes": "Model number WH-ULT900N. No carrying case battery.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient-sound",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "Integrated Processor V1; Adaptive Sound Control."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Sound Mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive Sound Control",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.ult-button",
+        "name": "ULT button (deep bass boost)",
+        "availability": "device-only",
+        "notes": "Dedicated ULT button on the earcup."
+      },
+      {
+        "id": "audio.dsee-extreme",
+        "name": "DSEE Extreme",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band equalizer with Clear Bass",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.360-reality-audio",
+        "name": "360 Reality Audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "power.battery-care",
+        "name": "Battery Care charge limit",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap and hold",
+          "action": "Quick Attention",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "ULT button, power/Bluetooth, NC/ambient.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Off",
+        "Bright",
+        "Excited",
+        "Mellow",
+        "Relaxed",
+        "Vocal",
+        "Treble Boost",
+        "Bass Boost",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm driver; 3.5 mm wired mode."
+    },
+    "appOnlyFeatures": [
+      "adaptive-sound-control",
+      "dsee-extreme",
+      "battery-care",
+      "360-reality-audio",
+      "ult-mode"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wh-ult900n/specifications",
+        "type": "official-product",
+        "title": "ULT WEAR (WH-ULT900N) specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr",
+        "type": "official-app-store",
+        "title": "Sony | Sound Connect on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official spec page not fetched directly; battery and codec data from Sony's ULT WEAR published specifications.",
+      "No official ANC/transparency dB figures.",
+      "Wind-noise toggle not confirmed."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sony",
+    "companySlug": "sony",
+    "family": "WH-CH",
+    "model": "WH-CH720N",
+    "slug": "sony-wh-ch720n",
+    "generation": "720",
+    "variant": "NC",
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Sony | Sound Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sony.songpal.mdr"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr"
+      ],
+      "appVersionObserved": "12.x (Google Play listing updated 2026-11-06)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 35,
+      "budsHoursNoAnc": 50,
+      "caseHours": null,
+      "chargingIndicators": "Voice guidance; 3-minute charge gives 1 h.",
+      "notes": "AAC, DSEE/EQ off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient-sound",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Dual Noise Sensor; Integrated Processor V1; Adaptive Sound Control."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Sound Mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive Sound Control",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.dsee",
+        "name": "DSEE",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer with presets and custom bands",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "power.battery-care",
+        "name": "Battery Care charge limit",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.wired-mode",
+        "name": "3.5 mm wired listening",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [],
+      "physicalButtons": "Power, NC/ambient, volume up/down, play/pause/call.",
+      "configurableInApp": false,
+      "notes": "No touch panel."
+    },
+    "audio": {
+      "eqPresets": [
+        "Off",
+        "Bright",
+        "Excited",
+        "Mellow",
+        "Relaxed",
+        "Vocal",
+        "Treble Boost",
+        "Bass Boost",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "30 mm driver; 192 g; 3.5 mm cable included."
+    },
+    "appOnlyFeatures": [
+      "adaptive-sound-control",
+      "dsee",
+      "battery-care",
+      "voice-guidance-language"
+    ],
+    "featureDeltaFromPrevious": [
+      "Multipoint added versus WH-CH710N.",
+      "Weight reduced to 192 g.",
+      "Adaptive Sound Control added."
+    ],
+    "sources": [
+      {
+        "url": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wh-ch720n/specifications",
+        "type": "official-product",
+        "title": "WH-CH720N specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr",
+        "type": "official-app-store",
+        "title": "Sony | Sound Connect on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC/transparency dB figures.",
+      "Wind-noise-specific mode not confirmed.",
+      "Wear detection not officially listed; assumed absent."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sony",
+    "companySlug": "sony",
+    "family": "WH-CH",
+    "model": "WH-CH520",
+    "slug": "sony-wh-ch520",
+    "generation": "520",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "on-ear",
+    "officialApp": {
+      "name": "Sony | Sound Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sony.songpal.mdr"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr"
+      ],
+      "appVersionObserved": "12.x (Google Play listing updated 2026-11-06)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 50,
+      "caseHours": null,
+      "chargingIndicators": "Voice guidance; 3-minute charge gives 1.5 h.",
+      "notes": "No ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC or ambient mode."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer with presets and custom bands",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "power.battery-care",
+        "name": "Battery Care charge limit",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.voice-guidance",
+        "name": "Voice guidance language/volume",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.wired-mode",
+        "name": "USB-C audio / wired listening",
+        "availability": "device-only",
+        "notes": "USB-C only; no 3.5 mm jack."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [],
+      "physicalButtons": "Power, volume up/down, play/pause/call.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Off",
+        "Bright",
+        "Excited",
+        "Mellow",
+        "Relaxed",
+        "Vocal",
+        "Treble Boost",
+        "Bass Boost",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "30 mm driver; on-ear; 147 g."
+    },
+    "appOnlyFeatures": [
+      "battery-care",
+      "voice-guidance-language",
+      "equalizer"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wh-ch520/specifications",
+        "type": "official-product",
+        "title": "WH-CH520 specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr",
+        "type": "official-app-store",
+        "title": "Sony | Sound Connect on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official spec page not directly captured in this pass.",
+      "No ANC/transparency (not applicable).",
+      "USB-C audio behaviour not verified."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sony",
+    "companySlug": "sony",
+    "family": "WI-1000X",
+    "model": "WI-1000XM2",
+    "slug": "sony-wi-1000xm2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2019,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "Sony | Sound Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sony.songpal.mdr"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr"
+      ],
+      "appVersionObserved": "12.x (Google Play listing updated 2026-11-06)",
+      "notes": "Original app generation was Sony | Headphones Connect."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 10,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "Voice guidance; neckband LED.",
+      "notes": "10 h with ANC; no charging case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient-sound",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Atmospheric pressure optimisation; Adaptive Sound Control."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient Sound Mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive Sound Control",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.dsee-hx",
+        "name": "DSEE HX",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer with presets and custom bands",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.360-reality-audio",
+        "name": "360 Reality Audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.wired-mode",
+        "name": "3.5 mm wired listening",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "power.battery-care",
+        "name": "Battery Care charge limit",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [],
+      "physicalButtons": "Power, volume, play/pause, NC/ambient on neckband.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Off",
+        "Bright",
+        "Excited",
+        "Mellow",
+        "Relaxed",
+        "Vocal",
+        "Treble Boost",
+        "Bass Boost",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Dual 9 mm drivers + balanced armature; neckband."
+    },
+    "appOnlyFeatures": [
+      "adaptive-sound-control",
+      "dsee-hx",
+      "battery-care",
+      "360-reality-audio"
+    ],
+    "featureDeltaFromPrevious": [
+      "Atmospheric pressure optimisation added versus WI-1000X.",
+      "Dual-driver hybrid configuration retained."
+    ],
+    "sources": [
+      {
+        "url": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wi-1000xm2/specifications",
+        "type": "official-product",
+        "title": "WI-1000XM2 specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr",
+        "type": "official-app-store",
+        "title": "Sony | Sound Connect on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official spec page not directly captured in this pass.",
+      "No official ANC/transparency dB figures.",
+      "Multipoint absence needs confirmation.",
+      "Battery 10 h is the ANC figure; no-ANC figure not separately published.",
+      "No official ANC-off runtime published; the quoted bud hours are the ANC-on figure."
+    ],
+    "notes": "Older neckband kept for WI-family coverage.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Sony",
+    "companySlug": "sony",
+    "family": "WF-C",
+    "model": "WF-C500",
+    "slug": "sony-wf-c500",
+    "generation": null,
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Sony | Sound Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.sony.songpal.mdr"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.sony.songpal.mdr"
+      ],
+      "appVersionObserved": "12.x (Google Play listing updated 2026-11-06)",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 10,
+      "chargingIndicators": "Case LED; voice guidance.",
+      "notes": "20 h total (10 h buds + 10 h case); no ANC. Four-stage battery display (100/70/50/20).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 10
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC or ambient mode."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer with presets and custom bands",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.360-reality-audio",
+        "name": "360 Reality Audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto play-pause",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "power.battery-care",
+        "name": "Battery Care charge limit",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.voice-guidance",
+        "name": "Voice guidance language/volume",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [],
+      "physicalButtons": "Physical buttons on each bud.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Off",
+        "Bright",
+        "Excited",
+        "Mellow",
+        "Relaxed",
+        "Vocal",
+        "Treble Boost",
+        "Bass Boost",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "IPX4; no multipoint."
+    },
+    "appOnlyFeatures": [
+      "battery-care",
+      "360-reality-audio",
+      "equalizer",
+      "voice-guidance-language"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wf-c500/specifications",
+        "type": "official-product",
+        "title": "WF-C500 specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.sony.com/electronics/support/articles/00266785",
+        "type": "official-support",
+        "title": "Sony support - four-stage battery display models",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official spec page not directly captured in this pass.",
+      "360 Reality Audio support needs confirmation.",
+      "No ANC/transparency (not applicable).",
+      "Case visibility and last-known case reading are inferred from the Sound Connect feature list; no screenshot verification in this pass."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

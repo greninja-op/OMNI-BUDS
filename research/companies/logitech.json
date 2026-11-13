@@ -1,0 +1,695 @@
+[
+  {
+    "company": "Logitech",
+    "companySlug": "logitech",
+    "family": "G735",
+    "model": "Logitech G735 Wireless",
+    "slug": "logitech-g735-wireless",
+    "generation": "G735",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Logitech G HUB",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "G HUB provides EQ, Blue VO!CE mic filters and onboard profile storage."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 56,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; battery status in G HUB/OS.",
+      "notes": "16 h with full RGB lighting at 50% volume; 56 h with lighting off. No ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC; Blue VO!CE is mic-side processing."
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "Lightspeed 2.4 GHz",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Simultaneous 2.4 GHz + Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "vendor.logitech.lightsync",
+        "name": "LIGHTSYNC RGB",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.logitech.blue-voce",
+        "name": "Blue VO!CE mic filters",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "G HUB EQ with onboard profiles",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.3.5mm",
+        "name": "3.5 mm wired input",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume wheel",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mute button",
+          "action": "Mic mute",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Bluetooth button",
+          "action": "Bluetooth pairing",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "On-earcup volume wheel, mute, power and Bluetooth buttons.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm drivers; detachable boom mic; designed for smaller head sizes."
+    },
+    "appOnlyFeatures": [
+      "Blue VO!CE",
+      "LIGHTSYNC RGB",
+      "EQ",
+      "Onboard profiles"
+    ],
+    "featureDeltaFromPrevious": [
+      "Dual 2.4 GHz + Bluetooth",
+      "LIGHTSYNC RGB",
+      "Blue VO!CE",
+      "3.5 mm input"
+    ],
+    "sources": [
+      {
+        "url": "https://www.logitech.com/en-us/shop/p/g735-wireless-bluetooth-headset",
+        "type": "official-product",
+        "title": "Logitech G735 Wireless",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth codec list not published",
+      "EQ band count not published"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Logitech",
+    "companySlug": "logitech",
+    "family": "G435",
+    "model": "Logitech G435 Lightspeed",
+    "slug": "logitech-g435-lightspeed",
+    "generation": "G435",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Logitech G HUB",
+      "platforms": [
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Limited support; G435 has no user-facing EQ in G HUB on all firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 18,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Up to 18 h; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "Lightspeed 2.4 GHz",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth + 2.4 GHz dual connection",
+        "availability": "device-only"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Dual beamforming mics",
+        "availability": "device-only"
+      },
+      {
+        "id": "vendor.logitech.g435-lightweight",
+        "name": "165 g lightweight design",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume up/down",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mute button",
+          "action": "Mic mute",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "On-earcup volume, mute and power buttons.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm drivers; no spatial audio; no ANC."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Dual wireless at a budget price",
+      "165 g chassis"
+    ],
+    "sources": [
+      {
+        "url": "https://support.logi.com/hc/en-us",
+        "type": "official-support",
+        "title": "Logitech G435 support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official product page retired; support hub is the only official URL",
+      "Bluetooth codecs not published",
+      "EQ support varies by firmware"
+    ],
+    "notes": "Recently discontinued but widely used; kept for coverage.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Logitech",
+    "companySlug": "logitech",
+    "family": "G Fits",
+    "model": "Logitech G Fits",
+    "slug": "logitech-g-fits",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Logitech G HUB",
+      "platforms": [
+        "windows",
+        "macos"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "G HUB for EQ, mic and firmware."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C charging case.",
+      "notes": "Logitech does not publish a clear buds/case split on the current support material; charging case included.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "Lightspeed 2.4 GHz USB-C dongle",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "vendor.logitech.molded-fit",
+        "name": "Lightform molded ear tips",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "G HUB EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Long press",
+          "action": "ANC/transparency or pairing (no ANC on this model)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "None; touch controls.",
+      "configurableInApp": true,
+      "notes": "Gesture map not fully documented on current support page."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "10 mm drivers; low-latency 2.4 GHz for gaming."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "Logitech's first Lightspeed TWS",
+      "Molded Lightform tips"
+    ],
+    "sources": [
+      {
+        "url": "https://support.logi.com/hc/en-us",
+        "type": "official-support",
+        "title": "Logitech G Fits support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official product page retired",
+      "Battery hours and split not published",
+      "Bluetooth codec list not published",
+      "Multipoint support unclear"
+    ],
+    "notes": "Kept because it is Logitech's only gaming TWS; data thin after discontinuation.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Logitech",
+    "companySlug": "logitech",
+    "family": "Zone Vibe",
+    "model": "Logitech Zone Vibe 100",
+    "slug": "logitech-zone-vibe-100",
+    "generation": "Vibe 100",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Logi Tune",
+      "platforms": [
+        "windows",
+        "macos",
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "EQ, sidetone, mic gain and firmware; also Logi Tune desktop."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 20,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; 5 min = 1 h.",
+      "notes": "20 h listening / 18 h talk; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC; noise-cancelling mics only."
+    },
+    "features": [
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Logi Tune EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Dual noise-cancelling mics",
+        "availability": "device-only"
+      },
+      {
+        "id": "power.quick-charge",
+        "name": "5 min = 1 h",
+        "availability": "device-only"
+      },
+      {
+        "id": "vendor.logitech.zone-vibe-fabric",
+        "name": "Knitted fabric memory-foam cushions",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume buttons",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mute button",
+          "action": "Mic mute",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Call button",
+          "action": "Answer/end call",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "On-earcup call, volume, mute and power buttons.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm drivers; 185 g."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Sidetone",
+      "Mic gain"
+    ],
+    "featureDeltaFromPrevious": [
+      "Fabric-focused comfort design",
+      "Multipoint Bluetooth",
+      "20 h battery"
+    ],
+    "sources": [
+      {
+        "url": "https://www.logitech.com/en-us/shop/p/zone-vibe-100-wireless",
+        "type": "official-product",
+        "title": "Zone Vibe 100",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth codec list not published",
+      "EQ band count not published"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Logitech",
+    "companySlug": "logitech",
+    "family": "Zone Wireless",
+    "model": "Logitech Zone Wireless 2",
+    "slug": "logitech-zone-wireless-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Logi Tune",
+      "platforms": [
+        "windows",
+        "macos",
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "EQ, ANC modes, sidetone and firmware; Logi Tune desktop and mobile."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 40,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; battery status in Logi Tune/OS.",
+      "notes": "Up to 40 h listening; ANC-on figure not published on the business page.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc-high",
+        "anc-low",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "Hybrid ANC with high/low modes and transparency; personalized audio."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC high/low",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint Bluetooth + USB-C receiver option",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Logi Tune EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Four noise-cancelling mics + AI noise suppression",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.logitech.personalized-audio",
+        "name": "Personalized audio",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "ANC button",
+          "action": "Cycle ANC high / low / transparency",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Volume buttons",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mute button",
+          "action": "Mic mute",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "On-earcup ANC, volume, mute, call and power buttons.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm drivers; replaceable ear pads and battery; Microsoft Teams certification on Teams SKU."
+    },
+    "appOnlyFeatures": [
+      "ANC modes",
+      "Personalized audio",
+      "EQ",
+      "Sidetone"
+    ],
+    "featureDeltaFromPrevious": [
+      "Hybrid ANC with high/low modes",
+      "Personalized audio",
+      "Four-mic array",
+      "USB-C receiver option"
+    ],
+    "sources": [
+      {
+        "url": "https://www.logitech.com/en-us/business/shop/p/zone-wireless-2",
+        "type": "official-product",
+        "title": "Zone Wireless 2",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on battery hours not published",
+      "Bluetooth codec list not published",
+      "EQ band count not published"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

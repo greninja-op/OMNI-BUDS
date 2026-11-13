@@ -1,0 +1,624 @@
+[
+  {
+    "company": "KZ",
+    "companySlug": "kz",
+    "family": "XTRA",
+    "model": "KZ XTRA Pro",
+    "slug": "kz-xtra-pro",
+    "generation": null,
+    "variant": "Pro",
+    "releaseYear": null,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "KZ APP",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Product page documents a KZ official app with real-time battery, locate, sound modes and personalised EQ. Package IDs and app version were not verified."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "separate",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED; KZ APP real-time battery.",
+      "notes": "Official figures: about 8 h single charge and about 40 h total with case, measured in Standard Mode at 60% volume. ANC-on runtime is not published. Case value is last-known while buds are out because the case has no independent radio.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 40
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "ANC",
+        "Transparency",
+        "Standard",
+        "High-Performance"
+      ],
+      "adaptive": true,
+      "ancDb": 55,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "KZ lab figure: up to -55 dB adaptive hybrid ANC with a 6-mic array. Actual depth varies with fit and environment."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive hybrid ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "55 ms game mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "KZ APP EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Earbud locate",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause; answer/hang up",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap left/right",
+          "action": "Previous/next track",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Triple tap",
+          "action": "Game mode",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Long press left 2 s",
+          "action": "Cycle ANC / Transparency / Standard",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Long press right 2 s",
+          "action": "Voice assistant",
+          "configurableInApp": null,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": "Touch mapping is documented on the product page; app-level remapping is not confirmed."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Qualcomm QCC5181; LDAC and aptX Adaptive headline codecs."
+    },
+    "appOnlyFeatures": [
+      "Real-time battery",
+      "EQ / tuning",
+      "Locate earbuds",
+      "Sound-mode control"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://kz-audio.com/kz-xtra-pro.html",
+        "type": "official-product",
+        "title": "KZ XTRA Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery layout in KZ APP is not screenshot-verified.",
+      "ANC-on runtime is not published.",
+      "Release year is not stated on the product page.",
+      "App package ID and version are unverified."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "KZ",
+    "companySlug": "kz",
+    "family": "Krio",
+    "model": "KZ Krio",
+    "slug": "kz-krio",
+    "generation": null,
+    "variant": null,
+    "releaseYear": null,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "KZ APP",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Product page documents a KZ official app with real-time battery, locate, sound modes and personalised EQ. Package IDs and app version were not verified."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "separate",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 32,
+      "chargingIndicators": "Case LED; KZ APP real-time battery.",
+      "notes": "Official figures: about 8 h single charge and about 32 h total with case. ANC-on runtime is not published. Case value is last-known while buds are out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 32
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "ANC",
+        "Transparency",
+        "Standard"
+      ],
+      "adaptive": null,
+      "ancDb": 55,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "6-mic hybrid ANC; KZ lab figure up to -55 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "6-mic hybrid ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "55 ms low-latency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "KZ APP EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Earbud locate",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause; answer/hang up",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap left/right",
+          "action": "Previous/next track",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Long press left 2 s",
+          "action": "Cycle ANC / Transparency / Standard",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Long press right 2 s",
+          "action": "Voice assistant",
+          "configurableInApp": null,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": "Touch mapping is documented on the product page."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.3; LDAC and aptX Adaptive supported."
+    },
+    "appOnlyFeatures": [
+      "Real-time battery",
+      "EQ / tuning",
+      "Locate earbuds",
+      "Sound-mode control"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://kz-audio.com/kz-krio.html",
+        "type": "official-product",
+        "title": "KZ Krio",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery layout in KZ APP is not screenshot-verified.",
+      "ANC-on runtime is not published.",
+      "Release year is not stated on the product page.",
+      "App package ID and version are unverified."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "KZ",
+    "companySlug": "kz",
+    "family": "Carol",
+    "model": "KZ Carol Pro",
+    "slug": "kz-carol-pro",
+    "generation": null,
+    "variant": "Pro",
+    "releaseYear": null,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "KZ APP",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Product page documents a KZ official app with real-time battery, locate, sound modes and personalised EQ. Package IDs and app version were not verified."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "separate",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 35,
+      "chargingIndicators": "Case LED; KZ APP real-time battery.",
+      "notes": "Official figures: about 7 h single charge and about 35 h total with case. ANC-on runtime is not published. Case value is last-known while buds are out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 35
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "ANC",
+        "Transparency",
+        "Standard",
+        "High-Performance"
+      ],
+      "adaptive": null,
+      "ancDb": 55,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "6-mic hybrid ANC; KZ lab figure up to -55 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "6-mic hybrid ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "55 ms game mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "KZ APP EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Earbud locate",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause; answer/hang up",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap left/right",
+          "action": "Previous/next track",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Triple tap",
+          "action": "High-performance mode",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Long press left 2 s",
+          "action": "Cycle modes",
+          "configurableInApp": null,
+          "notes": null
+        },
+        {
+          "gesture": "Long press right 2 s",
+          "action": "Voice assistant",
+          "configurableInApp": null,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": "Touch mapping is documented on the product page."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.4; LDAC headline codec."
+    },
+    "appOnlyFeatures": [
+      "Real-time battery",
+      "EQ / tuning",
+      "Locate earbuds",
+      "Sound-mode control"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://kz-audio.com/kz-carol-pro.html",
+        "type": "official-product",
+        "title": "KZ Carol Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery layout in KZ APP is not screenshot-verified.",
+      "ANC-on runtime is not published.",
+      "Release year is not stated on the product page.",
+      "App package ID and version are unverified."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "KZ",
+    "companySlug": "kz",
+    "family": "Sora",
+    "model": "KZ Sora",
+    "slug": "kz-sora",
+    "generation": null,
+    "variant": null,
+    "releaseYear": null,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "KZ APP (compatibility not documented)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "The Sora product page documents touch controls and sound modes but does not mention the KZ APP. App support is unverified."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "separate",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 25,
+      "chargingIndicators": "Case LED; no app battery UI documented.",
+      "notes": "Official figures: about 5 h single charge and about 25 h total with case. Case value is last-known while buds are out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 25
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "gaming.low-latency",
+        "name": "55 ms high-performance mode",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "High-quality wireless audio",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause; answer/hang up",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap left/right",
+          "action": "Previous/next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Triple tap",
+          "action": "High-performance / Standard mode",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Long press right 2 s",
+          "action": "Voice assistant",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Fixed touch controls."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.4; SBC/AAC only. No ANC."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://kz-audio.com/kz-sora.html",
+        "type": "official-product",
+        "title": "KZ Sora",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No official app or battery UI documented.",
+      "Release year is not stated on the product page.",
+      "No ANC or transparency."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

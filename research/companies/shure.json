@@ -1,0 +1,789 @@
+[
+  {
+    "company": "Shure",
+    "companySlug": "shure",
+    "family": "AONIC",
+    "model": "AONIC 50",
+    "slug": "shure-aonic-50",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2019,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "ShurePlus PLAY",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "The PLAY app controls ANC level, Environment mode, EQ and firmware. Shure does not publish a battery percentage contract for the app in the user guide."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 20,
+      "budsHoursNoAnc": 20,
+      "caseHours": null,
+      "chargingIndicators": "LED on earcup: red while charging, slow-blinking red for low battery, blue for connected.",
+      "notes": "Single headphone battery, no charging case. 20 h is the official Bluetooth/ANC figure for generation 1; Gen 2 marketing says it more than doubles this.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "Normal",
+        "Max",
+        "Environment"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Two ANC levels (Normal, Max) plus a separate Environment mode on a three-position switch."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "Two levels selected in the app; hardware switch toggles ANC/off/Environment."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Environment mode",
+        "availability": "both",
+        "notes": "Ten ambient levels in the PLAY app."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Parametric EQ",
+        "availability": "official-app",
+        "notes": "4-band parametric EQ saved to the headphones."
+      },
+      {
+        "id": "equalization.presets",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": "Bass Boost, Bass Cut, Treble Boost, Treble Cut, Vocal Boost, De-ess, Loudness."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "both",
+        "notes": "Two devices; Static or Dynamic switching selected in the app."
+      },
+      {
+        "id": "connectivity.usb-dac",
+        "name": "USB audio",
+        "availability": "device-only",
+        "notes": "USB-C digital audio and charging; no USB-DAC sample-rate claim in the generation-1 manual."
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "Hi-Res audio",
+        "availability": "device-only",
+        "notes": "LDAC and USB digital audio; exact maximum sample rate not stated in the generation-1 guide."
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "Center button, single press",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": true,
+          "notes": "Actions can be reassigned in ShurePlus PLAY."
+        },
+        {
+          "gesture": "Center button, double press",
+          "action": "Next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Center button, triple press",
+          "action": "Previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Center button, long press 2 s",
+          "action": "Voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Power button, double press",
+          "action": "Audible battery status",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "ANC/Environment switch",
+          "action": "Up = Environment, centre = off, down = ANC",
+          "configurableInApp": true,
+          "notes": "Three-position mechanical switch; app can customise what the switch controls."
+        }
+      ],
+      "physicalButtons": "Power button; center multifunction button; +/− volume buttons; three-position ANC/Environment switch on the right earcup.",
+      "configurableInApp": true,
+      "notes": "All playback and call controls are physical; no touch surface."
+    },
+    "audio": {
+      "eqPresets": [
+        "Bass Boost",
+        "Bass Cut",
+        "Treble Boost",
+        "Treble Cut",
+        "Vocal Boost",
+        "De-ess",
+        "Loudness"
+      ],
+      "customEq": true,
+      "eqBands": 4,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX HD",
+        "aptX Low Latency",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "50 mm dynamic driver. No spatial audio in generation 1."
+    },
+    "appOnlyFeatures": [
+      "ANC level selection",
+      "Environment mode level",
+      "Parametric EQ and presets",
+      "Multipoint Static/Dynamic mode",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://pubs.shure.com/view/guide/SBH2350/en-US.pdf",
+        "type": "official-manual",
+        "title": "Shure AONIC 50 user guide (SBH2350)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.shure.com/en-US/products/headphones/aonic50",
+        "type": "official-product",
+        "title": "AONIC 50 Gen 2 product page (states Gen 2 more than doubles Gen 1 battery)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Official app battery-percentage display layout is not documented.",
+      "ANC attenuation in dB is not published.",
+      "USB-DAC maximum resolution for generation 1 is not stated in the guide."
+    ],
+    "notes": "First-generation AONIC 50. Kept separate from Gen 2 because ANC levels, battery life and spatial audio differ.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shure",
+    "companySlug": "shure",
+    "family": "AONIC",
+    "model": "AONIC 50 Gen 2",
+    "slug": "shure-aonic-50-gen-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "ShurePlus PLAY",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Controls ANC level, Environment level, Spatializer, parametric EQ, switch customisation and firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 45,
+      "budsHoursNoAnc": 45,
+      "caseHours": null,
+      "chargingIndicators": "Earcup LED: red charging, slow-blinking red low battery, blue connected.",
+      "notes": "Single headphone battery, no case. Official figure is up to 45 h Bluetooth; 15 min charge gives 5 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "Light",
+        "Moderate",
+        "Max",
+        "MaxAware",
+        "Environment"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Hybrid ANC with four selectable levels. MaxAware keeps awareness while cancelling; it is not an adaptive/auto mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid active noise cancellation",
+        "availability": "both",
+        "notes": "Light, Moderate, Max and MaxAware."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Environment mode",
+        "availability": "both",
+        "notes": "Eleven levels in the app."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Parametric EQ",
+        "availability": "official-app",
+        "notes": "4-band parametric EQ stored on the headphones."
+      },
+      {
+        "id": "equalization.presets",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": "Seven 4-band presets."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "both",
+        "notes": "Two devices; Static or Dynamic behaviour."
+      },
+      {
+        "id": "connectivity.usb-dac",
+        "name": "USB-DAC / Hi-Res USB",
+        "availability": "device-only",
+        "notes": "USB-C digital input up to 32-bit/384 kHz; 44.1 kHz multiples unsupported in Hi-Res mode."
+      },
+      {
+        "id": "vendor.shure.spatializer",
+        "name": "Spatialized Audio",
+        "availability": "official-app",
+        "notes": "Music, Cinema and Podcast modes; no head tracking."
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "Center button, single press",
+          "action": "Play/pause; answer call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Center button, double press",
+          "action": "Next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Center button, triple press",
+          "action": "Previous track; hold/answer second call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Center button, long press 2 s",
+          "action": "Voice assistant; decline call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Power button, double press",
+          "action": "Audible battery status",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "ANC/Environment switch",
+          "action": "Up = Environment, centre = off, down = ANC",
+          "configurableInApp": true,
+          "notes": "Switch can be remapped to ANC, Spatializer or EQ presets."
+        }
+      ],
+      "physicalButtons": "Power button; centre multifunction button; +/− volume buttons; three-position switch on the right earcup.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Bass Boost",
+        "Bass Cut",
+        "Treble Boost",
+        "Treble Cut",
+        "Vocal Boost",
+        "De-ess",
+        "Loudness"
+      ],
+      "customEq": true,
+      "eqBands": 4,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX HD",
+        "aptX Adaptive",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "50 mm dynamic driver; Snapdragon Sound; USB Hi-Res up to 32-bit/384 kHz."
+    },
+    "appOnlyFeatures": [
+      "Four ANC levels",
+      "Eleven-step Environment mode",
+      "Spatializer mode selection",
+      "Parametric EQ and presets",
+      "ANC switch remapping",
+      "USB Hi-Res mode switch",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Four ANC levels (Light, Moderate, Max, MaxAware) instead of two",
+      "Battery life increased from 20 h to 45 h",
+      "Spatialized Audio added (Music, Cinema, Podcast)",
+      "aptX Adaptive and Snapdragon Sound added",
+      "USB Hi-Res streaming up to 32-bit/384 kHz added",
+      "ANC switch can be remapped in the app"
+    ],
+    "sources": [
+      {
+        "url": "https://www.shure.com/en-US/products/headphones/aonic50",
+        "type": "official-product",
+        "title": "AONIC 50 Gen 2",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://pubs.shure.com/view/guide/SBH50G2/en-US.pdf",
+        "type": "official-manual",
+        "title": "AONIC 50 Gen 2 user guide (SBH50G2)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Official app battery-percentage layout is not documented.",
+      "ANC attenuation in dB is not published.",
+      "Wear detection is not listed; assumed absent."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shure",
+    "companySlug": "shure",
+    "family": "AONIC",
+    "model": "AONIC 40",
+    "slug": "shure-aonic-40",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "ShurePlus PLAY",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 25,
+      "budsHoursNoAnc": 25,
+      "caseHours": null,
+      "chargingIndicators": "LED on earcup.",
+      "notes": "Single headphone battery, no case. Up to 25 h; 15 min charge gives 5 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "Light",
+        "Normal",
+        "Max",
+        "Environment"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Three digital ANC levels plus Environment mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adjustable ANC",
+        "availability": "both",
+        "notes": "Light, Normal, Max."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Environment mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Parametric EQ",
+        "availability": "official-app",
+        "notes": "4-band parametric EQ."
+      },
+      {
+        "id": "equalization.presets",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": "Seven presets."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Bluetooth multipoint",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.usb-dac",
+        "name": "USB audio",
+        "availability": "device-only",
+        "notes": "USB-C two-way audio for calls."
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Multifunction button, single press",
+          "action": "Play/pause; answer call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Multifunction button, double press",
+          "action": "Next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Multifunction button, triple press",
+          "action": "Previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "ANC/Environment button, long press 2 s",
+          "action": "Cycle ANC / Environment / off",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power; multifunction; +/− volume; ANC/Environment button on the right earcup.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Bass Boost",
+        "Bass Cut",
+        "Treble Boost",
+        "Treble Cut",
+        "Vocal Boost",
+        "De-ess",
+        "Loudness"
+      ],
+      "customEq": true,
+      "eqBands": 4,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX HD"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm dynamic driver. No LDAC and no spatial audio."
+    },
+    "appOnlyFeatures": [
+      "Three ANC levels",
+      "Environment mode",
+      "Parametric EQ",
+      "Multipoint setup",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Smaller, lighter 40 mm model positioned below AONIC 50",
+      "Three ANC levels (Light/Normal/Max) instead of two",
+      "No LDAC or spatial audio"
+    ],
+    "sources": [
+      {
+        "url": "https://pubs.shure.com/view/guide/SBH2240/en-US.pdf",
+        "type": "official-manual",
+        "title": "AONIC 40 user guide (SBH2240)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Official app battery-percentage layout is not documented.",
+      "ANC attenuation in dB is not published."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Shure",
+    "companySlug": "shure",
+    "family": "AONIC 215",
+    "model": "AONIC 215 Gen 2 True Wireless",
+    "slug": "shure-aonic-215-gen-2-true-wireless",
+    "generation": "2",
+    "variant": "TW2",
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "ShurePlus PLAY",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "The TW2 adapters add Environment mode, PausePlus, button customisation, EQ and firmware."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 8,
+      "budsHoursNoAnc": 8,
+      "caseHours": 24,
+      "chargingIndicators": "Case LEDs on the bottom show case charge; press the case button to display remaining charges (four steps). Red case light while buds charge, green when full.",
+      "notes": "8 h buds plus three additional charges (24 h case) = 32 h total. No ANC. The case reading is an LED charge-count indicator, not a percentage in the app.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 24
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Passive isolation only; Shure claims up to 37 dB isolation from the SE215 earphone."
+    },
+    "features": [
+      {
+        "id": "noise-control.transparency",
+        "name": "Environment mode",
+        "availability": "official-app",
+        "notes": "Ambient sound through the mics."
+      },
+      {
+        "id": "vendor.shure.pauseplus",
+        "name": "PausePlus",
+        "availability": "official-app",
+        "notes": "Automatically pauses when a conversation starts."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Parametric EQ",
+        "availability": "official-app",
+        "notes": "4-band parametric EQ stored on the adapters."
+      },
+      {
+        "id": "equalization.presets",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "controls.customizable",
+        "name": "Customisable button controls",
+        "availability": "official-app",
+        "notes": "Each adapter has one physical button."
+      },
+      {
+        "id": "firmware.ota",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": "Adapters must stay out of the case during update."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single press (either adapter)",
+          "action": "Play/pause; answer call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Double press",
+          "action": "Next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Triple press",
+          "action": "Previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Long press 2 s",
+          "action": "Power on/off or voice assistant (assignable)",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Left press then hold",
+          "action": "Volume down",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "Right press then hold",
+          "action": "Volume up",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "One physical button on each over-ear adapter; no touch surface.",
+      "configurableInApp": true,
+      "notes": "MMCX adapters accept SE215/AONIC 215, AONIC 3, AONIC 4 and AONIC 5 earphones."
+    },
+    "audio": {
+      "eqPresets": [
+        "Bass Boost",
+        "Bass Cut",
+        "Treble Boost",
+        "Treble Cut",
+        "Vocal Boost",
+        "De-ess",
+        "Loudness"
+      ],
+      "customEq": true,
+      "eqBands": 4,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Single dynamic MicroDriver; IPX4; PausePlus; no multipoint and no ANC."
+    },
+    "appOnlyFeatures": [
+      "Environment mode",
+      "PausePlus",
+      "Button mapping",
+      "Parametric EQ",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Gen 2 adapters add PausePlus and improved fit",
+      "USB-C charging case replaces micro-USB",
+      "Battery remains 8 h buds / 32 h total"
+    ],
+    "sources": [
+      {
+        "url": "https://www.shure.com/en-US/products/earphones/aonic215",
+        "type": "official-product",
+        "title": "AONIC 215 Gen 2 True Wireless",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://pubs.shure.com/view/guide/TW2/en-US.pdf",
+        "type": "official-manual",
+        "title": "RMCE-TW2 True Wireless Secure Fit Adapters user guide",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Whether PLAY shows left/right percentages or one combined earbud value is not documented in the manual.",
+      "No official app screenshot confirms case battery in the app; the case uses LEDs only."
+    ],
+    "notes": "This is the Gen 2 TW2 bundle (SE21DYBK+TW2). The adapters are also sold separately as RMCE-TW2.",
+    "researchedAt": "2026-11-10"
+  }
+]

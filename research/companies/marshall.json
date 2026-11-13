@@ -1,0 +1,1136 @@
+[
+  {
+    "company": "Marshall",
+    "companySlug": "marshall",
+    "family": "Motif",
+    "model": "Marshall Motif II A.N.C.",
+    "slug": "motif-ii-anc",
+    "generation": "2",
+    "variant": "A.N.C.",
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Marshall Bluetooth",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ, ANC/transparency, controls, OTA updates."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 9,
+      "caseHours": 24,
+      "chargingIndicators": "Case LED; app readout; wireless charging; 15 min = 1 h",
+      "notes": "Official: 6 h ANC / 9 h no ANC; 30 h total ANC / 43 h no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Customisable sound",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "Bluetooth LE Audio ready",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "controls.customizable",
+        "name": "Touch control customisation",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Case pairing button only",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "LC3",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "6 mm drivers; BT 5.3."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "touch customisation",
+      "OTA updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "LE Audio ready",
+      "Battery improved to 30 h ANC",
+      "Wireless charging"
+    ],
+    "sources": [
+      {
+        "url": "https://www.marshall.com/us/en/product/motif-ii-anc",
+        "type": "official-product",
+        "title": "Motif II A.N.C.",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB not published.",
+      "EQ band count unknown.",
+      "Battery UI layout inferred."
+    ],
+    "notes": "Current Marshall ANC earbud.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Marshall",
+    "companySlug": "marshall",
+    "family": "Motif",
+    "model": "Marshall Motif A.N.C.",
+    "slug": "motif-anc",
+    "generation": "1",
+    "variant": "A.N.C.",
+    "releaseYear": 2022,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Marshall Bluetooth",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ, ANC, controls."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 4.5,
+      "budsHoursNoAnc": 6,
+      "caseHours": 15.5,
+      "chargingIndicators": "Case LED; app readout; wireless charging",
+      "notes": "4.5 h ANC / 6 h no ANC; 20 h total ANC / 26 h no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "controls.customizable",
+        "name": "Touch controls",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Case pairing button",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "BT 5.2."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "touch customisation"
+    ],
+    "featureDeltaFromPrevious": [
+      "Marshall's first ANC earbud"
+    ],
+    "sources": [
+      {
+        "url": "https://www.marshall.com/us/en/headphones",
+        "type": "official-product",
+        "title": "Motif A.N.C.",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Multipoint support not documented.",
+      "ANC dB not published.",
+      "Battery UI layout inferred."
+    ],
+    "notes": "Gen 1 Motif ANC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Marshall",
+    "companySlug": "marshall",
+    "family": "Minor",
+    "model": "Marshall Minor IV",
+    "slug": "minor-iv",
+    "generation": "4",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Marshall Bluetooth",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ presets and touch control customisation."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 23,
+      "chargingIndicators": "Case LED; app readout; wireless charging; 15 min = 3 h",
+      "notes": "7 h buds, 30+ h total; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "Bluetooth LE Audio ready",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "controls.customizable",
+        "name": "Touch controls",
+        "availability": "official-app",
+        "notes": "Mirrored controls."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "volume / EQ preset",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Case pairing button",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "LC3",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "12 mm drivers; IPX4; BT 5.3."
+    },
+    "appOnlyFeatures": [
+      "EQ presets",
+      "touch customisation"
+    ],
+    "featureDeltaFromPrevious": [
+      "Longer 7 h bud runtime",
+      "LE Audio ready",
+      "Wireless charging"
+    ],
+    "sources": [
+      {
+        "url": "https://www.marshall.com/us/en/product/minor-iv",
+        "type": "official-product",
+        "title": "Minor IV",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "EQ band count unknown.",
+      "Battery UI layout inferred."
+    ],
+    "notes": "Non-ANC everyday earbud.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Marshall",
+    "companySlug": "marshall",
+    "family": "Major",
+    "model": "Marshall Major V",
+    "slug": "major-v",
+    "generation": "5",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "on-ear",
+    "officialApp": {
+      "name": "Marshall Bluetooth",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ, M-button customisation, OTA updates."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 100,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout; 15 min = 15 h",
+      "notes": "100+ h wireless playtime; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio ready",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "controls.customizable",
+        "name": "M-button",
+        "availability": "official-app",
+        "notes": "Spotify, EQ, voice assistant."
+      },
+      {
+        "id": "connectivity.wired-mode",
+        "name": "3.5 mm input",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "control knob",
+          "action": "playback, volume, power",
+          "configurableInApp": false,
+          "notes": "Multidirectional knob."
+        },
+        {
+          "gesture": "M-button",
+          "action": "EQ preset / Spotify / assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Multidirectional control knob + M-button",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "LC3",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm drivers; BT 5.3; 186 g."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "M-button customisation"
+    ],
+    "featureDeltaFromPrevious": [
+      "100+ h runtime",
+      "USB-C",
+      "M-button",
+      "LE Audio ready"
+    ],
+    "sources": [
+      {
+        "url": "https://www.marshall.com/us/en/product/major-v",
+        "type": "official-product",
+        "title": "Major V",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No ANC.",
+      "EQ band count unknown."
+    ],
+    "notes": "Iconic on-ear; 100+ h.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Marshall",
+    "companySlug": "marshall",
+    "family": "Major",
+    "model": "Marshall Major IV",
+    "slug": "major-iv",
+    "generation": "4",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "on-ear",
+    "officialApp": {
+      "name": "Marshall Bluetooth",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ and control settings where supported."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 80,
+      "caseHours": null,
+      "chargingIndicators": "LED; 15 min = 15 h",
+      "notes": "80+ h wireless playtime.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wired-mode",
+        "name": "3.5 mm input",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.marshall.control-knob",
+        "name": "Multidirectional control knob",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "control knob",
+          "action": "playback, volume, power",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Control knob",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "40 mm drivers; BT 5.0."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "80+ h runtime",
+      "Wireless charging"
+    ],
+    "sources": [
+      {
+        "url": "https://www.marshall.com/us/en/product/major-iv",
+        "type": "official-product",
+        "title": "Major IV",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Multipoint support not documented.",
+      "App EQ support uncertain on this generation."
+    ],
+    "notes": "Predecessor of Major V.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Marshall",
+    "companySlug": "marshall",
+    "family": "Monitor",
+    "model": "Marshall Monitor III A.N.C.",
+    "slug": "monitor-iii-anc",
+    "generation": "3",
+    "variant": "A.N.C.",
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Marshall Bluetooth",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ, ANC, M-button, spatial audio, adaptive loudness."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 70,
+      "budsHoursNoAnc": 100,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout; 15 min = 12 h",
+      "notes": "70 h with Bluetooth + ANC, 100 h Bluetooth only.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adaptive ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Soundstage spatial audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio ready",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wired-mode",
+        "name": "3.5 mm input",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "control knob",
+          "action": "playback, volume, power",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "ANC button",
+          "action": "ANC/transparency",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "M-button",
+          "action": "EQ preset / Spotify / assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Control knob + ANC button + M-button",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm drivers; BT 5.3; 250 g."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "M-button customisation",
+      "spatial audio"
+    ],
+    "featureDeltaFromPrevious": [
+      "70 h ANC runtime",
+      "Spatial audio",
+      "Adaptive loudness"
+    ],
+    "sources": [
+      {
+        "url": "https://www.marshall.com/us/en/product/monitor-iii-anc",
+        "type": "official-product",
+        "title": "Monitor III A.N.C.",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB not published.",
+      "EQ band count unknown."
+    ],
+    "notes": "Flagship over-ear ANC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Marshall",
+    "companySlug": "marshall",
+    "family": "Milton",
+    "model": "Marshall Milton A.N.C.",
+    "slug": "milton-anc",
+    "generation": "1",
+    "variant": "A.N.C.",
+    "releaseYear": 2026,
+    "formFactor": "on-ear",
+    "officialApp": {
+      "name": "Marshall Bluetooth",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ, adaptive ANC, spatial audio, M-button."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 50,
+      "budsHoursNoAnc": 80,
+      "caseHours": null,
+      "chargingIndicators": "LED; 15 min = 9.5 h",
+      "notes": "50 h with Bluetooth + ANC, 80 h Bluetooth only; exchangeable battery.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adaptive ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Soundstage spatial audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC 96 kHz",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.marshall.exchangeable-battery",
+        "name": "Exchangeable battery",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "control knob",
+          "action": "playback, volume, power",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "M-button",
+          "action": "EQ preset / Spotify / assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Control knob + M-button",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "LDAC",
+        "LC3",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "32 mm drivers; BT 6.0; 200 g; 20 Hz-40 kHz LDAC."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "spatial audio",
+      "M-button customisation"
+    ],
+    "featureDeltaFromPrevious": [
+      "New 2026 on-ear ANC",
+      "Bluetooth 6.0",
+      "LDAC",
+      "Exchangeable battery"
+    ],
+    "sources": [
+      {
+        "url": "https://www.marshall.com/us/en/product/milton-anc",
+        "type": "official-product",
+        "title": "Milton A.N.C.",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB not published.",
+      "Wear detection not documented.",
+      "EQ band count unknown."
+    ],
+    "notes": "New compact ANC on-ear with LDAC and BT 6.0.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Marshall",
+    "companySlug": "marshall",
+    "family": "Mid",
+    "model": "Marshall Mid A.N.C.",
+    "slug": "mid-anc",
+    "generation": "1",
+    "variant": "A.N.C.",
+    "releaseYear": 2018,
+    "formFactor": "on-ear",
+    "officialApp": {
+      "name": "Marshall Bluetooth",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Legacy app support; EQ."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 20,
+      "budsHoursNoAnc": 30,
+      "caseHours": null,
+      "chargingIndicators": "LED",
+      "notes": "20 h with ANC, 30 h without.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wired-mode",
+        "name": "3.5 mm input",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "control knob",
+          "action": "playback, volume, power",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Control knob + ANC switch",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "aptX",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "40 mm drivers; BT 4.2."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Marshall's first ANC headphone"
+    ],
+    "sources": [
+      {
+        "url": "https://www.marshall.com/us/en/headphones",
+        "type": "official-product",
+        "title": "Marshall headphones",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Discontinued; official page not captured.",
+      "Multipoint and app support uncertain.",
+      "Battery values from launch materials."
+    ],
+    "notes": "Legacy on-ear ANC.",
+    "researchedAt": "2026-11-10"
+  }
+]

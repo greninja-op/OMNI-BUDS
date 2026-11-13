@@ -1,0 +1,877 @@
+[
+  {
+    "company": "Microsoft",
+    "companySlug": "microsoft",
+    "family": "Surface Earbuds",
+    "model": "Microsoft Surface Earbuds",
+    "slug": "microsoft-surface-earbuds",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Surface Audio",
+      "platforms": [
+        "android",
+        "ios",
+        "windows"
+      ],
+      "packageIds": [
+        "com.microsoft.surfaceaudio"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.microsoft.surfaceaudio"
+      ],
+      "appVersionObserved": null,
+      "notes": "Surface Audio app handles EQ, touch gestures, firmware and battery status."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 16,
+      "chargingIndicators": "Case LED; USB-C.",
+      "notes": "8 h buds + 16 h case = 24 h total. No ANC.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 16
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.0",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Surface Audio EQ presets",
+        "availability": "official-app"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto-pause",
+        "availability": "device-only"
+      },
+      {
+        "id": "control.touch",
+        "name": "Touch controls with gesture customisation",
+        "availability": "official-app"
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4",
+        "availability": "device-only"
+      },
+      {
+        "id": "vendor.microsoft.office-integration",
+        "name": "Office/Teams integration and dictation",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Swipe",
+          "action": "Volume",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Long press",
+          "action": "Voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "None; touch surface on each bud.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": null,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "13 mm drivers; no ANC; no multipoint."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Gesture customisation",
+      "Dictation",
+      "Firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "Microsoft's first Surface TWS",
+      "Office/Teams integration",
+      "Touch surface"
+    ],
+    "sources": [
+      {
+        "url": "https://support.microsoft.com/en-us/surface",
+        "type": "official-support",
+        "title": "Microsoft Surface support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official product page retired",
+      "Bluetooth codec list not published beyond SBC",
+      "Battery display layout not visually verified"
+    ],
+    "notes": "Discontinued; retained for recent coverage.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Microsoft",
+    "companySlug": "microsoft",
+    "family": "Surface Headphones",
+    "model": "Microsoft Surface Headphones 2",
+    "slug": "microsoft-surface-headphones-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Surface Audio",
+      "platforms": [
+        "android",
+        "ios",
+        "windows"
+      ],
+      "packageIds": [
+        "com.microsoft.surfaceaudio"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.microsoft.surfaceaudio"
+      ],
+      "appVersionObserved": null,
+      "notes": "13-level ANC, EQ presets, gesture settings and firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 20,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; 3.5 mm audio.",
+      "notes": "Up to 20 h; ANC-on figure not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "13 levels of ANC; ambient mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "13-level ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.0 with aptX",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Surface Audio EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection / auto-pause",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.3.5mm",
+        "name": "3.5 mm wired",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Earcup touch dial (left)",
+          "action": "Volume",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Earcup touch dial (right)",
+          "action": "Track / calls",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "ANC button",
+          "action": "Cycle ANC levels / ambient",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Power and ANC buttons; touch-sensitive earcup dials.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "aptX"
+      ],
+      "hiRes": null,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "40 mm drivers; no multipoint."
+    },
+    "appOnlyFeatures": [
+      "13-level ANC",
+      "EQ",
+      "Gesture customisation"
+    ],
+    "featureDeltaFromPrevious": [
+      "20 h battery (up from 15 h)",
+      "aptX",
+      "Lighter design"
+    ],
+    "sources": [
+      {
+        "url": "https://support.microsoft.com/en-us/surface",
+        "type": "official-support",
+        "title": "Microsoft Surface support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official product page retired",
+      "ANC-on hours not published",
+      "Battery display layout not visually verified"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Microsoft",
+    "companySlug": "microsoft",
+    "family": "Surface Headphones",
+    "model": "Microsoft Surface Headphones 2+",
+    "slug": "microsoft-surface-headphones-2-plus",
+    "generation": "2",
+    "variant": "Plus",
+    "releaseYear": 2021,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Surface Audio",
+      "platforms": [
+        "android",
+        "ios",
+        "windows"
+      ],
+      "packageIds": [
+        "com.microsoft.surfaceaudio"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.microsoft.surfaceaudio"
+      ],
+      "appVersionObserved": null,
+      "notes": "Same app; includes Microsoft Teams certification and USB dongle in the box."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 20,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Up to 20 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "13-level ANC with ambient mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "13-level ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.0 with aptX",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Surface Audio EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.microsoft.teams-certified",
+        "name": "Microsoft Teams certification",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.usb-c-dongle",
+        "name": "USB dongle for Teams",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Earcup touch dial (left)",
+          "action": "Volume",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Earcup touch dial (right)",
+          "action": "Track / calls",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "ANC button",
+          "action": "Cycle ANC / ambient",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Teams button",
+          "action": "Launch Teams",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Power, ANC and Teams buttons; touch dials.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "aptX"
+      ],
+      "hiRes": null,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "40 mm drivers; Teams-certified mic."
+    },
+    "appOnlyFeatures": [
+      "13-level ANC",
+      "EQ",
+      "Teams integration"
+    ],
+    "featureDeltaFromPrevious": [
+      "Teams certification",
+      "USB dongle included",
+      "Teams button"
+    ],
+    "sources": [
+      {
+        "url": "https://support.microsoft.com/en-us/surface",
+        "type": "official-support",
+        "title": "Microsoft Surface support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official product page retired",
+      "ANC-on hours not published",
+      "Battery display layout not visually verified"
+    ],
+    "notes": "Business variant of Surface Headphones 2.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Microsoft",
+    "companySlug": "microsoft",
+    "family": "Xbox Wireless Headset",
+    "model": "Xbox Wireless Headset (2021)",
+    "slug": "microsoft-xbox-wireless-headset-2021",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Xbox Accessories",
+      "platforms": [
+        "windows",
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Xbox Accessories app for EQ, mic monitoring, auto-mute and firmware; no ANC controls."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 15,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Up to 15 h; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Xbox Wireless + Bluetooth 4.2",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Simultaneous console + phone",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Windows Sonic / Dolby Atmos / DTS Headphone:X",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Xbox Accessories EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Dual beamforming mic",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Left earcup dial",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Right earcup dial",
+          "action": "Game/chat balance",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mute button",
+          "action": "Mic mute",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Rotating earcup dials, mute and power.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm drivers; spatial audio via Xbox/Windows."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Mic monitoring",
+      "Auto-mute",
+      "Spatial audio setup"
+    ],
+    "featureDeltaFromPrevious": [
+      "Xbox Wireless + Bluetooth in one headset",
+      "Rotating dials"
+    ],
+    "sources": [
+      {
+        "url": "https://www.xbox.com/en-us/accessories/headsets/xbox-wireless-headset",
+        "type": "official-product",
+        "title": "Xbox Wireless Headset",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official page now covers the 2024 refresh",
+      "Bluetooth codecs not published",
+      "ANC not offered"
+    ],
+    "notes": "2021 original; the current Xbox page describes the 2024 refresh.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Microsoft",
+    "companySlug": "microsoft",
+    "family": "Xbox Wireless Headset",
+    "model": "Xbox Wireless Headset (2024)",
+    "slug": "microsoft-xbox-wireless-headset-2024",
+    "generation": "2024",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Xbox Accessories",
+      "platforms": [
+        "windows",
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "EQ, mic monitoring and firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 20,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Up to 20 h; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Xbox Wireless + Bluetooth 5.3",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Simultaneous console + phone",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Windows Sonic / Dolby Atmos / DTS Headphone:X",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Xbox Accessories EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Dual beamforming mic",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Left earcup dial",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Right earcup dial",
+          "action": "Game/chat balance",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mute button",
+          "action": "Mic mute",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Rotating earcup dials, mute and power.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm drivers; spatial audio via platform."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Mic monitoring",
+      "Auto-mute"
+    ],
+    "featureDeltaFromPrevious": [
+      "20 h battery (up from 15 h)",
+      "Bluetooth 5.3",
+      "Improved mic"
+    ],
+    "sources": [
+      {
+        "url": "https://www.xbox.com/en-us/accessories/headsets/xbox-wireless-headset",
+        "type": "official-product",
+        "title": "Xbox Wireless Headset",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth codecs not published",
+      "ANC not offered"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Microsoft",
+    "companySlug": "microsoft",
+    "family": "Modern",
+    "model": "Microsoft Modern Wireless Headset",
+    "slug": "microsoft-modern-wireless-headset",
+    "generation": "Modern",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "on-ear",
+    "officialApp": {
+      "name": "Microsoft Accessories / Surface Audio",
+      "platforms": [
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Teams-certified on-ear headset; settings via Windows/Teams."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 50,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Up to 50 h music / 30 h talk; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.bluetooth",
+        "name": "Bluetooth 5.0",
+        "availability": "device-only"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Dual beamforming mic",
+        "availability": "device-only"
+      },
+      {
+        "id": "vendor.microsoft.teams-certified",
+        "name": "Microsoft Teams certification",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.usb-c-dongle",
+        "name": "USB-C dongle",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume buttons",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mute button",
+          "action": "Mic mute",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Teams button",
+          "action": "Launch Teams",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "On-earcup volume, mute, Teams and power.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "On-ear UC headset."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Teams-certified on-ear design",
+      "50 h battery"
+    ],
+    "sources": [
+      {
+        "url": "https://support.microsoft.com/en-us/surface",
+        "type": "official-support",
+        "title": "Microsoft Surface support",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official product page retired",
+      "Bluetooth codecs not published",
+      "Equalizer support unclear"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

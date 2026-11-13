@@ -1,0 +1,997 @@
+[
+  {
+    "company": "Tranya",
+    "companySlug": "tranya",
+    "family": "T",
+    "model": "Tranya T10",
+    "slug": "tranya-t10",
+    "generation": "10",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No official companion app found. Tranya sells model-specific 'guide' apps that are not device control apps."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 30,
+      "chargingIndicators": "USB-C; 1 h charge.",
+      "notes": "Official 8 h single charge; total with case approximately 30 h. No app, so no in-app split/combined display.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "water.ipx7",
+        "name": "IPX7",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "device-only"
+      },
+      {
+        "id": "calls.4mic",
+        "name": "Call noise reduction",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "No app; gestures fixed on device."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.0; IPX7."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Original Tranya T-series flagship"
+    ],
+    "sources": [
+      {
+        "url": "https://tranya.com",
+        "type": "official-product",
+        "title": "Tranya official site",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "No official app",
+      "Battery figures from launch materials",
+      "Case total not officially confirmed",
+      "Codec list"
+    ],
+    "notes": "No app means battery is only visible through the phone's Bluetooth UI or voice prompts.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Tranya",
+    "companySlug": "tranya",
+    "family": "T",
+    "model": "Tranya T20",
+    "slug": "tranya-t20",
+    "generation": "20",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No official companion app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 32,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 8 h/32 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "water.ipx7",
+        "name": "IPX7",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "IPX7."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "T20 improves battery over T10"
+    ],
+    "sources": [
+      {
+        "url": "https://tranya.com",
+        "type": "official-product",
+        "title": "Tranya official site",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "No official app",
+      "Battery approximate",
+      "No current product page"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Tranya",
+    "companySlug": "tranya",
+    "family": "T",
+    "model": "Tranya T30",
+    "slug": "tranya-t30",
+    "generation": "30",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No official companion app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; 1 h charge.",
+      "notes": "Official 8 h single charge; case total not captured.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "water.ipx7",
+        "name": "IPX7",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "device-only"
+      },
+      {
+        "id": "calls.4mic",
+        "name": "4-mic call array",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "IPX7."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "T30 IPX7 sport design"
+    ],
+    "sources": [
+      {
+        "url": "https://tranya.com/products/super-value-combo-models-t30-x2-earbuds-save-54-99-over-individual-price",
+        "type": "official-product",
+        "title": "Tranya T30 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No official app",
+      "Case total hours",
+      "Codec list"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Tranya",
+    "companySlug": "tranya",
+    "family": "T",
+    "model": "Tranya T50",
+    "slug": "tranya-t50",
+    "generation": "50",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No official companion app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 8 h single charge; case total not captured.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "water.ipx5",
+        "name": "IPX5",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.aptx",
+        "name": "aptX",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "IPX5."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "T50 with aptX"
+    ],
+    "sources": [
+      {
+        "url": "https://tranya.com/products/super-value-combo-models-t50-x2-earbuds-save-54-99-over-individual-price",
+        "type": "official-product",
+        "title": "Tranya T50 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No official app",
+      "Battery approximate",
+      "Case total hours"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Tranya",
+    "companySlug": "tranya",
+    "family": "B",
+    "model": "Tranya B530",
+    "slug": "tranya-b530",
+    "generation": "530",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No official companion app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 30,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 8 h/30 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC supported; depth not published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "device-only"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "device-only"
+      },
+      {
+        "id": "water.ipx7",
+        "name": "IPX7",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "IPX7."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "B-series ANC model"
+    ],
+    "sources": [
+      {
+        "url": "https://tranya.com",
+        "type": "official-product",
+        "title": "Tranya official site",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "No official app",
+      "Battery approximate",
+      "ANC dB",
+      "No current product page"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Tranya",
+    "companySlug": "tranya",
+    "family": "Rimor",
+    "model": "Tranya Rimor Pro",
+    "slug": "tranya-rimor-pro",
+    "generation": "Pro",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No official companion app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 40,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 10 h/40 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC supported; depth not published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "device-only"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "device-only"
+      },
+      {
+        "id": "water.ipx7",
+        "name": "IPX7",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "IPX7."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Rimor Pro ANC model"
+    ],
+    "sources": [
+      {
+        "url": "https://tranya.com",
+        "type": "official-product",
+        "title": "Tranya official site",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "No official app",
+      "Battery approximate",
+      "ANC dB",
+      "No current product page"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Tranya",
+    "companySlug": "tranya",
+    "family": "X",
+    "model": "Tranya X3",
+    "slug": "tranya-x3",
+    "generation": "3",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "None",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No official companion app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 32,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 32 h total / 8 h single charge.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear sport; no ANC."
+    },
+    "features": [
+      {
+        "id": "design.open-ear",
+        "name": "Open-ear sport hook",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.aptx",
+        "name": "aptX",
+        "availability": "device-only"
+      },
+      {
+        "id": "calls.4mic",
+        "name": "4-mic array",
+        "availability": "device-only"
+      },
+      {
+        "id": "water.ipx7",
+        "name": "IPX7",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "16 mm wool composite driver."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Tranya open-ear sport model"
+    ],
+    "sources": [
+      {
+        "url": "https://tranya.com/products/super-value-combo-models-x3-x2-earbuds-save-54-99-over-individual-price",
+        "type": "official-product",
+        "title": "Tranya X3 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No official app",
+      "Codec list",
+      "ANC not offered"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Tranya",
+    "companySlug": "tranya",
+    "family": "F",
+    "model": "Tranya F4",
+    "slug": "tranya-f4",
+    "generation": "4",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No official companion app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 8 h single charge; case total not captured.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "water.ipx7",
+        "name": "IPX7",
+        "availability": "device-only"
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "Ultra-low latency mode",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.bluetooth-5",
+        "name": "Bluetooth 5.3",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "IPX7; Bluetooth 5.3."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Gaming-focused F-series model"
+    ],
+    "sources": [
+      {
+        "url": "https://tranya.com/products/super-value-combo-models-f4-x2-earbuds-save-54-99-over-individual-price",
+        "type": "official-product",
+        "title": "Tranya F4 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No official app",
+      "Case total hours",
+      "Codec list"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

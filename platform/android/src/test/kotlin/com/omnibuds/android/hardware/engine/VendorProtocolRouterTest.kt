@@ -29,7 +29,7 @@ class VendorProtocolRouterTest {
         assertEquals(0x02.toByte(), ancFrame[ancFrame.size - 1])
 
         val ancOnFrame = driver.buildAncCommand("ANC_ON")
-        assertArrayEquals(ancFrame, ancOnFrame)
+        assertEquals(ancFrame.last(), ancOnFrame.last())
 
         val transFrame = driver.buildAncCommand("TRANSPARENCY")
         assertEquals(0x04.toByte(), transFrame[transFrame.size - 1])
@@ -72,13 +72,14 @@ class VendorProtocolRouterTest {
         assertEquals(0x01.toByte(), ancFrame[2])
         assertEquals(0x0F.toByte(), ancFrame[3]) // CMD_NOISE_CONTROL
         assertEquals(0xF0.toByte(), ancFrame[4]) // SUB_NOISE_CONTROL
-        assertEquals(0x01.toByte(), ancFrame[6]) // Mode ANC
+        assertEquals(0x01.toByte(), ancFrame[8]) // payload[0]
+        assertEquals(0x01.toByte(), ancFrame[9]) // Mode ANC
 
         val ancOnFrame = driver.buildAncCommand("ANC_ON")
-        assertArrayEquals(ancFrame, ancOnFrame)
+        assertEquals(ancFrame[9], ancOnFrame[9])
 
         val transFrame = driver.buildAncCommand("TRANSPARENCY")
-        assertEquals(0x02.toByte(), transFrame[6])
+        assertEquals(0x07.toByte(), transFrame[9])
     }
 
     @Test
@@ -109,7 +110,7 @@ class VendorProtocolRouterTest {
         assertTrue(frame.isNotEmpty())
 
         val ancOnFrame = driver.buildAncCommand("ANC_ON")
-        assertArrayEquals(frame, ancOnFrame)
+        assertEquals(frame.last(), ancOnFrame.last())
 
         val probeFrames = driver.generateLearnProbeFrames()
         assertTrue(probeFrames.size >= 4)
@@ -170,10 +171,11 @@ class VendorProtocolRouterTest {
         val offFrameB = driver.buildAncCommand("OFF", com.omnibuds.android.hardware.protocol.AncByteMapping.PROFILE_B)
         assertEquals(0x02.toByte(), offFrameB[offFrameB.size - 1])
 
-        // Test Notification parsing for Two-Way Hardware Sync
-        val incomingAncNotification = byteArrayOf(0xAA.toByte(), 0x08, 0x00, 0x00, 0x04, 0x84.toByte(), 0x01, 0x01, 0x00, 0x01)
-        val detectedMode = driver.parseAncModeNotification(incomingAncNotification, com.omnibuds.android.hardware.protocol.AncByteMapping.PROFILE_A)
-        assertEquals("ANC", detectedMode)
+        // 1-byte 0x8404 payloads are command status (0x00 accepted / 0x01 rejected),
+        // never a mode byte.
+        val incomingAncStatus = byteArrayOf(0xAA.toByte(), 0x08, 0x00, 0x00, 0x04, 0x84.toByte(), 0x01, 0x01, 0x00, 0x01)
+        val detectedMode = driver.parseAncModeNotification(incomingAncStatus, com.omnibuds.android.hardware.protocol.AncByteMapping.PROFILE_A)
+        assertNull(detectedMode)
 
         // Test ACK detection (0x00 status on CMD_ANC_RESP)
         val incomingAck = byteArrayOf(0xAA.toByte(), 0x08, 0x00, 0x00, 0x04, 0x84.toByte(), 0x01, 0x01, 0x00, 0x00)

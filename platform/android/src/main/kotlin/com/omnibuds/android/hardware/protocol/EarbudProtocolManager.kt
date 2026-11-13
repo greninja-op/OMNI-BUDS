@@ -40,6 +40,12 @@ object EarbudProtocolManager {
     val confirmedAncMode: StateFlow<Map<String, String>>
         get() = UniversalTwsEngine.confirmedAncMode
 
+    val confirmedGameMode: StateFlow<Map<String, Boolean>>
+        get() = UniversalTwsEngine.confirmedGameMode
+
+    val configSaveState: StateFlow<Map<String, String>>
+        get() = UniversalTwsEngine.configSaveState
+
     val pendingAncMode: StateFlow<Map<String, String?>>
         get() = UniversalTwsEngine.pendingAncMode
 

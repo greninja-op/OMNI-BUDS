@@ -1,0 +1,667 @@
+[
+  {
+    "company": "Eargo",
+    "companySlug": "eargo",
+    "family": "Eargo",
+    "model": "Eargo 7",
+    "slug": "eargo-7",
+    "generation": "7",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Eargo",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.eargo.app.android"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.eargo.app.android"
+      ],
+      "appVersionObserved": "app store listing updated 2026-09-18",
+      "notes": "Completely-in-canal hearing aid. The app talks to the charger over BLE and sends encrypted ultrasonic commands to the aids; it is not a Bluetooth audio app. Eargo's store notice says the app is removed from stores and loses cloud service on 2026-10-22."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-charging",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 16,
+      "caseHours": 32,
+      "chargingIndicators": "Charger LED (solid green 25-100%, solid red <25%); no per-aid percentage display documented.",
+      "notes": "16 h per charge; the portable charger holds two full recharges (32 h). App battery readout for the aids is not documented; the charger LED is the primary indicator.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC. Noise Filter is hearing-aid noise reduction, not active noise cancelling."
+    },
+    "features": [
+      {
+        "id": "hearing.self-fit",
+        "name": "Sound Match in-app self-fitting",
+        "availability": "official-app",
+        "notes": "Per-ear 5-10 minute in-situ fitting; no clinic visit."
+      },
+      {
+        "id": "hearing.programs",
+        "name": "Four preset programs plus custom environments",
+        "availability": "both",
+        "notes": "Presets 1-4; up to three personalised environments such as Restaurant, Meeting, Phone, Music or TV."
+      },
+      {
+        "id": "hearing.sound-adjust",
+        "name": "Sound Adjust+ automatic environment adaptation",
+        "availability": "device-only",
+        "notes": "Automatically chooses speech emphasis or noise reduction in loud places."
+      },
+      {
+        "id": "hearing.noise-reduction",
+        "name": "Noise Filter",
+        "availability": "official-app",
+        "notes": "Per-program, per-ear noise reduction level."
+      },
+      {
+        "id": "hearing.feedback-suppression",
+        "name": "Feedback cancellation",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "hearing.treble-bass",
+        "name": "Per-ear treble and bass",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.remote-support",
+        "name": "Remote support and firmware updates",
+        "availability": "official-app",
+        "notes": "Updates require at least 25% charge in charger and aids."
+      }
+    ],
+    "controls": {
+      "types": [
+        "other"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap on the ear/device",
+          "action": "cycle preset program",
+          "configurableInApp": false,
+          "notes": "No buttons; volume and noise filter are app-only."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Tap control on the aid; app control through the charger/ultrasonic link."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "No Bluetooth audio streaming, calls or music. Treble/bass adjustment only. 250-5500 Hz fitting bandwidth; 5.6 ms latency."
+    },
+    "appOnlyFeatures": [
+      "Sound Match self-fit",
+      "program editing",
+      "volume, treble and bass per ear",
+      "noise filter",
+      "remote support"
+    ],
+    "featureDeltaFromPrevious": [
+      "Sound Adjust+ versus Eargo 6 Sound Adjust",
+      "IPX7 versus earlier Eargo",
+      "16 h runtime"
+    ],
+    "sources": [
+      {
+        "url": "https://www.eargo.com/assets/content/dam/eargo/pdf/Eargo_Technical_Regulatory_Info.pdf",
+        "type": "official-manual",
+        "title": "Eargo 5/6/7 technical and regulatory information",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.hearingtracker.com/news/eargo-7-invisible-otc-hearing-aids-compete-with-premium-prescription-products",
+        "type": "reputable-secondary",
+        "title": "Eargo 7 launch details",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.eargo.app.android",
+        "type": "official-app-store",
+        "title": "Eargo app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "App battery readout for the aids is not documented; only the charger LED is confirmed.",
+      "No official ANC/attenuation figures (device has no ANC).",
+      "Exact Bluetooth/ultrasonic protocol split between charger and aids is proprietary."
+    ],
+    "notes": "CIC self-fitting OTC hearing aid. Not Bluetooth audio: calls and music are impossible. Eargo's app is scheduled for removal from app stores on 2026-10-22, after which the aids retain saved settings and on-device tap control.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Eargo",
+    "companySlug": "eargo",
+    "family": "Eargo",
+    "model": "Eargo 8",
+    "slug": "eargo-8",
+    "generation": "8",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Eargo",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.eargo.app.android"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.eargo.app.android"
+      ],
+      "appVersionObserved": "app store listing updated 2026-09-18",
+      "notes": "Self-fitting CIC aid. App removed from stores and cloud service ends 2026-10-22 per Eargo's own notice."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-charging",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 16,
+      "caseHours": 224,
+      "chargingIndicators": "Case LEDs for device and case charge; USB-C and Qi wireless charging.",
+      "notes": "16 h per charge; extended-life charger holds up to 14 full recharges (224 h additional). Case LED shows charge state; no per-aid percentage UI documented.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC. Smart Sound Adjust is hearing-aid noise reduction/environment adaptation."
+    },
+    "features": [
+      {
+        "id": "hearing.self-fit",
+        "name": "Sound Match self-fitting",
+        "availability": "official-app",
+        "notes": "Per-ear in-situ fitting and program generation."
+      },
+      {
+        "id": "hearing.smart-sound-adjust",
+        "name": "Smart Sound Adjust",
+        "availability": "device-only",
+        "notes": "Automatic fast-acting noise reduction when the environment gets loud."
+      },
+      {
+        "id": "hearing.programs",
+        "name": "Four preset programs plus custom environments",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "hearing.device-scan",
+        "name": "Device Scan health check",
+        "availability": "official-app",
+        "notes": "Patented self-check for device health and maintenance needs."
+      },
+      {
+        "id": "hearing.noise-reduction",
+        "name": "Noise reduction",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "hearing.feedback-suppression",
+        "name": "Feedback cancellation",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "hearing.treble-bass",
+        "name": "Per-ear treble and bass",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "charging.wireless",
+        "name": "Qi wireless charging case",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "other"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "program / volume interaction",
+          "configurableInApp": false,
+          "notes": "No onboard buttons; primary control is the app."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Tap control plus app; no buttons on the CIC shell."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "No Bluetooth audio streaming or calls. Fitting bandwidth 250-7500 Hz."
+    },
+    "appOnlyFeatures": [
+      "Sound Match",
+      "Device Scan",
+      "program and volume control",
+      "treble/bass",
+      "firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "Smart Sound Adjust",
+      "Device Scan",
+      "IP68 versus IPX7 on Eargo 7",
+      "14-recharge extended-life charger",
+      "Qi wireless charging"
+    ],
+    "sources": [
+      {
+        "url": "https://assets.eargo.com/pdf/eargo-8-use-care-guide.pdf",
+        "type": "official-manual",
+        "title": "Eargo 8 use and care guide",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.prnewswire.com/news-releases/hearing-wellness-pioneer-eargo-launches-eargo-8-as-its-newest-flagship-hearing-aid-302452978.html",
+        "type": "official-product",
+        "title": "Eargo 8 launch",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.eargo.app.android",
+        "type": "official-app-store",
+        "title": "Eargo app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Per-aid battery percentage in app not documented.",
+      "Case LED granularity not published beyond charge state.",
+      "App removal after 2026-10-22 limits future self-fitting and firmware updates."
+    ],
+    "notes": "Eargo's 2025 flagship CIC. Explicitly not Bluetooth earbuds: no music, no calls. The extended-life charger is the standout: up to two weeks of recharges.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Eargo",
+    "companySlug": "eargo",
+    "family": "Eargo",
+    "model": "Eargo SE",
+    "slug": "eargo-se",
+    "generation": "SE",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Eargo",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.eargo.app.android"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.eargo.app.android"
+      ],
+      "appVersionObserved": "app store listing updated 2026-09-18",
+      "notes": "Sound Match self-fit and app control through the charger. App removal date 2026-10-22."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-charging",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 16,
+      "caseHours": 80,
+      "chargingIndicators": "Charger LED; USB-C.",
+      "notes": "16 h per charge; charger holds up to five full charges (80 h). No ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC; noise reduction only."
+    },
+    "features": [
+      {
+        "id": "hearing.self-fit",
+        "name": "Sound Match self-fitting",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "hearing.programs",
+        "name": "Four preset programs plus three custom environments",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "hearing.noise-reduction",
+        "name": "Noise reduction and feedback cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "hearing.treble-bass",
+        "name": "Per-ear treble and bass",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "app.remote-support",
+        "name": "Remote support",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "other"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "program change",
+          "configurableInApp": false,
+          "notes": "No onboard buttons."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Tap control and app."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "No Bluetooth streaming. Fitting bandwidth 250-7500 Hz; 5.6 ms latency."
+    },
+    "appOnlyFeatures": [
+      "Sound Match",
+      "program and volume",
+      "treble/bass",
+      "remote support"
+    ],
+    "featureDeltaFromPrevious": [
+      "Simplified, lower-cost CIC below Eargo 8",
+      "IP54 versus IP68",
+      "No Smart Sound Adjust or Device Scan"
+    ],
+    "sources": [
+      {
+        "url": "https://assets.eargo.com/pdp/eargo-se/EARGO_SE_Use_Care_Guide.pdf",
+        "type": "official-manual",
+        "title": "Eargo SE use and care guide",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.bestbuy.com/site/eargo-se-self-fitting-otc-cic-hearing-aid-black/6575000.p?skuId=6575000",
+        "type": "reputable-secondary",
+        "title": "Eargo SE retail listing",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.eargo.app.android",
+        "type": "official-app-store",
+        "title": "Eargo app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "App battery display for aids not documented.",
+      "Case charge LED granularity not published."
+    ],
+    "notes": "Entry CIC in the Eargo line, sold alongside Eargo 8 and Link. No Bluetooth audio and no ANC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Eargo",
+    "companySlug": "eargo",
+    "family": "Link by Eargo",
+    "model": "LINK by Eargo",
+    "slug": "link-by-eargo",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "LINK by Eargo",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.eargo.link.release"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.eargo.link.release"
+      ],
+      "appVersionObserved": null,
+      "notes": "Programs, volume, noise reduction, ANC, wind-noise reduction, directional processing, touch customisation and real-time bud/charger battery."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "live",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9,
+      "caseHours": 36,
+      "chargingIndicators": "Per-bud status LEDs; charger LED; app shows real-time battery for each bud and charger.",
+      "notes": "9 h hearing-aid mode / 6.5 h streaming; charger holds four full charges (36 h). Quick charge: 10 min gives 3 h hearing / 2 h streaming; 30 min gives 5 h / 3.5 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "ANC works in streaming and hearing-aid modes; enabling it in hearing-aid mode mutes amplification, effectively becoming a quiet mode. Wind Noise Reduction is a separate hearing-aid control."
+    },
+    "features": [
+      {
+        "id": "hearing.programs",
+        "name": "Four preset hearing-aid programs",
+        "availability": "both",
+        "notes": "Amplification rises from program 1 to 4."
+      },
+      {
+        "id": "hearing.noise-reduction",
+        "name": "Adjustable noise reduction",
+        "availability": "official-app",
+        "notes": "Speech clarity versus background noise."
+      },
+      {
+        "id": "hearing.directional-processing",
+        "name": "Directional microphones / directional processing",
+        "availability": "official-app",
+        "notes": "Can be toggled in hearing-aid mode."
+      },
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "Double-tap toggles ANC while streaming."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency control",
+        "availability": "official-app",
+        "notes": "Adjusts how much surrounding sound is mixed in while streaming."
+      },
+      {
+        "id": "audio.streaming",
+        "name": "Bluetooth music and media streaming",
+        "availability": "both",
+        "notes": "Bluetooth 5.3."
+      },
+      {
+        "id": "telephony.calls",
+        "name": "Hands-free calls",
+        "availability": "both",
+        "notes": "Two-way audio through the earbuds."
+      },
+      {
+        "id": "controls.touch-custom",
+        "name": "Configurable touch sensor",
+        "availability": "official-app",
+        "notes": "Enable/disable touch, play/pause, tone indicators, power-on delay."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "enter streaming / play, or pause and return to hearing-aid mode",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "change hearing-aid program; toggle ANC while streaming",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "touch and hold both earbuds 5 s",
+          "action": "Bluetooth pairing",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Pairing/reset push button on the charger",
+      "configurableInApp": true,
+      "notes": "Touch sensor on each earbud."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.3, hands-free calls and media streaming. Exact codec list not published. IP54."
+    },
+    "appOnlyFeatures": [
+      "program and volume",
+      "noise reduction",
+      "ANC and wind noise",
+      "directional processing",
+      "touch customisation",
+      "battery status"
+    ],
+    "featureDeltaFromPrevious": [
+      "Eargo's first Bluetooth 5.3 streaming OTC hearing aid",
+      "Earbud form factor",
+      "ANC and transparency",
+      "Hands-free calls"
+    ],
+    "sources": [
+      {
+        "url": "https://qa.eargo.com/link-by-eargo/",
+        "type": "official-product",
+        "title": "LINK by Eargo product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.eargo.com/content/dam/eargo/pdf/LINK_by_Eargo_Use_Care_Guide.pdf",
+        "type": "official-manual",
+        "title": "LINK by Eargo use and care guide",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.eargo.link.release",
+        "type": "official-app-store",
+        "title": "Link by Eargo app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Codec list and multipoint support not published.",
+      "ANC depth in dB not published.",
+      "No official battery runtime with ANC on; figure is hearing-aid mode."
+    ],
+    "notes": "Eargo's first earbud-style OTC hearing aid and first with Bluetooth audio. Contrasts with Eargo 7/8/SE, which have no streaming at all. Only 9 h hearing-aid runtime, so it is positioned for situational use.",
+    "researchedAt": "2026-11-10"
+  }
+]

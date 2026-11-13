@@ -2,14 +2,17 @@ package com.omnibuds.android.hardware.engine
 
 import android.annotation.SuppressLint
 import android.bluetooth.BluetoothDevice
+import com.omnibuds.android.hardware.capability.SiliconFamily
 import com.omnibuds.android.hardware.engine.drivers.GenericBleProberDriver
 import com.omnibuds.android.hardware.engine.drivers.IVendorDriver
 import com.omnibuds.android.hardware.engine.drivers.NothingEarbudsDriver
 import com.omnibuds.android.hardware.engine.drivers.NothingXProtocolDriver
 import com.omnibuds.android.hardware.engine.drivers.OnePlusHeyMelodyDriver
+import com.omnibuds.android.hardware.engine.drivers.ReadOnlySiliconDriver
 import com.omnibuds.android.hardware.engine.drivers.SamsungGalaxyBudsDriver
 import com.omnibuds.android.hardware.engine.drivers.XiaomiAirohaRaceDriver
 import com.omnibuds.android.hardware.protocol.AncByteMapping
+import com.omnibuds.android.hardware.protocol.AncProfileType
 import com.omnibuds.android.hardware.protocol.OpcodeRemapMatrix
 import com.omnibuds.android.hardware.protocol.TwsBatteryReport
 import java.util.concurrent.ConcurrentHashMap
@@ -29,17 +32,51 @@ class VendorProtocolRouter {
         XiaomiAirohaRaceDriver(),
         NothingEarbudsDriver(),
         SamsungGalaxyBudsDriver(),
+        ReadOnlySiliconDriver(
+            SiliconFamily.SONY_TANDEM,
+            listOf("sony", "linkbuds", "wh-1000", "wf-1000", "wi-1000", "ult wear"),
+        ),
+        ReadOnlySiliconDriver(
+            SiliconFamily.ANKER_SOUNDCORE,
+            listOf("soundcore", "anker"),
+        ),
+        ReadOnlySiliconDriver(
+            SiliconFamily.QUALCOMM_GAIA,
+            listOf(
+                "sennheiser", "bose", "jabra", "bowers", "bang & olufsen", "beoplay",
+                "master & dynamic", "beyerdynamic", "audio-technica", "technics",
+                "panasonic", "philips", "marshall", "jbl", "lg", "skullcandy", "amazon",
+                "echo",
+            ),
+        ),
+        ReadOnlySiliconDriver(
+            SiliconFamily.HUAWEI_HONOR,
+            listOf("huawei", "honor", "vivo", "iqoo", "freebuds", "freeclip", "freelace"),
+        ),
+        ReadOnlySiliconDriver(
+            SiliconFamily.OPEN_EAR,
+            listOf("shokz", "suunto", "oladance", "nank", "sanag", "openrun", "openfit", "opendots"),
+        ),
+        ReadOnlySiliconDriver(
+            SiliconFamily.JIELI_BLUETRUM,
+            listOf("boat", "noise", "boult", "mivi", "truke", "zebronics", "ptron", "fire-boltt", "wings"),
+        ),
+        ReadOnlySiliconDriver(
+            SiliconFamily.GOOGLE_FAST_PAIR,
+            listOf("pixel buds", "google"),
+        ),
         GenericBleProberDriver(),
     )
 
     private val resolvedDrivers = ConcurrentHashMap<String, IVendorDriver>()
+    private val resolvedNames = ConcurrentHashMap<String, String>()
 
     @SuppressLint("MissingPermission")
     fun resolveDriver(device: BluetoothDevice, serviceUuids: List<String> = emptyList()): IVendorDriver {
         val address = device.address
-        resolvedDrivers[address]?.let { return it }
-
         val name = try { device.name } catch (_: Exception) { null }
+        if (name != null) resolvedNames[address] = name
+        resolvedDrivers[address]?.let { return it }
 
         for (driver in drivers) {
             // Check specific drivers before generic fallback
@@ -61,6 +98,7 @@ class VendorProtocolRouter {
     @SuppressLint("MissingPermission")
     fun registerDiscoveredServices(address: String, device: BluetoothDevice, serviceUuids: List<String>) {
         val name = try { device.name } catch (_: Exception) { null }
+        if (name != null) resolvedNames[address] = name
         for (driver in drivers) {
             if (driver !is GenericBleProberDriver) {
                 if (driver.matches(name, address, serviceUuids)) {
@@ -71,7 +109,20 @@ class VendorProtocolRouter {
         }
     }
 
-    fun getAncMapping(address: String): AncByteMapping = OpcodeRemapMatrix.getMapping(address)
+    fun getAncMapping(address: String): AncByteMapping {
+        // realme OPOv1 mode bytes are 1-hot bitflags: 0x02/0x01 = Off variants,
+        // 0x01/0x02 = Transparency variants, 0x04 = ANC. 0x00 is invalid and
+        // is ignored by realme firmware. The T300 uses the E order
+        // (Off=0x02, Transparency=0x01, ANC=0x04); the generic HeyMelody
+        // profile uses D (Off=0x01, Transparency=0x02, ANC=0x04).
+        val name = resolvedNames[address]?.lowercase().orEmpty()
+        val defaultType = when {
+            name.contains("t300") -> AncProfileType.PROFILE_G
+            resolvedDrivers[address] is OnePlusHeyMelodyDriver -> AncProfileType.PROFILE_D
+            else -> AncProfileType.PROFILE_A
+        }
+        return OpcodeRemapMatrix.getMapping(address, defaultType)
+    }
 
     fun cycleAncProfile(address: String): AncByteMapping = OpcodeRemapMatrix.cycleProfile(address)
 
@@ -93,6 +144,12 @@ class VendorProtocolRouter {
     fun buildAncQueryCommand(device: BluetoothDevice, serviceUuids: List<String> = emptyList()): ByteArray? {
         val driver = resolveDriver(device, serviceUuids)
         return driver.buildAncQueryCommand()
+    }
+
+    /** The driver's read-only mode poll frame, or null when the driver has none. */
+    fun buildModePollCommand(device: BluetoothDevice, serviceUuids: List<String> = emptyList()): ByteArray? {
+        val driver = resolveDriver(device, serviceUuids)
+        return driver.buildModePollCommand()
     }
 
     /**
@@ -142,6 +199,29 @@ class VendorProtocolRouter {
     fun buildBatteryQueryCommand(device: BluetoothDevice, serviceUuids: List<String> = emptyList()): ByteArray? {
         val driver = resolveDriver(device, serviceUuids)
         return driver.buildBatteryQueryCommand()
+    }
+
+    fun buildBatchStatusQueryCommand(device: BluetoothDevice, serviceUuids: List<String> = emptyList()): ByteArray? {
+        val driver = resolveDriver(device, serviceUuids)
+        return driver.buildBatchStatusQuery()
+    }
+
+    fun buildStateQueryCommands(device: BluetoothDevice, serviceUuids: List<String> = emptyList()): List<ByteArray> {
+        val driver = resolveDriver(device, serviceUuids)
+        return driver.buildStateQueryCommands()
+    }
+
+    fun parseGameModeState(address: String, bytes: ByteArray): Boolean? {
+        val driver = getDriverForAddress(address) ?: return null
+        return driver.parseGameModeState(bytes)
+    }
+
+    fun parseBatchStatus(
+        address: String,
+        bytes: ByteArray,
+    ): com.omnibuds.android.hardware.protocol.RealmeProtocolParser.BatchStatus? {
+        val driver = getDriverForAddress(address) ?: return null
+        return driver.parseBatchStatus(bytes)
     }
 
     fun buildUltraBassCommand(device: BluetoothDevice, enabled: Boolean, level: Int): ByteArray? {

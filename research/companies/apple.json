@@ -1,0 +1,2951 @@
+[
+  {
+    "company": "Apple",
+    "companySlug": "apple",
+    "family": "AirPods",
+    "model": "AirPods (2nd generation)",
+    "slug": "airpods-2nd-gen",
+    "generation": "2nd gen",
+    "variant": null,
+    "releaseYear": 2019,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Settings (AirPods settings)",
+      "platforms": [
+        "ios",
+        "macos"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": "iOS 27 / macOS 27 Settings",
+      "notes": "Apple exposes AirPods controls and battery in the system Settings app, Control Center and the Batteries widget. There is no standalone AirPods companion app and no Android app."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 24,
+      "chargingIndicators": "Case status light: green = fully charged, amber = less than one full charge; light shows bud status when the lid is open with buds inside and case status when buds are out.",
+      "notes": "iOS shows one combined percentage for the pair in the AirPods settings header and Batteries widget, and a separate case percentage. The case has no independent Bluetooth radio, so its reading is last-known once both buds are out; the case card is normally surfaced when the lid is opened. Apple does not publish L/R separation in the main UI.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No active noise cancellation or Transparency mode."
+    },
+    "features": [
+      {
+        "id": "audio.adaptive-eq",
+        "name": "Adaptive EQ",
+        "availability": "device-only",
+        "notes": "Automatic tuning; not a user-facing equalizer."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both",
+        "notes": "Can be turned off in Settings."
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching between Apple devices",
+        "availability": "official-app",
+        "notes": "Apple-ecosystem handoff, not Bluetooth multipoint."
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Hey Siri",
+        "availability": "both"
+      },
+      {
+        "id": "audio.audio-sharing",
+        "name": "Audio Sharing",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.apple.head-gesture",
+        "name": "Siri head gestures (nod/shake)",
+        "availability": "official-app",
+        "notes": "Requires Announce Calls/Notifications; availability varies by region."
+      },
+      {
+        "id": "app.battery-widget",
+        "name": "Batteries widget",
+        "availability": "official-app"
+      },
+      {
+        "id": "app.rename",
+        "name": "Rename AirPods",
+        "availability": "official-app"
+      },
+      {
+        "id": "firmware.update",
+        "name": "Automatic firmware updates",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap either AirPod",
+          "action": "Play/pause, next track, previous track or Siri (per-side setting)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Double-tap action is set separately for left and right in Settings > Bluetooth > AirPods."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "No user equalizer in the AirPods UI. No Bluetooth multipoint; Apple Automatic Switching is the ecosystem equivalent."
+    },
+    "appOnlyFeatures": [
+      "Automatic ear detection toggle",
+      "Microphone side selection",
+      "Rename",
+      "Find My",
+      "Batteries widget"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.apple.com/airpods/compare/",
+        "type": "official-product",
+        "title": "Compare AirPods models",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/airpods/devb2c431317/web",
+        "type": "official-support",
+        "title": "Use controls and gestures with your AirPods",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/airpods/devde25a4bbe/web",
+        "type": "official-support",
+        "title": "Charge AirPods, AirPods Pro, or AirPods Max",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Apple does not publish per-bud L/R display behaviour for the main Settings UI; the catalog records the observed single-percentage aggregate.",
+      "Case percentage freshness when both buds are out is not documented; recorded as last-known."
+    ],
+    "notes": "Still sold by Apple in 2026 as the entry model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Apple",
+    "companySlug": "apple",
+    "family": "AirPods",
+    "model": "AirPods (3rd generation)",
+    "slug": "airpods-3rd-gen",
+    "generation": "3rd gen",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Settings (AirPods settings)",
+      "platforms": [
+        "ios",
+        "macos"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": "iOS 27 / macOS 27 Settings",
+      "notes": "System Settings, Control Center and Batteries widget; no standalone app."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 30,
+      "chargingIndicators": "Case status light green/amber; MagSafe or Lightning case.",
+      "notes": "One combined bud percentage plus separate case percentage. Case reading is last-known with both buds out. Spatial Audio reduces claimed listening time to 5 hours.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC or Transparency."
+    },
+    "features": [
+      {
+        "id": "audio.adaptive-eq",
+        "name": "Adaptive EQ",
+        "availability": "device-only"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "Personalized Spatial Audio",
+        "availability": "both"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "Dynamic head tracking",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Hey Siri",
+        "availability": "both"
+      },
+      {
+        "id": "audio.audio-sharing",
+        "name": "Audio Sharing",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.apple.head-gesture",
+        "name": "Siri head gestures",
+        "availability": "official-app",
+        "notes": "Requires Announce Calls/Notifications."
+      }
+    ],
+    "controls": {
+      "types": [
+        "squeeze",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "press stem",
+          "action": "Play/pause or answer call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-press stem",
+          "action": "Next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-press stem",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "press and hold stem",
+          "action": "Siri",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Force sensor on the stem."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "No user EQ. No multipoint; Automatic Switching only."
+    },
+    "appOnlyFeatures": [
+      "Automatic ear detection toggle",
+      "Microphone side selection",
+      "Rename",
+      "Find My",
+      "Batteries widget"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added Personalized Spatial Audio with dynamic head tracking versus AirPods 2",
+      "Added force-sensor stem controls versus double-tap",
+      "Added Adaptive EQ, IPX4 sweat/water resistance and a MagSafe case option",
+      "Claimed listening time increased from 5 to 6 hours"
+    ],
+    "sources": [
+      {
+        "url": "https://www.apple.com/airpods/compare/",
+        "type": "official-product",
+        "title": "Compare AirPods models",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/airpods/devb2c431317/web",
+        "type": "official-support",
+        "title": "Use controls and gestures with your AirPods",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Apple no longer hosts a dedicated AirPods 3 tech-spec page; values cross-checked on the current compare page.",
+      "Case-percentage freshness not documented."
+    ],
+    "notes": "Discontinued from the Apple store but still covered by iOS 27 and still in the official compare matrix.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Apple",
+    "companySlug": "apple",
+    "family": "AirPods",
+    "model": "AirPods 4",
+    "slug": "airpods-4",
+    "generation": "4",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Settings (AirPods settings)",
+      "platforms": [
+        "ios",
+        "macos"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": "iOS 27 / macOS 27 Settings",
+      "notes": "System Settings, Control Center and Batteries widget."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 30,
+      "chargingIndicators": "USB-C case only; status light green/amber. No case speaker.",
+      "notes": "One combined bud percentage plus separate case percentage. Case is USB-C only and has no wireless charging.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC on this variant. ANC is a separate AirPods 4 with ANC SKU."
+    },
+    "features": [
+      {
+        "id": "audio.adaptive-eq",
+        "name": "Adaptive EQ",
+        "availability": "device-only"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "Personalized Spatial Audio",
+        "availability": "both"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "Dynamic head tracking",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.custom-eq",
+        "name": "3-band Custom EQ",
+        "availability": "official-app",
+        "notes": "Low/Mid/High sliders in Settings > AirPods > Audio & Routing > Equalizer; stored on the AirPods."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Siri / Siri Interactions",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.head-gesture",
+        "name": "Head gestures for Siri announcements",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.apple.camera-remote",
+        "name": "Camera Remote",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.apple.pause-when-asleep",
+        "name": "Pause media when falling asleep",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.audio-sharing",
+        "name": "Audio Sharing",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "squeeze",
+        "head-gesture",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "press stem",
+          "action": "Play/pause, answer call, mute/unmute",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-press stem",
+          "action": "Next track / end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-press stem",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "press and hold stem",
+          "action": "Siri",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "nod / shake head",
+          "action": "Accept or decline calls and notifications via Siri",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "No volume swipe on the base AirPods 4."
+    },
+    "audio": {
+      "eqPresets": [
+        "Recommended"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "New in iOS 27: 3-band custom EQ for AirPods 4. Still no Bluetooth multipoint."
+    },
+    "appOnlyFeatures": [
+      "3-band Custom EQ",
+      "Head gesture toggle",
+      "Camera Remote",
+      "Pause media when falling asleep"
+    ],
+    "featureDeltaFromPrevious": [
+      "H2 chip replaces H1",
+      "Redesigned open-fit shape and much smaller USB-C case",
+      "Added optional ANC SKU (separate record)",
+      "Added 3-band Custom EQ in iOS 27",
+      "Dropped the dedicated MagSafe case; base model is USB-C only"
+    ],
+    "sources": [
+      {
+        "url": "https://www.apple.com/airpods/compare/",
+        "type": "official-product",
+        "title": "Compare AirPods models",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/airpods/te819024i19r/web",
+        "type": "official-support",
+        "title": "Customize EQ on AirPods",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/airpods/devb2c431317/web",
+        "type": "official-support",
+        "title": "Use controls and gestures with your AirPods",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Apple no longer hosts a standalone AirPods 4 spec page; current compare page and iOS 27 guide used.",
+      "Case battery freshness when buds are out is not documented."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Apple",
+    "companySlug": "apple",
+    "family": "AirPods",
+    "model": "AirPods 4 with Active Noise Cancellation",
+    "slug": "airpods-4-anc",
+    "generation": "4",
+    "variant": "with Active Noise Cancellation",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Settings (AirPods settings)",
+      "platforms": [
+        "ios",
+        "macos"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": "iOS 27 / macOS 27 Settings",
+      "notes": "System Settings, Control Center and Batteries widget."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 4,
+      "budsHoursNoAnc": 5,
+      "caseHours": 20,
+      "chargingIndicators": "Wireless Charging Case (USB-C) with speaker for Find My; works with Apple Watch and Qi chargers. Status light green/amber.",
+      "notes": "One combined bud percentage plus separate case percentage. Case hours are 20 with ANC and 30 with noise control off; caseHours stores 20 with ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "adaptive",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Apple publishes only relative claims (e.g. 1.5x more ANC than AirPods 4 without ANC is not applicable; 2x vs original AirPods Pro is the Pro claim). No absolute dB figure is published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancellation",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive Audio",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.conversation-awareness",
+        "name": "Conversation Awareness",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.voice-isolation",
+        "name": "Voice Isolation",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.adaptive-eq",
+        "name": "Adaptive EQ",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.custom-eq",
+        "name": "3-band Custom EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "Personalized Spatial Audio",
+        "availability": "both"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "Dynamic head tracking",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Siri / Siri Interactions",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.head-gesture",
+        "name": "Head gestures for Siri announcements",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.apple.camera-remote",
+        "name": "Camera Remote",
+        "availability": "official-app"
+      },
+      {
+        "id": "translation.live-translate",
+        "name": "Live Translation",
+        "availability": "official-app",
+        "notes": "Requires Apple Intelligence and latest firmware; beta, region-limited."
+      },
+      {
+        "id": "app.case-sounds",
+        "name": "Charging case sounds",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.apple.pause-when-asleep",
+        "name": "Pause media when falling asleep",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My with case speaker",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "squeeze",
+        "head-gesture",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "press stem",
+          "action": "Play/pause, answer call, mute/unmute",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-press stem",
+          "action": "Next track / end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-press stem",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "press and hold stem",
+          "action": "Cycle ANC / Transparency / Adaptive Audio, or Siri (per-side choice)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold both stems",
+          "action": "Start Live Translation",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "nod / shake head",
+          "action": "Accept or decline calls and notifications via Siri",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "No volume swipe on AirPods 4 (either variant)."
+    },
+    "audio": {
+      "eqPresets": [
+        "Recommended"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "No Bluetooth multipoint; Apple Automatic Switching only."
+    },
+    "appOnlyFeatures": [
+      "Adaptive Audio blend slider",
+      "Conversation Awareness toggle",
+      "3-band Custom EQ",
+      "Case sounds",
+      "Charging notifications",
+      "Camera Remote"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adds ANC, Transparency and Adaptive Audio versus AirPods 4",
+      "Adds Conversation Awareness, Voice Isolation and Live Translation",
+      "Adds a Wireless Charging Case with speaker and Find My",
+      "ANC listening time drops to 4 hours (5 hours with noise control off)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.apple.com/airpods/compare/",
+        "type": "official-product",
+        "title": "Compare AirPods models",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/airpods/dev9812f5cc3/web",
+        "type": "official-support",
+        "title": "Switch between listening modes on AirPods",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/airpods/te819024i19r/web",
+        "type": "official-support",
+        "title": "Customize EQ on AirPods",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official ANC or Transparency attenuation dB published.",
+      "Case percentage freshness when buds are out is undocumented."
+    ],
+    "notes": "Case hours with ANC are 20 h; with noise control off 30 h.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Apple",
+    "companySlug": "apple",
+    "family": "AirPods",
+    "model": "AirPods 5",
+    "slug": "airpods-5",
+    "generation": "5",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Settings (AirPods settings)",
+      "platforms": [
+        "ios",
+        "macos"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": "iOS 27 / macOS 27 Settings",
+      "notes": "System Settings, Control Center, Batteries widget; no standalone app."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 4,
+      "budsHoursNoAnc": 6,
+      "caseHours": 20,
+      "chargingIndicators": "USB-C Charging Case (no wireless charging on this variant); status light green/amber.",
+      "notes": "One combined bud percentage plus separate case percentage. Case hours 20 with ANC / 30 with noise control off; caseHours stores the with-ANC figure.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "adaptive",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Apple claims up to 1.5x more ANC than AirPods 4 with ANC. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancellation",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive Audio",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.conversation-awareness",
+        "name": "Conversation Awareness",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.voice-isolation",
+        "name": "Voice Isolation",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.adaptive-eq",
+        "name": "Adaptive EQ",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.custom-eq",
+        "name": "3-band Custom EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "Personalized Spatial Audio",
+        "availability": "both"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "Dynamic head tracking",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Siri AI / Siri Interactions",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.head-gesture",
+        "name": "Head gestures for Siri",
+        "availability": "official-app"
+      },
+      {
+        "id": "translation.live-translate",
+        "name": "Live Translation",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.apple.camera-remote",
+        "name": "Camera Remote",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.apple.pause-when-asleep",
+        "name": "Pause media when falling asleep",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.studio-recording",
+        "name": "Studio-quality audio recording",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.lossless-usb-c",
+        "name": "Lossless Audio and ultra-low latency via USB-C",
+        "availability": "device-only",
+        "notes": "Wired USB-C only."
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "squeeze",
+        "head-gesture",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "press stem",
+          "action": "Play/pause, answer call, mute/unmute",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-press stem",
+          "action": "Next track / end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-press stem",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "press and hold stem",
+          "action": "Cycle ANC / Transparency / Adaptive Audio, or Siri (per-side choice)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold both stems",
+          "action": "Start Live Translation",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "nod / shake head",
+          "action": "Accept or decline calls/notifications via Siri",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "No volume swipe on this variant; volume swipe is exclusive to AirPods 5 with Wireless Charging Case."
+    },
+    "audio": {
+      "eqPresets": [
+        "Recommended"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "AAC",
+        "SBC",
+        "Lossless (USB-C, wired)"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "Lossless is wired USB-C only, not a Bluetooth codec. No multipoint."
+    },
+    "appOnlyFeatures": [
+      "Adaptive Audio blend slider",
+      "3-band Custom EQ",
+      "Head gesture toggle",
+      "Camera Remote"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC and Adaptive Audio become standard on the base AirPods 5",
+      "New H2-based acoustic design with 1.5x ANC versus AirPods 4 ANC",
+      "Adds Live Translation, Siri AI and studio-quality recording",
+      "Adds lossless audio via USB-C",
+      "Base model keeps a USB-C-only case and no volume swipe"
+    ],
+    "sources": [
+      {
+        "url": "https://www.apple.com/airpods-5/specs/",
+        "type": "official-product",
+        "title": "AirPods 5 Technical Specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/airpods/devb2c431317/web",
+        "type": "official-support",
+        "title": "Use controls and gestures with your AirPods",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/airpods/te819024i19r/web",
+        "type": "official-support",
+        "title": "Customize EQ on AirPods",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No absolute ANC/Transparency dB published.",
+      "Case percentage freshness when both buds are out is not documented."
+    ],
+    "notes": "New for 2026. The wireless-charging-case version is a separate record with higher claimed battery life.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Apple",
+    "companySlug": "apple",
+    "family": "AirPods",
+    "model": "AirPods 5 with Wireless Charging Case",
+    "slug": "airpods-5-wireless-charging-case",
+    "generation": "5",
+    "variant": "with Wireless Charging Case",
+    "releaseYear": 2026,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Settings (AirPods settings)",
+      "platforms": [
+        "ios",
+        "macos"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": "iOS 27 / macOS 27 Settings",
+      "notes": "System Settings, Control Center, Batteries widget."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 7,
+      "caseHours": 22,
+      "chargingIndicators": "USB-C, Apple Watch charger or Qi; case speaker for Find My. Status light green/amber.",
+      "notes": "One combined bud percentage plus separate case percentage. Case hours 22 with ANC / 30 with noise control off; caseHours stores 22 with ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "adaptive",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Same ANC platform as AirPods 5; higher claimed bud runtime than the USB-C-case variant."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancellation",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive Audio",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.conversation-awareness",
+        "name": "Conversation Awareness",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.voice-isolation",
+        "name": "Voice Isolation",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.adaptive-eq",
+        "name": "Adaptive EQ",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.custom-eq",
+        "name": "3-band Custom EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "Personalized Spatial Audio",
+        "availability": "both"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "Dynamic head tracking",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Siri AI / Siri Interactions",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.head-gesture",
+        "name": "Head gestures for Siri",
+        "availability": "official-app"
+      },
+      {
+        "id": "translation.live-translate",
+        "name": "Live Translation",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.apple.camera-remote",
+        "name": "Camera Remote",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.apple.pause-when-asleep",
+        "name": "Pause media when falling asleep",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.studio-recording",
+        "name": "Studio-quality audio recording",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.lossless-usb-c",
+        "name": "Lossless Audio and ultra-low latency via USB-C",
+        "availability": "device-only"
+      },
+      {
+        "id": "app.case-sounds",
+        "name": "Charging case sounds",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My with case speaker",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "squeeze",
+        "slide",
+        "head-gesture",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "press stem",
+          "action": "Play/pause, answer call, mute/unmute",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-press stem",
+          "action": "Next track / end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-press stem",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "swipe up/down on stem",
+          "action": "Volume up/down",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "press and hold stem",
+          "action": "Cycle ANC / Transparency / Adaptive Audio, or Siri (per-side choice)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold both stems",
+          "action": "Start Live Translation",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "nod / shake head",
+          "action": "Accept or decline calls/notifications via Siri",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Force sensor with volume swipe."
+    },
+    "audio": {
+      "eqPresets": [
+        "Recommended"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "AAC",
+        "SBC",
+        "Lossless (USB-C, wired)"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "Lossless only over wired USB-C. No Bluetooth multipoint."
+    },
+    "appOnlyFeatures": [
+      "Adaptive Audio blend slider",
+      "3-band Custom EQ",
+      "Head gesture toggle",
+      "Case sounds",
+      "Charging notifications",
+      "Camera Remote"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adds wireless charging, Apple Watch/Qi charging and a Find My case speaker versus the base AirPods 5",
+      "Adds stem volume swipe",
+      "Claimed bud runtime rises to 5 h ANC / 7 h off and case runtime to 22 h ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.apple.com/airpods-5/specs/",
+        "type": "official-product",
+        "title": "AirPods 5 Technical Specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/airpods/devb2c431317/web",
+        "type": "official-support",
+        "title": "Use controls and gestures with your AirPods",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/airpods/devde25a4bbe/web",
+        "type": "official-support",
+        "title": "Charge AirPods, AirPods Pro, or AirPods Max",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No absolute ANC/Transparency dB published.",
+      "Case percentage freshness when both buds are out is not documented."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Apple",
+    "companySlug": "apple",
+    "family": "AirPods Pro",
+    "model": "AirPods Pro (1st generation)",
+    "slug": "airpods-pro-1st-gen",
+    "generation": "1st gen",
+    "variant": "Pro",
+    "releaseYear": 2019,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Settings (AirPods settings)",
+      "platforms": [
+        "ios",
+        "macos"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": "iOS 27 / macOS 27 Settings",
+      "notes": "System Settings, Control Center and Batteries widget."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 4.5,
+      "budsHoursNoAnc": 5,
+      "caseHours": 24,
+      "chargingIndicators": "Lightning or Qi case; status light green/amber.",
+      "notes": "One combined bud percentage plus separate case percentage. Case reading is last-known when both buds are out.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No Adaptive Audio and no Off mode in the original shipping firmware (Off was added to later Pro models only)."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancellation",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "audio.adaptive-eq",
+        "name": "Adaptive EQ",
+        "availability": "device-only"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "Spatial Audio",
+        "availability": "both",
+        "notes": "Added by firmware; Personalized Spatial Audio requires a TrueDepth-camera profile."
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "Dynamic head tracking",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Hey Siri",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.ear-tip-fit-test",
+        "name": "Ear Tip Fit Test",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "squeeze",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "press stem",
+          "action": "Play/pause or answer call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-press stem",
+          "action": "Next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-press stem",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "press and hold stem",
+          "action": "Cycle ANC/Transparency or Siri (per-side choice)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Force sensor; no volume swipe."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "No user EQ. No multipoint."
+    },
+    "appOnlyFeatures": [
+      "Ear Tip Fit Test",
+      "Microphone side selection",
+      "Automatic ear detection toggle",
+      "Find My"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.apple.com/airpods/compare/",
+        "type": "official-product",
+        "title": "Compare AirPods models",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/airpods/devb2c431317/web",
+        "type": "official-support",
+        "title": "Use controls and gestures with your AirPods",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Apple no longer hosts a dedicated first-generation AirPods Pro spec page; figures cross-checked on the compare page and guide.",
+      "No absolute ANC/Transparency dB published."
+    ],
+    "notes": "Discontinued in 2022; retained because it is the baseline for the Pro line and still appears in iOS 27 guidance.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Apple",
+    "companySlug": "apple",
+    "family": "AirPods Pro",
+    "model": "AirPods Pro 2 (Lightning)",
+    "slug": "airpods-pro-2-lightning",
+    "generation": "2",
+    "variant": "Pro, Lightning Charging Case",
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Settings (AirPods settings)",
+      "platforms": [
+        "ios",
+        "macos"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": "iOS 27 / macOS 27 Settings",
+      "notes": "System Settings, Control Center and Batteries widget."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 7,
+      "caseHours": 30,
+      "chargingIndicators": "Lightning, MagSafe or Qi case; speaker and lanyard loop. Status light green/amber.",
+      "notes": "One combined bud percentage plus separate case percentage. Case hours are 30 with ANC; 6 h bud ANC / 7 h with noise control off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "adaptive",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Adaptive Audio, Conversation Awareness and Personalized Volume arrive with iOS 17-era firmware. Off mode is opt-in. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancellation",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive Audio",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.conversation-awareness",
+        "name": "Conversation Awareness",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.personalized-volume",
+        "name": "Personalized Volume",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.voice-isolation",
+        "name": "Voice Isolation",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.adaptive-eq",
+        "name": "Adaptive EQ",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.custom-eq",
+        "name": "3-band Custom EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "Personalized Spatial Audio",
+        "availability": "both"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "Dynamic head tracking",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Skin-detect sensor",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Hey Siri / Siri Interactions",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.head-gesture",
+        "name": "Head gestures for Siri",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.apple.camera-remote",
+        "name": "Camera Remote",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.apple.pause-when-asleep",
+        "name": "Pause media when falling asleep",
+        "availability": "official-app"
+      },
+      {
+        "id": "hearing.hearing-test",
+        "name": "Hearing Test",
+        "availability": "official-app",
+        "notes": "iOS 18+ and latest firmware; region-limited."
+      },
+      {
+        "id": "hearing.hearing-aid",
+        "name": "Hearing Aid",
+        "availability": "official-app",
+        "notes": "FDA-authorized; region-limited."
+      },
+      {
+        "id": "hearing.hearing-protection",
+        "name": "Hearing Protection",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.apple.ear-tip-fit-test",
+        "name": "Ear Tip Fit Test",
+        "availability": "official-app"
+      },
+      {
+        "id": "app.case-sounds",
+        "name": "Charging case sounds",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My with case speaker",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "squeeze",
+        "slide",
+        "head-gesture",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "press stem",
+          "action": "Play/pause, answer call, mute/unmute",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-press stem",
+          "action": "Next track / end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-press stem",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "swipe up/down on stem",
+          "action": "Volume up/down",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "press and hold stem",
+          "action": "Cycle ANC / Transparency / Adaptive Audio, or Siri (per-side choice)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "nod / shake head",
+          "action": "Accept or decline calls/notifications via Siri",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Force sensor with volume swipe."
+    },
+    "audio": {
+      "eqPresets": [
+        "Recommended"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "Lightning variant has no USB-C lossless path. No Bluetooth multipoint."
+    },
+    "appOnlyFeatures": [
+      "Adaptive Audio blend slider",
+      "Conversation Awareness toggle",
+      "Personalized Volume",
+      "3-band Custom EQ",
+      "Ear Tip Fit Test",
+      "Hearing Test/Aid/Protection",
+      "Case sounds",
+      "Charging notifications"
+    ],
+    "featureDeltaFromPrevious": [
+      "H2 chip and 2x ANC versus the original AirPods Pro",
+      "Added Adaptive Audio, Conversation Awareness and Personalized Volume",
+      "Added skin-detect sensor and stem volume swipe",
+      "Claimed ANC listening time increased to 6 hours and case total to 30 hours",
+      "Added Hearing Test, Hearing Aid and Hearing Protection via firmware"
+    ],
+    "sources": [
+      {
+        "url": "https://www.apple.com/airpods/compare/",
+        "type": "official-product",
+        "title": "Compare AirPods models",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/airpods/dev9812f5cc3/web",
+        "type": "official-support",
+        "title": "Switch between listening modes on AirPods",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/airpods/te819024i19r/web",
+        "type": "official-support",
+        "title": "Customize EQ on AirPods",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No absolute ANC/Transparency dB published.",
+      "Apple no longer hosts a standalone Pro 2 spec page; current compare page used."
+    ],
+    "notes": "The USB-C case revision is a separate record.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Apple",
+    "companySlug": "apple",
+    "family": "AirPods Pro",
+    "model": "AirPods Pro 2 (USB-C)",
+    "slug": "airpods-pro-2-usb-c",
+    "generation": "2",
+    "variant": "Pro, USB-C Charging Case",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Settings (AirPods settings)",
+      "platforms": [
+        "ios",
+        "macos"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": "iOS 27 / macOS 27 Settings",
+      "notes": "System Settings, Control Center and Batteries widget."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 7,
+      "caseHours": 30,
+      "chargingIndicators": "USB-C, MagSafe, Apple Watch charger or Qi; speaker and lanyard loop. Status light green/amber.",
+      "notes": "One combined bud percentage plus separate case percentage. Case reading is last-known when both buds are out.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "adaptive",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Same ANC/Adaptive Audio platform as the Lightning variant. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancellation",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive Audio",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.conversation-awareness",
+        "name": "Conversation Awareness",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.personalized-volume",
+        "name": "Personalized Volume",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.voice-isolation",
+        "name": "Voice Isolation",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.adaptive-eq",
+        "name": "Adaptive EQ",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.custom-eq",
+        "name": "3-band Custom EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "Personalized Spatial Audio",
+        "availability": "both"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "Dynamic head tracking",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Skin-detect sensor",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Hey Siri / Siri Interactions",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.head-gesture",
+        "name": "Head gestures for Siri",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.apple.camera-remote",
+        "name": "Camera Remote",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.apple.pause-when-asleep",
+        "name": "Pause media when falling asleep",
+        "availability": "official-app"
+      },
+      {
+        "id": "hearing.hearing-test",
+        "name": "Hearing Test",
+        "availability": "official-app"
+      },
+      {
+        "id": "hearing.hearing-aid",
+        "name": "Hearing Aid",
+        "availability": "official-app"
+      },
+      {
+        "id": "hearing.hearing-protection",
+        "name": "Hearing Protection",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.apple.ear-tip-fit-test",
+        "name": "Ear Tip Fit Test",
+        "availability": "official-app"
+      },
+      {
+        "id": "app.case-sounds",
+        "name": "Charging case sounds",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My with case speaker",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "squeeze",
+        "slide",
+        "head-gesture",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "press stem",
+          "action": "Play/pause, answer call, mute/unmute",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-press stem",
+          "action": "Next track / end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-press stem",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "swipe up/down on stem",
+          "action": "Volume up/down",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "press and hold stem",
+          "action": "Cycle ANC / Transparency / Adaptive Audio, or Siri (per-side choice)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "nod / shake head",
+          "action": "Accept or decline calls/notifications via Siri",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Force sensor with volume swipe."
+    },
+    "audio": {
+      "eqPresets": [
+        "Recommended"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "No Bluetooth hi-res codec. No multipoint; Automatic Switching only."
+    },
+    "appOnlyFeatures": [
+      "Adaptive Audio blend slider",
+      "Conversation Awareness toggle",
+      "Personalized Volume",
+      "3-band Custom EQ",
+      "Ear Tip Fit Test",
+      "Hearing Test/Aid/Protection",
+      "Case sounds",
+      "Charging notifications"
+    ],
+    "featureDeltaFromPrevious": [
+      "USB-C charging replaces Lightning and adds Apple Watch charger support",
+      "USB-C case enables Lossless Audio with Apple Vision Pro",
+      "Same ANC, drivers and 6 h/30 h battery as the Lightning variant"
+    ],
+    "sources": [
+      {
+        "url": "https://www.apple.com/airpods/compare/",
+        "type": "official-product",
+        "title": "Compare AirPods models",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/airpods/devde25a4bbe/web",
+        "type": "official-support",
+        "title": "Charge AirPods, AirPods Pro, or AirPods Max",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/airpods/te819024i19r/web",
+        "type": "official-support",
+        "title": "Customize EQ on AirPods",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No absolute ANC/Transparency dB published.",
+      "Lossless-with-Vision-Pro is documented but not listed as hi-res Bluetooth; recorded as hiRes false with note."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Apple",
+    "companySlug": "apple",
+    "family": "AirPods Pro",
+    "model": "AirPods Pro 3",
+    "slug": "airpods-pro-3",
+    "generation": "3",
+    "variant": "Pro",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Settings (AirPods settings)",
+      "platforms": [
+        "ios",
+        "macos"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": "iOS 27 / macOS 27 Settings",
+      "notes": "System Settings, Control Center and Batteries widget."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 8,
+      "budsHoursNoAnc": 10,
+      "caseHours": 24,
+      "chargingIndicators": "MagSafe/USB-C/Apple Watch/Qi case with speaker and lanyard loop; UWB second-gen chip. Status light green/amber.",
+      "notes": "One combined bud percentage plus separate case percentage. 8 h ANC; 10 h in Transparency with Hearing Aid; 24 h case with ANC. Case reading is last-known when buds are out.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "adaptive",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Apple claims 2x ANC versus the original AirPods Pro and AirPods 4 ANC; no absolute dB published. Off mode is opt-in."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancellation",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive Audio",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.conversation-awareness",
+        "name": "Conversation Awareness",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.personalized-volume",
+        "name": "Personalized Volume",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.voice-isolation",
+        "name": "Voice Isolation",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.loud-sound-reduction",
+        "name": "Loud Sound Reduction",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.adaptive-eq",
+        "name": "Adaptive EQ",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.custom-eq",
+        "name": "3-band Custom EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "Personalized Spatial Audio",
+        "availability": "both"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "Dynamic head tracking",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Skin-detect sensor",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.heart-rate",
+        "name": "Heart rate sensing during workouts",
+        "availability": "both",
+        "notes": "Fitness app and compatible third-party apps on iOS 26+."
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Siri AI / Siri Interactions",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.head-gesture",
+        "name": "Head gestures for Siri",
+        "availability": "official-app"
+      },
+      {
+        "id": "translation.live-translate",
+        "name": "Live Translation",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.apple.camera-remote",
+        "name": "Camera Remote",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.apple.pause-when-asleep",
+        "name": "Pause media when falling asleep",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.studio-recording",
+        "name": "Studio-quality audio recording",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.lossless-usb-c",
+        "name": "Lossless Audio and ultra-low latency via USB-C",
+        "availability": "device-only"
+      },
+      {
+        "id": "hearing.hearing-test",
+        "name": "Hearing Test",
+        "availability": "official-app"
+      },
+      {
+        "id": "hearing.hearing-aid",
+        "name": "Hearing Aid",
+        "availability": "official-app"
+      },
+      {
+        "id": "hearing.hearing-protection",
+        "name": "Hearing Protection",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.apple.ear-tip-fit-test",
+        "name": "Ear Tip Fit Test",
+        "availability": "official-app"
+      },
+      {
+        "id": "app.case-sounds",
+        "name": "Charging case sounds",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My with precision finding",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "squeeze",
+        "slide",
+        "head-gesture",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "press stem",
+          "action": "Play/pause, answer call, mute/unmute",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-press stem",
+          "action": "Next track / end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-press stem",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "swipe up/down on stem",
+          "action": "Volume up/down",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "press and hold stem",
+          "action": "Cycle ANC / Transparency / Adaptive Audio, or Siri (per-side choice)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold both stems",
+          "action": "Start Live Translation",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "nod / shake head",
+          "action": "Accept or decline calls/notifications via Siri",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Force sensor with volume swipe; five ear-tip sizes (XXS-XL)."
+    },
+    "audio": {
+      "eqPresets": [
+        "Recommended"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "AAC",
+        "SBC",
+        "Lossless (USB-C, wired)"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "Lossless over USB-C only. No Bluetooth multipoint."
+    },
+    "appOnlyFeatures": [
+      "Adaptive Audio blend slider",
+      "Personalized Volume",
+      "3-band Custom EQ",
+      "Heart rate monitoring toggle",
+      "Hearing Test/Aid/Protection",
+      "Ear Tip Fit Test",
+      "Case sounds",
+      "Charging notifications"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adds heart-rate sensing for workouts",
+      "ANC listening time increases to 8 hours; Transparency Hearing Aid up to 10 hours",
+      "Case total drops from 30 h (Pro 2) to 24 h",
+      "IP57 rating, second-generation UWB case, five ear-tip sizes",
+      "Adds Loud Sound Reduction, Live Translation and Siri AI",
+      "Lossless audio and ultra-low latency via USB-C"
+    ],
+    "sources": [
+      {
+        "url": "https://www.apple.com/airpods-pro/specs/",
+        "type": "official-product",
+        "title": "AirPods Pro 3 Technical Specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/airpods/devb2c431317/web",
+        "type": "official-support",
+        "title": "Use controls and gestures with your AirPods",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/airpods/te819024i19r/web",
+        "type": "official-support",
+        "title": "Customize EQ on AirPods",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No absolute ANC/Transparency dB published.",
+      "Heart-rate accuracy and supported third-party app list not enumerated by Apple.",
+      "Case battery freshness with buds out is not documented."
+    ],
+    "notes": "Battery durations are mode-dependent: 8 h ANC, 10 h Transparency with Hearing Aid, 24 h total with case.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Apple",
+    "companySlug": "apple",
+    "family": "AirPods Max",
+    "model": "AirPods Max (Lightning)",
+    "slug": "airpods-max-lightning",
+    "generation": "1",
+    "variant": "Max, Lightning",
+    "releaseYear": 2020,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Settings (AirPods settings)",
+      "platforms": [
+        "ios",
+        "macos"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": "iOS 27 / macOS 27 Settings",
+      "notes": "System Settings, Control Center and Batteries widget."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 20,
+      "budsHoursNoAnc": 20,
+      "caseHours": null,
+      "chargingIndicators": "Lightning port; status light on the right ear cup. Smart Case has no battery.",
+      "notes": "The Smart Case is a sleep/power-saving cover with no battery and no battery level, so there is no case reading in the app. One combined headphone percentage.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No Adaptive Audio, Conversation Awareness or Off mode. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancellation",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "audio.adaptive-eq",
+        "name": "Adaptive EQ",
+        "availability": "device-only"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "Personalized Spatial Audio",
+        "availability": "both"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "Dynamic head tracking",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic head detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Hey Siri",
+        "availability": "both"
+      },
+      {
+        "id": "audio.audio-sharing",
+        "name": "Audio Sharing",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "press Digital Crown",
+          "action": "Play/pause or answer call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-click Digital Crown",
+          "action": "Next track / end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-click Digital Crown",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "rotate Digital Crown",
+          "action": "Volume up/down (direction configurable)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press listening mode button",
+          "action": "Toggle ANC/Transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Digital Crown and listening mode button on the right ear cup",
+      "configurableInApp": true,
+      "notes": "No touch surface; controls are physical."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "No user EQ on this generation. No multipoint. Wired 3.5 mm-to-Lightning cable is analog only."
+    },
+    "appOnlyFeatures": [
+      "Digital Crown direction",
+      "Listening mode button options",
+      "Automatic head detection toggle",
+      "Microphone side selection",
+      "Find My"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.apple.com/airpods-max/specs/",
+        "type": "official-product",
+        "title": "AirPods Max Technical Specifications (current page covers Max 2)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.apple.com/airpods/compare/",
+        "type": "official-product",
+        "title": "Compare AirPods models",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/airpods/devb2c431317/web",
+        "type": "official-support",
+        "title": "Use controls and gestures with your AirPods",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Apple no longer hosts a Lightning-specific spec page; some values inferred from the compare matrix and the Max 1 section of the iOS 27 guide.",
+      "No absolute ANC/Transparency dB published.",
+      "Smart Case battery behaviour is absent by design; no case percentage exists."
+    ],
+    "notes": "Original Lightning model. The USB-C revision and Max 2 are separate records.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Apple",
+    "companySlug": "apple",
+    "family": "AirPods Max",
+    "model": "AirPods Max (USB-C)",
+    "slug": "airpods-max-usb-c",
+    "generation": "1",
+    "variant": "Max, USB-C",
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Settings (AirPods settings)",
+      "platforms": [
+        "ios",
+        "macos"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": "iOS 27 / macOS 27 Settings",
+      "notes": "System Settings, Control Center and Batteries widget."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 20,
+      "budsHoursNoAnc": 20,
+      "caseHours": null,
+      "chargingIndicators": "USB-C port; status light on the right ear cup. Smart Case has no battery.",
+      "notes": "No case battery and no case percentage. One combined headphone percentage.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No Adaptive Audio or Conversation Awareness. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancellation",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "audio.adaptive-eq",
+        "name": "Adaptive EQ",
+        "availability": "device-only"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "Personalized Spatial Audio",
+        "availability": "both"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "Dynamic head tracking",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic head detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Hey Siri",
+        "availability": "both"
+      },
+      {
+        "id": "audio.audio-sharing",
+        "name": "Audio Sharing",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.lossless-usb-c",
+        "name": "Lossless Audio via USB-C",
+        "availability": "device-only",
+        "notes": "24-bit/48 kHz wired USB-C."
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "press Digital Crown",
+          "action": "Play/pause or answer call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-click Digital Crown",
+          "action": "Next track / end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-click Digital Crown",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "rotate Digital Crown",
+          "action": "Volume up/down (direction configurable)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press listening mode button",
+          "action": "Toggle ANC/Transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Digital Crown and listening mode button on the right ear cup",
+      "configurableInApp": true,
+      "notes": "No touch surface."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "AAC",
+        "SBC",
+        "Lossless (USB-C, wired)"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "USB-C lossless is wired only. No user EQ and no multipoint."
+    },
+    "appOnlyFeatures": [
+      "Digital Crown direction",
+      "Listening mode button options",
+      "Automatic head detection toggle",
+      "Find My"
+    ],
+    "featureDeltaFromPrevious": [
+      "USB-C replaces Lightning",
+      "Adds 24-bit/48 kHz lossless USB-C audio",
+      "New colors; otherwise the same H1 platform and 20 h ANC battery"
+    ],
+    "sources": [
+      {
+        "url": "https://www.apple.com/airpods/compare/",
+        "type": "official-product",
+        "title": "Compare AirPods models",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/airpods/devb2c431317/web",
+        "type": "official-support",
+        "title": "Use controls and gestures with your AirPods",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No Lightning/USB-C-specific spec page remains; values cross-checked on the compare page.",
+      "No absolute ANC/Transparency dB published.",
+      "Smart Case has no battery by design."
+    ],
+    "notes": "Superseded by AirPods Max 2 in 2026, but still listed on Apple's compare page.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Apple",
+    "companySlug": "apple",
+    "family": "AirPods Max",
+    "model": "AirPods Max 2",
+    "slug": "airpods-max-2",
+    "generation": "2",
+    "variant": "Max",
+    "releaseYear": 2026,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Settings (AirPods settings)",
+      "platforms": [
+        "ios",
+        "macos"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": "iOS 27 / macOS 27 Settings",
+      "notes": "System Settings, Control Center and Batteries widget."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 20,
+      "budsHoursNoAnc": 20,
+      "caseHours": null,
+      "chargingIndicators": "USB-C port; status light. Smart Case preserves charge in ultra-low-power state but has no battery level.",
+      "notes": "No case battery and no case percentage. One combined headphone percentage.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "adaptive",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Apple claims up to 1.5x more ANC than the original AirPods Max. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancellation",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive Audio",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.conversation-awareness",
+        "name": "Conversation Awareness",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.apple.voice-isolation",
+        "name": "Voice Isolation",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.apple.personalized-volume",
+        "name": "Personalized Volume",
+        "availability": "both"
+      },
+      {
+        "id": "audio.loud-sound-reduction",
+        "name": "Loud Sound Reduction",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.adaptive-eq",
+        "name": "Adaptive EQ",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.custom-eq",
+        "name": "3-band Custom EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "Personalized Spatial Audio",
+        "availability": "both"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "Dynamic head tracking",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic head detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Siri AI / Siri Interactions / head gestures",
+        "availability": "both"
+      },
+      {
+        "id": "translation.live-translate",
+        "name": "Live Translation",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.apple.camera-remote",
+        "name": "Camera Remote",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.apple.pause-when-asleep",
+        "name": "Pause media when falling asleep",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.studio-recording",
+        "name": "Studio-quality audio recording",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.lossless-usb-c",
+        "name": "Lossless Audio and ultra-low latency via USB-C",
+        "availability": "device-only"
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "head-gesture",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "press Digital Crown",
+          "action": "Play/pause or answer call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-click Digital Crown",
+          "action": "Next track / end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-click Digital Crown",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "rotate Digital Crown",
+          "action": "Volume up/down (direction configurable)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press listening mode button",
+          "action": "Cycle ANC / Transparency / Adaptive Audio",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold listening mode button",
+          "action": "Start Live Translation",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "nod / shake head",
+          "action": "Accept or decline calls/notifications via Siri",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Digital Crown and listening mode button on the right ear cup",
+      "configurableInApp": true,
+      "notes": "No touch surface."
+    },
+    "audio": {
+      "eqPresets": [
+        "Recommended"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "AAC",
+        "SBC",
+        "Lossless (USB-C, wired)"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "Lossless is wired USB-C only. No Bluetooth multipoint."
+    },
+    "appOnlyFeatures": [
+      "Adaptive Audio blend slider",
+      "3-band Custom EQ",
+      "Head gesture toggle",
+      "Camera Remote",
+      "Pause media when falling asleep",
+      "Charging notifications",
+      "Find My"
+    ],
+    "featureDeltaFromPrevious": [
+      "H2 chip in each ear cup replaces H1",
+      "Adds Adaptive Audio, Conversation Awareness, Personalized Volume and Voice Isolation",
+      "Adds 3-band Custom EQ and head gestures",
+      "Adds lossless audio and ultra-low latency via USB-C",
+      "ANC claimed up to 1.5x the original AirPods Max, still 20 h"
+    ],
+    "sources": [
+      {
+        "url": "https://www.apple.com/airpods-max/specs/",
+        "type": "official-product",
+        "title": "AirPods Max 2 Technical Specifications",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/airpods/dev3e3e8821d/web",
+        "type": "official-support",
+        "title": "Change settings for AirPods Max",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/airpods/te819024i19r/web",
+        "type": "official-support",
+        "title": "Customize EQ on AirPods",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No absolute ANC/Transparency dB published.",
+      "Smart Case has no battery level; no case display exists."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

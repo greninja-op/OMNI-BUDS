@@ -1,0 +1,1199 @@
+[
+  {
+    "company": "Audio-Technica",
+    "companySlug": "audio-technica",
+    "family": "ATH-TWX",
+    "model": "ATH-TWX9",
+    "slug": "ath-twx9",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Audio-Technica Connect (A-T Connect)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "App provides low-latency mode, five ANC presets plus adaptive optimisation, hear-through, EQ save-to-headphones, touch/button assignment, voice assistant selection and codec choice."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 12.5,
+      "chargingIndicators": "Case LED; app battery readout; Qi wireless charging supported (charger sold separately)",
+      "notes": "Official: approx. 6 h continuous playback, up to 12.5 h additional from case, 18.5 h total. No separate ANC-on figure published.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 12.5
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "hear-through",
+        "adaptive-optimised",
+        "five-presets"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "Digital hybrid ANC with five presets; left touch sensor cycles modes; personalised optimisation via app."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Digital hybrid noise cancelling",
+        "availability": "both",
+        "notes": "Five presets plus environment-adaptive mode."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Hear-through / ambience",
+        "availability": "both",
+        "notes": "Hear-through includes unmuffled own voice."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ saved to headphones",
+        "availability": "official-app",
+        "notes": "Adjustable and stored on-device."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint pairing",
+        "availability": "device-only",
+        "notes": "Two devices."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "360 Reality Audio",
+        "availability": "device-only",
+        "notes": "Sony 360RA compatible."
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "Snapdragon Sound / 96 kHz 24-bit",
+        "availability": "device-only",
+        "notes": "aptX Adaptive, 96 kHz/24-bit."
+      },
+      {
+        "id": "vendor.audio-technica.deep-uv",
+        "name": "Deep-UV LED sterilisation case",
+        "availability": "device-only",
+        "notes": "Case sterilises earbud surfaces."
+      },
+      {
+        "id": "controls.customizable",
+        "name": "Assignable touch sensors and buttons",
+        "availability": "official-app",
+        "notes": "Firmware June 2023 expanded assignment options."
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap left earbud sensor",
+          "action": "cycle noise-cancelling presets / ambience",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap right earbud sensor",
+          "action": "play/pause, track skip (assignable)",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant (assignable)",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "button press",
+          "action": "volume / playback (assignable)",
+          "configurableInApp": true,
+          "notes": "Both sensors and buttons assignable after June 2023 firmware."
+        }
+      ],
+      "physicalButtons": "Yes - assignable multi-function button(s) on earbuds",
+      "configurableInApp": true,
+      "notes": "Touch sensor on left controls ANC presets by default."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "aptX Adaptive",
+        "aptX",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "5.8 mm drivers; 10 Hz-40 kHz; Snapdragon Sound; 360 Reality Audio."
+    },
+    "appOnlyFeatures": [
+      "low-latency mode",
+      "EQ save to headphones",
+      "L/R volume balance",
+      "codec selection",
+      "voice assistant selection",
+      "touch/button assignment"
+    ],
+    "featureDeltaFromPrevious": [
+      "First ATH-TWX model: deep-UV sterilisation case, Snapdragon Sound and 360 Reality Audio"
+    ],
+    "sources": [
+      {
+        "url": "https://www.audio-technica.com/en-us/ath-twx9",
+        "type": "official-product",
+        "title": "ATH-TWX9 Wireless Earbuds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.audio-technica.co.jp/document/ATH-TWX9/en/Content/True-Wireless/ATH-TWX9/specifications/specifications.html",
+        "type": "official-manual",
+        "title": "ATH-TWX9 specifications",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on battery figure not published separately.",
+      "Battery UI layout (split buds, separate case, last-known case when buds out) inferred from app behaviour, not verified from official screenshots.",
+      "EQ band count not published.",
+      "Wear detection not documented."
+    ],
+    "notes": "Flagship 2022 TWS. Case has deep-UV LEDs and Qi charging.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Audio-Technica",
+    "companySlug": "audio-technica",
+    "family": "ATH-TWX",
+    "model": "ATH-TWX7",
+    "slug": "ath-twx7",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Audio-Technica Connect (A-T Connect)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Adds Natural/Noise-Reduction call modes, private timer, ambience presets and EQ."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6.5,
+      "caseHours": 13.5,
+      "chargingIndicators": "Case LED; app readout; USB-C; no wireless charging",
+      "notes": "Official: 6.5 h buds + 13.5 h case = 20 h total. ANC-on figure not separately published.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 13.5
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "hear-through",
+        "talk-through"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "Digital hybrid ANC; hear-through and talk-through."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Digital hybrid noise cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Hear-through and talk-through",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint pairing",
+        "availability": "device-only",
+        "notes": "Two devices."
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC 96 kHz/24-bit",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.audio-technica.private-timer",
+        "name": "Private Timer",
+        "availability": "official-app",
+        "notes": "Personal time-management timer."
+      },
+      {
+        "id": "audio.low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "controls.customizable",
+        "name": "Assignable touch controls",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, track skip (assignable)",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ambience mode / voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "LDAC",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "5.8 mm high-resolution drivers carried over from TWX9; 10 Hz-47 kHz."
+    },
+    "appOnlyFeatures": [
+      "Natural/Noise-Reduction call modes",
+      "Private Timer",
+      "low latency",
+      "EQ",
+      "ambience preset selection"
+    ],
+    "featureDeltaFromPrevious": [
+      "LDAC support instead of aptX Adaptive",
+      "Private Timer",
+      "Talk-through",
+      "Lower price than TWX9"
+    ],
+    "sources": [
+      {
+        "url": "https://www.audio-technica.com/en-us/ath-twx7",
+        "type": "official-product",
+        "title": "ATH-TWX7 Wireless Earbuds",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on battery not published.",
+      "Battery UI layout inferred, not screenshot-verified.",
+      "EQ band count and spatial-audio support undocumented."
+    ],
+    "notes": "Mid-tier sibling of TWX9; LDAC instead of Snapdragon Sound.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Audio-Technica",
+    "companySlug": "audio-technica",
+    "family": "ATH-CKS",
+    "model": "ATH-CKS50TW2",
+    "slug": "ath-cks50tw2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Audio-Technica Connect (A-T Connect)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Ambience presets, EQ presets, find-my-headphones, low-latency mode, multifunction button customisation."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 15,
+      "budsHoursNoAnc": 25,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED; app readout; 5 min quick charge = 90 min; Qi wireless charging (charger optional)",
+      "notes": "Official: 25 h buds + 40 h case = 65 h (ANC off); 15 h buds + 25 h case = 40 h (ANC on).",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "hear-through",
+        "talk-through"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Hybrid feedforward + feedback ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid noise cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Hear-through / talk-through",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint pairing",
+        "availability": "device-only",
+        "notes": "Two devices."
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "Bluetooth LE Audio / LC3",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.audio-technica.magnetic-switch",
+        "name": "Magnetic Switch power on/off",
+        "availability": "device-only",
+        "notes": "Join magnets to power off, separate to power on."
+      },
+      {
+        "id": "vendor.audio-technica.soundscape",
+        "name": "Soundscape function",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "controls.customizable",
+        "name": "Customisable multifunction button",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple press",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ambience cycle / voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Multifunction button on each earbud",
+      "configurableInApp": true,
+      "notes": "Button-based, not touch."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "LC3",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "9 mm proprietary drivers; 20 Hz-20 kHz; no LDAC."
+    },
+    "appOnlyFeatures": [
+      "EQ presets",
+      "ambience presets",
+      "find headphones",
+      "low latency",
+      "button customisation",
+      "Soundscape"
+    ],
+    "featureDeltaFromPrevious": [
+      "Battery up from 20 h to 25 h per charge and 50 h to 65 h total (ANC off)",
+      "Magnetic Switch power control",
+      "LE Audio/LC3",
+      "Talk-through"
+    ],
+    "sources": [
+      {
+        "url": "https://www.audio-technica.com/en-us/ath-cks50tw2",
+        "type": "official-product",
+        "title": "ATH-CKS50TW2 Wireless Earbuds",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Battery UI layout inferred, not screenshot-verified.",
+      "Custom EQ band count not published.",
+      "Wear detection not documented."
+    ],
+    "notes": "Battery-life flagship of the CKS line.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Audio-Technica",
+    "companySlug": "audio-technica",
+    "family": "ATH-CKS",
+    "model": "ATH-CKS50TW",
+    "slug": "ath-cks50tw",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Audio-Technica Connect (A-T Connect)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC/ambience, EQ, low-latency and button customisation."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 10,
+      "budsHoursNoAnc": 20,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; app readout; USB-C; Qi optional",
+      "notes": "Official: 20 h buds / 10 h with ANC; 50 h total with case.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "hear-through"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Hybrid ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid noise cancelling",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Hear-through",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "controls.customizable",
+        "name": "Customisable buttons",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC / ambience",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Multifunction button on each earbud",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "9 mm drivers."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "button customisation",
+      "low latency"
+    ],
+    "featureDeltaFromPrevious": [
+      "First CKS true-wireless ANC model"
+    ],
+    "sources": [
+      {
+        "url": "https://www.audio-technica.com/en-us/headphones/type/truly-wireless",
+        "type": "official-product",
+        "title": "Audio-Technica truly wireless lineup",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Model page no longer live on the US site; specs taken from launch documentation/retailer sheets.",
+      "Battery UI layout inferred.",
+      "Custom EQ band count unknown."
+    ],
+    "notes": "Predecessor of CKS50TW2.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Audio-Technica",
+    "companySlug": "audio-technica",
+    "family": "ATH-SQ",
+    "model": "ATH-SQ1TW2",
+    "slug": "ath-sq1tw2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Audio-Technica Connect (A-T Connect)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ and control customisation."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6.5,
+      "caseHours": 13.5,
+      "chargingIndicators": "Case LED; app readout",
+      "notes": "6.5 h buds + 13.5 h case = 20 h total; no ANC.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 13.5
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "controls.customizable",
+        "name": "Customisable touch controls",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "volume / voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "Entry-level SQ series."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "touch customisation",
+      "low latency"
+    ],
+    "featureDeltaFromPrevious": [
+      "Multipoint added",
+      "App support added",
+      "Revised shape and colours"
+    ],
+    "sources": [
+      {
+        "url": "https://www.audio-technica.com/en-us/headphones/type/truly-wireless",
+        "type": "official-product",
+        "title": "Audio-Technica truly wireless lineup",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "US product page not captured; specs from regional pages/retail sheets.",
+      "Battery UI layout inferred.",
+      "EQ band count unknown."
+    ],
+    "notes": "Budget TWS; no ANC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Audio-Technica",
+    "companySlug": "audio-technica",
+    "family": "ATH-M",
+    "model": "ATH-M50xBT2",
+    "slug": "ath-m50xbt2",
+    "generation": "2",
+    "variant": "BT",
+    "releaseYear": 2021,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Audio-Technica Connect (A-T Connect)",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Low-latency mode, EQ, L/R balance, codec selection, voice assistant, firmware updates."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 50,
+      "caseHours": null,
+      "chargingIndicators": "Status LED; app percentage",
+      "notes": "50 h continuous playback; 10 min charge for 3 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC; studio monitor tuning."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": "Two devices."
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "controls.customizable",
+        "name": "Touch sensor for voice assistant",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "play/pause, track skip, volume",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "touch sensor tap",
+          "action": "voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Playback, volume and power buttons on left earcup",
+      "configurableInApp": true,
+      "notes": "Wired 3.5 mm operation possible with power off."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "LDAC",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "45 mm drivers; 15 Hz-28 kHz wired, 5 Hz-40 kHz wireless."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "L/R balance",
+      "codec selection",
+      "low latency",
+      "voice assistant"
+    ],
+    "featureDeltaFromPrevious": [
+      "Multipoint",
+      "LDAC",
+      "A-T Connect app",
+      "USB-C",
+      "Touch voice-assistant sensor"
+    ],
+    "sources": [
+      {
+        "url": "https://www.audio-technica.com/en-us/ath-m50xbt2",
+        "type": "official-product",
+        "title": "ATH-M50xBT2",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "EQ band count not published.",
+      "No official ANC/battery split needed (no ANC)."
+    ],
+    "notes": "Studio-monitor Bluetooth headphone; wired mode supported.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Audio-Technica",
+    "companySlug": "audio-technica",
+    "family": "ATH-S",
+    "model": "ATH-S220BT",
+    "slug": "ath-s220bt",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app; controls and battery are device-only."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 60,
+      "caseHours": null,
+      "chargingIndicators": "Status LED",
+      "notes": "60 h playback; 10 min charge for 3.5 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": "Two devices."
+      },
+      {
+        "id": "connectivity.wired-mode",
+        "name": "Wired 3.5 mm listening",
+        "availability": "device-only",
+        "notes": "Detachable cable."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "play/pause, track skip, volume, calls",
+          "configurableInApp": null,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm drivers."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "60 h battery and multipoint in a budget over-ear"
+    ],
+    "sources": [
+      {
+        "url": "https://www.audio-technica.com/en-us/ath-s220bt",
+        "type": "official-product",
+        "title": "ATH-S220BT",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Exact codec list beyond AAC/SBC not stated on current page."
+    ],
+    "notes": "Budget long-life over-ear.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Audio-Technica",
+    "companySlug": "audio-technica",
+    "family": "ATH-ANC",
+    "model": "ATH-ANC300TW",
+    "slug": "ath-anc300tw",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2019,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No companion app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 4.5,
+      "budsHoursNoAnc": null,
+      "caseHours": 9,
+      "chargingIndicators": "Case LED",
+      "notes": "4.5 h with ANC; 13.5 h total with case.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 9
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Hybrid ANC with three-level switch? No transparency mode documented."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid noise cancelling",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.audio-technica.quick-charge",
+        "name": "Quick charge",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "play/pause, track skip, calls, ANC",
+          "configurableInApp": null,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Button on each earbud",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "5.8 mm drivers."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Audio-Technica's first ANC true-wireless model"
+    ],
+    "sources": [
+      {
+        "url": "https://www.audio-technica.com/en-us/headphones/type/truly-wireless",
+        "type": "official-product",
+        "title": "Audio-Technica truly wireless lineup",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Discontinued; current official page unavailable.",
+      "No app means battery UI cannot be verified (device-only).",
+      "ANC-on/off split and transparency support not fully documented."
+    ],
+    "notes": "Early ANC TWS; no app ecosystem.",
+    "researchedAt": "2026-11-10"
+  }
+]

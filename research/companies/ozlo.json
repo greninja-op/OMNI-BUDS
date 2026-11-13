@@ -1,0 +1,327 @@
+[
+  {
+    "company": "Ozlo",
+    "companySlug": "ozlo",
+    "family": "Sleepbuds",
+    "model": "Ozlo Sleepbuds",
+    "slug": "ozlo-sleepbuds",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Ozlo Sleep",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.ozlo.vanwinkle"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.ozlo.vanwinkle"
+      ],
+      "appVersionObserved": null,
+      "notes": "Android 12+ / iOS 17+ per Ozlo. Sleep sounds, modes, in-ear alarm, sleep sensing and (post-launch) sleep insights."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "live",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 32,
+      "chargingIndicators": "Per-bud LEDs inside the Smart Case; case LEDs; app battery view for right bud, left bud and case.",
+      "notes": "Official: up to 10 h playback per bud; Smart Case holds an additional 32 h. The case is a powered Bluetooth bridge, so its level stays live while the buds are out. Case charges via USB-C.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC. Passive silicone-tip isolation plus adaptive noise-masking audio; snoring is masked, not cancelled."
+    },
+    "features": [
+      {
+        "id": "sleep.masking-sounds",
+        "name": "Sleep sounds and adaptive noise masking",
+        "availability": "both",
+        "notes": "Sounds stored on the buds for phone-free playback."
+      },
+      {
+        "id": "sleep.streaming",
+        "name": "Bluetooth audio streaming",
+        "availability": "both",
+        "notes": "Streams any A2DP source; LE Audio used between case and buds."
+      },
+      {
+        "id": "sleep.in-ear-alarm",
+        "name": "Private in-ear alarm",
+        "availability": "both",
+        "notes": "Works without the phone connected."
+      },
+      {
+        "id": "sleep.sleep-detection",
+        "name": "Sleep detection and auto-switch to masking",
+        "availability": "both",
+        "notes": "Accelerometer in the buds."
+      },
+      {
+        "id": "sleep.phone-free-mode",
+        "name": "Bluetooth-disabled phone-free mode",
+        "availability": "both",
+        "notes": "Plays the stored sleep sound automatically when buds leave the case."
+      },
+      {
+        "id": "sleep.smart-case-sensors",
+        "name": "Smart Case environmental sensors",
+        "availability": "official-app",
+        "notes": "Ambient noise, light and temperature sensing."
+      },
+      {
+        "id": "app.sleep-insights",
+        "name": "Sleep insights",
+        "availability": "official-app",
+        "notes": "Sleep tracking/insights were listed as coming soon at launch and shipped through app updates; original-bud coverage not independently confirmed."
+      }
+    ],
+    "controls": {
+      "types": [],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "No controls on the buds and no case button on the first generation; everything is set in the Ozlo Sleep app."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "LC3"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth Classic A2DP plus Bluetooth 5.3 LE Audio from the Smart Case. No microphone; not for calls."
+    },
+    "appOnlyFeatures": [
+      "sleep sound library",
+      "sleep modes (simple/auto/sensing/timer)",
+      "in-ear alarm scheduling",
+      "environmental insights"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://support.ozlosleep.com/en-US/articles/product-187032",
+        "type": "official-support",
+        "title": "Ozlo Sleepbuds FAQ",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://d1sqdqxcv5ki20.cloudfront.net/images/OzloUserManual_Final.pdf",
+        "type": "official-manual",
+        "title": "Ozlo Sleepbuds user manual",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.ozlo.vanwinkle",
+        "type": "official-app-store",
+        "title": "Ozlo Sleepbuds app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Exact Bluetooth codec support beyond SBC/LE Audio not published.",
+      "Whether every first-generation unit received the later sleep-pattern features is not documented.",
+      "No official battery figure split between masking and streaming."
+    ],
+    "notes": "First-generation Ozlo Sleepbuds, the team that acquired the Bose Sleepbuds technology. Distributed by Ozlo/Drowsy Digital.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Ozlo",
+    "companySlug": "ozlo",
+    "family": "Sleepbuds",
+    "model": "Ozlo Sleepbuds 2",
+    "slug": "ozlo-sleepbuds-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Ozlo Sleep",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.ozlo.vanwinkle"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.ozlo.vanwinkle"
+      ],
+      "appVersionObserved": "2026-10-30 update",
+      "notes": "Adds Sleep Patterns, environmental insights, Blended Audio, custom audio tuning and Find My Sleepbud."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "live",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 14,
+      "caseHours": 42,
+      "chargingIndicators": "Per-bud status LEDs; Smart Case LEDs; app shows right bud, left bud and case plus charging source.",
+      "notes": "Official: up to 14 h playback; Smart Case provides 2-3 additional charges (42 h at three charges). USB-C charging.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC. Passive tips plus adaptive masking; Ozlo explicitly markets 'passive noise cancellation via silicone tips (not ANC)'."
+    },
+    "features": [
+      {
+        "id": "sleep.masking-sounds",
+        "name": "60+ sleep sounds and adaptive masking",
+        "availability": "both",
+        "notes": "Auto-switches to masking when sleep is detected."
+      },
+      {
+        "id": "sleep.streaming",
+        "name": "Bluetooth streaming (A2DP + LE Audio)",
+        "availability": "both",
+        "notes": "Spotify, Calm, Audible, video and any other Bluetooth source."
+      },
+      {
+        "id": "sleep.in-ear-alarm",
+        "name": "Private in-ear alarm",
+        "availability": "both",
+        "notes": "Runs from the buds without the phone."
+      },
+      {
+        "id": "sleep.sleep-patterns",
+        "name": "Sleep Patterns tracking",
+        "availability": "official-app",
+        "notes": "Duration, consistency and efficiency, using bud accelerometer plus case sensors."
+      },
+      {
+        "id": "sleep.environment-insights",
+        "name": "Room noise, light and temperature insights",
+        "availability": "official-app",
+        "notes": "Smart Case sensors."
+      },
+      {
+        "id": "sleep.case-button",
+        "name": "Smart Case button controls",
+        "availability": "device-only",
+        "notes": "Start/pause sleep sound, snooze alarm and playback without the phone."
+      },
+      {
+        "id": "sleep.phone-free-mode",
+        "name": "Bluetooth-disabled mode",
+        "availability": "both",
+        "notes": "Stored sleep sound plays with radios off."
+      },
+      {
+        "id": "app.find-my-sleepbud",
+        "name": "Find My Sleepbud",
+        "availability": "official-app",
+        "notes": "Bluetooth proximity and sound."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press (Smart Case button)",
+          "action": "start/pause sleep sound, snooze alarm, playback",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "One multi-function button on the Smart Case; no controls on the buds",
+      "configurableInApp": false,
+      "notes": "Designed for bedside use without opening the app."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "LC3"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Custom Audio Tuning and Blended Audio (mix streaming with sleep sound). No microphone; sleep-only device."
+    },
+    "appOnlyFeatures": [
+      "Sleep Patterns",
+      "environmental insights",
+      "Blended Audio",
+      "custom audio tuning",
+      "find my Sleepbud",
+      "sleep modes and timer"
+    ],
+    "featureDeltaFromPrevious": [
+      "14 h battery versus 10 h",
+      "Sleep Patterns and environmental insights",
+      "Smart Case button",
+      "Blended Audio and custom tuning",
+      "Find My Sleepbud"
+    ],
+    "sources": [
+      {
+        "url": "https://ozlosleep.com/products/sleepbuds",
+        "type": "official-product",
+        "title": "Ozlo Sleepbuds 2 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://ozlosleep.com/pages/app",
+        "type": "official-product",
+        "title": "Ozlo Sleep app features",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.ozlo.vanwinkle",
+        "type": "official-app-store",
+        "title": "Ozlo Sleepbuds app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Case-to-buds radio is LE Audio; phone-side codec list beyond A2DP/LEA not published.",
+      "Number of case charges is stated as 2-3, not a single exact figure.",
+      "No official ANC or passive attenuation dB rating."
+    ],
+    "notes": "Second-generation Ozlo Sleepbuds. Ozlo's own comparison table quotes the Soundcore A30 at 2.4 g / 10 h, which conflicts with Soundcore's 3 g / 9-10 h claims.",
+    "researchedAt": "2026-11-10"
+  }
+]

@@ -73,12 +73,7 @@ object OmniBudsQuickNotificationManager {
     ): Notification {
         ensureChannel(context)
 
-        val rawTitle = deviceName?.takeIf { it.isNotBlank() } ?: "realme Buds T300"
-        val title = if (rawTitle.equals("realme", ignoreCase = true) || rawTitle.equals("OmniBuds", ignoreCase = true)) {
-            "realme Buds T300"
-        } else {
-            rawTitle
-        }
+        val title = deviceName?.takeIf { it.isNotBlank() } ?: "OmniBuds"
         val isAnc = currentMode.equals("ANC", ignoreCase = true)
         val isTrans = currentMode.equals("TRANSPARENCY", ignoreCase = true)
         val isAmbient = currentMode.equals("OFF", ignoreCase = true) || currentMode.isBlank()
@@ -101,18 +96,21 @@ object OmniBudsQuickNotificationManager {
             )
         } else null
 
-        val ancTarget = if (isAnc) "OFF" else "ANC"
-        val transTarget = if (isTrans) "OFF" else "TRANSPARENCY"
-
-        val pAnc = createActionPendingIntent(context, deviceAddress, ancTarget, 101)
+        val pAnc = createActionPendingIntent(context, deviceAddress, "ANC", 101)
         val pAmbient = createActionPendingIntent(context, deviceAddress, "OFF", 102)
-        val pTrans = createActionPendingIntent(context, deviceAddress, transTarget, 103)
+        val pTrans = createActionPendingIntent(context, deviceAddress, "TRANSPARENCY", 103)
         val pReconnect = createCommandPendingIntent(context, ACTION_RECONNECT, deviceAddress, 201)
         val pDisconnect = createCommandPendingIntent(context, ACTION_DISCONNECT, deviceAddress, 202)
 
         // Collapsed RemoteViews
         val statusSubtitle = formatStatusSubtitle(modeStr)
-        val collapsedSubtitle = formatCollapsedStatusSubtitle(modeStr)
+        val collapsedSubtitle = formatCollapsedStatusSubtitle(
+            modeStr = modeStr,
+            left = leftBattery,
+            right = rightBattery,
+            case = caseBattery,
+            aggregate = batteryPercent,
+        )
         val collapsed = android.widget.RemoteViews(context.packageName, R.layout.notification_custom_collapsed)
         collapsed.setTextViewText(R.id.notif_device_name, title)
         collapsed.setTextViewText(R.id.notif_status_subtitle, collapsedSubtitle)
@@ -137,8 +135,8 @@ object OmniBudsQuickNotificationManager {
         // Battery Telemetry: L, R, Case and dots in white, percentage in dynamic green/orange/red
         if (leftBattery != null || rightBattery != null) {
             expanded.setViewVisibility(R.id.notif_battery_row, View.VISIBLE)
-            expanded.setTextViewText(R.id.notif_battery_left, formatBatteryTelemetry("L", leftBattery, showLeadingDot = false, isDocked = (leftBattery == null)))
-            expanded.setTextViewText(R.id.notif_battery_right, formatBatteryTelemetry("R", rightBattery, showLeadingDot = true, isDocked = (rightBattery == null)))
+            expanded.setTextViewText(R.id.notif_battery_left, formatBatteryTelemetry("L", leftBattery, showLeadingDot = false))
+            expanded.setTextViewText(R.id.notif_battery_right, formatBatteryTelemetry("R", rightBattery, showLeadingDot = true))
 
             if (caseBattery != null && caseBattery > 0) {
                 expanded.setViewVisibility(R.id.notif_battery_case, View.VISIBLE)
@@ -224,9 +222,9 @@ object OmniBudsQuickNotificationManager {
     private fun getBatteryPercentageColor(percent: Int?): String {
         val p = percent ?: 0
         return when {
-            p > 50 -> "#22C55E" // Vibrant Battery Green
-            p > 20 -> "#FF9800" // Battery Orange
-            else -> "#FF2222"   // Alert Bright Red
+            p > 50 -> "#22E55E" // 100–51% green
+            p > 20 -> "#FF9800" // 50–21% orange
+            else -> "#FF2222"   // 20–0% red
         }
     }
 
@@ -234,11 +232,11 @@ object OmniBudsQuickNotificationManager {
         label: String,
         percent: Int?,
         showLeadingDot: Boolean = false,
-        isDocked: Boolean = false,
     ): CharSequence {
         val dotPrefix = if (showLeadingDot) "<font color='#FFFFFF'>•&nbsp;&nbsp;</font>" else ""
-        val html = if (isDocked || percent == null) {
-            "$dotPrefix<font color='#FFFFFF'>$label: </font><font color='#B0B3C0'>In Case</font>"
+        val html = if (percent == null) {
+            // A missing component reading is unknown, not "in the case".
+            "$dotPrefix<font color='#FFFFFF'>$label: </font><font color='#B0B3C0'>Unknown</font>"
         } else {
             val color = getBatteryPercentageColor(percent)
             "$dotPrefix<font color='#FFFFFF'>$label: </font><font color='$color'><b>$percent%</b></font>"
@@ -251,12 +249,37 @@ object OmniBudsQuickNotificationManager {
         }
     }
 
-    private fun formatCollapsedStatusSubtitle(modeStr: String): CharSequence {
-        val html = if (modeStr == "Disconnected") {
+    private fun formatCollapsedStatusSubtitle(
+        modeStr: String,
+        left: Int? = null,
+        right: Int? = null,
+        case: Int? = null,
+        aggregate: Int? = null,
+    ): CharSequence {
+        val base = if (modeStr == "Disconnected") {
             "<font color='#FF5555'>• Disconnected</font>"
         } else {
             "<font color='#E5FF36'>• $modeStr</font>"
         }
+        val battery = if (modeStr == "Disconnected") {
+            ""
+        } else {
+            buildString {
+                if (left != null) {
+                    append(" <font color='${getBatteryPercentageColor(left)}'>L$left%</font>")
+                }
+                if (right != null) {
+                    append(" <font color='${getBatteryPercentageColor(right)}'>R$right%</font>")
+                }
+                if (case != null && case > 0) {
+                    append(" <font color='${getBatteryPercentageColor(case)}'>C$case%</font>")
+                }
+                if (left == null && right == null && aggregate != null && aggregate in 1..100) {
+                    append(" <font color='#FFFFFF'>·</font> <font color='${getBatteryPercentageColor(aggregate)}'>$aggregate%</font>")
+                }
+            }
+        }
+        val html = base + battery
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY)
         } else {
@@ -330,7 +353,7 @@ class QuickNotificationActionReceiver : BroadcastReceiver() {
         if (intent.action == OmniBudsQuickNotificationManager.ACTION_TEST_NOTIFICATION) {
             OmniBudsQuickNotificationManager.testModeActive = true
             val address = intent.getStringExtra(OmniBudsQuickNotificationManager.EXTRA_ADDRESS) ?: "74:D7:13:C4:FF:EF"
-            val name = intent.getStringExtra("device_name") ?: "realme Buds T300"
+            val name = intent.getStringExtra("device_name") ?: "OmniBuds"
             val mode = intent.getStringExtra(OmniBudsQuickNotificationManager.EXTRA_MODE) ?: "ANC"
             OmniBudsQuickNotificationManager.updateNotification(
                 context = context,
@@ -348,7 +371,19 @@ class QuickNotificationActionReceiver : BroadcastReceiver() {
 
         when (intent.action) {
             OmniBudsQuickNotificationManager.ACTION_NOISE_CONTROL -> {
-                val mode = intent.getStringExtra(OmniBudsQuickNotificationManager.EXTRA_MODE) ?: return
+                val requestedMode = intent.getStringExtra(OmniBudsQuickNotificationManager.EXTRA_MODE) ?: return
+                // Same rule as the app buttons: tapping the active ANC/Transparency button
+                // switches to Ambient, but only where the buds report their real mode.
+                val mode = if (
+                    (requestedMode.equals("ANC", ignoreCase = true) ||
+                        requestedMode.equals("TRANSPARENCY", ignoreCase = true)) &&
+                    UniversalTwsEngine.hasVerifiedModeReadback(address) &&
+                    UniversalTwsEngine.confirmedAncMode.value[address].equals(requestedMode, ignoreCase = true)
+                ) {
+                    "OFF"
+                } else {
+                    requestedMode
+                }
                 // 1. Immediate visual feedback in notification panel
                 OmniBudsQuickNotificationManager.updateNotification(
                     context = context,

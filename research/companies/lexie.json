@@ -1,0 +1,982 @@
+[
+  {
+    "company": "Lexie",
+    "companySlug": "lexie",
+    "family": "Lexie",
+    "model": "Lexie Lumen",
+    "slug": "lexie-lumen",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Lexie",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.hearxgroup.lexie"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.hearxgroup.lexie"
+      ],
+      "appVersionObserved": "app store listing updated 2026-09-01",
+      "notes": "In-app hearing test, six environments, volume and battery monitoring. Lexie's own store notice says the app is removed on 2026-10-08 and will stop receiving updates/support."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 125,
+      "caseHours": null,
+      "chargingIndicators": "App battery monitor and low-battery voice prompt; no charging case (carry case only).",
+      "notes": "Size 312 zinc-air cells, estimated 5-8 days / 125 h at 14 h/day. Each aid has its own cell, so the app should show per-ear status; the exact split UI is not documented.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC. Noise reduction and feedback cancellation only."
+    },
+    "features": [
+      {
+        "id": "hearing.self-fit",
+        "name": "In-app hearing test and self-fit",
+        "availability": "official-app",
+        "notes": "Automatically programs the aids from the test result."
+      },
+      {
+        "id": "hearing.programs",
+        "name": "Six preset listening environments",
+        "availability": "both",
+        "notes": "Adjusted in the app; presets on the device."
+      },
+      {
+        "id": "hearing.noise-reduction",
+        "name": "Noise reduction and feedback cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "hearing.telecoil",
+        "name": "Telecoil",
+        "availability": "device-only",
+        "notes": "For theatres, transit and looped venues."
+      },
+      {
+        "id": "hearing.companion-mic",
+        "name": "Optional companion microphone",
+        "availability": "device-only",
+        "notes": "Streams speech via Bluetooth to the aids; accessory sold separately."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "volume rocker",
+          "action": "volume up/down",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "program button",
+          "action": "cycle environment programs",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Volume rocker and program button on each BTE aid",
+      "configurableInApp": false,
+      "notes": "Battery door doubles as on/off."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "No music or call streaming. Bluetooth Low Energy and a proprietary link for app control; 16-channel WDRC, 200-7000 Hz."
+    },
+    "appOnlyFeatures": [
+      "in-app hearing test",
+      "six environments",
+      "volume and treble/bass",
+      "battery monitor",
+      "remote support"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://lexiehearing.com/us/lexie-lumen-hearing-aid",
+        "type": "official-product",
+        "title": "Lexie Lumen product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.lexiehearing.com/documents/user-manual/Lexie_Lumen_User_Manual.pdf",
+        "type": "official-manual",
+        "title": "Lexie Lumen user manual",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.hearxgroup.lexie",
+        "type": "official-app-store",
+        "title": "Lexie app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "App battery layout (split vs combined) not documented beyond 'battery level indicator'.",
+      "No official case because Lumen ships without a charger.",
+      "App removal on 2026-10-08 means future re-pairing/self-fit is at risk."
+    ],
+    "notes": "BTE self-fitting OTC aid with replaceable 312 cells and telecoil. Bluetooth is for app control and the optional companion mic only, not for calls or music.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Lexie",
+    "companySlug": "lexie",
+    "family": "Lexie B",
+    "model": "Lexie B1 Powered by Bose",
+    "slug": "lexie-b1",
+    "generation": "1",
+    "variant": "B1",
+    "releaseYear": 2022,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Lexie",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.hearxgroup.lexie"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.hearxgroup.lexie"
+      ],
+      "appVersionObserved": "app store listing updated 2026-09-01",
+      "notes": "Self-fitting, volume, treble/bass and program control. App removal date 2026-10-08."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 56,
+      "caseHours": null,
+      "chargingIndicators": "App battery status and low-battery prompt; carry case only, no charger.",
+      "notes": "Size 312 zinc-air, up to 4 days at 14 h/day (56 h). No rechargeable case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "hearing.self-fit",
+        "name": "Self-fitting via Lexie app",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "hearing.programs",
+        "name": "Preset and custom environments",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "hearing.noise-reduction",
+        "name": "Noise reduction and feedback cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "hearing.treble-bass",
+        "name": "Treble and bass adjustment",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "volume rocker",
+          "action": "volume",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "program button",
+          "action": "program change",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "On-aid buttons",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "No call or music streaming; BLE app control only."
+    },
+    "appOnlyFeatures": [
+      "self-fit",
+      "programs",
+      "treble/bass",
+      "battery status"
+    ],
+    "featureDeltaFromPrevious": [
+      "Receiver-in-canal design versus Lumen BTE",
+      "Self-fitting with Lexie app"
+    ],
+    "sources": [
+      {
+        "url": "https://www.seniorliving.org/hearing-aids/lexie/",
+        "type": "reputable-secondary",
+        "title": "Lexie model comparison and B1 battery",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.hearxgroup.lexie",
+        "type": "official-app-store",
+        "title": "Lexie app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "No current official B1 product page found; battery and feature set from secondary comparison.",
+      "App battery layout not documented.",
+      "B1 is discontinued; exact release year and case contents need an archived Lexie page."
+    ],
+    "notes": "Early Lexie/Bose RIC model. Bluetooth for app adjustment only; no streaming. Kept because it is a distinct generation in the Lexie line.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Lexie",
+    "companySlug": "lexie",
+    "family": "Lexie B",
+    "model": "Lexie B2 Powered by Bose",
+    "slug": "lexie-b2",
+    "generation": "2",
+    "variant": "B2",
+    "releaseYear": 2022,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Lexie",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.hearxgroup.lexie"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.hearxgroup.lexie"
+      ],
+      "appVersionObserved": "app store listing updated 2026-09-01",
+      "notes": "Self-fit and control; only B2 units manufactured after March 2023 gained call streaming via firmware."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 18,
+      "caseHours": 18,
+      "chargingIndicators": "Lights inside the charging case; app battery indicator.",
+      "notes": "Up to 18 h per charge, with one additional case charge (36 h total). Charging about 3 h for aids and case.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 18
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "No ANC. Wind-noise suppression and adaptive noise reduction are hearing-aid features."
+    },
+    "features": [
+      {
+        "id": "hearing.self-fit",
+        "name": "Self-fitting via Lexie app",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "hearing.programs",
+        "name": "Four presets plus up to ten custom environments",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "hearing.noise-reduction",
+        "name": "Active adaptive noise reduction",
+        "availability": "both",
+        "notes": "Includes impulse noise reduction."
+      },
+      {
+        "id": "hearing.directional-microphones",
+        "name": "Dual directional microphones",
+        "availability": "both",
+        "notes": "Omni and fixed-directional modes."
+      },
+      {
+        "id": "telephony.calls",
+        "name": "iPhone call streaming",
+        "availability": "both",
+        "notes": "MFi; only post-March-2023 units with firmware 1.13.14+."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "World Volume rocker",
+          "action": "volume up/down",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "long press World Volume down",
+          "action": "power on/off",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "World Volume rocker on each aid; program changes app-only",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "MFi call streaming only; no Android streaming and no hands-free calling. Music possible but not optimised."
+    },
+    "appOnlyFeatures": [
+      "self-fit",
+      "environment programming",
+      "World Volume",
+      "treble/bass",
+      "battery status"
+    ],
+    "featureDeltaFromPrevious": [
+      "Rechargeable RIC versus B1's 312 cell",
+      "iPhone call streaming (later production)",
+      "In-app customisation expanded"
+    ],
+    "sources": [
+      {
+        "url": "https://www.hearingtracker.com/hearing-aids/lexie-powered-by-bose",
+        "type": "reputable-secondary",
+        "title": "Lexie B1/B2/B2 Plus comparison",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://lexiehearing.com/us/lexie-b2-plus-powered-by-bose-hearing-aids",
+        "type": "official-product",
+        "title": "Lexie B2 Plus page (B2 streaming notes)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.hearxgroup.lexie",
+        "type": "official-app-store",
+        "title": "Lexie app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Exact case charge count for B2 not confirmed on a current official page.",
+      "Codec list not published.",
+      "Android streaming not supported; no hands-free calls.",
+      "B2 feature row for telecoil is marked absent because the B2 Plus datasheet lists no telecoil."
+    ],
+    "notes": "Rechargeable RIC generation between B1 and B2 Plus. Only late-production units stream iPhone calls; earlier units are app-control only.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Lexie",
+    "companySlug": "lexie",
+    "family": "Lexie B",
+    "model": "Lexie B2 Plus Powered by Bose",
+    "slug": "lexie-b2-plus",
+    "generation": "2",
+    "variant": "B2 Plus",
+    "releaseYear": 2024,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Lexie",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.hearxgroup.lexie"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.hearxgroup.lexie"
+      ],
+      "appVersionObserved": "app store listing updated 2026-09-01",
+      "notes": "In-app hearing test, self-fit, environments, equalizer and battery indicator. App removal date 2026-10-08."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 18,
+      "caseHours": 18,
+      "chargingIndicators": "Lights inside the charging case (blinking = charging, solid = full); app battery indicator.",
+      "notes": "18 h per charge; compact case holds one extra charge (36 h total). 3 h charge for aids and case.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 18
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "No ANC. Adaptive noise reduction, impulse noise reduction and wind suppression."
+    },
+    "features": [
+      {
+        "id": "hearing.self-fit",
+        "name": "In-app hearing test and auto-fit",
+        "availability": "official-app",
+        "notes": "Optional test; manual bass/treble adjustment also possible."
+      },
+      {
+        "id": "hearing.programs",
+        "name": "Four presets plus up to ten custom environments",
+        "availability": "both",
+        "notes": "Fifth preset appears after the in-situ test."
+      },
+      {
+        "id": "hearing.noise-reduction",
+        "name": "Adaptive noise reduction",
+        "availability": "both",
+        "notes": "Includes impulse noise reduction."
+      },
+      {
+        "id": "hearing.directional-microphones",
+        "name": "Dual directional microphones",
+        "availability": "both",
+        "notes": "Omni and fixed directional."
+      },
+      {
+        "id": "telephony.calls",
+        "name": "iOS and Android call streaming",
+        "availability": "both",
+        "notes": "Streaming designed for calls; music possible but not optimal."
+      },
+      {
+        "id": "app.remote-support",
+        "name": "Lexie Expert remote support",
+        "availability": "official-app",
+        "notes": "Video, chat and phone support."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "World Volume rocker",
+          "action": "volume up/down (synchronised)",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "long press World Volume down",
+          "action": "power on/off",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "World Volume rocker; no program button (programs via app only)",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth call streaming on iOS and Android (ASHA-dependent). No hands-free calling; music streaming not optimised."
+    },
+    "appOnlyFeatures": [
+      "in-app hearing test",
+      "environment programming",
+      "World Volume",
+      "treble/bass and sound balance",
+      "microphone directionality",
+      "mute",
+      "battery status"
+    ],
+    "featureDeltaFromPrevious": [
+      "In-app hearing test versus B2",
+      "Android call streaming in addition to iPhone",
+      "Compact charging case included",
+      "IP57"
+    ],
+    "sources": [
+      {
+        "url": "https://lexiehearing.com/us/lexie-b2-plus-powered-by-bose-hearing-aids",
+        "type": "official-product",
+        "title": "Lexie B2 Plus product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://m.media-amazon.com/images/I/81gbq-U1lOL.pdf",
+        "type": "official-manual",
+        "title": "Lexie B2 Plus technical datasheet",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.hearxgroup.lexie",
+        "type": "official-app-store",
+        "title": "Lexie app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Codec list not published.",
+      "Exact split-vs-combined battery UI not documented; datasheet only says battery level indicator is present.",
+      "Streaming compatibility varies by Android device (ASHA)."
+    ],
+    "notes": "The mainstream Lexie RIC: 18 h, one case charge, in-app test, iOS/Android call streaming. No ANC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Lexie",
+    "companySlug": "lexie",
+    "family": "Lexie B",
+    "model": "Lexie B3 Powered by Bose",
+    "slug": "lexie-b3",
+    "generation": "3",
+    "variant": "B3",
+    "releaseYear": 2026,
+    "formFactor": "other",
+    "officialApp": {
+      "name": "Lexie",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.hearxgroup.lexie"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.hearxgroup.lexie"
+      ],
+      "appVersionObserved": "app store listing updated 2026-09-01",
+      "notes": "Automatic programming from the in-app test, 4 environments, 2 streaming programs, 3-band equalizer and transparency. App removal date 2026-10-08."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 32,
+      "caseHours": 96,
+      "chargingIndicators": "Status lights inside the case; app battery indicator. 3 h charge for aids and case.",
+      "notes": "32 h per charge; case holds three extra charges (128 h total). Low-battery voice prompt at 10%.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 96
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "No ANC. Automatic Sound Focus and noise management are hearing-aid processing; own-voice and wind management included."
+    },
+    "features": [
+      {
+        "id": "hearing.self-fit",
+        "name": "In-app hearing test with automatic programming",
+        "availability": "official-app",
+        "notes": "Test results auto-program all four environments."
+      },
+      {
+        "id": "hearing.sound-focus",
+        "name": "Automatic Sound Focus",
+        "availability": "device-only",
+        "notes": "Dual microphones steer toward speech and reduce surrounding noise."
+      },
+      {
+        "id": "hearing.programs",
+        "name": "Four environments plus two streaming programs",
+        "availability": "both",
+        "notes": "Everywhere, Natural, Focused and more."
+      },
+      {
+        "id": "hearing.noise-reduction",
+        "name": "Noise, wind and feedback management",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.streaming",
+        "name": "Universal Bluetooth music and media streaming",
+        "availability": "both",
+        "notes": "Bluetooth 5.3 Classic + LE."
+      },
+      {
+        "id": "telephony.calls",
+        "name": "Hands-free calls",
+        "availability": "both",
+        "notes": "iOS and Android."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Streaming transparency control",
+        "availability": "official-app",
+        "notes": "Four levels of surrounding-sound mix while streaming."
+      },
+      {
+        "id": "connectivity.multi-device",
+        "name": "Eight-device pairing",
+        "availability": "device-only",
+        "notes": "One active connection at a time."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "control buttons",
+          "action": "volume, accept/end calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "button press",
+          "action": "program change",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Buttons on the back of each RIC aid",
+      "configurableInApp": true,
+      "notes": "No touch controls."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.3 with Classic and BLE; hands-free calling and media streaming. Exact codecs and multipoint not published. IP68."
+    },
+    "appOnlyFeatures": [
+      "hearing test",
+      "environment programming",
+      "streaming equalizer",
+      "call clarity",
+      "transparency",
+      "battery status"
+    ],
+    "featureDeltaFromPrevious": [
+      "32 h battery versus 18 h on B2 Plus",
+      "128 h total with case",
+      "Bluetooth 5.3 Classic + LE with universal iOS/Android streaming",
+      "Hands-free calls",
+      "Automatic Sound Focus",
+      "IP68"
+    ],
+    "sources": [
+      {
+        "url": "https://lexiehearing.com/documents/user-manual/lexie-b3/Lexie_B3_User_Manual_Part_02.pdf",
+        "type": "official-manual",
+        "title": "Lexie B3 user manual part 2",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://lexiehearing.com/documents/brochures/lexie-comparison-brochure.pdf",
+        "type": "official-product",
+        "title": "Lexie comparison brochure",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.hearingtracker.com/news/lexie-launces-b3-hearing-aids-powered-by-bose",
+        "type": "reputable-secondary",
+        "title": "Lexie B3 launch details",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Codec list not published.",
+      "Multipoint not supported (one active device at a time) but the app does not document a multipoint toggle.",
+      "App removal on 2026-10-08 limits future programming."
+    ],
+    "notes": "Lexie's 2026 flagship RIC: longest battery in the line, universal Bluetooth streaming and hands-free calls. Sold at $999.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Lexie",
+    "companySlug": "lexie",
+    "family": "Lexie H",
+    "model": "Lexie H1 Hearing Buds",
+    "slug": "lexie-h1-hearing-buds",
+    "generation": "1",
+    "variant": "H1",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Lexie",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.hearxgroup.lexie"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.hearxgroup.lexie"
+      ],
+      "appVersionObserved": "app store listing updated 2026-09-01",
+      "notes": "Four presets, background-noise management, treble/mid/bass, touch customisation and battery status. App removal date 2026-10-08."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9,
+      "caseHours": 36,
+      "chargingIndicators": "Per-bud status lights; case LED; app battery indicator. 10-min quick charge gives 3 h hearing / 2 h streaming.",
+      "notes": "9 h hearing-aid mode / 6.5 h streaming; case holds four extra charges (45 h total).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 36
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "ANC and Transparency are available while streaming; Lexie does not publish dB depth."
+    },
+    "features": [
+      {
+        "id": "hearing.self-fit",
+        "name": "Self-fitting hearing aid",
+        "availability": "official-app",
+        "notes": "Four preset programs tuned from the app."
+      },
+      {
+        "id": "hearing.programs",
+        "name": "Four preset hearing programs",
+        "availability": "both",
+        "notes": "Switchable by touch or app."
+      },
+      {
+        "id": "hearing.noise-reduction",
+        "name": "Background-noise management",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.anc",
+        "name": "Streaming ANC",
+        "availability": "both",
+        "notes": "Primarily for streaming; transparency also available."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.streaming",
+        "name": "Bluetooth music and media streaming",
+        "availability": "both",
+        "notes": "Any Bluetooth source; iOS and Android."
+      },
+      {
+        "id": "telephony.calls",
+        "name": "Hands-free calls",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "controls.touch-custom",
+        "name": "Configurable touch control",
+        "availability": "official-app",
+        "notes": "Answer calls, switch programs/modes."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause, answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "change program or mode",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "touch and hold both buds 5 s",
+          "action": "pairing",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Pairing button in the charging case",
+      "configurableInApp": true,
+      "notes": "Touch sensor on each hearing bud."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth Classic 5.3 + BLE 5.3. Music and call streaming; 200-7500 Hz amplification. IP54."
+    },
+    "appOnlyFeatures": [
+      "four presets",
+      "background-noise management",
+      "treble/mid/bass",
+      "touch customisation",
+      "battery status"
+    ],
+    "featureDeltaFromPrevious": [
+      "First earbud-style Lexie with ANC and transparency",
+      "Universal Bluetooth streaming plus hands-free calls",
+      "Rechargeable case with four extra charges",
+      "$299 entry price"
+    ],
+    "sources": [
+      {
+        "url": "https://lexiehearing.com/documents/Lexie-H1-Press-Release-Oct-21-2025.pdf",
+        "type": "official-product",
+        "title": "Lexie H1 Hearing Buds press release",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://lexiehearing.com/documents/user-manual/Lexie_H1_User_Manual_Part_02.pdf",
+        "type": "official-manual",
+        "title": "Lexie H1 user manual part 2",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.hearxgroup.lexie",
+        "type": "official-app-store",
+        "title": "Lexie app on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC/transparency depth not published.",
+      "Codec list not published.",
+      "No official runtime with ANC on (9 h is hearing-aid mode).",
+      "App removal on 2026-10-08 limits future app-based changes."
+    ],
+    "notes": "Lexie's $299 earbud-style OTC aid, launched October 2025. The clearest example in this category of a hearing aid doubling as a normal Bluetooth earbud.",
+    "researchedAt": "2026-11-10"
+  }
+]

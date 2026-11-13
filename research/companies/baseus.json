@@ -1,0 +1,1723 @@
+[
+  {
+    "company": "Baseus",
+    "companySlug": "baseus",
+    "family": "Bowie",
+    "model": "Baseus Bowie MA10",
+    "slug": "baseus-bowie-ma10",
+    "generation": "MA10",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Baseus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.baseus.intelligent"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.baseus.intelligent"
+      ],
+      "appVersionObserved": null,
+      "notes": "Baseus app with EQ, ANC and control customization."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 140,
+      "chargingIndicators": "10 minutes = 2 hours.",
+      "notes": "Official 8 h single charge / 140 h with case, ANC off at 70% volume. The 140 h case claim is unusually large and needs verification. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 140
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 48,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC up to -48 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "charging.fast",
+        "name": "Baseus Rapid Charge",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Bluetooth 5.3; IPX5."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "140 h case battery claim"
+    ],
+    "sources": [
+      {
+        "url": "https://www.baseus.com/products/bowie-ma10-tws-wireless-earbuds",
+        "type": "official-product",
+        "title": "Baseus Bowie MA10 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC-on hours",
+      "140 h claim verification",
+      "Codec list",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": "The case is unusually large to support the 140 h claim.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Baseus",
+    "companySlug": "baseus",
+    "family": "Bowie",
+    "model": "Baseus Bowie M2 Plus",
+    "slug": "baseus-bowie-m2-plus",
+    "generation": "M2",
+    "variant": "Plus",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Baseus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.baseus.intelligent"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.baseus.intelligent"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 30,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 30 h total with case. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 42,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC depth approximate."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "Low-latency game mode",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Bluetooth 5.3."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "game mode"
+    ],
+    "featureDeltaFromPrevious": [
+      "M2 Plus adds ANC over base M2"
+    ],
+    "sources": [
+      {
+        "url": "https://www.baseus.com/products/bowie-m2-plus-tws-wireless-earbuds",
+        "type": "official-product",
+        "title": "Baseus Bowie M2 Plus product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Per-bud hours",
+      "ANC dB",
+      "Codec list",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Baseus",
+    "companySlug": "baseus",
+    "family": "Bowie",
+    "model": "Baseus Bowie M2s",
+    "slug": "baseus-bowie-m2s",
+    "generation": "M2",
+    "variant": "s",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Baseus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.baseus.intelligent"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.baseus.intelligent"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6.5,
+      "caseHours": 25,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 6.5 h/25 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 42,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC depth approximate."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Bluetooth 5.3."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "M2s mid-tier ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.baseus.com/collections/tws-earbuds",
+        "type": "official-product",
+        "title": "Baseus TWS earbuds collection",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery approximate",
+      "ANC dB",
+      "Dedicated product page not captured",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Baseus",
+    "companySlug": "baseus",
+    "family": "Bowie",
+    "model": "Baseus Bowie WM02 Plus",
+    "slug": "baseus-bowie-wm02-plus",
+    "generation": "WM02",
+    "variant": "Plus",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Baseus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.baseus.intelligent"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.baseus.intelligent"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 25,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 6 h/25 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 42,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC depth approximate."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Plus variant of WM02"
+    ],
+    "sources": [
+      {
+        "url": "https://www.baseus.com/products/bowie-wm02-plus-tws-wireless-earbuds",
+        "type": "official-product",
+        "title": "Baseus Bowie WM02 Plus product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery approximate",
+      "ANC dB",
+      "Codec list",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Baseus",
+    "companySlug": "baseus",
+    "family": "Bowie",
+    "model": "Baseus Bowie H1 Pro",
+    "slug": "baseus-bowie-h1-pro",
+    "generation": "H1",
+    "variant": "Pro",
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Baseus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.baseus.intelligent"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.baseus.intelligent"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 70,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 70 h ANC off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 40,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC depth approximate."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Pro variant of Bowie H1"
+    ],
+    "sources": [
+      {
+        "url": "https://www.baseus.com/products/bowie-h1-pro-bluetooth-headphone",
+        "type": "official-product",
+        "title": "Baseus Bowie H1 Pro product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "ANC-on hours",
+      "ANC dB",
+      "Battery approximate"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Baseus",
+    "companySlug": "baseus",
+    "family": "Bowie",
+    "model": "Baseus Bowie 30 Max",
+    "slug": "baseus-bowie-30-max",
+    "generation": "30",
+    "variant": "Max",
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Baseus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.baseus.intelligent"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.baseus.intelligent"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 65,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 65 h with ANC off, Bass Boost and Spatial Audio off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 45,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC depth approximate."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.bass-boost",
+        "name": "Bass Boost",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Bio-based PU ear cushions; metal parts."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "spatial audio",
+      "Bass Boost"
+    ],
+    "featureDeltaFromPrevious": [
+      "65 h battery and spatial audio"
+    ],
+    "sources": [
+      {
+        "url": "https://www.baseus.com/products/bowie-30-max-noise-cancelling-headphone",
+        "type": "official-product",
+        "title": "Baseus Bowie 30 Max product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC-on hours",
+      "ANC dB",
+      "Codec list"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Baseus",
+    "companySlug": "baseus",
+    "family": "Bowie",
+    "model": "Baseus Bowie MC1 Pro",
+    "slug": "baseus-bowie-mc1-pro",
+    "generation": "MC1",
+    "variant": "Pro",
+    "releaseYear": 2025,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "Baseus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.baseus.intelligent"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.baseus.intelligent"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Playtime not captured. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear clip; no ANC."
+    },
+    "features": [
+      {
+        "id": "design.clip",
+        "name": "Open-ear clip",
+        "availability": "device-only"
+      },
+      {
+        "id": "water.ip67",
+        "name": "IP67",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Bluetooth 6.0; IP67."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "IP67 and Bluetooth 6.0 versus MC1"
+    ],
+    "sources": [
+      {
+        "url": "https://www.baseus.com/products/bowie-mc1-pro-open-ear-tws-earbuds",
+        "type": "official-product",
+        "title": "Baseus Bowie MC1 Pro product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery hours",
+      "Codec list",
+      "Full spec table not captured",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Baseus",
+    "companySlug": "baseus",
+    "family": "Bowie",
+    "model": "Baseus Bowie MC2 NC",
+    "slug": "baseus-bowie-mc2-nc",
+    "generation": "MC2",
+    "variant": "NC",
+    "releaseYear": 2025,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "Baseus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.baseus.intelligent"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.baseus.intelligent"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Playtime not captured. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC in an open-ear clip design; depth not published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "calls.6mic",
+        "name": "6-mic AI ENC",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12 mm driver; Bluetooth 6.0."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "spatial audio"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC added to MC2 clip design"
+    ],
+    "sources": [
+      {
+        "url": "https://www.baseus.com/products/bowie-mc2-nc-open-ear-true-wireless-earbuds",
+        "type": "official-product",
+        "title": "Baseus Bowie MC2 NC product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery hours",
+      "ANC dB",
+      "Full spec table not captured",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": "One of few open-ear clip products with ANC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Baseus",
+    "companySlug": "baseus",
+    "family": "Inspire",
+    "model": "Baseus Inspire XP1",
+    "slug": "baseus-inspire-xp1",
+    "generation": "XP1",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Baseus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.baseus.intelligent"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.baseus.intelligent"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 45,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 8 h with ANC off at 50% volume; 45 h with case. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 45
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Intelligent adaptive ANC up to -50 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "water.ipx4",
+        "name": "IPX4",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Liquid silicone ear tips; IPX4."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "New Inspire flagship with -50 dB ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.baseus.com/products/inspire-xp1-true-wireless-earbuds",
+        "type": "official-product",
+        "title": "Baseus Inspire XP1 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on hours",
+      "EQ presets",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Baseus",
+    "companySlug": "baseus",
+    "family": "Inspire",
+    "model": "Baseus Inspire XH1",
+    "slug": "baseus-inspire-xh1",
+    "generation": "XH1",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Baseus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.baseus.intelligent"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.baseus.intelligent"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Playtime not captured.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC with 5-mic AI calls."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "calls.5mic",
+        "name": "5-mic AI clear calls",
+        "availability": "device-only"
+      },
+      {
+        "id": "comfort.cloudcomfort",
+        "name": "CloudComfort ear cushions",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "New Inspire over-ear flagship"
+    ],
+    "sources": [
+      {
+        "url": "https://www.baseus.com/products/inspire-xh1-wireless-noise-cancelling-headphones",
+        "type": "official-product",
+        "title": "Baseus Inspire XH1 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery hours",
+      "ANC dB",
+      "Codec list"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Baseus",
+    "companySlug": "baseus",
+    "family": "Bass",
+    "model": "Baseus Bass BP1 Pro",
+    "slug": "baseus-bass-bp1-pro",
+    "generation": "BP1",
+    "variant": "Pro",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Baseus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.baseus.intelligent"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.baseus.intelligent"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 12,
+      "caseHours": 55,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 12 h at 50% volume with Bass Boost and Spatial Audio off; 55 h with case. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 55
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC supported; depth not captured."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "calls.6mic",
+        "name": "6-mic AI calls",
+        "availability": "device-only"
+      },
+      {
+        "id": "water.ip55",
+        "name": "IP55",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IP55."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Bass Boost",
+      "spatial audio"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bass line with LDAC and 12 h single charge"
+    ],
+    "sources": [
+      {
+        "url": "https://www.baseus.com/products/bass-bp1-pro-in-ear-tws-earbuds",
+        "type": "official-product",
+        "title": "Baseus Bass BP1 Pro product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on hours",
+      "ANC dB",
+      "EQ presets",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Baseus",
+    "companySlug": "baseus",
+    "family": "Bass",
+    "model": "Baseus Bass BH1 NC",
+    "slug": "baseus-bass-bh1-nc",
+    "generation": "BH1",
+    "variant": "NC",
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Baseus",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.baseus.intelligent"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.baseus.intelligent"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Playtime not captured.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC with 5-mic AI calls."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "calls.5mic",
+        "name": "5-mic AI clear calls",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bass over-ear with ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.baseus.com/products/bass-bh1-nc-wireless-noise-cancelling-headphones",
+        "type": "official-product",
+        "title": "Baseus Bass BH1 NC product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery hours",
+      "ANC dB",
+      "Codec list"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

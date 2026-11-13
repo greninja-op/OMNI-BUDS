@@ -1,0 +1,1295 @@
+[
+  {
+    "company": "Honor",
+    "companySlug": "honor",
+    "family": "HONOR Earbuds Open",
+    "model": "HONOR Earbuds Open",
+    "slug": "honor-earbuds-open",
+    "generation": "1",
+    "variant": "Open",
+    "releaseYear": 2025,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "HONOR AI Space",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.hihonor.magichome"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.hihonor.magichome"
+      ],
+      "appVersionObserved": "Android 9.63.02.300+ / iOS 2.5.2.302+ (per product page)",
+      "notes": "AI Translation, Find Earbuds, gesture settings and firmware updates are in HONOR AI Space."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 26,
+      "chargingIndicators": "Case LED; USB-C; 15-minute charge = 2 h",
+      "notes": "Global page says 7 h / 26 h; some regional pages say 6 h / 22 h and reviews measured about 5 h. ANC-on hours not published. Use 7/26 as the current global claim, flag regional variance.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "Open-ear 3-mic hybrid ANC. Honor explicitly warns perceived reduction is weaker than in-ear ANC; call wind resistance 6 m/s."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Open-ear hybrid ANC",
+        "availability": "both",
+        "notes": "Rare for open-ear; weaker than in-ear by design."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "HONOR Sound Spatial",
+        "availability": "device-only",
+        "notes": "Requires HONOR phone with MagicOS 9.0+."
+      },
+      {
+        "id": "vendor.honor.ai-translation",
+        "name": "AI Live Translation",
+        "availability": "official-app",
+        "notes": "15 languages; AI Space on Android/iOS."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": "MagicRing audio sharing on HONOR devices."
+      },
+      {
+        "id": "vendor.honor.find-earbuds",
+        "name": "Find Earbuds",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "double click",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple click",
+          "action": "next/previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC / transparency; voice assistant",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "swipe up/down",
+          "action": "volume",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Each earpiece supports double/triple click, long press and swipe."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "16 mm multi-magnetic driver with titanium-plated tweeter dome; 7.9 g per bud; IP54."
+    },
+    "appOnlyFeatures": [
+      "AI Translation",
+      "Find Earbuds",
+      "Gesture remap",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.honor.com/global/audio/honor-earbuds-open/",
+        "type": "official-product",
+        "title": "HONOR Earbuds Open",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.honor.com/global/audio/honor-earbuds-open/spec/",
+        "type": "official-product",
+        "title": "HONOR Earbuds Open specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery claim varies by region (7 h/26 h vs 6 h/22 h) and independent tests are lower",
+      "ANC depth not published",
+      "Codec list limited to SBC/AAC per review",
+      "Head tracking not stated",
+      "Battery layout inferred"
+    ],
+    "notes": "Open-ear hook with ANC; battery is the weakest point.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Honor",
+    "companySlug": "honor",
+    "family": "HONOR Earbuds",
+    "model": "HONOR Earbuds 4",
+    "slug": "honor-earbuds-4",
+    "generation": "4",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "HONOR AI Space",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.hihonor.magichome"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.hihonor.magichome"
+      ],
+      "appVersionObserved": null,
+      "notes": "AI Translation and EQ/gesture settings in AI Space."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9,
+      "caseHours": 46,
+      "chargingIndicators": "Case LED; 10-minute charge = 3 h",
+      "notes": "Official 9 h / 46 h ANC-off. ANC-on hours not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "deep",
+        "medium",
+        "light",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "50 dB tri-mic ANC with 3 depth levels; dual transparency (Ambient/Voice); 6 m/s call wind."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "50 dB hybrid ANC",
+        "availability": "both",
+        "notes": "Deep/medium/light."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Dual transparency modes",
+        "availability": "both",
+        "notes": "Ambient and Voice."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "3D soundstage",
+        "availability": "device-only",
+        "notes": "Real-time spatial rendering; head tracking not stated."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Smart wear detection",
+        "availability": "device-only",
+        "notes": "Auto pause/resume."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.honor.ai-translation",
+        "name": "AI Translation",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next/previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "slide up/down",
+          "action": "volume",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch and slide control."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Dual driver: 11 mm woofer + 6 mm tweeter, both titanium-coated."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "AI Translation",
+      "Gesture remap",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Raised ANC to 50 dB and added three depth levels vs HONOR Earbuds 3 Pro (official-product)",
+      "Added dual 11 mm + 6 mm drivers (official-product)",
+      "Battery increased to 9 h/46 h (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.honor.com/global/audio/honor-earbuds-4/",
+        "type": "official-product",
+        "title": "HONOR Earbuds 4",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC-on hours not published",
+      "Codec list not captured (SBC/AAC assumed from class, not confirmed)",
+      "Head tracking not stated",
+      "EQ preset list not captured",
+      "Battery layout inferred"
+    ],
+    "notes": "2025 mainstream model with unusually high 46 h total.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Honor",
+    "companySlug": "honor",
+    "family": "HONOR Earbuds",
+    "model": "HONOR Earbuds 5e",
+    "slug": "honor-earbuds-5e",
+    "generation": "5",
+    "variant": "e",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "HONOR AI Space",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.hihonor.magichome"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.hihonor.magichome"
+      ],
+      "appVersionObserved": null,
+      "notes": "AI Translation, ANC and EQ settings in AI Space."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5.5,
+      "budsHoursNoAnc": 9,
+      "caseHours": 45,
+      "chargingIndicators": "Case LED; 10-minute charge = 3 h",
+      "notes": "Official 9 h / 45 h ANC-off; 5.5 h / 28 h ANC-on. 550 mAh case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "light",
+        "medium",
+        "deep",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 52,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "52 dB max, 28 dB full-band average; adaptive with light/medium/deep; 6 m/s call wind; 3 mics."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "52 dB adaptive ANC",
+        "availability": "both",
+        "notes": "Light/medium/deep."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "Adaptive ANC",
+        "availability": "official-app",
+        "notes": "Real-time environment adjustment."
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LHDC 5.0 Hi-Res",
+        "availability": "device-only",
+        "notes": "24-bit, 110 dB SNR; MagicOS 10 or LHDC 5.0 Android phones."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.honor.ai-translation",
+        "name": "AI Translation",
+        "availability": "official-app",
+        "notes": "15 languages."
+      },
+      {
+        "id": "vendor.honor.meeting-recording",
+        "name": "Meeting recording assistant",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "slide up/down",
+          "action": "volume",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Slide and touch controls."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC 5.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12 mm diamond-like carbon diaphragm; semi-in-ear; 4.0 g per bud; IP54."
+    },
+    "appOnlyFeatures": [
+      "AI Translation",
+      "Meeting recording",
+      "ANC",
+      "Gesture remap"
+    ],
+    "featureDeltaFromPrevious": [
+      "Raised ANC from 50 dB to 52 dB vs HONOR Earbuds 4 (official-product)",
+      "Moved to semi-in-ear with 12 mm DLC driver and LHDC 5.0 (official-product)",
+      "Battery: 9 h/45 h ANC-off, 5.5 h/28 h ANC-on (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.honor.com/global/audio/honor-earbuds-5e/",
+        "type": "official-product",
+        "title": "HONOR Earbuds 5e",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth version not captured",
+      "Custom EQ not stated",
+      "Head tracking not stated",
+      "Battery layout inferred"
+    ],
+    "notes": "2026 budget model; launch coverage cites 52 dB ANC and Hi-Res. Verify battery before shipping any ring value.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Honor",
+    "companySlug": "honor",
+    "family": "HONOR Earbuds A",
+    "model": "HONOR Earbuds A Pro",
+    "slug": "honor-earbuds-a-pro",
+    "generation": "A",
+    "variant": "Pro",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "HONOR AI Space",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.hihonor.magichome"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.hihonor.magichome"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 42,
+      "chargingIndicators": "Case LED; USB-C",
+      "notes": "Official 42 h total with case. Single-charge hours not captured.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 42
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 49,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "49 dB ANC per official highlight."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "49 dB ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "12.4 mm large driver."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Gesture remap",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.honor.com/global/audio/honor-earbuds-a-pro/",
+        "type": "official-product",
+        "title": "HONOR Earbuds A Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Single-charge battery not captured",
+      "Codecs not confirmed",
+      "Multipoint not confirmed",
+      "Battery layout inferred"
+    ],
+    "notes": "Budget A-series ANC model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Honor",
+    "companySlug": "honor",
+    "family": "HONOR Earbuds X",
+    "model": "HONOR Earbuds X10 Play",
+    "slug": "honor-earbuds-x10-play",
+    "generation": "X10",
+    "variant": "Play",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "HONOR AI Space",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.hihonor.magichome"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.hihonor.magichome"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 49,
+      "chargingIndicators": "Case LED; USB-C",
+      "notes": "Official 49 h total with case. Single-charge hours not captured.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 49
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC; call noise reduction only."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "13 mm driver."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Gesture remap"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.honor.com/global/audio/honor-earbuds-x10-play/",
+        "type": "official-product",
+        "title": "HONOR Earbuds X10 Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Single-charge battery not captured",
+      "Codecs not confirmed",
+      "No ANC",
+      "Battery layout inferred"
+    ],
+    "notes": "Entry-level 2026 model with 49 h total.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Honor",
+    "companySlug": "honor",
+    "family": "HONOR Earbuds X",
+    "model": "HONOR Earbuds X10 Lite",
+    "slug": "honor-earbuds-x10-lite",
+    "generation": "X10",
+    "variant": "Lite",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "HONOR AI Space",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.hihonor.magichome"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.hihonor.magichome"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 45,
+      "chargingIndicators": "Case LED; USB-C",
+      "notes": "Official 45 h total with case. Single-charge hours not captured.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 45
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 42,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "42 dB deep ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "42 dB ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "12.4 mm driver."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Gesture remap"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.honor.com/global/audio/honor-earbuds-x10-lite/",
+        "type": "official-product",
+        "title": "HONOR Earbuds X10 Lite",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Single-charge battery not captured",
+      "Codecs/multipoint not confirmed",
+      "Battery layout inferred"
+    ],
+    "notes": "2026 budget ANC model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Honor",
+    "companySlug": "honor",
+    "family": "HONOR Earbuds X",
+    "model": "HONOR Earbuds X6",
+    "slug": "honor-earbuds-x6",
+    "generation": "X6",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "HONOR AI Space",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.hihonor.magichome"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.hihonor.magichome"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED; USB-C",
+      "notes": "Official 40 h total. Single-charge hours not captured.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "10 mm dynamic driver."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Gesture remap"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.honor.com/global/audio/honor-earbuds-x6/",
+        "type": "official-product",
+        "title": "HONOR Earbuds X6",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Single-charge battery not captured",
+      "Codecs not confirmed",
+      "No ANC",
+      "Battery layout inferred"
+    ],
+    "notes": "2024 entry-level model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Honor",
+    "companySlug": "honor",
+    "family": "HONOR Earbuds",
+    "model": "HONOR Earbuds 3 Pro",
+    "slug": "honor-earbuds-3-pro",
+    "generation": "3",
+    "variant": "Pro",
+    "releaseYear": 2022,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "HONOR AI Space",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.hihonor.magichome"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.hihonor.magichome"
+      ],
+      "appVersionObserved": null,
+      "notes": "Older AI Life/Honor Wear era app replaced by AI Space; feature set may be reduced in AI Space."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 28,
+      "chargingIndicators": "Case LED; wireless charging",
+      "notes": "Approximate official-class figures: 6 h / 28 h ANC-off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 46,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "46 dB ANC claim; temperature-sensing and adaptive ANC were headline features."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "46 dB ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm dual-magnet driver; 3-mic call noise cancellation."
+    },
+    "appOnlyFeatures": [
+      "ANC",
+      "EQ",
+      "Gesture remap"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.honor.com/global/audio/honor-earbuds-3-pro/",
+        "type": "official-product",
+        "title": "HONOR Earbuds 3 Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery and dB figures need re-verification against a live spec page",
+      "Codecs not confirmed",
+      "Head tracking not stated",
+      "Battery layout inferred"
+    ],
+    "notes": "2022 flagship; body-temperature sensing was a signature feature.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Honor",
+    "companySlug": "honor",
+    "family": "HONOR Earbuds",
+    "model": "HONOR Earbuds 2 Lite",
+    "slug": "honor-earbuds-2-lite",
+    "generation": "2",
+    "variant": "Lite",
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "HONOR AI Space",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.hihonor.magichome"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.hihonor.magichome"
+      ],
+      "appVersionObserved": null,
+      "notes": "Legacy model; app support may be limited to firmware/gesture settings."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 32,
+      "chargingIndicators": "Case LED; USB-C",
+      "notes": "Official 10 h / 32 h ANC-off; ANC-on not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "ANC with transparency; no dB claim."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "10 mm driver."
+    },
+    "appOnlyFeatures": [
+      "ANC",
+      "EQ",
+      "Gesture remap"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.honor.com/global/audio/honor-earbuds2-lite/",
+        "type": "official-product",
+        "title": "HONOR Earbuds 2 Lite",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC-on hours not published",
+      "Multipoint not supported",
+      "Battery layout inferred",
+      "App support may be limited on legacy model"
+    ],
+    "notes": "2021 budget ANC model with 10 h single charge.",
+    "researchedAt": "2026-11-10"
+  }
+]

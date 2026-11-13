@@ -582,7 +582,7 @@ class DependencyDirectionTest {
     // package still fails this check.
     @Test
     fun platformBroadcastUseIsConfinedToListeningForAdapterState() {
-        val receiverTokens = listOf("BroadcastReceiver", "IntentFilter", "Intent", "registerReceiver")
+        val receiverTokens = listOf("BroadcastReceiver", "IntentFilter", "registerReceiver")
         // Phase 26 authorises PendingIntent for notification actions only:
         // immutable, identity-keyed, validated as untrusted input.
         val neverTokens = listOf("sendBroadcast", "sendOrderedBroadcast", "LocalBroadcastManager")
@@ -599,6 +599,9 @@ class DependencyDirectionTest {
             // feature engine with full revalidation.
             "notification/",
             "widget/",
+            // Bonding and audio-profile transitions are broadcasts the platform
+            // exposes; the pairing engine listens to them and never sends one.
+            "hardware/pairing/",
         )
 
         val outsideAdapter = platformSources().flatMap { file ->

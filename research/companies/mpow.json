@@ -1,0 +1,968 @@
+[
+  {
+    "company": "Mpow",
+    "companySlug": "mpow",
+    "family": "M",
+    "model": "Mpow M30",
+    "slug": "mpow-m30",
+    "generation": "30",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No official companion app. Mpow's brand site is unreachable and no app listing was found."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 25,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 5 h/25 h from launch materials; not confirmed on a live official page.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "water.ipx6",
+        "name": "IPX6",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "device-only"
+      },
+      {
+        "id": "calls.4mic",
+        "name": "Call noise reduction",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "No app; fixed gestures."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.0."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Original M30"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mpow.com",
+        "type": "official-product",
+        "title": "Mpow official site (unreachable at access time)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official site unreachable",
+      "No app",
+      "Battery approximate",
+      "All specs need verification"
+    ],
+    "notes": "Mpow's consumer audio line is largely discontinued; records are retained for installed-base compatibility.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Mpow",
+    "companySlug": "mpow",
+    "family": "M",
+    "model": "Mpow M30 Plus",
+    "slug": "mpow-m30-plus",
+    "generation": "30",
+    "variant": "Plus",
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No official companion app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 30,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 6 h/30 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "water.ipx6",
+        "name": "IPX6",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "device-only"
+      },
+      {
+        "id": "usb-c",
+        "name": "USB-C charging",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.0."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "USB-C and longer battery versus M30"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mpow.com",
+        "type": "official-product",
+        "title": "Mpow official site (unreachable at access time)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official site unreachable",
+      "No app",
+      "Battery approximate"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Mpow",
+    "companySlug": "mpow",
+    "family": "M",
+    "model": "Mpow M20",
+    "slug": "mpow-m20",
+    "generation": "20",
+    "variant": null,
+    "releaseYear": 2019,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No official companion app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 20,
+      "chargingIndicators": "Micro-USB.",
+      "notes": "Approximate 5 h/20 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "water.ipx6",
+        "name": "IPX6",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Bluetooth 5.0."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Older M-series model"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mpow.com",
+        "type": "official-product",
+        "title": "Mpow official site (unreachable at access time)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official site unreachable",
+      "No app",
+      "Battery approximate",
+      "Micro-USB vs USB-C uncertain"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Mpow",
+    "companySlug": "mpow",
+    "family": "M",
+    "model": "Mpow M9",
+    "slug": "mpow-m9",
+    "generation": "9",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No official companion app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 20,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 5 h/20 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "water.ipx6",
+        "name": "IPX6",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "M9 compact model"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mpow.com",
+        "type": "official-product",
+        "title": "Mpow official site (unreachable at access time)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official site unreachable",
+      "No app",
+      "Battery approximate"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Mpow",
+    "companySlug": "mpow",
+    "family": "MDots",
+    "model": "Mpow MDots",
+    "slug": "mpow-mdots",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2019,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No official companion app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 20,
+      "chargingIndicators": "Micro-USB.",
+      "notes": "Approximate 5 h/20 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "water.ipx6",
+        "name": "IPX6",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "MDots tiny-bud design"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mpow.com",
+        "type": "official-product",
+        "title": "Mpow official site (unreachable at access time)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official site unreachable",
+      "No app",
+      "Battery approximate"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Mpow",
+    "companySlug": "mpow",
+    "family": "Flame",
+    "model": "Mpow Flame 2",
+    "slug": "mpow-flame-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2019,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No official companion app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 35,
+      "chargingIndicators": "Micro-USB.",
+      "notes": "Approximate 7 h/35 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "design.ear-hooks",
+        "name": "Sport ear hooks",
+        "availability": "device-only"
+      },
+      {
+        "id": "water.ipx7",
+        "name": "IPX7",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.touch",
+        "name": "Touch controls",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "IPX7 sport design."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Flame 2 sport model"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mpow.com",
+        "type": "official-product",
+        "title": "Mpow official site (unreachable at access time)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official site unreachable",
+      "No app",
+      "Battery approximate",
+      "Form factor may be neckband-style sport hook"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Mpow",
+    "companySlug": "mpow",
+    "family": "H",
+    "model": "Mpow H12",
+    "slug": "mpow-h12",
+    "generation": "12",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "None",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No official companion app."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 30,
+      "caseHours": null,
+      "chargingIndicators": "Micro-USB.",
+      "notes": "Approximate 30 h; ANC-on hours not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC supported; depth not published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "device-only"
+      },
+      {
+        "id": "wired.3.5mm",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.buttons",
+        "name": "Physical controls",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "40 mm driver."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "H12 ANC over-ear"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mpow.com",
+        "type": "official-product",
+        "title": "Mpow official site (unreachable at access time)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official site unreachable",
+      "No app",
+      "Battery approximate",
+      "ANC dB"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Mpow",
+    "companySlug": "mpow",
+    "family": "0",
+    "model": "Mpow 059",
+    "slug": "mpow-059",
+    "generation": "059",
+    "variant": null,
+    "releaseYear": 2019,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "None",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No official companion app."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 40,
+      "caseHours": null,
+      "chargingIndicators": "Micro-USB.",
+      "notes": "Approximate 40 h; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "wired.3.5mm",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only"
+      },
+      {
+        "id": "controls.buttons",
+        "name": "Physical controls",
+        "availability": "device-only"
+      },
+      {
+        "id": "design.foldable",
+        "name": "Foldable design",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "long press",
+          "action": "power/pairing",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": null
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Value over-ear model"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mpow.com",
+        "type": "official-product",
+        "title": "Mpow official site (unreachable at access time)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Official site unreachable",
+      "No app",
+      "Battery approximate"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

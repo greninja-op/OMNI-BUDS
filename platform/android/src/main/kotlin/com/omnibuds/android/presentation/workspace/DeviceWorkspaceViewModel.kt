@@ -16,6 +16,7 @@ import com.omnibuds.core.globalstate.ProtocolState
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -48,24 +49,117 @@ class DeviceWorkspaceViewModel(
     val state: StateFlow<WorkspaceScreenState> = _state.asStateFlow()
 
     private var observationJob: Job? = null
-    private var sequenceNumber = 20_000L
+    private var ancConfirmationJob: Job? = null
+    private var gameModeConfirmationJob: Job? = null
     private var lastObservedSnapshot: GlobalDeviceState? = null
     private val inFlightOperations = mutableMapOf<String, ControlExecutionStatus>()
     private val failureReasons = mutableMapOf<String, String>()
+    private val lastSubmittedAt = mutableMapOf<String, Long>()
 
     init {
         startObservingDevice()
 
         // Two-Way Sync: Observe real-time confirmed ANC mode notifications from hardware
-        scope.launch {
+        ancConfirmationJob = scope.launch {
             com.omnibuds.android.hardware.protocol.EarbudProtocolManager.confirmedAncMode.collect { map ->
                 val confirmed = map[deviceIdentifier]
                 if (confirmed != null) {
                     mutex.withLock {
+                        val activeSessionId = (lastObservedSnapshot?.connection as? ConnectionState.Connected)?.sessionId
+                        val now = System.currentTimeMillis()
+                        val provenance = ObservationProvenance(
+                            sourceId = "android-hardware",
+                            observedAtMillis = now,
+                            receivedAtMillis = now,
+                            sessionId = activeSessionId,
+                            connectionGeneration = (lastObservedSnapshot?.connection as? ConnectionState.Connected)?.generation,
+                            protocolVersion = (lastObservedSnapshot?.protocol as? ProtocolState.Resolved)?.protocolVersion,
+                        )
+                        // Persist the confirmed hardware value so a later
+                        // snapshot cannot revert the UI to the requested value.
+                        stateRepository?.let { repo ->
+                            repo.ingest(
+                                DeviceStateEvent.FeatureObserved(
+                                    deviceId = globalDeviceId,
+                                    sessionId = activeSessionId,
+                                    sequence = repo.nextSequence(globalDeviceId.value),
+                                    sourceId = "android-hardware",
+                                    featureId = "anc_mode",
+                                    value = ObservedValue(confirmed, provenance),
+                                ),
+                            )
+                            repo.ingest(
+                                DeviceStateEvent.FeatureOperationChanged(
+                                    deviceId = globalDeviceId,
+                                    sessionId = activeSessionId,
+                                    sequence = repo.nextSequence(globalDeviceId.value),
+                                    sourceId = "android-hardware",
+                                    featureId = "anc_mode",
+                                    status = OperationStatus.Succeeded(now),
+                                ),
+                            )
+                        }
                         inFlightOperations["anc_mode"] = ControlExecutionStatus.SUCCEEDED
                         failureReasons.remove("anc_mode")
                         updateControlStatusInState("anc_mode", ControlExecutionStatus.SUCCEEDED, newValue = confirmed)
+                        com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+                            stage = "CONFIRMED",
+                            address = deviceIdentifier,
+                            activeMode = confirmed,
+                            requestedMode = confirmed,
+                        )
                     }
+                }
+            }
+        }
+
+        // Live game-mode sync: the batch-status poll reports the hardware
+        // switch state, so a long-press on the buds updates the UI too.
+        gameModeConfirmationJob = scope.launch {
+            com.omnibuds.android.hardware.protocol.EarbudProtocolManager.confirmedGameMode.collect { map ->
+                val enabled = map[deviceIdentifier] ?: return@collect
+                val confirmed = if (enabled) "ON" else "OFF"
+                mutex.withLock {
+                    val activeSessionId = (lastObservedSnapshot?.connection as? ConnectionState.Connected)?.sessionId
+                    val now = System.currentTimeMillis()
+                    val provenance = ObservationProvenance(
+                        sourceId = "android-hardware",
+                        observedAtMillis = now,
+                        receivedAtMillis = now,
+                        sessionId = activeSessionId,
+                        connectionGeneration = (lastObservedSnapshot?.connection as? ConnectionState.Connected)?.generation,
+                        protocolVersion = (lastObservedSnapshot?.protocol as? ProtocolState.Resolved)?.protocolVersion,
+                    )
+                    stateRepository?.let { repo ->
+                        repo.ingest(
+                            DeviceStateEvent.FeatureObserved(
+                                deviceId = globalDeviceId,
+                                sessionId = activeSessionId,
+                                sequence = repo.nextSequence(globalDeviceId.value),
+                                sourceId = "android-hardware",
+                                featureId = "game_mode",
+                                value = ObservedValue(confirmed, provenance),
+                            ),
+                        )
+                        repo.ingest(
+                            DeviceStateEvent.FeatureOperationChanged(
+                                deviceId = globalDeviceId,
+                                sessionId = activeSessionId,
+                                sequence = repo.nextSequence(globalDeviceId.value),
+                                sourceId = "android-hardware",
+                                featureId = "game_mode",
+                                status = OperationStatus.Succeeded(now),
+                            ),
+                        )
+                    }
+                    inFlightOperations["game_mode"] = ControlExecutionStatus.SUCCEEDED
+                    failureReasons.remove("game_mode")
+                    updateControlStatusInState("game_mode", ControlExecutionStatus.SUCCEEDED, newValue = confirmed)
+                    com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+                        stage = "GAME_MODE_CONFIRMED",
+                        address = deviceIdentifier,
+                        activeMode = confirmed,
+                    )
                 }
             }
         }
@@ -91,11 +185,14 @@ class DeviceWorkspaceViewModel(
         mutex.withLock {
             lastObservedSnapshot = snapshot
             if (snapshot == null) {
+                // A disconnected/unregistered device is a normal state, not a
+                // red error. The workspace header already shows "Not connected".
                 _state.value = WorkspaceScreenState(
                     deviceIdentifier = deviceIdentifier,
                     isLoading = false,
                     selectedTab = _state.value.selectedTab,
-                    errorBanner = "Device '$deviceIdentifier' is not currently registered or observed.",
+                    errorBanner = null,
+                    isRecoverableError = false,
                 )
                 return
             }
@@ -209,7 +306,16 @@ class DeviceWorkspaceViewModel(
                 else -> ControlExecutionStatus.IDLE
             }
 
-            val effectiveVal = observed ?: acknowledged ?: desired
+            // While a user request is in flight, show the requested mode so the
+            // selected button reacts immediately; the confirmed observation
+            // replaces it as soon as the hardware reports back. Outside a
+            // pending operation the observation wins, so a failed request can
+            // never masquerade as the device's real state.
+            val effectiveVal = when {
+                currentStatus == ControlExecutionStatus.PENDING && desired != null -> desired
+                observed != null -> observed
+                else -> acknowledged
+            }
 
             val explanation = when (capKind) {
                 FeatureCapabilityKind.UNSUPPORTED -> "Not supported by device protocol or capabilities."
@@ -243,13 +349,32 @@ class DeviceWorkspaceViewModel(
         scope.launch {
             mutex.withLock {
                 val currentControl = _state.value.controls.firstOrNull { it.featureId == featureId }
+                com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+                    stage = "SUBMIT",
+                    address = deviceIdentifier,
+                    activeMode = currentControl?.currentValue,
+                    requestedMode = targetValue,
+                    note = if (currentControl == null) "no control model" else null,
+                )
                 if (currentControl == null) {
                     // Fallback: Dispatch directly to platform hardware engine rather than dropping
                     onFeatureControlDispatched(featureId, targetValue)
                     return@launch
                 }
 
-                if (!currentControl.isActionable) {
+                val capabilityActionable = currentControl.capabilityKind in listOf(
+                    FeatureCapabilityKind.VOLATILE,
+                    FeatureCapabilityKind.PERSISTENT,
+                    FeatureCapabilityKind.PERSISTENCE_VERIFIED,
+                )
+                if (!capabilityActionable) {
+                    com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+                        stage = "REJECTED",
+                        address = deviceIdentifier,
+                        activeMode = currentControl.currentValue,
+                        requestedMode = targetValue,
+                        note = "not actionable (${currentControl.capabilityKind})",
+                    )
                     _state.update {
                         it.copy(
                             errorBanner = "Feature '${currentControl.displayName}' is currently not actionable (${currentControl.capabilityKind}).",
@@ -258,10 +383,15 @@ class DeviceWorkspaceViewModel(
                     return@launch
                 }
 
-                if (inFlightOperations[featureId] == ControlExecutionStatus.PENDING) {
-                    // Prevent duplicate concurrent submission
+                val nowTap = System.currentTimeMillis()
+                val lastTap = lastSubmittedAt[featureId] ?: 0L
+                if (currentControl.currentValue?.equals(targetValue, ignoreCase = true) == true &&
+                    nowTap - lastTap < 150L
+                ) {
+                    // Only collapse a genuinely identical tap inside 150ms.
                     return@launch
                 }
+                lastSubmittedAt[featureId] = nowTap
 
                 // Update in-flight tracking
                 inFlightOperations[featureId] = ControlExecutionStatus.PENDING
@@ -279,21 +409,20 @@ class DeviceWorkspaceViewModel(
                 try {
                     val activeSessionId = (lastObservedSnapshot?.connection as? ConnectionState.Connected)?.sessionId
                     val now = System.currentTimeMillis()
-                    val seq = sequenceNumber++
                     val provenance = ObservationProvenance(
                         sourceId = "android-ui",
                         observedAtMillis = now,
                         receivedAtMillis = now,
                         sessionId = activeSessionId,
-                        connectionGeneration = 1L,
-                        protocolVersion = "1.0",
+                        connectionGeneration = (lastObservedSnapshot?.connection as? ConnectionState.Connected)?.generation,
+                        protocolVersion = (lastObservedSnapshot?.protocol as? ProtocolState.Resolved)?.protocolVersion,
                     )
 
                     repo.ingest(
                         DeviceStateEvent.FeatureDesiredChanged(
                             deviceId = globalDeviceId,
                             sessionId = activeSessionId,
-                            sequence = seq,
+                            sequence = repo.nextSequence(globalDeviceId.value),
                             sourceId = "android-ui",
                             featureId = featureId,
                             value = ObservedValue(targetValue, provenance),
@@ -304,39 +433,29 @@ class DeviceWorkspaceViewModel(
                         DeviceStateEvent.FeatureOperationChanged(
                             deviceId = globalDeviceId,
                             sessionId = activeSessionId,
-                            sequence = sequenceNumber++,
+                            sequence = repo.nextSequence(globalDeviceId.value),
                             sourceId = "android-ui",
                             featureId = featureId,
                             status = OperationStatus.Pending(now),
                         ),
                     )
 
-                    // Acknowledge and observe
-                    inFlightOperations[featureId] = ControlExecutionStatus.SUCCEEDED
-                    repo.ingest(
-                        DeviceStateEvent.FeatureObserved(
-                            deviceId = globalDeviceId,
-                            sessionId = activeSessionId,
-                            sequence = sequenceNumber++,
-                            sourceId = "android-ui",
-                            featureId = featureId,
-                            value = ObservedValue(targetValue, provenance),
-                        ),
-                    )
-
-                    repo.ingest(
-                        DeviceStateEvent.FeatureOperationChanged(
-                            deviceId = globalDeviceId,
-                            sessionId = activeSessionId,
-                            sequence = sequenceNumber++,
-                            sourceId = "android-ui",
-                            featureId = featureId,
-                            status = OperationStatus.Succeeded(now),
-                        ),
-                    )
-
-                    updateControlStatusInState(featureId, ControlExecutionStatus.SUCCEEDED, newValue = targetValue)
+                    // Dispatch to the hardware. A requested value is not an
+                    // observed value: the operation stays PENDING until the
+                    // device confirms it (for ANC, via
+                    // EarbudProtocolManager.confirmedAncMode) or the timeout
+                    // below reports an honest ambiguous outcome.
                     onFeatureControlDispatched(featureId, targetValue)
+
+                    scope.launch {
+                        delay(CONFIRMATION_TIMEOUT_MS)
+                        mutex.withLock {
+                            if (inFlightOperations[featureId] == ControlExecutionStatus.PENDING) {
+                                inFlightOperations[featureId] = ControlExecutionStatus.AMBIGUOUS
+                                updateControlStatusInState(featureId, ControlExecutionStatus.AMBIGUOUS)
+                            }
+                        }
+                    }
                 } catch (e: Exception) {
                     inFlightOperations[featureId] = ControlExecutionStatus.REJECTED
                     failureReasons[featureId] = e.message ?: "Operation failed"
@@ -356,7 +475,10 @@ class DeviceWorkspaceViewModel(
                 if (ctrl.featureId == featureId) {
                     ctrl.copy(
                         executionStatus = status,
-                        currentValue = newValue ?: ctrl.currentValue,
+                        currentValue = newValue ?: when (status) {
+                            ControlExecutionStatus.PENDING -> ctrl.currentValue
+                            else -> ctrl.observedValue ?: ctrl.acknowledgedValue
+                        },
                         failureReason = failureReasons[featureId],
                     )
                 } else {
@@ -384,6 +506,10 @@ class DeviceWorkspaceViewModel(
     fun cleanUp() {
         observationJob?.cancel()
         observationJob = null
+        ancConfirmationJob?.cancel()
+        ancConfirmationJob = null
+        gameModeConfirmationJob?.cancel()
+        gameModeConfirmationJob = null
     }
 
     private data class FeatureDef(
@@ -392,4 +518,9 @@ class DeviceWorkspaceViewModel(
         val category: String,
         val modes: List<String>,
     )
+
+    private companion object {
+        /** How long a write may stay pending before it is reported as ambiguous. */
+        const val CONFIRMATION_TIMEOUT_MS = 4_000L
+    }
 }

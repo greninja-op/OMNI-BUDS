@@ -1,0 +1,1714 @@
+[
+  {
+    "company": "Nothing",
+    "companySlug": "nothing",
+    "family": "Ear",
+    "model": "Nothing Ear (1)",
+    "slug": "nothing-ear-1",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Nothing X",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.nothing.smartcenter"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "https://apps.apple.com/us/app/nothing-x/id1568033706"
+      ],
+      "appVersionObserved": "2.4.9 (SoundGuys review, Aug 2024); current Play listing updated 2026-11-03, version not exposed",
+      "notes": "Ear (1) originally shipped with the Nothing ear (1) app; it was folded into Nothing X."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 4,
+      "budsHoursNoAnc": 5.7,
+      "caseHours": 34,
+      "chargingIndicators": "Case LED: white above 30%, amber 10-30%, red below 10%.",
+      "notes": "Nothing X shows L and R separately plus a separate case tile (L/C/R layout). Official Nothing support says the case must be open for the app to read the case or individual earbuds. 34 h is buds + case with ANC off; 24 h with ANC on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc-light",
+        "anc-max",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 40,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Two ANC strengths (Light, Max) plus Transparency."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "Light and Max levels."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets plus a 3-band custom EQ."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": "Auto play/pause."
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Find My Earbuds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap",
+          "action": "play/pause or answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "next/previous track or reject call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap-and-hold",
+          "action": "cycle ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double-tap-and-hold",
+          "action": "volume up/down or voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch area on the stem; no single-tap action."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "More Bass",
+        "More Treble",
+        "Voice"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "11.6 mm driver; no Hi-Res codec and no multipoint."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Gesture remapping",
+      "Find My Earbuds",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://us.nothing.tech/products/ear-1",
+        "type": "official-product",
+        "title": "Nothing Ear (1) product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.nothing.tech/hc/en-us/articles/7455053910545-How-can-I-check-the-battery-level",
+        "type": "official-support",
+        "title": "How can I check the battery level?",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.gsmarena.com/nothing_ear_1_review-news-50295.php",
+        "type": "reputable-secondary",
+        "title": "Nothing ear (1) review",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "type": "official-app-store",
+        "title": "Nothing X on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Transparency-mode dB is not published by Nothing.",
+      "Case tile behaviour with both buds out and the case closed is not independently verified; support only states the case must be open.",
+      "Multipoint is not supported on Ear (1)."
+    ],
+    "notes": "First-generation flagship. Split L/R plus separate case is the official Nothing X layout; a combined-battery rendering would not match the app.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Nothing",
+    "companySlug": "nothing",
+    "family": "Ear",
+    "model": "Nothing Ear (stick)",
+    "slug": "nothing-ear-stick",
+    "generation": "1",
+    "variant": "Stick",
+    "releaseYear": 2022,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Nothing X",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.nothing.smartcenter"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "https://apps.apple.com/us/app/nothing-x/id1568033706"
+      ],
+      "appVersionObserved": "2.4.9 (SoundGuys review, Aug 2024); current Play listing updated 2026-11-03, version not exposed",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 29,
+      "chargingIndicators": "Case LED status only; no numeric case display outside the app.",
+      "notes": "29 h total with case. No ANC, so budsHoursAnc is null. Nothing X L/C/R layout with the case open.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 29
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Half-in-ear open-fit design; no ANC and no transparency mode."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer presets",
+        "availability": "official-app",
+        "notes": "Tuning presets; custom EQ support is not documented."
+      },
+      {
+        "id": "vendor.nothing.bass-lock",
+        "name": "Bass Lock",
+        "availability": "device-only",
+        "notes": "Plays a test tone and adjusts bass for fit."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": "Auto play/pause is not clearly documented for this model."
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "pinch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": "Press on the stem."
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple press",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "press-and-hold",
+          "action": "voice assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem press controls; no ANC gesture because there is no ANC."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "More Bass",
+        "More Treble"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": null,
+      "notes": "12.6 mm driver; half-in-ear open fit."
+    },
+    "appOnlyFeatures": [
+      "EQ presets",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Removed ANC (Ear (1) had ANC; Ear (stick) does not).",
+      "Changed from in-ear tips to a half-in-ear open-fit design."
+    ],
+    "sources": [
+      {
+        "url": "https://us.nothing.tech/products/ear-stick",
+        "type": "official-product",
+        "title": "Nothing Ear (stick) product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://nothing.wiki/hardware/ear_stick",
+        "type": "reputable-secondary",
+        "title": "Ear (stick) hardware notes",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "type": "official-app-store",
+        "title": "Nothing X on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Custom EQ support is not documented for Ear (stick); only presets are confirmed.",
+      "Wear-detection behaviour is ambiguous in official material.",
+      "Case tile behaviour with buds out and case closed is not independently verified."
+    ],
+    "notes": "Not an ANC product; do not show noise-control toggles for it.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Nothing",
+    "companySlug": "nothing",
+    "family": "Ear",
+    "model": "Nothing Ear (2)",
+    "slug": "nothing-ear-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Nothing X",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.nothing.smartcenter"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "https://apps.apple.com/us/app/nothing-x/id1568033706"
+      ],
+      "appVersionObserved": "2.4.9 (SoundGuys review, Aug 2024); current Play listing updated 2026-11-03, version not exposed",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 4,
+      "budsHoursNoAnc": 6.3,
+      "caseHours": 36,
+      "chargingIndicators": "Case LED; numeric levels in Nothing X.",
+      "notes": "36 h total with ANC off; about 22.5 h total with ANC on. L/C/R layout in Nothing X.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc-low",
+        "anc-mid",
+        "anc-high",
+        "adaptive",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 40,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "Personalised ANC profiles plus Adaptive ANC; three manual levels."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "Low/Mid/High plus Adaptive."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.personalized-anc",
+        "name": "Personalised ANC",
+        "availability": "official-app",
+        "notes": "Ear-canal-based profile."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets and 3-band custom EQ."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Find My Earbuds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "pinch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple press",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "press-and-hold",
+          "action": "cycle ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "press-and-hold (second assignment)",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Pinch controls on the stem."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "More Bass",
+        "More Treble",
+        "Voice"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC 5.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "LHDC 5.0 Hi-Res on supported Android devices; no spatial audio."
+    },
+    "appOnlyFeatures": [
+      "Personalised ANC",
+      "Custom EQ",
+      "Find My Earbuds",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added Personalised ANC and Adaptive ANC.",
+      "Added LHDC 5.0 Hi-Res audio.",
+      "Added dual-device connection.",
+      "Reduced case size versus Ear (1)."
+    ],
+    "sources": [
+      {
+        "url": "https://us.nothing.tech/products/ear-2",
+        "type": "official-product",
+        "title": "Nothing Ear (2) product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.gsmarena.com/nothing_ear_2_announced_with_improved_anc_lhdc_support_and_personalized_sound_profiles-news-57981.php",
+        "type": "official-support",
+        "title": "Ear (2) announcement with ANC/LHDC details",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "type": "official-app-store",
+        "title": "Nothing X on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Transparency dB is not published.",
+      "Wind-noise reduction is not explicitly documented for Ear (2).",
+      "Case tile behaviour with both buds out and case closed is not independently verified."
+    ],
+    "notes": "Split L/R plus separate case in Nothing X; case reading requires the case to be open.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Nothing",
+    "companySlug": "nothing",
+    "family": "Ear",
+    "model": "Nothing Ear (a)",
+    "slug": "nothing-ear-a",
+    "generation": "a",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Nothing X",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.nothing.smartcenter"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "https://apps.apple.com/us/app/nothing-x/id1568033706"
+      ],
+      "appVersionObserved": "2.4.9 (SoundGuys review, Aug 2024); current Play listing updated 2026-11-03, version not exposed",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 5.5,
+      "budsHoursNoAnc": 9.5,
+      "caseHours": 42.5,
+      "chargingIndicators": "Case LED; numeric levels in Nothing X.",
+      "notes": "42.5 h total with ANC off. Nothing X shows L/C/R; case open required.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 42.5
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc-low",
+        "anc-mid",
+        "anc-high",
+        "adaptive",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 45,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Adaptive ANC with three manual levels; no personalised ANC profile."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "45 dB adaptive ANC."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets and 3-band custom EQ."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Find My Earbuds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "voice-assistant.chatgpt",
+        "name": "ChatGPT voice shortcut",
+        "availability": "official-app",
+        "notes": "Nothing X integration."
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "pinch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple press",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "press-and-hold",
+          "action": "cycle ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Pinch controls."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "More Bass",
+        "More Treble",
+        "Voice"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "LDAC Hi-Res; no spatial audio."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "ChatGPT shortcut",
+      "Find My Earbuds",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added LDAC Hi-Res audio.",
+      "ANC increased to 45 dB.",
+      "Added ChatGPT voice shortcut.",
+      "Moved to a bud-style (non-stem) design."
+    ],
+    "sources": [
+      {
+        "url": "https://us.nothing.tech/products/ear-a",
+        "type": "official-product",
+        "title": "Nothing Ear (a) product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.gsmarena.com/nothing_ear_and_ear_a_review-news-62893.php",
+        "type": "reputable-secondary",
+        "title": "Nothing Ear and Ear (a) review",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "type": "official-app-store",
+        "title": "Nothing X on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Transparency dB is not published.",
+      "Wind-noise reduction is not explicitly documented.",
+      "Case tile behaviour with buds out and case closed is not independently verified."
+    ],
+    "notes": "Split L/R plus separate case; it does not have personalised ANC or spatial audio.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Nothing",
+    "companySlug": "nothing",
+    "family": "Ear",
+    "model": "Nothing Ear (open)",
+    "slug": "nothing-ear-open",
+    "generation": "open",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "Nothing X",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.nothing.smartcenter"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "https://apps.apple.com/us/app/nothing-x/id1568033706"
+      ],
+      "appVersionObserved": "2.4.9 (SoundGuys review, Aug 2024); current Play listing updated 2026-11-03, version not exposed",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; numeric levels in Nothing X.",
+      "notes": "30 h total with case. No ANC, so budsHoursAnc is null.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Open-ear design; no ANC and no transparency mode."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets and custom EQ."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Find My Earbuds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "tap-and-hold",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch area on the hook/earpiece."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "More Bass",
+        "More Treble",
+        "Voice"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "14.2 mm driver; open-ear tuning; no LDAC."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Find My Earbuds",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "New open-ear hook form factor.",
+      "No ANC or transparency mode.",
+      "30 h total battery with case."
+    ],
+    "sources": [
+      {
+        "url": "https://us.nothing.tech/products/ear-open",
+        "type": "official-product",
+        "title": "Nothing Ear (open) product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.gsmarena.com/nothing_ear_open_debut_with_openear_design_and_30hour_battery_life-news-64668.php",
+        "type": "reputable-secondary",
+        "title": "Ear (open) debut",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "type": "official-app-store",
+        "title": "Nothing X on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Exact custom-EQ band count is not stated on the official page.",
+      "Case tile behaviour with buds out and case closed is not independently verified."
+    ],
+    "notes": "Open-ear hook; the app should not show ANC or in-ear pressure features.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Nothing",
+    "companySlug": "nothing",
+    "family": "Ear",
+    "model": "Nothing Ear",
+    "slug": "nothing-ear-2024",
+    "generation": "2024",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Nothing X",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.nothing.smartcenter"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "https://apps.apple.com/us/app/nothing-x/id1568033706"
+      ],
+      "appVersionObserved": "2.4.9 (SoundGuys review, Aug 2024); current Play listing updated 2026-11-03, version not exposed",
+      "notes": "Marketed simply as 'Ear'; this record uses the 2024 generation to distinguish it from Ear (1)."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 5.5,
+      "budsHoursNoAnc": 8.5,
+      "caseHours": 40.5,
+      "chargingIndicators": "Case LED; numeric levels in Nothing X.",
+      "notes": "40.5 h total with ANC off. L/C/R layout; case open required for the case reading.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 40.5
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc-low",
+        "anc-mid",
+        "anc-high",
+        "adaptive",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 45,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "Adaptive ANC with three levels and personalised ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "45 dB adaptive ANC."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.personalized-anc",
+        "name": "Personalised ANC",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets and 3-band custom EQ."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Find My Earbuds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "voice-assistant.chatgpt",
+        "name": "ChatGPT voice shortcut",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "pinch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple press",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "press-and-hold",
+          "action": "cycle ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Pinch controls."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "More Bass",
+        "More Treble",
+        "Voice"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm ceramic driver; LDAC Hi-Res; no spatial audio."
+    },
+    "appOnlyFeatures": [
+      "Personalised ANC",
+      "Custom EQ",
+      "ChatGPT shortcut",
+      "Find My Earbuds",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "11 mm ceramic driver and 45 dB ANC.",
+      "LDAC Hi-Res audio.",
+      "40.5 h total battery.",
+      "ChatGPT voice shortcut."
+    ],
+    "sources": [
+      {
+        "url": "https://us.nothing.tech/products/ear",
+        "type": "official-product",
+        "title": "Nothing Ear product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.gsmarena.com/nothing_ear_and_ear_a_review-news-62893.php",
+        "type": "reputable-secondary",
+        "title": "Nothing Ear and Ear (a) review",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "type": "official-app-store",
+        "title": "Nothing X on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Transparency dB is not published.",
+      "Wind-noise reduction is not explicitly documented.",
+      "Case tile behaviour with buds out and case closed is not independently verified."
+    ],
+    "notes": "This is the 2024 'Ear' flagship, not Ear (1). Split L/R plus separate case.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Nothing",
+    "companySlug": "nothing",
+    "family": "Ear",
+    "model": "Nothing Ear (3)",
+    "slug": "nothing-ear-3",
+    "generation": "3",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Nothing X",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.nothing.smartcenter"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "https://apps.apple.com/us/app/nothing-x/id1568033706"
+      ],
+      "appVersionObserved": "Current Play listing updated 2026-11-03; exact version not exposed",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 5.5,
+      "budsHoursNoAnc": 10,
+      "caseHours": 38,
+      "chargingIndicators": "Case LED; numeric levels in Nothing X.",
+      "notes": "38 h total with case. L/C/R layout in Nothing X.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 38
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "adaptive",
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 45,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "45 dB hybrid adaptive ANC with Super Mic case microphones."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": "45 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets and custom EQ."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "Spatial audio",
+        "availability": "both",
+        "notes": "With head tracking."
+      },
+      {
+        "id": "audio.head-tracking",
+        "name": "Head tracking",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.nothing.super-mic",
+        "name": "Super Mic (case microphone)",
+        "availability": "both",
+        "notes": "Two-mic array in the charging case for calls and voice notes."
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Find My Earbuds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "pinch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple press",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "press-and-hold",
+          "action": "cycle ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Talk button on the charging case for Super Mic.",
+      "configurableInApp": true,
+      "notes": "Pinch controls plus a physical Talk button on the case."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "More Bass",
+        "More Treble",
+        "Voice"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12 mm driver; LDAC; spatial audio with head tracking."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Spatial audio settings",
+      "Find My Earbuds",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added spatial audio with head tracking.",
+      "Added Super Mic two-mic array in the charging case.",
+      "12 mm driver and 38 h total battery.",
+      "45 dB adaptive ANC."
+    ],
+    "sources": [
+      {
+        "url": "https://us.nothing.tech/products/ear-3",
+        "type": "official-product",
+        "title": "Nothing Ear (3) product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.gsmarena.com/nothing_ear_3_images_and_specs_leak-news-69556.php",
+        "type": "reputable-secondary",
+        "title": "Ear (3) specs",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "type": "official-app-store",
+        "title": "Nothing X on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Personalised ANC support is not clearly documented.",
+      "Transparency dB is not published.",
+      "Head-tracking behaviour in third-party apps is not documented.",
+      "Case tile behaviour with buds out and case closed is not independently verified."
+    ],
+    "notes": "Flagship with case-based Super Mic; spatial audio is a headline differentiator.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Nothing",
+    "companySlug": "nothing",
+    "family": "Ear",
+    "model": "Nothing Ear (3a)",
+    "slug": "nothing-ear-3a",
+    "generation": "3a",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Nothing X",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.nothing.smartcenter"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "https://apps.apple.com/us/app/nothing-x/id1568033706"
+      ],
+      "appVersionObserved": "Current Play listing updated 2026-11-03; exact version not exposed",
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 5.5,
+      "budsHoursNoAnc": 10,
+      "caseHours": 42,
+      "chargingIndicators": "Case LED; numeric levels in Nothing X.",
+      "notes": "42 h total with case. L/C/R layout.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 42
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "adaptive",
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 45,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "45 dB wideband ANC with adaptive mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": "45 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets and custom EQ."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.nothing.audio-snapshot",
+        "name": "Audio Snapshot",
+        "availability": "both",
+        "notes": "Records a short clip through the earbuds."
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Find My Earbuds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "pinch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple press",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "press-and-hold",
+          "action": "cycle ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Pinch controls."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "More Bass",
+        "More Treble",
+        "Voice"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12 mm driver; Hi-Res LDAC; spatial-audio support is not confirmed in official copy."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Audio Snapshot",
+      "Find My Earbuds",
+      "Gesture remapping",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "42 h total battery (versus 38 h on Ear (3)).",
+      "12 mm driver and 45 dB ANC at a lower price point.",
+      "Audio Snapshot recording feature.",
+      "Drops the Ear (3) Super Mic case array."
+    ],
+    "sources": [
+      {
+        "url": "https://us.nothing.tech/products/ear-3a",
+        "type": "official-product",
+        "title": "Nothing Ear (3a) product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.gsmarena.com/nothing_ear_3a_unveiled_with_anc_and_up_to_42_hours_of_total_battery_life-news-73612.php",
+        "type": "reputable-secondary",
+        "title": "Ear (3a) announcement",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.nothing.smartcenter",
+        "type": "official-app-store",
+        "title": "Nothing X on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Spatial-audio and head-tracking support is not confirmed for Ear (3a).",
+      "Personalised ANC support is not documented.",
+      "Bluetooth version is reported inconsistently (5.4 vs 6.0) across regional pages.",
+      "Case tile behaviour with buds out and case closed is not independently verified."
+    ],
+    "notes": "2026 value model; do not inherit Ear (3) spatial-audio or Super Mic flags without confirmation.",
+    "researchedAt": "2026-11-10"
+  }
+]

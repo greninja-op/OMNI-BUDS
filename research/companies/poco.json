@@ -1,0 +1,483 @@
+[
+  {
+    "company": "POCO",
+    "companySlug": "poco",
+    "family": "POCO Buds",
+    "model": "POCO Buds Pro Genshin Impact Edition",
+    "slug": "poco-buds-pro-genshin-impact-edition",
+    "generation": "1",
+    "variant": "Pro Genshin Impact Edition",
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "Adaptive ANC mode and firmware update require the app; Klee voice notifications are baked into the product."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 28,
+      "chargingIndicators": "Case LED; Qi wireless charging; 10-minute charge = 3 h",
+      "notes": "Official 6 h / 28 h ANC-off. ANC-on not published. POCO FAQ: phone status bar shows only the lower of the two buds, while the case has its own LED; app can show more detail.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "deep",
+        "balanced",
+        "light",
+        "adaptive",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "35 dB hybrid ANC; dual transparency mode; adaptive mode app-only."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "35 dB smart ANC",
+        "availability": "both",
+        "notes": "Three depths plus adaptive."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Dual transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.adaptive",
+        "name": "AI adaptive ANC",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connectivity",
+        "availability": "device-only",
+        "notes": "Android/iOS/Windows."
+      },
+      {
+        "id": "vendor.poco.genshin-voice",
+        "name": "Klee voice notifications",
+        "availability": "device-only",
+        "notes": "Character voice prompts."
+      },
+      {
+        "id": "vendor.poco.wireless-charging",
+        "name": "Qi wireless charging case",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "answer/hold call; play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track; hang up",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": "Touch rear of bud. App configurability not documented."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "9 mm composite dynamic driver."
+    },
+    "appOnlyFeatures": [
+      "Adaptive ANC",
+      "Firmware update",
+      "Find earbuds"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.po.co/global/product/poco-buds-pro-genshin-impact-edition/",
+        "type": "official-product",
+        "title": "POCO Buds Pro Genshin Impact Edition",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.po.co/global/product/poco-buds-pro-genshin-impact-edition/specs",
+        "type": "official-product",
+        "title": "POCO Buds Pro Genshin Impact Edition specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on hours not published",
+      "EQ presets/custom EQ not documented",
+      "Wear detection not documented",
+      "Gesture configurability not documented",
+      "Battery layout inferred"
+    ],
+    "notes": "Limited-edition 2021 model; hardware is the POCO Buds Pro platform with Klee styling and voice lines.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "POCO",
+    "companySlug": "poco",
+    "family": "POCO Buds",
+    "model": "POCO Buds X1",
+    "slug": "poco-buds-x1",
+    "generation": "X1",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "India launch pairs with the Xiaomi Earbuds app for EQ, ANC and touch remap."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 3.5,
+      "budsHoursNoAnc": 7,
+      "caseHours": 36,
+      "chargingIndicators": "Case LED; 10-minute charge = 2 h",
+      "notes": "Official 7 h / 36 h ANC-off. ANC-on single-charge is about 3.5 h (secondary review; POCO claims up to 22 h total with ANC). Treat ANC-on as approximate.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 40,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "40 dB hybrid ANC; transparency; quad-mic AI ENC with anti-wind algorithm."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "40 dB hybrid ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "4 EQ profiles plus custom",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.xiaomi.audio-sharing",
+        "name": "Audio sharing",
+        "availability": "device-only",
+        "notes": "Two X1 pairs to one device."
+      },
+      {
+        "id": "vendor.xiaomi.low-latency",
+        "name": "60 ms Beast Mode",
+        "availability": "device-only",
+        "notes": "Game low-latency mode."
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next/previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls customizable in Xiaomi Earbuds app."
+    },
+    "audio": {
+      "eqPresets": [
+        "Standard",
+        "Enhance bass",
+        "Enhance treble",
+        "Enhance voice",
+        "Custom"
+      ],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": null,
+      "notes": "12.4 mm titanium-diaphragm driver. Review reports a 10-band custom EQ; official page only says custom EQ."
+    },
+    "appOnlyFeatures": [
+      "EQ/custom EQ",
+      "ANC/transparency",
+      "Gesture remap",
+      "Find earbuds"
+    ],
+    "featureDeltaFromPrevious": [
+      "Raised ANC from 35 dB to 40 dB vs POCO Buds Pro (official-product)",
+      "Battery increased from 6 h/28 h to 7 h/36 h (official-product)",
+      "Removed wireless charging and multipoint (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.po.co/in/product/poco-buds-x1/",
+        "type": "official-product",
+        "title": "POCO Buds X1 (India)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.reliancedigital.in/product/poco-buds-x1-tws-earbuds-with-40-db-anc-36-hrs-playtime-m2mzbg-8689641",
+        "type": "reputable-secondary",
+        "title": "POCO Buds X1 retail spec sheet",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.gadgetbridge.com/poco-buds-x1-review-should-you-get-one",
+        "type": "reputable-secondary",
+        "title": "POCO Buds X1 review",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "POCO India product page is not reliably reachable; specs cross-checked against retail sheet and review",
+      "ANC-on battery is secondary and inconsistent",
+      "Multipoint unsupported per review",
+      "Wear detection unknown",
+      "Battery layout inferred"
+    ],
+    "notes": "India-focused 2024 budget ANC model; no multipoint.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "POCO",
+    "companySlug": "poco",
+    "family": "POCO Pods",
+    "model": "POCO Pods",
+    "slug": "poco-pods",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "App support is listed by launch coverage; feature depth is limited on this entry model."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; USB-C",
+      "notes": "No ANC. Official/launch figures vary between 28 h and 30 h total; 5 h single charge. 30 h is the commonly listed total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC; environmental noise cancellation (ENC) for calls only."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ via Xiaomi Earbuds app",
+        "availability": "official-app",
+        "notes": "App support listed, exact presets undocumented."
+      },
+      {
+        "id": "vendor.xiaomi.low-latency",
+        "name": "60 ms low-latency mode",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer call",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track; reject/end call",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": null,
+      "notes": "Basic touch; app remap not confirmed."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": null,
+      "notes": "12 mm dynamic driver; SBC only."
+    },
+    "appOnlyFeatures": [
+      "EQ (undocumented depth)",
+      "Find earbuds"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.po.co/in/product/poco-pods/",
+        "type": "official-product",
+        "title": "POCO Pods (India)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.mymobileindia.com/poco-pods-hands-on-review-true-wireless-earbuds-with-enc-60ms-low-latency-and-30-hours-playback/",
+        "type": "reputable-secondary",
+        "title": "POCO Pods hands-on review",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.gadgetbytenepal.com/poco-pods-price-nepal/",
+        "type": "reputable-secondary",
+        "title": "POCO Pods launch specs",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No ANC at all",
+      "Official product page not reliably reachable",
+      "Total battery listed as 28 h in some launch coverage and 30 h in others",
+      "EQ presets and gesture configurability undocumented",
+      "Battery layout inferred"
+    ],
+    "notes": "POCO's first India TWS, entry-level. Do not surface ANC toggles.",
+    "researchedAt": "2026-11-10"
+  }
+]

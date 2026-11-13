@@ -1,0 +1,2093 @@
+[
+  {
+    "company": "Edifier",
+    "companySlug": "edifier",
+    "family": "NeoBuds",
+    "model": "Edifier NeoBuds Pro 3",
+    "slug": "edifier-neobuds-pro-3",
+    "generation": "3",
+    "variant": "Pro",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "EDIFIER ConneX",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.edifier.edifierconnex",
+        "com.edifier.edifierconnect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.edifier.edifierconnex"
+      ],
+      "appVersionObserved": null,
+      "notes": "Newer Edifier models use EDIFIER ConneX; older Connect app remains for legacy models."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 36,
+      "chargingIndicators": "15-minute charge = 3 hours.",
+      "notes": "Official total 36 h with case; per-bud ANC/off split not published in retrieved page. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 36
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Wide-band multi-channel ANC, -50 dB depth, 4 kHz bandwidth; 6 high-sensitivity mics."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive wide-band ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio with head tracking",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / LHDC 5.0",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "controls.press",
+        "name": "Press control",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Official page describes 'easy press control' rather than tap; treated as touch/press surface."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "LHDC 5.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Balanced armature + dynamic driver with DSP."
+    },
+    "appOnlyFeatures": [
+      "spatial audio",
+      "head tracking visualization",
+      "HD codec selection",
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC depth remains -50 dB but bandwidth narrows to 4 kHz versus 5 kHz on Pro 2",
+      "Head-tracked spatial audio retained",
+      "New BA + dynamic hybrid with DSP"
+    ],
+    "sources": [
+      {
+        "url": "https://www.edifier.com/global/p/true-wireless-earbuds/neobuds-pro-3",
+        "type": "official-product",
+        "title": "Edifier NeoBuds Pro 3 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Per-bud battery hours with ANC on/off",
+      "Codec list from page bullets; full spec table not captured",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Edifier",
+    "companySlug": "edifier",
+    "family": "NeoBuds",
+    "model": "Edifier NeoBuds Planar",
+    "slug": "edifier-neobuds-planar",
+    "generation": "Planar",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "EDIFIER ConneX",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.edifier.edifierconnex",
+        "com.edifier.edifierconnect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.edifier.edifierconnex"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 30,
+      "chargingIndicators": "Wireless charging case.",
+      "notes": "Official 30 h total with case, SBC at 80% volume. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Qualcomm Adaptive ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Qualcomm Adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.planar",
+        "name": "12 mm planar magnetic drivers",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / LHDC 5.0",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "charging.wireless",
+        "name": "Wireless charging",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "LHDC 5.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "2nd-gen EqualMass wiring; Hi-Res Wireless certified."
+    },
+    "appOnlyFeatures": [
+      "HD codec selection",
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "First planar-magnetic driver in the NeoBuds line",
+      "12 mm modular planar driver with dual-layer magnets"
+    ],
+    "sources": [
+      {
+        "url": "https://www.edifier.com/global/p/true-wireless-earbuds/neobuds-planar",
+        "type": "official-product",
+        "title": "Edifier NeoBuds Planar product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Per-bud battery hours",
+      "ANC dB depth",
+      "Spatial audio support",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Edifier",
+    "companySlug": "edifier",
+    "family": "NeoBuds",
+    "model": "Edifier NeoBuds Pro 2",
+    "slug": "edifier-neobuds-pro-2",
+    "generation": "2",
+    "variant": "Pro",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Edifier Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.edifier.edifierconnect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.edifier.edifierconnect"
+      ],
+      "appVersionObserved": null,
+      "notes": "EQ, control settings, LED color selection and head-tracking visualization."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 4,
+      "budsHoursNoAnc": 5.5,
+      "caseHours": 16.5,
+      "chargingIndicators": "1 h buds, 1 h case.",
+      "notes": "Official: ANC on 4 h buds + 12 h case; ANC off 5.5 h + 16.5 h case. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "Edifier Wide-Band Multi-Channel ANC, -50 dB, 5 kHz bandwidth; 4+4 mics."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Wide-band multi-channel ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient sound",
+        "availability": "both"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio with head tracking",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / LHDC 5.0",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "official-app"
+      },
+      {
+        "id": "case.led-customization",
+        "name": "8-color LED strip",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "LHDC 5.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Knowles balanced armature + 10 mm dynamic; IP54; Bluetooth 5.3."
+    },
+    "appOnlyFeatures": [
+      "head-tracking visualization",
+      "LED color",
+      "HD codec",
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC depth extended to -50 dB and 5 kHz bandwidth",
+      "Head-tracked spatial audio added",
+      "LHDC 5.0 192 kHz/24-bit support",
+      "LED strip customization"
+    ],
+    "sources": [
+      {
+        "url": "https://www.edifier.com/global/p/true-wireless-earbuds/neobuds-pro-2",
+        "type": "official-product",
+        "title": "Edifier NeoBuds Pro 2 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Gesture map details",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": "Battery is notably short with ANC on (4 h buds).",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Edifier",
+    "companySlug": "edifier",
+    "family": "NeoBuds",
+    "model": "Edifier NeoBuds Pro",
+    "slug": "edifier-neobuds-pro",
+    "generation": "1",
+    "variant": "Pro",
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Edifier Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.edifier.edifierconnect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.edifier.edifierconnect"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5,
+      "budsHoursNoAnc": 6,
+      "caseHours": 18,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate official figures; per-bud 5 h ANC / 6 h off, case total ~18 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 18
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 42,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "Hybrid ANC with -42 dB claim."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient sound",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Knowles BA + dynamic driver; IP54."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "LDAC toggle"
+    ],
+    "featureDeltaFromPrevious": [
+      "First NeoBuds Pro; introduced hybrid ANC and LDAC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.edifier.com/global/p/true-wireless-earbuds/neobuds-pro",
+        "type": "official-product",
+        "title": "Edifier NeoBuds Pro product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery values approximate; current page spec table not captured",
+      "Gesture map",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Edifier",
+    "companySlug": "edifier",
+    "family": "NeoBuds",
+    "model": "Edifier NeoBuds S",
+    "slug": "edifier-neobuds-s",
+    "generation": "S",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Edifier Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.edifier.edifierconnect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.edifier.edifierconnect"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5.5,
+      "caseHours": 20,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate: 5.5 h buds / 20 h case. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 42,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Hybrid ANC, -42 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient sound",
+        "availability": "both"
+      },
+      {
+        "id": "audio.snapdragon-sound",
+        "name": "Snapdragon Sound / aptX Adaptive",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Snapdragon Sound; IP54."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Snapdragon Sound and aptX Adaptive added versus NeoBuds Pro"
+    ],
+    "sources": [
+      {
+        "url": "https://www.edifier.com/global/p/true-wireless-earbuds/neobuds-s",
+        "type": "official-product",
+        "title": "Edifier NeoBuds S product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery values approximate",
+      "ANC dB from launch materials",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Edifier",
+    "companySlug": "edifier",
+    "family": "NeoBuds",
+    "model": "Edifier NeoBuds Plus",
+    "slug": "edifier-neobuds-plus",
+    "generation": "Plus",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "EDIFIER ConneX",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.edifier.edifierconnex",
+        "com.edifier.edifierconnect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.edifier.edifierconnex"
+      ],
+      "appVersionObserved": null,
+      "notes": "HD codec settings exposed in ConneX app."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 47,
+      "chargingIndicators": "15 minutes = 4 hours; wireless charging.",
+      "notes": "Official 47 h total with case. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 47
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 48,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "Hybrid ANC, -48 dB, 4 kHz bandwidth; 6 mics."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / LHDC 5.0",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "60 ms game mode",
+        "availability": "official-app"
+      },
+      {
+        "id": "charging.wireless",
+        "name": "Wireless charging",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC",
+        "LHDC 5.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Hybrid drivers; Bluetooth 5.4."
+    },
+    "appOnlyFeatures": [
+      "HD codec",
+      "EQ",
+      "game mode"
+    ],
+    "featureDeltaFromPrevious": [
+      "47 h total battery versus 16.5 h on NeoBuds Pro 2",
+      "Bluetooth 5.4 and wireless charging"
+    ],
+    "sources": [
+      {
+        "url": "https://www.edifier.com/global/p/true-wireless-earbuds/neobuds-plus",
+        "type": "official-product",
+        "title": "Edifier NeoBuds Plus product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Per-bud battery hours",
+      "Spatial audio support",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Edifier",
+    "companySlug": "edifier",
+    "family": "STAX SPIRIT",
+    "model": "Edifier STAX SPIRIT S5",
+    "slug": "edifier-stax-spirit-s5",
+    "generation": "S5",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "EDIFIER ConneX",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.edifier.edifierconnex",
+        "com.edifier.edifierconnect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.edifier.edifierconnex"
+      ],
+      "appVersionObserved": null,
+      "notes": "Custom EQ in ConneX."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 80,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 80 h; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC; passive isolation."
+    },
+    "features": [
+      {
+        "id": "audio.planar",
+        "name": "Planar magnetic drivers",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "Snapdragon Sound / aptX Lossless / LDAC",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "Low-latency game mode",
+        "availability": "official-app"
+      },
+      {
+        "id": "controls.buttons",
+        "name": "Physical controls",
+        "availability": "both"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "power/pairing",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "LDAC",
+        "LHDC",
+        "aptX",
+        "aptX HD",
+        "aptX Adaptive",
+        "aptX Lossless"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "2 µm planar diaphragm; 347 g; Bluetooth 5.4."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "game mode"
+    ],
+    "featureDeltaFromPrevious": [
+      "2nd-gen EqualMass planar driver versus STAX S3",
+      "Snapdragon Sound and aptX Lossless",
+      "Bluetooth 5.4"
+    ],
+    "sources": [
+      {
+        "url": "https://www.edifier.com/global/p/over-ear-on-ear-headphones/stax-spirit-s5",
+        "type": "official-product",
+        "title": "Edifier STAX SPIRIT S5 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Gesture map details"
+    ],
+    "notes": "Audiophile planar headphone, no ANC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Edifier",
+    "companySlug": "edifier",
+    "family": "WH",
+    "model": "Edifier WH950NB",
+    "slug": "edifier-wh950nb",
+    "generation": "950",
+    "variant": "NB",
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Edifier Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.edifier.edifierconnect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.edifier.edifierconnect"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 34,
+      "budsHoursNoAnc": 55,
+      "caseHours": null,
+      "chargingIndicators": "10 minutes = 7 hours; 1.5 h full charge.",
+      "notes": "Official 34 h ANC / 55 h off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient",
+        "wind-reduction",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "Two ANC modes plus ambient and wind reduction."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC with two modes",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient sound",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.wind",
+        "name": "Wind reduction",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / Hi-Res",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Classic/Dynamic presets + custom EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup buttons including multi-function button.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Classic",
+        "Dynamic"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm composite titanium driver; Bluetooth 5.3; 296 g."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "LDAC toggle"
+    ],
+    "featureDeltaFromPrevious": [
+      "Successor to W820NB series with LDAC and ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.edifier.com/global/p/over-ear-on-ear-headphones/wh950nb",
+        "type": "official-product",
+        "title": "Edifier WH950NB product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB depth",
+      "Multipoint support varies by firmware"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Edifier",
+    "companySlug": "edifier",
+    "family": "WH",
+    "model": "Edifier WH950NB (New Version)",
+    "slug": "edifier-wh950nb-new-version",
+    "generation": "950",
+    "variant": "New Version",
+    "releaseYear": 2025,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "EDIFIER ConneX",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.edifier.edifierconnex",
+        "com.edifier.edifierconnect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.edifier.edifierconnex"
+      ],
+      "appVersionObserved": null,
+      "notes": "Page names EDIFIER ConneX."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 45,
+      "budsHoursNoAnc": 80,
+      "caseHours": null,
+      "chargingIndicators": "15 minutes = 13 hours.",
+      "notes": "Official 45 h ANC / 80 h off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient",
+        "wind-reduction",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "Hybrid ANC, 4 mics."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient sound",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Preset + custom EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "wired.3.5mm",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup multi-function button and volume buttons.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "EDIFIER",
+        "Jazz",
+        "Rock",
+        "Bass"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm titanium-coated driver; Bluetooth 5.4; 3.5 mm cable included."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "LDAC toggle"
+    ],
+    "featureDeltaFromPrevious": [
+      "45 h ANC / 80 h vs 34 h / 55 h",
+      "Bluetooth 5.4 and AAC support",
+      "Multipoint added",
+      "13 h from a 15-minute charge"
+    ],
+    "sources": [
+      {
+        "url": "https://www.edifier.com/global/p/over-ear-on-ear-headphones/wh950nb-new",
+        "type": "official-product",
+        "title": "Edifier WH950NB New Version product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB depth",
+      "Gesture map"
+    ],
+    "notes": "Same name as the 2023 model but a distinct hardware revision with different battery and Bluetooth.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Edifier",
+    "companySlug": "edifier",
+    "family": "W",
+    "model": "Edifier W830NB",
+    "slug": "edifier-w830nb",
+    "generation": "830",
+    "variant": "NB",
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Edifier Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.edifier.edifierconnect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.edifier.edifierconnect"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 54,
+      "budsHoursNoAnc": 94,
+      "caseHours": null,
+      "chargingIndicators": "USB-C fast charge.",
+      "notes": "Official 54 h ANC / 94 h off, SBC at 80% volume.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 45,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "Hybrid ANC, -45 dB, 18% better than previous generation."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient sound",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm driver; Bluetooth 5.4; 267 g."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "LDAC toggle"
+    ],
+    "featureDeltaFromPrevious": [
+      "94 h playtime versus W820NB Plus 49 h",
+      "-45 dB ANC versus -43 dB",
+      "Bluetooth 5.4"
+    ],
+    "sources": [
+      {
+        "url": "https://www.edifier.com/global/p/over-ear-on-ear-headphones/w830nb",
+        "type": "official-product",
+        "title": "Edifier W830NB product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Gesture map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Edifier",
+    "companySlug": "edifier",
+    "family": "W",
+    "model": "Edifier W820NB Plus",
+    "slug": "edifier-w820nb-plus",
+    "generation": "820",
+    "variant": "Plus",
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Edifier Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.edifier.edifierconnect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.edifier.edifierconnect"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 33,
+      "budsHoursNoAnc": 49,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 33 h ANC / 49 h off (SBC).",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 43,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "Hybrid ANC, -43 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient sound",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "calls.dnn",
+        "name": "DNN call noise cancellation",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm driver; Bluetooth 5.2; 238 g."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "LDAC and -43 dB ANC versus W820NB",
+      "49 h playtime"
+    ],
+    "sources": [
+      {
+        "url": "https://www.edifier.com/global/p/over-ear-on-ear-headphones/w820nb-plus",
+        "type": "official-product",
+        "title": "Edifier W820NB Plus product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Gesture map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Edifier",
+    "companySlug": "edifier",
+    "family": "W",
+    "model": "Edifier W240TN",
+    "slug": "edifier-w240tn",
+    "generation": "240",
+    "variant": "TN",
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Edifier Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.edifier.edifierconnect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.edifier.edifierconnect"
+      ],
+      "appVersionObserved": null,
+      "notes": "Ambient level adjustable in app."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 8.5,
+      "caseHours": 17,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official: ANC on 7 h buds + 14 h case; ANC off 8.5 h + 17 h case. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Enhanced ANC with adjustable ambient level; no dB figure."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Adjustable ambient sound",
+        "availability": "both"
+      },
+      {
+        "id": "calls.ai-dnn",
+        "name": "AI DNN call noise cancellation",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "Coaxial 10 mm woofer + 6 mm tweeter; Bluetooth 5.3."
+    },
+    "appOnlyFeatures": [
+      "ambient level",
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Coaxial dual-driver setup",
+      "Adjustable ambient sound level"
+    ],
+    "sources": [
+      {
+        "url": "https://www.edifier.com/global/p/true-wireless-earbuds/w240tn",
+        "type": "official-product",
+        "title": "Edifier W240TN product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB depth",
+      "Multipoint support",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": "SBC-only codec is a notable limitation.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Edifier",
+    "companySlug": "edifier",
+    "family": "LolliClip",
+    "model": "Edifier LolliClip",
+    "slug": "edifier-lolliclip",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "EDIFIER ConneX",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.edifier.edifierconnex",
+        "com.edifier.edifierconnect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.edifier.edifierconnex"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official playtime not captured; page only cites lab test conditions. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "ambient",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adaptive ANC on an open-ear clip design; dB not published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient sound",
+        "availability": "both"
+      },
+      {
+        "id": "design.clip",
+        "name": "Multicurve earhook clip",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "water.ip56",
+        "name": "IP56",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "13 mm titanium-coated composite driver; IP56; directional acoustics."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "First LolliClip; ANC in an open-ear clip"
+    ],
+    "sources": [
+      {
+        "url": "https://www.edifier.com/global/p/open-ear-true-wireless-earbuds/lolliclip",
+        "type": "official-product",
+        "title": "Edifier LolliClip product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery hours",
+      "ANC dB depth",
+      "Codec list partly from page bullets",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": "One of the few open-ear clip products with adaptive ANC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Edifier",
+    "companySlug": "edifier",
+    "family": "Comfo",
+    "model": "Edifier Comfo Q",
+    "slug": "edifier-comfo-q",
+    "generation": "Q",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "EDIFIER ConneX",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.edifier.edifierconnex",
+        "com.edifier.edifierconnect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.edifier.edifierconnex"
+      ],
+      "appVersionObserved": null,
+      "notes": "Preset EQ and customization in ConneX."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 32,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 32 h total. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 32
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear; no ANC."
+    },
+    "features": [
+      {
+        "id": "design.open-ear",
+        "name": "Open-ear hook",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "official-app"
+      },
+      {
+        "id": "water.ip56",
+        "name": "IP56",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Preset EQ + custom",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Titanium-composite drivers; Bluetooth 5.4; IP56."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "New Comfo open-ear family"
+    ],
+    "sources": [
+      {
+        "url": "https://www.edifier.com/global/p/open-ear-true-wireless-earbuds/comfo-q",
+        "type": "official-product",
+        "title": "Edifier Comfo Q product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Per-bud battery hours",
+      "Codec list not in spec table",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

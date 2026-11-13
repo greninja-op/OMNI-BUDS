@@ -34,9 +34,11 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -324,7 +326,7 @@ fun OmniBudsAppShell(
             // Live Bluetooth Adapter Status Pill (Always visible)
             BluetoothAdapterStatusPill(
                 status = btStatus,
-                connectedDeviceName = connectedDevice?.let { it.name ?: "realme Buds T300" },
+                connectedDeviceName = connectedDevice?.displayName,
                 onClick = {
                     if (btStatus == BluetoothAdapterStatus.DISABLED) {
                         try {
@@ -404,7 +406,16 @@ private fun AppScreenContent(
             )
         }
         is AndroidDestination.DeviceWorkspace -> {
-            val vm = workspaceViewModelProvider(destination.deviceId)
+            // One view model per destination device for the lifetime of this
+            // composition. Creating it inline on every recomposition would
+            // start a new observation collector and hardware listener each
+            // time, resetting workspace state and leaking coroutines.
+            val vm = remember(destination.deviceId) {
+                workspaceViewModelProvider(destination.deviceId)
+            }
+            DisposableEffect(vm) {
+                onDispose { vm.cleanUp() }
+            }
             WorkspaceScreen(
                 viewModel = vm,
                 onDisconnect = { onDisconnectDevice(destination.deviceId) },

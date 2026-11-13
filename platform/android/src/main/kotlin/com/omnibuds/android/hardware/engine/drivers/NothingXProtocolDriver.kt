@@ -54,26 +54,28 @@ class NothingXProtocolDriver : IVendorDriver {
         const val CMD_TOUCH_GESTURES = 0x18
         const val SUB_TOUCH_GESTURES = 0xD0
 
-        // Noise Control Sub-levels
-        const val ANC_LEVEL_HIGH = 0x03
-        const val ANC_LEVEL_MID = 0x02
-        const val ANC_LEVEL_LOW = 0x01
-        const val ANC_LEVEL_ADAPTIVE = 0x00
+        // Noise Control modes (real Nothing X values)
+        const val MODE_ANC_HIGH = 0x01
+        const val MODE_ANC_MID = 0x02
+        const val MODE_ANC_LOW = 0x03
+        const val MODE_ANC_ADAPTIVE = 0x04
+        const val MODE_OFF = 0x05
+        const val MODE_TRANSPARENCY = 0x07
 
-        const val MODE_OFF = 0x00
-        const val MODE_ANC = 0x01
-        const val MODE_TRANSPARENCY = 0x02
+        private val seqCounter = java.util.concurrent.atomic.AtomicInteger(0xCD)
 
-        // Fast CRC16 CCITT
+        fun nextSeq(): Int = seqCounter.getAndIncrement() and 0xFF
+
+        // CRC-16/MODBUS: init 0xFFFF, reflected poly 0xA001.
         fun calculateCrc16(data: ByteArray): Int {
             var crc = 0xFFFF
             for (b in data) {
-                crc = crc xor ((b.toInt() and 0xFF) shl 8)
+                crc = crc xor (b.toInt() and 0xFF)
                 for (i in 0 until 8) {
-                    crc = if ((crc and 0x8000) != 0) {
-                        (crc shl 1) xor 0x1021
+                    crc = if ((crc and 0x0001) != 0) {
+                        (crc shr 1) xor 0xA001
                     } else {
-                        crc shl 1
+                        crc shr 1
                     }
                 }
             }
@@ -105,7 +107,12 @@ class NothingXProtocolDriver : IVendorDriver {
     /**
      * Builds standard Nothing X frame with length prefix and CRC16 checksum.
      */
-    fun buildNothingFrame(cmd: Int, subCmd: Int, payload: ByteArray = ByteArray(0)): ByteArray {
+    fun buildNothingFrame(
+        cmd: Int,
+        subCmd: Int,
+        payload: ByteArray = ByteArray(0),
+        seq: Int = nextSeq(),
+    ): ByteArray {
         val body = byteArrayOf(
             0x55.toByte(),
             0x60.toByte(),
@@ -113,11 +120,13 @@ class NothingXProtocolDriver : IVendorDriver {
             (cmd and 0xFF).toByte(),
             (subCmd and 0xFF).toByte(),
             (payload.size and 0xFF).toByte(),
+            ((payload.size shr 8) and 0xFF).toByte(),
+            (seq and 0xFF).toByte(),
         ) + payload
         val crc = calculateCrc16(body)
         val crcBytes = byteArrayOf(
-            ((crc shr 8) and 0xFF).toByte(),
             (crc and 0xFF).toByte(),
+            ((crc shr 8) and 0xFF).toByte(),
         )
         return body + crcBytes
     }
@@ -127,23 +136,36 @@ class NothingXProtocolDriver : IVendorDriver {
         return buildNothingFrame(CMD_BATTERY, SUB_BATTERY, ByteArray(0))
     }
 
+    override fun buildStateQueryCommands(): List<ByteArray> = listOf(
+        buildNothingFrame(CMD_BATTERY, 0xC0, ByteArray(0)),
+        buildNothingFrame(CMD_NOISE_CONTROL, 0xC0, ByteArray(0)),
+        buildNothingFrame(0x03, 0xC0, ByteArray(0)),
+        buildNothingFrame(0x04, 0xC0, ByteArray(0)),
+        buildNothingFrame(0x09, 0xC0, ByteArray(0)),
+        buildNothingFrame(0x40, 0xC0, ByteArray(0)),
+        buildNothingFrame(0x1E, 0xC0, ByteArray(0)),
+        buildNothingFrame(0x1F, 0xC0, ByteArray(0)),
+    )
+
     // --- Noise Control Command ---
     override fun buildAncCommand(mode: String): ByteArray {
         val upper = mode.uppercase().trim()
-        val (levelByte, modeByte) = when {
-            upper.contains("HIGH") || upper.contains("42DB") || upper.contains("50DB") -> Pair(ANC_LEVEL_HIGH.toByte(), MODE_ANC.toByte())
-            upper.contains("MID") -> Pair(ANC_LEVEL_MID.toByte(), MODE_ANC.toByte())
-            upper.contains("LOW") && !upper.contains("LOW LAG") -> Pair(ANC_LEVEL_LOW.toByte(), MODE_ANC.toByte())
-            upper.contains("ADAPTIVE") -> Pair(ANC_LEVEL_ADAPTIVE.toByte(), MODE_ANC.toByte())
+        val modeByte = when {
+            upper.contains("HIGH") || upper.contains("42DB") || upper.contains("50DB") -> MODE_ANC_HIGH
+            upper.contains("MID") -> MODE_ANC_MID
+            upper.contains("LOW") && !upper.contains("LOW LAG") -> MODE_ANC_LOW
+            upper.contains("ADAPTIVE") -> MODE_ANC_ADAPTIVE
             upper == "ANC" || upper == "ANC_ON" || upper == "ACTIVE NOISE CANCELLATION" || upper == "NOISE_CANCELLATION" ->
-                Pair(ANC_LEVEL_HIGH.toByte(), MODE_ANC.toByte()) // Default to High (42dB)
-            upper.contains("TRANSPARENCY") || upper.contains("AMBIENT") ->
-                Pair(0x00.toByte(), MODE_TRANSPARENCY.toByte())
-            upper == "OFF" || upper == "NORMAL" ->
-                Pair(0x00.toByte(), MODE_OFF.toByte())
-            else -> Pair(0x00.toByte(), MODE_OFF.toByte())
+                MODE_ANC_HIGH
+            upper.contains("TRANSPARENCY") || upper.contains("AMBIENT") -> MODE_TRANSPARENCY
+            upper == "OFF" || upper == "NORMAL" -> MODE_OFF
+            else -> MODE_OFF
         }
-        return buildNothingFrame(CMD_NOISE_CONTROL, SUB_NOISE_CONTROL, byteArrayOf(modeByte, levelByte))
+        return buildNothingFrame(
+            CMD_NOISE_CONTROL,
+            SUB_NOISE_CONTROL,
+            byteArrayOf(0x01, modeByte.toByte(), 0x00),
+        )
     }
 
     // --- Equalizer Command ---
@@ -241,44 +263,43 @@ class NothingXProtocolDriver : IVendorDriver {
      *   IF case byte is 0, 0x7F, 0xFF, or not in 1..100 -> case is strictly NULL (Case Ring must be hidden)!
      */
     override fun parseBatteryReport(bytes: ByteArray): TwsBatteryReport? {
-        if (bytes.size < 6) return null
+        if (bytes.size < 11) return null
 
-        for (i in 0..bytes.size - 6) {
+        for (i in 0..bytes.size - 11) {
             if (bytes[i] == 0x55.toByte() && bytes[i + 1] == 0x60.toByte() && bytes[i + 2] == 0x01.toByte()) {
                 val cmd = bytes[i + 3].toInt() and 0xFF
-                val subCmd = bytes.getOrNull(i + 4)?.toInt()?.and(0xFF) ?: 0
+                val subCmd = bytes[i + 4].toInt() and 0xFF
 
-                if (cmd == CMD_BATTERY || cmd == 0x87 || cmd == 0x08 || cmd == 0x88 || (cmd == 0x07 && subCmd == SUB_BATTERY)) {
-                    // Check if byte i+5 is length or direct payload
-                    var pStart = i + 5
-                    val lenByte = bytes[pStart].toInt() and 0xFF
-                    if (lenByte in 1..8 && pStart + 1 + 3 <= bytes.size) {
-                        pStart += 1 // Skip length byte to reach payload
-                    }
+                val isBattery = cmd == CMD_BATTERY || cmd == 0x87 || cmd == 0x08 || cmd == 0x88 ||
+                    (cmd == 0x07 && subCmd == SUB_BATTERY)
+                if (!isBattery) continue
 
-                    if (pStart + 3 <= bytes.size) {
-                        val rawL = bytes[pStart].toInt() and 0xFF
-                        val rawR = bytes[pStart + 1].toInt() and 0xFF
-                        val rawC = bytes[pStart + 2].toInt() and 0xFF
+                val payloadStart = i + 8
+                // Tolerate an optional status/count prefix before the raw triplet.
+                for (offset in 0..2) {
+                    val p = payloadStart + offset
+                    if (p + 3 > bytes.size) break
 
-                        val left = (rawL and 0x7F).takeIf { it in 0..100 }
-                        val right = (rawR and 0x7F).takeIf { it in 0..100 }
-                        // Case is ONLY valid if reported between 1% and 100%. 0, 0x7F, 0xFF mean offline/undocked
-                        val case = (rawC and 0x7F).takeIf { it in 1..100 }
+                    val rawL = bytes[p].toInt() and 0xFF
+                    val rawR = bytes[p + 1].toInt() and 0xFF
+                    val rawC = bytes[p + 2].toInt() and 0xFF
 
-                        if (left != null || right != null || case != null) {
-                            return TwsBatteryReport(
-                                left = left,
-                                right = right,
-                                case = case,
-                                leftCharging = left != null && (rawL and 0x80) != 0,
-                                rightCharging = right != null && (rawR and 0x80) != 0,
-                                caseCharging = case != null && (rawC and 0x80) != 0,
-                                caseIsLive = case != null,
-                                rawHex = HexUtils.formatHex(bytes),
-                                sourceProtocol = "Nothing X (0x07 C0)",
-                            )
-                        }
+                    val left = (rawL and 0x7F).takeIf { it in 0..100 }
+                    val right = (rawR and 0x7F).takeIf { it in 0..100 }
+                    val case = (rawC and 0x7F).takeIf { it in 1..100 }
+
+                    if (left != null || right != null || case != null) {
+                        return TwsBatteryReport(
+                            left = left,
+                            right = right,
+                            case = case,
+                            leftCharging = left != null && (rawL and 0x80) != 0,
+                            rightCharging = right != null && (rawR and 0x80) != 0,
+                            caseCharging = case != null && (rawC and 0x80) != 0,
+                            caseIsLive = case != null,
+                            rawHex = HexUtils.formatHex(bytes),
+                            sourceProtocol = "Nothing X (0x07 C0)",
+                        )
                     }
                 }
             }
@@ -287,23 +308,19 @@ class NothingXProtocolDriver : IVendorDriver {
     }
 
     override fun parseAncModeNotification(bytes: ByteArray, mapping: AncByteMapping): String? {
-        if (bytes.size < 6) return null
-        for (i in 0..bytes.size - 6) {
+        if (bytes.size < 11) return null
+        for (i in 0..bytes.size - 11) {
             if (bytes[i] == 0x55.toByte() && bytes[i + 1] == 0x60.toByte() && bytes[i + 2] == 0x01.toByte()) {
                 val cmd = bytes[i + 3].toInt() and 0xFF
-                if (cmd == CMD_NOISE_CONTROL) {
-                    var pStart = i + 5
-                    val lenByte = bytes[pStart].toInt() and 0xFF
-                    if (lenByte in 1..8 && pStart + 1 + 2 <= bytes.size) {
-                        pStart += 1
-                    }
-                    if (pStart + 2 <= bytes.size) {
-                        val modeByte = bytes[pStart + 1].toInt() and 0xFF
-                        return when (modeByte) {
-                            MODE_ANC -> "ACTIVE NOISE CANCELLATION"
-                            MODE_TRANSPARENCY -> "TRANSPARENCY MODE"
+                val sub = bytes[i + 4].toInt() and 0xFF
+                if (cmd == CMD_NOISE_CONTROL && (sub == SUB_NOISE_CONTROL || sub == 0xC0)) {
+                    val payloadStart = i + 8
+                    if (payloadStart + 2 < bytes.size) {
+                        return when (bytes[payloadStart + 1].toInt() and 0xFF) {
+                            MODE_ANC_HIGH, MODE_ANC_MID, MODE_ANC_LOW, MODE_ANC_ADAPTIVE -> "ANC"
+                            MODE_TRANSPARENCY -> "TRANSPARENCY"
                             MODE_OFF -> "OFF"
-                            else -> "OFF"
+                            else -> null
                         }
                     }
                 }

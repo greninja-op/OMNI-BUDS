@@ -1,0 +1,603 @@
+[
+  {
+    "company": "Grado",
+    "companySlug": "grado",
+    "family": "GW",
+    "model": "GW100",
+    "slug": "grado-gw100",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2018,
+    "formFactor": "on-ear",
+    "officialApp": {
+      "name": "No official companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app; fixed physical controls."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 15,
+      "caseHours": null,
+      "chargingIndicators": "LED charging/power light.",
+      "notes": "15 h, 320 mAh, 2 h charge. Micro-USB. No case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Open-back on-ear; no ANC."
+    },
+    "features": [
+      {
+        "id": "audio.aptx",
+        "name": "aptX",
+        "availability": "device-only",
+        "notes": "Bluetooth 4.2."
+      },
+      {
+        "id": "connectivity.wired",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only",
+        "notes": "Passive cable included."
+      },
+      {
+        "id": "controls.physical",
+        "name": "Physical playback/volume buttons",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power, long press",
+          "action": "Power on/off and pairing",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Power, short press",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume +, long press",
+          "action": "Next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume −, long press",
+          "action": "Previous track",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/action, Volume + and Volume − on the earcup.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Open-back 44 mm dynamic driver. Bluetooth 4.2. No app EQ, no ANC, no multipoint."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.manualslib.com/manual/2305521/Grado-Gw100.html",
+        "type": "reputable-secondary",
+        "title": "GW100 owner's manual reproduction (15 h, BT 4.2, aptX)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://gradolabs.com/pages/about-grado-labs",
+        "type": "official-support",
+        "title": "Grado company history: GW100 went on to three generations",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Grado no longer hosts the original GW100 page; specs are from a manual reproduction.",
+      "Battery-display semantics are OS-dependent and undocumented.",
+      "No official statement on wear detection; assumed absent."
+    ],
+    "notes": "First-generation open-back Bluetooth Grado. Superseded by GW100 v2 and GW100x.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Grado",
+    "companySlug": "grado",
+    "family": "GW",
+    "model": "GW100 v2",
+    "slug": "grado-gw100-v2",
+    "generation": "2",
+    "variant": "v2",
+    "releaseYear": 2020,
+    "formFactor": "on-ear",
+    "officialApp": {
+      "name": "No official companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 40,
+      "caseHours": null,
+      "chargingIndicators": "LED charging/power light.",
+      "notes": "Official regional spec: 40 h, 850 mAh. USB-C. No case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "audio.aptx",
+        "name": "aptX",
+        "availability": "device-only",
+        "notes": "Bluetooth 5.0."
+      },
+      {
+        "id": "connectivity.wired",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "controls.physical",
+        "name": "Physical playback/volume buttons",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power, long press",
+          "action": "Power on/off and pairing",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Power, short press",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume +, long press",
+          "action": "Next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume −, long press",
+          "action": "Previous track",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/action, Volume + and Volume −.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Open-back 44 mm dynamic driver. Bluetooth 5.0. No app EQ or ANC."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 5.0 instead of 4.2",
+      "Battery life raised from 15 h to 40 h",
+      "850 mAh battery",
+      "USB-C charging replaces micro-USB"
+    ],
+    "sources": [
+      {
+        "url": "https://www.grado.com.sg/product-page/gw100-wireless-headphone",
+        "type": "official-regional",
+        "title": "Grado Singapore GW100 v2 page (40 h, BT 5.0)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://manuals.plus/asin/B07QJ43JY4",
+        "type": "reputable-secondary",
+        "title": "GW100 v2 user manual",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Grado's global site no longer lists the v2; regional page and manual used.",
+      "USB-C is inferred from the v2 generation and secondary sources; confirm unit revision.",
+      "Battery display is OS-dependent and undocumented."
+    ],
+    "notes": "Intermediate generation between GW100 and GW100x.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Grado",
+    "companySlug": "grado",
+    "family": "GW",
+    "model": "GW100x",
+    "slug": "grado-gw100x",
+    "generation": "3",
+    "variant": "x",
+    "releaseYear": 2022,
+    "formFactor": "on-ear",
+    "officialApp": {
+      "name": "No official companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app. All controls are physical."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 46,
+      "caseHours": null,
+      "chargingIndicators": "LED: blue when charged/on, red while charging, red low battery.",
+      "notes": "46 h at 50% volume, 850 mAh, 2 h charge. USB-C. No case.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Open-back on-ear; no ANC."
+    },
+    "features": [
+      {
+        "id": "audio.aptx-adaptive",
+        "name": "aptX Adaptive",
+        "availability": "device-only",
+        "notes": "Also AAC and SBC."
+      },
+      {
+        "id": "connectivity.wired",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only",
+        "notes": "Passive cable included."
+      },
+      {
+        "id": "controls.physical",
+        "name": "Physical playback/volume buttons",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.grado.x-driver",
+        "name": "4th-generation X driver",
+        "availability": "device-only",
+        "notes": "44 mm, matched to 0.1 dB."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power, long press",
+          "action": "Power on/off and pairing",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Power, short press",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Power, long press in call",
+          "action": "Reject call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Power, double press",
+          "action": "Voice assistant",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume +, short press",
+          "action": "Volume up",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume +, long press",
+          "action": "Next song",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume −, short press",
+          "action": "Volume down",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Volume −, long press",
+          "action": "Previous song",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Power/action, Volume + and Volume − on the earcup.",
+      "configurableInApp": false,
+      "notes": "Documented in the official owner's guide."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX Adaptive"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Open-back 44 mm X driver, 20 Hz–20 kHz, 38 Ω. No app EQ. Connects to a second device only after the first disconnects, so not true multipoint."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 5.2 and aptX Adaptive",
+      "Battery raised to 46 h",
+      "4th-generation X driver",
+      "USB-C",
+      "Improved housing with up to 60% less sound leakage"
+    ],
+    "sources": [
+      {
+        "url": "https://gradolabs.com/products/gw100x",
+        "type": "official-product",
+        "title": "Grado GW100x",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://gradolabs.com/pages/gw100x-owners-guide",
+        "type": "official-manual",
+        "title": "GW100x owner's guide",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC is absent by design; no dB values apply.",
+      "Battery percentage display is OS-dependent; Grado does not document a split/combined layout.",
+      "No wear detection or app EQ."
+    ],
+    "notes": "Current Grado wireless headphone. One of very few open-back Bluetooth headphones.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Grado",
+    "companySlug": "grado",
+    "family": "GT",
+    "model": "GT220",
+    "slug": "grado-gt220",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "No official companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app; fixed touch controls."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; USB-C and wireless charging.",
+      "notes": "6 h buds; case holds five full charges (30 h) for 36 h total. Phone shows the earphone battery, not the case.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC or ambient mode."
+    },
+    "features": [
+      {
+        "id": "audio.aptx",
+        "name": "aptX",
+        "availability": "device-only",
+        "notes": "Bluetooth 5.0; also AAC/SBC."
+      },
+      {
+        "id": "controls.touch",
+        "name": "Bifurcated touch controls",
+        "availability": "device-only",
+        "notes": "Left side phone/voice, right side music."
+      },
+      {
+        "id": "charging.wireless",
+        "name": "Wireless charging case",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.grado.twist-lock",
+        "name": "Twist-to-lock fit",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap (right)",
+          "action": "Play/pause",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Double tap (right)",
+          "action": "Next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Triple tap (right)",
+          "action": "Previous track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Single tap (left)",
+          "action": "Answer/end call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Long press (left)",
+          "action": "Voice assistant",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Capacitive touch split by earbud; left handles phone/voice, right handles music."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": false,
+      "notes": "Dynamic driver, 20 Hz–20 kHz, 32 Ω, IPX4. No app EQ, ANC or multipoint."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.gradothailand.com/en/product/gt220/",
+        "type": "official-regional",
+        "title": "Grado Thailand GT220 page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.qaudio.com/products/grado-gt220",
+        "type": "reputable-secondary",
+        "title": "GT220 specifications (6 h + 5 charges, BT 5.0)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Grado's global site no longer sells the GT220; specs come from a regional page and retailer.",
+      "Case LED semantics and exact battery-display layout are not documented.",
+      "No official statement on wear detection; assumed absent."
+    ],
+    "notes": "Grado's only true-wireless model. Discontinued, but replacement parts are still sold.",
+    "researchedAt": "2026-11-10"
+  }
+]

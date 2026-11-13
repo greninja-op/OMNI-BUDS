@@ -1,0 +1,1710 @@
+[
+  {
+    "company": "1MORE",
+    "companySlug": "1more",
+    "family": "ComfoBuds",
+    "model": "1MORE ComfoBuds Pro",
+    "slug": "1more-comfobuds-pro",
+    "generation": "1",
+    "variant": "Pro",
+    "releaseYear": 2020,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "1MORE",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.onemore.connect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.onemore.connect"
+      ],
+      "appVersionObserved": null,
+      "notes": "Formerly marketed as 1MORE Assistant; current listing is 1MORE."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 8,
+      "caseHours": 28,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official: ANC on 6 h buds / 24 h with case; ANC off 8 h / 28 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 28
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 40,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "QuietMax ANC, up to 40 dB; dual-level ANC modes and wind-noise resistance."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "QuietMax ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.wind",
+        "name": "Wind-noise resistance",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "13.4 mm dynamic driver; IPX4."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC level"
+    ],
+    "featureDeltaFromPrevious": [
+      "First ComfoBuds with ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://usa.1more.com/collections/all",
+        "type": "official-product",
+        "title": "1MORE product catalogue",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.onemore.connect",
+        "type": "official-app-store",
+        "title": "1MORE app listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Dedicated current product page unavailable",
+      "Multipoint support",
+      "Exact codec list",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": "Discontinued but still common.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "1MORE",
+    "companySlug": "1more",
+    "family": "ComfoBuds",
+    "model": "1MORE ComfoBuds 2",
+    "slug": "1more-comfobuds-2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "1MORE",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.onemore.connect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.onemore.connect"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 24,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 6 h/24 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "official-app"
+      },
+      {
+        "id": "calls.enc",
+        "name": "Call noise reduction",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "13.4 mm driver; IPX5."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Smaller stem design versus ComfoBuds",
+      "Wear detection added"
+    ],
+    "sources": [
+      {
+        "url": "https://usa.1more.com/collections/all",
+        "type": "official-product",
+        "title": "1MORE product catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Dedicated product page unavailable",
+      "Multipoint",
+      "Exact codecs",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "1MORE",
+    "companySlug": "1more",
+    "family": "ComfoBuds",
+    "model": "1MORE ComfoBuds Mini",
+    "slug": "1more-comfobuds-mini",
+    "generation": "Mini",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "1MORE",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.onemore.connect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.onemore.connect"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 8,
+      "caseHours": 24,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate: 6 h ANC / 8 h off, 24 h with case. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 24
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 40,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "QuietMax ANC up to 40 dB in a very small bud."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "QuietMax ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "design.compact",
+        "name": "Compact sleep-friendly body",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "IPX5."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Smallest ComfoBuds body",
+      "ANC in a bud designed for side sleeping"
+    ],
+    "sources": [
+      {
+        "url": "https://usa.1more.com/collections/all",
+        "type": "official-product",
+        "title": "1MORE product catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery values approximate",
+      "ANC dB from launch materials",
+      "Multipoint",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "1MORE",
+    "companySlug": "1more",
+    "family": "PistonBuds",
+    "model": "1MORE PistonBuds Pro",
+    "slug": "1more-pistonbuds-pro",
+    "generation": "1",
+    "variant": "Pro",
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "1MORE",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.onemore.connect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.onemore.connect"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7.5,
+      "budsHoursNoAnc": 7.5,
+      "caseHours": 30,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 7.5 h/30 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 38,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "QuietMax ANC, -38 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "QuietMax ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "Low-latency game mode",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "10 mm driver; IPX5."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "game mode"
+    ],
+    "featureDeltaFromPrevious": [
+      "First PistonBuds with ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://usa.1more.com/collections/all",
+        "type": "official-product",
+        "title": "1MORE product catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Dedicated product page unavailable",
+      "ANC dB from launch materials",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "1MORE",
+    "companySlug": "1more",
+    "family": "PistonBuds",
+    "model": "1MORE PistonBuds Pro Q30",
+    "slug": "1more-pistonbuds-pro-q30",
+    "generation": "2",
+    "variant": "Pro Q30",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "1MORE",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.onemore.connect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.onemore.connect"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 8,
+      "budsHoursNoAnc": 8,
+      "caseHours": 30,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 8 h/30 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 42,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "QuietMax ANC, -42 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "QuietMax ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "gaming.low-latency",
+        "name": "Game mode",
+        "availability": "official-app"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "10 mm driver; IPX5."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "game mode"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC depth -42 dB versus -38 dB",
+      "Longer 8 h single-charge playtime"
+    ],
+    "sources": [
+      {
+        "url": "https://usa.1more.com/collections/all",
+        "type": "official-product",
+        "title": "1MORE product catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery values approximate",
+      "Dedicated product page unavailable",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "1MORE",
+    "companySlug": "1more",
+    "family": "Aero",
+    "model": "1MORE Aero",
+    "slug": "1more-aero",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "1MORE",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.onemore.connect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.onemore.connect"
+      ],
+      "appVersionObserved": null,
+      "notes": "Spatial audio and ANC controls in app."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Playtime not captured from official Chinese product page. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 42,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "QuietMax ANC up to 42 dB with adaptive mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "QuietMax ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "calls.6mic",
+        "name": "6-mic call noise reduction",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Spatial audio with head tracking."
+    },
+    "appOnlyFeatures": [
+      "spatial audio",
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Head-tracked spatial audio added to 1MORE TWS line"
+    ],
+    "sources": [
+      {
+        "url": "https://www.1more.com/product/show-889-1.html",
+        "type": "official-product",
+        "title": "1MORE Aero product page (CN)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery hours",
+      "Codec list",
+      "ANC dB from launch materials",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "1MORE",
+    "companySlug": "1more",
+    "family": "Evo",
+    "model": "1MORE Evo",
+    "slug": "1more-evo",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "1MORE",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.onemore.connect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.onemore.connect"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Playtime not captured. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 45,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "QuietMax ANC up to 45 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "QuietMax ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": null
+    },
+    "appOnlyFeatures": [
+      "LDAC toggle",
+      "EQ",
+      "spatial audio"
+    ],
+    "featureDeltaFromPrevious": [
+      "LDAC and 45 dB ANC versus Aero"
+    ],
+    "sources": [
+      {
+        "url": "https://usa.1more.com/collections/all",
+        "type": "official-product",
+        "title": "1MORE product catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery hours",
+      "Dedicated product page unavailable",
+      "ANC dB from launch materials",
+      "Codec list",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "1MORE",
+    "companySlug": "1more",
+    "family": "SonoFlow",
+    "model": "1MORE SonoFlow",
+    "slug": "1more-sonoflow",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "1MORE",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.onemore.connect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.onemore.connect"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 50,
+      "budsHoursNoAnc": 70,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; 5 minutes = 5 hours.",
+      "notes": "Official 70 h ANC off / 50 h ANC on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": false,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "QuietMax ANC; dB rating not consistently published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "QuietMax ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / Hi-Res",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "wired.3.5mm",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm driver."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "LDAC toggle"
+    ],
+    "featureDeltaFromPrevious": [
+      "First SonoFlow over-ear"
+    ],
+    "sources": [
+      {
+        "url": "https://www.1more.com/product/show-890-1.html",
+        "type": "official-product",
+        "title": "1MORE SonoFlow product page (CN)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC dB depth",
+      "Gesture map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "1MORE",
+    "companySlug": "1more",
+    "family": "SonoFlow",
+    "model": "1MORE SonoFlow Pro",
+    "slug": "1more-sonoflow-pro",
+    "generation": "2",
+    "variant": "Pro",
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "1MORE",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.onemore.connect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.onemore.connect"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 65,
+      "budsHoursNoAnc": 100,
+      "caseHours": null,
+      "chargingIndicators": "USB-C; 5 minutes = 5 hours.",
+      "notes": "Approximate official 100 h ANC off / 65 h ANC on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "normal"
+      ],
+      "adaptive": true,
+      "ancDb": 45,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "QuietMax ANC up to 45 dB."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "QuietMax ANC",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / Hi-Res",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "wired.3.5mm",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double press",
+          "action": "next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "long press",
+          "action": "cycle noise control",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup buttons.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm driver."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "LDAC toggle"
+    ],
+    "featureDeltaFromPrevious": [
+      "100 h battery versus 70 h",
+      "45 dB ANC versus 35 dB",
+      "Adaptive ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://usa.1more.com/collections/all",
+        "type": "official-product",
+        "title": "1MORE product catalogue",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery values approximate",
+      "Dedicated product page unavailable"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "1MORE",
+    "companySlug": "1more",
+    "family": "Fit",
+    "model": "1MORE Fit SE S30",
+    "slug": "1more-fit-se-s30",
+    "generation": "S30",
+    "variant": "SE",
+    "releaseYear": 2024,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "1MORE",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.onemore.connect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.onemore.connect"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 30,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 10 h/30 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear; no ANC."
+    },
+    "features": [
+      {
+        "id": "design.open-ear",
+        "name": "Open-ear hook",
+        "availability": "device-only"
+      },
+      {
+        "id": "water.ipx5",
+        "name": "IPX5",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IPX5."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Entry open-ear model below S50"
+    ],
+    "sources": [
+      {
+        "url": "https://usa.1more.com/products/1more-fit-se-open-earbuds-s30",
+        "type": "official-product",
+        "title": "1MORE Fit SE S30 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery figures from launch materials",
+      "Codec list",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "1MORE",
+    "companySlug": "1more",
+    "family": "Fit",
+    "model": "1MORE Fit Open S50",
+    "slug": "1more-fit-open-s50",
+    "generation": "S50",
+    "variant": "Open",
+    "releaseYear": 2024,
+    "formFactor": "open-ear-hook",
+    "officialApp": {
+      "name": "1MORE",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.onemore.connect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.onemore.connect"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 30,
+      "chargingIndicators": "USB-C.",
+      "notes": "Approximate 10 h/30 h. Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear; no ANC."
+    },
+    "features": [
+      {
+        "id": "design.open-ear",
+        "name": "Open-ear hook",
+        "availability": "device-only"
+      },
+      {
+        "id": "water.ipx5",
+        "name": "IPX5",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "IPX5."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "LDAC and larger drivers versus S30"
+    ],
+    "sources": [
+      {
+        "url": "https://usa.1more.com/products/1more-fit-open-earbuds-s50",
+        "type": "official-product",
+        "title": "1MORE Fit Open S50 product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Battery figures approximate",
+      "Codec list",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "1MORE",
+    "companySlug": "1more",
+    "family": "S",
+    "model": "1MORE S20 Ultra",
+    "slug": "1more-s20-ultra",
+    "generation": "20",
+    "variant": "Ultra",
+    "releaseYear": 2025,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "1MORE",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.onemore.connect"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.onemore.connect"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 40,
+      "chargingIndicators": "USB-C.",
+      "notes": "Official 40 h total with case (from product title). Split/case layout inferred from the official app UI; verify on device.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 40
+    },
+    "anc": {
+      "supported": false,
+      "modes": [
+        "off"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Open-ear clip; no ANC."
+    },
+    "features": [
+      {
+        "id": "design.clip",
+        "name": "Open-ear clip",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.ldac",
+        "name": "LDAC / Hi-Res",
+        "availability": "official-app"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "both"
+      },
+      {
+        "id": "calls.4mic-ai",
+        "name": "4-mic AI clear calls",
+        "availability": "device-only"
+      },
+      {
+        "id": "water.ipx5",
+        "name": "IPX5",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Bluetooth 6.0; SDT 2.0 focused sound; BalanceAir 3.0."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "LDAC toggle"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 6.0 and LDAC",
+      "40 h total battery"
+    ],
+    "sources": [
+      {
+        "url": "https://usa.1more.com/products/1more-s20-ultra-open-ear-clip-on-earbuds-hi-res-ldac-audio-sdt-2-0-focused-sound-balanceair-3-0-4-mic-ai-clear-calls-40h-playtime-bluetooth-6-0-sports-running-gym-workouts-travel-walk-glasses",
+        "type": "official-product",
+        "title": "1MORE S20 Ultra product page",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Per-bud battery hours",
+      "Codec list beyond LDAC",
+      "Battery split/case display layout inferred from app UI; confirm on device"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

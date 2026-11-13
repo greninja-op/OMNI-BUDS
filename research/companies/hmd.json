@@ -1,0 +1,149 @@
+[
+  {
+    "company": "HMD",
+    "companySlug": "hmd",
+    "family": "Amped",
+    "model": "HMD Amped Buds",
+    "slug": "hmd-amped-buds",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "No dedicated audio app (Google Find My Device for locating)",
+      "platforms": [
+        "android"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "HMD positions the buds as app-free; firmware and settings are on-device. Find My Device integration is via Google's app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": 4.9,
+      "budsHoursNoAnc": 8.1,
+      "caseHours": 86.9,
+      "chargingIndicators": "Case LED; USB-C and wireless/wired reverse charging for a phone.",
+      "notes": "Official: 4.9 h ANC on / 8.1 h ANC off per charge; case recharges buds 10.9 times, total 58 h ANC on / 95 h ANC off. Case-only hours derived from 10.9 x 8.1 minus buds (approx.).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 86.9
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "ANC with ambient blend mode; 6 mics for environmental noise cancellation on calls."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancellation",
+        "availability": "device-only"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient blend mode",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connections (two devices)",
+        "availability": "device-only"
+      },
+      {
+        "id": "vendor.hmd.reverse-charging",
+        "name": "Case charges a phone (wired or wireless)",
+        "availability": "device-only"
+      },
+      {
+        "id": "vendor.hmd.find-my-device",
+        "name": "Google Find My Device",
+        "availability": "official-app"
+      },
+      {
+        "id": "durability.ip54",
+        "name": "IP54 sweat/splash resistance",
+        "availability": "device-only"
+      },
+      {
+        "id": "mic.enc",
+        "name": "6-mic environmental noise cancellation",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Single tap",
+          "action": "Play/pause",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "Double tap",
+          "action": "Next track",
+          "configurableInApp": null
+        },
+        {
+          "gesture": "Long press",
+          "action": "ANC / ambient",
+          "configurableInApp": null
+        }
+      ],
+      "physicalButtons": "None; touch controls.",
+      "configurableInApp": null,
+      "notes": "No companion app, so gestures are fixed."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "No EQ app; sound tuned by HMD."
+    },
+    "appOnlyFeatures": [
+      "Find My Device"
+    ],
+    "featureDeltaFromPrevious": [
+      "HMD's first audio product",
+      "Reverse phone charging case",
+      "95 h total ANC-off"
+    ],
+    "sources": [
+      {
+        "url": "https://www.hmd.com/en_int/hmd-amped-buds",
+        "type": "official-product",
+        "title": "HMD Amped Buds",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth version not stated",
+      "Codec list not published",
+      "Battery display layout unknown (no app)",
+      "Wear detection not stated",
+      "EQ unavailable"
+    ],
+    "notes": "Unusual product: the case is a phone power bank as well as a bud charger.",
+    "researchedAt": "2026-11-10"
+  }
+]

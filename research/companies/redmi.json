@@ -1,0 +1,2451 @@
+[
+  {
+    "company": "Redmi",
+    "companySlug": "redmi",
+    "family": "Redmi Buds",
+    "model": "Redmi Buds 3 Pro",
+    "slug": "redmi-buds-3-pro",
+    "generation": "3",
+    "variant": "Pro",
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "App provides ANC modes, EQ and gesture settings."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 28,
+      "chargingIndicators": "Case LED",
+      "notes": "Official 6 h / 28 h are ANC-off. ANC-on hours not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "deep",
+        "balanced",
+        "light",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "35 dB hybrid ANC; dual transparency mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "35 dB active noise cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Dual transparency mode",
+        "availability": "both",
+        "notes": "Regular and voice enhancement."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": "Auto play/pause."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next/previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch stem."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "9 mm composite driver; no LDAC."
+    },
+    "appOnlyFeatures": [
+      "ANC modes",
+      "EQ",
+      "Gesture remap",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/redmi-buds-3-pro/",
+        "type": "official-product",
+        "title": "Redmi Buds 3 Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC-on hours not published",
+      "EQ preset list not captured",
+      "Battery display layout inferred",
+      "Product page may be retired in some regions"
+    ],
+    "notes": "2021 Redmi flagship; 35 dB class.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Redmi",
+    "companySlug": "redmi",
+    "family": "Redmi Buds",
+    "model": "Redmi Buds 4",
+    "slug": "redmi-buds-4",
+    "generation": "4",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED",
+      "notes": "Official 6 h / 30 h ANC-off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "35 dB ANC; no adaptive mode documented."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "35 dB active noise cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next/previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "10 mm driver; no LDAC."
+    },
+    "appOnlyFeatures": [
+      "ANC",
+      "EQ",
+      "Gesture remap"
+    ],
+    "featureDeltaFromPrevious": [
+      "Improved battery from 6 h/28 h to 6 h/30 h vs Redmi Buds 3 Pro (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/redmi-buds-4/",
+        "type": "official-product",
+        "title": "Redmi Buds 4",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Multipoint not documented",
+      "ANC-on hours not published",
+      "Battery layout inferred"
+    ],
+    "notes": "Non-Pro 2022 model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Redmi",
+    "companySlug": "redmi",
+    "family": "Redmi Buds",
+    "model": "Redmi Buds 4 Pro",
+    "slug": "redmi-buds-4-pro",
+    "generation": "4",
+    "variant": "Pro",
+    "releaseYear": 2022,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9,
+      "caseHours": 38,
+      "chargingIndicators": "Case LED",
+      "notes": "Official 9 h / 38 h ANC-off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "deep",
+        "balanced",
+        "light",
+        "adaptive",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 43,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "43 dB ANC; three transparency modes."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "43 dB active noise cancellation",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Three transparency modes",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC Hi-Res Audio Wireless",
+        "availability": "device-only",
+        "notes": "990 kbps."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "360 spatial audio",
+        "availability": "official-app",
+        "notes": "No head tracking documented."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next/previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm dual-magnet driver."
+    },
+    "appOnlyFeatures": [
+      "ANC modes",
+      "EQ/custom EQ",
+      "Spatial audio",
+      "Gesture remap"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added LDAC and Hi-Res Audio Wireless over Redmi Buds 4 (official-product)",
+      "Raised ANC from 35 dB to 43 dB (official-product)",
+      "Added spatial audio and multipoint (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/redmi-buds-4-pro/",
+        "type": "official-product",
+        "title": "Redmi Buds 4 Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "ANC-on battery hours not published",
+      "Custom EQ band count not stated",
+      "Battery layout inferred"
+    ],
+    "notes": "2022 Redmi flagship.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Redmi",
+    "companySlug": "redmi",
+    "family": "Redmi Buds",
+    "model": "Redmi Buds 4 Lite",
+    "slug": "redmi-buds-4-lite",
+    "generation": "4",
+    "variant": "Lite",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 20,
+      "chargingIndicators": "Case LED",
+      "notes": "No ANC. Figures are approximate/regional; verify against local spec sheet.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC; call ENC only."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "control.gesture-customization",
+        "name": "Touch control customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "voice assistant (assignable)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": null,
+      "notes": "12 mm driver."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Gesture remap"
+    ],
+    "featureDeltaFromPrevious": [
+      "Removed ANC and LDAC vs Redmi Buds 4 (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/redmi-buds-4-lite/",
+        "type": "official-product",
+        "title": "Redmi Buds 4 Lite",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery hours not confirmed on a live official spec page",
+      "Codec list may include AAC in some regions",
+      "Wear detection unknown",
+      "Battery layout inferred"
+    ],
+    "notes": "Entry-level 2023 model; numbers should be re-verified before shipping UI.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Redmi",
+    "companySlug": "redmi",
+    "family": "Redmi Buds",
+    "model": "Redmi Buds 4 Active",
+    "slug": "redmi-buds-4-active",
+    "generation": "4",
+    "variant": "Active",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 20,
+      "chargingIndicators": "Case LED",
+      "notes": "No ANC. Official FAQ gives about 20 h total at 50% volume/SBC; single-charge music hours are not stated and 5 h is approximate. The phone Bluetooth UI shows one combined lowest-of-three value, while the Xiaomi Earbuds app can show left/right/case individually.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 20
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "control.gesture-customization",
+        "name": "Touch control customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": null,
+      "notes": "12 mm driver."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Gesture remap"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/redmi-buds-4-active/",
+        "type": "official-product",
+        "title": "Redmi Buds 4 Active",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.mi.com/global/support/faq/details/KA-32896/",
+        "type": "official-support",
+        "title": "REDMI Buds 4 Active FAQ",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery hours need re-verification",
+      "Multipoint not documented",
+      "Battery layout inferred"
+    ],
+    "notes": "Budget 2023 model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Redmi",
+    "companySlug": "redmi",
+    "family": "Redmi Buds",
+    "model": "Redmi Buds 5",
+    "slug": "redmi-buds-5",
+    "generation": "5",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "ANC modes and touch control settings are app-only."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 40,
+      "chargingIndicators": "Five-bead pulse light; 5-minute charge = 2 h",
+      "notes": "Official 10 h / 40 h ANC-off. ANC-on not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "deep",
+        "balanced",
+        "light",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 46,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "46 dB point-depth; 3 transparency modes; 6 m/s call wind resistance."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "46 dB active noise cancellation",
+        "availability": "both",
+        "notes": "Three depth modes."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Three transparency modes",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "4 EQ settings",
+        "availability": "official-app",
+        "notes": "No custom EQ documented."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": "Off by default."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "official-app",
+        "notes": "Playback pause/resume."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next/previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch control."
+    },
+    "audio": {
+      "eqPresets": [
+        "Standard",
+        "Enhance voice",
+        "Enhance treble",
+        "Enhance bass"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12.4 mm titanium-plated diaphragm driver."
+    },
+    "appOnlyFeatures": [
+      "ANC depth selection",
+      "EQ",
+      "Gesture remap",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Raised ANC from 43 dB to 46 dB vs Redmi Buds 4 Pro (official-product)",
+      "Battery increased from 9 h/38 h to 10 h/40 h (official-product)",
+      "Removed LDAC vs Redmi Buds 4 Pro (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/redmi-buds-5/",
+        "type": "official-product",
+        "title": "Redmi Buds 5",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on hours not published",
+      "Battery layout inferred",
+      "Wear detection is app-toggleable per official footnote"
+    ],
+    "notes": "2023 mainstream model; no LDAC.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Redmi",
+    "companySlug": "redmi",
+    "family": "Redmi Buds",
+    "model": "Redmi Buds 5 Pro",
+    "slug": "redmi-buds-5-pro",
+    "generation": "5",
+    "variant": "Pro",
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "Personalised ANC test, EQ, spatial audio and gesture settings are app features."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 38,
+      "chargingIndicators": "Case LED; 5-minute charge = 2 h",
+      "notes": "Official 10 h / 38 h ANC-off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "deep",
+        "balanced",
+        "light",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 52,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": true,
+      "notes": "52 dB point-depth, 4 kHz band; personalised ANC test; 3 transparency modes; 9 m/s call wind."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "52 dB active noise cancellation",
+        "availability": "both",
+        "notes": "Three depth modes."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Three transparency modes",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.personalized",
+        "name": "Personalised ANC",
+        "availability": "official-app",
+        "notes": "One-click fit test applies result."
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC Hi-Res Audio Wireless",
+        "availability": "device-only",
+        "notes": "24-bit/96 kHz; mutually exclusive with immersive sound."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Built-in immersive sound",
+        "availability": "official-app",
+        "notes": "Music and video modes; no head tracking documented."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": "Off by default."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "In-ear detection",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track; reject call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch stem; no volume gesture documented."
+    },
+    "audio": {
+      "eqPresets": [
+        "Standard",
+        "Enhance voice",
+        "Enhance treble",
+        "Enhance bass"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Coaxial dual driver: 11 mm bass + 10 mm piezoelectric tweeter."
+    },
+    "appOnlyFeatures": [
+      "Personalised ANC test",
+      "EQ/custom EQ",
+      "Immersive sound",
+      "Gesture remap"
+    ],
+    "featureDeltaFromPrevious": [
+      "Raised ANC from 46 dB to 52 dB vs Redmi Buds 5 (official-product)",
+      "Added LDAC and coaxial dual drivers (official-product)",
+      "Added personalised ANC and immersive sound (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/redmi-buds-5-pro/",
+        "type": "official-product",
+        "title": "Redmi Buds 5 Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on hours not published",
+      "Custom EQ band count not stated",
+      "Battery layout inferred"
+    ],
+    "notes": "2023 Redmi flagship.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Redmi",
+    "companySlug": "redmi",
+    "family": "Redmi Buds",
+    "model": "Redmi Buds 6",
+    "slug": "redmi-buds-6",
+    "generation": "6",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "App required for EQ, immersive sound, ANC modes and gesture settings."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 42,
+      "chargingIndicators": "Battery light strip; 10-minute charge = 4 h",
+      "notes": "Official 10 h / 42 h ANC-off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "deep",
+        "balanced",
+        "light",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 49,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": true,
+      "notes": "49 dB point-depth, 2 kHz band; personalised ANC; 3 transparency modes; 9 m/s call wind; single-ear ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "49 dB active noise cancellation",
+        "availability": "both",
+        "notes": "Single-ear ANC supported."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Three transparency modes",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.personalized",
+        "name": "Personalised ANC",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Built-in 360 immersive sound",
+        "availability": "official-app",
+        "notes": "HRTF algorithm; no head tracking documented."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Four EQ presets plus custom",
+        "availability": "official-app",
+        "notes": "Sound ID personalisation on select Xiaomi phones."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": "On by default."
+      },
+      {
+        "id": "vendor.xiaomi.audio-sharing",
+        "name": "Audio sharing",
+        "availability": "device-only",
+        "notes": "Two pairs to one supported Xiaomi device."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next/previous track; reject call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency; camera or voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch control; camera gesture limited to HyperOS."
+    },
+    "audio": {
+      "eqPresets": [
+        "Standard",
+        "Enhance bass",
+        "Enhance voice",
+        "Enhance treble"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "Dual driver: 12.4 mm titanium-coated dynamic + 5.5 mm piezoelectric ceramic."
+    },
+    "appOnlyFeatures": [
+      "Personalised ANC",
+      "Sound ID",
+      "Immersive sound",
+      "EQ/custom EQ",
+      "Gesture remap"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added dual-driver acoustic architecture vs Redmi Buds 5 (official-product)",
+      "Raised ANC from 46 dB to 49 dB and added personalised ANC (official-product)",
+      "Battery increased from 10 h/40 h to 10 h/42 h (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/redmi-buds-6/",
+        "type": "official-product",
+        "title": "Redmi Buds 6",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on hours not published",
+      "Wear detection not documented",
+      "Custom EQ band count not stated",
+      "Battery layout inferred"
+    ],
+    "notes": "2024 mainstream model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Redmi",
+    "companySlug": "redmi",
+    "family": "Redmi Buds",
+    "model": "Redmi Buds 6 Pro",
+    "slug": "redmi-buds-6-pro",
+    "generation": "6",
+    "variant": "Pro",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "Dimensional audio, EQ and ANC levels are app-controlled."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9.5,
+      "caseHours": 36,
+      "chargingIndicators": "Light strip; 5-minute charge = 2 h",
+      "notes": "Official 9.5 h / 36 h ANC-off. ANC-on not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "deep",
+        "balanced",
+        "light",
+        "adaptive",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 55,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": true,
+      "notes": "55 dB point-depth, 4 kHz band; leveless/adaptive 16,000x/s; personalised ANC; 3 transparency modes; 12 m/s call wind."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "55 dB active noise cancellation",
+        "availability": "both",
+        "notes": "Leveless adaptive plus manual levels."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Three transparency modes",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.personalized",
+        "name": "Personalised ANC",
+        "availability": "official-app",
+        "notes": "Ear-canal and fit adaptation."
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC Hi-Res Audio Wireless",
+        "availability": "device-only",
+        "notes": "Mutually exclusive with dimensional audio."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Built-in dimensional audio",
+        "availability": "official-app",
+        "notes": "Head tracking for music/video/games."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.xiaomi.audio-sharing",
+        "name": "Audio sharing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.xiaomi.find-device",
+        "name": "Sound locator",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next/previous track; reject call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "slide up/down",
+          "action": "volume",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Case button: battery check",
+      "configurableInApp": true,
+      "notes": "Touch stem plus swipe."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LDAC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "Coaxial triple driver: 11 mm titanium dynamic + dual 6.7 mm piezoelectric ceramic."
+    },
+    "appOnlyFeatures": [
+      "Dimensional audio",
+      "Personalised ANC",
+      "EQ/custom EQ",
+      "Gesture remap",
+      "Find earbuds"
+    ],
+    "featureDeltaFromPrevious": [
+      "Raised ANC from 52 dB to 55 dB and widened band to 4 kHz vs Redmi Buds 5 Pro (official-product)",
+      "Added coaxial triple drivers (official-product)",
+      "Added dimensional audio with head tracking (official-product)",
+      "Battery reduced from 10 h/38 h to 9.5 h/36 h (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/redmi-buds-6-pro/",
+        "type": "official-product",
+        "title": "Redmi Buds 6 Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on hours not published",
+      "Wear detection not documented",
+      "Battery layout inferred"
+    ],
+    "notes": "2024 Redmi flagship.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Redmi",
+    "companySlug": "redmi",
+    "family": "Redmi Buds",
+    "model": "Redmi Buds 6 Lite",
+    "slug": "redmi-buds-6-lite",
+    "generation": "6",
+    "variant": "Lite",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "EQ and gesture settings are app-only."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 38,
+      "chargingIndicators": "Case LED; 10-minute charge = 2 h",
+      "notes": "Official 7 h / 38 h ANC-off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 40,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "40 dB hybrid ANC, 2 kHz band; 6 m/s call wind."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "40 dB hybrid ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "4 EQ presets plus custom",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "control.gesture-customization",
+        "name": "Gesture settings",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next/previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Case pairing button",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Standard",
+        "Enhance treble",
+        "Enhance bass",
+        "Enhance voice"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": null,
+      "notes": "12.4 mm titanium-diaphragm driver."
+    },
+    "appOnlyFeatures": [
+      "EQ/custom EQ",
+      "Gesture remap"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added ANC to the Lite tier vs Redmi Buds 4 Lite (official-product)",
+      "Battery increased to 7 h/38 h (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/redmi-buds-6-lite/",
+        "type": "official-product",
+        "title": "Redmi Buds 6 Lite",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on hours not published",
+      "Multipoint not supported per product page",
+      "Wear detection not documented",
+      "Battery layout inferred"
+    ],
+    "notes": "Budget ANC model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Redmi",
+    "companySlug": "redmi",
+    "family": "Redmi Buds",
+    "model": "Redmi Buds 6 Play",
+    "slug": "redmi-buds-6-play",
+    "generation": "6",
+    "variant": "Play",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "EQ and touch settings are app-only."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7.5,
+      "caseHours": 36,
+      "chargingIndicators": "Case LED; 10-minute charge = 3 h",
+      "notes": "No ANC. Official 7.5 h / 36 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC; AI call noise reduction only."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "5 EQ presets",
+        "availability": "official-app",
+        "notes": "Standard, bass, voice, treble, volume boost."
+      },
+      {
+        "id": "control.gesture-customization",
+        "name": "Touch control customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous/next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Case button: reset/pairing",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Standard",
+        "Enhance bass",
+        "Enhance voice",
+        "Enhance treble",
+        "Boost volume"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": null,
+      "notes": "10 mm dynamic driver."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Gesture remap",
+      "Find earbuds"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/redmi-buds-6-play/",
+        "type": "official-product",
+        "title": "Redmi Buds 6 Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Wear detection not documented",
+      "Battery layout inferred",
+      "No multipoint"
+    ],
+    "notes": "Entry-level 2024 model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Redmi",
+    "companySlug": "redmi",
+    "family": "Redmi Buds",
+    "model": "Redmi Buds 6 Active",
+    "slug": "redmi-buds-6-active",
+    "generation": "6",
+    "variant": "Active",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 6,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED",
+      "notes": "No ANC. Semi-in-ear. Hours approximate/regional.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "control.gesture-customization",
+        "name": "Touch control customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "voice assistant",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": null,
+      "notes": "14.2 mm driver; semi-in-ear."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Gesture remap"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/redmi-buds-6-active/",
+        "type": "official-product",
+        "title": "Redmi Buds 6 Active",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "Battery hours need re-verification",
+      "No ANC",
+      "Battery layout inferred"
+    ],
+    "notes": "Semi-in-ear budget model; superseded by Buds 8 Active.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Redmi",
+    "companySlug": "redmi",
+    "family": "Redmi Buds",
+    "model": "Redmi Buds 8 Pro",
+    "slug": "redmi-buds-8-pro",
+    "generation": "8",
+    "variant": "Pro",
+    "releaseYear": 2026,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "Requires Android 7+/iOS 14+; Dolby Audio, spatial audio and gesture remap in app."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 33,
+      "chargingIndicators": "Battery-level light strip; 5-minute charge = 2 h",
+      "notes": "Official 8 h / 33 h ANC-off. Lower than Redmi Buds 6 Pro (9.5 h/36 h).",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "deep",
+        "balanced",
+        "light",
+        "adaptive",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 55,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": true,
+      "notes": "55 dB point-depth, 5 kHz band; 32,000x/s adaptive; immersive commuting modes (plane/train/transit); 12 m/s call wind."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "55 dB adaptive ANC",
+        "availability": "both",
+        "notes": "Real-time adaptive plus immersive commuting modes."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.personalized",
+        "name": "Personalised ANC",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LDAC and LHDC 5.0 Hi-Res",
+        "availability": "device-only",
+        "notes": "Dual DAC; MIHC 2.0 on select Redmi phones."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Dimensional audio with head tracking",
+        "availability": "official-app",
+        "notes": "6-axis gyro."
+      },
+      {
+        "id": "audio.dolby",
+        "name": "Dolby Audio",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": "On by default."
+      },
+      {
+        "id": "connectivity.auracast",
+        "name": "Auracast / audio sharing",
+        "availability": "device-only",
+        "notes": "LE Audio and Auracast ready."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next/previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "slide up/down",
+          "action": "volume",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Case button: battery check",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LC3",
+        "LDAC",
+        "LHDC 5.0",
+        "MIHC 2.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "Coaxial triple driver: 11 mm titanium dynamic, 6.7 mm piezo ceramic, tuning unit; dual DAC."
+    },
+    "appOnlyFeatures": [
+      "Dolby Audio",
+      "Dimensional audio",
+      "Personalised ANC",
+      "EQ",
+      "Gesture remap"
+    ],
+    "featureDeltaFromPrevious": [
+      "Raised ANC band to 5 kHz and added immersive commuting modes vs Redmi Buds 6 Pro (official-product)",
+      "Added Dolby Audio, dual DAC, LDAC/LHDC 5.0/MIHC 2.0 (official-product)",
+      "Battery reduced from 9.5 h/36 h to 8 h/33 h (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/redmi-buds-8-pro/",
+        "type": "official-product",
+        "title": "Redmi Buds 8 Pro",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://audioxpress.com/news/xiaomi-launches-redmi-buds-8-pro-with-55db-anc-ldac-and-spatial-audio",
+        "type": "reputable-secondary",
+        "title": "Redmi Buds 8 Pro launch coverage",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on hours not published",
+      "Wear detection not documented",
+      "Custom EQ band count not stated",
+      "Battery layout inferred"
+    ],
+    "notes": "2026 Redmi flagship. Battery regression versus Buds 6 Pro is official.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Redmi",
+    "companySlug": "redmi",
+    "family": "Redmi Buds",
+    "model": "Redmi Buds 8",
+    "slug": "redmi-buds-8",
+    "generation": "8",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "EQ, Sound ID and gesture settings in app; HyperOS phones expose some settings in Bluetooth."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 11,
+      "caseHours": 44,
+      "chargingIndicators": "Battery light strip 2.0; 10-minute charge = 4 h",
+      "notes": "Official 11 h / 44 h. Highest single-charge rating in the 2026 Redmi line, above the Pro.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "deep",
+        "balanced",
+        "light",
+        "adaptive",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": true,
+      "notes": "50 dB point-depth, 4 kHz band; 3 adaptive levels; personalised ANC; 12 m/s call wind."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "50 dB smart ANC",
+        "availability": "both",
+        "notes": "Three adaptive levels."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Three transparency modes",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.personalized",
+        "name": "Personalised ANC",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "LHDC Hi-Res Audio Wireless",
+        "availability": "device-only",
+        "notes": "Enabled via OTA; LHDC-compatible phones."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5 EQ presets plus custom",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.xiaomi.sound-id",
+        "name": "Sound ID personalisation",
+        "availability": "official-app",
+        "notes": "HyperOS only."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.xiaomi.audio-sharing",
+        "name": "Audio sharing",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next/previous track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "Case button: battery check/reset",
+      "configurableInApp": true,
+      "notes": "No slide/volume gesture documented."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced sound",
+        "Enhance treble",
+        "Boost volume",
+        "Enhance bass",
+        "Enhance voice"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "11 mm dynamic driver; no Dolby/spatial claim on official page."
+    },
+    "appOnlyFeatures": [
+      "EQ/custom EQ",
+      "Sound ID",
+      "Gesture remap",
+      "Find earbuds"
+    ],
+    "featureDeltaFromPrevious": [
+      "Battery increased from 10 h/42 h to 11 h/44 h vs Redmi Buds 6 (official-product)",
+      "Raised ANC from 49 dB to 50 dB and added adaptive levels (official-product)",
+      "Added LHDC Hi-Res and Sound ID (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/redmi-buds-8/",
+        "type": "official-product",
+        "title": "Redmi Buds 8",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on hours not published",
+      "Spatial audio/head tracking not claimed for non-Pro",
+      "Wear detection not documented",
+      "Battery layout inferred"
+    ],
+    "notes": "Non-Pro model outlasts the Pro (11 h/44 h vs 8 h/33 h).",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Redmi",
+    "companySlug": "redmi",
+    "family": "Redmi Buds",
+    "model": "Redmi Buds 8 Lite",
+    "slug": "redmi-buds-8-lite",
+    "generation": "8",
+    "variant": "Lite",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "Requires Android 6+/iOS 14+."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 36,
+      "chargingIndicators": "Case LED; 10-minute charge = 2 h",
+      "notes": "Official 8 h / 36 h ANC-off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 42,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "42 dB hybrid ANC; 6 m/s call wind."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "42 dB hybrid ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5 EQ presets plus custom",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "triple tap",
+          "action": "next track",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "noise control",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Standard",
+        "Enhance treble",
+        "Enhance bass",
+        "Enhance voice",
+        "Volume boost"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "12.4 mm titanium-diaphragm driver."
+    },
+    "appOnlyFeatures": [
+      "EQ/custom EQ",
+      "Gesture remap",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Added multipoint to the Lite tier vs Redmi Buds 6 Lite (official-product)",
+      "Battery increased from 7 h/38 h to 8 h/36 h (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/redmi-buds-8-lite/",
+        "type": "official-product",
+        "title": "Redmi Buds 8 Lite",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on hours not published",
+      "Wear detection not documented",
+      "Battery layout inferred"
+    ],
+    "notes": "2026 budget ANC model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Redmi",
+    "companySlug": "redmi",
+    "family": "Redmi Buds",
+    "model": "Redmi Buds 8 Active",
+    "slug": "redmi-buds-8-active",
+    "generation": "8",
+    "variant": "Active",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Xiaomi Earbuds",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.mi.earphone"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.mi.earphone"
+      ],
+      "appVersionObserved": null,
+      "notes": "Requires Android 7+/iOS 14+."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 37,
+      "chargingIndicators": "Case LED; 10-minute charge = 2 h",
+      "notes": "No ANC. Semi-in-ear. Official 7 h / 37 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC; dual-mic AI call noise reduction and 6 m/s wind resistance."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "5 EQ presets plus custom",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "control.gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold",
+          "action": "voice assistant (assignable)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced sound",
+        "Enhance treble",
+        "Enhance bass",
+        "Enhance voice",
+        "Boost volume"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "14.2 mm titanium-plated dynamic driver; semi-in-ear."
+    },
+    "appOnlyFeatures": [
+      "EQ/custom EQ",
+      "Gesture remap",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Battery increased from 6 h/30 h to 7 h/37 h vs Redmi Buds 6 Active (official-product)",
+      "Added AAC and multipoint (official-product)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.mi.com/global/product/redmi-buds-8-active/",
+        "type": "official-product",
+        "title": "Redmi Buds 8 Active",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Wear detection not documented",
+      "Battery layout inferred",
+      "No ANC"
+    ],
+    "notes": "Semi-in-ear budget model; unlike the in-ear Lite, no ANC.",
+    "researchedAt": "2026-11-10"
+  }
+]

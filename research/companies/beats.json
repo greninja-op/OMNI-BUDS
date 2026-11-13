@@ -1,0 +1,1963 @@
+[
+  {
+    "company": "Beats",
+    "companySlug": "beats",
+    "family": "Beats 360",
+    "model": "Beats 360",
+    "slug": "beats-360",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Beats",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.apple.bnd"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.apple.bnd"
+      ],
+      "appVersionObserved": "Play listing updated 2026-09-17; version string not shown",
+      "notes": "The Beats app exists only on Android. On iPhone/iPad/macOS, Beats settings and battery are exposed through Settings, Control Center and Siri."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 32,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": "USB-C charging; battery status shown in the Beats app and Apple Settings. No battery in the carrying case.",
+      "notes": "The woven ripstop case is a carrying case only, with no battery, so there is no case percentage. One combined headphone percentage. Beats claims 32 h with ANC; ANC-off runtime is not separately published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Fully adaptive ANC; Beats claims up to 1.75x more total noise cancellation than Beats Studio Pro. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancellation",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "audio.adaptive-eq",
+        "name": "Adaptive EQ",
+        "availability": "device-only"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "Personalized Spatial Audio",
+        "availability": "both"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "Dynamic head tracking",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic head detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching (Apple) / Audio switch (Android)",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Hey Siri / Android voice assistant",
+        "availability": "both"
+      },
+      {
+        "id": "audio.audio-sharing",
+        "name": "Audio Sharing (Apple)",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My / Find Hub",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.beats.interchangeable-cushions",
+        "name": "Interchangeable ear and headband cushions",
+        "availability": "device-only"
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4 sweat and water resistance",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "press play/pause button",
+          "action": "Play/pause or answer call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-press play/pause button",
+          "action": "Next track / end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-press play/pause button",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "volume rocker",
+          "action": "Volume up/down",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "press listening mode button",
+          "action": "Cycle ANC / Transparency",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Right cup: volume rocker + play/pause. Left cup: power + listening mode",
+      "configurableInApp": false,
+      "notes": "Four physical controls; the Beats app does not remap them."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "No user equalizer in the Beats app. No Bluetooth multipoint; Apple Automatic Switching and Android audio switch only."
+    },
+    "appOnlyFeatures": [
+      "Battery status",
+      "Firmware update",
+      "Rename",
+      "Find My/Find Hub",
+      "ANC/Transparency switching"
+    ],
+    "featureDeltaFromPrevious": [
+      "First Beats over-ear with interchangeable ear and headband cushions",
+      "First Beats over-ear with IPX4 sweat/water resistance",
+      "ANC claimed up to 1.75x Beats Studio Pro",
+      "Claimed 32 h with ANC versus 24 h on Studio Pro"
+    ],
+    "sources": [
+      {
+        "url": "https://www.beatsbydre.com/headphones/beats-360",
+        "type": "official-product",
+        "title": "Beats 360",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/beats/ew8rpn8weury/web",
+        "type": "official-support",
+        "title": "Use Beats 360",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/beats/devc8a939c17/web",
+        "type": "official-support",
+        "title": "About charging and playback time",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No absolute ANC/Transparency dB published.",
+      "Beats does not publish per-earcup battery percentages; display is one combined value.",
+      "No independent case battery by design."
+    ],
+    "notes": "New for 2026; replaces Studio Pro as the flagship over-ear.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Beats",
+    "companySlug": "beats",
+    "family": "Beats Studio",
+    "model": "Beats Studio Pro",
+    "slug": "beats-studio-pro",
+    "generation": "Pro",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Beats",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.apple.bnd"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.apple.bnd"
+      ],
+      "appVersionObserved": "Play listing updated 2026-09-17; version string not shown",
+      "notes": "Android Beats app; iOS uses Settings/Control Center/Siri."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 24,
+      "budsHoursNoAnc": 40,
+      "caseHours": null,
+      "chargingIndicators": "USB-C charging; Beats app/Apple Settings battery readout. Carrying case has no battery.",
+      "notes": "Apple support states 24 h with ANC and 40 h with ANC/Transparency off. The included case is a carrying case only, so no case percentage exists. One combined headphone percentage.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Fully adaptive ANC recalculating 48,000 times per second. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancellation",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "Personalized Spatial Audio",
+        "availability": "both"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "Dynamic head tracking",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic head detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching (Apple) / Audio switch (Android)",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Hey Siri / Android voice assistant",
+        "availability": "both"
+      },
+      {
+        "id": "audio.lossless-usb-c",
+        "name": "Lossless audio via USB-C DAC",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.wired-3.5mm",
+        "name": "3.5 mm analog wired input",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.usb-c-sound-profiles",
+        "name": "Three USB-C sound profiles (Beats Signature, Entertainment, Conversation)",
+        "availability": "device-only"
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My / Find My Device",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "press multi-function button",
+          "action": "Play/pause or answer call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-press multi-function button",
+          "action": "Next track / end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-press multi-function button",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "press and hold multi-function button",
+          "action": "Siri or noise-control cycle (configurable)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "volume buttons",
+          "action": "Volume up/down",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Multi-function button plus volume buttons on the ear cup",
+      "configurableInApp": true,
+      "notes": "The Beats app supports press-and-hold, mute/unmute and end-call remapping on supported Beats."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "AAC",
+        "SBC",
+        "Lossless (USB-C, wired)"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "No user EQ. USB-C DAC provides lossless wired audio. No Bluetooth multipoint."
+    },
+    "appOnlyFeatures": [
+      "Press-and-hold remap",
+      "Noise-control mode selection",
+      "Mute/unmute action",
+      "End-call action",
+      "Microphone side selection",
+      "Rename",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "USB-C lossless audio with built-in DAC replaces the Lightning-only Studio3",
+      "Adds Personalized Spatial Audio with dynamic head tracking",
+      "Adds Transparency mode and fully adaptive ANC",
+      "Claimed 24 h ANC / 40 h without ANC versus Studio3",
+      "Adds three USB-C sound profiles"
+    ],
+    "sources": [
+      {
+        "url": "https://www.beatsbydre.com/headphones/studio-pro-wireless",
+        "type": "official-product",
+        "title": "Beats Studio Pro",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/beats/devc8a939c17/web",
+        "type": "official-support",
+        "title": "About charging and playback time",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/beats/dev3e191a395/web",
+        "type": "official-support",
+        "title": "Change your device settings in the Beats app for Android",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No absolute ANC/Transparency dB published.",
+      "No case battery by design; carrying case only."
+    ],
+    "notes": "Still sold alongside Beats 360 in 2026.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Beats",
+    "companySlug": "beats",
+    "family": "Beats Solo",
+    "model": "Beats Solo 4",
+    "slug": "beats-solo-4",
+    "generation": "4",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "on-ear",
+    "officialApp": {
+      "name": "Beats",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.apple.bnd"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.apple.bnd"
+      ],
+      "appVersionObserved": "Play listing updated 2026-09-17; version string not shown",
+      "notes": "Android Beats app; iOS uses Settings/Control Center/Siri."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 50,
+      "caseHours": null,
+      "chargingIndicators": "USB-C charging; 10-minute Fast Fuel gives up to 5 h. No battery in the carrying case.",
+      "notes": "No ANC, so only one listening figure. The soft case has no battery and no battery percentage.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Passive isolation only."
+    },
+    "features": [
+      {
+        "id": "spatial.audio",
+        "name": "Personalized Spatial Audio",
+        "availability": "both"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "Dynamic head tracking",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic head detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching (Apple) / Audio switch (Android)",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Hey Siri / Android voice assistant",
+        "availability": "both"
+      },
+      {
+        "id": "audio.lossless-usb-c",
+        "name": "Lossless audio via USB-C or 3.5 mm",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.wired-3.5mm",
+        "name": "3.5 mm wired listening without battery",
+        "availability": "device-only"
+      },
+      {
+        "id": "audio.audio-sharing",
+        "name": "Audio Sharing",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My / Find My Device",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "press system button",
+          "action": "Play/pause or answer call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-press system button",
+          "action": "Next track / end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-press system button",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "volume rocker",
+          "action": "Volume up/down",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "System button and volume rocker",
+      "configurableInApp": false,
+      "notes": "Physical on-ear controls; not remappable in the Beats app."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "AAC",
+        "SBC",
+        "Lossless (USB-C/3.5 mm, wired)"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "No user EQ. No Bluetooth multipoint."
+    },
+    "appOnlyFeatures": [
+      "Battery status",
+      "Firmware update",
+      "Rename",
+      "Find My/Find My Device"
+    ],
+    "featureDeltaFromPrevious": [
+      "USB-C lossless audio and 3.5 mm wired listening versus Solo 3",
+      "Adds Personalized Spatial Audio with dynamic head tracking",
+      "Claimed battery rises to 50 hours",
+      "New 40 mm transducer and lighter 217 g design"
+    ],
+    "sources": [
+      {
+        "url": "https://www.beatsbydre.com/headphones/solo4-wireless",
+        "type": "official-product",
+        "title": "Beats Solo 4",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/beats/dev484e78f99/web",
+        "type": "official-support",
+        "title": "Use Beats Solo 4",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/beats/devc8a939c17/web",
+        "type": "official-support",
+        "title": "About charging and playback time",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No ANC by design, so no ANC dB or transparency dB.",
+      "No case battery by design."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Beats",
+    "companySlug": "beats",
+    "family": "Powerbeats",
+    "model": "Powerbeats Fit",
+    "slug": "powerbeats-fit",
+    "generation": "1",
+    "variant": "Fit",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Beats",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.apple.bnd"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.apple.bnd"
+      ],
+      "appVersionObserved": "Play listing updated 2026-09-17; version string not shown",
+      "notes": "Android Beats app; iOS uses Settings/Control Center/Siri."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 27,
+      "chargingIndicators": "USB-C case (IPX4); 5-minute Fast Fuel gives up to 1 h. Case level shown with the buds in the Beats app/Apple battery UI.",
+      "notes": "Beats publishes 7 h per bud and 27 h total with ANC / 30 h total without ANC. Per-bud ANC runtime is not separately published, so budsHoursAnc is null. Case percentage is last-known once both buds are out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 27
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "ANC adapts continuously; the dual beam-forming mics and processor reduce wind noise on calls. No absolute ANC dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancelling",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "audio.adaptive-eq",
+        "name": "Adaptive EQ",
+        "availability": "device-only"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "Personalized Spatial Audio",
+        "availability": "both"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "Dynamic head tracking",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Auto play/pause",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching (Apple) / Audio switch (Android)",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Hey Siri / Android voice assistant",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.beats.ear-tip-fit-test",
+        "name": "Ear Tip Fit Test",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.beats.press-and-hold-customization",
+        "name": "Customizable b-button press-and-hold",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.audio-sharing",
+        "name": "Audio Sharing (Apple)",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My / Find My Device",
+        "availability": "official-app"
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4 buds and case",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "press b button",
+          "action": "Play/pause or answer call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-press b button",
+          "action": "Next track / end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-press b button",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "press and hold b button",
+          "action": "Cycle noise control or activate voice assistant (per-side choice)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "press and hold b button (volume mode)",
+          "action": "Volume up/down when Volume Control is enabled",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "b button on each earbud",
+      "configurableInApp": true,
+      "notes": "No volume rocker; volume is assigned through press-and-hold at the cost of noise-control access."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "No user EQ. No Bluetooth multipoint; Apple Automatic Switching only."
+    },
+    "appOnlyFeatures": [
+      "Press-and-hold remap",
+      "Volume-control mode",
+      "Noise cancellation with one earbud",
+      "Ear Tip Fit Test",
+      "Mute/unmute action",
+      "End-call action",
+      "Rename",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Successor to Beats Fit Pro with a 20% more flexible wingtip",
+      "Adds a fourth ear-tip size",
+      "First Beats workout case with IPX4",
+      "Claimed 7 h per bud and 27 h ANC / 30 h total, versus Fit Pro's 6 h buds and 27/30 h total",
+      "Retains H1, ANC, Transparency and Personalized Spatial Audio"
+    ],
+    "sources": [
+      {
+        "url": "https://www.beatsbydre.com/earbuds/powerbeats-fit",
+        "type": "official-product",
+        "title": "Powerbeats Fit",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/beats/dev6f7b5266d/web",
+        "type": "official-support",
+        "title": "Use Beats Fit Pro or Powerbeats Fit",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/beats/devc8a939c17/web",
+        "type": "official-support",
+        "title": "About charging and playback time",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Per-bud ANC runtime is not published; only 7 h per bud and 27 h ANC total.",
+      "No absolute ANC/Transparency dB published.",
+      "Case battery freshness when buds are out is not documented."
+    ],
+    "notes": "Battery display: split buds plus separate case, with a last-known case reading once both buds are out.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Beats",
+    "companySlug": "beats",
+    "family": "Powerbeats",
+    "model": "Powerbeats Pro 2",
+    "slug": "powerbeats-pro-2",
+    "generation": "2",
+    "variant": "Pro",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Beats",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.apple.bnd"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.apple.bnd"
+      ],
+      "appVersionObserved": "Play listing updated 2026-09-17; version string not shown",
+      "notes": "Android Beats app; iOS uses Settings/Control Center/Siri."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 10,
+      "caseHours": 36,
+      "chargingIndicators": "USB-C or Qi wireless charging case; 5-minute Fast Fuel gives up to 1.5 h.",
+      "notes": "Beats publishes 10 h per bud and 36 h total with ANC / 45 h total without ANC. Per-bud ANC runtime is not separately published, so budsHoursAnc is null. Case reading is last-known with both buds out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 36
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Beats calls it its best adaptive noise cancelling, powered by the H2 chip. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancelling",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "audio.adaptive-eq",
+        "name": "Adaptive EQ",
+        "availability": "device-only"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "Personalized Spatial Audio",
+        "availability": "both"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "Dynamic head tracking",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.heart-rate",
+        "name": "Heart-rate monitoring for workouts",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching (Apple) / Audio switch (Android)",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Siri / Android voice assistant",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.beats.head-gesture",
+        "name": "Head gestures for calls and notifications",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.beats.press-and-hold-customization",
+        "name": "Customizable b-button press-and-hold",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.beats.pause-when-asleep",
+        "name": "Pause audio when falling asleep",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.lossless-vision-pro",
+        "name": "Ultra-low-latency Lossless Audio with Apple Vision Pro",
+        "availability": "device-only"
+      },
+      {
+        "id": "vendor.beats.ear-tip-fit-test",
+        "name": "Ear Tip Fit Test",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My / Find My Device",
+        "availability": "official-app"
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4 sweat and water resistance",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "head-gesture",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "press b button",
+          "action": "Play/pause or answer call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-press b button",
+          "action": "Next track / end call / decline call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-press b button",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "press and hold b button",
+          "action": "Cycle ANC/Transparency or voice assistant (per-side choice)",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "volume rocker",
+          "action": "Volume up/down",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "nod / shake head",
+          "action": "Accept/decline calls and reply to notifications",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "b button and tactile volume rocker on each earbud",
+      "configurableInApp": true,
+      "notes": "Head gestures configurable in the Beats app/Settings."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "AAC",
+        "SBC",
+        "Lossless (Apple Vision Pro, proprietary link)"
+      ],
+      "hiRes": true,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "Lossless is only with Apple Vision Pro, not a Bluetooth codec. No user EQ, no Bluetooth multipoint."
+    },
+    "appOnlyFeatures": [
+      "Heart-rate enable/disable",
+      "Head-gesture settings",
+      "Press-and-hold remap",
+      "Noise cancellation with one earbud",
+      "Case tones",
+      "Tone volume",
+      "Pause when falling asleep",
+      "Ear Tip Fit Test",
+      "Rename",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "H2 chip replaces the original Powerbeats Pro's H1",
+      "Adds ANC, Transparency and Adaptive EQ",
+      "Adds heart-rate monitoring",
+      "Adds wireless charging case and 45 h total battery",
+      "Adds Personalized Spatial Audio with head tracking and Vision Pro lossless",
+      "Adds head gestures and volume rocker"
+    ],
+    "sources": [
+      {
+        "url": "https://www.beatsbydre.com/earbuds/powerbeats-pro-2",
+        "type": "official-product",
+        "title": "Powerbeats Pro 2",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/beats/dev1b2a821db/web",
+        "type": "official-support",
+        "title": "Use your Powerbeats Pro 2",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/beats/devc8a939c17/web",
+        "type": "official-support",
+        "title": "About charging and playback time",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Per-bud ANC runtime not published; only 10 h per bud and 36 h ANC total.",
+      "No absolute ANC/Transparency dB published.",
+      "Heart-rate sensor accuracy and full third-party app compatibility not specified."
+    ],
+    "notes": "Battery display: split buds plus separate case, last-known case once both buds are out.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Beats",
+    "companySlug": "beats",
+    "family": "Beats Studio Buds",
+    "model": "Beats Studio Buds +",
+    "slug": "beats-studio-buds-plus",
+    "generation": "Plus",
+    "variant": "Studio Buds +",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Beats",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.apple.bnd"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.apple.bnd"
+      ],
+      "appVersionObserved": "Play listing updated 2026-09-17; version string not shown",
+      "notes": "Android Beats app; iOS uses Settings/Control Center/Siri."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 30,
+      "chargingIndicators": "USB-C case; 5-minute Fast Fuel gives up to 1.5 h.",
+      "notes": "Beats publishes 30 h total with ANC / 36 h total without ANC. Per-bud runtime is not stated on the current product or support pages, so both bud figures are null rather than inferred.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "ANC adapts to fit; Beats claims up to 1.6x more ANC and 2x improved Transparency versus Studio Buds. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancelling",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "Spatial Audio",
+        "availability": "both",
+        "notes": "No dynamic head tracking documented."
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching (Apple) / Audio switch (Android)",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Hey Siri / Android voice assistant",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.beats.press-and-hold-customization",
+        "name": "Customizable b-button press-and-hold",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.beats.ear-tip-fit-test",
+        "name": "Ear Tip Fit Test",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My / Find My Device",
+        "availability": "official-app"
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4 sweat and water resistance",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "press b button",
+          "action": "Play/pause or answer call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-press b button",
+          "action": "Next track / end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-press b button",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "press and hold b button",
+          "action": "Cycle noise control or voice assistant (per-side choice)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "b button on each earbud",
+      "configurableInApp": true,
+      "notes": "No on-device volume control; use the phone or Siri/Assistant."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "No user EQ. Spatial Audio without head tracking. No Bluetooth multipoint."
+    },
+    "appOnlyFeatures": [
+      "Press-and-hold remap",
+      "Noise-control mode selection",
+      "Ear Tip Fit Test",
+      "Rename",
+      "Firmware update",
+      "Battery status"
+    ],
+    "featureDeltaFromPrevious": [
+      "Up to 1.6x more ANC and 2x improved Transparency versus Studio Buds",
+      "3x larger microphones and new acoustic vents",
+      "Adds Spatial Audio and a fourth ear-tip size",
+      "Total battery rises from 24 h to 36 h (30 h with ANC)"
+    ],
+    "sources": [
+      {
+        "url": "https://www.beatsbydre.com/earbuds/studio-buds-plus-wireless-noise-cancelling",
+        "type": "official-product",
+        "title": "Beats Studio Buds +",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/beats/dev9b90b5e73/web",
+        "type": "official-support",
+        "title": "Use Beats Studio Buds +",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/beats/devc8a939c17/web",
+        "type": "official-support",
+        "title": "About charging and playback time",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Per-bud runtime is not stated by Beats; only 30 h/36 h totals are official.",
+      "No absolute ANC/Transparency dB published.",
+      "No head-tracking claim, so headTracking is false."
+    ],
+    "notes": "Battery display: split buds plus separate case, last-known case once both buds are out.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Beats",
+    "companySlug": "beats",
+    "family": "Beats Solo Buds",
+    "model": "Beats Solo Buds",
+    "slug": "beats-solo-buds",
+    "generation": "1",
+    "variant": "Solo",
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Beats",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.apple.bnd"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.apple.bnd"
+      ],
+      "appVersionObserved": "Play listing updated 2026-09-17; version string not shown",
+      "notes": "Android Beats app; iOS uses Settings/Control Center/Siri."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 18,
+      "caseHours": null,
+      "chargingIndicators": "The case has no battery; it only passes USB-C power through to the buds. 5-minute Fast Fuel gives up to 1 h.",
+      "notes": "Critical battery-display exception: the case is a passive cradle with no battery, so there is no case percentage and no case charging state to show. The 18 h figure is the buds' own runtime.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Passive isolation only."
+    },
+    "features": [
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching (Apple) / Audio switch (Android)",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Hey Siri / Android voice assistant",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.beats.press-and-hold-customization",
+        "name": "Configurable b-button volume",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My / Find My Device",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.class-1-bluetooth",
+        "name": "Class 1 Bluetooth extended range",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "press b button",
+          "action": "Play/pause or answer call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-press b button",
+          "action": "Next track / end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-press b button",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "press and hold b button (volume mode)",
+          "action": "Volume up on one side / down on the other",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "b button on each earbud",
+      "configurableInApp": true,
+      "notes": "Volume is assigned to the b buttons through the Beats app/iOS settings."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "No ANC, no spatial audio, no user EQ, no multipoint."
+    },
+    "appOnlyFeatures": [
+      "b-button volume assignment",
+      "Battery status",
+      "Firmware update",
+      "Rename",
+      "Find My/Find My Device"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.beatsbydre.com/earbuds/solo-buds",
+        "type": "official-product",
+        "title": "Beats Solo Buds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/beats/dev9529a95f9/web",
+        "type": "official-support",
+        "title": "Use Beats Solo Buds",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/beats/devc8a939c17/web",
+        "type": "official-support",
+        "title": "About charging and playback time",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No case battery by design, so caseDisplay/caseVisibility are not applicable.",
+      "No ANC, so no ANC/Transparency dB."
+    ],
+    "notes": "Battery-display surprise: the case cannot report a level because it contains no battery. Do not render a case ring for this model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Beats",
+    "companySlug": "beats",
+    "family": "Beats Flex",
+    "model": "Beats Flex",
+    "slug": "beats-flex",
+    "generation": "1",
+    "variant": "Flex",
+    "releaseYear": 2020,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "Beats",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.apple.bnd"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.apple.bnd"
+      ],
+      "appVersionObserved": "Play listing updated 2026-09-17; version string not shown",
+      "notes": "Android Beats app; iOS uses Settings/Control Center/Siri."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 12,
+      "caseHours": null,
+      "chargingIndicators": "USB-C charging directly into the neckband; 10-minute Fast Fuel gives 1.5 h. No case.",
+      "notes": "Single product battery, no charging case. One combined percentage.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC or Transparency."
+    },
+    "features": [
+      {
+        "id": "sensing.magnetic-auto-pause",
+        "name": "Magnetic auto play/pause and call answer/end",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching (Apple) / Audio switch (Android)",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Hey Siri / Android voice assistant",
+        "availability": "both"
+      },
+      {
+        "id": "audio.audio-sharing",
+        "name": "Audio Sharing",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My / Find My Device",
+        "availability": "official-app"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "press system button",
+          "action": "Play/pause or answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-press system button",
+          "action": "Next track / send audio back to phone",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-press system button",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "press and hold system button",
+          "action": "Siri / decline call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "volume rocker",
+          "action": "Volume up/down",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "System button and volume rocker on the left control module; power button on the right",
+      "configurableInApp": true,
+      "notes": "Beats app can toggle automatic play/pause and automatic call answering."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "Wear detection is magnetic earbud attach/detach rather than in-ear sensing. No multipoint."
+    },
+    "appOnlyFeatures": [
+      "Automatic play/pause toggle",
+      "Automatic call answering toggle",
+      "Battery status",
+      "Firmware update",
+      "Rename"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.beatsbydre.com/earbuds/beats-flex",
+        "type": "official-product",
+        "title": "Beats Flex",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/beats/deva89e6d1be/web",
+        "type": "official-support",
+        "title": "Use Beats Flex",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/beats/devc8a939c17/web",
+        "type": "official-support",
+        "title": "About charging and playback time",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No case by design.",
+      "No ANC or spatial audio."
+    ],
+    "notes": "Neckband form factor; still sold in 2026. Battery display is a single product percentage.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Beats",
+    "companySlug": "beats",
+    "family": "Beats Fit",
+    "model": "Beats Fit Pro",
+    "slug": "beats-fit-pro",
+    "generation": "Pro",
+    "variant": "Fit Pro",
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Beats",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.apple.bnd"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.apple.bnd"
+      ],
+      "appVersionObserved": "Play listing updated 2026-09-17; version string not shown",
+      "notes": "Android Beats app; iOS uses Settings/Control Center/Siri. Product page now redirects to Powerbeats Fit; support guide still documents Fit Pro."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 6,
+      "caseHours": 27,
+      "chargingIndicators": "USB-C case; 5-minute Fast Fuel gives 1 h.",
+      "notes": "Apple support publishes 27 h total with ANC / 30 h without ANC. Per-bud runtime is 6 h per the original Fit Pro specification. Case reading is last-known with both buds out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 27
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Adaptive ANC. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancelling",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "audio.adaptive-eq",
+        "name": "Adaptive EQ",
+        "availability": "device-only"
+      },
+      {
+        "id": "spatial.audio",
+        "name": "Personalized Spatial Audio",
+        "availability": "both"
+      },
+      {
+        "id": "spatial.head-tracking",
+        "name": "Dynamic head tracking",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching (Apple) / Audio switch (Android)",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Hey Siri / Android voice assistant",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.beats.press-and-hold-customization",
+        "name": "Customizable b-button press-and-hold",
+        "availability": "official-app"
+      },
+      {
+        "id": "vendor.beats.ear-tip-fit-test",
+        "name": "Ear Tip Fit Test",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.audio-sharing",
+        "name": "Audio Sharing (Apple)",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My / Find My Device",
+        "availability": "official-app"
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4 sweat and water resistance",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "press b button",
+          "action": "Play/pause or answer call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-press b button",
+          "action": "Next track / end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-press b button",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "press and hold b button",
+          "action": "Cycle noise control or voice assistant (per-side choice)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "b button on each earbud",
+      "configurableInApp": true,
+      "notes": "Volume via phone/Siri; can be assigned to press-and-hold."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "No user EQ. No Bluetooth multipoint."
+    },
+    "appOnlyFeatures": [
+      "Press-and-hold remap",
+      "Volume press-and-hold mode",
+      "Noise cancellation with one earbud",
+      "Ear Tip Fit Test",
+      "Mute/unmute action",
+      "End-call action",
+      "Rename",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://support.apple.com/en-al/guide/beats/dev6f7b5266d/web",
+        "type": "official-support",
+        "title": "Use Beats Fit Pro or Powerbeats Fit",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/beats/devc8a939c17/web",
+        "type": "official-support",
+        "title": "About charging and playback time",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.apple.bnd",
+        "type": "official-app-store",
+        "title": "Beats app listing (supported products include Beats Fit Pro)",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "The live Beats product page now redirects to Powerbeats Fit; per-bud 6 h comes from the original Fit Pro specification and is not restated on the current support page.",
+      "No absolute ANC/Transparency dB published.",
+      "No current official spec page remains for Fit Pro."
+    ],
+    "notes": "Discontinued/superseded by Powerbeats Fit, but still supported by the Beats app and iOS 27 guide.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Beats",
+    "companySlug": "beats",
+    "family": "Beats Studio Buds",
+    "model": "Beats Studio Buds",
+    "slug": "beats-studio-buds",
+    "generation": "1",
+    "variant": "Studio Buds",
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Beats",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.apple.bnd"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.apple.bnd"
+      ],
+      "appVersionObserved": "Play listing updated 2026-09-17; version string not shown",
+      "notes": "Android Beats app; iOS uses Settings/Control Center/Siri. Still listed as a supported product on the Beats app listing."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-case-open",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 24,
+      "chargingIndicators": "USB-C case; Fast Fuel supported. No wireless charging.",
+      "notes": "Beats published 8 h listening and 24 h with case for the original Studio Buds; per-bud ANC runtime is not restated on current pages, so budsHoursAnc is null. Case reading is last-known with both buds out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 24
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency",
+        "off"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "ANC adapts to fit. No absolute dB published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active Noise Cancelling",
+        "availability": "both"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both"
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Automatic ear detection",
+        "availability": "both"
+      },
+      {
+        "id": "connectivity.auto-switch",
+        "name": "Automatic Switching (Apple) / Audio switch (Android)",
+        "availability": "official-app"
+      },
+      {
+        "id": "assistant.siri",
+        "name": "Hey Siri / Android voice assistant",
+        "availability": "both"
+      },
+      {
+        "id": "vendor.beats.press-and-hold-customization",
+        "name": "Customizable b-button press-and-hold",
+        "availability": "official-app"
+      },
+      {
+        "id": "find.find-my",
+        "name": "Find My / Find My Device",
+        "availability": "official-app"
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4 sweat and water resistance",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "voice"
+      ],
+      "gestures": [
+        {
+          "gesture": "press b button",
+          "action": "Play/pause or answer call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double-press b button",
+          "action": "Next track / end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "triple-press b button",
+          "action": "Previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "press and hold b button",
+          "action": "Cycle noise control or voice assistant (per-side choice)",
+          "configurableInApp": true
+        }
+      ],
+      "physicalButtons": "b button on each earbud",
+      "configurableInApp": true,
+      "notes": "No on-device volume control."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "No spatial audio, no user EQ, no multipoint."
+    },
+    "appOnlyFeatures": [
+      "Press-and-hold remap",
+      "Noise-control mode selection",
+      "Rename",
+      "Firmware update",
+      "Battery status"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.apple.bnd",
+        "type": "official-app-store",
+        "title": "Beats app listing (Studio Buds supported)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/beats/dev3e191a395/web",
+        "type": "official-support",
+        "title": "Change your device settings in the Beats app for Android",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://support.apple.com/en-al/guide/beats/devc8a939c17/web",
+        "type": "official-support",
+        "title": "About charging and playback time",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "No live product/spec page remains; per-bud ANC runtime not restated.",
+      "No absolute ANC/Transparency dB published.",
+      "No spatial audio/head tracking claim."
+    ],
+    "notes": "Predecessor to Studio Buds +. Kept because it is still in the Beats app support list and is a distinct ANC feature surface.",
+    "researchedAt": "2026-11-10"
+  }
+]

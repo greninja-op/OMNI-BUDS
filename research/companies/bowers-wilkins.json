@@ -1,0 +1,876 @@
+[
+  {
+    "company": "Bowers & Wilkins",
+    "companySlug": "bowers-wilkins",
+    "family": "Px8",
+    "model": "Bowers & Wilkins Px8 S2",
+    "slug": "px8-s2",
+    "generation": "2",
+    "variant": "S2",
+    "releaseYear": 2025,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Bowers & Wilkins Music",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "5-band EQ + TrueSound mode, ANC, firmware updates, music streaming."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 30,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout; 15 min = 7 h",
+      "notes": "30 h playback; ANC-on figure not stated separately.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Eight microphones total; adaptive ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band EQ + TrueSound",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "aptX Lossless",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wired-mode",
+        "name": "USB-C audio interface",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls, ANC",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "TrueSound"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "aptX Lossless",
+        "aptX Adaptive",
+        "aptX HD",
+        "aptX",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "2 x 40 mm carbon drivers; BT 5.3; 8 mics."
+    },
+    "appOnlyFeatures": [
+      "5-band EQ",
+      "TrueSound mode",
+      "firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "aptX Lossless",
+      "8-mic ANC",
+      "30 h battery"
+    ],
+    "sources": [
+      {
+        "url": "https://www.bowerswilkins.com/en-us/product/over-ear-headphones/px8-s2/301021.html",
+        "type": "official-product",
+        "title": "Px8 S2",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on battery figure not published.",
+      "Battery display is a single headphone percentage."
+    ],
+    "notes": "Flagship over-ear; leather/aluminium.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bowers & Wilkins",
+    "companySlug": "bowers-wilkins",
+    "family": "Px8",
+    "model": "Bowers & Wilkins Px8",
+    "slug": "px8",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Bowers & Wilkins Music",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ, ANC, firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 30,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout; 15 min = 7 h",
+      "notes": "30 h playback.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "aptX Adaptive",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls, ANC",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "aptX Adaptive",
+        "aptX HD",
+        "aptX",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "2 x 40 mm carbon drivers; BT 5.2."
+    },
+    "appOnlyFeatures": [
+      "5-band EQ",
+      "firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "First Px8 flagship"
+    ],
+    "sources": [
+      {
+        "url": "https://www.bowerswilkins.com/en-us/product/over-ear-headphones/px8/300494.html",
+        "type": "official-product",
+        "title": "Px8",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on battery figure not published."
+    ],
+    "notes": "Gen 1 Px8.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bowers & Wilkins",
+    "companySlug": "bowers-wilkins",
+    "family": "Px7",
+    "model": "Bowers & Wilkins Px7 S3",
+    "slug": "px7-s3",
+    "generation": "3",
+    "variant": "S3",
+    "releaseYear": 2025,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Bowers & Wilkins Music",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "5-band EQ + TrueSound, ANC, firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 30,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout; 15 min = 7 h",
+      "notes": "30 h playback.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "8 mics."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band EQ + TrueSound",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "aptX Lossless",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wired-mode",
+        "name": "USB-C audio",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls, ANC",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "TrueSound"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "aptX Lossless",
+        "aptX Adaptive",
+        "aptX HD",
+        "aptX",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm bio-cellulose drivers; BT 5.3."
+    },
+    "appOnlyFeatures": [
+      "5-band EQ",
+      "TrueSound",
+      "firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "aptX Lossless",
+      "Redesigned 40 mm bio-cellulose driver",
+      "8 mics"
+    ],
+    "sources": [
+      {
+        "url": "https://www.bowerswilkins.com/en-us/product/over-ear-headphones/px7-s3/301020.html",
+        "type": "official-product",
+        "title": "Px7 S3",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on battery figure not published."
+    ],
+    "notes": "2025 refresh of Px7.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bowers & Wilkins",
+    "companySlug": "bowers-wilkins",
+    "family": "Px7",
+    "model": "Bowers & Wilkins Px7 S2e",
+    "slug": "px7-s2e",
+    "generation": "2",
+    "variant": "S2e",
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Bowers & Wilkins Music",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ, ANC, firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 30,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout",
+      "notes": "30 h playback.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "aptX Adaptive",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls, ANC",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "aptX Adaptive",
+        "aptX HD",
+        "aptX",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm drivers; BT 5.2."
+    },
+    "appOnlyFeatures": [
+      "5-band EQ",
+      "firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "Tuning refresh of Px7 S2"
+    ],
+    "sources": [
+      {
+        "url": "https://www.bowerswilkins.com/en-us/product/over-ear-headphones/px7-s2e/300866.html",
+        "type": "official-product",
+        "title": "Px7 S2e",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on battery figure not published."
+    ],
+    "notes": "2023 tuning refresh.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bowers & Wilkins",
+    "companySlug": "bowers-wilkins",
+    "family": "Pi8",
+    "model": "Bowers & Wilkins Pi8",
+    "slug": "pi8",
+    "generation": "8",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Bowers & Wilkins Music",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "5-band EQ + TrueSound, ANC, retransmission case controls."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6.5,
+      "budsHoursNoAnc": null,
+      "caseHours": 13.5,
+      "chargingIndicators": "Case LED; app readout; USB-C; wireless charging",
+      "notes": "6.5 h with ANC; 20 h total with case.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 13.5
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ANC adapts to surroundings; 3 mics per earbud."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band EQ + TrueSound",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "aptX Lossless",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.bowers-wilkins.retransmission",
+        "name": "Case audio retransmission",
+        "availability": "device-only",
+        "notes": "Case connects to USB-C/3.5 mm sources."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "track skip",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "TrueSound"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "aptX Lossless",
+        "aptX Adaptive",
+        "aptX Classic",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12 mm Carbon Cone drivers; BT 5.4."
+    },
+    "appOnlyFeatures": [
+      "5-band EQ",
+      "TrueSound",
+      "firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "aptX Lossless in TWS",
+      "Retransmission case",
+      "12 mm Carbon Cone drivers"
+    ],
+    "sources": [
+      {
+        "url": "https://www.bowerswilkins.com/en-us/product/wireless-earbuds/pi8/300965.html",
+        "type": "official-product",
+        "title": "Pi8",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-off bud runtime not published.",
+      "Battery UI layout inferred."
+    ],
+    "notes": "Flagship TWS with case retransmission.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Bowers & Wilkins",
+    "companySlug": "bowers-wilkins",
+    "family": "Pi6",
+    "model": "Bowers & Wilkins Pi6",
+    "slug": "pi6",
+    "generation": "6",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Bowers & Wilkins Music",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ, ANC, firmware."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 8,
+      "budsHoursNoAnc": null,
+      "caseHours": 16,
+      "chargingIndicators": "Case LED; app readout; USB-C",
+      "notes": "8 h with ANC; 24 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "transparency",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "aptX Adaptive",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "aptX Adaptive",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12 mm bio-cellulose drivers; BT 5.4."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "New mid-tier TWS below Pi8",
+      "8 h ANC runtime"
+    ],
+    "sources": [
+      {
+        "url": "https://www.bowerswilkins.com/en-us/product/wireless-earbuds/pi6/300966.html",
+        "type": "official-product",
+        "title": "Pi6",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official product page not captured (listed as archived in Pi8 page comparison).",
+      "ANC-off runtime and EQ band count unknown.",
+      "Battery UI layout (split buds / separate case / last-known case while buds are out) is inferred from typical app behaviour and has not been screenshot-verified."
+    ],
+    "notes": "Mid-tier 2024 TWS.",
+    "researchedAt": "2026-11-10"
+  }
+]

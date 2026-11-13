@@ -1,0 +1,664 @@
+[
+  {
+    "company": "Lava",
+    "companySlug": "lava",
+    "family": "Probuds N",
+    "model": "Lava Probuds N31",
+    "slug": "lava-probuds-n31",
+    "generation": "N31",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "No companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Lava documents on-device buttons and voice-assistant pass-through only."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 45,
+      "caseHours": null,
+      "chargingIndicators": "Neckband LED; USB-C; 10 min = 12 h.",
+      "notes": "45+ h playtime from a 280 mAh battery. No charging case, so case fields are not applicable.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "ENC for calls only."
+    },
+    "features": [
+      {
+        "id": "mic.enc",
+        "name": "Environmental Noise Cancellation",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device pairing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "durability.ipx6",
+        "name": "IPX6",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.lava.pro-game-mode",
+        "name": "Pro-Game Mode 60 ms",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.lava.fast-charge",
+        "name": "10 min = 12 h",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "long press",
+          "action": "reject call / voice assistant",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double press",
+          "action": "next/previous track",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Inline neckband buttons.",
+      "configurableInApp": false,
+      "notes": "No app; fixed button mapping."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "10 mm dynamic driver; 20 Hz-20 kHz; silicone ear hooks."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "45+ h battery",
+      "60 ms Pro-Game Mode",
+      "IPX6"
+    ],
+    "sources": [
+      {
+        "url": "https://www.lavamobiles.com/accessories/probuds-n31",
+        "type": "official-product",
+        "title": "Lava Probuds N31",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No battery percentage display documented",
+      "Codec list not published",
+      "No app or EQ"
+    ],
+    "notes": "Neckband, not TWS. 45 h is a single-charge neckband figure, not case-inclusive.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Lava",
+    "companySlug": "lava",
+    "family": "Probuds N",
+    "model": "Lava Probuds N41",
+    "slug": "lava-probuds-n41",
+    "generation": "N41",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "No companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "On-device buttons only."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 35,
+      "caseHours": null,
+      "chargingIndicators": "Neckband LED; USB-C; 10 min = 12 h.",
+      "notes": "35+ h playtime from 200 mAh; 50 min full charge.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "ENC for calls only."
+    },
+    "features": [
+      {
+        "id": "mic.enc",
+        "name": "Environmental Noise Cancellation",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device pairing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "durability.ipx6",
+        "name": "IPX6",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.lava.fast-charge",
+        "name": "10 min = 12 h",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "long press",
+          "action": "reject call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double press",
+          "action": "next/previous track",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Inline neckband buttons.",
+      "configurableInApp": false,
+      "notes": "Fixed mapping."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "10 mm driver; 20 Hz-20 kHz; 32 ohm."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Lower 35 h battery than N31 but smaller 200 mAh cell",
+      "50 min charge",
+      "Panther Black / Sapphire Blue / Forest Green"
+    ],
+    "sources": [
+      {
+        "url": "https://www.lavamobiles.com/accessories/probuds-n41",
+        "type": "official-product",
+        "title": "Lava Probuds N41",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No battery display documented",
+      "Codec list not published",
+      "No app or EQ"
+    ],
+    "notes": "Neckband. 35 h single charge.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Lava",
+    "companySlug": "lava",
+    "family": "Probuds N",
+    "model": "Lava Probuds N32",
+    "slug": "lava-probuds-n32",
+    "generation": "N32",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "No companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Magnetic Hall switch and on-device buttons; no app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 40,
+      "caseHours": null,
+      "chargingIndicators": "Neckband LED; USB-C; 10 min = 12 h.",
+      "notes": "40 h total from 280 mAh; 60 min full charge.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "ENC for calls only."
+    },
+    "features": [
+      {
+        "id": "mic.enc",
+        "name": "ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device pairing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "durability.ipx6",
+        "name": "IPX6",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.lava.hall-switch",
+        "name": "Magnetic Hall switch power on/off",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.lava.pro-game-mode",
+        "name": "Pro-Game Mode",
+        "availability": "device-only",
+        "notes": "Latency not stated on the page."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "other"
+      ],
+      "gestures": [
+        {
+          "gesture": "separate magnetic buds",
+          "action": "power on",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "single press",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double press",
+          "action": "next/previous track",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Inline buttons plus magnetic Hall switch.",
+      "configurableInApp": false,
+      "notes": "Magnetic power on/off is the distinguishing control."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "10 mm driver; spherical wave speaker; 20 Hz-20 kHz."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "40 h battery",
+      "Magnetic Hall switch",
+      "Spherical wave speaker"
+    ],
+    "sources": [
+      {
+        "url": "https://www.lavamobiles.com/accessories/probuds-n32",
+        "type": "official-product",
+        "title": "Lava Probuds N32",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No battery display documented",
+      "Codec list not published",
+      "Pro-Game latency not stated",
+      "No app or EQ"
+    ],
+    "notes": "Neckband. 40 h single charge.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Lava",
+    "companySlug": "lava",
+    "family": "Probuds T",
+    "model": "Lava Probuds T31",
+    "slug": "lava-probuds-t31",
+    "generation": "T31",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "No companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Touch controls and voice assistants only; no app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 35,
+      "chargingIndicators": "Case LED; USB-C; 10 min = 150 min.",
+      "notes": "Official: 7 h buds, 35 h total; 40 mAh per bud, 400 mAh case.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 35
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Dual-mic ENC only."
+    },
+    "features": [
+      {
+        "id": "mic.enc",
+        "name": "Dual-mic ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "durability.ipx4",
+        "name": "IPX4",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.lava.translucent-case",
+        "name": "Translucent case",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single touch",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double touch",
+          "action": "previous/next track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "long touch",
+          "action": "voice assistant / power",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Fixed touch mapping; reset by tapping six times."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "10 mm driver; Bluetooth 5.3; 20 Hz-20 kHz."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "7 h/35 h battery",
+      "Translucent case",
+      "Dual-mic ENC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.lavamobiles.com/accessories/probuds-t31",
+        "type": "official-product",
+        "title": "Lava Probuds T31",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://devapi.lavamobiles.com/storage/media/file/user-manuals/download_file/probuds-t31-1719824518.pdf",
+        "type": "official-manual",
+        "title": "Probuds T31 user manual",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No battery display documented",
+      "Codec list not published",
+      "No app, EQ or multipoint claim"
+    ],
+    "notes": "Budget TWS; 7 h per charge is strong for the class.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Lava",
+    "companySlug": "lava",
+    "family": "Probuds Wave",
+    "model": "Lava Probuds Wave 921",
+    "slug": "lava-probuds-wave-921",
+    "generation": "921",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "No companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Magnetic Dash Switch and on-device controls; no app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 40,
+      "caseHours": null,
+      "chargingIndicators": "Neckband LED; USB-C; 10 min = 12 h.",
+      "notes": "40 h total from 280 mAh; 60 min full charge.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "ENC for calls only."
+    },
+    "features": [
+      {
+        "id": "mic.enc",
+        "name": "ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device pairing",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "durability.ipx6",
+        "name": "IPX6",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.lava.magnetic-dash",
+        "name": "Magnetic Dash Switch",
+        "availability": "device-only",
+        "notes": "Separate buds to play/answer; snap to pause/hang up."
+      },
+      {
+        "id": "vendor.lava.pro-game-mode",
+        "name": "50 ms game mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button",
+        "other"
+      ],
+      "gestures": [
+        {
+          "gesture": "separate buds",
+          "action": "play music / answer call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "snap together",
+          "action": "pause / hang up",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "inline button",
+          "action": "volume / track / assistant",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Inline neckband buttons plus magnetic Dash Switch.",
+      "configurableInApp": false,
+      "notes": "Magnetic separation is the primary play/pause control."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "10 mm driver; spherical wave speaker; Bluetooth 5.3."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Magnetic Dash Switch",
+      "40 h battery",
+      "50 ms game mode"
+    ],
+    "sources": [
+      {
+        "url": "https://www.lavamobiles.com/accessories/probuds-wave-921",
+        "type": "official-product",
+        "title": "Lava Probuds Wave 921",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No battery display documented",
+      "Codec list not published",
+      "No app or EQ",
+      "Neckband, not TWS despite 'buds' marketing"
+    ],
+    "notes": "Marketed as 'Probuds' but the official spec says In-Ear Bluetooth Neckband.",
+    "researchedAt": "2026-11-10"
+  }
+]

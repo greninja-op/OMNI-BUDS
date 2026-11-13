@@ -1,0 +1,1657 @@
+[
+  {
+    "company": "Skullcandy",
+    "companySlug": "skullcandy",
+    "family": "Crusher",
+    "model": "Skullcandy Crusher 1080 ANC",
+    "slug": "crusher-1080-anc",
+    "generation": "1080",
+    "variant": "ANC",
+    "releaseYear": 2026,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Skullcandy",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Crusher bass profiles, 5-band EQ, button customisation, ANC/stay-aware, firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 50,
+      "budsHoursNoAnc": 60,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout; 10 min = 4 h",
+      "notes": "Official: up to 60 h ANC off, 50 h ANC on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "stay-aware"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Bose QuietControl ANC; Stay-Aware transparency."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Bose QuietControl ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Stay-Aware mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band custom EQ",
+        "availability": "official-app",
+        "notes": "Music/Movie/Podcast presets."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Bose TrueSpatial",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio with Auracast",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detect with auto power off",
+        "availability": "device-only",
+        "notes": "15-minute auto power off."
+      },
+      {
+        "id": "vendor.skullcandy.crusher-bass",
+        "name": "Adjustable Crusher Bass",
+        "availability": "both",
+        "notes": "Full/Balanced/Tight profiles."
+      },
+      {
+        "id": "vendor.skullcandy.bose-speechclarity",
+        "name": "Bose SpeechClarity voice pickup",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls, assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "On-earcup buttons",
+      "configurableInApp": true,
+      "notes": "Customisable button functions."
+    },
+    "audio": {
+      "eqPresets": [
+        "Music",
+        "Movie",
+        "Podcast"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "LC3",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "36 mm drivers; BT 5.3; 374 g."
+    },
+    "appOnlyFeatures": [
+      "Crusher profiles",
+      "5-band EQ",
+      "button customisation",
+      "Stay-Aware",
+      "firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bose ANC and TrueSpatial partnership",
+      "60 h battery",
+      "Auracast"
+    ],
+    "sources": [
+      {
+        "url": "https://www.skullcandy.com/products/crusher-1080-anc-headphones",
+        "type": "official-product",
+        "title": "Crusher 1080 ANC",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB not published.",
+      "EQ band centre frequencies unknown."
+    ],
+    "notes": "2026 flagship Crusher with Bose audio tech.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Skullcandy",
+    "companySlug": "skullcandy",
+    "family": "Crusher",
+    "model": "Skullcandy Crusher 720",
+    "slug": "crusher-720",
+    "generation": "720",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Skullcandy",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Crusher bass, EQ, button customisation."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 65,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout; 10 min = 4 h",
+      "notes": "Up to 65 h; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC; Stay-Aware mode only."
+    },
+    "features": [
+      {
+        "id": "noise-control.transparency",
+        "name": "Stay-Aware mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "THX Spatial Audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio with Auracast",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detect",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.skullcandy.crusher-bass",
+        "name": "Adjustable Crusher Bass",
+        "availability": "both",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Music",
+        "Movie",
+        "Podcast"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "LC3",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40.7 mm drivers; BT 5.3; 362.8 g."
+    },
+    "appOnlyFeatures": [
+      "Crusher bass",
+      "5-band EQ",
+      "button customisation"
+    ],
+    "featureDeltaFromPrevious": [
+      "65 h battery",
+      "THX Spatial Audio",
+      "LE Audio/Auracast"
+    ],
+    "sources": [
+      {
+        "url": "https://www.skullcandy.com/products/crusher-720-headphones",
+        "type": "official-product",
+        "title": "Crusher 720",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "EQ band centre frequencies unknown."
+    ],
+    "notes": "Non-ANC Crusher with 65 h runtime.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Skullcandy",
+    "companySlug": "skullcandy",
+    "family": "Crusher",
+    "model": "Skullcandy Crusher ANC 2",
+    "slug": "crusher-anc-2",
+    "generation": "2",
+    "variant": "ANC",
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Skullcandy",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Crusher bass, EQ, ANC, Tile, button customisation."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 50,
+      "budsHoursNoAnc": 60,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout; 10 min = 4 h",
+      "notes": "60 h ANC off, 50 h ANC on.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "stay-aware"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": "Adjustable ANC; Personal Sound by Mimi."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adjustable ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Stay-Aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Custom EQ",
+        "availability": "official-app",
+        "notes": "Music/Movie/Podcast presets."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.skullcandy.crusher-bass",
+        "name": "Adjustable Crusher Bass",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "vendor.skullcandy.tile",
+        "name": "Tile finding",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "equalization.personal-sound",
+        "name": "Personal Sound by Mimi",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls, assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Music",
+        "Movie",
+        "Podcast"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm drivers; BT 5.2."
+    },
+    "appOnlyFeatures": [
+      "Crusher bass",
+      "EQ",
+      "Tile",
+      "Personal Sound"
+    ],
+    "featureDeltaFromPrevious": [
+      "Personal Sound by Mimi",
+      "Tile finding",
+      "USB-C"
+    ],
+    "sources": [
+      {
+        "url": "https://www.skullcandy.com/products/crusher-anc-2-sensory-bass-headphones-with-active-noise-canceling",
+        "type": "official-product",
+        "title": "Crusher ANC 2",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB not published.",
+      "EQ band count not stated."
+    ],
+    "notes": "Pre-Bose Crusher flagship.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Skullcandy",
+    "companySlug": "skullcandy",
+    "family": "Hesh",
+    "model": "Skullcandy Hesh 540 ANC",
+    "slug": "hesh-540-anc",
+    "generation": "540",
+    "variant": "ANC",
+    "releaseYear": 2025,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Skullcandy",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ, ANC, button customisation."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 50,
+      "budsHoursNoAnc": 65,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout; 10 min = 4 h",
+      "notes": "50 h ANC on, 65 h ANC off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "stay-aware"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Stay-Aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "THX Spatial Audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.personal-sound",
+        "name": "Personal Sound by Mimi",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Music",
+        "Bass Boost",
+        "Podcast"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm drivers; BT 5.3."
+    },
+    "appOnlyFeatures": [
+      "5-band EQ",
+      "Personal Sound",
+      "button customisation"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC added to Hesh line",
+      "THX Spatial Audio"
+    ],
+    "sources": [
+      {
+        "url": "https://www.skullcandy.com/products/hesh-540-anc-noise-canceling-headphones",
+        "type": "official-product",
+        "title": "Hesh 540 ANC",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB not published."
+    ],
+    "notes": "Mid-tier ANC over-ear.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Skullcandy",
+    "companySlug": "skullcandy",
+    "family": "Icon",
+    "model": "Skullcandy Icon ANC",
+    "slug": "icon-anc",
+    "generation": "1",
+    "variant": "ANC",
+    "releaseYear": 2025,
+    "formFactor": "on-ear",
+    "officialApp": {
+      "name": "Skullcandy",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ, ANC, button customisation."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 50,
+      "budsHoursNoAnc": 60,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout",
+      "notes": "50 h ANC on, 60 h ANC off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "stay-aware"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Stay-Aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.personal-sound",
+        "name": "Personal Sound by Mimi",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Music",
+        "Bass Boost",
+        "Podcast"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "LC3",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm drivers; BT 5.3; 225 g."
+    },
+    "appOnlyFeatures": [
+      "5-band EQ",
+      "Personal Sound",
+      "button customisation"
+    ],
+    "featureDeltaFromPrevious": [
+      "On-ear ANC with 50 h runtime"
+    ],
+    "sources": [
+      {
+        "url": "https://www.skullcandy.com/products/icon-anc",
+        "type": "official-product",
+        "title": "Icon ANC",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB not published.",
+      "Wear detection not documented."
+    ],
+    "notes": "On-ear ANC model.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Skullcandy",
+    "companySlug": "skullcandy",
+    "family": "Aviator",
+    "model": "Skullcandy Aviator 900 ANC",
+    "slug": "aviator-900-anc",
+    "generation": "900",
+    "variant": "ANC",
+    "releaseYear": 2025,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Skullcandy",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ, spatial audio, ANC, controls."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 40,
+      "budsHoursNoAnc": 60,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout; 10 min = 4 h",
+      "notes": "40 h ANC on, 60 h ANC off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "stay-aware"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Stay-Aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "audio.spatial",
+        "name": "THX Spatial Audio with head tracking",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "audio.head-tracking",
+        "name": "Head tracking",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Custom EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Music",
+        "Bass Boost",
+        "Podcast"
+      ],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm drivers; BT 5.3; 332 g."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "spatial audio",
+      "controls"
+    ],
+    "featureDeltaFromPrevious": [
+      "THX Spatial Audio with head tracking",
+      "Aviator nameplate returns"
+    ],
+    "sources": [
+      {
+        "url": "https://www.skullcandy.com/products/aviator-900-anc-headphones",
+        "type": "official-product",
+        "title": "Aviator 900 ANC",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB not published.",
+      "EQ band count not stated."
+    ],
+    "notes": "Premium spatial-audio over-ear.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Skullcandy",
+    "companySlug": "skullcandy",
+    "family": "Method",
+    "model": "Skullcandy Method 540 ANC",
+    "slug": "method-540-anc",
+    "generation": "540",
+    "variant": "ANC",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Skullcandy",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, button customisation, Skull AI assistant."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 9,
+      "budsHoursNoAnc": 11,
+      "caseHours": 23,
+      "chargingIndicators": "Case LED; app readout; 10 min = 2 h",
+      "notes": "Official: 9 h + 23 h = 32 h ANC on; 11 h + 29 h = 40 h ANC off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "stay-aware"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adjustable 4-mic ANC."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adjustable 4-mic ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Stay-Aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.skullcandy.skull-ai",
+        "name": "Skull AI voice assistant",
+        "availability": "official-app",
+        "notes": "14-day free trial."
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls, assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Stem buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Music",
+        "Bass Boost",
+        "Podcast"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "12 mm drivers; BT 5.3; IPX4."
+    },
+    "appOnlyFeatures": [
+      "5-band EQ",
+      "Skull AI",
+      "button customisation"
+    ],
+    "featureDeltaFromPrevious": [
+      "Skull AI assistant",
+      "Adjustable 4-mic ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.skullcandy.com/products/method-540-anc-noise-canceling-earbuds",
+        "type": "official-product",
+        "title": "Method 540 ANC",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB not published.",
+      "Wear detection not documented.",
+      "Battery UI layout (split buds / separate case / last-known case while buds are out) is inferred from typical app behaviour and has not been screenshot-verified."
+    ],
+    "notes": "Stem-style ANC TWS.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Skullcandy",
+    "companySlug": "skullcandy",
+    "family": "Method",
+    "model": "Skullcandy Method 360 ANC",
+    "slug": "method-360-anc",
+    "generation": "360",
+    "variant": "ANC",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "Skullcandy",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "ANC, EQ, controls."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 9,
+      "budsHoursNoAnc": 11,
+      "caseHours": 23,
+      "chargingIndicators": "Case LED; app readout",
+      "notes": "9 h + 23 h = 32 h ANC on; 11 h + 29 h = 40 h ANC off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "stay-aware"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Adjustable 4-mic ANC; Sound by Bose."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adjustable 4-mic ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Stay-Aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.skullcandy.bose-sound",
+        "name": "Sound by Bose",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Stem buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Music",
+        "Bass Boost",
+        "Podcast"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "12 mm drivers; BT 5.3; IPX4."
+    },
+    "appOnlyFeatures": [
+      "5-band EQ",
+      "button customisation"
+    ],
+    "featureDeltaFromPrevious": [
+      "Sound by Bose tuning"
+    ],
+    "sources": [
+      {
+        "url": "https://www.skullcandy.com/products/method-360-anc-noise-canceling-earbuds",
+        "type": "official-product",
+        "title": "Method 360 ANC",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB not published.",
+      "Wear detection not documented.",
+      "Battery UI layout (split buds / separate case / last-known case while buds are out) is inferred from typical app behaviour and has not been screenshot-verified."
+    ],
+    "notes": "Bose-tuned sibling of Method 540.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Skullcandy",
+    "companySlug": "skullcandy",
+    "family": "Push",
+    "model": "Skullcandy Push ANC Active",
+    "slug": "push-anc-active",
+    "generation": "1",
+    "variant": "ANC Active",
+    "releaseYear": 2023,
+    "formFactor": "tws-open",
+    "officialApp": {
+      "name": "Skullcandy",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ, ANC, Personal Sound, button customisation."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 12,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; app readout; wireless charging; 10 min = 2 h",
+      "notes": "Official: 7 h + 30 h = 37 h ANC on; 12 h + 46 h = 58 h ANC off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "stay-aware"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Stay-Aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.personal-sound",
+        "name": "Personal Sound by Mimi",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.skullcandy.spotify-tap",
+        "name": "Spotify Tap",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls, assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earbud buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Music",
+        "Bass Boost",
+        "Podcast"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "12 mm drivers; BT 5.3; over-ear hanger fit."
+    },
+    "appOnlyFeatures": [
+      "5-band EQ",
+      "Personal Sound",
+      "button customisation"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC in Push hanger design",
+      "58 h total"
+    ],
+    "sources": [
+      {
+        "url": "https://www.skullcandy.com/products/push-anc-active",
+        "type": "official-product",
+        "title": "Push ANC Active",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB not published.",
+      "Wear detection not documented.",
+      "Battery UI layout (split buds / separate case / last-known case while buds are out) is inferred from typical app behaviour and has not been screenshot-verified."
+    ],
+    "notes": "Hanger-style sports ANC with huge total runtime.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Skullcandy",
+    "companySlug": "skullcandy",
+    "family": "Sesh",
+    "model": "Skullcandy Sesh ANC Active",
+    "slug": "sesh-anc-active",
+    "generation": "1",
+    "variant": "ANC Active",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Skullcandy",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ, ANC, Personal Sound, controls."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 12,
+      "caseHours": 21,
+      "chargingIndicators": "Case LED; app readout; 10 min = 2 h",
+      "notes": "Official: 7 h + 21 h = 28 h ANC on; 12 h + 36 h = 48 h ANC off.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "stay-aware"
+      ],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Stay-Aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "5-band EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.personal-sound",
+        "name": "Personal Sound by Mimi",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.skullcandy.spotify-tap",
+        "name": "Spotify Tap",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls, assistant",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earbud buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Music",
+        "Bass Boost",
+        "Podcast"
+      ],
+      "customEq": true,
+      "eqBands": 5,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "12 mm drivers; BT 5.3; IP67."
+    },
+    "appOnlyFeatures": [
+      "5-band EQ",
+      "Personal Sound",
+      "controls"
+    ],
+    "featureDeltaFromPrevious": [
+      "IP67 in Sesh line",
+      "ANC"
+    ],
+    "sources": [
+      {
+        "url": "https://www.skullcandy.com/products/sesh-anc-active",
+        "type": "official-product",
+        "title": "Sesh ANC Active",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB not published.",
+      "Wear detection not documented.",
+      "Battery UI layout (split buds / separate case / last-known case while buds are out) is inferred from typical app behaviour and has not been screenshot-verified."
+    ],
+    "notes": "Rugged IP67 ANC earbud.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Skullcandy",
+    "companySlug": "skullcandy",
+    "family": "Dime",
+    "model": "Skullcandy Dime 360",
+    "slug": "dime-360",
+    "generation": "360",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Skullcandy",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Preset EQ and controls."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 8,
+      "caseHours": 20,
+      "chargingIndicators": "Case LED; app readout; 10 min = 2 h",
+      "notes": "8 h + 20 h = 28 h total; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Preset EQ modes",
+        "availability": "official-app",
+        "notes": "Music/Movie/Podcast."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Stay-Aware",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "vendor.skullcandy.find-my-device",
+        "name": "Google Find My Device",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls",
+          "configurableInApp": null,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earbud buttons",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Music",
+        "Movie",
+        "Podcast"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "6 mm drivers; BT 5.3; IPX4."
+    },
+    "appOnlyFeatures": [
+      "preset EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "Multipoint added to Dime line",
+      "Google Find My Device"
+    ],
+    "sources": [
+      {
+        "url": "https://www.skullcandy.com/products/dime-360",
+        "type": "official-product",
+        "title": "Dime 360",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No custom EQ.",
+      "ANC not supported.",
+      "Battery UI layout (split buds / separate case / last-known case while buds are out) is inferred from typical app behaviour and has not been screenshot-verified."
+    ],
+    "notes": "Budget TWS with 28 h total.",
+    "researchedAt": "2026-11-10"
+  }
+]

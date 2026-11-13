@@ -1,0 +1,911 @@
+[
+  {
+    "company": "Master & Dynamic",
+    "companySlug": "master-dynamic",
+    "family": "MW",
+    "model": "Master & Dynamic MW09",
+    "slug": "mw09",
+    "generation": "9",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "M&D Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Fully adjustable EQ, default settings, ANC modes, firmware updates."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 16,
+      "caseHours": 32,
+      "chargingIndicators": "Case LED; app readout; 5 min = 2 h",
+      "notes": "Official: 16 h buds + 32 h case = 48 h total.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 32
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "Adaptive ANC; wind reduction; AI-enhanced talk."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient listening",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Adjustable EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.le-audio",
+        "name": "LE Audio ready",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Proximity sensors",
+        "availability": "device-only",
+        "notes": "Auto pause/resume."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/ambient",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "LC3",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm beryllium drivers; BT 5.4; sapphire glass; Kevlar/aluminium case."
+    },
+    "appOnlyFeatures": [
+      "adjustable EQ",
+      "ANC modes",
+      "firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "BT 5.4 LE Audio",
+      "48 h total",
+      "AI talk solution"
+    ],
+    "sources": [
+      {
+        "url": "https://www.masterdynamic.com/products/mw09",
+        "type": "official-product",
+        "title": "MW09",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on runtime not published.",
+      "EQ band count unknown.",
+      "Battery display layout inferred."
+    ],
+    "notes": "Flagship TWS with luxury materials.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Master & Dynamic",
+    "companySlug": "master-dynamic",
+    "family": "MW",
+    "model": "Master & Dynamic MW08 Sport",
+    "slug": "mw08-sport",
+    "generation": "8",
+    "variant": "Sport",
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "M&D Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ and ANC modes."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 12,
+      "caseHours": 30,
+      "chargingIndicators": "Case LED; app readout; wireless charging",
+      "notes": "12 h buds + 30 h case = 42 h total.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 30
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "2 ANC modes and 2 ambient listening modes."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Hybrid ANC (2 modes)",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient listening (2 modes)",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause, calls",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "ANC/ambient",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "No",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "aptX",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": null,
+      "notes": "11 mm beryllium drivers; BT 5.2; IPX4 case; Kevlar case."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "ANC modes"
+    ],
+    "featureDeltaFromPrevious": [
+      "Sport version of MW08",
+      "Kevlar charging case"
+    ],
+    "sources": [
+      {
+        "url": "https://www.masterdynamic.com/products/mw08-sport-active-noise-cancelling-true-wireless-earphones",
+        "type": "official-product",
+        "title": "MW08 Sport",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on runtime not published.",
+      "Wear detection not documented.",
+      "EQ band count unknown.",
+      "Battery UI layout (split buds / separate case / last-known case while buds are out) is inferred from typical app behaviour and has not been screenshot-verified."
+    ],
+    "notes": "Sport variant with 42 h total.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Master & Dynamic",
+    "companySlug": "master-dynamic",
+    "family": "MW",
+    "model": "Master & Dynamic MW75",
+    "slug": "mw75",
+    "generation": "75",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "M&D Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ profiles, additional ANC modes, firmware updates."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": 28,
+      "budsHoursNoAnc": 32,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout",
+      "notes": "32 h total, 28 h with ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling",
+        "ambient",
+        "adaptive"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Additional ANC modes in M&D Connect."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Ambient mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ profiles",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Proximity sensors",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wired-mode",
+        "name": "3.5 mm wired mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls, ANC",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "aptX Adaptive",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "40 mm beryllium drivers; BT 5.1; 4 beamforming mics."
+    },
+    "appOnlyFeatures": [
+      "EQ profiles",
+      "ANC modes",
+      "firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "First M&D ANC over-ear"
+    ],
+    "sources": [
+      {
+        "url": "https://www.masterdynamic.com/products/mw75-active-noise-cancelling-wireless-headphones",
+        "type": "official-product",
+        "title": "MW75",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "EQ band count unknown.",
+      "Battery display is a single headphone percentage."
+    ],
+    "notes": "Luxury ANC over-ear.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Master & Dynamic",
+    "companySlug": "master-dynamic",
+    "family": "MW",
+    "model": "Master & Dynamic MW65",
+    "slug": "mw65",
+    "generation": "65",
+    "variant": null,
+    "releaseYear": 2018,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app; ANC and playback on-device."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 24,
+      "caseHours": null,
+      "chargingIndicators": "LED",
+      "notes": "24 h; optional cable extends listening.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "noise-cancelling"
+      ],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "2 ANC modes (high/low)."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "ANC (2 modes)",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wired-mode",
+        "name": "3.5 mm passive input",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.voice-assistant",
+        "name": "Voice assistant button",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls, ANC",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "aptX",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "40 mm beryllium drivers; BT 4.2; 245 g."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Lightweight ANC over-ear"
+    ],
+    "sources": [
+      {
+        "url": "https://www.masterdynamic.com/products/mw65-headphones-for-0-95",
+        "type": "official-product",
+        "title": "MW65",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Multipoint support unknown.",
+      "ANC-off vs ANC-on runtime split not published."
+    ],
+    "notes": "Leica 0.95 edition page used as spec source.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Master & Dynamic",
+    "companySlug": "master-dynamic",
+    "family": "MW",
+    "model": "Master & Dynamic MW50+",
+    "slug": "mw50-plus",
+    "generation": "50",
+    "variant": "Plus",
+    "releaseYear": 2019,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 16,
+      "caseHours": null,
+      "chargingIndicators": "LED",
+      "notes": "16 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "vendor.master-dynamic.2-in-1-pads",
+        "name": "2-in-1 on-ear/over-ear pads",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wired-mode",
+        "name": "3.5 mm input",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "aptX",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "40 mm beryllium drivers; BT 4.2."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Interchangeable on-ear/over-ear pads"
+    ],
+    "sources": [
+      {
+        "url": "https://www.masterdynamic.com/products/mw50-wireless-on-and-over-ear-headphones",
+        "type": "official-product",
+        "title": "MW50+",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Multipoint support unknown.",
+      "No ANC."
+    ],
+    "notes": "2-in-1 pad design.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Master & Dynamic",
+    "companySlug": "master-dynamic",
+    "family": "MH",
+    "model": "Master & Dynamic MH40 Wireless",
+    "slug": "mh40-wireless",
+    "generation": "2",
+    "variant": "Wireless",
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "M&D Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ profiles, settings, firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 30,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout; 15 min = ? (not stated)",
+      "notes": "Up to 30 h; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Multipoint",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.wired-mode",
+        "name": "USB-C digital audio + 3.5 mm",
+        "availability": "device-only",
+        "notes": "24-bit/96 kHz USB-C."
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, calls",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "aptX Adaptive",
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "40 mm titanium drivers; BT 5.2."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "Titanium drivers",
+      "BT 5.2",
+      "Multipoint"
+    ],
+    "sources": [
+      {
+        "url": "https://www.masterdynamic.com/products/mh40-wireless-over-ear-headphones-v2",
+        "type": "official-product",
+        "title": "MH40 Wireless",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "EQ band count unknown.",
+      "No ANC."
+    ],
+    "notes": "Wireless version of MH40.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Master & Dynamic",
+    "companySlug": "master-dynamic",
+    "family": "MG",
+    "model": "Master & Dynamic MG20",
+    "slug": "mg20",
+    "generation": "20",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "M&D Connect",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "EQ profiles, settings, firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 22,
+      "caseHours": null,
+      "chargingIndicators": "LED; app readout",
+      "notes": "22 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC; gaming headset."
+    },
+    "features": [
+      {
+        "id": "audio.spatial",
+        "name": "7.1 surround sound",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ profiles",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "On-head detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.low-latency",
+        "name": "aptX Low Latency adapter",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.master-dynamic.detachable-boom-mic",
+        "name": "Detachable boom mic",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "button press",
+          "action": "playback, volume, mic mute",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Earcup buttons",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "aptX HD",
+        "aptX Low Latency",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": true,
+      "notes": "50 mm beryllium drivers; BT 5.0."
+    },
+    "appOnlyFeatures": [
+      "EQ profiles",
+      "settings"
+    ],
+    "featureDeltaFromPrevious": [
+      "M&D's first gaming headphone"
+    ],
+    "sources": [
+      {
+        "url": "https://www.masterdynamic.com/products/mg20-wireless-gaming-headphones",
+        "type": "official-product",
+        "title": "MG20",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Multipoint support unknown.",
+      "No ANC."
+    ],
+    "notes": "Gaming headset with 7.1 surround.",
+    "researchedAt": "2026-11-10"
+  }
+]

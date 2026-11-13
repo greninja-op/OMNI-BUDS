@@ -1,0 +1,1190 @@
+[
+  {
+    "company": "pTron",
+    "companySlug": "ptron",
+    "family": "Bassbuds Tango",
+    "model": "Bassbuds Tango",
+    "slug": "ptron-bassbuds-tango",
+    "generation": "2026",
+    "variant": "Tango",
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "Original Sound",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Official product page says to download the 'Original Sound' app from Play Store / App Store to customise touch controls and choose or create a sound EQ."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": "Case LED; digital display not mentioned for this variant.",
+      "notes": "50 h total with case. No ANC.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 50
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "No ANC; TruTalk AI-ENC for calls."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Custom EQ via Original Sound app",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "control.touch-customization",
+        "name": "Touch control customisation",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.ptron.trutalk-enc",
+        "name": "TruTalk AI-ENC",
+        "availability": "device-only",
+        "notes": "Dual mic."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers; BT 6.0; IPX5; 4 g per bud."
+    },
+    "appOnlyFeatures": [
+      "EQ",
+      "Touch remapping"
+    ],
+    "featureDeltaFromPrevious": [
+      "Bluetooth 6.0",
+      "50 h playback",
+      "Original Sound app"
+    ],
+    "sources": [
+      {
+        "url": "https://ptron.in/products/ptron-bassbuds-tango-in-ear-tws-ear-buds-w-custom-eq-50hrs-playtime-pristine-sound-dual-mic-trutalk-enc-calls-mobile-app-wireless-bluetooth-v6-0-touch-controls-type-c-charging-ipx5-space-black",
+        "type": "official-product",
+        "title": "pTron Bassbuds Tango",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map",
+      "App package ID"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "pTron",
+    "companySlug": "ptron",
+    "family": "Bassbuds Tango",
+    "model": "Bassbuds Tango ENC",
+    "slug": "ptron-bassbuds-tango-enc",
+    "generation": "2021",
+    "variant": "Tango ENC",
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED.",
+      "notes": "40 h total. Some listings also state 20 h; the product page headline says 40 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ENC only, no ANC."
+    },
+    "features": [
+      {
+        "id": "vendor.ptron.trutalk-enc",
+        "name": "TruTalk ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.ptron.movie-mode",
+        "name": "Movie mode",
+        "availability": "device-only",
+        "notes": "Long-press right earbud."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "long press right (2-3 s)",
+          "action": "switch Movie / Music mode",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "AAC"
+      ],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers; BT 5.1; 400 mAh case; IPX4."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://ptron.in/products/ptron-bassbuds-tango-enc-environmental-noise-cancellation-dedicated-movie-mode-bluetooth-5-1-wireless-headphones-deep-bass-touch-control-tws-20hrs-total-playtime-type-c-fast-charging-white",
+        "type": "official-product",
+        "title": "pTron Bassbuds Tango ENC",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official playtime conflict (20 h vs 40 h)",
+      "Buds-only hours",
+      "Battery display semantics",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "pTron",
+    "companySlug": "ptron",
+    "family": "PlayBuds",
+    "model": "PlayBuds 1 Pro",
+    "slug": "ptron-playbuds-1-pro",
+    "generation": null,
+    "variant": "1 Pro",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": "Glaring LED on the case.",
+      "notes": "50 h total; 400 mAh case.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 50
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Passive only; quad-mic hybrid ENC for calls."
+    },
+    "features": [
+      {
+        "id": "vendor.ptron.trutalk-enc",
+        "name": "TruTalk hybrid ENC",
+        "availability": "device-only",
+        "notes": "Quad mic."
+      },
+      {
+        "id": "vendor.ptron.aptsense",
+        "name": "AptSense 35 ms game mode",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.ptron.dual-eq",
+        "name": "Game / Music dual EQ",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Game",
+        "Music"
+      ],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers; BT 5.3; IPX5."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://ptron.in/products/ptron-playbuds-1-pro-tws-earbuds-black",
+        "type": "official-product",
+        "title": "pTron PlayBuds 1 Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "pTron",
+    "companySlug": "ptron",
+    "family": "PlayBuds",
+    "model": "PlayBuds 2",
+    "slug": "ptron-playbuds-2",
+    "generation": null,
+    "variant": "2",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 45,
+      "chargingIndicators": "Glaring lights on case.",
+      "notes": "45 h total; 400 mAh case.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 45
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "TruTalk AI-ENC only."
+    },
+    "features": [
+      {
+        "id": "vendor.ptron.trutalk-enc",
+        "name": "TruTalk AI-ENC",
+        "availability": "device-only",
+        "notes": "Dual mic."
+      },
+      {
+        "id": "vendor.ptron.aptsense",
+        "name": "AptSense 40 ms game mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Game",
+        "Music"
+      ],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers; BT 5.3; IPX5."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://ptron.in/products/ptron-playbuds-2-gaming-tws-earbuds-black",
+        "type": "official-product",
+        "title": "pTron PlayBuds 2",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "pTron",
+    "companySlug": "ptron",
+    "family": "Basspods",
+    "model": "Basspods Encore",
+    "slug": "ptron-basspods-encore",
+    "generation": null,
+    "variant": "Encore",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": "Case LED; 400 mAh case.",
+      "notes": "50 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Quad-mic ENC only."
+    },
+    "features": [
+      {
+        "id": "vendor.ptron.trutalk-enc",
+        "name": "TruTalk ENC",
+        "availability": "device-only",
+        "notes": "Quad mic."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "10 mm drivers; BT 5.3; IPX4."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://ptron.in/products/ptron-basspods-encore-quad-mic-enc-tws-earbuds",
+        "type": "official-product",
+        "title": "pTron Basspods Encore",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "pTron",
+    "companySlug": "ptron",
+    "family": "Bassbuds Zen",
+    "model": "Bassbuds Zen",
+    "slug": "ptron-bassbuds-zen",
+    "generation": null,
+    "variant": "Zen",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 50,
+      "chargingIndicators": "Case LED; 400 mAh case.",
+      "notes": "50 h total; 40 mAh per bud.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Quad ENC mic with TruTalk; 30 dB ENC claim for calls."
+    },
+    "features": [
+      {
+        "id": "vendor.ptron.trutalk-enc",
+        "name": "TruTalk ENC",
+        "availability": "device-only",
+        "notes": "Quad mic."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "10 mm drivers; BT 5.3; IPX4."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://ptron.in/products/ptron-bassbuds-zen-tws-earbuds",
+        "type": "official-product",
+        "title": "pTron Bassbuds Zen",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "pTron",
+    "companySlug": "ptron",
+    "family": "Basspods",
+    "model": "Basspods Flare",
+    "slug": "ptron-basspods-flare",
+    "generation": null,
+    "variant": "Flare",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 35,
+      "chargingIndicators": "RGB-lit case; LED battery indication.",
+      "notes": "35 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "vendor.ptron.aptsense",
+        "name": "AptSense 40 ms low latency",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.ptron.rgb-case",
+        "name": "RGB charging case",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "13 mm drivers; BT 5.3; IPX4."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://ptron.in/products/ptron-basspods-flare-tws-bluetooth-headset-black-in-the-ear",
+        "type": "official-product",
+        "title": "pTron Basspods Flare",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "pTron",
+    "companySlug": "ptron",
+    "family": "Bassbuds Epic",
+    "model": "Bassbuds Epic",
+    "slug": "ptron-bassbuds-epic",
+    "generation": null,
+    "variant": "Epic",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "live",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 35,
+      "chargingIndicators": "Digital display on the charging case shows a numeric battery percentage.",
+      "notes": "35 h total. The case has a digital percentage display, which is the only battery readout — there is no app. The case display reads the case battery directly, so it remains live while the buds are out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 35
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "TruTalk ENC only."
+    },
+    "features": [
+      {
+        "id": "vendor.ptron.trutalk-enc",
+        "name": "TruTalk ENC",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.ptron.digital-display",
+        "name": "Digital battery display on case",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [
+        "Game",
+        "Music"
+      ],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "BT 5.3; IPX4; 40 ms game mode."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://ptron.in/products/ptron-bassbuds-epic-earbuds-with-game-mode-40ms-latency-35h-playtime-touch-control-bluetooth-headset-black-in-the-ear",
+        "type": "official-product",
+        "title": "pTron Bassbuds Epic",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Whether the case display also shows bud charge",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": "Battery display is a numeric LED on the case, not an app UI.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "pTron",
+    "companySlug": "ptron",
+    "family": "Basspods P481",
+    "model": "Basspods P481",
+    "slug": "ptron-basspods-p481",
+    "generation": null,
+    "variant": "P481",
+    "releaseYear": 2023,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 60,
+      "chargingIndicators": "Case LED; 400 mAh case.",
+      "notes": "60 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "Dual MEMS mic ENC only."
+    },
+    "features": [
+      {
+        "id": "vendor.ptron.enc",
+        "name": "ENC stereo calls",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "10 mm drivers; BT 5.3; IPX4."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://ptron.in/products/ptron-basspods-p481-60hrs-playtime-deep-bass-enc-stereo-calls-bluetooth-headset-white-in-the-ear",
+        "type": "official-product",
+        "title": "pTron Basspods P481",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "pTron",
+    "companySlug": "ptron",
+    "family": "Bassbuds Nyx",
+    "model": "Bassbuds Nyx",
+    "slug": "ptron-bassbuds-nyx",
+    "generation": null,
+    "variant": "Nyx",
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "separate",
+      "caseVisibility": "always",
+      "caseWhileBudsOut": "live",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 32,
+      "chargingIndicators": "Digital display on a translucent 250 mAh case.",
+      "notes": "32 h total; 30 mAh per bud. Numeric case display. The case display reads the case battery directly, so it remains live while the buds are out.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 32
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "vendor.ptron.digital-display",
+        "name": "Digital battery display",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.ptron.movie-mode",
+        "name": "Movie mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "10 mm drivers; BT 5.1; IPX4; half in-ear."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://ptron.in/products/ptron-bassbuds-nyx-in-ear-wireless-headphone-with-32hrs-playtime-immersive-audio-bt5-1-stereo-calls-touch-control-tws-earbuds-digital-case-type-c-fast-charging-white-black",
+        "type": "official-product",
+        "title": "pTron Bassbuds Nyx",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Whether display shows bud charge",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "pTron",
+    "companySlug": "ptron",
+    "family": "Bassbuds Wave",
+    "model": "Bassbuds Wave",
+    "slug": "ptron-bassbuds-wave",
+    "generation": null,
+    "variant": "Wave",
+    "releaseYear": 2022,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED.",
+      "notes": "40 h total.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "ENC only."
+    },
+    "features": [
+      {
+        "id": "vendor.ptron.enc",
+        "name": "ENC stereo calls",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.ptron.movie-mode",
+        "name": "Movie mode",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "BT 5.3; IPX4."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://ptron.in/products/ptron-bassbuds-wave-enc-bluetooth-5-3-wireless-headphones-40hrs-total-playtime-movie-mode-deep-bass-low-latency-stereo-calls-snug-fit-tws-earbuds-smooth-touch-control-type-c-charging-grey",
+        "type": "official-product",
+        "title": "pTron Bassbuds Wave",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs",
+      "Control map"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "pTron",
+    "companySlug": "ptron",
+    "family": "Bassbuds Pixel",
+    "model": "Bassbuds Pixel",
+    "slug": "ptron-bassbuds-pixel",
+    "generation": null,
+    "variant": "Pixel",
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "None (no companion app)",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": null
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 20,
+      "chargingIndicators": "Case LED; 300 mAh case.",
+      "notes": "20 h total; an upgraded listing claims 35 h. 30 mAh per bud.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "vendor.ptron.movie-mode",
+        "name": "Movie / gaming low-latency mode",
+        "availability": "device-only",
+        "notes": "Four taps."
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "four taps",
+          "action": "movie/gaming low-latency mode",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": null,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": null,
+      "wearDetection": null,
+      "notes": "10 mm drivers; BT 5.1; IPX4."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://ptron.in/products/ptron-bassbuds-pixel-true-wireless-bluetooth-5-1-headphones-deep-bass-passive-noise-cancellation-dual-hd-mic-black",
+        "type": "official-product",
+        "title": "pTron Bassbuds Pixel",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Playtime conflict (20 h vs 35 h)",
+      "Buds-only hours",
+      "Battery display semantics",
+      "Codecs"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

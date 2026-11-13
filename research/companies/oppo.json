@@ -1,0 +1,2913 @@
+[
+  {
+    "company": "OPPO",
+    "companySlug": "oppo",
+    "family": "OPPO Enco X",
+    "model": "OPPO Enco X",
+    "slug": "oppo-enco-x",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2020,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": "OPPO does not ship a separate global 'OPPO Enco' app; ColorOS exposes 'Wireless Earphones' / 'Earbud functions', and non-OPPO devices use HeyMelody."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5.5,
+      "budsHoursNoAnc": 7.5,
+      "caseHours": 25,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody / Earbud functions.",
+      "notes": "25 h total with case (ANC off). HeyMelody documents earbud and charging-case battery levels.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 25
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 35,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "35 dB ANC with transparency."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "35 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap",
+          "action": "play/pause or answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "next/previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long-press",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Bass",
+        "Treble"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm driver; LHDC on supported OPPO phones; no spatial audio."
+    },
+    "appOnlyFeatures": [
+      "EQ presets",
+      "Gesture customization",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://www.oppo.com/en/accessories/enco-x/",
+        "type": "official-product",
+        "title": "OPPO Enco X product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official page copy for exact battery hours is thin; figures come from launch material.",
+      "Exact LHDC version is not confirmed.",
+      "Case-battery visibility rules are inferred from HeyMelody.",
+      "Transparency dB is not published."
+    ],
+    "notes": "First Enco X flagship; split L/R plus separate case in HeyMelody.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OPPO",
+    "companySlug": "oppo",
+    "family": "OPPO Enco X",
+    "model": "OPPO Enco X2",
+    "slug": "oppo-enco-x2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": "ColorOS 'Earbud functions' on OPPO/OnePlus phones; HeyMelody elsewhere."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 5.5,
+      "budsHoursNoAnc": 9,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody / Earbud functions.",
+      "notes": "40 h total with case (ANC off).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 40
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 45,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "45 dB ANC with transparency."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "45 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets and custom EQ."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.oppo.golden-sound",
+        "name": "Golden Sound",
+        "availability": "official-app",
+        "notes": "Personalised hearing profile."
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap",
+          "action": "play/pause or answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "next/previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long-press",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Bass",
+        "Treble",
+        "Dynaudio"
+      ],
+      "customEq": true,
+      "eqBands": 3,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC 4.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm + 6 mm dual drivers co-tuned with Dynaudio; LHDC 4.0."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Golden Sound",
+      "Gesture customization",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC increased from 35 dB to 45 dB.",
+      "Dual-driver Dynaudio tuning.",
+      "LHDC 4.0 and Golden Sound."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oppo.com/en/accessories/oppo-enco-x2/",
+        "type": "official-product",
+        "title": "OPPO Enco X2 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official page copy for exact battery hours is thin; figures come from launch material.",
+      "Custom-EQ band count is not confirmed.",
+      "Transparency dB is not published."
+    ],
+    "notes": "Dynaudio co-tuned flagship; no spatial audio.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OPPO",
+    "companySlug": "oppo",
+    "family": "OPPO Enco X",
+    "model": "OPPO Enco X3",
+    "slug": "oppo-enco-x3",
+    "generation": "3",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": "ColorOS 'Earbud functions' on OPPO/OnePlus phones; HeyMelody elsewhere."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 10,
+      "caseHours": 43,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody / Earbud functions.",
+      "notes": "43 h total with case (ANC off).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 43
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "adaptive",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 50,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "50 dB ANC with adaptive mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": "50 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets and custom EQ."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "Spatial audio",
+        "availability": "both",
+        "notes": "With head tracking."
+      },
+      {
+        "id": "audio.head-tracking",
+        "name": "Head tracking",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.oppo.golden-sound",
+        "name": "Golden Sound",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap",
+          "action": "play/pause or answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "next/previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long-press",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "slide",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch plus volume slide."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Bass",
+        "Treble",
+        "Dynaudio"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC 5.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm + 6 mm dual drivers with dual DACs; LHDC 5.0; spatial audio with head tracking."
+    },
+    "appOnlyFeatures": [
+      "6-band custom EQ",
+      "Spatial audio with head tracking",
+      "Golden Sound",
+      "Gesture customization",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC increased from 45 dB to 50 dB.",
+      "Added spatial audio with head tracking.",
+      "LHDC 5.0 and dual DACs.",
+      "Battery increased to 43 h total."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oppo.com/en/audio/",
+        "type": "official-regional",
+        "title": "OPPO Audio lineup (Enco X3)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official page copy for exact battery hours is thin; figures come from launch material.",
+      "Head-tracking support should be confirmed for the exact regional SKU.",
+      "Transparency dB is not published."
+    ],
+    "notes": "X3 is the generation that added head-tracked spatial audio.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OPPO",
+    "companySlug": "oppo",
+    "family": "OPPO Enco X",
+    "model": "OPPO Enco X3s",
+    "slug": "oppo-enco-x3s",
+    "generation": "3s",
+    "variant": null,
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": "ColorOS 'Earbud functions' on OPPO/OnePlus phones; HeyMelody elsewhere."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 11,
+      "caseHours": 45,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody / Earbud functions.",
+      "notes": "45 h total with case (ANC off); 24 h total with ANC on.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 45
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "adaptive",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 55,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "55 dB real-time dynamic ANC with Adaptive Mode."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adaptive ANC",
+        "availability": "both",
+        "notes": "55 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets and custom EQ."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "OPPO Alive Audio",
+        "availability": "both",
+        "notes": "No head tracking."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.oppo.golden-sound",
+        "name": "Golden Sound 2.0",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.oppo.ai-translate",
+        "name": "AI Translate",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "double-tap",
+          "action": "play/pause or answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple-tap",
+          "action": "next/previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long-press",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "slide",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch plus volume slide."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Bass",
+        "Treble",
+        "Dynaudio"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC 5.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "11 mm + 6 mm dual drivers with dual DACs; LHDC 5.0; Alive Audio without head tracking."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "OPPO Alive Audio",
+      "Golden Sound 2.0",
+      "AI Translate",
+      "Gesture customization",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC increased to 55 dB.",
+      "Battery increased to 45 h total.",
+      "Alive Audio spatial rendering without head tracking.",
+      "Golden Sound 2.0."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oppo.com/en/accessories/enco-x3s/",
+        "type": "official-product",
+        "title": "OPPO Enco X3s product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Custom-EQ band count is not explicitly stated on the fetched official copy.",
+      "Transparency dB is not published.",
+      "Case-battery visibility rules are inferred from HeyMelody."
+    ],
+    "notes": "Official page confirms 55 dB, 45 h, LHDC 5.0, and no head tracking for Alive Audio.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OPPO",
+    "companySlug": "oppo",
+    "family": "OPPO Enco X",
+    "model": "OPPO Enco X4",
+    "slug": "oppo-enco-x4",
+    "generation": "4",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": "ColorOS 'Earbud functions' on OPPO/OnePlus phones; HeyMelody elsewhere."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 13,
+      "caseHours": 53,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody / Earbud functions.",
+      "notes": "53 h total with case (AAC, ANC off); 26 h total with ANC on; 13 h buds without ANC, 6 h with ANC.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 53
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "adaptive",
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": true,
+      "notes": "AI real-time adaptive ANC with three adjustable levels; OPPO does not publish a single dB figure on the X4 page."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "AI real-time adaptive ANC",
+        "availability": "both",
+        "notes": "Three adjustable levels."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.conversation-awareness",
+        "name": "Conversation Awareness",
+        "availability": "device-only",
+        "notes": "Lowers volume and switches to transparency when you speak."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Sound Master EQ",
+        "availability": "official-app",
+        "notes": "10-band adjustable EQ with profile sharing."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "Cross-ecosystem spatial audio",
+        "availability": "both",
+        "notes": "With head tracking."
+      },
+      {
+        "id": "audio.head-tracking",
+        "name": "Head tracking",
+        "availability": "both",
+        "notes": "Sound Follows You."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.oppo.golden-sound",
+        "name": "Golden Sound",
+        "availability": "official-app",
+        "notes": "Ear-canal and hearing profile scan."
+      },
+      {
+        "id": "vendor.oppo.clear-audio-recording",
+        "name": "Clear Audio Recording",
+        "availability": "official-app",
+        "notes": "Both earbuds as a microphone with OPPO Find phones."
+      },
+      {
+        "id": "vendor.oppo.ai-translate",
+        "name": "AI Live Translation",
+        "availability": "official-app",
+        "notes": "Select OPPO phones."
+      },
+      {
+        "id": "vendor.oppo.sleep-tracking",
+        "name": "Sleep Tracking",
+        "availability": "official-app",
+        "notes": "Auto-pause when the listener falls asleep."
+      },
+      {
+        "id": "vendor.oppo.neck-monitoring",
+        "name": "Neck Monitoring",
+        "availability": "official-app",
+        "notes": "Posture reminders and neck mobility test."
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "single press",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double press",
+          "action": "next track or answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple press",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "slide",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch plus volume slide; more customization in Settings."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Bass",
+        "Treble",
+        "Dynaudio"
+      ],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": true,
+      "headTracking": true,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC Lossless"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Dual dynamic drivers with dual DACs; LHDC lossless up to 2.3 Mbps / 48 kHz 24-bit with Find X10 series; 10-band EQ."
+    },
+    "appOnlyFeatures": [
+      "10-band EQ",
+      "Spatial audio with head tracking",
+      "Golden Sound",
+      "Clear Audio Recording",
+      "AI Live Translation",
+      "Sleep Tracking",
+      "Neck Monitoring",
+      "Gesture customization",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "First OPPO TWS with lossless LHDC transmission (2.3 Mbps).",
+      "10-band EQ replaces the previous 6-band EQ.",
+      "Head-tracked cross-ecosystem spatial audio.",
+      "Conversation Awareness, Sleep Tracking, and Neck Monitoring.",
+      "Battery increased to 53 h total."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oppo.com/en/accessories/enco-x4/",
+        "type": "official-product",
+        "title": "OPPO Enco X4 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "OPPO does not publish a single ANC dB figure for Enco X4; keep ancDb null.",
+      "Personalised ANC support is not distinguished from Golden Sound; keep personalized null.",
+      "Case-battery visibility rules are inferred from HeyMelody."
+    ],
+    "notes": "2026 flagship. Lossless audio requires an OPPO Find X10 series phone; do not advertise it on other devices.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OPPO",
+    "companySlug": "oppo",
+    "family": "OPPO Enco Air",
+    "model": "OPPO Enco Air3 Pro",
+    "slug": "oppo-enco-air3-pro",
+    "generation": "3",
+    "variant": "Pro",
+    "releaseYear": 2023,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": "ColorOS 'Earbud functions' on OPPO/OnePlus phones; HeyMelody elsewhere."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 12,
+      "caseHours": 44,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody / Earbud functions.",
+      "notes": "44 h total with case (ANC off).",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 44
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": false,
+      "ancDb": 49,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "49 dB ANC with transparency."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Active noise cancellation",
+        "availability": "both",
+        "notes": "49 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets and custom EQ."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": "Disabled by default on some models."
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track or answer/end call",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Bass",
+        "Treble"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC 5.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12.4 mm driver; LHDC 5.0; no spatial audio."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Gesture customization",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "49 dB ANC.",
+      "12.4 mm driver.",
+      "LHDC 5.0 Hi-Res audio."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oppo.com/en/audio/",
+        "type": "official-regional",
+        "title": "OPPO Audio lineup (Enco Air3 Pro)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official page copy for exact battery hours is thin; figures come from launch material.",
+      "Custom-EQ band count is not confirmed.",
+      "Transparency dB is not published."
+    ],
+    "notes": "Air3 Pro is the model that established 49 dB ANC in the Air line.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OPPO",
+    "companySlug": "oppo",
+    "family": "OPPO Enco Air",
+    "model": "OPPO Enco Air4 Pro",
+    "slug": "oppo-enco-air4-pro",
+    "generation": "4",
+    "variant": "Pro",
+    "releaseYear": 2024,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": "ColorOS 'Earbud functions' on OPPO/OnePlus phones; HeyMelody elsewhere."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 6,
+      "budsHoursNoAnc": 12,
+      "caseHours": 44,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody / Earbud functions.",
+      "notes": "44 h total with case (ANC off); 20 h total with ANC on.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 44
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc-mild",
+        "anc-moderate",
+        "anc-max",
+        "adaptive",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 49,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "49 dB ANC with Smart Scene Mild/Moderate/Max and dual wind-noise control."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Smart Scene ANC",
+        "availability": "both",
+        "notes": "49 dB."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Presets and custom EQ."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": "47 ms."
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": "Disabled by default."
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track or camera shutter",
+          "configurableInApp": true,
+          "notes": "Camera control on ColorOS."
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Bass",
+        "Treble",
+        "Vocal"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC 5.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12.4 mm titanium-plated driver; LHDC 5.0; no spatial audio."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Smart Scene ANC",
+      "Gesture customization",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Smart Scene ANC with Mild/Moderate/Max.",
+      "Dual wind-noise control.",
+      "Battery increased to 44 h total.",
+      "12.4 mm titanium-plated driver."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oppo.com/en/accessories/enco-air4-pro/",
+        "type": "official-product",
+        "title": "OPPO Enco Air4 Pro product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Custom-EQ band count is not explicitly stated on the fetched official copy.",
+      "Transparency dB is not published.",
+      "Case-battery visibility rules are inferred from HeyMelody."
+    ],
+    "notes": "Official page confirms 49 dB, 44 h, LHDC 5.0, 47 ms latency, and dual connection.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OPPO",
+    "companySlug": "oppo",
+    "family": "OPPO Enco Air",
+    "model": "OPPO Enco Air5 Pro",
+    "slug": "oppo-enco-air5-pro",
+    "generation": "5",
+    "variant": "Pro",
+    "releaseYear": 2025,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": "ColorOS 'Earbud functions' on OPPO/OnePlus phones; HeyMelody elsewhere."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": 7,
+      "budsHoursNoAnc": 13,
+      "caseHours": 54,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody / Earbud functions.",
+      "notes": "54 h total with case (AAC, ANC off); 29 h total with ANC on; 13 h buds without ANC, 7 h with ANC.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 54
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "adaptive",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 55,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": true,
+      "notes": "55 dB ANC with Smart Scene and a personalised curve based on ear canal, fit, and environment."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "55 dB ANC",
+        "availability": "both",
+        "notes": "Smart Scene adaptive."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.personalized-anc",
+        "name": "Personalised ANC curve",
+        "availability": "official-app",
+        "notes": "Ear-canal/fit/environment based."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Sound Master EQ",
+        "availability": "official-app",
+        "notes": "Multiple presets and custom EQ."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "OPPO Alive Audio",
+        "availability": "both",
+        "notes": "360-degree rendering, no head tracking."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low latency mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.oppo.ai-translate",
+        "name": "AI Translate",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.oppo.spotify-tap",
+        "name": "Spotify Tap",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "switch ANC / Transparency",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "slide",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch plus volume slide."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Bass",
+        "Treble",
+        "Vocal"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC 5.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12 mm titanium-coated driver; LHDC 5.0 up to 96 kHz/1 Mbps; Alive Audio without head tracking."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "Personalised ANC",
+      "OPPO Alive Audio",
+      "AI Translate",
+      "Spotify Tap",
+      "Gesture customization",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC increased from 49 dB to 55 dB.",
+      "Added personalised ANC curve.",
+      "Battery increased to 54 h total.",
+      "Added AI Translate and Spotify Tap."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oppo.com/en/accessories/enco-air5-pro/",
+        "type": "official-product",
+        "title": "OPPO Enco Air5 Pro product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Custom-EQ band count is not explicitly stated on the fetched official copy.",
+      "Transparency dB is not published.",
+      "Case-battery visibility rules are inferred from HeyMelody."
+    ],
+    "notes": "Official page confirms 55 dB, 54 h, LHDC 5.0, personalised ANC, and Alive Audio without head tracking.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OPPO",
+    "companySlug": "oppo",
+    "family": "OPPO Enco Buds",
+    "model": "OPPO Enco Buds3 Pro",
+    "slug": "oppo-enco-buds3-pro",
+    "generation": "3",
+    "variant": "Pro",
+    "releaseYear": 2025,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": "ColorOS 'Earbud functions' on OPPO/OnePlus phones; HeyMelody elsewhere."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 12,
+      "caseHours": 54,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody / Earbud functions.",
+      "notes": "54 h total with case; 12 h buds only. No ANC, so budsHoursAnc is null.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 54
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC. 'Pro' here refers to battery/driver/feature tier, not noise cancellation."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Enco Master equalizer",
+        "availability": "official-app",
+        "notes": "Three presets plus 6-band custom EQ."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": "47 ms."
+      },
+      {
+        "id": "vendor.oppo.camera-control",
+        "name": "Double-tap camera control",
+        "availability": "official-app",
+        "notes": "ColorOS 12.0+."
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": "Disabled by default."
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track or answer/end call",
+          "configurableInApp": true,
+          "notes": "Camera shutter on ColorOS."
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "super long press",
+          "action": "volume up/down",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls; single tap is opt-in."
+    },
+    "audio": {
+      "eqPresets": [
+        "Clear Vocals",
+        "Bass Boost",
+        "Original Sound"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12.4 mm titanium-coated driver; no ANC and no spatial audio."
+    },
+    "appOnlyFeatures": [
+      "6-band custom EQ",
+      "Game mode",
+      "Camera control",
+      "Gesture customization",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "54 h total battery and 12 h buds.",
+      "12.4 mm titanium-coated driver.",
+      "Enco Master 6-band EQ."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oppo.com/en/accessories/enco-buds3-pro/",
+        "type": "official-product",
+        "title": "OPPO Enco Buds3 Pro product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Case-battery visibility rules are inferred from HeyMelody.",
+      "No ANC; do not show noise-control toggles.",
+      "Spatial audio is not supported."
+    ],
+    "notes": "Despite the Pro name, this is a non-ANC model. Important for feature gating.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OPPO",
+    "companySlug": "oppo",
+    "family": "OPPO Enco Clip",
+    "model": "OPPO Enco Clip2",
+    "slug": "oppo-enco-clip2",
+    "generation": "2",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "open-ear-clip",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": "ColorOS 'Earbud functions' on OPPO/OnePlus phones; HeyMelody elsewhere."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 9.5,
+      "caseHours": 40,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody / Earbud functions.",
+      "notes": "40 h total with case (AAC); 9.5 h buds; 36 h total / 8 h buds with LHDC. No ANC.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 40
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "Open-ear clip; no ANC. It has AI call noise cancellation and bone-conduction voice pickup, which are not ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Equalizer",
+        "availability": "official-app",
+        "notes": "Dynaudio-tuned presets plus custom EQ."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": "Smart Drop Monitor alerts if one earbud falls."
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.oppo.bone-call",
+        "name": "Crystal-Clear Bone Calls",
+        "availability": "device-only",
+        "notes": "VPU bone conduction plus AI call NPU."
+      },
+      {
+        "id": "vendor.oppo.ai-translate",
+        "name": "AI Translate",
+        "availability": "official-app",
+        "notes": "24 languages."
+      },
+      {
+        "id": "vendor.oppo.spotify-tap",
+        "name": "Spotify Tap",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track or camera shutter",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "slide",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": "Above level 14, EQ boosts vocal clarity."
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch plus slide on the clip."
+    },
+    "audio": {
+      "eqPresets": [
+        "Dynaudio",
+        "Balanced",
+        "Bass",
+        "Vocal"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": null,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "LHDC 5.0"
+      ],
+      "hiRes": true,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "Dual dynamic drivers with dual DACs; LHDC 5.0; open-ear dipole sound field."
+    },
+    "appOnlyFeatures": [
+      "Custom EQ",
+      "AI Translate",
+      "Spotify Tap",
+      "Gesture customization",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Unibody ear-cuff design with shape-memory Ni-Ti arc.",
+      "Dual drivers with dual DACs.",
+      "LHDC 5.0 and Bluetooth 6.1.",
+      "Bone-conduction call pickup and AI translation."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oppo.com/en/accessories/enco-clip2-open-earbuds/",
+        "type": "official-product",
+        "title": "OPPO Enco Clip2 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Spatial-audio support is not claimed on the official Clip2 page.",
+      "Custom-EQ band count is not explicitly stated.",
+      "Case-battery display is inferred from the TWS form factor and HeyMelody; not confirmed by a model-specific screenshot."
+    ],
+    "notes": "Open-ear clip; no ANC despite the flagship price. Do not show noise-control toggles.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OPPO",
+    "companySlug": "oppo",
+    "family": "OPPO Enco M",
+    "model": "OPPO Enco M32",
+    "slug": "oppo-enco-m32",
+    "generation": "M32",
+    "variant": null,
+    "releaseYear": 2022,
+    "formFactor": "neckband",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": "ColorOS 'Earbud functions' on OPPO/OnePlus phones; HeyMelody elsewhere."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 28,
+      "caseHours": null,
+      "chargingIndicators": "Single battery reading; no case.",
+      "notes": "Neckband: one combined battery level, no case. 28 h playback; 10 min charge gives about 20 h.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "EQ presets",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Magnetic wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "play/pause button",
+          "action": "play/pause",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "volume buttons",
+          "action": "volume up/down",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": "Inline neckband buttons.",
+      "configurableInApp": false,
+      "notes": "No touch controls."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Bass",
+        "Treble"
+      ],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": false,
+      "wearDetection": true,
+      "notes": "12.4 mm driver; neckband; IP55."
+    },
+    "appOnlyFeatures": [
+      "EQ presets",
+      "Game mode",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "28 h battery and 10-minute fast charge.",
+      "IP55 rating."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oppo.com/en/audio/",
+        "type": "official-regional",
+        "title": "OPPO Audio lineup (Enco M32)",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Official page copy for exact battery hours is thin; figures come from launch material.",
+      "EQ support in HeyMelody for this neckband is not independently verified.",
+      "Single-battery display is inferred from the neckband form factor."
+    ],
+    "notes": "Single-battery neckband; do not render L/R or a case.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OPPO",
+    "companySlug": "oppo",
+    "family": "OPPO Enco Air",
+    "model": "OPPO Enco Air5",
+    "slug": "oppo-enco-air5",
+    "generation": "5",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": "ColorOS 'Earbud functions' on OPPO/OnePlus phones; HeyMelody elsewhere."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 13,
+      "caseHours": 54,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody / Earbud functions.",
+      "notes": "54 h total with case, 13 h buds only (AAC, ANC off). OPPO does not publish an ANC-on runtime split on the Air5 page.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 54
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc-smart",
+        "anc-deep",
+        "anc-medium",
+        "anc-light",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": 52,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": true,
+      "notes": "52 dB ANC with Smart Scene switching between smart/deep/medium/light."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "52 dB ANC",
+        "availability": "both",
+        "notes": "Smart Scene."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Sound Master EQ",
+        "availability": "official-app",
+        "notes": "Three presets plus 10-band custom EQ."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "OPPO Alive Audio",
+        "availability": "both",
+        "notes": "No head tracking."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low-latency gaming",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.oppo.ai-translate",
+        "name": "AI Translate",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.oppo.spotify-tap",
+        "name": "Spotify Tap",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause or launch shortcut",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track or camera shutter",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long press",
+          "action": "noise-control or custom shortcut",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "slide",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem touch plus volume slide."
+    },
+    "audio": {
+      "eqPresets": [
+        "Pure Original Sound",
+        "Mellow Vocals",
+        "Pulsing Bass"
+      ],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12 mm titanium-coated PET driver; Alive Audio without head tracking; no LHDC claimed."
+    },
+    "appOnlyFeatures": [
+      "10-band EQ",
+      "Alive Audio",
+      "AI Translate",
+      "Spotify Tap",
+      "Gesture customization",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "ANC increased from 49 dB to 52 dB.",
+      "10-band EQ replaces 6-band.",
+      "Battery increased to 54 h total / 13 h buds.",
+      "Bluetooth 6.1 and Alive Audio."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oppo.com/en/accessories/enco-air5/",
+        "type": "official-product",
+        "title": "OPPO Enco Air5 product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on runtime split is not published on the Air5 page.",
+      "Transparency dB is not published.",
+      "Case-battery visibility rules are inferred from HeyMelody."
+    ],
+    "notes": "2026 Air5 is a non-Pro model but has 52 dB ANC and a 10-band EQ.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OPPO",
+    "companySlug": "oppo",
+    "family": "OPPO Enco Air",
+    "model": "OPPO Enco Air5s",
+    "slug": "oppo-enco-air5s",
+    "generation": "5s",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": "ColorOS 'Earbud functions' on OPPO/OnePlus phones; HeyMelody elsewhere."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": 48,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody / Earbud functions.",
+      "notes": "48 h total with case (AAC, ANC off). Per-bud runtime and ANC-on runtime are not stated on the Air5s page.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 48
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "smart-scene",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": true,
+      "windNoise": true,
+      "notes": "Real-time adaptive ANC that accounts for wearing status, ear-canal shape, and ambient noise; no dB figure published."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Real-time adaptive ANC",
+        "availability": "both",
+        "notes": "Semi-in-ear ANC; dB not published."
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Transparency mode",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "noise-control.personalized-anc",
+        "name": "Personalised ANC",
+        "availability": "official-app",
+        "notes": "Ear-canal and wearing-status based."
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Sound Master EQ",
+        "availability": "official-app",
+        "notes": "Three presets plus 10-band custom EQ."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "OPPO Alive Audio",
+        "availability": "both",
+        "notes": "No head tracking."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Low-latency gaming",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.oppo.ai-translate",
+        "name": "AI Translate",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.oppo.spotify-tap",
+        "name": "Spotify Tap",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch",
+        "slide"
+      ],
+      "gestures": [
+        {
+          "gesture": "double tap",
+          "action": "next track or custom shortcut",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track or custom shortcut",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "slide up",
+          "action": "volume",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Stem slide plus double/triple tap; official copy does not list a single-tap action."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Vocal",
+        "Bass"
+      ],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12 mm copper-clad aluminium voice coil driver; semi-in-ear; Alive Audio without head tracking."
+    },
+    "appOnlyFeatures": [
+      "10-band EQ",
+      "Personalised ANC",
+      "Alive Audio",
+      "AI Translate",
+      "Spotify Tap",
+      "Gesture customization",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "Semi-in-ear adaptive ANC.",
+      "10-band EQ and Alive Audio.",
+      "48 h total battery and 3.9 g buds.",
+      "Bluetooth 6.0."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oppo.com/en/accessories/enco-air5s/",
+        "type": "official-product",
+        "title": "OPPO Enco Air5s product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC dB is not published.",
+      "Per-bud and ANC-on runtimes are not published.",
+      "Transparency dB is not published.",
+      "Case-battery visibility rules are inferred from HeyMelody."
+    ],
+    "notes": "Semi-in-ear model; keep ancDb null. Do not copy the Air5's 52 dB figure.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "OPPO",
+    "companySlug": "oppo",
+    "family": "OPPO Enco Buds",
+    "model": "OPPO Enco Buds3s",
+    "slug": "oppo-enco-buds3s",
+    "generation": "3s",
+    "variant": null,
+    "releaseYear": 2026,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "HeyMelody",
+      "platforms": [
+        "android",
+        "ios"
+      ],
+      "packageIds": [
+        "com.heytap.headset"
+      ],
+      "appStoreUrls": [
+        "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "https://apps.apple.com/us/app/heymelody/id1564626893"
+      ],
+      "appVersionObserved": null,
+      "notes": "ColorOS 'Earbud functions' on OPPO/OnePlus phones; HeyMelody elsewhere."
+    },
+    "battery": {
+      "budsDisplay": "split",
+      "caseDisplay": "separate",
+      "caseVisibility": "only-when-docked",
+      "caseWhileBudsOut": "last-known",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 12,
+      "caseHours": 54,
+      "chargingIndicators": "Case LED; numeric levels in HeyMelody / Earbud functions.",
+      "notes": "54 h total with case, 12 h buds only. No ANC, so budsHoursAnc is null.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 54
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": false,
+      "notes": "No ANC; dual-mic AI call noise cancellation only."
+    },
+    "features": [
+      {
+        "id": "equalization.equalizer",
+        "name": "Sound Master EQ",
+        "availability": "official-app",
+        "notes": "Three presets plus 6-band custom EQ."
+      },
+      {
+        "id": "audio.spatial-audio",
+        "name": "OPPO Alive Audio",
+        "availability": "both",
+        "notes": "No head tracking."
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Dual-device connection",
+        "availability": "both",
+        "notes": null
+      },
+      {
+        "id": "sensing.wear-detection",
+        "name": "Wear detection",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.fast-pair",
+        "name": "Google Fast Pair",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "low-latency",
+        "name": "Game mode",
+        "availability": "official-app",
+        "notes": "47 ms."
+      },
+      {
+        "id": "vendor.oppo.ai-translate",
+        "name": "AI Translate",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "find-my-buds",
+        "name": "Find My Earbuds",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "vendor.oppo.camera-control",
+        "name": "Tap 2 Take camera control",
+        "availability": "official-app",
+        "notes": "ColorOS 12+."
+      },
+      {
+        "id": "vendor.oppo.voice-assistant",
+        "name": "Voice assistant shortcut",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "firmware-update",
+        "name": "Firmware update",
+        "availability": "official-app",
+        "notes": null
+      },
+      {
+        "id": "gesture-customization",
+        "name": "Gesture customization",
+        "availability": "official-app",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "single tap",
+          "action": "play/pause",
+          "configurableInApp": true,
+          "notes": "Disabled by default."
+        },
+        {
+          "gesture": "double tap",
+          "action": "next track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "triple tap",
+          "action": "previous track",
+          "configurableInApp": true,
+          "notes": null
+        },
+        {
+          "gesture": "long touch and hold",
+          "action": "volume up/down",
+          "configurableInApp": true,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": true,
+      "notes": "Touch controls; single tap is opt-in."
+    },
+    "audio": {
+      "eqPresets": [
+        "Balanced",
+        "Serenade",
+        "Bass"
+      ],
+      "customEq": true,
+      "eqBands": 6,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC"
+      ],
+      "hiRes": false,
+      "multipoint": true,
+      "wearDetection": true,
+      "notes": "12.4 mm titanium-coated driver; Alive Audio without head tracking; no ANC."
+    },
+    "appOnlyFeatures": [
+      "6-band EQ",
+      "Alive Audio",
+      "AI Translate",
+      "Find My Earbuds",
+      "Camera control",
+      "Gesture customization",
+      "Firmware update"
+    ],
+    "featureDeltaFromPrevious": [
+      "54 h total battery and 12 h buds.",
+      "12.4 mm titanium-coated driver.",
+      "Alive Audio and 6-band EQ.",
+      "No ANC."
+    ],
+    "sources": [
+      {
+        "url": "https://www.oppo.com/en/accessories/enco-buds3s/",
+        "type": "official-product",
+        "title": "OPPO Enco Buds3s product page",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.heytap.headset",
+        "type": "official-app-store",
+        "title": "HeyMelody on Google Play",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No ANC; do not show noise-control toggles.",
+      "Transparency dB is not applicable.",
+      "Case-battery visibility rules are inferred from HeyMelody."
+    ],
+    "notes": "2026 non-ANC budget model; Alive Audio is spatial rendering, not ANC.",
+    "researchedAt": "2026-11-10"
+  }
+]

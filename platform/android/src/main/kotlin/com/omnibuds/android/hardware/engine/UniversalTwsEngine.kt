@@ -16,6 +16,7 @@ import android.util.Log
 import com.omnibuds.android.hardware.engine.drivers.TransportPreference
 import com.omnibuds.android.hardware.engine.drivers.IVendorDriver
 import com.omnibuds.android.hardware.engine.drivers.NothingXProtocolDriver
+import com.omnibuds.android.hardware.engine.drivers.OnePlusHeyMelodyDriver
 import com.omnibuds.android.hardware.capability.StrictBrandProfile
 import com.omnibuds.android.hardware.capability.StrictBrandProfileResolver
 import com.omnibuds.android.hardware.capability.BrandSchema
@@ -70,13 +71,18 @@ import java.util.concurrent.ConcurrentHashMap
 object UniversalTwsEngine {
 
     private const val TAG = "UniversalTwsEngine"
+    private const val MAX_DESCRIPTOR_ATTEMPTS = 3
+    private const val STATE_SYNC_MIN_INTERVAL_MS = 10_000L
+    private const val MODE_SETTLE_WINDOW_MS = 1_500L
+    private val lastStateSyncAt = ConcurrentHashMap<String, Long>()
+    private val lastReportedModeMask = ConcurrentHashMap<String, Int>()
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
     // Subsystems
     val protocolRouter = VendorProtocolRouter()
     val dspController = UniversalDspController()
     val hearingTestManager = HearingTestManager()
-    val codecManager: CodecManager by lazy { CodecManager(appContext!!) }
+    val codecManager: CodecManager? by lazy { appContext?.let { CodecManager(it) } }
     val mindRelaxGenerator: MindRelaxGenerator by lazy { MindRelaxGenerator(scope) }
     val appleL2capDriver: AppleL2capDriver by lazy { AppleL2capDriver(scope) }
     val bleSequencer: BleCommandSequencer by lazy { BleCommandSequencer(scope) }
@@ -87,6 +93,17 @@ object UniversalTwsEngine {
     // Transports: address -> BluetoothGatt / BluetoothSocket
     private val activeGatts = ConcurrentHashMap<String, BluetoothGatt>()
     private val activeWriteCharacteristics = ConcurrentHashMap<String, BluetoothGattCharacteristic>()
+
+    private data class PendingDescriptor(
+        val gatt: BluetoothGatt,
+        val descriptor: BluetoothGattDescriptor,
+        val value: ByteArray,
+        val attempts: Int = 0,
+    )
+
+    private val descriptorQueues = ConcurrentHashMap<String, java.util.ArrayDeque<PendingDescriptor>>()
+    private val descriptorWriting = ConcurrentHashMap<String, Boolean>()
+    private val descriptorInFlight = ConcurrentHashMap<String, PendingDescriptor>()
     private val activeRfcommSockets = ConcurrentHashMap<String, BluetoothSocket>()
     private val rfcommJobs = ConcurrentHashMap<String, Job>()
 
@@ -118,6 +135,22 @@ object UniversalTwsEngine {
 
     private val _confirmedAncMode = MutableStateFlow<Map<String, String>>(emptyMap())
     val confirmedAncMode: StateFlow<Map<String, String>> = _confirmedAncMode.asStateFlow()
+
+    private val _confirmedGameMode = MutableStateFlow<Map<String, Boolean>>(emptyMap())
+    val confirmedGameMode: StateFlow<Map<String, Boolean>> = _confirmedGameMode.asStateFlow()
+
+    private val _configSaveState = MutableStateFlow<Map<String, String>>(emptyMap())
+    val configSaveState: StateFlow<Map<String, String>> = _configSaveState.asStateFlow()
+
+    private fun markConfigSaved(address: String, message: String) {
+        _configSaveState.value = _configSaveState.value + (address to message)
+        scope.launch {
+            delay(2600)
+            if (_configSaveState.value[address] == message) {
+                _configSaveState.value = _configSaveState.value - address
+            }
+        }
+    }
 
     private val _pendingAncMode = MutableStateFlow<Map<String, String?>>(emptyMap())
     val pendingAncMode: StateFlow<Map<String, String?>> = _pendingAncMode.asStateFlow()
@@ -266,6 +299,16 @@ object UniversalTwsEngine {
     fun handleBatteryReport(address: String, incomingReport: TwsBatteryReport, source: String? = null) {
         val src = source ?: incomingReport.sourceProtocol
 
+        // A generic battery broadcast (or an empty vendor frame) must never
+        // erase a split L/R report that a vendor protocol already delivered.
+        // Keep the last component-bearing report until a newer component report
+        // arrives or the device disconnects.
+        val previous = _latestBatteryReports.value[address]
+        if (!incomingReport.hasComponentData && previous?.hasComponentData == true) {
+            log(address, "Ignoring component-less battery report from $src; preserving split telemetry")
+            return
+        }
+
         val dev = activeDevice?.takeIf { it.address == address }
             ?: activeRfcommSockets[address]?.remoteDevice
             ?: activeGatts[address]?.device
@@ -273,7 +316,8 @@ object UniversalTwsEngine {
 
         val profile = activeProfile?.takeIf { activeDevice?.address == address }
             ?: if (src.contains("Nothing", ignoreCase = true) || src.contains("CMF", ignoreCase = true) || src.contains("0x07 C0")) {
-                StrictBrandProfileDatabase.findProfileByKey("cmf_buds")!!
+                StrictBrandProfileDatabase.findProfileByKey("cmf_buds")
+                    ?: StrictBrandProfileDatabase.GENERIC_AUDIO
             } else {
                 StrictBrandProfileResolver.resolve(dev, nameOverride = devName, addressOverride = address)
             }
@@ -292,7 +336,7 @@ object UniversalTwsEngine {
             )
             caseIsLive = true
         } else {
-            // Both buds are out of case or offline (0x00, 0x7F, 0xFF)
+            // Both buds are out of case or offline (0x00, 0x7F, 0xFF).
             // For Nothing/CMF and any model where supportsCaseBatteryWhenUndocked == false:
             // COMPLETELY HIDE the case battery! Never retain old case or show placeholder.
             if (profile.supportsCaseBatteryWhenUndocked && profile.brandSchema == BrandSchema.REALME_LINK) {
@@ -362,6 +406,7 @@ object UniversalTwsEngine {
             cachedCaseBattery.remove(prevAddr)
             _latestBatteryReports.value = _latestBatteryReports.value - prevAddr
             _confirmedAncMode.value = _confirmedAncMode.value - prevAddr
+            _confirmedGameMode.value = _confirmedGameMode.value - prevAddr
             _pendingAncMode.value = _pendingAncMode.value - prevAddr
             _activeDrivers.value = _activeDrivers.value - prevAddr
         }
@@ -396,7 +441,9 @@ object UniversalTwsEngine {
         }
 
         activeDevice = newDevice
-        cachedCaseBattery.remove(newAddress)
+        // Only clear the cached case on a real device switch. This method is
+        // called every monitor cycle for the same device, and wiping the cache
+        // each time destroyed the docked case reading.
 
         val sdpUuids = try { newDevice.uuids?.map { it.uuid.toString() } ?: emptyList() } catch (_: Exception) { emptyList() }
         val profile = StrictBrandProfileResolver.resolve(newDevice, discoveredRfcommUuids = sdpUuids)
@@ -439,34 +486,70 @@ object UniversalTwsEngine {
         batteryScanner?.startScan()
     }
 
+    /**
+     * Connection-time NVRAM state dump: reads the hardware's active noise mode,
+     * keymap/gesture tables, EQ and mode toggles so the UI never opens blank.
+     */
+    @SuppressLint("MissingPermission")
+    private suspend fun syncHardwareStateOnConnect(device: BluetoothDevice) {
+        val address = device.address
+        // The dump writes through the RFCOMM socket. Without this limit, each new
+        // socket started another dump, and the dump's own write broke that socket.
+        // The device log showed a reconnect about every 0.6 s. One dump per 10 s.
+        val now = System.currentTimeMillis()
+        if (now - (lastStateSyncAt[address] ?: 0L) < STATE_SYNC_MIN_INTERVAL_MS) return
+        lastStateSyncAt[address] = now
+        val queries = buildList {
+            protocolRouter.buildBatteryQueryCommand(device)?.let { add(it) }
+            addAll(protocolRouter.buildStateQueryCommands(device))
+        }
+        for (query in queries) {
+            try {
+                sendPacket(device, query)
+                delay(90)
+            } catch (_: Exception) {}
+        }
+        com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+            stage = "STATE_SYNC",
+            address = address,
+            note = "sent ${queries.size} connection-time state queries",
+        )
+    }
+
     @SuppressLint("MissingPermission")
     fun connect(context: Context, device: BluetoothDevice) {
         val address = device.address
-        if (activeGatts.containsKey(address) || activeRfcommSockets.containsKey(address) || rfcommJobs[address]?.isActive == true) {
-            return
+        val gattAlive = activeGatts.containsKey(address)
+        val rfcommAlive = activeRfcommSockets.containsKey(address) || rfcommJobs[address]?.isActive == true
+        if (gattAlive && rfcommAlive) return
+
+        // BLE and RFCOMM are checked separately. The old single guard returned early
+        // whenever either transport was alive, so a dropped GATT link or a failed
+        // RFCOMM start was never retried while the other transport stayed up.
+        if (!gattAlive) {
+            val driver = protocolRouter.resolveDriver(device)
+            _activeDrivers.value = _activeDrivers.value + (address to driver.driverName)
+            _connectionStatus.value = _connectionStatus.value + (address to "Connecting (${driver.driverName})...")
+            log(address, "Connecting via ${driver.driverName} (Transport pref: ${driver.preferredTransport})")
+
+            val callback = createGattCallback(device)
+            val gatt = if (Build.VERSION.SDK_INT >= 23) {
+                device.connectGatt(context, false, callback, BluetoothDevice.TRANSPORT_LE)
+            } else {
+                device.connectGatt(context, false, callback)
+            }
+            activeGatts[address] = gatt
+
+            val manifest = HardwareCapabilityInspector.inspect(device, address, device.name)
+            if (manifest.isAppleAirPods) {
+                appleL2capDriver.connect(device)
+            }
+            try {
+                codecManager?.inspectCodec(device)
+            } catch (_: Exception) {}
         }
 
-        val driver = protocolRouter.resolveDriver(device)
-        _activeDrivers.value = _activeDrivers.value + (address to driver.driverName)
-        _connectionStatus.value = _connectionStatus.value + (address to "Connecting (${driver.driverName})...")
-        log(address, "Connecting via ${driver.driverName} (Transport pref: ${driver.preferredTransport})")
-
-        val callback = createGattCallback(device)
-        val gatt = if (Build.VERSION.SDK_INT >= 23) {
-            device.connectGatt(context, false, callback, BluetoothDevice.TRANSPORT_LE)
-        } else {
-            device.connectGatt(context, false, callback)
-        }
-        activeGatts[address] = gatt
-
-        val manifest = HardwareCapabilityInspector.inspect(device, address, device.name)
-        if (manifest.isAppleAirPods) {
-            appleL2capDriver.connect(device)
-        }
-        try {
-            codecManager.inspectCodec(device)
-        } catch (_: Exception) {}
-
+        // startRfcommWorker returns early when an RFCOMM session is already running.
         startRfcommWorker(device)
         startBatteryHeartbeat()
     }
@@ -476,6 +559,7 @@ object UniversalTwsEngine {
         log(address, "Disconnecting GATT and RFCOMM sessions")
         _connectionStatus.value = _connectionStatus.value - address
         _activeDrivers.value = _activeDrivers.value - address
+        _confirmedGameMode.value = _confirmedGameMode.value - address
 
         appleL2capDriver.disconnect(address)
 
@@ -486,6 +570,9 @@ object UniversalTwsEngine {
             } catch (_: Exception) {}
         }
         activeWriteCharacteristics.remove(address)
+        resetDescriptorState(address)
+        lastStateSyncAt.remove(address)
+        lastReportedModeMask.remove(address)
 
         rfcommJobs.remove(address)?.cancel()
         activeRfcommSockets.remove(address)?.let { sock ->
@@ -526,12 +613,12 @@ object UniversalTwsEngine {
     suspend fun setNoiseControl(device: BluetoothDevice, mode: String): Boolean {
         val address = device.address
         val currentConfirmed = _confirmedAncMode.value[address]
-        val latestReq = bleSequencer.getLatestRequestedNoiseMode(address)
-        if ((currentConfirmed != null && currentConfirmed.equals(mode, ignoreCase = true) && _pendingAncMode.value[address] == null) ||
-            (latestReq != null && latestReq.equals(mode, ignoreCase = true))) {
-            log(address, "Idempotent guard: earbud already in or transitioning to mode '$mode'")
-            return true
-        }
+        com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+            stage = "ENGINE",
+            address = address,
+            activeMode = currentConfirmed,
+            requestedMode = mode,
+        )
 
         // 1. Teardown any active software ambient/passthrough boost on Normal/Off
         if (mode.equals("OFF", ignoreCase = true) || mode.equals("NORMAL", ignoreCase = true)) {
@@ -550,6 +637,9 @@ object UniversalTwsEngine {
 
         _pendingAncMode.value = _pendingAncMode.value + (address to mode)
 
+        // Every explicit tap must be transmitted; clear the sequencer's
+        // same-target dedupe before submitting the new request.
+        bleSequencer.clearNoiseModeDedup(address)
         bleSequencer.submitNoiseMode(
             device = device,
             mode = mode,
@@ -570,9 +660,20 @@ object UniversalTwsEngine {
     @SuppressLint("MissingPermission")
     private suspend fun dispatchNoiseModePacket(device: BluetoothDevice, targetMode: String): Boolean {
         val address = device.address
+        val driver = protocolRouter.resolveDriver(device)
         val mapping = protocolRouter.getAncMapping(address)
         val packet = protocolRouter.buildAncCommand(device, targetMode)
-        val driver = protocolRouter.resolveDriver(device)
+        if (packet.isEmpty()) {
+            log(address, "No verified ANC write frame for this silicon family; staying read-only")
+            com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+                stage = "READ_ONLY",
+                address = address,
+                requestedMode = targetMode,
+                note = "no verified ${driver.driverName} write frame",
+            )
+            _pendingAncMode.value = _pendingAncMode.value + (address to null)
+            return false
+        }
         val targetByteHex = "0x%02X".format(mapping.byteForMode(targetMode))
 
         if (bleSequencer.isDuplicateWrite(address, packet)) {
@@ -581,9 +682,32 @@ object UniversalTwsEngine {
         }
 
         log(address, "Routing ANC mode '$targetMode' (target byte $targetByteHex) via ${driver.driverName}", HexUtils.formatHex(packet))
+        com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+            stage = "SEND",
+            address = address,
+            activeMode = _confirmedAncMode.value[address],
+            requestedMode = targetMode,
+            sentHex = HexUtils.formatHex(packet),
+            mapping = "off=0x%02X anc=0x%02X trans=0x%02X".format(
+                mapping.offByte,
+                mapping.ancByte,
+                mapping.transByte,
+            ),
+        )
 
-        val startTime = System.currentTimeMillis()
-        val sent = sendPacket(device, packet)
+        var startTime = System.currentTimeMillis()
+        var sent = sendPacket(device, packet)
+        if (!sent) {
+            // The earbuds can close the RFCOMM socket between the battery poll
+            // and the tap. Give the reconnect a moment and retry, otherwise the
+            // mode command is silently lost and the button appears dead.
+            delay(350)
+            sent = sendPacket(device, packet)
+        }
+        if (!sent) {
+            delay(700)
+            sent = sendPacket(device, packet)
+        }
         val latency = System.currentTimeMillis() - startTime
 
         bleSequencer.recordWriteAttempt(
@@ -612,6 +736,13 @@ object UniversalTwsEngine {
         val mapping = protocolRouter.getAncMapping(address)
         val packet = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildAncCustomOffCommand(candidateOffByte)
         log(address, "Testing candidate Off-Byte 0x%02X teardown frame".format(candidateOffByte), HexUtils.formatHex(packet))
+        com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+            stage = "OFF_TEST",
+            address = address,
+            requestedMode = "OFF",
+            sentHex = HexUtils.formatHex(packet),
+            note = "candidate off=0x%02X".format(candidateOffByte),
+        )
 
         dspController.disableAmbientAndPassthrough()
         val startTime = System.currentTimeMillis()
@@ -974,12 +1105,12 @@ object UniversalTwsEngine {
         val packet = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildHiResCodecCommand(enabled)
         sendPacket(device, packet)
         log(device.address, "Sent vendor NVRAM Hi-Res command ($enabled)")
-        return codecManager.setHiResMode(device, enabled)
+        return codecManager?.setHiResMode(device, enabled) ?: false
     }
 
     @SuppressLint("MissingPermission")
     fun forceHighBitrateAac(device: BluetoothDevice, enabled: Boolean): Boolean {
-        return codecManager.forceHighBitrateAac(device, enabled)
+        return codecManager?.forceHighBitrateAac(device, enabled) ?: false
     }
 
     suspend fun playHearingTestTone(freqHz: Int, ear: String, volumeDb: Float) {
@@ -1070,6 +1201,10 @@ object UniversalTwsEngine {
         sendPacket(device, rightHoldPkt)
 
         log(address, "Synchronized touch controls successfully written to hardware")
+        delay(120)
+        // Read-back verification: ask the buds for the stored Left gesture table.
+        sendPacket(device, com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildTouchGestureQuery(0x01))
+        markConfigSaved(address, "Gestures saved to earbud memory ✓")
         return true
     }
 
@@ -1189,10 +1324,27 @@ object UniversalTwsEngine {
                     "TRANSPARENCY" -> "OFF"
                     else -> "ANC"
                 }
+                com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+                    stage = "HARDWARE_TOUCH",
+                    address = address,
+                    activeMode = current,
+                    requestedMode = next,
+                    note = "noise-control touch event",
+                )
                 val dev = activeGatts[address]?.device ?: activeRfcommSockets[address]?.remoteDevice
                 if (dev != null) {
                     scope.launch { setNoiseControl(dev, next) }
                 }
+            }
+            "GAME_MODE" -> {
+                val current = _confirmedGameMode.value[address] ?: false
+                _confirmedGameMode.value = _confirmedGameMode.value + (address to !current)
+                com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+                    stage = "HARDWARE_TOUCH",
+                    address = address,
+                    activeMode = if (!current) "ON" else "OFF",
+                    note = "game-mode touch event",
+                )
             }
             "VOLUME_UP" -> {
                 audioManager?.adjustStreamVolume(android.media.AudioManager.STREAM_MUSIC, android.media.AudioManager.ADJUST_RAISE, android.media.AudioManager.FLAG_SHOW_UI)
@@ -1293,6 +1445,8 @@ object UniversalTwsEngine {
         val pkt = protocolRouter.buildTouchControlCommand(device, bud, gesture, action)
         if (pkt != null) {
             sendPacket(device, pkt)
+            delay(120)
+            markConfigSaved(device.address, "Touch control saved to earbud memory ✓")
         }
         log(device.address, "Nothing Touch Control: $bud $gesture -> $action")
         return true
@@ -1378,15 +1532,22 @@ object UniversalTwsEngine {
 
         // Fresh connection attempt if cached socket failed or did not exist
         val freshSocket = connectRfcommSocket(device) ?: return false
-        activeRfcommSockets[address] = freshSocket
         return try {
             freshSocket.outputStream.write(packet)
             freshSocket.outputStream.flush()
+            // Hand the live socket to the reader worker. Caching it without a
+            // reader left a zombie that the earbuds closed a few seconds later,
+            // so every subsequent write hit "Broken pipe".
+            rfcommJobs.remove(address)?.cancel()
+            activeRfcommSockets[address] = freshSocket
+            startRfcommWorker(device, freshSocket)
             true
         } catch (e: Exception) {
             log(address, "RFCOMM write error on fresh socket: ${e.message}")
             try { freshSocket.close() } catch (_: Exception) {}
-            activeRfcommSockets.remove(address)
+            if (activeRfcommSockets[address] === freshSocket) {
+                activeRfcommSockets.remove(address)
+            }
             false
         }
     }
@@ -1407,9 +1568,14 @@ object UniversalTwsEngine {
                     try { gatt.discoverServices() } catch (_: Exception) {}
                 } else if (newState == BluetoothProfile.STATE_DISCONNECTED) {
                     _connectionStatus.value = _connectionStatus.value + (address to "GATT Disconnected")
-                    log(address, "GATT Disconnected")
-                    activeGatts.remove(address)
-                    activeWriteCharacteristics.remove(address)
+                    log(address, "GATT Disconnected (status $status)")
+                    // Only tear down session state that belongs to this GATT. A late
+                    // callback from an older GATT must not evict a live session.
+                    if (activeGatts.remove(address, gatt)) {
+                        activeWriteCharacteristics.remove(address)
+                        resetDescriptorState(address)
+                    }
+                    try { gatt.close() } catch (_: Exception) {}
                 }
             }
 
@@ -1476,7 +1642,10 @@ object UniversalTwsEngine {
                             }
                         }
 
-                        // Subscribe to all NOTIFY / INDICATE characteristics (Auto-prober)
+                        // Subscribe to all NOTIFY / INDICATE characteristics.
+                        // Android drops a second writeDescriptor() while the first
+                        // is still pending, so descriptors are queued and written
+                        // one at a time from onDescriptorWrite().
                         if (canNotify) {
                             try {
                                 gatt.setCharacteristicNotification(char, true)
@@ -1487,12 +1656,7 @@ object UniversalTwsEngine {
                                     } else {
                                         BluetoothGattDescriptor.ENABLE_INDICATION_VALUE
                                     }
-                                    if (Build.VERSION.SDK_INT >= 33) {
-                                        gatt.writeDescriptor(cccd, descVal)
-                                    } else {
-                                        cccd.value = descVal
-                                        gatt.writeDescriptor(cccd)
-                                    }
+                                    enqueueDescriptor(address, PendingDescriptor(gatt, cccd, descVal))
                                 }
                             } catch (_: Exception) {}
                         }
@@ -1510,12 +1674,23 @@ object UniversalTwsEngine {
 
                 scope.launch {
                     delay(300)
-                    queryBattery(device)
+                    syncHardwareStateOnConnect(device)
                 }
             }
 
             override fun onCharacteristicWrite(gatt: BluetoothGatt, characteristic: BluetoothGattCharacteristic, status: Int) {
                 bleSequencer.onCharacteristicWriteCompleted(address, status)
+            }
+
+            override fun onDescriptorWrite(gatt: BluetoothGatt, descriptor: BluetoothGattDescriptor, status: Int) {
+                val target = try { gatt.device.address } catch (_: Exception) { address }
+                val finished = descriptorInFlight.remove(target)
+                descriptorWriting[target] = false
+                if (status != BluetoothGatt.GATT_SUCCESS && finished != null) {
+                    log(target, "CCCD write failed (status $status) for ${descriptor.characteristic.uuid}")
+                    requeueDescriptor(target, finished)
+                }
+                drainDescriptorQueue(target)
             }
 
             override fun onCharacteristicChanged(gatt: BluetoothGatt, characteristic: BluetoothGattCharacteristic) {
@@ -1538,14 +1713,141 @@ object UniversalTwsEngine {
         }
     }
 
+    /**
+     * Drops CCCD queue state for one link. A descriptor write that was still in
+     * flight when the link dropped never receives onDescriptorWrite(), so its busy
+     * flag stayed set and every later subscription on that address was skipped.
+     */
+    private fun resetDescriptorState(address: String) {
+        descriptorQueues.remove(address)?.let { queue -> synchronized(queue) { queue.clear() } }
+        descriptorInFlight.remove(address)
+        descriptorWriting.remove(address)
+    }
+
+    /** Puts a failed CCCD write back at the front of the queue, up to a bounded number of attempts. */
+    private fun requeueDescriptor(address: String, failed: PendingDescriptor) {
+        if (failed.attempts + 1 >= MAX_DESCRIPTOR_ATTEMPTS) {
+            log(address, "Giving up on CCCD write for ${failed.descriptor.characteristic.uuid} after ${failed.attempts + 1} attempts")
+            return
+        }
+        val queue = descriptorQueues.computeIfAbsent(address) { java.util.ArrayDeque() }
+        synchronized(queue) { queue.addFirst(failed.copy(attempts = failed.attempts + 1)) }
+    }
+
+    private fun enqueueDescriptor(address: String, pending: PendingDescriptor) {
+        val queue = descriptorQueues.computeIfAbsent(address) { java.util.ArrayDeque() }
+        synchronized(queue) { queue.addLast(pending) }
+        drainDescriptorQueue(address)
+    }
+
+    private fun drainDescriptorQueue(address: String) {
+        val queue = descriptorQueues[address] ?: return
+        synchronized(queue) {
+            if (descriptorWriting[address] == true) return
+            val next = queue.pollFirst()
+            if (next == null) {
+                descriptorWriting.remove(address)
+                return
+            }
+            descriptorWriting[address] = true
+            descriptorInFlight[address] = next
+            val ok: Boolean = try {
+                if (Build.VERSION.SDK_INT >= 33) {
+                    next.gatt.writeDescriptor(next.descriptor, next.value) ==
+                        android.bluetooth.BluetoothStatusCodes.SUCCESS
+                } else {
+                    next.descriptor.value = next.value
+                    next.gatt.writeDescriptor(next.descriptor)
+                    true
+                }
+            } catch (_: Exception) {
+                false
+            }
+            if (!ok) {
+                descriptorInFlight.remove(address)
+                descriptorWriting[address] = false
+                requeueDescriptor(address, next)
+                scope.launch { drainDescriptorQueue(address) }
+            }
+        }
+    }
+
+    /**
+     * True when the earbuds' own mode report can be trusted for this device: the driver has a
+     * mode read and the byte table was checked against the buds. The UI uses this to decide
+     * whether tapping the active mode may switch back to Ambient.
+     */
+    fun hasVerifiedModeReadback(address: String): Boolean {
+        val driver = protocolRouter.getDriverForAddress(address)
+        return driver is OnePlusHeyMelodyDriver &&
+            protocolRouter.getAncMapping(address).profileType == com.omnibuds.android.hardware.protocol.AncProfileType.PROFILE_G
+    }
+
+    /**
+     * Turns a mode the buds reported into the app's confirmed mode, so a press on the stem
+     * moves the buttons and the notification. A report that disagrees with a command sent
+     * moments ago is ignored: the buds need about a third of a second to apply it.
+     */
+    private fun applyReportedMode(address: String, mask: Int) {
+        if (!hasVerifiedModeReadback(address)) return
+        if (mask !in 1..0xFF) return
+        val mapping = protocolRouter.getAncMapping(address)
+        val reported = mapping.modeForByte(mask.toByte()) ?: return
+
+        val requested = bleSequencer.getLatestRequestedNoiseMode(address)
+        val settling = bleSequencer.millisSinceUserCommand(address) < MODE_SETTLE_WINDOW_MS
+        if (settling && requested != null && !requested.equals(reported, ignoreCase = true)) return
+
+        if (_confirmedAncMode.value[address] != reported) {
+            com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+                stage = "NOTIFY",
+                address = address,
+                activeMode = reported,
+                note = "buds report mode 0x%02X".format(mask),
+            )
+            _confirmedAncMode.value = _confirmedAncMode.value + (address to reported)
+            bleSequencer.updateConfirmedMode(address, reported)
+        }
+        if (_pendingAncMode.value[address] != null &&
+            (_pendingAncMode.value[address].equals(reported, ignoreCase = true) || !settling)
+        ) {
+            _pendingAncMode.value = _pendingAncMode.value + (address to null)
+        }
+    }
+
+    /**
+     * Records the noise-mode value the buds themselves report (reply to the mode read, or an
+     * event-03 push). The raw bitmask is logged and nothing else changes: its meaning per
+     * model is not confirmed yet, so it must not feed the confirmed mode.
+     */
+    private fun recordModeReports(address: String, bytes: ByteArray, hex: String) {
+        for (report in com.omnibuds.android.hardware.protocol.RealmeProtocolParser.parseAncModeReports(bytes)) {
+            // The mode is polled, so the same value arrives every cycle. Log changes only.
+            val previous = lastReportedModeMask.put(address, report.mask)
+            applyReportedMode(address, report.mask)
+            if (previous == report.mask && !report.viaPush) continue
+            val kind = if (report.viaPush) "push" else "read"
+            com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+                stage = "ANC_RAW",
+                address = address,
+                responseHex = hex,
+                note = "buds reported mode mask=0x%X bytes=[%s] via %s".format(report.mask, report.maskBytes, kind),
+            )
+        }
+    }
+
     private fun processIncomingBytes(address: String, charUuid: UUID, bytes: ByteArray) {
         val hex = HexUtils.formatHex(bytes)
         _lastRawPackets.value = _lastRawPackets.value + (address to hex)
         log(address, "RX [${charUuid.toString().take(8)}]: $hex", hex)
+        recordModeReports(address, bytes, hex)
 
         // 1. Two-Way Hardware Sync: ANC / Noise Mode Notification & ACK
         val isAck = protocolRouter.isAncAck(address, bytes)
-        if (isAck) {
+        // An ACK only confirms a command we sent. With nothing pending, the frame is
+        // an unsolicited device report (for example a stem press), so it is decoded below.
+        val ackForPendingCommand = isAck && (bleSequencer.getInFlightMode(address) ?: _pendingAncMode.value[address]) != null
+        if (ackForPendingCommand) {
             val inFlight = bleSequencer.getInFlightMode(address) ?: _pendingAncMode.value[address]
             if (inFlight != null) {
                 if (bleSequencer.shouldIgnoreNotification(address, inFlight)) {
@@ -1553,11 +1855,19 @@ object UniversalTwsEngine {
                     return
                 }
                 log(address, "BLE Hardware ACK: Confirmed requested ANC mode -> $inFlight")
+                com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+                    stage = "ACK",
+                    address = address,
+                    activeMode = inFlight,
+                    requestedMode = inFlight,
+                    responseHex = hex,
+                )
                 _confirmedAncMode.value = _confirmedAncMode.value + (address to inFlight)
                 if (_pendingAncMode.value[address] == inFlight) {
                     _pendingAncMode.value = _pendingAncMode.value + (address to null)
                 }
                 bleSequencer.updateConfirmedMode(address, inFlight)
+                markConfigSaved(address, "Noise mode saved to earbud memory ✓")
             }
         } else {
             val ancMode = protocolRouter.parseAncModeNotification(address, bytes)
@@ -1567,6 +1877,12 @@ object UniversalTwsEngine {
                     return
                 }
                 log(address, "Two-Way Hardware Sync: Confirmed Active Noise Mode -> $ancMode")
+                com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+                    stage = "NOTIFY",
+                    address = address,
+                    activeMode = ancMode,
+                    responseHex = hex,
+                )
                 _confirmedAncMode.value = _confirmedAncMode.value + (address to ancMode)
                 if (_pendingAncMode.value[address] == ancMode) {
                     _pendingAncMode.value = _pendingAncMode.value + (address to null)
@@ -1582,6 +1898,18 @@ object UniversalTwsEngine {
                 triggerCameraShutter()
             } else if (touchEvt.action != "UNKNOWN") {
                 handleTouchInterception(touchEvt.action, address)
+            }
+        }
+
+        protocolRouter.parseBatchStatus(address, bytes)?.let { status ->
+            status.gameMode?.let { enabled ->
+                _confirmedGameMode.value = _confirmedGameMode.value + (address to enabled)
+                com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+                    stage = "GAME_MODE",
+                    address = address,
+                    activeMode = if (enabled) "ON" else "OFF",
+                    responseHex = hex,
+                )
             }
         }
 
@@ -1618,6 +1946,7 @@ object UniversalTwsEngine {
     private fun isKnownVendorChar(uuid: UUID): Boolean {
         return uuid == KnownUuids.REALME_BLE_CHAR_TX_1 ||
             uuid == KnownUuids.REALME_BLE_CHAR_TX_2 ||
+            uuid == KnownUuids.OPO_CHAR_TX ||
             uuid == KnownUuids.BES_CHAR_TX ||
             uuid == KnownUuids.NORDIC_UART_TX
     }
@@ -1625,26 +1954,32 @@ object UniversalTwsEngine {
     // -- RFCOMM Worker -----------------------------------------------------------------
 
     @SuppressLint("MissingPermission")
-    private fun startRfcommWorker(device: BluetoothDevice) {
+    private fun startRfcommWorker(
+        device: BluetoothDevice,
+        existingSocket: BluetoothSocket? = null,
+    ) {
         val address = device.address
-        if (activeRfcommSockets.containsKey(address) || rfcommJobs[address]?.isActive == true) return
+        if (existingSocket == null &&
+            (activeRfcommSockets.containsKey(address) || rfcommJobs[address]?.isActive == true)
+        ) return
 
         val job = scope.launch {
-            var socket: BluetoothSocket? = null
+            var socket: BluetoothSocket? = existingSocket
             try {
-                socket = connectRfcommSocket(device) ?: return@launch
+                socket = existingSocket ?: connectRfcommSocket(device) ?: run {
+                    log(address, "RFCOMM connect failed on all channels; the next connect() call retries")
+                    return@launch
+                }
                 activeRfcommSockets[address] = socket
                 log(address, "RFCOMM Socket connected successfully")
 
                 val input: InputStream = socket.inputStream
                 val out: OutputStream = socket.outputStream
 
-                // Initial handshake and battery query
+                // Initial battery + NVRAM state dump
                 val queryPkt = protocolRouter.buildBatteryQueryCommand(device)
-                if (queryPkt != null) {
-                    out.write(queryPkt)
-                    out.flush()
-                }
+                val modePollPkt = protocolRouter.buildModePollCommand(device)
+                syncHardwareStateOnConnect(device)
 
                 var lastBatteryPoll = System.currentTimeMillis()
                 val buffer = ByteArray(512)
@@ -1659,18 +1994,37 @@ object UniversalTwsEngine {
                             val packet = buffer.copyOf(read)
                             val hex = HexUtils.formatHex(packet)
                             log(address, "RFCOMM RX: $hex", hex)
+                            recordModeReports(address, packet, hex)
                             _lastRawPackets.value = _lastRawPackets.value + (address to hex)
 
                             // Two-Way Sync: ANC / Noise Mode
                             val isAck = protocolRouter.isAncAck(address, packet)
-                            if (isAck) {
+                            if (!isAck && protocolRouter.parseBatteryReport(address, packet) == null) {
+                                // Keep every non-battery, non-ACK frame visible in
+                                // the audit so a query response can be decoded.
+                                com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+                                    stage = "RX",
+                                    address = address,
+                                    responseHex = hex,
+                                )
+                            }
+                            // An ACK only confirms a command we sent (see processIncomingBytes).
+                            if (isAck && _pendingAncMode.value[address] != null) {
                                 val pending = _pendingAncMode.value[address]
                                 if (pending != null) {
                                     if (!bleSequencer.shouldIgnoreNotification(address, pending)) {
                                         log(address, "RFCOMM Hardware ACK: Confirmed requested ANC mode -> $pending")
+                                        com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+                                            stage = "ACK",
+                                            address = address,
+                                            activeMode = pending,
+                                            requestedMode = pending,
+                                            responseHex = hex,
+                                        )
                                         _confirmedAncMode.value = _confirmedAncMode.value + (address to pending)
                                         _pendingAncMode.value = _pendingAncMode.value + (address to null)
                                         bleSequencer.updateConfirmedMode(address, pending)
+                                        markConfigSaved(address, "Noise mode saved to earbud memory ✓")
                                     }
                                 }
                             } else {
@@ -1678,6 +2032,12 @@ object UniversalTwsEngine {
                                 if (ancMode != null) {
                                     if (!bleSequencer.shouldIgnoreNotification(address, ancMode)) {
                                         log(address, "RFCOMM Hardware Sync: Confirmed Active Noise Mode -> $ancMode")
+                                        com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+                                            stage = "NOTIFY",
+                                            address = address,
+                                            activeMode = ancMode,
+                                            responseHex = hex,
+                                        )
                                         _confirmedAncMode.value = _confirmedAncMode.value + (address to ancMode)
                                         _pendingAncMode.value = _pendingAncMode.value + (address to null)
                                         bleSequencer.updateConfirmedMode(address, ancMode)
@@ -1698,6 +2058,18 @@ object UniversalTwsEngine {
                             protocolRouter.parseBatteryReport(address, packet)?.let { rpt ->
                                 handleBatteryReport(address, rpt, "RFCOMM SPP")
                             }
+
+                            protocolRouter.parseBatchStatus(address, packet)?.let { status ->
+                                status.gameMode?.let { enabled ->
+                                    _confirmedGameMode.value = _confirmedGameMode.value + (address to enabled)
+                                    com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+                                        stage = "GAME_MODE",
+                                        address = address,
+                                        activeMode = if (enabled) "ON" else "OFF",
+                                        responseHex = hex,
+                                    )
+                                }
+                            }
                         }
                     }
 
@@ -1710,6 +2082,22 @@ object UniversalTwsEngine {
                                 out.flush()
                             } catch (_: Exception) {}
                         }
+                        // Ask the buds for their real noise mode. A press on the stem is not
+                        // pushed to the app, so this read is how a physical change is seen.
+                        modePollPkt?.let {
+                            try {
+                                out.write(it)
+                                out.flush()
+                            } catch (_: Exception) {}
+                        }
+                        // Batch status carries live switch state (game mode).
+                        protocolRouter.buildBatchStatusQueryCommand(device)?.let {
+                            log(address, "Batch status query sent", HexUtils.formatHex(it))
+                            try {
+                                out.write(it)
+                                out.flush()
+                            } catch (_: Exception) {}
+                        }
                     }
                     delay(150)
                 }
@@ -1717,7 +2105,11 @@ object UniversalTwsEngine {
                 log(address, "RFCOMM worker terminated: ${e.message}")
             } finally {
                 try { socket?.close() } catch (_: Exception) {}
-                activeRfcommSockets.remove(address)
+                // Only remove the map entry if it still belongs to this worker;
+                // a replacement socket may already have taken over.
+                if (activeRfcommSockets[address] === socket) {
+                    activeRfcommSockets.remove(address)
+                }
             }
         }
         rfcommJobs[address] = job

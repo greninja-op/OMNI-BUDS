@@ -1,0 +1,277 @@
+[
+  {
+    "company": "Micromax",
+    "companySlug": "micromax",
+    "family": "AirFunk",
+    "model": "Micromax AirFunk 1",
+    "slug": "micromax-airfunk-1",
+    "generation": "1",
+    "variant": null,
+    "releaseYear": 2021,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "No companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Micromax documents touch controls only; no app was released for AirFunk."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 5,
+      "caseHours": 15,
+      "chargingIndicators": "Case LED; USB-C.",
+      "notes": "Official: 5 h single charge, 15 h with case; 1.2 h charge; 40 h standby.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 15
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC."
+    },
+    "features": [
+      {
+        "id": "vendor.micromax.voice-change",
+        "name": "Male/female voice change during calls",
+        "availability": "device-only",
+        "notes": "Signature AirFunk 1 feature."
+      },
+      {
+        "id": "audio.spatial",
+        "name": "3D surround sound",
+        "availability": "device-only",
+        "notes": "Right-left channel split."
+      },
+      {
+        "id": "vendor.micromax.mono-mode",
+        "name": "Mono/stereo use",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "durability.ip44",
+        "name": "IP44",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double tap",
+          "action": "next/previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Fixed touch controls."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "9 mm dynamic driver x2; 20 Hz-20 kHz; 4.4 g per bud."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Micromax's first TWS",
+      "Voice-change gimmick",
+      "3D surround"
+    ],
+    "sources": [
+      {
+        "url": "https://micromaxinfo.com/airfunk-1.html",
+        "type": "official-product",
+        "title": "Micromax AirFunk 1",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.mobilityindia.com/micromax-launches-in-2b-no-hang-phone-and-airfunk-1-and-1-pro-tws-earbuds/",
+        "type": "reputable-secondary",
+        "title": "Micromax AirFunk 1 / 1 Pro launch",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No battery display documented",
+      "No app, EQ or custom controls",
+      "Bluetooth 5.0 and 15 h total are dated"
+    ],
+    "notes": "2021 model, retained because Micromax's audio line has no newer TWS generation.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Micromax",
+    "companySlug": "micromax",
+    "family": "AirFunk",
+    "model": "Micromax AirFunk 1 Pro",
+    "slug": "micromax-airfunk-1-pro",
+    "generation": "1",
+    "variant": "Pro",
+    "releaseYear": 2021,
+    "formFactor": "tws-stem",
+    "officialApp": {
+      "name": "No companion app",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "No app; controls are fixed."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 32,
+      "chargingIndicators": "Case LED; USB-C.",
+      "notes": "Official: 7 h single charge, 32 h with case; 6 h talk; 750 h standby; 1.2 h charge.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 32
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "No ANC; quad-mic ENC with Qualcomm cVc 8.0."
+    },
+    "features": [
+      {
+        "id": "mic.enc",
+        "name": "Quad-mic ENC / cVc 8.0",
+        "availability": "device-only",
+        "notes": "Two mics per bud."
+      },
+      {
+        "id": "vendor.micromax.qualcomm-qcc3040",
+        "name": "Qualcomm QCC3040",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "vendor.micromax.aptx",
+        "name": "aptX",
+        "availability": "device-only",
+        "notes": "Official spec lists AAC/SBC; launch coverage claims aptX."
+      },
+      {
+        "id": "durability.ip44",
+        "name": "IP44",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "tap",
+          "action": "play/pause; answer/end call",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "double tap",
+          "action": "next/previous track",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "long press",
+          "action": "voice assistant",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Fixed touch controls."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": null,
+      "headTracking": null,
+      "codecs": [
+        "AAC",
+        "SBC"
+      ],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "13 mm dynamic driver x2; 20 Hz-20 kHz; 4 g per bud; Bluetooth 5.2."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [
+      "Larger 13 mm drivers over AirFunk 1",
+      "Quad-mic cVc 8.0",
+      "7 h/32 h battery",
+      "Bluetooth 5.2"
+    ],
+    "sources": [
+      {
+        "url": "https://micromaxinfo.com/airfunk-2.html",
+        "type": "official-product",
+        "title": "Micromax AirFunk 1 Pro",
+        "accessed": "2026-11-10"
+      },
+      {
+        "url": "https://www.fonearena.com/blog/type/brands/micromax-brands",
+        "type": "reputable-secondary",
+        "title": "Micromax AirFunk 1 Pro review",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No battery display documented",
+      "aptX appears in launch coverage but not the official spec table",
+      "No app, EQ or multipoint claim"
+    ],
+    "notes": "The higher-end 2021 AirFunk; still Micromax's most feature-complete TWS.",
+    "researchedAt": "2026-11-10"
+  }
+]

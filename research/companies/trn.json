@@ -1,0 +1,479 @@
+[
+  {
+    "company": "TRN",
+    "companySlug": "trn",
+    "family": "T350",
+    "model": "TRN T350",
+    "slug": "trn-t350",
+    "generation": null,
+    "variant": null,
+    "releaseYear": null,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "No official companion app documented",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "The official product page documents touch controls and codecs but no companion app, EQ UI or firmware app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "separate",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 7,
+      "caseHours": 25,
+      "chargingIndicators": "Case LED; no app battery UI documented.",
+      "notes": "Official: about 7 h AAC/SBC, about 5.5 h aptX Adaptive, about 25 h with case. 35 mAh buds + 500 mAh case; wireless and Type-C charging. No ANC, so no ANC-on runtime.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 25
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "cVc 8.0 is call noise cancellation, not active noise cancellation."
+    },
+    "features": [
+      {
+        "id": "gaming.low-latency",
+        "name": "68 ms gaming mode",
+        "availability": "device-only",
+        "notes": "Triple tap right earbud."
+      },
+      {
+        "id": "audio.hi-res",
+        "name": "aptX Adaptive",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "charging.wireless",
+        "name": "Wireless charging case",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "durability.ip54",
+        "name": "IP54 buds",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "call.cvc",
+        "name": "Qualcomm cVc 8.0 call noise cancellation",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Double tap left/right",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Long press 1 s",
+          "action": "Previous/next track",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Long press 2 s",
+          "action": "Reject call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Triple tap right",
+          "action": "Gaming mode",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Triple tap left",
+          "action": "Voice assistant",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Long press 3 s left/right",
+          "action": "Volume up/down",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Fixed touch mapping."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX",
+        "aptX Adaptive"
+      ],
+      "hiRes": true,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "QCC3071, Bluetooth 5.3, 1 Knowles BA + 8 mm graphene DD."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://trn-audio.com/trn-t350.html",
+        "type": "official-product",
+        "title": "TRN T350",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official app, so split-vs-combined battery layout is unverified; OS may show a single aggregate.",
+      "Release year is not stated on the product page.",
+      "Multipoint support is not stated."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "TRN",
+    "companySlug": "trn",
+    "family": "T300",
+    "model": "TRN T300",
+    "slug": "trn-t300",
+    "generation": null,
+    "variant": null,
+    "releaseYear": null,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "No official companion app documented",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "The official product page documents touch controls and codecs but no companion app, EQ UI or firmware app."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "separate",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 4,
+      "caseHours": 72,
+      "chargingIndicators": "Case LED; no app battery UI documented.",
+      "notes": "Official: about 4 h continuous playback; 30 mAh buds + 600 mAh case; wireless and Type-C charging. The 72 h figure is charging-case standby, not a 72 h listening total.",
+      "hoursBasis": "total-with-case",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": 72
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": "cVc 8.0 is call noise cancellation, not active noise cancellation."
+    },
+    "features": [
+      {
+        "id": "audio.hi-res",
+        "name": "aptX",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "charging.wireless",
+        "name": "Wireless charging case",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "durability.ipx5",
+        "name": "IPX5",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "call.cvc",
+        "name": "Qualcomm cVc 8.0 call noise cancellation",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [
+        {
+          "gesture": "Double tap",
+          "action": "Play/pause; answer/end call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Long press 2 s left/right",
+          "action": "Previous/next track; reject call",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Triple tap",
+          "action": "Voice assistant",
+          "configurableInApp": false,
+          "notes": null
+        },
+        {
+          "gesture": "Four taps left/right",
+          "action": "Volume up/down",
+          "configurableInApp": false,
+          "notes": null
+        }
+      ],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Fixed touch mapping."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [
+        "SBC",
+        "AAC",
+        "aptX"
+      ],
+      "hiRes": true,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "QCC3046, Bluetooth 5.2, 2 BA + 1 DD."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://trn-audio.com/trn-t300.html",
+        "type": "official-product",
+        "title": "TRN T300",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "No official app, so split-vs-combined battery layout is unverified.",
+      "Release year is not stated on the product page.",
+      "Multipoint support is not stated."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "TRN",
+    "companySlug": "trn",
+    "family": "AM1",
+    "model": "TRN AM1",
+    "slug": "trn-am1",
+    "generation": null,
+    "variant": null,
+    "releaseYear": null,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "No official companion app documented",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Official listing describes a 1DD TWS BT 5.0 IPX5 earphone; no app is mentioned."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": "No battery figures or app UI documented on the official listing.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "durability.ipx5",
+        "name": "IPX5",
+        "availability": "device-only",
+        "notes": null
+      },
+      {
+        "id": "connectivity.bluetooth-5",
+        "name": "Bluetooth 5.0",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Touch controls are implied by the TWS listing but not documented in the fetched material."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "1 dynamic driver; Bluetooth 5.0."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://trn-audio.com/",
+        "type": "official-product",
+        "title": "TRN Bluetooth Earphones listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "No product-detail page fetched; battery, codecs and controls are unpublished.",
+      "No official app."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "TRN",
+    "companySlug": "trn",
+    "family": "BT1",
+    "model": "TRN BT1",
+    "slug": "trn-bt1",
+    "generation": null,
+    "variant": null,
+    "releaseYear": null,
+    "formFactor": "tws-bud",
+    "officialApp": {
+      "name": "No official companion app documented",
+      "platforms": [],
+      "packageIds": [],
+      "appStoreUrls": [],
+      "appVersionObserved": null,
+      "notes": "Official listing describes a 1BA + 1DD TWS hybrid Bluetooth 5.0 earphone; no app is mentioned."
+    },
+    "battery": {
+      "budsDisplay": "unknown",
+      "caseDisplay": "unknown",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "unknown",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": null,
+      "caseHours": null,
+      "chargingIndicators": null,
+      "notes": "No battery figures or app UI documented on the official listing.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": null,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": null,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.bluetooth-5",
+        "name": "Bluetooth 5.0",
+        "availability": "device-only",
+        "notes": null
+      }
+    ],
+    "controls": {
+      "types": [
+        "touch"
+      ],
+      "gestures": [],
+      "physicalButtons": null,
+      "configurableInApp": false,
+      "notes": "Touch controls are implied by the TWS listing but not documented in the fetched material."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": false,
+      "eqBands": null,
+      "spatialAudio": false,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": false,
+      "multipoint": null,
+      "wearDetection": false,
+      "notes": "1 balanced armature + 1 dynamic driver; Bluetooth 5.0."
+    },
+    "appOnlyFeatures": [],
+    "featureDeltaFromPrevious": [],
+    "sources": [
+      {
+        "url": "https://trn-audio.com/",
+        "type": "official-product",
+        "title": "TRN Bluetooth Earphones listing",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "low",
+    "gaps": [
+      "No product-detail page fetched; battery, codecs and controls are unpublished.",
+      "No official app."
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  }
+]

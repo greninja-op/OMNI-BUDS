@@ -1,0 +1,570 @@
+[
+  {
+    "company": "Turtle Beach",
+    "companySlug": "turtle-beach",
+    "family": "Stealth Pro",
+    "model": "Turtle Beach Stealth Pro",
+    "slug": "turtle-beach-stealth-pro",
+    "generation": "Pro",
+    "variant": null,
+    "releaseYear": 2023,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Turtle Beach Audio Hub",
+      "platforms": [
+        "windows",
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Bluetooth companion app with advanced 10-band EQ; desktop Audio Hub for PC."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 24,
+      "caseHours": null,
+      "chargingIndicators": "Two swappable 12+ h batteries; charging dock in transmitter.",
+      "notes": "Dual 12+ h batteries give effectively 24+ h with hot swap; ANC-on runtime not published.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": true,
+      "modes": [
+        "anc",
+        "transparency"
+      ],
+      "adaptive": true,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Unrivaled adjustable ANC and noise transparency."
+    },
+    "features": [
+      {
+        "id": "noise-control.anc",
+        "name": "Adjustable ANC",
+        "availability": "device-only"
+      },
+      {
+        "id": "noise-control.transparency",
+        "name": "Noise transparency",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz transmitter",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Simultaneous 2.4 GHz + Bluetooth 5.1",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "10-band EQ in Audio Hub",
+        "availability": "official-app"
+      },
+      {
+        "id": "power.swappable-battery",
+        "name": "Dual swappable batteries",
+        "availability": "device-only"
+      },
+      {
+        "id": "mic.enc",
+        "name": "S.M.A.R.T. noise-cancelling boom + concealed mic",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mode button",
+          "action": "ANC / transparency",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Volume wheel",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "ChatMix wheel",
+          "action": "Game/chat balance",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup wheels and buttons; transmitter controls.",
+      "configurableInApp": true,
+      "notes": "Swarm/Audio Hub app allows button remapping on some firmware."
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "Hand-selected 50 mm Nanoclear drivers; spatial audio via platform."
+    },
+    "appOnlyFeatures": [
+      "10-band EQ",
+      "ANC tuning",
+      "Button remapping"
+    ],
+    "featureDeltaFromPrevious": [
+      "Adjustable ANC",
+      "Dual swappable batteries",
+      "Bluetooth 5.1 + 2.4 GHz",
+      "S.M.A.R.T. mic"
+    ],
+    "sources": [
+      {
+        "url": "https://www.turtlebeach.com/products/stealth-pro-headset",
+        "type": "official-product",
+        "title": "Stealth Pro",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "ANC-on battery hours not published",
+      "Bluetooth codecs not published",
+      "ANC attenuation in dB not published"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Turtle Beach",
+    "companySlug": "turtle-beach",
+    "family": "Stealth 700",
+    "model": "Turtle Beach Stealth 700 Gen 3",
+    "slug": "turtle-beach-stealth-700-gen-3",
+    "generation": "3",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Swarm II",
+      "platforms": [
+        "windows",
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Desktop and mobile app with 10-band EQ and button remapping."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 80,
+      "caseHours": null,
+      "chargingIndicators": "USB-C quick charge.",
+      "notes": "Up to 80 h; no ANC on Gen 3.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": "Gen 3 drops the active noise cancellation of the Gen 2; only A.I. mic noise reduction remains."
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz dual transmitters",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Simultaneous 2.4 GHz + Bluetooth 5.2",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Swarm II 10-band EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "device-only"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Flip-to-mute mic with A.I. noise reduction",
+        "availability": "device-only"
+      },
+      {
+        "id": "power.quick-charge",
+        "name": "Quick charge",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mode button",
+          "action": "Assignable function",
+          "configurableInApp": true
+        },
+        {
+          "gesture": "Volume wheel",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "ChatMix wheel",
+          "action": "Game/chat balance",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup wheels, assignable mode button and mic mute.",
+      "configurableInApp": true,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "60 mm Eclipse dual drivers."
+    },
+    "appOnlyFeatures": [
+      "10-band EQ",
+      "Button remapping",
+      "Firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "80 h battery",
+      "60 mm Eclipse dual drivers",
+      "Bluetooth 5.2",
+      "Removed ANC versus Gen 2"
+    ],
+    "sources": [
+      {
+        "url": "https://www.turtlebeach.com/products/stealth-700-gen-3-headset",
+        "type": "official-product",
+        "title": "Stealth 700 Gen 3",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth codecs not published",
+      "ANC removed; no transparency mode",
+      "EQ band count from Swarm II spec"
+    ],
+    "notes": "Notable regression: Gen 3 has no ANC despite Gen 2 offering it.",
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Turtle Beach",
+    "companySlug": "turtle-beach",
+    "family": "Stealth 600",
+    "model": "Turtle Beach Stealth 600 Gen 3",
+    "slug": "turtle-beach-stealth-600-gen-3",
+    "generation": "3",
+    "variant": null,
+    "releaseYear": 2024,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Swarm II",
+      "platforms": [
+        "windows",
+        "android",
+        "ios"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "10-band EQ, mic settings and firmware."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 80,
+      "caseHours": null,
+      "chargingIndicators": "USB-C quick charge.",
+      "notes": "Up to 80 h; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz transmitter",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Simultaneous 2.4 GHz + Bluetooth 5.2",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Swarm II 10-band EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "audio.spatial",
+        "name": "Spatial audio",
+        "availability": "device-only"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Flip-to-mute mic with A.I. noise reduction",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mode button",
+          "action": "Wireless / Bluetooth switch",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume wheel",
+          "action": "Volume",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "ChatMix wheel",
+          "action": "Game/chat balance",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup wheels, mode button and mic mute.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": 10,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "50 mm Nanoclear drivers."
+    },
+    "appOnlyFeatures": [
+      "10-band EQ",
+      "Mic settings",
+      "Firmware updates"
+    ],
+    "featureDeltaFromPrevious": [
+      "80 h battery",
+      "Bluetooth 5.2 + 2.4 GHz",
+      "Swarm II app"
+    ],
+    "sources": [
+      {
+        "url": "https://www.turtlebeach.com/products/stealth-600-headset",
+        "type": "official-product",
+        "title": "Stealth 600 Gen 3",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "high",
+    "gaps": [
+      "Bluetooth codecs not published"
+    ],
+    "notes": null,
+    "researchedAt": "2026-11-10"
+  },
+  {
+    "company": "Turtle Beach",
+    "companySlug": "turtle-beach",
+    "family": "Stealth 600",
+    "model": "Turtle Beach Stealth 600 Gen 2 MAX",
+    "slug": "turtle-beach-stealth-600-gen-2-max",
+    "generation": "2",
+    "variant": "MAX",
+    "releaseYear": 2022,
+    "formFactor": "over-ear",
+    "officialApp": {
+      "name": "Turtle Beach Audio Hub",
+      "platforms": [
+        "windows"
+      ],
+      "packageIds": [],
+      "appVersionObserved": null,
+      "notes": "Desktop Audio Hub for EQ and firmware; mobile app support limited."
+    },
+    "battery": {
+      "budsDisplay": "combined",
+      "caseDisplay": "hidden",
+      "caseVisibility": "unknown",
+      "caseWhileBudsOut": "hidden",
+      "budsHoursAnc": null,
+      "budsHoursNoAnc": 48,
+      "caseHours": null,
+      "chargingIndicators": "USB-C.",
+      "notes": "Up to 48 h; no ANC.",
+      "hoursBasis": "unknown",
+      "caseOnlyHours": null,
+      "totalWithCaseHours": null
+    },
+    "anc": {
+      "supported": false,
+      "modes": [],
+      "adaptive": false,
+      "ancDb": null,
+      "transparencyDb": null,
+      "personalized": false,
+      "windNoise": null,
+      "notes": null
+    },
+    "features": [
+      {
+        "id": "connectivity.2.4ghz",
+        "name": "2.4 GHz transmitter",
+        "availability": "device-only"
+      },
+      {
+        "id": "connectivity.multipoint",
+        "name": "Simultaneous 2.4 GHz + Bluetooth",
+        "availability": "device-only"
+      },
+      {
+        "id": "equalization.equalizer",
+        "name": "Audio Hub EQ",
+        "availability": "official-app"
+      },
+      {
+        "id": "mic.enc",
+        "name": "Flip-to-mute mic",
+        "availability": "device-only"
+      }
+    ],
+    "controls": {
+      "types": [
+        "button"
+      ],
+      "gestures": [
+        {
+          "gesture": "Power button",
+          "action": "Power/pairing",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Mode button",
+          "action": "Switch wireless / Bluetooth",
+          "configurableInApp": false
+        },
+        {
+          "gesture": "Volume wheel",
+          "action": "Volume",
+          "configurableInApp": false
+        }
+      ],
+      "physicalButtons": "Earcup wheel and buttons.",
+      "configurableInApp": false,
+      "notes": null
+    },
+    "audio": {
+      "eqPresets": [],
+      "customEq": true,
+      "eqBands": null,
+      "spatialAudio": true,
+      "headTracking": false,
+      "codecs": [],
+      "hiRes": null,
+      "multipoint": true,
+      "wearDetection": false,
+      "notes": "50 mm Nanoclear drivers; spatial audio via platform."
+    },
+    "appOnlyFeatures": [
+      "EQ"
+    ],
+    "featureDeltaFromPrevious": [
+      "48 h battery",
+      "Bluetooth + 2.4 GHz",
+      "Gen 2 MAX multi-platform transmitter"
+    ],
+    "sources": [
+      {
+        "url": "https://www.turtlebeach.com/collections/headsets",
+        "type": "official-product",
+        "title": "Turtle Beach headset collection",
+        "accessed": "2026-11-10"
+      }
+    ],
+    "confidence": "medium",
+    "gaps": [
+      "Dedicated product page retired",
+      "Bluetooth codecs not published",
+      "EQ band count not published"
+    ],
+    "notes": "Kept as the recent predecessor to Stealth 600 Gen 3.",
+    "researchedAt": "2026-11-10"
+  }
+]
