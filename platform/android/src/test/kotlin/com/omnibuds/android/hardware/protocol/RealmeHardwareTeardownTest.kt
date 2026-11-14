@@ -178,6 +178,49 @@ class RealmeHardwareTeardownTest {
     }
 
     @Test
+    fun `hold cycle read reply from a real T300 decodes to mask 0A`() {
+        // Captured from a realme Buds T300: reply to 0x010C 02 01.
+        val reply = byteArrayOf(
+            0xAA.toByte(), 0x0B, 0x00, 0x00, 0x0C, 0x81.toByte(), 0x45, 0x04, 0x00,
+            0x00, 0x02, 0x01, 0x0A,
+        )
+        assertEquals(listOf(0x0A), RealmeProtocolParser.parseHoldCycleReports(reply))
+        // The same reply must not be mistaken for a noise-mode report.
+        assertEquals(0, RealmeProtocolParser.parseAncModeReports(reply).size)
+    }
+
+    @Test
+    fun `hold cycle write uses the fewest mask bytes and the 02 01 prefix`() {
+        val write = RealmeProtocolParser.buildHoldCycleWrite(0x09)
+        // AA 0A 00 00 04 04 <seq> 03 00 02 01 09
+        assertEquals(12, write.size)
+        assertEquals(0x0A.toByte(), write[1])
+        assertEquals(0x04.toByte(), write[4])
+        assertEquals(0x04.toByte(), write[5])
+        assertEquals(0x03.toByte(), write[7])
+        assertEquals(0x02.toByte(), write[9])
+        assertEquals(0x01.toByte(), write[10])
+        assertEquals(0x09.toByte(), write[11])
+
+        val wide = RealmeProtocolParser.buildHoldCycleWrite(0x0801)
+        assertEquals(13, wide.size)
+        assertEquals(0x01.toByte(), wide[11])
+        assertEquals(0x08.toByte(), wide[12])
+    }
+
+    @Test
+    fun `a hold cycle push is neither a mode nor mis-decoded as one`() {
+        val mapping = AncByteMapping.forType(AncProfileType.PROFILE_G)
+        val push = byteArrayOf(
+            0xAA.toByte(), 0x0B, 0x00, 0x00, 0x04, 0x02, 0xFF.toByte(), 0x04, 0x00,
+            0x03, 0x02, 0x01, 0x03,
+        )
+        assertEquals(null, RealmeProtocolParser.parseAncModeResponse(push, mapping))
+        assertEquals(0, RealmeProtocolParser.parseAncModeReports(push).size)
+        assertEquals(listOf(0x03), RealmeProtocolParser.parseHoldCycleReports(push))
+    }
+
+    @Test
     fun `parseAncModeReports ignores battery frames and a mode set acknowledgement`() {
         val battery = byteArrayOf(
             0xAA.toByte(), 0x0F, 0x00, 0x00, 0x06, 0x81.toByte(), 0x01, 0x08, 0x00,

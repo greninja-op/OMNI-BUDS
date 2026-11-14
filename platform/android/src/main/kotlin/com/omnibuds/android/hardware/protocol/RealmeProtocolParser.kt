@@ -142,6 +142,66 @@ object RealmeProtocolParser {
     fun buildHoldCycleRead(): ByteArray = buildFrame(CMD_QUERY_ANC_MODE, byteArrayOf(0x02, 0x01), seq = 0x45)
 
     /**
+     * Sets which modes the buds' press-and-hold cycles through. Payload is `02 01 <mask LE>`,
+     * using the fewest bytes that hold the mask. The buds keep this setting themselves, so it
+     * follows them to any phone. The mask uses the same bit values as a mode write.
+     */
+    fun buildHoldCycleWrite(mask: Int): ByteArray {
+        val payload = mutableListOf<Byte>(0x02, 0x01)
+        var rest = mask
+        do {
+            payload.add((rest and 0xFF).toByte())
+            rest = rest ushr 8
+        } while (rest != 0 && payload.size < 6)
+        return buildFrame(CMD_SET_ANC, payload.toByteArray(), seq = 0x46)
+    }
+
+    /** True for a push shaped `03 02 <kind> <mask LE>`: the hold-cycle setting, not a mode. */
+    fun isHoldCyclePush(bytes: ByteArray, payloadStart: Int, avail: Int): Boolean =
+        avail >= 4 &&
+            bytes[payloadStart] == 0x03.toByte() &&
+            bytes[payloadStart + 1] == 0x02.toByte()
+
+    /**
+     * Reads the hold-cycle masks the buds report: the reply to `0x010C 02 01`
+     * (payload `00 02 01 <mask>`) and the matching event push (`03 02 01 <mask>`).
+     */
+    fun parseHoldCycleReports(bytes: ByteArray): List<Int> {
+        val masks = mutableListOf<Int>()
+        var i = 0
+        while (i + 9 <= bytes.size) {
+            if (bytes[i] != MAGIC_HEADER) {
+                i++
+                continue
+            }
+            val total = (bytes[i + 1].toInt() and 0xFF) + 2
+            if (total < 9 || i + total > bytes.size) {
+                i++
+                continue
+            }
+            val cmd = ((bytes[i + 5].toInt() and 0xFF) shl 8) or (bytes[i + 4].toInt() and 0xFF)
+            val payLen = (bytes[i + 7].toInt() and 0xFF) or ((bytes[i + 8].toInt() and 0xFF) shl 8)
+            val start = i + 9
+            val avail = minOf(payLen, i + total - start)
+            val isRead = cmd == CMD_ANC_MODE_RESP &&
+                avail >= 4 && bytes[start] == 0x00.toByte() &&
+                bytes[start + 1] == 0x02.toByte() && bytes[start + 2] == 0x01.toByte()
+            val isPush = cmd == CMD_BATTERY_ALT_RESP &&
+                isHoldCyclePush(bytes, start, avail) && bytes[start + 2] == 0x01.toByte()
+            if (isRead || isPush) {
+                val count = minOf(avail - 3, 4)
+                var mask = 0
+                for (k in 0 until count) {
+                    mask = mask or ((bytes[start + 3 + k].toInt() and 0xFF) shl (8 * k))
+                }
+                masks += mask
+            }
+            i += total
+        }
+        return masks
+    }
+
+    /**
      * A noise-mode value the buds reported, kept as the raw little-endian bitmask.
      * The mask is NOT a write byte: the report table and the write table differ.
      */
@@ -332,7 +392,9 @@ object RealmeProtocolParser {
                         // A `03 01 01 <mask>` push carries a report bitmask, not a write byte.
                         // The tagged-list decoder below would look one mask byte up in the
                         // write table and invent a mode, so these frames are left alone.
-                        if (cmd == CMD_BATTERY_ALT_RESP && isModeMaskPush(bytes, payloadStart, avail)) {
+                        if (cmd == CMD_BATTERY_ALT_RESP &&
+                            (isModeMaskPush(bytes, payloadStart, avail) || isHoldCyclePush(bytes, payloadStart, avail))
+                        ) {
                             continue
                         }
 

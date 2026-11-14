@@ -752,6 +752,38 @@ fun WorkspaceScreen(
                             viewModel.submitFeatureControl("touch_controls", "$bud:$gesture:$action")
                         },
                     )
+                    if (com.omnibuds.android.hardware.engine.UniversalTwsEngine.hasVerifiedModeReadback(state.deviceIdentifier)) {
+                        val holdMasks by com.omnibuds.android.hardware.engine.UniversalTwsEngine.holdCycleMasks.collectAsState()
+                        var holdSaving by remember(state.deviceIdentifier) { mutableStateOf(false) }
+                        var holdMessage by remember(state.deviceIdentifier) { mutableStateOf<String?>(null) }
+                        val modeBytes = com.omnibuds.android.hardware.engine.UniversalTwsEngine.getAncMapping(state.deviceIdentifier)
+                        Spacer(modifier = Modifier.height(12.dp))
+                        HoldCycleCard(
+                            currentMask = holdMasks[state.deviceIdentifier],
+                            ancBit = modeBytes.ancByte.toInt() and 0xFF,
+                            transparencyBit = modeBytes.transByte.toInt() and 0xFF,
+                            ambientBit = modeBytes.offByte.toInt() and 0xFF,
+                            enabled = connected && !holdSaving,
+                            saving = holdSaving,
+                            message = holdMessage,
+                            onSelect = { mask ->
+                                val device = bluetoothDevice
+                                if (device != null) {
+                                    holdSaving = true
+                                    holdMessage = null
+                                    scope.launch {
+                                        val saved = com.omnibuds.android.hardware.engine.UniversalTwsEngine.setHoldCycle(device, mask)
+                                        holdSaving = false
+                                        holdMessage = if (saved) {
+                                            "Saved inside the earbuds."
+                                        } else {
+                                            "The earbuds did not keep that change. Nothing was changed."
+                                        }
+                                    }
+                                }
+                            },
+                        )
+                    }
                 }
             }
         }
@@ -2096,6 +2128,86 @@ private fun TouchControlsCard(
                 }
             },
         )
+    }
+}
+
+// -- Press-and-hold cycle card -------------------------------------------------------
+// The earbuds keep this setting inside themselves. The card shows what they report and
+// saves nothing on the phone, so the choice follows the buds to any other phone.
+
+@Composable
+private fun HoldCycleCard(
+    currentMask: Int?,
+    ancBit: Int,
+    transparencyBit: Int,
+    ambientBit: Int,
+    enabled: Boolean,
+    saving: Boolean,
+    message: String?,
+    onSelect: (Int) -> Unit,
+) {
+    val options = listOf(
+        (ancBit or transparencyBit) to "ANC and Transparency",
+        (ancBit or ambientBit) to "ANC and Ambient (off)",
+        (transparencyBit or ambientBit) to "Transparency and Ambient (off)",
+    )
+    val matched = options.any { it.first == currentMask }
+
+    Surface(
+        shape = RoundedCornerShape(24.dp),
+        color = MaterialTheme.colorScheme.surfaceVariant,
+        modifier = Modifier.fillMaxWidth(),
+    ) {
+        Column(modifier = Modifier.padding(16.dp)) {
+            Text(
+                text = "Press and hold on the earbuds",
+                style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.SemiBold),
+                color = MaterialTheme.colorScheme.onSurface,
+            )
+            Spacer(modifier = Modifier.height(4.dp))
+            Text(
+                text = "Holding an earbud switches between these two. The choice is stored inside the earbuds, so it stays the same on any phone.",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            Spacer(modifier = Modifier.height(12.dp))
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                options.forEach { (mask, label) ->
+                    val selected = mask == currentMask
+                    Surface(
+                        shape = RoundedCornerShape(14.dp),
+                        color = if (selected) OmniBrand.Accent else MaterialTheme.colorScheme.surface,
+                        border = BorderStroke(1.dp, if (selected) OmniBrand.Accent else OmniBrand.Border),
+                        onClick = { if (!selected) onSelect(mask) },
+                        enabled = enabled && !selected,
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        Text(
+                            text = label,
+                            style = MaterialTheme.typography.bodyMedium.copy(
+                                fontWeight = if (selected) FontWeight.Bold else FontWeight.Normal,
+                            ),
+                            color = if (selected) OmniBrand.OnAccent else MaterialTheme.colorScheme.onSurface,
+                            modifier = Modifier.padding(horizontal = 14.dp, vertical = 12.dp),
+                        )
+                    }
+                }
+            }
+            val status = when {
+                saving -> "Saving to the earbuds and checking it..."
+                currentMask == null -> "Waiting for the earbuds to report this setting."
+                !matched -> "The earbuds are set to a different combination (0x%X).".format(currentMask)
+                else -> message
+            }
+            if (status != null) {
+                Spacer(modifier = Modifier.height(10.dp))
+                Text(
+                    text = status,
+                    style = MaterialTheme.typography.labelMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+        }
     }
 }
 

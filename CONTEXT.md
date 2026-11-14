@@ -232,6 +232,8 @@ Verification: `.\gradlew.bat test assembleDebug` passed. 479 platform unit tests
 
 FINAL (build 1.1.7-t300-effect, confirmed by the owner): the app follows the EFFECT the user hears, not the activation sound. Build 1.1.6 swapped ANC and Ambient to make the sounds match, and the owner confirmed the effects were then wrong. Build 1.1.5 (same table as now) had the right effects. Do not swap these bytes again.
 
+Independent confirmation (owner test, 2026-11-13): a separate open-source companion app that uses the firmware's own byte names gave the same result on this T300: right activation sound, swapped effect. So the mismatch is in the buds, not in OmniBuds.
+
 Why the sounds look wrong: on this unit the firmware plays the ANC activation sound for byte 0x08 (Ambient effect) and the ambient sound for 0x01 (ANC effect). It does this on a stem press too, with no app involved, so the cause is in the buds. One byte sets both the sound and the effect, so the app cannot correct the sound without breaking the effect.
 
 Verified on a real T300 by the buds' own mode reports, two blind loudness trials, and the owner's confirmation of the effect.

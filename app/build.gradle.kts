@@ -18,8 +18,8 @@ android {
         applicationId = "com.omnibuds.app"
         minSdk = appMinSdk
         targetSdk = appTargetSdk
-        versionCode = 17
-        versionName = "1.1.7-t300-effect"
+        versionCode = 18
+        versionName = "1.1.8-hold-cycle"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

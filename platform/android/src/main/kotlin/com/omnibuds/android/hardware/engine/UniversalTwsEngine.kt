@@ -55,6 +55,7 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.io.InputStream
 import java.io.OutputStream
 import java.util.UUID
@@ -573,6 +574,7 @@ object UniversalTwsEngine {
         resetDescriptorState(address)
         lastStateSyncAt.remove(address)
         lastReportedModeMask.remove(address)
+        _holdCycleMasks.value = _holdCycleMasks.value - address
 
         rfcommJobs.remove(address)?.cancel()
         activeRfcommSockets.remove(address)?.let { sock ->
@@ -1820,7 +1822,77 @@ object UniversalTwsEngine {
      * event-03 push). The raw bitmask is logged and nothing else changes: its meaning per
      * model is not confirmed yet, so it must not feed the confirmed mode.
      */
+    // -- Press-and-hold cycle ----------------------------------------------------------
+    // The buds keep this setting themselves, so the app stores nothing about it on the phone.
+
+    private val _holdCycleMasks = MutableStateFlow<Map<String, Int>>(emptyMap())
+
+    /** What each connected pair of buds says its press-and-hold cycles through (mode bit mask). */
+    val holdCycleMasks: StateFlow<Map<String, Int>> = _holdCycleMasks.asStateFlow()
+
+    private fun recordHoldCycleReports(address: String, bytes: ByteArray) {
+        for (mask in com.omnibuds.android.hardware.protocol.RealmeProtocolParser.parseHoldCycleReports(bytes)) {
+            if (_holdCycleMasks.value[address] != mask) {
+                _holdCycleMasks.value = _holdCycleMasks.value + (address to mask)
+                com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+                    stage = "HOLD_CYCLE",
+                    address = address,
+                    note = "buds report press-and-hold cycle mask=0x%X".format(mask),
+                )
+            }
+        }
+    }
+
+    /**
+     * Sets which two or three modes the earbuds' press-and-hold cycles through, then reads the
+     * setting back from the buds. Returns true only when the buds report the new value.
+     * Only for devices whose mode table was verified on hardware.
+     */
+    @SuppressLint("MissingPermission")
+    suspend fun setHoldCycle(device: BluetoothDevice, mask: Int): Boolean =
+        withContext(Dispatchers.IO) { writeHoldCycleAndVerify(device, mask) }
+
+    @SuppressLint("MissingPermission")
+    private suspend fun writeHoldCycleAndVerify(device: BluetoothDevice, mask: Int): Boolean {
+        val address = device.address
+        if (!hasVerifiedModeReadback(address)) return false
+        val allowed = protocolRouter.getAncMapping(address).let {
+            (it.ancByte.toInt() and 0xFF) or (it.transByte.toInt() and 0xFF) or (it.offByte.toInt() and 0xFF)
+        }
+        if (mask and allowed.inv() != 0 || Integer.bitCount(mask) < 2) {
+            log(address, "Refusing hold-cycle mask 0x%X: needs at least two known modes".format(mask))
+            return false
+        }
+        val write = com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildHoldCycleWrite(mask)
+        log(address, "Writing press-and-hold cycle 0x%X".format(mask), HexUtils.formatHex(write))
+        com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+            stage = "HOLD_WRITE",
+            address = address,
+            sentHex = HexUtils.formatHex(write),
+            note = "requested mask=0x%X".format(mask),
+        )
+        if (!sendPacket(device, write)) return false
+
+        // An accepted write is not proof. Read the setting back from the buds.
+        repeat(4) {
+            delay(350)
+            sendPacket(device, com.omnibuds.android.hardware.protocol.RealmeProtocolParser.buildHoldCycleRead())
+            delay(250)
+            if (_holdCycleMasks.value[address] == mask) {
+                markConfigSaved(address, "Press-and-hold saved to the earbuds ✓")
+                return true
+            }
+        }
+        com.omnibuds.android.hardware.protocol.AncAuditLog.record(
+            stage = "HOLD_REJECTED",
+            address = address,
+            note = "buds still report 0x%X after writing 0x%X".format(_holdCycleMasks.value[address] ?: -1, mask),
+        )
+        return false
+    }
+
     private fun recordModeReports(address: String, bytes: ByteArray, hex: String) {
+        recordHoldCycleReports(address, bytes)
         for (report in com.omnibuds.android.hardware.protocol.RealmeProtocolParser.parseAncModeReports(bytes)) {
             // The mode is polled, so the same value arrives every cycle. Log changes only.
             val previous = lastReportedModeMask.put(address, report.mask)
